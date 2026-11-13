@@ -106,6 +106,30 @@ def r_poll():
     return filings.poll_rss()
 
 
+@app.get("/brief")
+def r_brief(window: str = "24h", start: str | None = None, end: str | None = None, mark_seen: bool = False):
+    """The push digest. window = 24h | 3d | 7d | since_last_look, or pass start & end (ISO)."""
+    from .push import digest
+
+    w = (start, end) if start and end else window
+    return _guard(digest.build, w, mark_seen=mark_seen)
+
+
+@app.get("/alerts/backtest")
+def r_backtest(rule: str = "unusual_move", days: int = 90):
+    from .push import alerts, portfolio
+
+    series, _ = alerts.portfolio_series(portfolio.load().symbols)
+    return _guard(alerts.backtest, rule, series, days)
+
+
+@app.get("/llm/usage")
+def r_llm_usage(since: float = 0.0):
+    from . import llm
+
+    return llm.usage(since)
+
+
 @app.get("/document")
 def r_document(url: str, ticker: str | None = None):
     """Exchange-hosted PDFs always; a company-site PDF only if it is listed in
