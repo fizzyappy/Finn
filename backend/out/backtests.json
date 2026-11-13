@@ -1,0 +1,527 @@
+{
+ "unusual_move": {
+  "rule": {
+   "name": "unusual_move",
+   "label": "Move unusual for this stock (2.5 sigma after the market)",
+   "min_abs_z": 2.5,
+   "min_vol_x": null,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  },
+  "trading_days": 90,
+  "from": "2026-07-07",
+  "to": "2026-11-13",
+  "fires_total": 58,
+  "fires_per_week": 3.2,
+  "per_symbol": {
+   "IEX": [
+    "2026-07-16",
+    "2026-07-28",
+    "2026-08-03",
+    "2026-09-29",
+    "2026-10-30",
+    "2026-11-02",
+    "2026-11-06"
+   ],
+   "HAPPSTMNDS": [
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-13",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-09-01"
+   ],
+   "HDFCBANK": [
+    "2026-07-20",
+    "2026-09-11",
+    "2026-09-15",
+    "2026-10-01",
+    "2026-10-05"
+   ],
+   "RELIANCE": [
+    "2026-08-06",
+    "2026-09-01",
+    "2026-10-28",
+    "2026-11-02"
+   ],
+   "POLYCAB": [
+    "2026-07-17",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-04"
+   ],
+   "MAPMYINDIA": [
+    "2026-07-09",
+    "2026-07-13",
+    "2026-11-06"
+   ],
+   "MARUTI": [
+    "2026-09-01",
+    "2026-10-01",
+    "2026-11-05"
+   ],
+   "BAJFINANCE": [
+    "2026-07-31",
+    "2026-08-07",
+    "2026-11-05"
+   ],
+   "DIXON": [
+    "2026-07-16",
+    "2026-10-30",
+    "2026-11-02"
+   ],
+   "SUZLON": [
+    "2026-07-28",
+    "2026-10-12",
+    "2026-10-30"
+   ],
+   "LT": [
+    "2026-10-15",
+    "2026-10-19",
+    "2026-10-28"
+   ],
+   "INDHOTEL": [
+    "2026-08-31",
+    "2026-10-16",
+    "2026-10-22"
+   ],
+   "ITC": [
+    "2026-08-31",
+    "2026-09-01",
+    "2026-10-05"
+   ],
+   "SUNPHARMA": [
+    "2026-08-17",
+    "2026-08-31",
+    "2026-09-01"
+   ],
+   "INFY": [
+    "2026-09-15",
+    "2026-10-01"
+   ],
+   "VEDL": [
+    "2026-10-13"
+   ],
+   "PERSISTENT": [
+    "2026-10-09"
+   ],
+   "CDSL": [
+    "2026-07-10"
+   ]
+  },
+  "quiet_symbols": [],
+  "examples": [
+   {
+    "symbol": "MAPMYINDIA",
+    "date": "2026-11-06",
+    "text": "MAPMYINDIA -4.3% (Nifty +2.0%) - 2.8 sigma below its normal day after the market move (usual swing 2.3%); volume 1.1x its 20-day average"
+   },
+   {
+    "symbol": "IEX",
+    "date": "2026-11-06",
+    "text": "IEX -2.4% (Nifty +2.0%) - 3.0 sigma below its normal day after the market move (usual swing 1.4%); volume 1.1x its 20-day average"
+   },
+   {
+    "symbol": "MARUTI",
+    "date": "2026-11-05",
+    "text": "MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average"
+   },
+   {
+    "symbol": "BAJFINANCE",
+    "date": "2026-11-05",
+    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "RELIANCE",
+    "date": "2026-11-02",
+    "text": "RELIANCE +11.6% (Nifty +1.7%) - 9.0 sigma above its normal day after the market move (usual swing 1.1%); volume 5.8x its 20-day average"
+   }
+  ]
+ },
+ "volume_spike": {
+  "rule": {
+   "name": "volume_spike",
+   "label": "Volume at least 2.5x its 20-day average",
+   "min_abs_z": null,
+   "min_vol_x": 2.5,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  },
+  "trading_days": 90,
+  "from": "2026-07-07",
+  "to": "2026-11-13",
+  "fires_total": 57,
+  "fires_per_week": 3.2,
+  "per_symbol": {
+   "HAPPSTMNDS": [
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-13",
+    "2026-08-05",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-09-01",
+    "2026-10-15"
+   ],
+   "CDSL": [
+    "2026-07-10",
+    "2026-08-21",
+    "2026-08-26",
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "MAPMYINDIA": [
+    "2026-07-09",
+    "2026-07-13",
+    "2026-08-26",
+    "2026-08-31",
+    "2026-09-22",
+    "2026-11-04"
+   ],
+   "SUZLON": [
+    "2026-07-28",
+    "2026-07-29",
+    "2026-09-24",
+    "2026-10-30"
+   ],
+   "INDHOTEL": [
+    "2026-08-31",
+    "2026-09-29",
+    "2026-10-16",
+    "2026-10-22"
+   ],
+   "ITC": [
+    "2026-08-03",
+    "2026-10-05",
+    "2026-10-07",
+    "2026-10-08"
+   ],
+   "SUNPHARMA": [
+    "2026-07-27",
+    "2026-10-30",
+    "2026-11-04"
+   ],
+   "DIXON": [
+    "2026-07-10",
+    "2026-07-16",
+    "2026-11-02"
+   ],
+   "POLYCAB": [
+    "2026-09-04",
+    "2026-09-29",
+    "2026-10-14"
+   ],
+   "IEX": [
+    "2026-07-16",
+    "2026-07-28",
+    "2026-09-04"
+   ],
+   "MARUTI": [
+    "2026-09-01",
+    "2026-11-05"
+   ],
+   "BAJFINANCE": [
+    "2026-07-31",
+    "2026-11-05"
+   ],
+   "RELIANCE": [
+    "2026-08-31",
+    "2026-11-02"
+   ],
+   "PERSISTENT": [
+    "2026-10-15",
+    "2026-10-16"
+   ],
+   "INFY": [
+    "2026-07-29",
+    "2026-09-18"
+   ],
+   "LT": [
+    "2026-10-28"
+   ],
+   "HDFCBANK": [
+    "2026-08-31"
+   ]
+  },
+  "quiet_symbols": [
+   "VEDL"
+  ],
+  "examples": [
+   {
+    "symbol": "CDSL",
+    "date": "2026-11-12",
+    "text": "CDSL +3.4% (Nifty +0.2%) - 2.0 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average"
+   },
+   {
+    "symbol": "CDSL",
+    "date": "2026-11-11",
+    "text": "CDSL +3.8% (Nifty +0.8%) - 1.8 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average"
+   },
+   {
+    "symbol": "MARUTI",
+    "date": "2026-11-05",
+    "text": "MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average"
+   },
+   {
+    "symbol": "BAJFINANCE",
+    "date": "2026-11-05",
+    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "SUNPHARMA",
+    "date": "2026-11-04",
+    "text": "SUNPHARMA +0.2% (Nifty +0.6%) - 0.0 sigma below its normal day after the market move (usual swing 1.0%); volume 2.8x its 20-day average"
+   }
+  ]
+ },
+ "move_on_volume": {
+  "rule": {
+   "name": "move_on_volume",
+   "label": "Unusual move (2 sigma) on heavy volume (1.8x)",
+   "min_abs_z": 2.0,
+   "min_vol_x": 1.8,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  },
+  "trading_days": 90,
+  "from": "2026-07-07",
+  "to": "2026-11-13",
+  "fires_total": 56,
+  "fires_per_week": 3.1,
+  "per_symbol": {
+   "HAPPSTMNDS": [
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-13",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-08-27",
+    "2026-09-01"
+   ],
+   "CDSL": [
+    "2026-07-10",
+    "2026-08-21",
+    "2026-08-26",
+    "2026-11-02",
+    "2026-11-03"
+   ],
+   "IEX": [
+    "2026-07-16",
+    "2026-07-28",
+    "2026-08-03",
+    "2026-09-29",
+    "2026-11-02"
+   ],
+   "DIXON": [
+    "2026-07-16",
+    "2026-09-28",
+    "2026-10-16",
+    "2026-10-30",
+    "2026-11-02"
+   ],
+   "MARUTI": [
+    "2026-09-01",
+    "2026-10-01",
+    "2026-10-13",
+    "2026-11-05"
+   ],
+   "INDHOTEL": [
+    "2026-08-28",
+    "2026-08-31",
+    "2026-10-16",
+    "2026-10-22"
+   ],
+   "ITC": [
+    "2026-08-31",
+    "2026-09-01",
+    "2026-10-05",
+    "2026-10-08"
+   ],
+   "MAPMYINDIA": [
+    "2026-07-09",
+    "2026-07-13",
+    "2026-11-04"
+   ],
+   "SUZLON": [
+    "2026-07-28",
+    "2026-10-12",
+    "2026-10-30"
+   ],
+   "POLYCAB": [
+    "2026-07-17",
+    "2026-09-01",
+    "2026-09-04"
+   ],
+   "SUNPHARMA": [
+    "2026-09-01",
+    "2026-11-05"
+   ],
+   "BAJFINANCE": [
+    "2026-07-31",
+    "2026-11-05"
+   ],
+   "INFY": [
+    "2026-09-15",
+    "2026-10-16"
+   ],
+   "VEDL": [
+    "2026-08-26",
+    "2026-10-13"
+   ],
+   "HDFCBANK": [
+    "2026-09-15",
+    "2026-10-05"
+   ],
+   "RELIANCE": [
+    "2026-11-02"
+   ],
+   "LT": [
+    "2026-10-28"
+   ],
+   "PERSISTENT": [
+    "2026-08-31"
+   ]
+  },
+  "quiet_symbols": [],
+  "examples": [
+   {
+    "symbol": "SUNPHARMA",
+    "date": "2026-11-05",
+    "text": "SUNPHARMA +3.1% (Nifty +2.4%) - 2.2 sigma above its normal day after the market move (usual swing 1.0%); volume 2.0x its 20-day average"
+   },
+   {
+    "symbol": "MARUTI",
+    "date": "2026-11-05",
+    "text": "MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average"
+   },
+   {
+    "symbol": "BAJFINANCE",
+    "date": "2026-11-05",
+    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "MAPMYINDIA",
+    "date": "2026-11-04",
+    "text": "MAPMYINDIA +5.4% (Nifty +0.6%) - 2.1 sigma above its normal day after the market move (usual swing 2.2%); volume 11.5x its 20-day average"
+   },
+   {
+    "symbol": "CDSL",
+    "date": "2026-11-03",
+    "text": "CDSL +5.4% (Nifty +1.6%) - 2.4 sigma above its normal day after the market move (usual swing 1.5%); volume 3.5x its 20-day average"
+   }
+  ]
+ },
+ "big_day": {
+  "rule": {
+   "name": "big_day",
+   "label": "Price moved 5% or more",
+   "min_abs_z": null,
+   "min_vol_x": null,
+   "min_abs_ret_pct": 5.0,
+   "direction": "any"
+  },
+  "trading_days": 90,
+  "from": "2026-07-07",
+  "to": "2026-11-13",
+  "fires_total": 34,
+  "fires_per_week": 1.9,
+  "per_symbol": {
+   "MAPMYINDIA": [
+    "2026-07-09",
+    "2026-07-13",
+    "2026-07-20",
+    "2026-08-05",
+    "2026-08-07",
+    "2026-10-23",
+    "2026-11-02",
+    "2026-11-04"
+   ],
+   "HAPPSTMNDS": [
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-13",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-08-27",
+    "2026-09-01"
+   ],
+   "BAJFINANCE": [
+    "2026-07-31",
+    "2026-08-07",
+    "2026-09-24",
+    "2026-11-05"
+   ],
+   "SUZLON": [
+    "2026-07-28",
+    "2026-10-12",
+    "2026-10-30"
+   ],
+   "CDSL": [
+    "2026-07-10",
+    "2026-11-03"
+   ],
+   "DIXON": [
+    "2026-07-16",
+    "2026-11-02"
+   ],
+   "POLYCAB": [
+    "2026-09-01",
+    "2026-09-04"
+   ],
+   "MARUTI": [
+    "2026-11-05"
+   ],
+   "RELIANCE": [
+    "2026-11-02"
+   ],
+   "IEX": [
+    "2026-11-02"
+   ],
+   "PERSISTENT": [
+    "2026-10-09"
+   ],
+   "ITC": [
+    "2026-10-05"
+   ],
+   "HDFCBANK": [
+    "2026-07-20"
+   ]
+  },
+  "quiet_symbols": [
+   "INDHOTEL",
+   "INFY",
+   "LT",
+   "SUNPHARMA",
+   "VEDL"
+  ],
+  "examples": [
+   {
+    "symbol": "MARUTI",
+    "date": "2026-11-05",
+    "text": "MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average"
+   },
+   {
+    "symbol": "BAJFINANCE",
+    "date": "2026-11-05",
+    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "MAPMYINDIA",
+    "date": "2026-11-04",
+    "text": "MAPMYINDIA +5.4% (Nifty +0.6%) - 2.1 sigma above its normal day after the market move (usual swing 2.2%); volume 11.5x its 20-day average"
+   },
+   {
+    "symbol": "CDSL",
+    "date": "2026-11-03",
+    "text": "CDSL +5.4% (Nifty +1.6%) - 2.4 sigma above its normal day after the market move (usual swing 1.5%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "RELIANCE",
+    "date": "2026-11-02",
+    "text": "RELIANCE +11.6% (Nifty +1.7%) - 9.0 sigma above its normal day after the market move (usual swing 1.1%); volume 5.8x its 20-day average"
+   }
+  ]
+ }
+}

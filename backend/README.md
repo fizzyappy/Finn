@@ -33,6 +33,26 @@ company, behind one cached Python API. No company-specific code.
   from Yahoo's own quote is used as a bar marked `provisional`.
 - Prices pass data checks (duplicates, gaps, high<low, stale data, >35% one-day jumps).
 
+## Push engine (`finn.push`)
+
+What FINN tells the investor without being asked. Portfolio and preferences: `finn/push/portfolio.json`.
+
+| Step | Module |
+|---|---|
+| Classify into ENAM's 17 categories (rules first, Gemini Flash-Lite for the rest) | `push/taxonomy.py`, `push/classify.py` |
+| Materiality score with reasons → hero / one-liner / collapsed | `push/materiality.py` |
+| Results card (model reads, Python checks, "verified" badge) | `push/results_card.py` |
+| People card (quotes verified word for word) | `push/people.py` |
+| One-line summaries (numbers, adjectives and verbs checked) | `push/summarize.py` |
+| End-of-day alerts, presets, custom rules, 90-day backtest | `push/alerts.py` |
+| Digest → `brief.json` (24h / 3d / 7d / since last look / custom) | `push/digest.py` |
+| All LLM calls: tiers, fallback, cache, token log | `finn/llm.py` |
+
+```bash
+../.venv/Scripts/python -m finn.push.run          # live run -> push_report.md + out/*.json
+```
+API: `/brief?window=7d`, `/alerts/backtest?rule=unusual_move`, `/llm/usage`.
+
 ## Data on disk
 
 `../data/finn.sqlite` (cache, filings, document index) and `../data/docs/` (PDFs + page

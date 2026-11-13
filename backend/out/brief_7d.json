@@ -1,0 +1,735 @@
+{
+ "generated_at": "2026-11-14T04:26:48+05:30",
+ "window": {
+  "label": "last 7 days",
+  "from": "2026-11-07T04:26:48+05:30",
+  "to": "2026-11-14T04:26:48+05:30"
+ },
+ "header": {
+  "filings": 22,
+  "events": 15,
+  "matter": 4,
+  "hero": 1,
+  "alerts": 2,
+  "text": "22 filings, 4 matter · 2 price/volume alerts"
+ },
+ "quiet": false,
+ "quiet_message": null,
+ "hero": [
+  {
+   "uid": "BSE:4dc63132-8d0c-4836-b74b-f289525d6384.pdf",
+   "symbol": "BAJFINANCE",
+   "company": "Bajaj Finance Limited",
+   "ts": "2026-11-11T17:06:59+05:30",
+   "subject": "Announcement under Regulation 30 (LODR)-Meeting Updates",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4dc63132-8d0c-4836-b74b-f289525d6384.pdf",
+   "sources": [
+    "screener_recent"
+   ],
+   "category": "fund_raise",
+   "subtype": "equity",
+   "class_method": "rule",
+   "class_confidence": 0.85,
+   "card_kind": "summary",
+   "reaction": {
+    "date": "2026-11-12",
+    "ret_pct": 3.36,
+    "z": 2.2,
+    "vol_x": 1.21
+   },
+   "score": 0.834,
+   "treatment": "hero",
+   "score_parts": [
+    {
+     "factor": "base",
+     "value": 0.72,
+     "why": "fund raise / equity"
+    },
+    {
+     "factor": "multiply",
+     "value": 1.02,
+     "why": "holding weight 6.0%"
+    },
+    {
+     "factor": "add",
+     "value": 0.1,
+     "why": "stock moved unusually on 2026-11-12: +3.4% (+2.2 sigma vs its normal), volume 1.2x"
+    }
+   ],
+   "related": [
+    {
+     "ts": "2026-11-10T12:12:31+05:30",
+     "title": "Board Meeting Outcome for Outcome Of The Meeting Of PI 2026- Special Committee Of Board Held On 10 November 2026",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=41e7bb57-172f-4858-a5ac-8c15fe653e81.pdf",
+     "treatment": "hero"
+    },
+    {
+     "ts": "2026-11-10T12:23:10+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Allotment",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=84c0dbf5-4b55-41b9-ab7b-e20d9fe359a9.pdf",
+     "treatment": "one_liner"
+    }
+   ],
+   "summary": {
+    "headline": "Bajaj Finance Approved QIP Opening at Floor Price of ₹992.25",
+    "one_liner": "On November 11, 2026, Bajaj Finance authorized opening a qualified institutions placement at a floor price of ₹992.25 per equity share.",
+    "method": "llm (gemini-3.5-flash-lite)",
+    "problems": []
+   }
+  }
+ ],
+ "one_liners": [
+  {
+   "uid": "BSE:6df1f05c-9926-47ce-9896-94c41bdb71ab.pdf",
+   "symbol": "HDFCBANK",
+   "company": "HDFC Bank Limited",
+   "ts": "2026-11-12T17:27:27+05:30",
+   "subject": "Disclosure Under Regulation 30 Of The SEBI (LODR) Regulations, 2015",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6df1f05c-9926-47ce-9896-94c41bdb71ab.pdf",
+   "sources": [
+    "screener_recent"
+   ],
+   "category": "management_change",
+   "subtype": "top",
+   "class_method": "rule",
+   "class_confidence": 0.85,
+   "card_kind": "people",
+   "reaction": {
+    "date": "2026-11-13",
+    "ret_pct": -1.02,
+    "z": -0.24,
+    "vol_x": 0.59
+   },
+   "score": 0.495,
+   "treatment": "one_liner",
+   "score_parts": [
+    {
+     "factor": "base",
+     "value": 0.75,
+     "why": "management change / top"
+    },
+    {
+     "factor": "multiply",
+     "value": 0.6,
+     "why": "planned change (reappointment / retirement)"
+    },
+    {
+     "factor": "multiply",
+     "value": 1.1,
+     "why": "holding weight 10.0%"
+    }
+   ],
+   "related": [
+    {
+     "ts": "2026-11-13T16:30:11+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Change in Directorate",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7b9eb8a8-fa88-453b-810f-b55034589aac.pdf",
+     "treatment": "one_liner"
+    }
+   ],
+   "summary": {
+    "headline": "RBI approved V. Srinivasa Rangan re-appointment",
+    "one_liner": "On November 12, 2026, the RBI approved the re-appointment of V. Srinivasa Rangan as Executive Director for 1 year from November 23, 2026.",
+    "method": "llm (gemini-3.5-flash-lite)",
+    "problems": []
+   }
+  },
+  {
+   "uid": "BSE:8269aea9-54c0-4a24-a615-6dda0ab8f054.pdf",
+   "symbol": "LT",
+   "company": "Larsen & Toubro Limited",
+   "ts": "2026-11-09T10:35:44+05:30",
+   "subject": "Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8269aea9-54c0-4a24-a615-6dda0ab8f054.pdf",
+   "sources": [
+    "screener_recent"
+   ],
+   "category": "press_release",
+   "subtype": "order_win",
+   "class_method": "rule",
+   "class_confidence": 0.85,
+   "card_kind": "summary",
+   "reaction": {
+    "date": "2026-11-09",
+    "ret_pct": 1.63,
+    "z": 1.64,
+    "vol_x": 1.41
+   },
+   "score": 0.468,
+   "treatment": "one_liner",
+   "score_parts": [
+    {
+     "factor": "base",
+     "value": 0.5,
+     "why": "press release / order win"
+    },
+    {
+     "factor": "multiply",
+     "value": 0.9,
+     "why": "your preference for press release"
+    },
+    {
+     "factor": "multiply",
+     "value": 1.04,
+     "why": "holding weight 7.0%"
+    }
+   ],
+   "related": [],
+   "summary": {
+    "headline": "L&T secures order from Noida Metro",
+    "one_liner": "On November 9, 2026, L&T secured an order from Noida Metro Rail Corporation Ltd for the Aqua Line Extension Project.",
+    "method": "llm (gemini-3.5-flash-lite)",
+    "problems": []
+   }
+  },
+  {
+   "uid": "BSE:88c1f74a-5faf-4951-bd1c-87ac9c742fd0.pdf",
+   "symbol": "BAJFINANCE",
+   "company": "Bajaj Finance Limited",
+   "ts": "2026-11-07T16:12:07+05:30",
+   "subject": "Submission Of Half Yearly Report For FY2026-27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=88c1f74a-5faf-4951-bd1c-87ac9c742fd0.pdf",
+   "sources": [
+    "screener_recent"
+   ],
+   "category": "results",
+   "subtype": "periodic_report",
+   "class_method": "rule",
+   "class_confidence": 0.85,
+   "card_kind": "summary",
+   "reaction": {
+    "date": "2026-11-09",
+    "ret_pct": -2.11,
+    "z": -1.6,
+    "vol_x": 0.96
+   },
+   "score": 0.408,
+   "treatment": "one_liner",
+   "score_parts": [
+    {
+     "factor": "base",
+     "value": 0.4,
+     "why": "results / periodic report"
+    },
+    {
+     "factor": "multiply",
+     "value": 1.02,
+     "why": "holding weight 6.0%"
+    }
+   ],
+   "related": [],
+   "summary": {
+    "headline": "Bajaj Finance Reports H1 FY27 Results",
+    "one_liner": "Bajaj Finance submitted the half yearly report on 7 November 2026, reporting a consolidated profit after tax of ₹ 12,447 crore for H1 FY27.",
+    "method": "llm (gemini-3.5-flash-lite)",
+    "problems": []
+   }
+  }
+ ],
+ "collapsed": {
+  "investor_meetings": {
+   "count": 10,
+   "items": [
+    {
+     "symbol": "RELIANCE",
+     "ts": "2026-11-12T20:22:14+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55f9d4f5-8638-4669-abdb-7cc4127221fc.pdf"
+    },
+    {
+     "symbol": "HDFCBANK",
+     "ts": "2026-11-12T14:21:58+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d01ef203-cd61-4f19-b88b-7a373979e5b5.pdf"
+    },
+    {
+     "symbol": "MARUTI",
+     "ts": "2026-11-12T11:57:08+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 12 Nov",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=19833a7e-2123-409e-990d-b9c1bfd1a543.pdf"
+    },
+    {
+     "symbol": "INDHOTEL",
+     "ts": "2026-11-12T17:53:47+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 12 Nov",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5ba889d8-0772-487f-9efc-cd25809f513d.pdf"
+    },
+    {
+     "symbol": "CDSL",
+     "ts": "2026-11-09T18:00:34+05:30",
+     "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+     "url": "https://nsearchives.nseindia.com/corporate/CDSL_09112026175741_ConCallInvite_Nov13_2026_sd.pdf"
+    },
+    {
+     "symbol": "IEX",
+     "ts": "2026-11-12T18:45:35+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=069f9b70-904e-4e62-b87b-87903f8e45a6.pdf"
+    }
+   ]
+  },
+  "press_release": {
+   "count": 2,
+   "items": [
+    {
+     "symbol": "INFY",
+     "ts": "2026-11-12T11:21:41+05:30",
+     "title": "Six Promising Researchers Win The Infosys Prize 2026 Awarded By The Infosys Science Foundation",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2d26cac8-d5b5-4be4-ba93-d18f80ee8c0c.pdf"
+    },
+    {
+     "symbol": "MARUTI",
+     "ts": "2026-11-10T11:55:47+05:30",
+     "title": "Reference To The Financial Results Issued By Suzuki Motor Corporation",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2b74a7fe-194c-4a61-8cf6-dbba26573f57.pdf"
+    }
+   ]
+  },
+  "earnings_call": {
+   "count": 2,
+   "items": [
+    {
+     "symbol": "MAPMYINDIA",
+     "ts": "2026-11-07T11:44:25+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript 7 Nov",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3f592a6b-7e2b-4647-b41a-528089fb87b6.pdf"
+    },
+    {
+     "symbol": "HAPPSTMNDS",
+     "ts": "2026-11-09T17:40:34+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b5afda31-bbe6-465e-876e-48c8774ccacd.pdf"
+    }
+   ]
+  },
+  "unclassified": {
+   "count": 1,
+   "items": [
+    {
+     "symbol": "ITC",
+     "ts": "2026-11-13T15:16:15+05:30",
+     "title": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=549cc510-62f9-4022-b62b-58e3e72ad671.pdf"
+    }
+   ]
+  }
+ },
+ "alerts": [
+  {
+   "symbol": "CDSL",
+   "date": "2026-11-12",
+   "text": "CDSL +3.4% (Nifty +0.2%) - 2.0 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average",
+   "rules": [
+    "Volume at least 2.5x its 20-day average"
+   ],
+   "measures": {
+    "ret_pct": 3.41,
+    "mkt_ret_pct": 0.18,
+    "z": 1.96,
+    "vol_x": 3.27,
+    "beta": 1.1,
+    "sigma_pct": 1.65,
+    "provisional": false
+   },
+   "filed_before": [],
+   "routine_filed_before": 4,
+   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
+  },
+  {
+   "symbol": "CDSL",
+   "date": "2026-11-11",
+   "text": "CDSL +3.8% (Nifty +0.8%) - 1.8 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average",
+   "rules": [
+    "Volume at least 2.5x its 20-day average"
+   ],
+   "measures": {
+    "ret_pct": 3.76,
+    "mkt_ret_pct": 0.84,
+    "z": 1.79,
+    "vol_x": 3.28,
+    "beta": 1.06,
+    "sigma_pct": 1.61,
+    "provisional": false
+   },
+   "filed_before": [],
+   "routine_filed_before": 4,
+   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
+  }
+ ],
+ "alert_rules": [
+  {
+   "name": "unusual_move",
+   "label": "Move unusual for this stock (2.5 sigma after the market)",
+   "min_abs_z": 2.5,
+   "min_vol_x": null,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  },
+  {
+   "name": "volume_spike",
+   "label": "Volume at least 2.5x its 20-day average",
+   "min_abs_z": null,
+   "min_vol_x": 2.5,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  }
+ ],
+ "data_status": {
+  "prices": {
+   "nifty": {
+    "source": "yfinance:^NSEI + provisional last bar from Yahoo quote",
+    "as_of": "2026-11-13T22:19:32+00:00",
+    "stale": false,
+    "error": null,
+    "notes": [],
+    "last_date": "2026-11-13"
+   },
+   "RELIANCE": {
+    "source": "yfinance:RELIANCE.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "HDFCBANK": {
+    "source": "yfinance:HDFCBANK.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "INFY": {
+    "source": "yfinance:INFY.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "LT": {
+    "source": "yfinance:LT.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "SUNPHARMA": {
+    "source": "yfinance:SUNPHARMA.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "MARUTI": {
+    "source": "yfinance:MARUTI.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "ITC": {
+    "source": "yfinance:ITC.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "BAJFINANCE": {
+    "source": "yfinance:BAJFINANCE.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "VEDL": {
+    "source": "yfinance:VEDL.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": [
+     "1 one-day move(s) over 35% (split/bonus or bad tick?), e.g. ('2026-04-30', -64.9)"
+    ]
+   },
+   "DIXON": {
+    "source": "yfinance:DIXON.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "POLYCAB": {
+    "source": "yfinance:POLYCAB.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "PERSISTENT": {
+    "source": "yfinance:PERSISTENT.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "INDHOTEL": {
+    "source": "yfinance:INDHOTEL.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "CDSL": {
+    "source": "yfinance:CDSL.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "SUZLON": {
+    "source": "yfinance:SUZLON.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "IEX": {
+    "source": "yfinance:IEX.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "MAPMYINDIA": {
+    "source": "yfinance:MAPMYINDIA.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   },
+   "HAPPSTMNDS": {
+    "source": "yfinance:HAPPSTMNDS.NS + provisional last bar from Yahoo quote",
+    "last_date": "2026-11-13",
+    "stale": false,
+    "provisional": true,
+    "checks": []
+   }
+  },
+  "filings_sources": {
+   "RELIANCE": {
+    "bse_api": "blocked: api.bseindia.com returned 403",
+    "nse_api": "blocked: www.nseindia.com returned 403",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "HDFCBANK": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "INFY": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "LT": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "SUNPHARMA": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "MARUTI": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "ITC": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "BAJFINANCE": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "VEDL": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "DIXON": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "POLYCAB": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "PERSISTENT": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "INDHOTEL": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "CDSL": {
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "SUZLON": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "IEX": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "MAPMYINDIA": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   },
+   "HAPPSTMNDS": {
+    "bse_api": "blocked: api.bseindia.com refused earlier; cooling down",
+    "nse_api": "blocked: www.nseindia.com refused earlier; cooling down",
+    "screener_recent": "ok (5)",
+    "rss_store": "ok (0)"
+   }
+  },
+  "filings_note": "Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.",
+  "as_of": {
+   "prices_last_date": "2026-11-13",
+   "built_in_seconds": 7.9
+  }
+ },
+ "llm_usage": {
+  "models": {
+   "gemini-3.5-flash-lite": {
+    "api_calls": 0,
+    "cache_hits": 5,
+    "failed": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0
+   }
+  },
+  "cost_usd": 0.0,
+  "pricing": "free tier (USD 0)"
+ },
+ "holdings": [
+  {
+   "symbol": "RELIANCE",
+   "weight": 0.1
+  },
+  {
+   "symbol": "HDFCBANK",
+   "weight": 0.1
+  },
+  {
+   "symbol": "INFY",
+   "weight": 0.08
+  },
+  {
+   "symbol": "LT",
+   "weight": 0.07
+  },
+  {
+   "symbol": "SUNPHARMA",
+   "weight": 0.06
+  },
+  {
+   "symbol": "MARUTI",
+   "weight": 0.06
+  },
+  {
+   "symbol": "ITC",
+   "weight": 0.06
+  },
+  {
+   "symbol": "BAJFINANCE",
+   "weight": 0.06
+  },
+  {
+   "symbol": "VEDL",
+   "weight": 0.04
+  },
+  {
+   "symbol": "DIXON",
+   "weight": 0.05
+  },
+  {
+   "symbol": "POLYCAB",
+   "weight": 0.05
+  },
+  {
+   "symbol": "PERSISTENT",
+   "weight": 0.05
+  },
+  {
+   "symbol": "INDHOTEL",
+   "weight": 0.04
+  },
+  {
+   "symbol": "CDSL",
+   "weight": 0.04
+  },
+  {
+   "symbol": "SUZLON",
+   "weight": 0.04
+  },
+  {
+   "symbol": "IEX",
+   "weight": 0.03
+  },
+  {
+   "symbol": "MAPMYINDIA",
+   "weight": 0.035
+  },
+  {
+   "symbol": "HAPPSTMNDS",
+   "weight": 0.035
+  }
+ ],
+ "quiet_holdings": [
+  "DIXON",
+  "HAPPSTMNDS",
+  "IEX",
+  "INDHOTEL",
+  "INFY",
+  "ITC",
+  "MAPMYINDIA",
+  "MARUTI",
+  "PERSISTENT",
+  "POLYCAB",
+  "RELIANCE",
+  "SUNPHARMA",
+  "SUZLON",
+  "VEDL"
+ ]
+}
