@@ -1,0 +1,10 @@
+[project]
+name = "finn"
+version = "0.2.0"
+description = "FINN data layer: prices, filings, fundamentals and primary documents for Indian listed companies"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-q"
