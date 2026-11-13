@@ -1,0 +1,30 @@
+{
+  "name": "Demo portfolio (18 holdings, mixed sectors and sizes)",
+  "holdings": [
+    {"symbol": "RELIANCE",   "weight": 0.10},
+    {"symbol": "HDFCBANK",   "weight": 0.10},
+    {"symbol": "INFY",       "weight": 0.08},
+    {"symbol": "LT",         "weight": 0.07},
+    {"symbol": "SUNPHARMA",  "weight": 0.06},
+    {"symbol": "MARUTI",     "weight": 0.06},
+    {"symbol": "ITC",        "weight": 0.06},
+    {"symbol": "BAJFINANCE", "weight": 0.06},
+    {"symbol": "VEDL",       "weight": 0.04},
+    {"symbol": "DIXON",      "weight": 0.05},
+    {"symbol": "POLYCAB",    "weight": 0.05},
+    {"symbol": "PERSISTENT", "weight": 0.05},
+    {"symbol": "INDHOTEL",   "weight": 0.04},
+    {"symbol": "CDSL",       "weight": 0.04},
+    {"symbol": "SUZLON",     "weight": 0.04},
+    {"symbol": "IEX",        "weight": 0.03},
+    {"symbol": "MAPMYINDIA", "weight": 0.035},
+    {"symbol": "HAPPSTMNDS", "weight": 0.035}
+  ],
+  "preferences": {
+    "results": 1.0, "M&A": 1.0, "management_change": 1.0, "litigation": 1.0, "fund_raise": 1.0,
+    "credit_rating": 1.0, "pledging": 1.0, "capex": 0.9, "bonus_split": 0.8, "press_release": 0.9,
+    "insider_trading": 0.8, "dividend": 0.7, "earnings_call": 0.8, "agm_egm": 0.6,
+    "investor_meetings": 0.5, "postal_ballot": 0.5, "unclassified": 0.3
+  },
+  "alert_rules": ["unusual_move", "volume_spike"]
+}
