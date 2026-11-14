@@ -18,30 +18,6 @@ Three free services, all signed in with GitHub as **fizzyappy**:
 5. Check it: open `https://finn-api.onrender.com/sources` in a browser. Each line should say `"ok": true`.
    If one says it was refused, the app still works and says which source is missing; tell me what it shows.
 
-## 1b. No card? Use a Hugging Face Space instead of Render (free, no card)
-
-Render now asks new accounts for a card. A Hugging Face Space does the same job for free without one.
-Use **either** Render **or** this, not both. Wherever these steps say "the Render address", use the Space address instead.
-
-1. Go to **huggingface.co** → **Sign up** (email + password) → confirm the email they send you.
-2. Top right, your picture → **New Space**.
-   - Space name: `finn-api` · License: leave blank · **Space SDK: Docker** → template **Blank**
-   - Hardware: **CPU basic · Free** · Visibility: **Public**
-   - **Create Space**.
-3. On the new Space page: **Files** tab → **+ Add file** → **Create a new file**.
-   - File name: `Dockerfile`. Paste everything from `hf-space/Dockerfile` in the GitHub repo
-     (open it on github.com → **Raw** → select all → copy). **Commit new file to main**.
-4. Same again for `README.md`: **Files** → click `README.md` → **edit** (pencil) → replace everything with the contents
-   of `hf-space/README.md` from GitHub → **Commit changes to main**. (Keep the lines between the `---` marks exactly.)
-5. **Settings** tab → **Variables and secrets** → **New secret** → Name `GEMINI_API_KEY`, Value: your **new** Gemini key
-   → **Save**. (A *secret*, not a variable, so nobody can see it.)
-6. Click **App** at the top. It builds for 5–10 minutes, then says **Running**.
-7. Your address is `https://<your-username>-finn-api.hf.space` (also under the ⋮ menu → **Embed this Space** → "Direct URL").
-   Check it: open that address + `/health` in a browser. It should show `{"ok":true}`.
-8. Use this address for `VITE_API_BASE` on Vercel and `FINN_API_URL` on GitHub (sections 2 and 3).
-
-To load newer code from GitHub later: Space → **Settings** → **Factory rebuild**.
-
 ## 2. The app on Vercel
 
 1. Go to **vercel.com** → **Sign Up / Log In** → **Continue with GitHub** → fizzyappy.
