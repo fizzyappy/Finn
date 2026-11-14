@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { backendAlive, fmtNum, fmtWhen, Json, nice, prefs, snapshot } from "../lib/data";
+import { backendAlive, catLabel, fmtNum, fmtWhen, Json, nice, prefs, snapshot } from "../lib/data";
 
 const SOURCE_LABEL: Record<string, string> = {
   bse_api: "BSE announcements API", nse_api: "NSE announcements API",
@@ -65,7 +65,7 @@ export default function Settings() {
         <>
           <div className="section-title"><h2>Tuned by your swipes</h2></div>
           <div className="glass card">
-            {Object.entries(tune).map(([cat, v]) => <div key={cat} className="kv"><span className="k">{nice(cat)}</span><span className="v">×{v.toFixed(2)}</span></div>)}
+            {Object.entries(tune).map(([cat, v]) => <div key={cat} className="kv"><span className="k">{catLabel(cat)}</span><span className="v">×{v.toFixed(2)}</span></div>)}
             <button className="btn secondary small" style={{ marginTop: 12 }} onClick={() => { prefs.setTune({}); setTune({}); }}>Reset</button>
           </div>
         </>

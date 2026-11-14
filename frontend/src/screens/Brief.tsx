@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { SwipeCard, ReactionChip } from "../cards/cards";
 import { Cite, Icon, Ring } from "../components/ui";
-import { api, backendAlive, briefForRange, cleanTitle, fmtDay, fmtWhen, Json, nice, prefs, snapshot, WindowKey, WINDOWS } from "../lib/data";
+import { api, backendAlive, briefForRange, catLabel, cleanTitle, fmtDay, fmtWhen, Json, prefs, sameText, snapshot, WindowKey, WINDOWS } from "../lib/data";
 
 const HERO = 0.6, ONE = 0.3;
 const plural = (n: number, word: string) => (n === 1 ? word : `${word}s`);
@@ -119,7 +119,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const less = (e: Json) => {
     const next = clampTune((tune[e.category] ?? 1) * 0.8);
     setTune({ ...tune, [e.category]: next });
-    setToast(`Less ${nice(e.category)} from now on (×${next.toFixed(2)}). Undo in Settings.`);
+    setToast(`Less ${catLabel(e.category)} from now on (×${next.toFixed(2)}). Undo in Settings.`);
   };
   const readAloud = () => {
     if (!("speechSynthesis" in window)) return;
@@ -138,7 +138,8 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
       <div className="brief-head">
         <Ring done={heroDone} total={ranked.hero.length} />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : `Your ${brief.window.label.replace("last ", "last ")}`}</h1>
+          {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
+          <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : win === "custom" && range ? brief.window.label : `Your ${brief.window.label}`}</h1>
           <div className="counts tnum">
             <b>{brief.header.filings}</b> {plural(brief.header.filings, "filing")} · <b>{matter}</b> matter · <b>{heroLeft.length}</b> left
             {brief.alerts?.length ? <> · <b>{brief.alerts.length}</b> moves</> : null}
@@ -206,9 +207,9 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
                 <div className="ticker-badge" aria-hidden>{e.symbol.slice(0, 4)}</div>
                 <div className="grow">
                   <div className="title">{e.summary?.headline || e.subject}</div>
-                  {e.summary?.one_liner && <div className="desc">{e.summary.one_liner}</div>}
+                  {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="desc">{e.summary.one_liner}</div>}
                   <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
-                    <span className="tag">{nice(e.category)}</span>
+                    <span className="tag">{catLabel(e.category)}</span>
                     <ReactionChip r={e.reaction} ts={e.ts} />
                     {e.url && <Cite href={e.url}>filing</Cite>}
                   </div>
@@ -231,7 +232,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
                     {a.symbol} <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span>
                     <span className="faint small"> · {fmtDay(a.date)}</span>
                   </div>
-                  <div className="desc">{Math.abs(a.measures.z).toFixed(1)}× its normal day after the market · volume {a.measures.vol_x}× average</div>
+                  <div className="desc">A move {Math.abs(a.measures.z).toFixed(1)}× bigger than its normal day (Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}%), on {Number(a.measures.vol_x).toFixed(1)}× its usual volume</div>
                   {a.filed_before?.length > 0 && <div className="desc" style={{ color: "var(--mint-2)" }}>Filed before this move: {cleanTitle(a.filed_before[0].title)}</div>}
                 </div>
                 <button className="why-btn" onClick={() => onOpenResearch(a.symbol)}>Research</button>
@@ -246,7 +247,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         {Object.entries(collapsed).map(([cat, c]: [string, Json]) => (
           <div key={cat}>
             <button className="collapsed-cat" onClick={() => setOpenCat(openCat === cat ? null : cat)} aria-expanded={openCat === cat}>
-              <span>{nice(cat)}</span><span className="count-pill">{c.count}</span>
+              <span>{catLabel(cat)}</span><span className="count-pill">{c.count}</span>
             </button>
             <AnimatePresence initial={false}>
               {openCat === cat && (

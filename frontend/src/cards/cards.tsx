@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { Cite, CountUp, Icon } from "../components/ui";
-import { fmtNum, fmtPct, fmtWhen, Json, nice, pageLink, signClass } from "../lib/data";
+import { catLabel, fmtNum, fmtPct, fmtWhen, Json, metricLabel, monthYear, nice, pageLink, sameText, signClass } from "../lib/data";
 
 /* ---------------------------------------------------------------- shared bits */
 export function Who({ e }: { e: Json }) {
@@ -10,7 +10,7 @@ export function Who({ e }: { e: Json }) {
       <div className="ticker-badge" aria-hidden>{(e.symbol || "?").slice(0, 4)}</div>
       <div style={{ minWidth: 0 }}>
         <div className="name">{e.symbol}</div>
-        <div className="sub">{nice(e.category)} · {fmtWhen(e.ts)}</div>
+        <div className="sub">{catLabel(e.category)} · {fmtWhen(e.ts)}</div>
       </div>
     </div>
   );
@@ -68,7 +68,7 @@ export function ResultsBody({ e }: { e: Json }) {
       )}
       {(c.vs_guidance || []).slice(0, 2).map((g: Json, i: number) => (
         <div key={i} className="small" style={{ marginTop: 8, color: "var(--mint-2)" }}>
-          vs guidance: {nice(g.metric)} {g.horizon} target {g.target} <span className="faint">(said {g.said_on?.slice(0, 7)})</span>
+          vs guidance: {metricLabel(g.metric)} {g.horizon} target {g.target} <span className="faint">(said {monthYear(g.said_on)})</span>
         </div>
       ))}
       <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
@@ -79,7 +79,7 @@ export function ResultsBody({ e }: { e: Json }) {
         ) : (
           <span className="tag amber">Not verified: open the filing</span>
         )}
-        <span className="faint small">{c.basis} · read by {c.model?.replace("gemini-", "Gemini ")}, checked by Python</span>
+        <span className="faint small">{c.basis} · numbers read from the filing, checked by Python</span>
       </div>
       <AnimatePresence initial={false}>
         {showChecks && (
@@ -121,7 +121,7 @@ export function SummaryBody({ e }: { e: Json }) {
   return (
     <div>
       <div className="headline">{e.summary?.headline || e.subject}</div>
-      {e.summary?.one_liner && <div className="oneliner">{e.summary.one_liner}</div>}
+      {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="oneliner">{e.summary.one_liner}</div>}
     </div>
   );
 }
@@ -143,10 +143,10 @@ export function WhyBody({ e, onBack }: { e: Json; onBack: () => void }) {
             <span className="v">{p.factor === "base" ? p.value.toFixed(2) : p.factor === "multiply" ? `×${p.value}` : p.factor === "add" ? `+${p.value}` : ""}</span>
           </li>
         ))}
-        {e.tuned && e.tuned !== 1 && <li><span>your swipes on {nice(e.category)}</span><span className="v">×{e.tuned.toFixed(2)}</span></li>}
+        {e.tuned && e.tuned !== 1 && <li><span>your swipes on {catLabel(e.category)}</span><span className="v">×{e.tuned.toFixed(2)}</span></li>}
       </ul>
       <div className="faint small" style={{ marginTop: 8 }}>
-        Classified by {e.class_method === "rule" ? "a rule" : "Gemini (rules were unsure)"} as {nice(e.category)} / {nice(e.subtype)}.
+        Classified by {e.class_method === "rule" ? "a rule" : "Gemini (rules were unsure)"} as {catLabel(e.category)} ({nice(e.subtype)}).
         {e.related?.length ? ` ${e.related.length} related filing(s) folded in.` : ""}
       </div>
       {e.url && <div style={{ marginTop: 10 }}><Cite href={e.url}>open the filing</Cite></div>}
@@ -193,7 +193,7 @@ export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void
             <article className={`glass card face ${e.score >= 0.75 ? "hero-glow" : ""}`} aria-hidden={flipped}>
               <div className="card-top">
                 <Who e={e} />
-                <span className="tag ghost tnum" title="materiality score">{e.score.toFixed(2)}</span>
+                <span className="tag ghost tnum" title="How much this matters to you, 0 to 1. Tap Why? for the breakdown.">score {e.score.toFixed(2)}</span>
               </div>
               {kind === "results" ? <ResultsBody e={e} /> : kind === "people" ? <PeopleBody e={e} /> : <SummaryBody e={e} />}
               <div className="card-foot">

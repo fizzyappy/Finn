@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BandChart, Bars, Cite, Icon } from "../components/ui";
-import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, nice, pageLink, prefs, signClass, snapshot, wakeBackend } from "../lib/data";
+import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, monthYear, pageLink, prefs, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
   "reading annual report", "writing", "done"];
@@ -96,7 +96,7 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
         ))}
       </div>
 
-      {!ticker && <Intro />}
+      {!ticker && <Intro index={index} onPick={setTicker} />}
       {state === "loading" && <div className="faint" style={{ padding: 30, textAlign: "center" }}>Opening {ticker}…</div>}
       {state === "offline" && (
         <div className="glass card" style={{ marginTop: 14 }}>
@@ -132,15 +132,42 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
   );
 }
 
-function Intro() {
+function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }) {
+  const ratio = (s?: string) => {
+    const m = /^(\d+) of (\d+)$/.exec(s || "");
+    return m ? { a: +m[1], b: +m[2] } : null;
+  };
+  const rows = [...index].sort((x, y) => Number(y.in_portfolio) - Number(x.in_portfolio) || x.ticker.localeCompare(y.ticker));
   return (
-    <div className="glass card" style={{ marginTop: 14 }}>
-      <div className="h2">Does management keep its word?</div>
-      <p className="muted small" style={{ marginBottom: 0 }}>
-        FINN reads a company's last five earnings calls and its annual report, lists every target management set, and checks each one
-        against the reported numbers. Every quote links to its page. Pick a company above or search any NSE name.
-      </p>
-    </div>
+    <>
+      <div className="glass card" style={{ marginTop: 14 }}>
+        <div className="h2">Does management keep its word?</div>
+        <p className="muted small" style={{ marginBottom: 0 }}>
+          For each company FINN reads the last five earnings calls and the annual report, lists every target management set,
+          and checks it against the reported numbers. Every quote links to its page.
+        </p>
+      </div>
+      <div className="section-title"><h2>Management scorecards</h2><span className="meta">{rows.length} companies ready</span></div>
+      <div className="glass">
+        {rows.map((r) => {
+          const k = ratio(r.kept), d = ratio(r.dodged);
+          return (
+            <button key={r.ticker} className="ledger-row" onClick={() => onPick(r.ticker)}>
+              <div className="line1">
+                <span className="what">{r.ticker} <span className="faint small" style={{ fontWeight: 400 }}>{(r.name || "").replace(/ Ltd\.?$/, "")}</span></span>
+                <span className="tnum small" style={{ display: "flex", gap: 6 }}>
+                  <span className={`verdict ${k && k.b ? (k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed") : "v-nm"}`}>
+                    {k && k.b ? `${k.a}/${k.b} kept` : "none due yet"}
+                  </span>
+                  {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
+                </span>
+              </div>
+              <div className="line2">{r.in_portfolio ? "in your portfolio" : "research pick"}{d ? ` · ${d.b} questions checked` : ""}</div>
+            </button>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
@@ -230,11 +257,11 @@ function Ledger({ led }: { led: Json }) {
             <div key={i}>
               <button className="ledger-row" onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i}>
                 <div className="line1">
-                  <span className="what">{nice(r.metric)} {r.horizon} · {r.target}</span>
+                  <span className="what">{metricLabel(r.metric)} {r.horizon} · {r.target}</span>
                   <span className={`verdict ${VERDICT_CLASS[r.verdict]}`}>{r.verdict}</span>
                 </div>
                 <div className="line2">
-                  {r.scope && !/^(company|group|consolidated)$/i.test(r.scope) ? `${r.scope} · ` : ""}said {s.call_date?.slice(0, 7)} by {s.speaker}
+                  {r.scope && !/^(company|group|consolidated)$/i.test(r.scope) ? `${r.scope} · ` : ""}said {monthYear(s.call_date)} by {s.speaker}
                   {r.actual != null && <> · actual <b className="tnum" style={{ color: "var(--text)" }}>{fmtNum(r.actual, 1)}{unit}</b></>}
                 </div>
               </button>
@@ -278,7 +305,9 @@ function Ledger({ led }: { led: Json }) {
 
 function Dodged({ calls }: { calls: Json[] }) {
   const judged = calls.flatMap((c) => (c.judged || []).map((j: Json) => ({ ...j, call: c.call, url: c.url })));
-  const shown = judged.filter((j) => j.label !== "answered");
+  // Real non-answers first; a request to repeat the question is not worth showing.
+  const shown = judged.filter((j) => j.label !== "answered" && !/clarif/i.test(j.reason || ""))
+    .sort((a, b) => (a.label === "dodged" ? 0 : 1) - (b.label === "dodged" ? 0 : 1));
   return (
     <>
       <Title meta={`${judged.length} questions judged`}>Did they answer?</Title>

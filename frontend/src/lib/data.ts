@@ -67,7 +67,10 @@ export const prefs = {
     const v = read<string>("finn.api", "");
     if (v === "off") return "";                 // explicitly offline: snapshot only
     const built = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/+$/, "") || "";
-    return v || built || (location.hostname === "localhost" ? "http://localhost:8000" : "");
+    // Opened from this PC or from a phone on the same Wi-Fi: use the backend on the same machine.
+    const h = location.hostname;
+    const local = h === "localhost" || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(h);
+    return v || built || (local ? `http://${h}:8000` : "");
   },
   setApiBase: (v: string) => write("finn.api", v.trim().replace(/\/+$/, "")),
   cleared: () => new Set(read<string[]>("finn.cleared", [])),
@@ -135,6 +138,36 @@ export function fmtDay(iso?: string) {
   return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 }
 export const nice = (s?: string) => (s || "").replace(/_/g, " ");
+
+const METRIC: Record<string, string> = {
+  revenue_growth: "Revenue growth", revenue: "Revenue", ebitda_margin: "EBITDA margin", ebit_margin: "EBIT margin",
+  pat_growth: "Profit growth", pat: "Profit", pat_margin: "Profit margin", roe: "ROE", net_debt: "Net debt",
+  deposit_growth: "Deposit growth", loan_growth: "Loan growth", nim: "Net interest margin", credit_cost: "Credit cost",
+  working_capital: "Working capital", capex: "Capex", order_inflow: "Order inflow", order_book: "Order book",
+  volume_growth: "Volume growth", other: "Other target",
+};
+const CATEGORY: Record<string, string> = {
+  results: "Results", "M&A": "M&A", fund_raise: "Fund raise", management_change: "Management change",
+  litigation: "Litigation", insider_trading: "Insider trading", earnings_call: "Earnings calls",
+  investor_meetings: "Investor meetings", credit_rating: "Credit rating", dividend: "Dividend",
+  bonus_split: "Bonus / split", capex: "Capex", press_release: "Company updates", postal_ballot: "Shareholder votes",
+  agm_egm: "AGM / EGM", pledging: "Pledging", unclassified: "Routine paperwork",
+};
+export const metricLabel = (m?: string) => METRIC[m || ""] || nice(m);
+export const catLabel = (c?: string) => CATEGORY[c || ""] || nice(c);
+export const monthYear = (iso?: string) =>
+  iso ? new Date(`${iso.slice(0, 7)}-15`).toLocaleDateString("en-IN", { month: "short", year: "numeric" }) : "";
+/** True when one text says nothing the other doesn't (a one-liner repeating its headline). */
+export function sameText(a?: string, b?: string) {
+  const k = (s?: string) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const x = k(a), y = k(b);
+  if (!x || !y) return false;
+  if (x === y || x.includes(y) || y.includes(x)) return true;
+  // Same words give or take a couple ("Clarification was sought…" vs "Clarification sought…").
+  const A = new Set(x.split(" ")), B = new Set(y.split(" "));
+  const shared = [...A].filter((w) => B.has(w)).length;
+  return shared / Math.max(A.size, B.size) >= 0.8;
+}
 /** Exchange subjects without the regulatory boilerplate prefix. */
 export const cleanTitle = (s?: string) =>
   (s || "").replace(/^(announcement|intimation|disclosure)\s+under\s+regulation\s+\d+\s*(\(\w+\))?\s*(of .{0,40}?regulations?,? \d{4})?\s*[-:]?\s*/i, "").trim();
