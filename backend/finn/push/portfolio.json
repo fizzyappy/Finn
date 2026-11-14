@@ -26,5 +26,5 @@
     "insider_trading": 0.8, "dividend": 0.7, "earnings_call": 0.8, "agm_egm": 0.6,
     "investor_meetings": 0.5, "postal_ballot": 0.5, "unclassified": 0.3
   },
-  "alert_rules": ["unusual_move", "volume_spike"]
+  "alert_rules": ["notable_move"]
 }

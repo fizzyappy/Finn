@@ -52,6 +52,10 @@ class Rule:
 
 
 PRESETS = {
+    # Default. The 90-day backtest showed "2.5 sigma" alone fires ~3x a week across an
+    # 18-stock portfolio; requiring a 3-sigma move AND 2.5x volume brings it to ~1 a week.
+    "notable_move": Rule("notable_move", "Notable move: 3 sigma after the market, on 2.5x normal volume",
+                         min_abs_z=3.0, min_vol_x=2.5),
     "unusual_move": Rule("unusual_move", "Move unusual for this stock (2.5 sigma after the market)", min_abs_z=2.5),
     "volume_spike": Rule("volume_spike", "Volume at least 2.5x its 20-day average", min_vol_x=2.5),
     "move_on_volume": Rule("move_on_volume", "Unusual move (2 sigma) on heavy volume (1.8x)", min_abs_z=2.0, min_vol_x=1.8),

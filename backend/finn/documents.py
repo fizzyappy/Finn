@@ -134,13 +134,29 @@ def normalise_ws(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+_QUOTE_CHARS = str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "})
+
+
+def quote_key(s: str) -> str:
+    """Comparison form for quote checks: case, curly quotes and dashes normalised, and
+    ALL whitespace removed. PDF text often breaks words with stray spaces ('gui dance'),
+    so spacing is ignored; every other character must match."""
+    s = re.sub(r"(\w)-\n(\w)", r"\1\2", s or "").translate(_QUOTE_CHARS).lower()
+    return re.sub(r"\s+", "", s)
+
+
 def find_quote(pages: list[str], quote: str) -> int | None:
-    """1-based page number where `quote` appears (whitespace-insensitive), else None.
+    """1-based page number where `quote` appears word for word (spacing ignored), else None.
+    A quote that runs over a page break is found on the page where it starts.
     Used to verify every quote against its source before it is shown."""
-    target = normalise_ws(quote).lower()
-    if not target:
+    target = quote_key(quote)
+    if len(target) < 4:
         return None
-    for i, p in enumerate(pages, 1):
-        if target in normalise_ws(p).lower():
-            return i
+    keys = [quote_key(p) for p in pages]
+    for i, k in enumerate(keys):
+        if target in k:
+            return i + 1
+    for i in range(len(keys) - 1):          # a quote running over a page break
+        if target in keys[i][-len(target):] + keys[i + 1][:len(target)]:
+            return i + 1
     return None

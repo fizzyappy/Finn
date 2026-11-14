@@ -102,8 +102,10 @@ def main(argv: list[str] | None = None) -> Path:
     for name, bt in bts.items():
         top = ", ".join(f"{k} {len(v)}" for k, v in list(bt["per_symbol"].items())[:3])
         L.append(f"| {bt['rule']['label']} | {bt['fires_total']} | {bt['fires_per_week']} | {top} | {len(bt['quiet_symbols'])} |")
-    L += ["", "A 2.5-sigma rule would fire about 1.2% of days if returns were bell-shaped (about 20 times here); "
-          "real returns have fatter tails, which is exactly why the backtest is shown before a rule is switched on.", ""]
+    L += ["", "The preview changed the default. The obvious rule (a 2.5-sigma move) would fire about 1.2% of days if "
+          "returns were bell-shaped, about 20 times here; real returns have fatter tails and it fired 58 times, ~3 a "
+          "week: too noisy to be worth a push. The default is now 'notable move' (3 sigma after the market AND 2.5x "
+          "normal volume), which fired about once a week. The investor can still pick any preset or a custom rule.", ""]
     def usage_line(u: dict) -> str:
         return "; ".join(f"{m}: {v['api_calls']} API calls, {v['cache_hits']} cache hits, {v['failed']} failed, "
                          f"{v['tokens_in']:,} in / {v['tokens_out']:,} out tokens" for m, v in u["models"].items()) \

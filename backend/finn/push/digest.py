@@ -95,7 +95,7 @@ def build(window: str | tuple = "24h", *, p: portfolio.Portfolio | None = None, 
     days = max(1, math.ceil((end - start).total_seconds() / 86400))
 
     series, price_status = alerts_mod.portfolio_series(p.symbols)
-    rule_objs = [alerts_mod.rule_from(r) for r in (rules or p.alert_rules or ["unusual_move", "volume_spike"])]
+    rule_objs = [alerts_mod.rule_from(r) for r in (rules or p.alert_rules or ["notable_move"])]
 
     raw, source_status, mcaps, trusted = [], {}, {}, {}
     for sym in p.symbols:
@@ -136,6 +136,10 @@ def build(window: str | tuple = "24h", *, p: portfolio.Portfolio | None = None, 
             if e["card_kind"] == "results" and e["url"]:
                 e["card"] = results_card.build(e["url"], symbol=e["symbol"], trusted=tr)
                 e["summary"] = results_card.summary(e["card"], e["symbol"])
+                pe = (e["card"].get("period_ends") or [None])[0]
+                if pe:
+                    from ..pull import engine as pull_engine     # research cache only; no new model calls
+                    e["card"]["vs_guidance"] = pull_engine.vs_guidance(e["symbol"], pe)
             elif e["card_kind"] == "people" and e["url"]:
                 e["card"] = people.build(e["url"], trusted=tr)
                 e["card"]["headline"] = people.headline(e["card"])
