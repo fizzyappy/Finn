@@ -123,6 +123,55 @@ def r_backtest(rule: str = "unusual_move", days: int = 90):
     return _guard(alerts.backtest, rule, series, days)
 
 
+@app.get("/alerts")
+def r_alerts(window: str = "7d", rule: str | None = None):
+    """Price/volume alerts fired in the window (default rule from the portfolio)."""
+    from .push import alerts, digest, portfolio
+
+    p = portfolio.load()
+    start, end, _ = digest.resolve_window(window, digest.datetime.now(digest.IST))
+    series, status = alerts.portfolio_series(p.symbols)
+    rules = [alerts.rule_from(rule)] if rule else [alerts.rule_from(r) for r in p.alert_rules]
+    dates = {r["date"] for rows in series.values() for r in rows
+             if start.date().isoformat() <= r["date"] <= end.date().isoformat()}
+    return {"window": window, "rules": [r.__dict__ for r in rules], "alerts": alerts.fired(series, rules, dates)}
+
+
+@app.post("/research/{ticker}")
+def r_research_start(ticker: str, refresh: bool = False):
+    """Start (or join) a research job. Poll /research/jobs/{id}; table sections appear first."""
+    from .pull import engine
+
+    return engine.status(engine.start(ticker, refresh)["id"])
+
+
+@app.get("/research/jobs/{job_id}")
+def r_research_status(job_id: str):
+    from .pull import engine
+
+    st = engine.status(job_id)
+    if not st:
+        raise HTTPException(404, "unknown job")
+    return st
+
+
+@app.get("/research/jobs/{job_id}/result")
+def r_research_result(job_id: str):
+    from .pull import engine
+
+    res = engine.result(job_id)
+    if not res:
+        raise HTTPException(404, "not finished yet (check /research/jobs/{id})")
+    return res
+
+
+@app.get("/research/{ticker}/vs-guidance")
+def r_vs_guidance(ticker: str, quarter_end: str):
+    from .pull import engine
+
+    return {"ticker": ticker.upper(), "quarter_end": quarter_end, "targets": engine.vs_guidance(ticker, quarter_end)}
+
+
 @app.get("/llm/usage")
 def r_llm_usage(since: float = 0.0):
     from . import llm

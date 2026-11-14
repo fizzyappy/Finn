@@ -53,6 +53,25 @@ What FINN tells the investor without being asked. Portfolio and preferences: `fi
 ```
 API: `/brief?window=7d`, `/alerts/backtest?rule=unusual_move`, `/llm/usage`.
 
+## Pull engine (`finn.pull`): research on demand
+
+| Section | Module | Uses the LLM? |
+|---|---|---|
+| Snapshot, trajectory, balance sheet, cash quality (bank schema for lenders) | `pull/tables.py` | no |
+| Transcripts: speakers, roles, Q&A pairs | `pull/transcripts.py` | no |
+| Promise ledger: extract, verify quote, trail, measure, verdict | `pull/promises.py` | extraction only |
+| Dodged questions (answered / partly / dodged, quotes verified) | `pull/dodged.py` | labels only |
+| Business snapshot (segment mix from the annual report, checked vs revenue) | `pull/business.py` | reads the table |
+| Narrative vs numbers (no LLM), bull vs bear (cited facts only) | `pull/narrative.py` | phrasing only |
+| Job with stages, cache, report card, "vs guidance" hook | `pull/engine.py` | – |
+
+```bash
+../.venv/Scripts/python -m finn.pull.run INFY LT      # live -> research_report.md + out/research_*.json
+```
+API: `POST /research/{ticker}` → job; `GET /research/jobs/{id}` (stage, progress, partial sections);
+`GET /research/jobs/{id}/result`; `GET /research/{ticker}/vs-guidance?quarter_end=2026-09-30`;
+`GET /alerts?window=7d`; `GET /brief`; `GET /alerts/backtest`; `GET /llm/usage`.
+
 ## Data on disk
 
 `../data/finn.sqlite` (cache, filings, document index) and `../data/docs/` (PDFs + page
