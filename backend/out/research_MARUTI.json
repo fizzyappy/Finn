@@ -1,0 +1,1173 @@
+{
+ "ticker": "MARUTI",
+ "started_at": "2026-11-14T12:55:27",
+ "states": [
+  {
+   "state": "too_early",
+   "message": "Management's targets are for periods not yet reported; verdicts will come with the next results."
+  }
+ ],
+ "sections": {
+  "snapshot": {
+   "latest_quarter": "2026-09-30",
+   "basis": "consolidated",
+   "units": "Rs crore",
+   "lender": false,
+   "market_cap_cr": 404133.0,
+   "price": 12854.0,
+   "pe": 30.0,
+   "book_value": 3467.0,
+   "roe_pct": 14.3,
+   "roce_pct": 18.9,
+   "dividend_yield_pct": 1.09,
+   "ttm": {
+    "revenue": 208192.0,
+    "ebitda": 20809.0,
+    "pat": 13451.0,
+    "eps": 427.83
+   },
+   "source": "https://www.screener.in/company/MARUTI/consolidated/",
+   "price_to_sales": 1.94,
+   "latest": {
+    "revenue": 53356.0,
+    "ebitda": 4764.0,
+    "ebitda_margin_pct": 9.0,
+    "pat": 2466.0,
+    "eps": 78.44
+   }
+  },
+  "trajectory": {
+   "annual": [
+    {
+     "year_end": "2017-03-31",
+     "revenue": 68085.0,
+     "ebitda": 10421.0,
+     "pat": 7511.0,
+     "eps": 248.61,
+     "ebitda_margin_pct": 15.3,
+     "pat_margin_pct": 11.0
+    },
+    {
+     "year_end": "2018-03-31",
+     "revenue": 79809.0,
+     "ebitda": 12118.0,
+     "pat": 7881.0,
+     "eps": 260.86,
+     "ebitda_margin_pct": 15.2,
+     "pat_margin_pct": 9.9
+    },
+    {
+     "year_end": "2019-03-31",
+     "revenue": 86068.0,
+     "ebitda": 11056.0,
+     "pat": 7651.0,
+     "eps": 253.21,
+     "ebitda_margin_pct": 12.8,
+     "pat_margin_pct": 8.9
+    },
+    {
+     "year_end": "2020-03-31",
+     "revenue": 75660.0,
+     "ebitda": 7355.0,
+     "pat": 5678.0,
+     "eps": 187.9,
+     "ebitda_margin_pct": 9.7,
+     "pat_margin_pct": 7.5
+    },
+    {
+     "year_end": "2021-03-31",
+     "revenue": 70372.0,
+     "ebitda": 5411.0,
+     "pat": 4389.0,
+     "eps": 145.3,
+     "ebitda_margin_pct": 7.7,
+     "pat_margin_pct": 6.2
+    },
+    {
+     "year_end": "2022-03-31",
+     "revenue": 88330.0,
+     "ebitda": 5752.0,
+     "pat": 3880.0,
+     "eps": 128.43,
+     "ebitda_margin_pct": 6.5,
+     "pat_margin_pct": 4.4
+    },
+    {
+     "year_end": "2023-03-31",
+     "revenue": 118410.0,
+     "ebitda": 13122.0,
+     "pat": 8264.0,
+     "eps": 273.56,
+     "ebitda_margin_pct": 11.1,
+     "pat_margin_pct": 7.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "revenue": 141858.0,
+     "ebitda": 18626.0,
+     "pat": 13488.0,
+     "eps": 429.01,
+     "ebitda_margin_pct": 13.1,
+     "pat_margin_pct": 9.5
+    },
+    {
+     "year_end": "2025-03-31",
+     "revenue": 152913.0,
+     "ebitda": 20224.0,
+     "pat": 14500.0,
+     "eps": 461.2,
+     "ebitda_margin_pct": 13.2,
+     "pat_margin_pct": 9.5
+    },
+    {
+     "year_end": "2026-03-31",
+     "revenue": 183316.0,
+     "ebitda": 21530.0,
+     "pat": 14680.0,
+     "eps": 466.9,
+     "ebitda_margin_pct": 11.7,
+     "pat_margin_pct": 8.0
+    }
+   ],
+   "cagr_pct": {
+    "3y": {
+     "revenue": 15.7,
+     "pat": 21.1,
+     "eps": 19.5
+    },
+    "5y": {
+     "revenue": 21.1,
+     "pat": 27.3,
+     "eps": 26.3
+    },
+    "10y": {
+     "revenue": 12.3,
+     "pat": 10.3,
+     "eps": 9.9
+    }
+   },
+   "quarters": [
+    {
+     "quarter_end": "2024-12-31",
+     "revenue": 38764.0,
+     "ebitda": 5076.0,
+     "pat": 3727.0,
+     "ebitda_margin_pct": 13.0
+    },
+    {
+     "quarter_end": "2025-03-31",
+     "revenue": 40920.0,
+     "ebitda": 4844.0,
+     "pat": 3911.0,
+     "ebitda_margin_pct": 12.0
+    },
+    {
+     "quarter_end": "2025-06-30",
+     "revenue": 38605.0,
+     "ebitda": 4623.0,
+     "pat": 3792.0,
+     "ebitda_margin_pct": 12.0
+    },
+    {
+     "quarter_end": "2025-09-30",
+     "revenue": 42344.0,
+     "ebitda": 5086.0,
+     "pat": 3349.0,
+     "ebitda_margin_pct": 12.0
+    },
+    {
+     "quarter_end": "2025-12-31",
+     "revenue": 49904.0,
+     "ebitda": 5573.0,
+     "pat": 3879.0,
+     "ebitda_margin_pct": 11.0
+    },
+    {
+     "quarter_end": "2026-03-31",
+     "revenue": 52462.0,
+     "ebitda": 6158.0,
+     "pat": 3659.0,
+     "ebitda_margin_pct": 12.0
+    },
+    {
+     "quarter_end": "2026-06-30",
+     "revenue": 52470.0,
+     "ebitda": 4313.0,
+     "pat": 3447.0,
+     "ebitda_margin_pct": 8.0
+    },
+    {
+     "quarter_end": "2026-09-30",
+     "revenue": 53356.0,
+     "ebitda": 4764.0,
+     "pat": 2466.0,
+     "ebitda_margin_pct": 9.0
+    }
+   ],
+   "quarters_with_yoy_revenue_growth": "8 of 8"
+  },
+  "balance_sheet": {
+   "as_of": "2026-09-30",
+   "net_worth": 109002.0,
+   "borrowings": 83.0,
+   "total_assets": 154802.0,
+   "lender": false,
+   "debt_to_equity": 0.0,
+   "debt_trend": [
+    {
+     "year_end": "2023-03-31",
+     "borrowings": 1248.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "borrowings": 119.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "borrowings": 87.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "borrowings": 102.0
+    },
+    {
+     "year_end": "2026-09-30",
+     "borrowings": 83.0
+    }
+   ],
+   "working_capital": {
+    "year_end": "2026-03-31",
+    "debtor_days": 11.0,
+    "inventory_days": 31.0,
+    "payable_days": 61.0,
+    "ccc_days": -19.0,
+    "wc_days": -29.0
+   },
+   "roce_trend_pct": [
+    {
+     "year_end": "2022-03-31",
+     "roce_pct": 6.0
+    },
+    {
+     "year_end": "2023-03-31",
+     "roce_pct": 16.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "roce_pct": 22.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "roce_pct": 22.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "roce_pct": 19.0
+    }
+   ]
+  },
+  "cash_quality": {
+   "years": [
+    {
+     "year_end": "2021-03-31",
+     "cfo": 8856.0,
+     "pat": 4389.0,
+     "fcf": 6528.0,
+     "cfo_to_pat": 2.02,
+     "cfo_to_ebitda_pct": 182.0
+    },
+    {
+     "year_end": "2022-03-31",
+     "cfo": 1840.0,
+     "pat": 3880.0,
+     "fcf": -1483.0,
+     "cfo_to_pat": 0.47,
+     "cfo_to_ebitda_pct": 52.0
+    },
+    {
+     "year_end": "2023-03-31",
+     "cfo": 10815.0,
+     "pat": 8264.0,
+     "fcf": 2858.0,
+     "cfo_to_pat": 1.31,
+     "cfo_to_ebitda_pct": 100.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "cfo": 16801.0,
+     "pat": 13488.0,
+     "fcf": 7646.0,
+     "cfo_to_pat": 1.25,
+     "cfo_to_ebitda_pct": 110.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "cfo": 16180.0,
+     "pat": 14500.0,
+     "fcf": 5601.0,
+     "cfo_to_pat": 1.12,
+     "cfo_to_ebitda_pct": 99.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "cfo": 19100.0,
+     "pat": 14680.0,
+     "fcf": 8754.0,
+     "cfo_to_pat": 1.3,
+     "cfo_to_ebitda_pct": 109.0
+    }
+   ],
+   "three_year_cfo_to_pat": 1.22,
+   "lender": false,
+   "reading": "Over the last 3 years, operating cash flow was 1.22x reported profit (cash backs the profits)"
+  },
+  "promise_ledger": {
+   "promises": [
+    {
+     "metric": "revenue_growth",
+     "scope": "company",
+     "horizon": "FY27",
+     "target": "10%",
+     "firmness": "soft",
+     "verdict": "Too early",
+     "reason": "FY27 has not been reported yet (latest quarter 2026-09-30)",
+     "actual": null,
+     "said": {
+      "metric": "revenue_growth",
+      "unit": "pct_growth",
+      "low": 10,
+      "high": 10,
+      "basis": "YoY",
+      "horizon_text": "this year",
+      "horizon": "FY27",
+      "horizon_end": "2027-03-31",
+      "firmness": "soft",
+      "quote": "growth of over 10% this year",
+      "page": 8,
+      "speaker": "Rahul Bharti",
+      "call_date": "2026-04-30",
+      "source_url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "The broad expectation, which our Chairman also conveyed, is growth of over 10% this year as compared to the last year."
+     },
+     "trail": [
+      {
+       "call": "2026-04-30",
+       "event": "set",
+       "target": "10%",
+       "quote": "growth of over 10% this year",
+       "page": 8,
+       "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf"
+      }
+     ]
+    },
+    {
+     "metric": "volume_growth",
+     "scope": "company",
+     "horizon": "FY27",
+     "target": "250000",
+     "firmness": "soft",
+     "verdict": "Not measurable",
+     "reason": "volume growth is not in the reported statement tables",
+     "actual": null,
+     "said": {
+      "metric": "volume_growth",
+      "unit": "count",
+      "low": 250000,
+      "high": 250000,
+      "basis": "cars",
+      "horizon_text": "this year",
+      "horizon": "FY27",
+      "horizon_end": "2027-03-31",
+      "firmness": "soft",
+      "quote": "we'll have an additional volume of about 250,000 cars available this year",
+      "page": 8,
+      "speaker": "Rahul Bharti",
+      "call_date": "2026-04-30",
+      "source_url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "Effectively, one can expect that we'll have an additional volume of about 250,000 cars available this year over the previous year."
+     },
+     "trail": [
+      {
+       "call": "2026-04-30",
+       "event": "set",
+       "target": "250000",
+       "quote": "we'll have an additional volume of about 250,000 cars available this year",
+       "page": 8,
+       "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf"
+      }
+     ]
+    },
+    {
+     "metric": "capex",
+     "scope": "company",
+     "horizon": "FY27",
+     "target": "14000 cr",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "capex is not in the reported statement tables",
+     "actual": null,
+     "said": {
+      "metric": "capex",
+      "unit": "rs_crore",
+      "low": 14000,
+      "high": 14000,
+      "basis": "reported INR",
+      "horizon_text": "FY 26-27",
+      "horizon": "FY27",
+      "horizon_end": "2027-03-31",
+      "firmness": "firm",
+      "quote": "INR14,000 crores capex for the full year",
+      "page": 11,
+      "speaker": "Arnab Roy",
+      "call_date": "2026-04-30",
+      "source_url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "Overall, on the capex for FY 26-27, we are looking at a INR14,000 crores capex for the full year."
+     },
+     "trail": [
+      {
+       "call": "2026-04-30",
+       "event": "set",
+       "target": "14000 cr",
+       "quote": "INR14,000 crores capex for the full year",
+       "page": 11,
+       "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf"
+      }
+     ]
+    }
+   ],
+   "counts": {
+    "Missed": 0,
+    "Partly": 0,
+    "Quietly dropped": 0,
+    "Kept": 0,
+    "Too early": 1,
+    "Not measurable": 2
+   },
+   "kept_of_measurable": "none measurable yet",
+   "extraction": [
+    {
+     "call": "2026-04-30",
+     "candidates": 7,
+     "extracted": 3,
+     "verified": 3,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "scopes_harmonised": 0
+    }
+   ],
+   "calls": [
+    "2026-04-30"
+   ]
+  },
+  "dodged_questions": [
+   {
+    "call": "2026-04-30",
+    "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+    "pairs_found": 24,
+    "judged": [
+     {
+      "analyst": "Gunjan Prithyani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Gave broad qualitative views on costs but declined to give specific margin guidance.",
+      "question_quote": "give us some guidance on how do we think about margins",
+      "question_page": 6,
+      "answer_quote": "though you asked only about margin, but I'll speak about both demand scenario and margins",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Gunjan Prithyani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Explained mitigating factors but stated it is difficult to put a number on headwinds.",
+      "question_quote": "Do we see a similar sort of cost headwind going into quarter 1 as well",
+      "question_page": 6,
+      "answer_quote": "It will be difficult to put a number. But yes, in such a situation some cost headwinds do come",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Gunjan Prithyani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Discussed CAFE norms and flex-fuel generally, but did not provide specific portfolio cost impacts.",
+      "question_quote": "what sort of portfolio cost impact, we see because of flex-fuel",
+      "question_page": 7,
+      "answer_quote": "CAFE is an energy efficiency regulation. The final draft is yet to be notified.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Gunjan Prithyani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Explained flex-fuel rollout timing and adoption factors, but did not give a precise engine upgrade c",
+      "question_quote": "What can be the cost increase because of flex-fuel for upgrading the engine",
+      "question_page": 7,
+      "answer_quote": "So it is like a futuristic plan. The volumes will be minimal at this stage. It will grow",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Chandramouli Muthiah",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Provided management's volume growth expectations for the year.",
+      "question_quote": "how you're thinking about industry growth, both domestic and export for FY27",
+      "question_page": 8,
+      "answer_quote": "broad expectation, which our Chairman also conveyed, is growth of over 10% this year",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Chandramouli Muthiah",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Clarified the locations for the additional capacity additions.",
+      "question_quote": "additional capacity coming on board in Gujarat later this fiscal",
+      "question_page": 8,
+      "answer_quote": "One in Haryana, the other in Gujarat.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Chandramouli Muthiah",
+      "answered_by": [
+       "Arnab Roy"
+      ],
+      "label": "answered",
+      "reason": "Addressed start-up costs for brownfield capacity, stating they will not be significant.",
+      "question_quote": "just want to understand if there will be any start-up costs to be expected in these brownfield capacity additions",
+      "question_page": 8,
+      "answer_quote": "we do not expect anything significant because as Rahul explained, the demand outlook looks good",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Chandramouli Muthiah",
+      "answered_by": [
+       "Arnab Roy",
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Addressed mark-to-market impact on other income and mentioned recent reversal percentages.",
+      "question_quote": "If bond yields were to remain constant, do you think this completely reverses next quarter",
+      "question_page": 8,
+      "answer_quote": "As of yesterday, some amount of reversal has already happened. Roughly about 35% of this is already reversed",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Chandramouli Muthiah",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Asked for clarification on the reference period and then received the specific retail number in the ",
+      "question_quote": "Maruti's retail volume number for the quarter",
+      "question_page": 9,
+      "answer_quote": "Last year, which is the figure you have?",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Raghunandhan NL",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Explained why urban and rural boundaries are no longer tracked separately due to integration.",
+      "question_quote": "if you can indicate growth or the share for rural urban in FY26",
+      "question_page": 9,
+      "answer_quote": "It is a very hard to draw a line between urban and rural because the boundaries are blurring now",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Raghunandhan NL",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Provided exact percentages for first-time, replacement, and additional buyers.",
+      "question_quote": "how are you seeing the trend in the first-time buyers and the share increase",
+      "question_page": 10,
+      "answer_quote": "the first-time buyer is about 51% in Q4 FY26. 18% is about replacement buyer and 31% are additional car buyers.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Raghunandhan NL",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Provided the historical progression of first-time buyer shares across recent quarters.",
+      "question_quote": "How has the share of first-time buyers increased in comparison to pre-GST cut",
+      "question_page": 10,
+      "answer_quote": "H1FY26 was about 42%. Q3FY26 was at 48% and Q4FY26 at 51%.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Raghunandhan NL",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Provided EBIT margin expansion figures related to lower discounts.",
+      "question_quote": "Can you share the blended discounts number for Q4FY26",
+      "question_page": 10,
+      "answer_quote": "What we can share with you is that EBIT margin has expanded by about 50 bps on account of lower discounts",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Kumar Rakesh",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Discussed overall product line-up and SUV plans without giving exact model counts.",
+      "question_quote": "how many new nameplate addition and model refreshes you are targeting across ICE and separately for EV",
+      "question_page": 10,
+      "answer_quote": "Across categories, we will have new models. We have spoken about 7 more SUVs all the way through the end of the decade.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Kumar Rakesh",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Explained lead times and lumpy model launch cadences.",
+      "question_quote": "can we imply that going by that run rate, we should be having one new nameplate at the end of the year",
+      "question_page": 10,
+      "answer_quote": "model development is about 4 years lead time. So it's not necessary that we space it out equally all the time.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Kumar Rakesh",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Addressed domestic EV product reception, capacity constraints, and customer satisfaction targets.",
+      "question_quote": "how is the product doing in the domestic market? And what's your aspiration for the domestic market in the EV space",
+      "question_page": 10,
+      "answer_quote": "wherever we have sold that car, the customers are very happy. This is both in India and in our export markets.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Kumar Rakesh",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Expressed confidence in returning to a healthy trajectory but avoided giving explicit guidance on re",
+      "question_quote": "we should get back on a trajectory of margin expansion and potentially in the direction of 10% EBIT margin",
+      "question_page": 11,
+      "answer_quote": "it's always difficult to give out a guidance on margins. But what I can tell you is the quarter 4 FY26 EBIT margin was in line with estimate.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Arvind Sharma",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Confirmed belief in headroom for ASP increases due to upper segment models.",
+      "question_quote": "Q-o-Q basis, ASPs have increased a fair bit. How sustainable it is? And what are the drivers for this ASP increase",
+      "question_page": 11,
+      "answer_quote": "We do believe that there is still headroom for ASP because of the upper segment models.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Arvind Sharma",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Confirmed ASP headroom applies from Q4 levels supported by EVs.",
+      "question_quote": "From the fourth quarter level as well",
+      "question_page": 11,
+      "answer_quote": "For example, EVs have to increase in the future. So that will help ASPs.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Arvind Sharma",
+      "answered_by": [
+       "Arnab Roy"
+      ],
+      "label": "answered",
+      "reason": "Provided total capex plans for FY27 and commented on network inventory levels.",
+      "question_quote": "What is the capex plan for these 2 expansions for FY '27? And also just saw that the inventory was fairly high",
+      "question_page": 11,
+      "answer_quote": "we are looking at a INR14,000 crores capex for the full year. On the inventory, no, I don't think we have a significant increase.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Amit Hiranandani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Clarified that the 10% growth statement applied to Maruti rather than the domestic PV industry.",
+      "question_quote": "you said the domestic PV industry to grow by 10%. So are we right in understanding this",
+      "question_page": 12,
+      "answer_quote": "No, no. We are speaking about Maruti, not the domestic PV industry.",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Amit Hiranandani",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "partly",
+      "reason": "Described franchise strength and uncertainties due to war without giving specific export projections",
+      "question_quote": "What are our plans to deal with the present export situation",
+      "question_page": 12,
+      "answer_quote": "If you can help me predict the war, I can predict the export number. So we are in a healthy position.",
+      "answer_page": 12
+     }
+    ],
+    "unverified": 2,
+    "counts": {
+     "answered": 16,
+     "partly": 6,
+     "dodged": 0
+    },
+    "summary": "questions dodged: 0 of 22"
+   }
+  ],
+  "narrative_vs_numbers": [
+   {
+    "metric": "operating margin",
+    "quote": "Sequentially, the operating profit margin EBIT has expanded to 8.8% of net sales compared to 8.1% in quarter 3 of the financial year.",
+    "page": 5,
+    "speaker": "Rahul Bharti",
+    "call": "2026-04-30",
+    "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+    "numbers": "operating margin -3.0 pts YoY in quarter ended 2026-09-30"
+   }
+  ],
+  "business_snapshot": {
+   "status": "unverified",
+   "segments": [
+    {
+     "name": "Domestic",
+     "revenue_cr": 147748.6,
+     "growth_pct": 13.6,
+     "mix_pct": 80.6
+    },
+    {
+     "name": "Overseas",
+     "revenue_cr": 35517.5,
+     "growth_pct": 56.0,
+     "mix_pct": 19.4
+    }
+   ],
+   "source": {
+    "title": "Annual Report 2026",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/09d38ee6-9c30-4892-b483-8d7c34697a7a.pdf",
+    "year": 2026
+   },
+   "pages": [
+    215,
+    254
+   ],
+   "basis": "standalone",
+   "year_end": "2026-03-31",
+   "segment_total_cr": 183266.1,
+   "reported_revenue_cr": 183316.0,
+   "gap_pct": -0.0,
+   "dropped_names": [],
+   "check": "segments add up to 183,266 cr vs reported revenue 183,316 cr (-0.0%); table is standalone, statements are consolidated",
+   "model": "gemini-3.5-flash-lite"
+  },
+  "facts": [
+   {
+    "id": "F1",
+    "text": "P/E 30, market cap Rs 404,133 cr",
+    "source": "screener ratios"
+   },
+   {
+    "id": "F2",
+    "text": "3y revenue CAGR 15.7%, profit CAGR 21.1%",
+    "source": "annual P&L"
+   },
+   {
+    "id": "F3",
+    "text": "5y revenue CAGR 21.1%, profit CAGR 27.3%",
+    "source": "annual P&L"
+   },
+   {
+    "id": "F4",
+    "text": "Latest quarter (2026-09-30) revenue Rs 53,356 cr, +26.0% YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F5",
+    "text": "Latest quarter profit Rs 2,466 cr, -26.4% YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F6",
+    "text": "Operating margin 9.0% in the latest quarter, -3.0 pts YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F7",
+    "text": "Debt/equity 0.0 (borrowings Rs 83 cr)",
+    "source": "balance sheet"
+   },
+   {
+    "id": "F8",
+    "text": "Cash conversion cycle -19 days (2026)",
+    "source": "ratios"
+   },
+   {
+    "id": "F9",
+    "text": "3-year operating cash flow = 1.22x reported profit",
+    "source": "cash flow"
+   },
+   {
+    "id": "F10",
+    "text": "Revenue grew YoY in 8 of 8 recent quarters",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F11",
+    "text": "Promises kept: none measurable yet measurable targets",
+    "source": "promise ledger"
+   },
+   {
+    "id": "F12",
+    "text": "Call of 2026-04-30: questions dodged: 0 of 22",
+    "source": "dodged-question check"
+   }
+  ],
+  "bull_bear": {
+   "bull": [
+    {
+     "text": "Market cap stands at Rs 404,133 cr with a P/E of 30 as per screener ratios.",
+     "cites": [
+      {
+       "id": "F1",
+       "text": "P/E 30, market cap Rs 404,133 cr",
+       "source": "screener ratios"
+      }
+     ]
+    },
+    {
+     "text": "The 3y revenue CAGR was 15.7% and profit CAGR was 21.1%.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 15.7%, profit CAGR 21.1%",
+       "source": "annual P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "cites": [
+      {
+       "id": "F10",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
+      }
+     ]
+    }
+   ],
+   "bear": [
+    {
+     "text": "Latest quarter profit was Rs 2,466 cr, down -26.4% YoY.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 2,466 cr, -26.4% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin was 9.0% in the latest quarter, dropping -3.0 pts YoY.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Operating margin 9.0% in the latest quarter, -3.0 pts YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Borrowings are Rs 83 cr with a debt to equity of 0.0.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Debt/equity 0.0 (borrowings Rs 83 cr)",
+       "source": "balance sheet"
+      }
+     ]
+    }
+   ],
+   "removed": []
+  },
+  "report_card": {
+   "evidence": [],
+   "promises_kept": "none measurable yet",
+   "promise_counts": {
+    "Missed": 0,
+    "Partly": 0,
+    "Quietly dropped": 0,
+    "Kept": 0,
+    "Too early": 1,
+    "Not measurable": 2
+   },
+   "topics_dropped": [],
+   "questions_dodged": "0 of 22",
+   "questions_partly_answered": "6 of 22"
+  }
+ },
+ "stage": "done",
+ "instrument": {
+  "symbol": "MARUTI",
+  "bse_code": "532500",
+  "name": "Maruti Suzuki India Limited",
+  "isin": "INE585B01010",
+  "series": "EQ",
+  "screener_id": "2023",
+  "yahoo": "MARUTI.NS"
+ },
+ "name": "Maruti Suzuki India Ltd",
+ "data_as_of": "2026-11-13T22:30:18+00:00",
+ "transcripts": [
+  {
+   "call": "2026-04-30",
+   "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf",
+   "turns": 68
+  }
+ ],
+ "transcript_notes": [
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4a189744-1646-4de4-809b-e936a67b6fe4.pdf",
+   "date": "2026-11-02",
+   "skipped": "cover letter or scanned"
+  },
+  {
+   "url": "https://www.marutisuzuki.com/pdf-viewer?pdf=%2Fcontent%2Fdam%2Farena-eds%2Fcorporate%2Fpdf%2Fcompany-reports%2F2026-2027%2FTranscript_earnings_call_Maruti_Suzuki_Q2_FY_27.pdf",
+   "date": "2026-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 6234 bytes)"
+  },
+  {
+   "url": "https://www.marutisuzuki.com/pdf-viewer?pdf=%2Fcontent%2Fdam%2Farena-eds%2Fcorporate%2Fpdf%2Fcompany-reports%2F2026-2027%2FTranscript_earnings_call_Maruti_Suzuki_Q1_FY_27.pdf",
+   "date": "2026-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 6234 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_26.pdf",
+   "date": "2026-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1124 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_26.pdf",
+   "date": "2025-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1124 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY_26.pdf",
+   "date": "2025-08-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_25.pdf",
+   "date": "2025-05-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_25.pdf",
+   "date": "2025-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_25.pdf",
+   "date": "2024-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY_25.pdf",
+   "date": "2024-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_24.pdf",
+   "date": "2024-04-30",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1124 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_24.pdf",
+   "date": "2024-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1124 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY24.pdf",
+   "date": "2023-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1115 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY24.pdf",
+   "date": "2023-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1115 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q4_FY23_New.pdf",
+   "date": "2023-05-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1069 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q3_FY_23.pdf",
+   "date": "2023-02-28",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_23.pdf",
+   "date": "2022-11-30",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY23.pdf",
+   "date": "2022-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1053 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q3_FY22.pdf",
+   "date": "2022-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1053 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/MSIL_Final_transcript_2021.pdf",
+   "date": "2021-08-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 973 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q1_FY'22.pdf",
+   "date": "2021-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1077 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript-earnings-call-Maruti-Suzuki-Q4-FY-21.pdf",
+   "date": "2021-03-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1057 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY'21.pdf",
+   "date": "2021-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1077 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY'21.pdf",
+   "date": "2020-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1077 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q1FY'21.pdf",
+   "date": "2020-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1073 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q4F_20_and_full_year_FY20.pdf",
+   "date": "2020-05-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1125 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti%20Suzuki_Q2FY20_and_H1FY20_Transcript.pdf",
+   "date": "2019-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1037 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q1FY20_Transcript.pdf",
+   "date": "2019-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q4FY19_Transcript.pdf",
+   "date": "2019-04-30",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q3FY19_Transcript.pdf",
+   "date": "2019-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Q2FY19_and_H1FY19_Investor_Conference_Call_Transcript.pdf",
+   "date": "2018-10-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1081 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q1FY19_Investor_Concall_Transcript.pdf",
+   "date": "2018-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1061 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Transcript-for-Q3FY18-Concall.pdf",
+   "date": "2018-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1041 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q2FY18_Transcript.pdf",
+   "date": "2017-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q4FY17-Transcript.pdf",
+   "date": "2017-04-30",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q3FY17_Transcript.pdf",
+   "date": "2017-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 993 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti_Suzuki-Q1_FY_17.pdf",
+   "date": "2016-07-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1025 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti_Suzuki-26th_April_2016.pdf",
+   "date": "2016-04-30",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1053 bytes)"
+  },
+  {
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti-28th_Jan_2016_final.pdf",
+   "date": "2016-01-31",
+   "skipped": "NotAPdf: not a PDF (text/html; charset=utf-8, 1041 bytes)"
+  }
+ ],
+ "llm_usage": {
+  "models": {
+   "gemini-3.5-flash-lite": {
+    "api_calls": 4,
+    "cache_hits": 0,
+    "failed": 0,
+    "tokens_in": 6583,
+    "tokens_out": 3145,
+    "cost_usd": 0.0
+   }
+  },
+  "cost_usd": 0.0,
+  "pricing": "free tier (USD 0)"
+ },
+ "built_in_seconds": 130.7,
+ "from_cache": false
+}

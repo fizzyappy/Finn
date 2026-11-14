@@ -20,6 +20,10 @@ from .. import fundamentals, llm, symbols
 from ..store import store
 from . import business, dodged, narrative, promises, tables, transcripts
 
+AR_BUDGET_SECONDS = 240
+_ar_pool = __import__("concurrent.futures").futures.ThreadPoolExecutor(max_workers=2)
+FuturesTimeout = __import__("concurrent.futures").futures.TimeoutError
+
 STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
           "reading annual report", "writing", "done"]
 
@@ -111,8 +115,13 @@ def research(ticker: str, *, refresh: bool = False, n_transcripts: int = 5,
         out["sections"]["dodged_questions"] = dodged_calls
         out["sections"]["narrative_vs_numbers"] = narrative.narrative_vs_numbers(tb, trs[0])
     step("reading annual report")
+    fut = _ar_pool.submit(business.build, inst.screener_key)
     try:
-        out["sections"]["business_snapshot"] = business.build(inst.screener_key)
+        out["sections"]["business_snapshot"] = fut.result(timeout=AR_BUDGET_SECONDS)
+    except FuturesTimeout:
+        out["sections"]["business_snapshot"] = {
+            "status": "timeout", "note": f"the annual report took longer than {AR_BUDGET_SECONDS // 60} minutes to read; "
+                                         "segments will appear on the next run (the download continues in the background)"}
     except Exception as e:  # noqa: BLE001
         out["sections"]["business_snapshot"] = {"status": "error", "note": f"{type(e).__name__}: {str(e)[:120]}"}
     step("writing")

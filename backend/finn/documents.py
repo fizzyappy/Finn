@@ -25,6 +25,9 @@ class NotAPdf(ValueError):
     pass
 
 
+PLUMBER_MAX_PAGES = 60
+
+
 def allowed(url: str) -> bool:
     """Exchange-hosted document (the only place we accept a PDF from)."""
     u = urlparse(url)
@@ -90,7 +93,9 @@ def extract_pages(pdf_bytes: bytes) -> tuple[list[str], str]:
         method = "pypdf"
     except Exception:  # noqa: BLE001 - damaged PDFs: try the other extractor
         method = "pypdf-failed"
-    if not pages or sum(len(p.strip()) for p in pages) < 50 * max(1, len(pages)):
+    # The slower pdfplumber pass only for short documents: on a 300-page annual report
+    # with thin text it can take many minutes (seen live).
+    if (not pages or sum(len(p.strip()) for p in pages) < 50 * max(1, len(pages))) and len(pages) <= PLUMBER_MAX_PAGES:
         try:
             import pdfplumber
 

@@ -1,0 +1,17 @@
+# Render blueprint for the FINN backend (FastAPI). The app works without it (it ships a
+# data snapshot); the backend adds live research for companies not in the snapshot.
+services:
+  - type: web
+    name: finn-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn finn.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: GEMINI_API_KEY
+        sync: false          # entered by hand in the Render dashboard, never committed
+      - key: FINN_DATA_DIR
+        value: /tmp/finn-data

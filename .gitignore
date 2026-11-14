@@ -35,8 +35,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# --- Local caches & data ---
-data/
+# --- Local caches & data (root data/ only; the app's public/data snapshot is committed) ---
+/data/
 backend/validation_report.json
 .cache/
 cache/
@@ -52,3 +52,7 @@ logs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# --- Frontend ---
+frontend/node_modules/
+frontend/dist/

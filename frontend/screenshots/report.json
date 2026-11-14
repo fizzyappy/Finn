@@ -1,0 +1,61 @@
+{
+  "screenshots": [
+    "01-brief-since-last-look",
+    "02-brief-14d-results-cards",
+    "03-brief-results-checks-open",
+    "04-brief-why-flipped",
+    "05-brief-after-swipe-clear",
+    "06-brief-youre-clear",
+    "07-brief-quiet-day",
+    "08-research-intro",
+    "09-research-autocomplete",
+    "10-research-LT-full",
+    "11-research-LT-ledger-row-open",
+    "12-research-HAL-full",
+    "13-research-not-in-snapshot",
+    "14-research-cold-start",
+    "15-alerts-default",
+    "16-alerts-noisy-rule",
+    "17-settings",
+    "18-desktop-brief"
+  ],
+  "console_errors": [],
+  "axe": {
+    "brief": {
+      "violations": [],
+      "contrast": 0,
+      "contrast_examples": [],
+      "horizontal_overflow_px": 0
+    },
+    "research-intro": {
+      "violations": [],
+      "contrast": 0,
+      "contrast_examples": [],
+      "horizontal_overflow_px": 0
+    },
+    "research-LT": {
+      "violations": [],
+      "contrast": 0,
+      "contrast_examples": [],
+      "horizontal_overflow_px": 0
+    },
+    "alerts": {
+      "violations": [],
+      "contrast": 0,
+      "contrast_examples": [],
+      "horizontal_overflow_px": 0
+    },
+    "settings": {
+      "violations": [],
+      "contrast": 0,
+      "contrast_examples": [],
+      "horizontal_overflow_px": 0
+    }
+  },
+  "pwa": {
+    "manifest_name": "FINN: your holdings, filtered",
+    "icons": 3,
+    "display": "standalone",
+    "service_worker": "activated"
+  }
+}
