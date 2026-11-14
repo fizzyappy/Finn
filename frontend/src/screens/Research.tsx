@@ -240,7 +240,7 @@ function AskBox({ ticker, name }: { ticker: string; name: string }) {
   const examples = ["Did they meet last year's guidance?", "What is the guidance for this year?", "How much debt do they have?"];
   return (
     <>
-      <Title meta="answers only from its sources">Ask about {short}</Title>
+      <Title meta="sourced answers">Ask about {short}</Title>
       <div className="glass card">
         <form onSubmit={(e) => { e.preventDefault(); ask(q); }} style={{ display: "flex", gap: 8 }}>
           <input className="field" aria-label={`Ask a question about ${short}`} placeholder="e.g. Did they meet their margin target?"
@@ -252,7 +252,7 @@ function AskBox({ ticker, name }: { ticker: string; name: string }) {
         </div>
         {busy && <div className="small muted" style={{ marginTop: 10 }} aria-live="polite">{busy}</div>}
         {a && (
-          <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: 12 }} aria-live="polite">
+          <motion.div data-testid="ask-answer" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: 12 }} aria-live="polite">
             <div className={a.status === "answered" ? "quote" : "notice"}>{a.answer}</div>
             {a.citations?.length > 0 && (
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 8 }}>

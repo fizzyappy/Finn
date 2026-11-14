@@ -1,6 +1,6 @@
 {
  "ticker": "DIXON",
- "started_at": "2026-11-14T13:08:47",
+ "started_at": "2026-11-14T22:36:07",
  "states": [
   {
    "state": "too_early",
@@ -1616,29 +1616,28 @@
     "pairs_found": 33,
     "judged": [
      {
+      "analyst": "Siddhartha Bera",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management gave the targeted volume numbers for the Vivo joint venture next year.",
+      "question_quote": "what do you think we should aspire for the next year and how should the volumes ramp up",
+      "question_page": 9,
+      "answer_quote": "we feel that in the JV we should be doing around 20-21 million.",
+      "answer_page": 9
+     },
+     {
       "analyst": "Santhosh Seshadri",
       "answered_by": [
        "Atul Lall"
       ],
-      "label": "partly",
-      "reason": "Management discussed IT products and CAPEX but did not directly address the multi-segment bandwidth ",
-      "question_quote": "which of these segments will see major capital allocation and where do you see the management spending most of the bandwidth",
-      "question_page": 10,
-      "answer_quote": "So certain sectors, certain domains that we are pursuing very actively. The first one is the IT products category.",
-      "answer_page": 10
-     },
-     {
-      "analyst": "Sonali",
-      "answered_by": [
-       "Atul Lall",
-       "Saurabh Gupta"
-      ],
       "label": "answered",
-      "reason": "Management stated there are no supply chain constraints for production, though memory costs have inc",
-      "question_quote": "are there any constraints in terms of procuring, or are they being able to comfortably procure the memory chips",
-      "question_page": 14,
-      "answer_quote": "on the supply chain side, I think we are in a good position. I am not seeing any impact on the production as such.",
-      "answer_page": 14
+      "reason": "Management explained the two tangents of precision manufacturing capabilities.",
+      "question_quote": "elaborate on the precision manufacturing side? What is the capability that we are trying to build",
+      "question_page": 12,
+      "answer_quote": "One, definitely we are going to be pursuing the acquisition of precision engineering capability",
+      "answer_page": 12
      },
      {
       "analyst": "Renu",
@@ -1646,11 +1645,35 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management provided capacity expansion details and the plan for Q Tech.",
+      "reason": "Management gave commercialization and export timelines for telecom ventures.",
+      "question_quote": "by when should we start commence the export part of the business under Semtech JV?",
+      "question_page": 15,
+      "answer_quote": "Gemtek JV, which we are trying to start the trials by Q4 of the current fiscal and commercial production next year",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Renu",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management updated on Q Tech capacity expansion plans.",
       "question_quote": "On Q Tech.",
       "question_page": 16,
-      "answer_quote": "On Q Tech, we have already expanded our capacity from 80 million to 120 million. Also, the capital investment has happened in deepening the manufacturing",
+      "answer_quote": "On Q Tech, we have already expanded our capacity from 80 million to 120 million.",
       "answer_page": 16
+     },
+     {
+      "analyst": "Keyur Pandya",
+      "answered_by": [
+       "Saurabh Gupta"
+      ],
+      "label": "answered",
+      "reason": "Management broke down mobile volume levers and Q Tech/display revenue estimates.",
+      "question_quote": "what total volume and X view? Just if you can just clarify that.",
+      "question_page": 18,
+      "answer_quote": "broadly we should be in a kind of a number of almost somewhere between INR 2,500 crores to INR 3,000 odd crores.",
+      "answer_page": 18
      },
      {
       "analyst": "Rahul Agarwal",
@@ -1658,10 +1681,10 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management explained the bill of material backward integration target and potential margin improveme",
-      "question_quote": "if you do more backward integration like a base case assuming these components come through, what could be a peak margin here",
+      "reason": "Management explained the potential peak margin improvement from backward integration.",
+      "question_quote": "what could be a peak margin here, let's say 2-3 year out?",
       "question_page": 19,
-      "answer_quote": "the idea is to backward integrate 25-30% of the bill of material. So yes, that can improve the margins by 80-100 bps there.",
+      "answer_quote": "the idea is to backward integrate 25-30% of the bill of material. So yes, that can improve the margins by 80-100 bps",
       "answer_page": 19
      },
      {
@@ -1670,8 +1693,8 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management answered that rising expenses are justified by the proportionate expansion in revenues.",
-      "question_quote": "can you please throw some light on what has led to this significant rise in the consumables cost of materials?",
+      "reason": "Management briefly explained that expense growth matches revenue growth.",
+      "question_quote": "what has led to this significant rise in the consumables cost of materials?",
       "question_page": 19,
       "answer_quote": "Please appreciate the revenues have also expanded by almost 47%.",
       "answer_page": 19
@@ -1683,10 +1706,10 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management explained that memory cost increases drove up both expenses and revenues linearly.",
+      "reason": "Management clarified that memory costs drove linear increases in expenses and revenues.",
       "question_quote": "Q2 the prices of cost of materials have shot up in a significant way compared to Q1.",
       "question_page": 19,
-      "answer_quote": "For both mobile and IT hardware, the selling prices, because of the memory cost increase, those prices have also gone up. So both, if you look at the expenses and income levels, it is actually broadly gone in the same",
+      "answer_quote": "For both mobile and IT hardware, the selling prices, because of the memory cost increase, those prices have also gone up.",
       "answer_page": 19
      },
      {
@@ -1695,11 +1718,23 @@
        "Atul Lall",
        "Saurabh Gupta"
       ],
-      "label": "partly",
-      "reason": "Management stated it is difficult to give quantifiable estimates at this early stage, though they no",
-      "question_quote": "Sir, any quantifiable estimate of margin uptick we can expect from these MPMS incentives?",
+      "label": "answered",
+      "reason": "Management noted the difficulty of exact quantification but pointed to operating leverage.",
+      "question_quote": "Any quantifiable estimate of margin uptick we can expect from these MPMS incentives?",
       "question_page": 20,
-      "answer_quote": "That is slightly difficult at this stage. So let's see how it pans out. It is the start.",
+      "answer_quote": "That is slightly difficult at this stage. So let's see how it pans out.",
+      "answer_page": 20
+     },
+     {
+      "analyst": "Akshay Gattani",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management provided expected CAPEX figures for the Vivo JV.",
+      "question_quote": "Can you help us understand the potential cross-log of capital investment required?",
+      "question_page": 20,
+      "answer_quote": "we estimate that the expected CAPEX is going to be somewhere around INR 300 crores to INR 350-odd crores.",
       "answer_page": 20
      },
      {
@@ -1709,11 +1744,36 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management provided explicit volume guidance numbers for Q3 and expected quarterly trajectory.",
+      "reason": "Management gave Q3 volume guidance numbers.",
       "question_quote": "Q3 FY '27 volume guidance, any color on that, sir?",
       "question_page": 20,
       "answer_quote": "Quarter 3 being post-Diwali time, I think it is going to be somewhere in the range of around 7 to 7.5 million.",
       "answer_page": 20
+     },
+     {
+      "analyst": "Tanay Shah",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management explained the technology shift and optical transceiver strategy.",
+      "question_quote": "are we saying we are actually going to build the packaging piece of the optical transceiver along with the assembly",
+      "question_page": 21,
+      "answer_quote": "what we are attempting to do is that bring this technology into India for servicing the global markets.",
+      "answer_page": 21
+     },
+     {
+      "analyst": "Indrajit Agarwal",
+      "answered_by": [
+       "Atul Lall",
+       "Saurabh Gupta"
+      ],
+      "label": "answered",
+      "reason": "Management provided CAPEX run rates, ASP differences, and ROCE expectations.",
+      "question_quote": "What kind of CAPEX should we pencil in for FY '27 and FY '28?",
+      "question_page": 21,
+      "answer_quote": "we will likely to do closer to INR 500 crores. So we should close the year with INR 1,200 crores.",
+      "answer_page": 22
      },
      {
       "analyst": "Vayun Bandi",
@@ -1722,20 +1782,20 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management detailed the display CAPEX timeline across fiscal years and confirmed it will be funded v",
-      "question_quote": "will this internal cash generation be entirely sufficient to fund the display CAPEX, or do we need to take in temporary debt?",
+      "reason": "Management addressed display CAPEX funding through internal accruals.",
+      "question_quote": "will this internal cash generation be entirely sufficient to fund the display CAPEX",
       "question_page": 22,
-      "answer_quote": "this year also we are meeting our CAPEX requirements from our internal accruals, and we feel confident that as the earnings visibility improves, even next year we should be completely meeting our CAPEX requirements",
+      "answer_quote": "we feel confident that as the earnings visibility improves, even next year we should be completely meeting our CAPEX requirements from internal accruals",
       "answer_page": 22
      }
     ],
-    "unverified": 20,
+    "unverified": 15,
     "counts": {
-     "answered": 7,
-     "partly": 2,
+     "answered": 14,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 9"
+    "summary": "questions dodged: 0 of 14"
    },
    {
     "call": "2026-08-31",
@@ -1743,15 +1803,40 @@
     "pairs_found": 41,
     "judged": [
      {
+      "analyst": "Aditya Bhartia",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management addressed whether exports rely only on current anchor customers.",
+      "question_quote": "is it mainly about these two anchor customers, which are existing customers?",
+      "question_page": 8,
+      "answer_quote": "we'll be having a GTM strategy for going beyond our existing customer portfolio.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Aditya Bhartia",
+      "answered_by": [
+       "Atul Lall",
+       "Saurabh Gupta"
+      ],
+      "label": "answered",
+      "reason": "Management detailed the reasons for working capital and capital employed increase.",
+      "question_quote": "what has really transpired. And at the same time, we can also see that in the mobile phone business, the capital employed has gone up.",
+      "question_page": 8,
+      "answer_quote": "mainly, there has been more working capital deployed for building certain inventories, strategic inventories",
+      "answer_page": 8
+     },
+     {
       "analyst": "Sameet Sinha",
       "answered_by": [
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management clarified they were talking about quarter 2.",
+      "reason": "Management clarified the quarter versus yearly growth time frame.",
       "question_quote": "You were just referring to this particular quarter? Or are you talking about the year?",
       "question_page": 9,
-      "answer_quote": "We are talking about -- Sameet, this is Saurabh. We are talking about quarter 2.",
+      "answer_quote": "No, no. We are talking about -- Sameet, this is Saurabh. We are talking about quarter 2.",
       "answer_page": 9
      },
      {
@@ -1760,7 +1845,7 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management gave volume numbers and addressed guidance.",
+      "reason": "Management discussed seasonality and confirmed phone manufacturing guidance.",
       "question_quote": "is the guidance of 32 million phones still intact? And if you can walk us through kind of the drivers for that",
       "question_page": 9,
       "answer_quote": "Our last year numbers were around 32 million, 33 million. We feel we should be somewhere close to that number.",
@@ -1772,7 +1857,7 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management provided current export numbers and future potential.",
+      "reason": "Management gave current export numbers and future potential value estimates.",
       "question_quote": "What can be the export potential we can see from our anchor customers maybe in the next one, two years?",
       "question_page": 10,
       "answer_quote": "Our current quarter export number was around INR1,100 crores. We feel that in a couple of years, that can add almost 15 million to 20 million",
@@ -1784,11 +1869,23 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management explained their localization play and status.",
+      "reason": "Management addressed localization levels and component capabilities.",
       "question_quote": "where are we in terms of localization as of now? And in the next couple of years with these ramping up the JVs, where do we stand?",
       "question_page": 10,
-      "answer_quote": "they are mentioning five components, out of which we have a play in two, camera modules and display.",
+      "answer_quote": "we have a play in two, camera modules and display. The other three components, you see the scheme has just been rolled out.",
       "answer_page": 10
+     },
+     {
+      "analyst": "Siddhartha Bera",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed feature phone volumes and export shift are on track.",
+      "question_quote": "Can you highlight if there has been any change? And are we on track for those type of volumes",
+      "question_page": 10,
+      "answer_quote": "one of our anchor customers is shifting the export base to India. And please be rest assured that is on track.",
+      "answer_page": 11
      },
      {
       "analyst": "Achal Lohade",
@@ -1796,10 +1893,22 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management gave separate revenue numbers for telecom and IT hardware.",
-      "question_quote": "if you could help us with respect to the revenue for telecom and IT hardware separately",
+      "reason": "Management provided separate revenues for telecom and IT hardware.",
+      "question_quote": "if you could help us with respect to the revenue for telecom and IT hardware separately, please?",
       "question_page": 11,
       "answer_quote": "Revenue for telecom was around closer to INR2,100-odd crores and IT hardware is somewhere around INR1,350-odd crores.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Achal Lohade",
+      "answered_by": [
+       "Saurabh Gupta"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed smartphone volume for the quarter.",
+      "question_quote": "in terms of volume for the current quarter, is it somewhere around 7.5 million?",
+      "question_page": 11,
+      "answer_quote": "Yes, that's right. We did around 7.5 million volumes for smartphone.",
       "answer_page": 11
      },
      {
@@ -1808,11 +1917,11 @@
        "Atul Lall",
        "Saurabh Gupta"
       ],
-      "label": "partly",
-      "reason": "Management gave qualitative color but lacked exact Y-o-Y growth numbers.",
-      "question_quote": "would it be possible to know what is the Y-o-Y or Q-o-Q growth",
+      "label": "answered",
+      "reason": "Management provided export numbers in value and volume terms.",
+      "question_quote": "And of this, how much would be exports, sir?",
       "question_page": 11,
-      "answer_quote": "I wouldn't be having right now. But IT hardware, there is a significant growth",
+      "answer_quote": "Export, I don't have the volume number in absolute number, it is closer to INR1,100 crores.",
       "answer_page": 11
      },
      {
@@ -1821,19 +1930,7 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management confirmed the 7.5 million volume figure.",
-      "question_quote": "is it somewhere around 7.5 million?",
-      "question_page": 11,
-      "answer_quote": "Yes, that's right. We did around 7.5 million volumes for smartphone.",
-      "answer_page": 11
-     },
-     {
-      "analyst": "Achal Lohade",
-      "answered_by": [
-       "Saurabh Gupta"
-      ],
-      "label": "answered",
-      "reason": "Management explained Q Tech contribution and timeline for meaningful impact.",
+      "reason": "Management provided EBITDA contribution and commentary on components.",
       "question_quote": "what has been the EBITDA contribution for the first quarter?",
       "question_page": 12,
       "answer_quote": "Q Tech is closer to INR500-odd crores. But I think it will take time for us to contribute meaningfully",
@@ -1845,7 +1942,7 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management attributed performance to market share gains.",
+      "reason": "Management addressed market share gains and better order book.",
       "question_quote": "do you think that's a function of Dixon gaining wallet share? Or is it an overall better market performance",
       "question_page": 12,
       "answer_quote": "definitely, in Dixon, we have gained the market share because the volume degrowth is significantly higher.",
@@ -1858,8 +1955,8 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management noted memory prices helping selling prices and revenues.",
-      "question_quote": "the fiscal '27 being the first year, nobody will get an incentive, right?",
+      "reason": "Management discussed selling price impacts and anchor investor calculations.",
+      "question_quote": "fiscal '27 being the first year, nobody will get an incentive, right?",
       "question_page": 13,
       "answer_quote": "the memory prices have gone up. So the selling prices have also gone up. So that will also potentially can help in higher revenues also.",
       "answer_page": 13
@@ -1870,7 +1967,7 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management addressed JV approval timeline and growth areas beyond mobile.",
+      "reason": "Management addressed the Vivo JV approvals and growth drivers beyond mobile.",
       "question_quote": "We saw some media reports talking about some Chinese approvals needed for the Vivo JV. If you can just clarify that?",
       "question_page": 13,
       "answer_quote": "our Vivo JV is going to get fructified and transaction concluded within the next two months.",
@@ -1879,15 +1976,14 @@
      {
       "analyst": "Bharat C. Shah",
       "answered_by": [
-       "Atul Lall",
-       "Saurabh Gupta"
+       "Atul Lall"
       ],
-      "label": "partly",
-      "reason": "Management confirmed they are working on precision engineering but declined to share details.",
-      "question_quote": "On the other areas in precision manufacturing, some thoughts at your end?",
-      "question_page": 16,
-      "answer_quote": "Specifically in the area of precision engineering. Sorry, I'm not able to share more details.",
-      "answer_page": 16
+      "label": "answered",
+      "reason": "Management discussed moving toward technology, AI-led manufacturing, and partnerships.",
+      "question_quote": "I wanted to get your thoughts on that, whether I'm understanding it right or it requires modification.",
+      "question_page": 15,
+      "answer_quote": "In Dixon, we have to -- and we have started initiating that we have to focus more on technology. We have to focus on AI-led manufacturing.",
+      "answer_page": 15
      },
      {
       "analyst": "Bharat C. Shah",
@@ -1895,10 +1991,47 @@
        "Atul Lall"
       ],
       "label": "answered",
-      "reason": "Management expressed gratitude for the kind remarks.",
-      "question_quote": "Thank you so much and all the best wishes.",
+      "reason": "Management described steps taken regarding R&D talent and material sciences.",
+      "question_quote": "What are the steps in that direction?",
+      "question_page": 16,
+      "answer_quote": "we've brought in the R&D head of a large global conglomerate from Korea to head our R&D.",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Bharat C. Shah",
+      "answered_by": [
+       "Atul Lall",
+       "Saurabh Gupta"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed ongoing work in precision engineering while acknowledging details are confident",
+      "question_quote": "On the other areas in precision manufacturing, some thoughts at your end?",
+      "question_page": 16,
+      "answer_quote": "So, please be rest assured, sir. We are aggressively working in that direction. Specifically in the area of precision engineering.",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Ravi Swaminathan",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management responded regarding the global market opportunity for servers.",
+      "question_quote": "how is the journey for Dixon likely to be with respect to servers? What are the positives that can pan out?",
       "question_page": 17,
-      "answer_quote": "Thank you. Thank you, sir.",
+      "answer_quote": "So, undoubtedly, opportunity is immense. And here, I am referring to both servers, general servers, industrial servers.",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Abhishek Ghosh",
+      "answered_by": [
+       "Atul Lall"
+      ],
+      "label": "answered",
+      "reason": "Management reconfirmed second half volume expectations despite market issues.",
+      "question_quote": "So just wanted to reconfirm on that, sir.",
+      "question_page": 17,
+      "answer_quote": "Abhishek, the kind of order book and outlook at present we have, we feel so.",
       "answer_page": 17
      },
      {
@@ -1907,20 +2040,20 @@
        "Saurabh Gupta"
       ],
       "label": "answered",
-      "reason": "Management confirmed volume growth is driven by market share gains.",
+      "reason": "Management clarified that volume growth is driven by market share gains.",
       "question_quote": "And that's going to be largely out of the market share gains in domestic or will it be export led?",
       "question_page": 18,
       "answer_quote": "Largely, Abhishek, it is -- we have taken market share because, as you know, the market will contract this year.",
       "answer_page": 18
      }
     ],
-    "unverified": 16,
+    "unverified": 10,
     "counts": {
-     "answered": 12,
-     "partly": 2,
+     "answered": 20,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 14"
+    "summary": "questions dodged: 0 of 20"
    }
   ],
   "narrative_vs_numbers": [
@@ -2002,19 +2135,19 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-11-05: questions dodged: 0 of 9",
+    "text": "Call of 2026-11-05: questions dodged: 0 of 14",
     "source": "dodged-question check"
    },
    {
     "id": "F13",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 14",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 20",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 58.9% and profit CAGR is 86.1%.",
+     "text": "The company achieved a 3y revenue CAGR of 58.9% and a profit CAGR of 86.1%.",
      "cites": [
       {
        "id": "F2",
@@ -2024,7 +2157,17 @@
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "Latest quarter revenue reached Rs 21,794 cr, showing a 46.7% YoY increase.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 21,794 cr, +46.7% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY across 8 of 8 recent quarters.",
      "cites": [
       {
        "id": "F10",
@@ -2032,21 +2175,11 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The 5y revenue CAGR is 49.9% and profit CAGR is 59.4%.",
-     "cites": [
-      {
-       "id": "F3",
-       "text": "5y revenue CAGR 49.9%, profit CAGR 59.4%",
-       "source": "annual P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The latest quarter profit was Rs 411 cr, which is -44.9% YoY.",
+     "text": "Latest quarter profit was Rs 411 cr, representing a -44.9% decrease YoY.",
      "cites": [
       {
        "id": "F5",
@@ -2056,7 +2189,7 @@
      ]
     },
     {
-     "text": "The operating margin was 2.7% in the latest quarter, down -1.1 pts YoY.",
+     "text": "Operating margin stood at 2.7% in the latest quarter, dropping -1.1 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -2066,7 +2199,7 @@
      ]
     },
     {
-     "text": "The P/E is 50.5 with a market cap of Rs 78,334 cr.",
+     "text": "The company trades at a P/E of 50.5 with a market cap of Rs 78,334 cr.",
      "cites": [
       {
        "id": "F1",
@@ -2090,8 +2223,8 @@
     "Not measurable": 25
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 23",
-   "questions_partly_answered": "4 of 23"
+   "questions_dodged": "0 of 34",
+   "questions_partly_answered": "0 of 34"
   }
  },
  "stage": "writing",
@@ -2136,18 +2269,26 @@
  "transcript_notes": [],
  "llm_usage": {
   "models": {
-   "gemini-3.5-flash-lite": {
-    "api_calls": 9,
+   "gemini-3.5-flash": {
+    "api_calls": 1,
     "cache_hits": 0,
-    "failed": 1,
-    "tokens_in": 21064,
-    "tokens_out": 11073,
+    "failed": 0,
+    "tokens_in": 5678,
+    "tokens_out": 803,
+    "cost_usd": 0.0
+   },
+   "gemini-3.5-flash-lite": {
+    "api_calls": 3,
+    "cache_hits": 5,
+    "failed": 0,
+    "tokens_in": 16044,
+    "tokens_out": 6128,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 140.3,
+ "built_in_seconds": 20.1,
  "from_cache": true
 }

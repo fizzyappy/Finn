@@ -1,6 +1,6 @@
 {
  "ticker": "IEX",
- "started_at": "2026-11-14T14:44:52",
+ "started_at": "2026-11-14T22:38:02",
  "states": [],
  "sections": {
   "snapshot": {
@@ -686,8 +686,8 @@
        "Satyanarayan Goel"
       ],
       "label": "answered",
-      "reason": "Management explained they are in no hurry and do not know when final regulations will come.",
-      "question_quote": "when do you think there will be final regulations that will be coming out on this",
+      "reason": "Management explained they are in no hurry and do not know the timeline.",
+      "question_quote": "why do you think there is no decision yet",
       "question_page": 8,
       "answer_quote": "We are in no hurry. So we are waiting. We don't know when it will come.",
       "answer_page": 8
@@ -697,9 +697,9 @@
       "answered_by": [
        "Satyanarayan Goel"
       ],
-      "label": "partly",
-      "reason": "Management noted implementation takes 1.5 to 2 years after notification without directly answering f",
-      "question_quote": "is it feasible? Are they ready? Will there be any delays",
+      "label": "answered",
+      "reason": "Management stated regulations must come first and estimated 1.5 to 2 years.",
+      "question_quote": "Are they ready? Will there be any delays",
       "question_page": 8,
       "answer_quote": "My own estimate is that it may take another 1.5 to 2 years also",
       "answer_page": 8
@@ -707,13 +707,37 @@
      {
       "analyst": "Bharani V",
       "answered_by": [
+       "Satyanarayan Goel"
+      ],
+      "label": "answered",
+      "reason": "Management explained bilateral contracts and monsoon impact driving TAM vs DAM.",
+      "question_quote": "what is driving this particular behavior of buyers and sellers",
+      "question_page": 8,
+      "answer_quote": "shifting of volume from the DAM to the TAM and to bilateral contracts.",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Bharani V",
+      "answered_by": [
        "Rohit Bajaj"
       ],
       "label": "answered",
-      "reason": "Management confirmed that about 80% was contributed by designated consumers.",
-      "question_quote": "how much was contributed by the designated consumers now who need not come and buy",
+      "reason": "Management stated about 80% of the volume was contributed by bigger ones.",
+      "question_quote": "how much was contributed by the designated consumers",
       "question_page": 9,
       "answer_quote": "Almost 80% of the volume was contributed by the bigger ones",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Bharani V",
+      "answered_by": [
+       "Rohit Bajaj"
+      ],
+      "label": "answered",
+      "reason": "Management clarified buying has reduced and they wait for price correction.",
+      "question_quote": "Who will probably not be buying in the market right now?",
+      "question_page": 9,
+      "answer_quote": "yes, the buying has reduced a lot. And some of them are sitting and waiting",
       "answer_page": 9
      },
      {
@@ -722,10 +746,10 @@
        "Satyanarayan Goel"
       ],
       "label": "answered",
-      "reason": "Management explained Supreme Court dismissed the appeal as premature pending regulations.",
-      "question_quote": "What is the status of the appeal or case which is sub-judice in Supreme Court",
+      "reason": "Management explained Supreme Court ruled the appeal is premature.",
+      "question_quote": "What is the status of the appeal or case which is sub-judice",
       "question_page": 9,
-      "answer_quote": "Supreme Court has already said that this is premature now because coupling cannot be implemented by this order",
+      "answer_quote": "Supreme Court has already said that this is premature now because coupling cannot be implemented",
       "answer_page": 10
      },
      {
@@ -734,12 +758,24 @@
        "Rohit Bajaj",
        "Satyanarayan Goel"
       ],
-      "label": "partly",
-      "reason": "Management discussed renewables contribution to RTM volumes but did not quantify exact new market mo",
-      "question_quote": "contributed how much to your electricity traded volumes in Q2 FY27, say, versus Q2 FY26",
+      "label": "answered",
+      "reason": "Management discussed RTM growth, renewables, and excess capacity creation.",
+      "question_quote": "energy transition and new market models have contributed how much",
       "question_page": 10,
-      "answer_quote": "RTM volume have increased significantly. And in the RTM segment, quite a good part of it is from the renewable generators",
+      "answer_quote": "a good part of the volume growth is happening because of the renewables.",
       "answer_page": 10
+     },
+     {
+      "analyst": "Sumit Kishore",
+      "answered_by": [
+       "Rohit Bajaj"
+      ],
+      "label": "answered",
+      "reason": "Management noted huge room in exchanges for arbitrage play.",
+      "question_quote": "Will the arbitrage weaken or will it remain strong",
+      "question_page": 11,
+      "answer_quote": "So there is a lot of room available in the exchanges to absorb the arbitrage play",
+      "answer_page": 11
      },
      {
       "analyst": "Sumit Kishore",
@@ -748,11 +784,35 @@
        "Vineet Harlalka"
       ],
       "label": "answered",
-      "reason": "Management provided the exact profit number for ICX for the first half of the year.",
-      "question_quote": "Is there any profit number for ICX for first half of the year?",
+      "reason": "Management gave the specific profit number of INR2.7 crores.",
+      "question_quote": "Is there any profit number for ICX for first half",
       "question_page": 11,
       "answer_quote": "First half year profit is INR2.7 crores.",
       "answer_page": 11
+     },
+     {
+      "analyst": "Saksham Tyagi",
+      "answered_by": [
+       "Satyanarayan Goel"
+      ],
+      "label": "answered",
+      "reason": "Management explained thermal capacity additions and battery energy storage.",
+      "question_quote": "how are we planning to fulfil that demand? Like, how are we approaching",
+      "question_page": 12,
+      "answer_quote": "There is a lot of capacity addition which is planned, which is in the pipeline",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Saksham Tyagi",
+      "answered_by": [
+       "Rohit Bajaj"
+      ],
+      "label": "answered",
+      "reason": "Management described the AI bidding assistants and data analytics work.",
+      "question_quote": "where have we reached so far in building these AI bidding assistants",
+      "question_page": 12,
+      "answer_quote": "we are creating AI bidding assistant for DISCOMs. The work is under progress",
+      "answer_page": 12
      },
      {
       "analyst": "Harsh",
@@ -760,10 +820,10 @@
        "Satyanarayan Goel"
       ],
       "label": "answered",
-      "reason": "Management attributed the growth to a weak monsoon leading to uncertainty and power security purchas",
+      "reason": "Management attributed DAC and ITD growth to weak monsoon and uncertainty.",
       "question_quote": "what can that be attributed to?",
       "question_page": 13,
-      "answer_quote": "second quarter this year the monsoon was weak, so there was a lot of uncertainty and people wanted to secure power",
+      "answer_quote": "second quarter this year the monsoon was weak, so there was a lot of uncertainty",
       "answer_page": 13
      },
      {
@@ -771,12 +831,25 @@
       "answered_by": [
        "Satyanarayan Goel"
       ],
-      "label": "partly",
-      "reason": "Management addressed exchange retention efforts against coupling but did not directly answer hypothe",
-      "question_quote": "then is there a chance of, buyers simply shifting from day-ahead to RTM on our exchange instead of going to other exchanges?",
+      "label": "answered",
+      "reason": "Management explained they do not apprehend shifting due to robust technology.",
+      "question_quote": "then is there a chance of, buyers simply shifting from day-ahead to RTM",
       "question_page": 13,
-      "answer_quote": "we do not apprehend any shifting of buyers from IEX to the other exchanges. And shifting from DAM to RTM, this is all basically based on the price",
+      "answer_quote": "I am sure that we do not apprehend any shifting of buyers from IEX to the other exchanges.",
       "answer_page": 13
+     },
+     {
+      "analyst": "Akshit Shetty",
+      "answered_by": [
+       "Satyanarayan Goel",
+       "Vineet Harlalka"
+      ],
+      "label": "answered",
+      "reason": "Management clarified the treasury income range and stated clearing function stays.",
+      "question_quote": "could you clarify how much of this investment corpus and other income is linked",
+      "question_page": 14,
+      "answer_quote": "presently it is in the range of 15% to 18%, so we think the treasury income should be remaining",
+      "answer_page": 14
      },
      {
       "analyst": "Akshit Shetty",
@@ -784,11 +857,24 @@
        "Rohit Bajaj"
       ],
       "label": "answered",
-      "reason": "Management explained that major DISCOMs participate directly without trader members.",
-      "question_quote": "how much of your large DISCOM buyers or the trading member bidding on their behalf? I mean are already registered or active on other power exchanges",
+      "reason": "Management explained DISCOM participation directly without trader members.",
+      "question_quote": "how much of your large DISCOM buyers or the trading member bidding on their behalf",
       "question_page": 14,
-      "answer_quote": "Majority of them are participating directly. Except for few DISCOMs, all of them are our members and they themselves participate.",
+      "answer_quote": "Majority of them are participating directly. Except for few DISCOMs, all of them are our members",
       "answer_page": 15
+     },
+     {
+      "analyst": "Abhishek Sinha",
+      "answered_by": [
+       "Satyanarayan Goel",
+       "Vineet Harlalka"
+      ],
+      "label": "answered",
+      "reason": "Management discussed dividend policy and evaluation of buyback options.",
+      "question_quote": "I wanted to understand the direction that the board is taking in terms of distributing the cash",
+      "question_page": 15,
+      "answer_quote": "Buyback, yes, the price is low and we will definitely consider this option also.",
+      "answer_page": 16
      },
      {
       "analyst": "Ronak Singhvi",
@@ -796,20 +882,20 @@
        "Satyanarayan Goel"
       ],
       "label": "answered",
-      "reason": "Management gave a direct, concise answer that no such draft regulation exists.",
+      "reason": "Management directly denied the existence of the draft regulation.",
       "question_quote": "I wanted to have your comments on the CERC draft regulations on cutting the ceiling price",
       "question_page": 16,
-      "answer_quote": "There isno draft regulation on this.",
+      "answer_quote": "There is no draft regulation on this.",
       "answer_page": 16
      }
     ],
-    "unverified": 11,
+    "unverified": 5,
     "counts": {
-     "answered": 7,
-     "partly": 3,
+     "answered": 17,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 10"
+    "summary": "questions dodged: 0 of 17"
    },
    {
     "call": "2026-07-31",
@@ -823,10 +909,10 @@
        "Vineet Harlalka"
       ],
       "label": "answered",
-      "reason": "Transcript submission notice acknowledged and presented.",
-      "question_quote": "Sub: Transcript of the IEX Analyst Meet 2026 held on July 24, 2026",
+      "reason": "Management introduced the speakers and began opening remarks.",
+      "question_quote": "Transcript of the IEX Analyst Meet 2026",
       "question_page": 1,
-      "answer_quote": "IEX Analyst Meet 2026 - Full Transcript Aparna Garg: Hi, Good Evening Everyone and Welcome",
+      "answer_quote": "I now request Mr. Goel to please come and make the opening remarks.",
       "answer_page": 2
      }
     ],
@@ -907,7 +993,7 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-11-05: questions dodged: 0 of 10",
+    "text": "Call of 2026-11-05: questions dodged: 0 of 17",
     "source": "dodged-question check"
    },
    {
@@ -919,7 +1005,7 @@
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 15.4% and profit CAGR is 17.2%.",
+     "text": "The company achieved a 3y revenue CAGR of 15.4% and a profit CAGR of 17.2%.",
      "cites": [
       {
        "id": "F2",
@@ -929,7 +1015,7 @@
      ]
     },
     {
-     "text": "The latest quarter revenue is Rs 167 cr, which is +8.4% YoY.",
+     "text": "Latest quarter revenue reached Rs 167 cr, reflecting an 8.4% YoY increase.",
      "cites": [
       {
        "id": "F4",
@@ -939,19 +1025,19 @@
      ]
     },
     {
-     "text": "The debt/equity is 0.01 with borrowings of Rs 9 cr.",
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
      "cites": [
       {
-       "id": "F7",
-       "text": "Debt/equity 0.01 (borrowings Rs 9 cr)",
-       "source": "balance sheet"
+       "id": "F10",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "The operating margin is 85.0% in the latest quarter, which is -2.0 pts YoY.",
+     "text": "Operating margin was 85.0% in the latest quarter, down -2.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -961,17 +1047,7 @@
      ]
     },
     {
-     "text": "The 3-year operating cash flow is 0.91x reported profit.",
-     "cites": [
-      {
-       "id": "F9",
-       "text": "3-year operating cash flow = 0.91x reported profit",
-       "source": "cash flow"
-      }
-     ]
-    },
-    {
-     "text": "The company quietly dropped the revenue growth over the years target 15-20%.",
+     "text": "Management quietly dropped the revenue growth over the years target of 15-20%.",
      "cites": [
       {
        "id": "F12",
@@ -981,7 +1057,13 @@
      ]
     }
    ],
-   "removed": []
+   "removed": [
+    {
+     "side": "bear",
+     "text": "Promises kept showed none measurable yet measurable targets out of 0 targets.",
+     "why": "numbers not in cited facts: ['0']"
+    }
+   ]
   },
   "report_card": {
    "evidence": [
@@ -1005,8 +1087,8 @@
    "topics_dropped": [
     "revenue growth over the years (15-20%)"
    ],
-   "questions_dodged": "0 of 11",
-   "questions_partly_answered": "3 of 11"
+   "questions_dodged": "0 of 18",
+   "questions_partly_answered": "0 of 18"
   }
  },
  "stage": "writing",
@@ -1052,17 +1134,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 1,
-    "cache_hits": 7,
-    "failed": 0,
-    "tokens_in": 512,
-    "tokens_out": 278,
+    "api_calls": 4,
+    "cache_hits": 5,
+    "failed": 1,
+    "tokens_in": 7417,
+    "tokens_out": 2387,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 251.1,
+ "built_in_seconds": 259.2,
  "from_cache": true
 }

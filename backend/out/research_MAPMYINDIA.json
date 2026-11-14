@@ -1,6 +1,6 @@
 {
  "ticker": "MAPMYINDIA",
- "started_at": "2026-11-14T17:05:00",
+ "started_at": "2026-11-14T22:42:21",
  "states": [],
  "sections": {
   "snapshot": {
@@ -589,13 +589,26 @@
      {
       "analyst": "Anmol Garg",
       "answered_by": [
+       "Rakesh Verma",
+       "Rohan Verma"
+      ],
+      "label": "answered",
+      "reason": "Management highlighted the oil and gas IoT contract going live as a growth driver.",
+      "question_quote": "Is there any particular contracts that will, sort of, ramp up towards the second half",
+      "question_page": 6,
+      "answer_quote": "we've gone live with one of our large oil and gas IoT, government IoT subscription customers",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Anmol Garg",
+      "answered_by": [
        "Rakesh Verma"
       ],
-      "label": "partly",
-      "reason": "Pointed to H1 growth and open order book as encouraging signs without confirming 20% target.",
-      "question_quote": "do we have that visibility that we can get to that 20% plus kind of growth levels?",
+      "label": "answered",
+      "reason": "Management discussed visibility for 20 percent plus growth based on order books and H1 trends.",
+      "question_quote": "can we, sort of, in this year, do we have that visibility that we can get to that 20% plus kind of growth levels?",
       "question_page": 6,
-      "answer_quote": "naturally, the revenue growth should happen. I mean, I can't pin down any number, but it's looking very encouraging",
+      "answer_quote": "Our growth for half year is almost 18.4% in the H1. So as things look and as the order booking",
       "answer_page": 6
      },
      {
@@ -604,7 +617,7 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Acknowledged hearing difficulties and prompted the user to restate the question.",
+      "reason": "Rohan acknowledged the audio disturbance and prompted the analyst to restate.",
       "question_quote": "is there any projects with higher receivable",
       "question_page": 6,
       "answer_quote": "Anmol, you were -- there was some disturbance. I couldn't hear the question properly.",
@@ -615,11 +628,11 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "partly",
-      "reason": "Addressed receivables generally and noted government collection focus without confirming specific pr",
-      "question_quote": "is there any projects with higher cash conversion cycle beyond government that is there for us?",
+      "label": "answered",
+      "reason": "Rohan stated nongovernment receivables are stable and government collections have internal focus.",
+      "question_quote": "is there any projects with higher cash conversion cycle beyond government",
       "question_page": 6,
-      "answer_quote": "No. I mean, in general, I mean, our receivables are fairly stable. There is no particular change from this quarter",
+      "answer_quote": "our receivables are fairly stable. There is no particular change from this quarter to previous quarter.",
       "answer_page": 6
      },
      {
@@ -627,8 +640,8 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "partly",
-      "reason": "Cited a strong funnel and order book but declined to commit to specific division growth numbers.",
+      "label": "answered",
+      "reason": "Management declined to give specific numerical guidance but noted strong enterprise funnel.",
       "question_quote": "do we see a kind of 25%, 30% growth sustaining in this division going ahead?",
       "question_page": 7,
       "answer_quote": "I mean, we will not put specific numbers for what is going to come. But yes, definitely, there's very strong momentum",
@@ -640,7 +653,7 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Explained that they are carefully selecting government opportunities to protect margins and cash col",
+      "reason": "Rohan explained they are being careful and selective with government project opportunities.",
       "question_quote": "how are we looking at this business going ahead? Like how big can this opportunity be going ahead?",
       "question_page": 7,
       "answer_quote": "First, we are careful right now in the government, what type of business to take, and we are trying to calibrate",
@@ -652,10 +665,10 @@
        "Rakesh Verma"
       ],
       "label": "answered",
-      "reason": "Reiterated the target to maintain EBITDA margins of 35% plus for the full year.",
+      "reason": "Rakesh Verma answered by reiterating the target for 35% plus EBITDA margin.",
       "question_quote": "how should I think about the margins for us across -- as a group company across IoT and Map",
       "question_page": 8,
-      "answer_quote": "We have already talked about this for last 6 months, we are saying that expect -- we are trying to see that we maintain EBITDA margin of 35% plus.",
+      "answer_quote": "we are trying to see that we maintain EBITDA margin of 35% plus.",
       "answer_page": 8
      },
      {
@@ -664,7 +677,19 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Confirmed the user's logic to look at hardware and service revenues on a yearly basis.",
+      "reason": "Rohan confirmed that hardware sales growth is genuine and not a one-time anomaly.",
+      "question_quote": "is there something which we should be aware of in the hardware sales, which could be onetime",
+      "question_page": 8,
+      "answer_quote": "No, not really. I mean, basically, as we sell more and more of our devices to more customers",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Gautam Rathi",
+      "answered_by": [
+       "Rohan Verma"
+      ],
+      "label": "answered",
+      "reason": "Rohan agreed with the analyst's framing of looking at hardware and service revenue on a yearly basis",
       "question_quote": "Is that the fair way to look at it?",
       "question_page": 8,
       "answer_quote": "Yes. Look at it on a yearly basis. I'll not say just take every quarter as the base",
@@ -676,8 +701,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Confirmed the rough split of government versus other receivables.",
-      "question_quote": "Of the INR186 crores broadly INR100 crores is government and INR86 crores is others, is what you're saying",
+      "reason": "Rohan confirmed the approximate split of receivables between government and others.",
+      "question_quote": "Of the INR186 crores broadly INR100 crores is government and INR86 crores is others",
       "question_page": 9,
       "answer_quote": "Probably, slightly more on government, but yes, exactly.",
       "answer_page": 9
@@ -688,8 +713,8 @@
        "Rakesh Verma"
       ],
       "label": "answered",
-      "reason": "Clarified how to categorize API and data licensing together for analysis.",
-      "question_quote": "how much would be more data -based selling versus, say, this recurring API-based or per transaction-based revenue",
+      "reason": "Rakesh explained that API and data licensing should be grouped together into one category.",
+      "question_quote": "how much would be more data-based selling versus, say, this recurring API-based",
       "question_page": 9,
       "answer_quote": "I think the way you should look at it is API or data licensing, put them in one category.",
       "answer_page": 9
@@ -701,8 +726,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Explained that looking at the business on a yearly basis helps smooth out seasonal usage and pricing",
-      "question_quote": "how should we think about what is seasonal versus what is more throughout the year?",
+      "reason": "Management explained that yearly comparisons are more accurate than quarterly comparisons for season",
+      "question_quote": "how should we think about what is seasonal versus what is more throughout the year",
       "question_page": 9,
       "answer_quote": "This is why it's important to look at it on a yearly basis because whatever pricing we do, we factor in those types of usages",
       "answer_page": 9
@@ -713,20 +738,20 @@
        "Rakesh Verma"
       ],
       "label": "answered",
-      "reason": "Addressed the question on historical growth slowdown and stated they see no geopolitical impact so f",
+      "reason": "Rakesh stated they have not been impacted by geopolitics and highlighted the strong order book.",
       "question_quote": "Should we expect an acceleration over the next 2 years?",
       "question_page": 10,
       "answer_quote": "So far, we have not been impacted by the geopolitical scenario so far. I can't talk about the future impact",
       "answer_page": 10
      }
     ],
-    "unverified": 8,
+    "unverified": 6,
     "counts": {
-     "answered": 8,
-     "partly": 3,
+     "answered": 13,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 11"
+    "summary": "questions dodged: 0 of 13"
    },
    {
     "call": "2026-08-31",
@@ -739,8 +764,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management explained the key focus areas including public sector and IoT-driven business.",
-      "question_quote": "what is the key focus area for the first couple of years, any particular industry or vertical",
+      "reason": "Rohan Verma outlined the key focus areas including public sector and IoT-driven business.",
+      "question_quote": "what is the key focus area for the first couple of years",
       "question_page": 4,
       "answer_quote": "public sector business, which is government, and the IoT-driven business, which cuts across industries",
       "answer_page": 5
@@ -751,11 +776,11 @@
        "Rakesh Kumar Verma",
        "Rohan Verma"
       ],
-      "label": "partly",
-      "reason": "Management addressed the contract shift but did not give a direct projection for FY 27.",
-      "question_quote": "did this happen in the 2H of last year? And if that is the case, then 2H of FY 27",
+      "label": "answered",
+      "reason": "Management explained that it was time-shifting rather than a reduction and discussed timing.",
+      "question_quote": "did this happen in the 2H of last year? And if that is the case",
       "question_page": 5,
-      "answer_quote": "It got time-shifted. As Mr. Verma explained, this is time-shifted, and second half is when the time-shifting",
+      "answer_quote": "Anmol, it was not and it is not a reduction in the contract. Some of the vehicles probably are not",
       "answer_page": 5
      },
      {
@@ -764,10 +789,10 @@
        "Rakesh Kumar Verma"
       ],
       "label": "answered",
-      "reason": "Management confirmed it was a onetime write-off of a government client.",
-      "question_quote": "we have stated in our presentation that there was an INR4 crores write-off",
+      "reason": "Rakesh Kumar Verma explained that it was a onetime write-off with an INR80 lakhs net P&L effect.",
+      "question_quote": "there was an INR4 crores write-off in one of the clients. So can you talk a little bit more on it?",
       "question_page": 6,
-      "answer_quote": "it is a onetime write-off of a government client.",
+      "answer_quote": "it is a onetime write-off of a government client. Now has it -- because of that, the impact has been almost like an INR4 crores",
       "answer_page": 6
      },
      {
@@ -775,11 +800,11 @@
       "answered_by": [
        "Rakesh Kumar Verma"
       ],
-      "label": "partly",
-      "reason": "Management declined to give specific quarterly margin range, pointing to the annual target.",
-      "question_quote": "can we expect that our EBITDA over the next couple of quarters could be in this 43%, 44%",
+      "label": "answered",
+      "reason": "Rakesh Kumar Verma answered that they target 35% plus for the whole year rather than specific quarte",
+      "question_quote": "can we expect that our EBITDA over the next couple of quarters could be in this 43%, 44% kind of range?",
       "question_page": 6,
-      "answer_quote": "we have been always saying that we have kept a target for us to do a 35% plus",
+      "answer_quote": "we have kept a target for us to do a 35% plus for the whole year",
       "answer_page": 6
      },
      {
@@ -788,10 +813,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management explained the standalone versus consolidated revenue dynamics and subcontracting.",
-      "question_quote": "Why the growth is not coming into the core business?",
+      "reason": "Rohan Verma addressed why standalone numbers are misleading and pointed to consolidated growth.",
+      "question_quote": "subsidiary's revenue has again came down. So, what has happened to the growth?",
       "question_page": 6,
-      "answer_quote": "The stand alone will not give you the right picture because as we've explained before, some of the Government business",
+      "answer_quote": "you have to look at the consol. The stand alone will not give you the right picture",
       "answer_page": 6
      },
      {
@@ -799,23 +824,11 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "partly",
-      "reason": "Management pointed to the open order book for visibility but declined to give quarterly guidance.",
+      "label": "answered",
+      "reason": "Rohan Verma highlighted the open order book and its role in revenue visibility.",
       "question_quote": "how we should look overall growth in this quarter on a consol basis?",
       "question_page": 7,
-      "answer_quote": "No, I'm not -- we can't obviously comment quarter-on-quarter what is going to happen.",
-      "answer_page": 7
-     },
-     {
-      "analyst": "Amar Maurya",
-      "answered_by": [
-       "Rakesh Kumar Verma"
-      ],
-      "label": "partly",
-      "reason": "Management discussed diversification and risk management instead of directly addressing growth rates",
-      "question_quote": "frankly speaking, the growth we are expecting, right, a company like us, it s hould be a much higher growth",
-      "question_page": 7,
-      "answer_quote": "What you have to really look at is, one -- or underst and that, one, we are so well - diversified",
+      "answer_quote": "Amar, what we had disclosed at end of Q4 or FY26 was an open order book of INR1,750 crores",
       "answer_page": 7
      },
      {
@@ -825,10 +838,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management explained the reason for the one-time write-off and government receivables cycle.",
+      "reason": "Rohan Verma and Rakesh Kumar Verma discussed receivables, government sales cycles, and write-off rat",
       "question_quote": "what part of your receivables would be from the government contract?",
       "question_page": 9,
-      "answer_quote": "In general, yes, we are carefully tracking the government receivables. It is a longer cycle on Government",
+      "answer_quote": "When it comes to Government, yes, this was a one -time write-off for a very specific customer",
       "answer_page": 9
      },
      {
@@ -836,11 +849,11 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "partly",
-      "reason": "Management stated they could not remember the exact balance sheet figure off the top of their head.",
+      "label": "answered",
+      "reason": "Rohan Verma stated he did not have the exact number on hand but indicated a majority comes from gove",
       "question_quote": "what part would be from government contracts as of the end of this quarter?",
       "question_page": 9,
-      "answer_quote": "I don't have it just off the top of my hand, so I don't remember.",
+      "answer_quote": "I don't have it just off the top of my hand, so I don't remember. In Q1, we have not given the balance sheet",
       "answer_page": 9
      },
      {
@@ -849,10 +862,10 @@
        "Rakesh Kumar Verma"
       ],
       "label": "answered",
-      "reason": "Management confirmed the accounting mechanism behind the EBITDA margin impact.",
-      "question_quote": "EBITDA margin, which you have written in the presentation that it is impacted by 4% is actually much lower.",
+      "reason": "Rakesh Kumar Verma explained the accounting mechanics of the receivables write-off.",
+      "question_quote": "impact due to this receivable write - off is only INR 80 lakhs on the P&L, right?",
       "question_page": 10,
-      "answer_quote": "Because that write-off that happened has gone into the other expense and that -- the payback, what we don't have to make the payment has gone as an other income.",
+      "answer_quote": "Approximately INR 4 crores was the one where our receivables existed. That INR4 crores of receivables",
       "answer_page": 10
      },
      {
@@ -861,8 +874,20 @@
        "Rakesh Kumar Verma"
       ],
       "label": "answered",
-      "reason": "Management agreed with the analyst's conclusion regarding the accounting treatment.",
-      "question_quote": "actually the reported EBITDA is impacted by 4%, but it's coming in other income that is below the EBITDA. That's what you're saying.",
+      "reason": "Rakesh Kumar Verma clarified how other expense and other income impacted reported EBITDA margins.",
+      "question_quote": "EBITDA margin, which you have written in the presentation that it is impacted by 4% is actually much lower",
+      "question_page": 10,
+      "answer_quote": "EBITDA margin is impacted -- INR80 lakhs is impacted high. EBITDA margin is impacted more, 4%",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Gautam Rathi",
+      "answered_by": [
+       "Rakesh Kumar Verma"
+      ],
+      "label": "answered",
+      "reason": "Rakesh Kumar Verma confirmed the explanation regarding other income below EBITDA.",
+      "question_quote": "it's coming in other income that is below the EBITDA. That's what you're saying.",
       "question_page": 10,
       "answer_quote": "Right. You got it now.",
       "answer_page": 10
@@ -873,10 +898,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management explained that IoT growth starts with hardware before converting to SaaS revenue.",
+      "reason": "Rohan Verma explained that IoT growth starts with hardware revenue followed by SaaS revenue.",
       "question_quote": "help us understand the seasonality of the services part of the IoT business",
       "question_page": 10,
-      "answer_quote": "any immediate growth that you see in IoT, it is always hardware first, right?",
+      "answer_quote": "any immediate growth that you see in IoT, it is always hardware first",
       "answer_page": 10
      },
      {
@@ -885,10 +910,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management addressed the question by explaining that billing cycles vary and comparing Q4 to Q1 does",
-      "question_quote": "going from INR37 crores in Q2 FY 2026 to INR27 crores in Q3 to INR24 crores in Q4 and to INR18 crores in Q1",
+      "reason": "Rohan Verma clarified that it is not quarterly seasonality but a growth curve where hardware precede",
+      "question_quote": "I'm just trying to understand the quarterly seasonality.",
       "question_page": 11,
-      "answer_quote": "comparing Q4 to Q1 will not give you the picture.",
+      "answer_quote": "It's not a quarterly seasonality, Gautam. It's not -- see, our EBITDA on IoT or our services revenue",
       "answer_page": 11
      },
      {
@@ -897,8 +922,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management confirmed that international contribution to revenue is currently not material.",
-      "question_quote": "in the current revenue, there might not be a material contribution directly into our P&L on the revenue side from international",
+      "reason": "Rohan Verma confirmed that international contribution to revenue is currently not material.",
+      "question_quote": "there might not be a material contribution directly into our P&L on the revenue side from international, right?",
       "question_page": 12,
       "answer_quote": "No, it's not.",
       "answer_page": 12
@@ -909,10 +934,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management answered by pointing to automotive wins across various segments mentioned in the highligh",
+      "reason": "Rohan Verma detailed automotive segment wins and vehicle type deployments.",
       "question_quote": "how is your mix in terms of the 2 wheelers, passenger vehicle, and CV in terms of the revenue?",
       "question_page": 12,
-      "answer_quote": "I mean, it's all shown in the Automotive. We have explained it.",
+      "answer_quote": "we've talked about in Automotive, the wins that we've had across a leading 2-wheeler OEM",
       "answer_page": 12
      },
      {
@@ -920,9 +945,9 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "answered",
-      "reason": "Management stated they do not break out subvertical revenue levels.",
-      "question_quote": "more than 75% will come -- most probably to come from this passenger vehicle segment. Is it right, sir?",
+      "label": "partly",
+      "reason": "Management explicitly stated they do not break out subvertical revenue shares. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "revenue, more than 75% will come -- most probably to come from this passenger vehicle segment. Is it right, sir?",
       "question_page": 12,
       "answer_quote": "We don't break out subvertical levels, Abhishek.",
       "answer_page": 12
@@ -932,11 +957,11 @@
       "answered_by": [
        "Rohan Verma"
       ],
-      "label": "answered",
-      "reason": "Management declined to give specific prices due to competitive information reasons.",
-      "question_quote": "how is the revenue per vehicle in terms of the 2 wheelers, passenger vehicles, CVs?",
+      "label": "dodged",
+      "reason": "Management refused to disclose bespoke pricing information citing competitive reasons.",
+      "question_quote": "How much the increase you are expecting this coming quarter, sir?",
       "question_page": 12,
-      "answer_quote": "This is all bespoke. Price is a function of product in use case and customers, and it's all negotiated bespoke",
+      "answer_quote": "This is all bespoke. Price is a function of product in use case and customers, and it's all negotiated bespoke, so I can't speak to individual prices",
       "answer_page": 12
      },
      {
@@ -945,8 +970,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management confirmed they are suppliers to those major OEMs.",
-      "question_quote": "how is the share of business in the large passenger vehicles OEM like in Maruti, Hyundai and others, Mahindra & Mahindra?",
+      "reason": "Rohan Verma confirmed they are suppliers to those major passenger vehicle OEMs.",
+      "question_quote": "how is the share of business in the large passenger vehicles OEM like in Maruti, Hyundai and others",
       "question_page": 13,
       "answer_quote": "Yes. We are the provider there. We are the supplier there.",
       "answer_page": 13
@@ -957,7 +982,7 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management answered that they supply across those companies.",
+      "reason": "Rohan Verma reaffirmed their supply status across those named companies.",
       "question_quote": "And how much is our share of business in them?",
       "question_page": 13,
       "answer_quote": "We are the supplier there. We have all the shares in these companies, Maruti, Hyundai, Mahindra.",
@@ -969,10 +994,10 @@
        "Rohan Verma"
       ],
       "label": "partly",
-      "reason": "Management discussed ongoing order wins but declined to provide quantitative growth targets.",
+      "reason": "Rohan Verma declined to provide quantitative growth targets for the automotive segment. (no refusal or deflection shown in the quoted answer)",
       "question_quote": "what kind of the growth you are targeting in this Automotive segment in this year for FY27",
       "question_page": 13,
-      "answer_quote": "I mean, it's looking good. I mean, target -- I mean, I'm not going to talk about quantitative target",
+      "answer_quote": "I mean, target -- I mean, I'm not going to talk about quantitative target, but the objective is to keep winning more orders",
       "answer_page": 13
      },
      {
@@ -981,10 +1006,10 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management directed the analyst to the investor presentation detailing revenue and pricing models.",
+      "reason": "Rohan Verma directed the user to presentation slides detailing revenue models and pricing structures",
       "question_quote": "how a typical contract with an automotive client and an enterprise client look like",
       "question_page": 13,
-      "answer_quote": "In the slides in the investor presentation, we've gone into a fair amount of detail to explain the business description.",
+      "answer_quote": "In the slides in the investor presentation, we've gone into a fair amount of detail to explain the business description",
       "answer_page": 13
      },
      {
@@ -993,8 +1018,8 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management clarified that there is no typical tenure because it varies and is bespoke.",
-      "question_quote": "typically, what is the tenure of the contract",
+      "reason": "Rohan Verma explained that contract tenures vary and there is no typical fixed duration.",
+      "question_quote": "typically, what is the tenure of the contract, like, say, if companies are taking",
       "question_page": 14,
       "answer_quote": "There is no typical, it varies. I mean, for some customer it could be 5 years, some customer it could be 1 year.",
       "answer_page": 14
@@ -1005,20 +1030,21 @@
        "Rohan Verma"
       ],
       "label": "answered",
-      "reason": "Management explained how multiple products and use cases enable wallet share expansion.",
+      "reason": "Rohan Verma explained how multiple product offerings enable wallet share expansion per customer.",
       "question_quote": "within the same customer, how do you grow your sales?",
       "question_page": 14,
-      "answer_quote": "that for every customer, okay, we have multiple use cases for their variety of needs based on our multiple products",
+      "answer_quote": "That is what we explained, that for every customer, okay, we have multiple use cases for their variety of needs",
       "answer_page": 14
      }
     ],
     "unverified": 7,
+    "downgraded": 2,
     "counts": {
-     "answered": 17,
-     "partly": 6,
-     "dodged": 0
+     "answered": 20,
+     "partly": 2,
+     "dodged": 1
     },
-    "summary": "questions dodged: 0 of 23"
+    "summary": "questions dodged: 1 of 23"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1129,19 +1155,19 @@
    },
    {
     "id": "F15",
-    "text": "Call of 2026-11-07: questions dodged: 0 of 11",
+    "text": "Call of 2026-11-07: questions dodged: 0 of 13",
     "source": "dodged-question check"
    },
    {
     "id": "F16",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 23",
+    "text": "Call of 2026-08-31: questions dodged: 1 of 23",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter profit reached Rs 35 cr with an increase of +84.2% YoY.",
+     "text": "The latest quarter profit reached Rs 35 cr, representing a growth of +84.2% YoY.",
      "cites": [
       {
        "id": "F5",
@@ -1151,17 +1177,7 @@
      ]
     },
     {
-     "text": "Operating margin in the latest quarter was 32.0%, increasing by +9.0 pts YoY.",
-     "cites": [
-      {
-       "id": "F6",
-       "text": "Operating margin 32.0% in the latest quarter, +9.0 pts YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Debt/equity is 0.0 with total borrowings of Rs 4 cr.",
+     "text": "The company maintains a debt/equity ratio of 0.0 with borrowings at Rs 4 cr.",
      "cites": [
       {
        "id": "F7",
@@ -1169,29 +1185,19 @@
        "source": "balance sheet"
       }
      ]
+    },
+    {
+     "text": "The operating margin was 32.0% in the latest quarter, increasing by +9.0 pts YoY.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Operating margin 32.0% in the latest quarter, +9.0 pts YoY",
+       "source": "quarterly P&L"
+      }
+     ]
     }
    ],
    "bear": [
-    {
-     "text": "The company quietly dropped its order book FY28 target of 2000 cr.",
-     "cites": [
-      {
-       "id": "F12",
-       "text": "Quietly dropped: order book FY28 target 2000 cr",
-       "source": "promise ledger"
-      }
-     ]
-    },
-    {
-     "text": "The company quietly dropped its revenue FY28 target of 1000 cr.",
-     "cites": [
-      {
-       "id": "F13",
-       "text": "Quietly dropped: revenue FY28 target 1000 cr",
-       "source": "promise ledger"
-      }
-     ]
-    },
     {
      "text": "The 3-year operating cash flow was 0.69x reported profit.",
      "cites": [
@@ -1199,6 +1205,26 @@
        "id": "F9",
        "text": "3-year operating cash flow = 0.69x reported profit",
        "source": "cash flow"
+      }
+     ]
+    },
+    {
+     "text": "The 3y profit CAGR stands at 7.5% compared to the 3y revenue CAGR of 19.0%.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 19.0%, profit CAGR 7.5%",
+       "source": "annual P&L"
+      }
+     ]
+    },
+    {
+     "text": "Management quietly dropped the order book FY28 target of 2000 cr.",
+     "cites": [
+      {
+       "id": "F12",
+       "text": "Quietly dropped: order book FY28 target 2000 cr",
+       "source": "promise ledger"
       }
      ]
     }
@@ -1227,6 +1253,13 @@
      "page": 5,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f758b4ec-cc89-4b06-a274-50acba5fb7c8.pdf",
      "call": "2026-02-28"
+    },
+    {
+     "claim": "Dodged: Management refused to disclose bespoke pricing information citing competitive reasons.",
+     "quote": "How much the increase you are expecting this coming quarter, sir?",
+     "page": 12,
+     "answer_quote": "This is all bespoke. Price is a function of product in use case and customers, and it's all negotiated bespoke, so I can't speak to individual prices",
+     "answer_page": 12
     }
    ],
    "promises_kept": "1 of 1",
@@ -1242,8 +1275,8 @@
     "order book FY28 (2000 cr)",
     "revenue FY28 (1000 cr)"
    ],
-   "questions_dodged": "0 of 34",
-   "questions_partly_answered": "9 of 34"
+   "questions_dodged": "1 of 36",
+   "questions_partly_answered": "2 of 36"
   }
  },
  "stage": "writing",
@@ -1289,17 +1322,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 8,
-    "cache_hits": 24,
+    "api_calls": 3,
+    "cache_hits": 5,
     "failed": 0,
-    "tokens_in": 15444,
-    "tokens_out": 6159,
+    "tokens_in": 12256,
+    "tokens_out": 5274,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 73.3,
+ "built_in_seconds": 125.4,
  "from_cache": true
 }

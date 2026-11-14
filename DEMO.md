@@ -3,15 +3,16 @@
 Phone (or a phone-sized browser window), app installed from the Vercel link. Speak the plain text; do the bold.
 
 **0:00–0:10 · The problem.** Open the app on **Brief**.
-"Your 18 holdings filed 63 announcements in two weeks. Almost all are paperwork. FINN shows the few that matter."
-Point at the header: *63 filings · 16 matter · 4 left*, and the ring.
+"Your 18 holdings filed about 70 announcements in two weeks. Almost all are paperwork. FINN shows the few that matter."
+Point at the header (filings · how many matter · how many are left) and the ring.
+(Optional: tap **Play my brief** and the phone reads the cards that matter aloud.)
 
 **0:10–0:30 · A verified results card.** Tap **Custom → Last 14 days → Show this range**. Scroll to **ITC**.
 "ITC's quarter: revenue up 3.9%, profit down 18.5%. The AI only read the table; Python checked it."
 Tap **Verified · 8/8 checks**: "three quarters line up, PBT minus tax equals PAT, and it matches Screener to the crore."
 
 **0:30–0:40 · Why am I seeing this?** On the **Bajaj Finance** card tap **Why?**
-"A fund raise, times my 6% holding, plus a bonus because the stock moved 2.2 times its normal day." Tap **Back**.
+"A fund raise, times my 6% holding, plus a bonus because the stock moved 2.2 sigma, more than twice its usual daily swing." Tap **Back**.
 **Swipe the card right** to clear it: the ring fills.
 
 **0:40–1:05 · Does management keep its word?** Tap **Research → L&T**.

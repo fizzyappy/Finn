@@ -1,6 +1,6 @@
 {
  "ticker": "HAPPSTMNDS",
- "started_at": "2026-11-14T17:06:14",
+ "started_at": "2026-11-14T22:44:26",
  "states": [
   {
    "state": "too_early",
@@ -908,11 +908,11 @@
        "Joseph Anantharaju",
        "Venkatraman N"
       ],
-      "label": "answered",
-      "reason": "Management explained U.S. tailwinds, headwinds, and EdTech challenges.",
+      "label": "partly",
+      "reason": "Addressed U.S. market tailwinds and headwinds, but did not answer questions about IMSS and IP-led gr",
       "question_quote": "what are the tailwinds and headwinds over here? And what steps are we taking to revive growth in the U.S. market?",
       "question_page": 17,
-      "answer_quote": "What has positively impacted and what has been a little bit of a drag, right?",
+      "answer_quote": "In terms of the ups and downs of U.S. geo, what has positively impacted and what has been a little bit of a drag, right?",
       "answer_page": 17
      },
      {
@@ -921,10 +921,10 @@
        "Joseph Anantharaju"
       ],
       "label": "partly",
-      "reason": "Mentioned the Rel(AI)Build framework and 15 customers, but skipped margins and deal sizes.",
+      "reason": "Mentioned the Rel(AI)Build framework but did not provide specific deal sizes and margins.",
       "question_quote": "can you help me understand the deal sizes and margins over here?",
       "question_page": 19,
-      "answer_quote": "we've seen quite a few customers, I did mention 15 customers who adopted this.",
+      "answer_quote": "So Aditi, there's also one more factor at play out here, right? It's the Rel(AI)Build framework that we have.",
       "answer_page": 19
      },
      {
@@ -933,7 +933,7 @@
        "Joseph Anantharaju"
       ],
       "label": "answered",
-      "reason": "Explained current and upcoming ESOP schemes for key talent retention.",
+      "reason": "Explained the ESOP scheme instituted for top talent and future plans.",
       "question_quote": "have we set up any like revised incentive structure or retention structure for key talent going into the merger?",
       "question_page": 20,
       "answer_quote": "we have earlier this -- last year and earlier this year, we've instituted an ESOP scheme for our top talent.",
@@ -945,7 +945,7 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Venkatraman explained unallocable corporate costs and operational margin improvements.",
+      "reason": "Explained that unallocable expenses are corporate costs and detailed operating margins and utilizati",
       "question_quote": "Can you explain what comprises this unallocable other expenses?",
       "question_page": 20,
       "answer_quote": "The unallocable is typically the corporate costs. Till allocation is done till gross margins.",
@@ -957,7 +957,19 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Directed to the timeline in the presentation and detailed the merger steps.",
+      "reason": "Clarified the steps of the merger and the separate share transaction between promoter and ITC.",
+      "question_quote": "I just want to know if this is an offline deal or online deal.",
+      "question_page": 21,
+      "answer_quote": "the merger is happening in steps, which is you need the approvals, after which we go approach the NCLT for merger.",
+      "answer_page": 21
+     },
+     {
+      "analyst": "Sujit",
+      "answered_by": [
+       "Venkatraman N"
+      ],
+      "label": "answered",
+      "reason": "Pointed to the investor presentation timeline and explained the steps and expected end state.",
       "question_quote": "I just want to know the estimate on like where this merger. I know that it takes some time, 6 months to 7",
       "question_page": 22,
       "answer_quote": "If you can download the investor presentation, the last page of the presentation has a detailed time line",
@@ -970,7 +982,7 @@
        "Sridhar Mantha"
       ],
       "label": "partly",
-      "reason": "Discussed where autonomous agents are used but did not specify exact hosting location or billing cos",
+      "reason": "Discussed autonomous agents in SDLC and solutions, but did not explicitly answer the specific billin",
       "question_quote": "whether that agents are deployed on your internal data center or whether it is located on the cloud infrastructure?",
       "question_page": 23,
       "answer_quote": "autonomous agents we are using in both the scenarios, right, when it comes to the AI solutions",
@@ -982,20 +994,20 @@
        "Joseph Anantharaju"
       ],
       "label": "answered",
-      "reason": "Provided the exact vertical breakdown and diversification of the top 5 clients.",
+      "reason": "Explained the top 5 client composition and diversification across healthcare, BFSI, and EdTech.",
       "question_quote": "can you just explain, I mean, what is the composition of our top 5 clients? And what has driven this growth?",
       "question_page": 27,
-      "answer_quote": "In the top 3, we would have one customer from health care space, another customer from the BFSI space and third customer continues to be in the EdTech space.",
+      "answer_quote": "our top 5 composition has grown. We've had a little bit of rejigging in the top 5. Not much, I would say.",
       "answer_page": 27
      }
     ],
-    "unverified": 2,
+    "unverified": 1,
     "counts": {
      "answered": 5,
-     "partly": 2,
+     "partly": 3,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 7"
+    "summary": "questions dodged: 0 of 8"
    },
    {
     "call": "2026-09-30",
@@ -1009,10 +1021,10 @@
        "Venkatraman N"
       ],
       "label": "partly",
-      "reason": "Leadership continuity and incentives deferred; 15-month timeline and cross-sell addressed.",
+      "reason": "Addressed leadership continuity and timelines, but deferred details on incentives and operational sy",
       "question_quote": "Who will be leading the combined entity as a CEO and what is the plan to ensure continuity",
       "question_page": 10,
-      "answer_quote": "those would get, Aditi, discussed once we've got gotten past the Competition Commission",
+      "answer_quote": "Some of the aspects that you talked about in terms of incentives, roles, etc, those would get, Aditi, discussed once we've got gotten past the Competition Commission.",
       "answer_page": 11
      },
      {
@@ -1022,10 +1034,10 @@
        "Venkatraman N"
       ],
       "label": "partly",
-      "reason": "Client concentration data not available, but other client stats provided.",
-      "question_quote": "can you share ITC Infotech's client concentration and how much of Fortune 500 clients",
+      "reason": "Management stated they do not have the specific client concentration data on hand.",
+      "question_quote": "can you share ITC Infotech's client concentration and how much of Fortune 500 clients would fall within top 10",
       "question_page": 12,
-      "answer_quote": "the client concentration, I do not have that data right now",
+      "answer_quote": "the client concentration, I do not have that data right now.",
       "answer_page": 12
      },
      {
@@ -1034,10 +1046,10 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Explained organic nature of ITC Infotech growth and two acquisitions.",
-      "question_quote": "how much of this would b e organic, inorganic? Is there any inorganic component",
+      "reason": "Explained the organic nature of ITC Infotech's growth and the synergy execution targets.",
+      "question_quote": "how much of this would be organic, inorganic? Is there any inorganic component in that?",
       "question_page": 14,
-      "answer_quote": "largely almost most of the growth which has come is based on strong organic traction",
+      "answer_quote": "During our financial due diligence, they have not done any transformative deals. It's almost been like a trajectory that we have been following, largely organic.",
       "answer_page": 15
      },
      {
@@ -1047,10 +1059,10 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Addressed client overlap between the two companies.",
+      "reason": "Addressed client overlap by stating there is very limited overlap among top customers.",
       "question_quote": "what proportion of client you think there could be a overlap?",
       "question_page": 16,
-      "answer_quote": "there is no overlap among the top customers from both sides",
+      "answer_quote": "the top customers, what we have seen is that there is no overlap among the top customers from both sides.",
       "answer_page": 16
      },
      {
@@ -1059,8 +1071,8 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Clarified that growth targeting is in INR terms.",
-      "question_quote": "clarify this 14%, 15% growth that you are targeting, that is that is in INR terms or in dollar terms?",
+      "reason": "Confirmed that the growth targets are in INR terms.",
+      "question_quote": "this 14%, 15% growth that you are targeting, that is that is in INR terms or in dollar terms?",
       "question_page": 16,
       "answer_quote": "Yes, it is in INR terms.",
       "answer_page": 16
@@ -1071,10 +1083,10 @@
        "Joseph Anantharaju"
       ],
       "label": "partly",
-      "reason": "Sales team retention strategy deferred to post-CCI discussions.",
-      "question_quote": "any strategy you have to, you know, on the sales team side? How to how to keep the sales team",
+      "reason": "Deferred sales team retention and incentive strategy discussions until after the CCI phase.",
+      "question_quote": "any strategy you have to, you know, on the sales team side? How to how to keep the sales team for both the companies intact?",
       "question_page": 18,
-      "answer_quote": "those aspects would be discussed, you know, once we get past the Competition Commission stage",
+      "answer_quote": "those aspects would be discussed, you know, once we get past the Competition Commission stage or phase",
       "answer_page": 18
      },
      {
@@ -1083,23 +1095,35 @@
        "Venkatraman N"
       ],
       "label": "partly",
-      "reason": "Detailed time and material contract numbers not available yet.",
+      "reason": "Stated granular time and material contract numbers are not yet available.",
       "question_quote": "on the time and material contract, how would the merged entity be in terms of the mix?",
       "question_page": 19,
-      "answer_quote": "Anjali, we have not gone to that level of granularity.",
+      "answer_quote": "Anjali, we have not gone to that level of granularity. Yes, we will you know, ITC Infotech has been an unlisted C ompany",
       "answer_page": 19
      },
      {
-      "analyst": "Anjali Sinha",
+      "analyst": "Darshita Jain",
       "answered_by": [
-       "Venkatraman N"
+       "Joseph Anantharaju"
       ],
-      "label": "answered",
-      "reason": "Confirmed there are no specific contracts for management continuity.",
-      "question_quote": "any kind of contract the top management has in terms of number of years they have to continue",
-      "question_page": 19,
-      "answer_quote": "It's there's no specific contract, nothing.",
-      "answer_page": 20
+      "label": "partly",
+      "reason": "Described AI capabilities but did not provide the requested numerical percentage contribution to tot",
+      "question_quote": "post the merger is completed, how much of the AI revenue can be expect to the total revenue, the percentage of AI revenue contribution",
+      "question_page": 22,
+      "answer_quote": "If you look at the capabilities of both companies from an AI perspective, I think if you look at Happiest Minds, our strength is more on the digital part",
+      "answer_page": 22
+     },
+     {
+      "analyst": "Darshita Jain",
+      "answered_by": [
+       "Joseph Anantharaju"
+      ],
+      "label": "dodged",
+      "reason": "Refused to quantify the AI revenue contribution and deferred the answer to future discussions.",
+      "question_quote": "If you can just quantify on the number as to how much contribution can we expect from the AI?",
+      "question_page": 23,
+      "answer_quote": "those are some of the discussions and the depth to which we will go in a couple of months",
+      "answer_page": 23
      },
      {
       "analyst": "Ashish Das",
@@ -1107,20 +1131,20 @@
        "Venkatraman N"
       ],
       "label": "answered",
-      "reason": "Explained reasons for the valuation multiple difference between the two companies.",
+      "reason": "Explained the reasons for the different valuation multiples assigned by independent valuers.",
       "question_quote": "What could be the reasons like Happiest Minds got the higher valuation?",
       "question_page": 25,
-      "answer_quote": "We are AI-led, more there is a sort of more of the recency in the kind of business we do or the growth rates",
+      "answer_quote": "That is how it's been done by independent valuers. We are AI-led, more there is a sort of more of the recency in the kind of business we do or the growth rates",
       "answer_page": 25
      }
     ],
     "unverified": 8,
     "counts": {
-     "answered": 5,
-     "partly": 4,
-     "dodged": 0
+     "answered": 4,
+     "partly": 5,
+     "dodged": 1
     },
-    "summary": "questions dodged: 0 of 9"
+    "summary": "questions dodged: 1 of 10"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1218,19 +1242,29 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-11-09: questions dodged: 0 of 7",
+    "text": "Call of 2026-11-09: questions dodged: 0 of 8",
     "source": "dodged-question check"
    },
    {
     "id": "F13",
-    "text": "Call of 2026-09-30: questions dodged: 0 of 9",
+    "text": "Call of 2026-09-30: questions dodged: 1 of 10",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Latest quarter revenue was Rs 645 cr, representing +12.4% YoY growth.",
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "cites": [
+      {
+       "id": "F10",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter revenue Rs 645 cr, +12.4% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -1240,7 +1274,7 @@
      ]
     },
     {
-     "text": "Latest quarter profit reached Rs 62 cr, showing a +14.8% YoY increase.",
+     "text": "Latest quarter profit Rs 62 cr, +14.8% YoY.",
      "cites": [
       {
        "id": "F5",
@@ -1248,21 +1282,11 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "Operating margin stood at 19.0% in the latest quarter, up +2.0 pts YoY.",
-     "cites": [
-      {
-       "id": "F6",
-       "text": "Operating margin 19.0% in the latest quarter, +2.0 pts YoY",
-       "source": "quarterly P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The 3y profit CAGR is -2.7% alongside a 3y revenue CAGR of 17.4%.",
+     "text": "3y revenue CAGR 17.4%, profit CAGR -2.7%.",
      "cites": [
       {
        "id": "F2",
@@ -1272,7 +1296,7 @@
      ]
     },
     {
-     "text": "Debt to equity is 0.93 with total borrowings at Rs 1,666 cr.",
+     "text": "Debt/equity 0.93 with borrowings Rs 1,666 cr.",
      "cites": [
       {
        "id": "F7",
@@ -1282,12 +1306,12 @@
      ]
     },
     {
-     "text": "The cash conversion cycle is 62 days.",
+     "text": "Call of 2026-09-30 had 1 of 10 questions dodged.",
      "cites": [
       {
-       "id": "F8",
-       "text": "Cash conversion cycle 62 days (2026)",
-       "source": "ratios"
+       "id": "F13",
+       "text": "Call of 2026-09-30: questions dodged: 1 of 10",
+       "source": "dodged-question check"
       }
      ]
     }
@@ -1295,7 +1319,15 @@
    "removed": []
   },
   "report_card": {
-   "evidence": [],
+   "evidence": [
+    {
+     "claim": "Dodged: Refused to quantify the AI revenue contribution and deferred the answer to future discussions.",
+     "quote": "If you can just quantify on the number as to how much contribution can we expect from the AI?",
+     "page": 23,
+     "answer_quote": "those are some of the discussions and the depth to which we will go in a couple of months",
+     "answer_page": 23
+    }
+   ],
    "promises_kept": "none measurable yet",
    "promise_counts": {
     "Missed": 0,
@@ -1306,8 +1338,8 @@
     "Not measurable": 7
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 16",
-   "questions_partly_answered": "6 of 16"
+   "questions_dodged": "1 of 18",
+   "questions_partly_answered": "8 of 18"
   }
  },
  "stage": "writing",
@@ -1353,17 +1385,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 10,
-    "cache_hits": 0,
-    "failed": 1,
-    "tokens_in": 15076,
-    "tokens_out": 4714,
+    "api_calls": 3,
+    "cache_hits": 6,
+    "failed": 0,
+    "tokens_in": 10943,
+    "tokens_out": 3273,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 101.2,
+ "built_in_seconds": 108.5,
  "from_cache": true
 }

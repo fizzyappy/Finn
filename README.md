@@ -14,7 +14,7 @@ the exact quote and page. Every number is computed in Python; every quote is che
 |---|---|---|---|
 | ![Brief](frontend/screenshots/02-brief-14d-results-cards.png) | ![Why](frontend/screenshots/04-brief-why-flipped.png) | ![Ledger](frontend/screenshots/11-research-LT-ledger-row-open.png) | ![Alerts](frontend/screenshots/15-alerts-default.png) |
 
-All 19 screens and states: [`frontend/screenshots/`](frontend/screenshots/) (iPhone size, 0 console errors, 0 accessibility issues).
+All 20 screens and states: [`frontend/screenshots/`](frontend/screenshots/) (iPhone size, 0 console errors, 0 accessibility issues).
 
 ---
 
@@ -61,8 +61,9 @@ flowchart LR
 ```
 
 - **Backend** (`backend/finn`): data layer, push engine (`push/`), pull engine (`pull/`), one LLM router (`llm.py`), FastAPI (`api.py`).
-- **App** (`frontend/`): Brief, Research, Alerts, Settings; installable PWA; ships a snapshot of real outputs so the
-  link always works, and uses the live backend (Render) for companies outside it.
+- **App** (`frontend/`): Brief (with any date range and **Play my brief**, read aloud on the phone), Research (with
+  **Ask about this company**, answered only from its cited sources), Alerts, Settings; installable PWA; ships a snapshot
+  of real outputs so the link always works, and uses the live backend (Render) for companies outside it.
 - **Ops**: a GitHub Action rebuilds the data every weekday at 16:45 IST; another keeps the free backend awake.
 
 ## Model routing and measured cost
@@ -81,7 +82,7 @@ falls back if a model fails (and labels it), caches every answer by a hash of it
 | Segment tables | Flash-Lite | 18 | 46 | 23k |
 | People cards | Flash-Lite | 3 | 0 | 12k |
 | Ask about a company | Flash (Flash-Lite fallback) | 4 | 0 | 25k |
-| **Total, whole build (14 Nov 2026)** | | **≈ 323** | **≈ 690** | **≈ 0.98 M** |
+| **Total, whole build (14 Nov 2026)** | | **≈ 331** | **≈ 731** | **≈ 1.02 M** |
 
 All on Gemini's free tier: **USD 0**. Two thirds of all model requests were answered from the cache. The app's
 Settings screen shows a live cost meter.

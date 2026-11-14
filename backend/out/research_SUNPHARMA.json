@@ -1,6 +1,6 @@
 {
  "ticker": "SUNPHARMA",
- "started_at": "2026-11-14T12:53:55",
+ "started_at": "2026-11-14T22:34:19",
  "states": [],
  "sections": {
   "snapshot": {
@@ -441,10 +441,10 @@
        "Richard Ascroft"
       ],
       "label": "partly",
-      "reason": "Addressed slowdown reasons and interventions but skipped timeline.",
+      "reason": "Declined to give details on drivers but mentioned interventions and recovery.",
       "question_quote": "what is driving that? And what kind of actions we have taken? And what's the time line in terms of the recovery",
       "question_page": 7,
-      "answer_quote": "we have identified a few key things that have led to the slowdown. We put key interventions in place already.",
+      "answer_quote": "I don't want to get into the -- all the details, but we have identified a few key things",
       "answer_page": 7
      },
      {
@@ -453,7 +453,7 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Clarified the recovery timeline.",
+      "reason": "Specified the time period as the next few quarters.",
       "question_quote": "Over any time period you would like to suggest like a couple of quarters, 1 quarter?",
       "question_page": 7,
       "answer_quote": "Over the next few quarters.",
@@ -465,7 +465,7 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Confirmed sales force investment is already built in.",
+      "reason": "Confirmed the investment is already built into the sales force model.",
       "question_quote": "is it already there in quarter 2?",
       "question_page": 7,
       "answer_quote": "It is. It's already built into our existing sales force model.",
@@ -477,7 +477,7 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Addressed launch expenses directly.",
+      "reason": "Clarified that expenses are built into the budget.",
       "question_quote": "do you foresee any one-off kind of launch expense",
       "question_page": 7,
       "answer_quote": "We have expenses, but they've been built into our overall budget.",
@@ -486,10 +486,22 @@
      {
       "analyst": "Neha Manpuria",
       "answered_by": [
+       "Richard Ascroft"
+      ],
+      "label": "answered",
+      "reason": "Discussed NCCN guidelines, data releases, and launch momentum.",
+      "question_quote": "when should we start seeing meaningful contribution from these 2 launches?",
+      "question_page": 8,
+      "answer_quote": "we feel confident about both of the launches. If we start with Unloxcyt, we had some very encouraging news.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Neha Manpuria",
+      "answered_by": [
        "Dilip Shanghvi"
       ],
       "label": "answered",
-      "reason": "Confirmed full year R&D guidance expectation.",
+      "reason": "Confirmed expectation to meet full year guidance as R&D ramps up.",
       "question_quote": "is it fair to assume you're hitting the 6% to 7% guidance for the full year for R&D spend",
       "question_page": 9,
       "answer_quote": "our expectation is that as that ramps up, we should be able to meet the overall guidance",
@@ -500,21 +512,9 @@
       "answered_by": [
        "Kirti Ganorkar"
       ],
-      "label": "partly",
-      "reason": "Answered therapy expansion and sales capabilities, but declined exact expense details.",
-      "question_quote": "whether you will be expanding into more therapies beyond what we have right now in your portfolio? And for the marketing part, what kind of spend we should assume",
-      "question_page": 9,
-      "answer_quote": "Regarding expenses, we cannot give exact detail on how much we'll spend on launching PCSK9, but it will be part of our overall guidance",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Damayanti Kerai",
-      "answered_by": [
-       "Kirti Ganorkar"
-      ],
       "label": "answered",
-      "reason": "Confirmed geographic launch scope.",
-      "question_quote": "So it will be like across the world launch, except these 2 markets, right?",
+      "reason": "Confirmed the launch scope as ex-US and ex-China with approval in Europe.",
+      "question_quote": "it will be like across the world launch, except these 2 markets, right?",
       "question_page": 10,
       "answer_quote": "Ex US, ex China, and we have approval in Europe, yes.",
       "answer_page": 10
@@ -524,11 +524,11 @@
       "answered_by": [
        "Kirti Ganorkar"
       ],
-      "label": "partly",
-      "reason": "Declined to list upcoming market filings per policy.",
-      "question_quote": "can you update us regarding how you are looking to file this product in other markets, like which will be the key markets where you intend to enter",
+      "label": "answered",
+      "reason": "Explained policy on filing details and noted current approvals and commercialization.",
+      "question_quote": "update us regarding how you are looking to file this product in other markets",
       "question_page": 10,
-      "answer_quote": "we don't inform where we have filed and we will get approval for semaglutide.",
+      "answer_quote": "we guided all of you that we don't inform where we have filed and we will get approval",
       "answer_page": 10
      },
      {
@@ -537,8 +537,8 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Clarified that slowdown is a mix of market and execution.",
-      "question_quote": "Is it something to do with the market getting saturated? Or is it something related to the sales strategy or some sales execution",
+      "reason": "Addressed whether it is saturation or execution.",
+      "question_quote": "Is it something to do with the market getting saturated? Or is it something related to the sales strategy",
       "question_page": 10,
       "answer_quote": "it's really a variety of things. I think there's a bit of market, but frankly, part of it is execution as well",
       "answer_page": 10
@@ -548,11 +548,11 @@
       "answered_by": [
        "Richard Ascroft"
       ],
-      "label": "partly",
-      "reason": "Declined product-specific guidance but provided the patient proportion.",
-      "question_quote": "if you could provide some color on the size of opportunity in terms of the market potential",
+      "label": "answered",
+      "reason": "Provided percentage of comorbid patients while stating product-specific guidance is not shared.",
+      "question_quote": "provide some color on the size of opportunity in terms of the market potential",
       "question_page": 10,
-      "answer_quote": "We don't provide product-specific guidance. What I can share is about one-third of patients with plaque psoriasis also have comorbid psoriatic arthritis.",
+      "answer_quote": "We don't provide product-specific guidance. What I can share is about one-third of patients",
       "answer_page": 10
      },
      {
@@ -561,7 +561,7 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Answered exclusivity timeline.",
+      "reason": "Stated that loss of exclusivity is not in the foreseeable future.",
       "question_quote": "what is the loss of exclusivity for Ilumya itself that we should be factoring in? Should it be 2030?",
       "question_page": 11,
       "answer_quote": "It's not in the foreseeable future, Shashank.",
@@ -573,7 +573,7 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Explained growth drivers.",
+      "reason": "Confirmed the launch of 5 new products led to the growth.",
       "question_quote": "Was there any short-term opportunity that we benefited from? Or was it business as usual",
       "question_page": 11,
       "answer_quote": "I did share in my opening that we launched 5 new products this quarter, which led to the growth.",
@@ -585,7 +585,7 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Acknowledged broken voice and prompted clarification.",
+      "reason": "Clarified audio issue and prompted further clarification from analyst.",
       "question_quote": "When do we see the pickup? And what would drive this pickup in the business?",
       "question_page": 11,
       "answer_quote": "I think your voice was breaking, Tushar, you were asking for EM and ROW growth?",
@@ -597,7 +597,7 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Confirmed audio check.",
+      "reason": "Acknowledged audio confirmation.",
       "question_quote": "Sir, am I audible?",
       "question_page": 11,
       "answer_quote": "Yes.",
@@ -609,7 +609,7 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Provided Emerging Markets growth rate and drivers.",
+      "reason": "Provided EM constant currency growth rate and drivers.",
       "question_quote": "If you could share what's happening there and what would drive growth going forward?",
       "question_page": 12,
       "answer_quote": "This quarter, we did a constant currency growth of 7.6%. And this was again driven by product launches",
@@ -621,10 +621,10 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Stated policy on not giving specific growth guidance.",
+      "reason": "Stated company does not guide to specific growth numbers but historical range applies.",
       "question_quote": "Even in EM, this is the kind of sustainable growth to think about?",
       "question_page": 12,
-      "answer_quote": "No, we don't guide to any particular growth number.",
+      "answer_quote": "No, we don't guide to any particular growth number. But I think if you look at our historical trend",
       "answer_page": 12
      },
      {
@@ -633,8 +633,8 @@
        "Dilip Shanghvi"
       ],
       "label": "answered",
-      "reason": "Explained why specific monetary R&D breakdown is not shared.",
-      "question_quote": "Just trying to understand on the monetary side, where the R&D step-up would happen.",
+      "reason": "Explained that product-level R&D spending details are not shared as guidance is overall.",
+      "question_quote": "just trying to understand on the monetary side, where the R&D step-up would happen.",
       "question_page": 12,
       "answer_quote": "You're asking for a level of detailing, which generally is not something that we share because we guide for an overall R&D budget.",
       "answer_page": 12
@@ -645,7 +645,7 @@
        "Abhishek Sharma"
       ],
       "label": "answered",
-      "reason": "Confirmed the premise.",
+      "reason": "Confirmed it is a mix of absolute addition and percentage growth.",
       "question_quote": "So it's basically probably the absolute addition versus the percentage growth, right?",
       "question_page": 13,
       "answer_quote": "It's a mix of both, yes.",
@@ -657,10 +657,10 @@
        "Kirti Ganorkar"
       ],
       "label": "answered",
-      "reason": "Declined media comment but confirmed voluntary recall and cessation.",
-      "question_quote": "Can you comment whether this is true and whether this would have any material adverse impact on our numbers?",
+      "reason": "Addressed media report by detailing voluntary recall and temporary cessation of manufacturing.",
+      "question_quote": "Can you comment whether this is true and whether this would have any material adverse impact",
       "question_page": 14,
-      "answer_quote": "No, Vishal, I can't comment on what media has reported. But what I can say is that there are 11 ophthalmology products, which we have voluntarily recalled.",
+      "answer_quote": "there are 11 ophthalmology products, which we have voluntarily recalled. And we voluntarily initiated a temporary cessation",
       "answer_page": 14
      },
      {
@@ -668,11 +668,11 @@
       "answered_by": [
        "Jayashree Satagopan"
       ],
-      "label": "partly",
-      "reason": "Directed analyst to the annual report for details.",
-      "question_quote": "how much of the historical generic pricing litigation exposure has now been addressed with this settlement?",
+      "label": "answered",
+      "reason": "Directed analyst to the annual report for particulars regarding the settlement.",
+      "question_quote": "how much of the historical generic pricing litigation exposure has now been addressed",
       "question_page": 14,
-      "answer_quote": "See, you could possibly refer to our annual report where we have disclosed most of the particulars regarding the settlement.",
+      "answer_quote": "you could possibly refer to our annual report where we have disclosed most of the particulars",
       "answer_page": 14
      },
      {
@@ -681,17 +681,17 @@
        "Dilip Shanghvi"
       ],
       "label": "answered",
-      "reason": "Explained commercial potential evaluation process for R&D.",
+      "reason": "Explained the investment evaluation process and risk-adjusted probability of approval.",
       "question_quote": "how do we evaluate the commercial potential of these? And how do we look at these going forward",
       "question_page": 14,
-      "answer_quote": "we have a process by which we decide to invest on a product only if we feel that there will be a decent return on investment",
+      "answer_quote": "we have a process by which we decide to invest on a product only if we feel that there will be a decent return",
       "answer_page": 14
      }
     ],
     "unverified": 9,
     "counts": {
-     "answered": 16,
-     "partly": 5,
+     "answered": 20,
+     "partly": 1,
      "dodged": 0
     },
     "summary": "questions dodged: 0 of 21"
@@ -707,23 +707,10 @@
        "Kirti Ganorkar"
       ],
       "label": "dodged",
-      "reason": "Management declined to give product-wise revenue growth.",
-      "question_quote": "give color on reasons for slower growth in 1Q",
+      "reason": "Explicit refusal to provide product-wise growth numbers.",
+      "question_quote": "Is it possible for the management to give color on reasons for slower growth in 1Q?",
       "question_page": 7,
-      "answer_quote": "we don't provide any product-wise revenue and growth at this moment",
-      "answer_page": 7
-     },
-     {
-      "analyst": "Amey Chalke",
-      "answered_by": [
-       "Kirti Ganorkar",
-       "Richard Ascroft"
-      ],
-      "label": "answered",
-      "reason": "Management cited seasonality with the product Levulan.",
-      "question_quote": "any product in this quarter, particularly where you saw some impact",
-      "question_page": 7,
-      "answer_quote": "we do see seasonality with Levulan, our product for actinic keratosis",
+      "answer_quote": "we don't provide any product-wise revenue and growth at this moment.",
       "answer_page": 7
      },
      {
@@ -732,10 +719,10 @@
        "Kirti Ganorkar"
       ],
       "label": "answered",
-      "reason": "Management explained in-house API and component supply preparedness.",
-      "question_quote": "understand our preparedness of the supply chain",
+      "reason": "Explained supply chain preparedness for semaglutide across multiple markets.",
+      "question_quote": "understand our preparedness of the supply chain. How much supply we have been able to secure",
       "question_page": 7,
-      "answer_quote": "We have API manufactured in-house formulation also we do in-house, and we are tied up with all the people who are supplying the components",
+      "answer_quote": "We have API manufactured in-house formulation also we do in-house, and we are tied up with all the people who are supplying the components for device.",
       "answer_page": 7
      },
      {
@@ -744,10 +731,10 @@
        "Jayashree Satagopan"
       ],
       "label": "answered",
-      "reason": "Management pointed to branded generics and innovative medicines.",
-      "question_quote": "which regions or which segments are really driving the growth",
+      "reason": "Explained that product mix in branded generics and innovative medicines drove margins.",
+      "question_quote": "elaborate a bit like which regions or which segments are really driving the growth?",
       "question_page": 8,
-      "answer_quote": "good growth in our branded generics business as well as our innovative medicines business",
+      "answer_quote": "We've seen good growth in our branded generics business as well as our innovative medicines business.",
       "answer_page": 8
      },
      {
@@ -756,22 +743,10 @@
        "Jayashree Satagopan"
       ],
       "label": "answered",
-      "reason": "Management confirmed share of business went up.",
-      "question_quote": "contribution went up from both branded generics and innovative medicine",
+      "reason": "Confirmed that contribution went up from both segments.",
+      "question_quote": "does contribution went up from both branded generics and innovative medicine",
       "question_page": 8,
-      "answer_quote": "The share of business to the overall revenues have gone up",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Damayanti Kerai",
-      "answered_by": [
-       "Dilip Shanghvi"
-      ],
-      "label": "partly",
-      "reason": "Management referred back to previously guided annual numbers.",
-      "question_quote": "how should we look at the spend on a full year basis",
-      "question_page": 8,
-      "answer_quote": "We have already guided for the annual number. And I think we should be able to meet those numbers",
+      "answer_quote": "The share of business to the overall revenues have gone up.",
       "answer_page": 8
      },
      {
@@ -780,10 +755,10 @@
        "Dilip Shanghvi"
       ],
       "label": "answered",
-      "reason": "Management specified the remaining spend is for generics and India.",
-      "question_quote": "remaining 70% spend is towards",
+      "reason": "Clarified that the remaining 70% spend goes towards generics and products for India.",
+      "question_quote": "And remaining 70% spend is towards?",
       "question_page": 8,
-      "answer_quote": "That would be generics as well as products for India",
+      "answer_quote": "That would be generics as well as products for India.",
       "answer_page": 8
      },
      {
@@ -792,8 +767,20 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management explained the combination of formulary and clinician influence.",
-      "question_quote": "who is the decision-maker, is it doctor who makes the decision",
+      "reason": "Addressed formulary access and coverage for Leqselvi and Unloxcyt.",
+      "question_quote": "how is the access aspect of these two molecules moving on? Let's say, where would you want to be versus where you are currently?",
+      "question_page": 8,
+      "answer_quote": "we do already for Leqselvi now have the majority of the covered lives available to us.",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Kunal Dhamesha",
+      "answered_by": [
+       "Richard Ascroft"
+      ],
+      "label": "answered",
+      "reason": "Explained the decision-maker dynamics for Unloxcyt formularies.",
+      "question_quote": "who is the decision-maker, is it doctor who makes the decision? Or is it the cancer center",
       "question_page": 9,
       "answer_quote": "It's a bit of a combination. In most of the centers, there is a formulary, but that formulary is heavily influenced by the clinicians",
       "answer_page": 9
@@ -804,10 +791,10 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management confirmed it is a Medicare Part B product.",
-      "question_quote": "this would be Medicare Part B heavy, right",
+      "reason": "Confirmed Medicare Part B applicability.",
+      "question_quote": "And again, this would be Medicare Part B heavy, right?",
       "question_page": 9,
-      "answer_quote": "It’s a Medicare Part B product",
+      "answer_quote": "It’s a Medicare Part B product.",
       "answer_page": 9
      },
      {
@@ -816,11 +803,23 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management added commercial coverage details.",
+      "reason": "Added details on commercial coverage and Part B classification.",
       "question_quote": "Sure. We have…",
       "question_page": 9,
-      "answer_quote": "I should add, though, we also have good commercial coverage as well",
+      "answer_quote": "we also have good commercial coverage as well. So -- but yes, due to the age of the population, they tend to be Medicare beneficiaries.",
       "answer_page": 9
+     },
+     {
+      "analyst": "Kunal Dhamesha",
+      "answered_by": [
+       "Richard Ascroft"
+      ],
+      "label": "answered",
+      "reason": "Clarified that launch expenses are a sustained investment rather than one-time.",
+      "question_quote": "Sure, ma'am. And...",
+      "question_page": 10,
+      "answer_quote": "I think it's a bit of a misnomer to think there's a onetime expense on launch and then that expense goes away. It's a sustained investment",
+      "answer_page": 10
      },
      {
       "analyst": "Kunal Dhamesha",
@@ -828,10 +827,10 @@
        "Jayashree Satagopan"
       ],
       "label": "answered",
-      "reason": "Management advised sticking to high single-digit growth.",
-      "question_quote": "Do you see an upside here from the full year perspective or we will stick",
+      "reason": "Stuck to high single-digit guidance for the full year.",
+      "question_quote": "So do you see an upside here from the full year perspective or we will stick to the high single-digit growth guidance as of now?",
       "question_page": 10,
-      "answer_quote": "Think we should stick on to the high single-digit growth for the full year",
+      "answer_quote": "Think we should stick on to the high single-digit growth for the full year.",
       "answer_page": 10
      },
      {
@@ -840,10 +839,10 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management identified Lenalidomide as the largest part of the decline.",
-      "question_quote": "Is that the only reason for the sharp decline in the U.S.",
+      "reason": "Identified Lenalidomide as the largest part of the decline.",
+      "question_quote": "Is that the only reason for the sharp decline in the U.S.? Is this the new base for the U.S. business",
       "question_page": 11,
-      "answer_quote": "The largest part of the decline is Lenalidomide",
+      "answer_quote": "Yes. The largest part of the decline is Lenalidomide.",
       "answer_page": 11
      },
      {
@@ -852,10 +851,10 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management explained quarter-on-quarter impact from competition.",
-      "question_quote": "No, I mean quarter-on-quarter",
+      "reason": "Explained sequential versus year-over-year decline drivers.",
+      "question_quote": "No, I mean quarter-on-quarter?",
       "question_page": 11,
-      "answer_quote": "Slight decline based on the base business due to competition on a few products",
+      "answer_quote": "Slight decline based on the base business due to competition on a few products.",
       "answer_page": 11
      },
      {
@@ -864,10 +863,23 @@
        "Richard Ascroft"
       ],
       "label": "dodged",
-      "reason": "Management declined to give specific targets for the U.S. business.",
-      "question_quote": "when do you think we start seeing the U.S. business turn the corner",
+      "reason": "Refused to give specific growth targets for the U.S. business.",
+      "question_quote": "when do you think we start seeing the U.S. business turn the corner and actually contribute more meaningfully to growth?",
       "question_page": 11,
-      "answer_quote": "As you know, we don't give product-wise specific targets",
+      "answer_quote": "As you know, we don't give product-wise specific targets.",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Neha Manpuria",
+      "answered_by": [
+       "Abhishek Sharma",
+       "Richard Ascroft"
+      ],
+      "label": "partly",
+      "reason": "Explicitly stated they are not guiding to growth specifically for generics. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "No, sorry, I was talking about the U.S. generic business here, sorry?",
+      "question_page": 12,
+      "answer_quote": "we are not guiding to the growth for specifically.",
       "answer_page": 12
      },
      {
@@ -876,8 +888,8 @@
        "Aalok Shanghvi"
       ],
       "label": "answered",
-      "reason": "Management attributed it to geopolitical and macroeconomic conditions.",
-      "question_quote": "Is there any timing issue in supplies or anything",
+      "reason": "Attributed emerging market slowdown to geopolitical issues and macroeconomic conditions.",
+      "question_quote": "Is there any timing issue in supplies or anything that I need to be cognizant of in the quarter?",
       "question_page": 12,
       "answer_quote": "I would characterize the impact as a combination of both the geopolitical issues and difficult macroeconomic conditions",
       "answer_page": 12
@@ -889,11 +901,23 @@
        "Richard Ascroft"
       ],
       "label": "answered",
-      "reason": "Management stated they prioritize and identify areas to differentiate.",
-      "question_quote": "When are we planning to sort of also try and target some of these other indications",
+      "reason": "Discussed prioritizing and investigating other indications through investigator-initiated trials.",
+      "question_quote": "when are we planning to sort of also try and target some of these other indications?",
       "question_page": 13,
-      "answer_quote": "we have to prioritize and identify areas where we can differentiate and register the product",
+      "answer_quote": "we are conducting in the United States, investigator-initiated trials.",
       "answer_page": 13
+     },
+     {
+      "analyst": "Bino Pathiparampil",
+      "answered_by": [
+       "Abhishek Sharma"
+      ],
+      "label": "answered",
+      "reason": "Clarified that seasonality applied to Levulan while competition applied to Y-o-Y generics.",
+      "question_quote": "do -- are both these reasons or is one more important reason?",
+      "question_page": 14,
+      "answer_quote": "The seasonality was on Q-o-Q basis for Levulan, not to do with generics. And the Y-o-Y comparison of was basically the additional competition factor",
+      "answer_page": 14
      },
      {
       "analyst": "Bino Pathiparampil",
@@ -901,10 +925,10 @@
        "Jayashree Satagopan"
       ],
       "label": "answered",
-      "reason": "Management stated there is no specific reason.",
-      "question_quote": "Is there any particular reason? And what can we expect going forward",
+      "reason": "Stated there is no specific reason for the fluctuation.",
+      "question_quote": "Is there any particular reason? And what can we expect going forward?",
       "question_page": 14,
-      "answer_quote": "There is no specific reason for this",
+      "answer_quote": "There is no specific reason for this.",
       "answer_page": 14
      },
      {
@@ -912,21 +936,34 @@
       "answered_by": [
        "Aalok Shanghvi"
       ],
-      "label": "partly",
-      "reason": "Management stated it is premature to comment on emerging market dynamics.",
-      "question_quote": "any comment on the emerging market opportunity, any dynamics there",
+      "label": "answered",
+      "reason": "Stated it is a bit premature to comment on emerging market semaglutide opportunity.",
+      "question_quote": "So how are you seeing the opportunity in emerging markets?",
       "question_page": 15,
       "answer_quote": "I think to be honest, I think a little premature to be able to comment",
       "answer_page": 15
+     },
+     {
+      "analyst": "Saion Mukherjee",
+      "answered_by": [
+       "Richard Ascroft"
+      ],
+      "label": "dodged",
+      "reason": "Refused to give a specific timeline for revenue traction.",
+      "question_quote": "what's the time line for really seeing traction in revenues?",
+      "question_page": 16,
+      "answer_quote": "In terms of giving you a specific time line, we're not in a position to do that at this time.",
+      "answer_page": 16
      }
     ],
-    "unverified": 12,
+    "unverified": 9,
+    "downgraded": 1,
     "counts": {
-     "answered": 14,
-     "partly": 2,
-     "dodged": 2
+     "answered": 17,
+     "partly": 1,
+     "dodged": 3
     },
-    "summary": "questions dodged: 2 of 18"
+    "summary": "questions dodged: 3 of 21"
    }
   ],
   "narrative_vs_numbers": [
@@ -1053,29 +1090,19 @@
    },
    {
     "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 2 of 18",
+    "text": "Call of 2026-08-31: questions dodged: 3 of 21",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 10.0% and the profit CAGR is 10.6%.",
+     "text": "The 3y revenue CAGR is 10.0% and profit CAGR is 10.6%.",
      "cites": [
       {
        "id": "F2",
        "text": "3y revenue CAGR 10.0%, profit CAGR 10.6%",
        "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 16,199 cr, marking an increase of +11.9% YoY.",
-     "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 16,199 cr, +11.9% YoY",
-       "source": "quarterly P&L"
       }
      ]
     },
@@ -1086,6 +1113,16 @@
        "id": "F10",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Debt to equity is 0.04 with borrowings of Rs 3,241 cr.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Debt/equity 0.04 (borrowings Rs 3,241 cr)",
+       "source": "balance sheet"
       }
      ]
     }
@@ -1102,7 +1139,7 @@
      ]
     },
     {
-     "text": "Operating margin was 29.0% in the latest quarter, down -2.0 pts YoY.",
+     "text": "Operating margin was 29.0% in the latest quarter, dropping -2.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1112,12 +1149,12 @@
      ]
     },
     {
-     "text": "The cash conversion cycle is 228 days.",
+     "text": "Management quietly dropped the revenue growth FY27 target of 7-9%.",
      "cites": [
       {
-       "id": "F8",
-       "text": "Cash conversion cycle 228 days (2026)",
-       "source": "ratios"
+       "id": "F12",
+       "text": "Quietly dropped: revenue growth FY27 target 7-9%",
+       "source": "promise ledger"
       }
      ]
     }
@@ -1134,18 +1171,25 @@
      "call": "2026-05-31"
     },
     {
-     "claim": "Dodged: Management declined to give product-wise revenue growth.",
-     "quote": "give color on reasons for slower growth in 1Q",
+     "claim": "Dodged: Explicit refusal to provide product-wise growth numbers.",
+     "quote": "Is it possible for the management to give color on reasons for slower growth in 1Q?",
      "page": 7,
-     "answer_quote": "we don't provide any product-wise revenue and growth at this moment",
+     "answer_quote": "we don't provide any product-wise revenue and growth at this moment.",
      "answer_page": 7
     },
     {
-     "claim": "Dodged: Management declined to give specific targets for the U.S. business.",
-     "quote": "when do you think we start seeing the U.S. business turn the corner",
+     "claim": "Dodged: Refused to give specific growth targets for the U.S. business.",
+     "quote": "when do you think we start seeing the U.S. business turn the corner and actually contribute more meaningfully to growth?",
      "page": 11,
-     "answer_quote": "As you know, we don't give product-wise specific targets",
+     "answer_quote": "As you know, we don't give product-wise specific targets.",
      "answer_page": 12
+    },
+    {
+     "claim": "Dodged: Refused to give a specific timeline for revenue traction.",
+     "quote": "what's the time line for really seeing traction in revenues?",
+     "page": 16,
+     "answer_quote": "In terms of giving you a specific time line, we're not in a position to do that at this time.",
+     "answer_page": 16
     }
    ],
    "promises_kept": "none measurable yet",
@@ -1160,8 +1204,8 @@
    "topics_dropped": [
     "revenue growth FY27 (7-9%)"
    ],
-   "questions_dodged": "2 of 39",
-   "questions_partly_answered": "7 of 39"
+   "questions_dodged": "3 of 42",
+   "questions_partly_answered": "2 of 42"
   }
  },
  "stage": "writing",
@@ -1207,17 +1251,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 6,
-    "cache_hits": 0,
+    "api_calls": 3,
+    "cache_hits": 3,
     "failed": 0,
-    "tokens_in": 12984,
-    "tokens_out": 6178,
+    "tokens_in": 11601,
+    "tokens_out": 6010,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 92.5,
+ "built_in_seconds": 21.8,
  "from_cache": true
 }

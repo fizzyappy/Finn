@@ -1,6 +1,6 @@
 {
  "ticker": "ITC",
- "started_at": "2026-11-14T12:57:38",
+ "started_at": "2026-11-14T22:35:06",
  "states": [
   {
    "state": "no_transcripts",
@@ -513,17 +513,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 3,
-    "cache_hits": 26,
+    "api_calls": 0,
+    "cache_hits": 2,
     "failed": 0,
-    "tokens_in": 2982,
-    "tokens_out": 718,
+    "tokens_in": 0,
+    "tokens_out": 0,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 317.7,
+ "built_in_seconds": 2.3,
  "from_cache": true
 }

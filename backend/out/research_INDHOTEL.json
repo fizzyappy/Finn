@@ -1,6 +1,6 @@
 {
  "ticker": "INDHOTEL",
- "started_at": "2026-11-14T13:15:56",
+ "started_at": "2026-11-14T22:37:04",
  "states": [],
  "sections": {
   "snapshot": {
@@ -1098,24 +1098,12 @@
      {
       "analyst": "Binay Singh",
       "answered_by": [
-       "Puneet Chhatwal"
-      ],
-      "label": "dodged",
-      "reason": "Management ignored the first question and asked for the second.",
-      "question_quote": "incremental growth will be more driven by room rates",
-      "question_page": 6,
-      "answer_quote": "And the second?",
-      "answer_page": 6
-     },
-     {
-      "analyst": "Binay Singh",
-      "answered_by": [
        "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Explained TajSATS lower EBITDA due to geopolitics and non-aviation growth.",
-      "question_quote": "TajSATS Air Catering business, even sequentially, we see the EBITDA lower",
+      "reason": "Management discussed TajSATS EBITDA performance and geopolitical factors.",
+      "question_quote": "TajSATS Air Catering business, even sequentially, we see the EBITDA lower.",
       "question_page": 6,
       "answer_quote": "TajSATS is already improving. The geopolitical crisis has not been very helpful",
       "answer_page": 7
@@ -1125,11 +1113,11 @@
       "answered_by": [
        "Ankur Dalwani"
       ],
-      "label": "partly",
-      "reason": "Discussed MICE trends and upcoming events without stripping out impact.",
-      "question_quote": "is there a way to strip out the impact of MICE",
+      "label": "answered",
+      "reason": "Management explained the impact of MICE and upcoming events.",
+      "question_quote": "is there a way to strip out the impact of MICE in your performance?",
       "question_page": 7,
-      "answer_quote": "We do give the MICE breakup in the pie chart.",
+      "answer_quote": "We do give the MICE breakup in the pie chart. It's gone up",
       "answer_page": 8
      },
      {
@@ -1138,10 +1126,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Confirmed higher wedding nights next year and tailwinds.",
-      "question_quote": "wedding calendar, it actually beyond -- extends beyond Q4",
+      "reason": "Management confirmed higher wedding nights and potential for next year.",
+      "question_quote": "Does that mean you could book like significantly higher revenue from social MICE",
       "question_page": 8,
-      "answer_quote": "the wedding calendar for next year is actually more of 95 wedding nights",
+      "answer_quote": "wedding calendar for next year is actually more of 95 wedding nights",
       "answer_page": 8
      },
      {
@@ -1150,10 +1138,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained demand-supply balance and secular growth in markets.",
+      "reason": "Management addressed demand-supply balance outside top 10 cities.",
       "question_quote": "how do you see ADR growth or RevPAR growth for cities outside top 10",
       "question_page": 8,
-      "answer_quote": "demand supply balance continues to be in favor and that plays to our strength",
+      "answer_quote": "every micro market is going to be different. And it's very hard",
       "answer_page": 8
      },
      {
@@ -1162,10 +1150,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Addressed guidance math, strong seasonality, and high base factors.",
+      "reason": "Management explained the second-half guidance and base effects.",
       "question_quote": "How should one read this considering you're also entering a seasonally strong 2H?",
       "question_page": 9,
-      "answer_quote": "we will have to end up doing much higher than that to arrive at that",
+      "answer_quote": "to arrive at our guidance of 15% to 17%, we will have to end up doing much higher",
       "answer_page": 9
      },
      {
@@ -1174,10 +1162,10 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Stated a separate development guidance will be shared by mid-November.",
+      "reason": "Management stated they will provide updated development guidance soon.",
       "question_quote": "at what point do you expect to close some of these potential opportunities?",
       "question_page": 9,
-      "answer_quote": "we'll come back to all the investors in the next 10 to 15 days",
+      "answer_quote": "we'll come back to all the investors in the next 10 to 15 days, latest by middle of November",
       "answer_page": 9
      },
      {
@@ -1186,7 +1174,7 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Confirmed affirmatively that FY28 will be better than FY27.",
+      "reason": "Management directly answered whether FY28 will be better.",
       "question_quote": "Qualitatively, FY28 can be better or equal to FY27?",
       "question_page": 12,
       "answer_quote": "What do you mean can be, it will be better.",
@@ -1198,11 +1186,11 @@
        "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
-      "label": "partly",
-      "reason": "Addressed management fee guidance and stated they might revise it later.",
+      "label": "answered",
+      "reason": "Management addressed management fee guidance and expectations.",
       "question_quote": "if this high teens guidance, in your opinion, is a little bit conservative?",
       "question_page": 12,
-      "answer_quote": "I would say we will change that guidance also maybe end of next quarter.",
+      "answer_quote": "High teens represents something between 15% and 20%, right? So 17%, 18%, we are doing 25%",
       "answer_page": 12
      },
      {
@@ -1211,10 +1199,10 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Discussed EBITDA margins, marketing value, and outlook for Pierre.",
-      "question_quote": "where should the sustainable EBITDA margin of this business be",
+      "reason": "Management discussed margins and outlook for The Pierre.",
+      "question_quote": "what is your view on where should the sustainable EBITDA margin of this business be",
       "question_page": 13,
-      "answer_quote": "There are -- everything is not going to give you big margins.",
+      "answer_quote": "we expect this year for it to go beyond the positive EBITDA margin that we had last year.",
       "answer_page": 13
      },
      {
@@ -1224,10 +1212,10 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Discussed FTAs, domestic mix, and upcoming global tourism summit.",
-      "question_quote": "Do you see a bit of a change for you guys also in terms of international inbound",
+      "reason": "Management discussed international inbound tourism trends and outlook.",
+      "question_quote": "do you see a bit of a change for you guys also in terms of international inbound",
       "question_page": 13,
-      "answer_quote": "the foreign tourist arrivals has seen a CAGR of 3.9%.",
+      "answer_quote": "foreign tourist arrivals has seen a CAGR of 3.9%. That's not bad. It could improve",
       "answer_page": 14
      },
      {
@@ -1236,8 +1224,8 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Addressed Tier 2/3 demand growth offsetting headline supply numbers.",
-      "question_quote": "How do you see the demand versus supply balance going forward in Tier 2, Tier 3",
+      "reason": "Management addressed Tier 2 and Tier 3 supply growth concerns.",
+      "question_quote": "How do you see the demand versus supply balance going forward in Tier 2, Tier 3 cities?",
       "question_page": 14,
       "answer_quote": "Tier 2, Tier 3 is obviously a combined number for so many cities.",
       "answer_page": 15
@@ -1248,22 +1236,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Confirmed identity of the questioner and invited him to proceed.",
-      "question_quote": "Am I audible?",
+      "reason": "Management explained stand-alone EBITDA margins and lack of one-offs.",
+      "question_quote": "Was there any one-off that was involved? And how should we think about the EBITDA margin going forward?",
       "question_page": 15,
-      "answer_quote": "Yes, Akash. Please go ahead.",
-      "answer_page": 15
-     },
-     {
-      "analyst": "Akash Gupta",
-      "answered_by": [
-       "Ankur Dalwani"
-      ],
-      "label": "answered",
-      "reason": "Confirmed no one-offs and explained operating leverage and margin drivers.",
-      "question_quote": "Was there any one-off that was involved? And how should we think about the EBITDA margin",
-      "question_page": 15,
-      "answer_quote": "there was no one-off in this quarter.",
+      "answer_quote": "there was no one-off in this quarter. In fact, this quarter, we had a normal payroll increase",
       "answer_page": 15
      },
      {
@@ -1272,11 +1248,11 @@
        "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
-      "label": "partly",
-      "reason": "Discussed events generally without quantifying the exact impact of BRICS.",
-      "question_quote": "If we exclude the BRICS Summit impact, what would be the RevPAR",
+      "label": "answered",
+      "reason": "Management discussed the impact of events like the BRICS summit on RevPAR.",
+      "question_quote": "If we exclude the BRICS Summit impact, what would be the RevPAR for the quarter?",
       "question_page": 16,
-      "answer_quote": "events is an ongoing thing for us.",
+      "answer_quote": "even without that, even it would have been a very healthy number. It would have been a comfortable double-digit number",
       "answer_page": 16
      },
      {
@@ -1285,10 +1261,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained branded supply opportunity and why 700 is not an outer cap.",
-      "question_quote": "Once we reach this 700 hotel mark, how much penetration ability do we have",
+      "reason": "Management addressed penetration potential beyond 700 hotels.",
+      "question_quote": "Once we reach this 700 hotel mark, how much penetration ability do we have after that?",
       "question_page": 16,
-      "answer_quote": "if you look at the branded supply in India, it's a miniscule",
+      "answer_quote": "branded supply in India, it's a miniscule of what it really should be",
       "answer_page": 16
      },
      {
@@ -1297,10 +1273,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Attributed depreciation to normal assets, acquisitions, and new openings.",
+      "reason": "Management explained non-stand-alone depreciation drivers.",
       "question_quote": "This incremental depreciation would be relating to which investments?",
       "question_page": 17,
-      "answer_quote": "It is basically pertaining to the normal depreciation",
+      "answer_quote": "It's about 20% growth if you go to the consol depreciation. It is basically pertaining to the normal depreciation",
       "answer_page": 17
      },
      {
@@ -1309,10 +1285,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Agreed that micro-market supply tightness differs from overall city numbers.",
-      "question_quote": "supply growth is even tighter than what the numbers suggest",
+      "reason": "Management agreed with the point on micro markets and megapolises.",
+      "question_quote": "if we look at large localities within the city, then the supply growth is even tighter",
       "question_page": 17,
-      "answer_quote": "micro market-wise, they will be different numbers.",
+      "answer_quote": "clearly, there is a sort of area of influence of a hotel or area of where the business falls",
       "answer_page": 18
      },
      {
@@ -1321,33 +1297,32 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained integration steps for acquired brands and future synergies.",
+      "reason": "Management discussed integration interventions and upcoming plans for acquisitions.",
       "question_quote": "what kind of interventions you have taken after acquisition that has led to the strong growth?",
       "question_page": 18,
-      "answer_quote": "Atmantan is focus on integrated wellness. We have now sort of done our integrations",
+      "answer_quote": "Atmantan is focus on integrated wellness. We have now sort of done our integrations with our marketing sales efforts",
       "answer_page": 18
      },
      {
       "analyst": "Vaibhav Muley",
       "answered_by": [
-       "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Concluded the call with closing remarks and investor contact info.",
-      "question_quote": "This is very helpful. Thank you so much",
+      "reason": "Management addressed Bangalore and Chennai performance recovery expectations.",
+      "question_quote": "from Q3 onwards, can we expect higher contribution from Bangalore and Chennai",
       "question_page": 19,
-      "answer_quote": "Thank you, everyone, for joining the call.",
+      "answer_quote": "Bangalore anyways is a strong market. So should have recovery, but Chennai and Kolkata have been lagging",
       "answer_page": 19
      }
     ],
-    "unverified": 6,
+    "unverified": 7,
     "counts": {
-     "answered": 16,
-     "partly": 3,
-     "dodged": 1
+     "answered": 18,
+     "partly": 0,
+     "dodged": 0
     },
-    "summary": "questions dodged: 1 of 20"
+    "summary": "questions dodged: 0 of 18"
    },
    {
     "call": "2026-07-31",
@@ -1355,53 +1330,16 @@
     "pairs_found": 34,
     "judged": [
      {
-      "analyst": "Prateek Kumar",
-      "answered_by": [
-       "Puneet Chhatwal"
-      ],
-      "label": "answered",
-      "reason": "Addressed shifts in domestic versus international demand.",
-      "question_quote": "are you like seeing noticeable shift in demand trends",
-      "question_page": 6,
-      "answer_quote": "the demand continued to outpace supply in the first quarter",
-      "answer_page": 7
-     },
-     {
-      "analyst": "Prateek Kumar",
-      "answered_by": [
-       "Puneet Chhatwal"
-      ],
-      "label": "answered",
-      "reason": "Confirmed impact from flight disruptions and discussed TajSATS.",
-      "question_quote": "Does that also impact yourself also, right?",
-      "question_page": 7,
-      "answer_quote": "Not in this quarter as much as because of the West Asia crisis",
-      "answer_page": 7
-     },
-     {
       "analyst": "Sumant Kumar",
       "answered_by": [
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained labor code benefit as reason for lower cost.",
+      "reason": "Explained the reason behind lower employee cost increase.",
       "question_quote": "what was the key reason, why the lower increase in employee cost?",
       "question_page": 7,
-      "answer_quote": "There was some reversal we got from labor code benefit",
+      "answer_quote": "There was some reversal we got from labor code benefit, which is there in this quarter",
       "answer_page": 7
-     },
-     {
-      "analyst": "Sumant Kumar",
-      "answered_by": [
-       "Ankur Dalwani",
-       "Puneet Chhatwal"
-      ],
-      "label": "partly",
-      "reason": "Addressed international issues but did not give a full outlook.",
-      "question_quote": "how is the demand scenario panning out and the outlook for that?",
-      "question_page": 7,
-      "answer_quote": "International segment, we were a bit not fortunate in the last 4 months",
-      "answer_page": 8
      },
      {
       "analyst": "Shaleen Kumar",
@@ -1409,8 +1347,8 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Confirmed room revenue growth is stronger than F&B.",
-      "question_quote": "Is it because of the wedding day shift?",
+      "reason": "Confirmed room revenue growth versus F&B revenue.",
+      "question_quote": "I was looking at our room revenue growth of 17%. F&B revenue is lesser. Is it because",
       "question_page": 8,
       "answer_quote": "Yes, room revenue growth is stronger than F&B.",
       "answer_page": 8
@@ -1418,13 +1356,13 @@
      {
       "analyst": "Shaleen Kumar",
       "answered_by": [
-       "Ankur Dalwani"
+       "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Agreed that F&B and MICE recovery will help top line.",
-      "question_quote": "Is that the right way to think, right?",
-      "question_page": 9,
-      "answer_quote": "Yes, that is true, particularly as the dates come in",
+      "reason": "Continued addressing F&B and banqueting trends.",
+      "question_quote": "Sure.",
+      "question_page": 7,
+      "answer_quote": "Because of...",
       "answer_page": 9
      },
      {
@@ -1433,10 +1371,22 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Confirmed strong July trends and confidence in Q2 momentum.",
-      "question_quote": "should we expect RevPAR growth to be even better than 1Q?",
+      "reason": "Confirmed F&B revenue growth will return with dates and MICE.",
+      "question_quote": "Is that the right way to think, right?",
       "question_page": 9,
-      "answer_quote": "July is trending very strong. So I can say that July is trending ahead of where we are on Q1.",
+      "answer_quote": "Yes, that is true, particularly as the dates come in and also the banquet business",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Shaleen Kumar",
+      "answered_by": [
+       "Ankur Dalwani"
+      ],
+      "label": "answered",
+      "reason": "Addressed RevPAR outlook and July trends.",
+      "question_quote": "So should we -- and I think incrementally, RevPAR base is not so strong. So should we expect RevPAR growth",
+      "question_page": 9,
+      "answer_quote": "So July is trending very strong. So I can say that July is trending ahead of where we are on Q1.",
       "answer_page": 9
      },
      {
@@ -1445,8 +1395,8 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Described London performance in July as strong.",
-      "question_quote": "how was London in July, given summers and India, England series and Wimbledon?",
+      "reason": "Addressed London performance in July.",
+      "question_quote": "Sir, how was London in July, given summers and India, England series and Wimbledon?",
       "question_page": 9,
       "answer_quote": "It was strong. London is very strong. It's performing well.",
       "answer_page": 9
@@ -1454,23 +1404,10 @@
      {
       "analyst": "Shaleen Kumar",
       "answered_by": [
-       "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Explained drivers of strong performance in Rajasthan.",
-      "question_quote": "What has helped us in Rajasthan, like such a strong performance?",
-      "question_page": 10,
-      "answer_quote": "Lake Palace, of course, has an exceedingly strong performance.",
-      "answer_page": 10
-     },
-     {
-      "analyst": "Shaleen Kumar",
-      "answered_by": [
-       "Puneet Chhatwal"
-      ],
-      "label": "answered",
-      "reason": "Explained accounting for Frankfurt revenue and lease cost.",
+      "reason": "Addressed Frankfurt accounting and lease costs.",
       "question_quote": "How will you be accounting for Frankfurt, like complete revenue, right?",
       "question_page": 10,
       "answer_quote": "Complete revenue, but Frankfurt, the impact will start coming only in September.",
@@ -1479,13 +1416,38 @@
      {
       "analyst": "Shaleen Kumar",
       "answered_by": [
+       "Ankur Dalwani",
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Explained cash utilization for quick payback and capital subsidies.",
+      "reason": "Discussed Frankfurt performance timeline.",
+      "question_quote": "And the holidays.",
+      "question_page": 10,
+      "answer_quote": "As of September, we should see a very good performance in Frankfurt.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Shaleen Kumar",
+      "answered_by": [
+       "Puneet Chhatwal"
+      ],
+      "label": "answered",
+      "reason": "Responded to comment.",
+      "question_quote": "That's nice.",
+      "question_page": 10,
+      "answer_quote": "I would encourage you to send a note to UBS to start using it",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Shaleen Kumar",
+      "answered_by": [
+       "Puneet Chhatwal"
+      ],
+      "label": "answered",
+      "reason": "Explained cash utilization strategy and capital subsidies.",
       "question_quote": "Anything else you are looking in terms of utilizing that?",
       "question_page": 10,
-      "answer_quote": "We will use the cash. We'll keep always a strategic reserve",
+      "answer_quote": "We will use the cash. We'll keep always a strategic reserve, and we will keep using the cash for projects",
       "answer_page": 10
      },
      {
@@ -1494,10 +1456,10 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Discussed capital-light international strategy and institutional markets.",
+      "reason": "Discussed international expansion model and capital strategy.",
       "question_quote": "can you talk a bit more about these aspirations and more importantly, how the international landscape varies",
       "question_page": 11,
-      "answer_quote": "our strategy, Karan, has not changed. We will work on a capital-light model",
+      "answer_quote": "our strategy, Karan, has not changed. We will work on a capital-light model and not capital heavy.",
       "answer_page": 11
      },
      {
@@ -1506,10 +1468,10 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Emphasized taking growth one step at a time.",
+      "reason": "Responded to expansion pace.",
       "question_quote": "And in the same interview?",
       "question_page": 12,
-      "answer_quote": "One step at a time, Karan. For us, it will be one step at a time",
+      "answer_quote": "One step at a time, Karan. For us, it will be one step at a time as we have to absorb these growth.",
       "answer_page": 12
      },
      {
@@ -1518,11 +1480,24 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Explained that rates are a function of demand and supply around events.",
-      "question_quote": "Can you talk a bit about how are the rates trending in these markets",
+      "reason": "Discussed rate trends around MICE events.",
+      "question_quote": "Can you talk a bit about how are the rates trending in these markets and in your own hotels",
       "question_page": 12,
-      "answer_quote": "rates are a direct function of demand and supply. When you have these events, the rates go up",
+      "answer_quote": "See, the rates are a direct function of demand and supply. When you have these events, the rates go up",
       "answer_page": 12
+     },
+     {
+      "analyst": "Sameet Sinha",
+      "answered_by": [
+       "Ankur Dalwani",
+       "Puneet Chhatwal"
+      ],
+      "label": "answered",
+      "reason": "Addressed consolidated occupancy and M&A integration strategy.",
+      "question_quote": "How about the consol e side, you give the occupancy? I'm not seeing tha t.",
+      "question_page": 13,
+      "answer_quote": "We can give you that. And on your earlier question on M&A, I think it's an ongoing exercise.",
+      "answer_page": 13
      },
      {
       "analyst": "Achal Kumar",
@@ -1530,10 +1505,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained domestic demand drivers and ARR growth in leisure destinations.",
-      "question_quote": "And are you able to increase the rates in the leisure destinations given the demand is strong?",
+      "reason": "Discussed leisure demand drivers and ARR increases.",
+      "question_quote": "So what is -- how -- what pieces playing there? And are you able to increase the rates in the leisure destinations",
       "question_page": 14,
-      "answer_quote": "ARRs are up double digit comfortably and also in some properties in Rajasthan as well.",
+      "answer_quote": "So I think it's obviously the domestic demand has definitely pushed up the leisure occupancies",
       "answer_page": 14
      },
      {
@@ -1542,22 +1517,10 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Addressed foreign tourist trends versus domestic pickup.",
-      "question_quote": "do you think you'll still be able to sort of hold the ARRs",
+      "reason": "Discussed business mix and corporate activity trends.",
+      "question_quote": "Just want to understand is there a mix changing? And what I mean by that is that is it sort of driven by the increased domestic",
       "question_page": 15,
-      "answer_quote": "the foreign nights or the nights sold to non-resident Indians or foreigners was actually down",
-      "answer_page": 15
-     },
-     {
-      "analyst": "Achal Kumar",
-      "answered_by": [
-       "Ankur Dalwani"
-      ],
-      "label": "answered",
-      "reason": "Explained positioning for heads of state visits and staycations.",
-      "question_quote": "is it sort of driven by the increased domestic corporate activities?",
-      "question_page": 15,
-      "answer_quote": "our hotels are very well positioned to take advantage of heads of states visits corporate activity",
+      "answer_quote": "So Achal, the good thing here is that our hotels are very well positioned to take advantage of heads of states visits",
       "answer_page": 16
      },
      {
@@ -1566,11 +1529,23 @@
        "Ankur Dalwani"
       ],
       "label": "answered",
-      "reason": "Explained capacity cuts by second largest player and business mix impact.",
-      "question_quote": "Why was that? Is it like -- is it high fixed cost business?",
+      "reason": "Explained air catering margin trends and cost management.",
+      "question_quote": "air catering segment, where revenue was up 3%, but EBITDA was down 1%. Why was that?",
       "question_page": 16,
-      "answer_quote": "when the second largest player cuts capacity, it has a direct bearing on the flight catering business.",
+      "answer_quote": "So there are 2 trends here playing out. One is that, firstly, you have to understand when the second largest player cuts capacity",
       "answer_page": 16
+     },
+     {
+      "analyst": "Akash Gupta",
+      "answered_by": [
+       "Ankur Dalwani"
+      ],
+      "label": "answered",
+      "reason": "Confirmed audio check.",
+      "question_quote": "Am I audible?",
+      "question_page": 16,
+      "answer_quote": "Yes.",
+      "answer_page": 6
      },
      {
       "analyst": "Akash Gupta",
@@ -1579,8 +1554,8 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Explained diversified business model and domestic strength.",
-      "question_quote": "So is that the only reason for this strong occupancy? And would it be fair to say that you are benefiting",
+      "reason": "Explained occupancy drivers and diversified business model.",
+      "question_quote": "So is that the only reason for this strong occupancy? And would it be fair to say that you are benefiting from the war",
       "question_page": 17,
       "answer_quote": "That's the advantage of having a diversified business model, Prakash.",
       "answer_page": 17
@@ -1592,17 +1567,17 @@
        "Puneet Chhatwal"
       ],
       "label": "answered",
-      "reason": "Confirmed operating leverage and management fee growth drive margin.",
-      "question_quote": "Is that mainly driven by operating leverage?",
+      "reason": "Explained EBITDA margin drivers and operating leverage.",
+      "question_quote": "the EBITDA margin for the stand-alone business. It's roughly 39% versus 35% in the 1Q FY '26. Is that mainly driven by operating leverage?",
       "question_page": 17,
-      "answer_quote": "Yes, it is a combination of operating leverage.",
+      "answer_quote": "Yes, it is a combination of operating leverage. And of course, as you cross a certain level of revenue growth",
       "answer_page": 17
      }
     ],
-    "unverified": 7,
+    "unverified": 10,
     "counts": {
-     "answered": 19,
-     "partly": 1,
+     "answered": 20,
+     "partly": 0,
      "dodged": 0
     },
     "summary": "questions dodged: 0 of 20"
@@ -1721,7 +1696,7 @@
    },
    {
     "id": "F16",
-    "text": "Call of 2026-10-28: questions dodged: 1 of 20",
+    "text": "Call of 2026-10-28: questions dodged: 0 of 18",
     "source": "dodged-question check"
    },
    {
@@ -1733,7 +1708,7 @@
   "bull_bear": {
    "bull": [
     {
-     "text": "The company achieved a 3y revenue CAGR of 18.6% and a profit CAGR of 28.7%.",
+     "text": "The 3y revenue CAGR is 18.6% and profit CAGR is 28.7%.",
      "cites": [
       {
        "id": "F2",
@@ -1743,7 +1718,7 @@
      ]
     },
     {
-     "text": "Latest quarter revenue reached Rs 2,484 cr, representing a 21.7% increase YoY.",
+     "text": "Latest quarter revenue reached Rs 2,484 cr, representing a +21.7% YoY increase.",
      "cites": [
       {
        "id": "F4",
@@ -1765,7 +1740,7 @@
    ],
    "bear": [
     {
-     "text": "The company has a P/E ratio of 63 and a market cap of Rs 126,728 cr.",
+     "text": "The P/E is 63 for a market cap of Rs 126,728 cr.",
      "cites": [
       {
        "id": "F1",
@@ -1775,7 +1750,7 @@
      ]
     },
     {
-     "text": "Management quietly dropped the ebitda margin upon stabilization target of 50%.",
+     "text": "The company quietly dropped the ebitda margin upon stabilization target 50%.",
      "cites": [
       {
        "id": "F12",
@@ -1785,11 +1760,11 @@
      ]
     },
     {
-     "text": "Management quietly dropped the capex FY27 target of 1000 cr.",
+     "text": "The company quietly dropped the volume growth FY27 target 9-10%.",
      "cites": [
       {
-       "id": "F14",
-       "text": "Quietly dropped: capex FY27 target 1000 cr",
+       "id": "F13",
+       "text": "Quietly dropped: volume growth FY27 target 9-10%",
        "source": "promise ledger"
       }
      ]
@@ -1826,13 +1801,6 @@
      "page": 4,
      "url": "https://ir.ihcltata.com/media/n20jfczf/ihcl-global-earnings-call-transcript_q2fy26.pdf",
      "call": "2025-11-30"
-    },
-    {
-     "claim": "Dodged: Management ignored the first question and asked for the second.",
-     "quote": "incremental growth will be more driven by room rates",
-     "page": 6,
-     "answer_quote": "And the second?",
-     "answer_page": 6
     }
    ],
    "promises_kept": "1 of 1",
@@ -1849,8 +1817,8 @@
     "volume growth FY27 (9-10%)",
     "capex FY27 (1000 cr)"
    ],
-   "questions_dodged": "1 of 40",
-   "questions_partly_answered": "4 of 40"
+   "questions_dodged": "0 of 38",
+   "questions_partly_answered": "0 of 38"
   }
  },
  "stage": "writing",
@@ -1896,17 +1864,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 9,
-    "cache_hits": 0,
+    "api_calls": 3,
+    "cache_hits": 6,
     "failed": 0,
-    "tokens_in": 22337,
-    "tokens_out": 7514,
+    "tokens_in": 16562,
+    "tokens_out": 5404,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 139.0,
+ "built_in_seconds": 19.0,
  "from_cache": true
 }

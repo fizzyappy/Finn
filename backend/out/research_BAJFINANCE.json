@@ -1,6 +1,6 @@
 {
  "ticker": "BAJFINANCE",
- "started_at": "2026-11-14T13:02:56",
+ "started_at": "2026-11-14T22:35:08",
  "states": [],
  "sections": {
   "snapshot": {
@@ -1123,8 +1123,8 @@
       "answered_by": [
        "Rajeev Jain"
       ],
-      "label": "dodged",
-      "reason": "Management deferred the first question to focus on the second one.",
+      "label": "partly",
+      "reason": "Management explicitly told the analyst to go ahead with the second question. (no refusal or deflection shown in the quoted answer)",
       "question_quote": "why aren't you all offering short-term gold loans?",
       "question_page": 6,
       "answer_quote": "Go ahead with the second one, Piran?",
@@ -1137,7 +1137,7 @@
        "Sandeep Jain"
       ],
       "label": "answered",
-      "reason": "Management answered both the gold loan short-term scheme issue and the cross-sell question.",
+      "reason": "Management explained the gold loan strategy and answered yes on two-wheelers.",
       "question_quote": "Do you consider them to be part of your cross-sell franchise?",
       "question_page": 7,
       "answer_quote": "On two-wheeler answer is yes Piran. On two-wheeler answer is, yes",
@@ -1150,10 +1150,10 @@
        "Sidhant Dadwal"
       ],
       "label": "answered",
-      "reason": "Management provided the percentage of bullet loans and discussed loan tenures.",
+      "reason": "Management provided the exact percentage of 99% for bullet repayment.",
       "question_quote": "what percentage of the gold loan customers would take bullet loans",
       "question_page": 7,
-      "answer_quote": "today, you're right, the bulk of them 99% of them are today under bullet repayment.",
+      "answer_quote": "today, you're right, the bulk of them 99% of them are today under bullet repayment",
       "answer_page": 7
      },
      {
@@ -1162,10 +1162,10 @@
        "Rajeev Jain"
       ],
       "label": "partly",
-      "reason": "Management addressed MSME asset quality and portfolio origination but skipped consumer debt capacity",
-      "question_quote": "In MSME, you've seen GNPA continue to deteriorate. What book is driving that?",
+      "reason": "Addressed MSME asset quality and general stress, but missed consumer leverage capacity.",
+      "question_quote": "Which areas do you think consumer leverage is still low enough that you could comfortably lend?",
       "question_page": 8,
-      "answer_quote": "on MSME specifically, we're seeing it's nothing as for growth, there's no denominator growth.",
+      "answer_quote": "On your second point, we don't see at this juncture any blind spots.",
       "answer_page": 8
      },
      {
@@ -1175,8 +1175,8 @@
        "Sandeep Jain"
       ],
       "label": "answered",
-      "reason": "Management explained the drivers behind the 10 basis point GNPA increase.",
-      "question_quote": "GNPA, the 10 basis point increase, it's in a number of areas that adding up to it.",
+      "reason": "Management explained that Stage 2 and 3 improved and GNPA movement is seasonal.",
+      "question_quote": "the 10 basis point increase, it's in a number of areas that adding up to it.",
       "question_page": 9,
       "answer_quote": "The movement in the GNPA, it goes up in quarter two, mainly on account of number of days being higher",
       "answer_page": 9
@@ -1187,8 +1187,8 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed that the overlay is over and above the ECL model.",
-      "question_quote": "what are the reasons you see this overlay? And how does it relate to earlier overlays",
+      "reason": "Management clarified that the overlay is over and above the ECL model.",
+      "question_quote": "how does it relate to earlier overlays or a permanent change in the ECL models",
       "question_page": 10,
       "answer_quote": "This is over and above ECL model Kuntal. Point number one. That's why it's overlay.",
       "answer_page": 10
@@ -1200,23 +1200,11 @@
        "Sandeep Jain"
       ],
       "label": "answered",
-      "reason": "Management explained that overlays are used to build resilience and handle business cyclicality.",
+      "reason": "Management explained the purpose of overlays is building resilience and business cycle buffer.",
       "question_quote": "is it a policy to overlay good times to releasing bad time?",
       "question_page": 10,
-      "answer_quote": "The fundamental reason for creating overlay, let me articulate it not because we see stress building.",
+      "answer_quote": "The fundamental reason for creating overlay, let me articulate it not because we see stress building. I want us to remember always that this is bullet proofing of the business.",
       "answer_page": 10
-     },
-     {
-      "analyst": "Kuntal Shah",
-      "answered_by": [
-       "Sandeep Jain"
-      ],
-      "label": "answered",
-      "reason": "Management quantified the macro provisions and management overlay stock.",
-      "question_quote": "can you just quantify what is the current stock as of today of macro and management overlay?",
-      "question_page": 11,
-      "answer_quote": "The overall macro provision stands at about INR226 crores.",
-      "answer_page": 11
      },
      {
       "analyst": "Kunal Shah",
@@ -1224,7 +1212,7 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management gave specific guidance for growth and discussed net interest margin outlook.",
+      "reason": "Management provided growth guidance of 26% to 27% and outlook on NIMs.",
       "question_quote": "What would be the growth guidance here onwards for near and medium term?",
       "question_page": 12,
       "answer_quote": "probably between 26%, 27% growth we should deliver now on a full year basis.",
@@ -1240,7 +1228,7 @@
       "reason": "Management confirmed that NIM moderation would be marginal.",
       "question_quote": "moderation in NIM would be only marginal. That's what we are suggesting?",
       "question_page": 12,
-      "answer_quote": "Yes, at this point in time, yes. Answer is yes.",
+      "answer_quote": "Yes, at this point in time, yes. Answer is yes. You've seen, I think 10 - 12 basis points compression",
       "answer_page": 12
      },
      {
@@ -1249,11 +1237,11 @@
        "Sandeep Jain"
       ],
       "label": "answered",
-      "reason": "Management provided further color on margin headwinds and cost of fund increases.",
+      "reason": "Management discussed cost of funds environment and the expected additional compression.",
       "question_quote": "From a Q2 level, not much of an impact on margins?",
       "question_page": 12,
-      "answer_quote": "I'm not saying that. That's what you are saying. I think we continue to remain in cost of fund increased environment.",
-      "answer_page": 12
+      "answer_quote": "I would break in at this point in time, a marginal additional compression versus what we had given",
+      "answer_page": 13
      },
      {
       "analyst": "Viral",
@@ -1261,7 +1249,7 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management addressed fee income growth sustainability and regulatory headwinds.",
+      "reason": "Management discussed fee income growth and sustainability of 15% to 18%.",
       "question_quote": "How do you see this, say, from FY28 onwards, if the current insurance norms remain where it is?",
       "question_page": 13,
       "answer_quote": "we remain comfortable in the longer term, we should be able to sustain a 15% to 18% fee income growth",
@@ -1273,7 +1261,7 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management answered where credit costs are expected to land for the rest of the year.",
+      "reason": "Management stated that the rest of the year credit costs will be in the same corridor.",
       "question_quote": "How do we kind of foresee the rest of this year?",
       "question_page": 14,
       "answer_quote": "Rest of the year, we should look at it in the same corridor, is what I would just say to you.",
@@ -1285,8 +1273,8 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management addressed the RBI revolver loan draft regulations and potential impacts.",
-      "question_quote": "And on RBI revolver loan, I mean any update? And what would be I mean, based on that amendment",
+      "reason": "Management addressed the RBI revolver loan draft and potential impacts.",
+      "question_quote": "And on RBI revolver loan, I mean any update? And what would be I mean, based on that amendment described, what would be an exposure",
       "question_page": 16,
       "answer_quote": "It's a draft, as you're aware, comments have been submitted by everybody. We hope that RBI would find a middle path",
       "answer_page": 16
@@ -1296,8 +1284,8 @@
       "answered_by": [
        "Rajeev Jain"
       ],
-      "label": "dodged",
-      "reason": "Management asked the analyst to repeat the disbursement number and did not directly address it yet.",
+      "label": "answered",
+      "reason": "Management asked to repeat the specific number and proceeded to answer.",
       "question_quote": "What are you seeing if you've looked at this number.",
       "question_page": 17,
       "answer_quote": "Sorry, repeat the number, Abhishek.",
@@ -1309,10 +1297,10 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management explained why disbursement metrics are secondary and discussed delay metrics and stage 2 ",
+      "reason": "Management explained why tonnage is the right metric and discussed delay metrics.",
       "question_quote": "Are you seeing a progression of your customers into, say, GS2 or even GS3",
       "question_page": 17,
-      "answer_quote": "So, Abhishek, the right metric is not disbursal in this business. The average book itself is 6, 7 months.",
+      "answer_quote": "Now coming to delay metrics, we don't see any. We are in that sense; this stage 2 movement is a little bit of learning",
       "answer_page": 17
      },
      {
@@ -1321,8 +1309,8 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management answered regarding customer profile, ticket sizes, and LTV levels.",
-      "question_quote": "what kind of tonnage or what kind of customers getting the loan? Are they already leveraged somewhere else",
+      "reason": "Management stated average ticket size and confirmed LTV holding.",
+      "question_quote": "Are they already leveraged somewhere else or so that you don't see any...",
       "question_page": 18,
       "answer_quote": "No, we are not seeing any movement in that metric, the average ticket has remained between INR2.4 lakhs to INR2.5 lakhs.",
       "answer_page": 18
@@ -1333,10 +1321,10 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management discussed how they plan to deliver long-term guidance despite various revenue headwinds.",
+      "reason": "Management discussed long-term guidance and agility in handling ROA components.",
       "question_quote": "So which part of the ROA do you have more control on?",
       "question_page": 18,
-      "answer_quote": "we have to deliver the long-term 20% to 25% profit growth to investors in 19% to 21% return on equity.",
+      "answer_quote": "we have to deliver the long-term 20% to 25% profit growth to investors in 19% to 21% return on equity. We are reasonably agile as a firm",
       "answer_page": 19
      },
      {
@@ -1345,10 +1333,10 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management explained how they are monitoring rural portfolios and drought-impacted districts.",
-      "question_quote": "How are we thinking about disbursals in these segments? Probably geographies. Any color on that would be useful.",
+      "reason": "Management explained how they are tracking districts and pruning business due to drought.",
+      "question_quote": "Any color around what is our thought process going into the second half for our customers from the deeper pockets",
       "question_page": 19,
-      "answer_quote": "We've been watching the LNO movement. We've been tracking all the 720 districts. We are aware of the districts across the country where drought is declared.",
+      "answer_quote": "It's a fair question. We've been watching the LNO movement. We've been tracking all the 720 districts. We are aware of the districts across the country where drought is declared.",
       "answer_page": 19
      },
      {
@@ -1357,32 +1345,21 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed that loan growth guidance accounts for the mentioned calibrations.",
-      "question_quote": "26%, 27% loan growth guidance is inclusive of all these calibrations that you have already made",
+      "reason": "Management confirmed that loan growth guidance includes calibrations.",
+      "question_quote": "26%, 27% loan growth guidance is inclusive of all these calibrations that you have already made and are planning to make?",
       "question_page": 20,
       "answer_quote": "Yes.",
       "answer_page": 6
-     },
-     {
-      "analyst": "Shreya Shivani",
-      "answered_by": [
-       "Rajeev Jain"
-      ],
-      "label": "answered",
-      "reason": "Management acknowledged the closing remark politely.",
-      "question_quote": "Thank you and all the best.",
-      "question_page": 20,
-      "answer_quote": "Thank you.",
-      "answer_page": 8
      }
     ],
-    "unverified": 3,
+    "unverified": 4,
+    "downgraded": 1,
     "counts": {
-     "answered": 18,
-     "partly": 1,
-     "dodged": 2
+     "answered": 17,
+     "partly": 2,
+     "dodged": 0
     },
-    "summary": "questions dodged: 2 of 21"
+    "summary": "questions dodged: 0 of 19"
    },
    {
     "call": "2026-08-31",
@@ -1394,11 +1371,23 @@
       "answered_by": [
        "Rajeev Jain"
       ],
-      "label": "partly",
-      "reason": "Management declined to raise guidance now, advising to wait another quarter.",
+      "label": "answered",
+      "reason": "Management explained why guidance was maintained and asked to wait for another quarter.",
       "question_quote": "don't you think this 22% to 24% corridor that we have given for AUM growth can maybe see some upside",
       "question_page": 7,
-      "answer_quote": "wait for one more quarter, and we sustain it, then we know. We are in a way to revise.",
+      "answer_quote": "As they say, one solo doesn't make a summer, we'll wait for one more quarter.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Abhijit Tibrewal",
+      "answered_by": [
+       "Rajeev Jain"
+      ],
+      "label": "answered",
+      "reason": "Management explained the rationale behind macro provisions and balance sheet resilience.",
+      "question_quote": "is the thought process that given that all cylinders are firing, credit cycle is good, utilize it for strengthening the balance sheet",
+      "question_page": 8,
+      "answer_quote": "As I've said, that we will continue to work towards strengthening balance sheet resilience.",
       "answer_page": 8
      },
      {
@@ -1407,20 +1396,8 @@
        "Rajeev Jain"
       ],
       "label": "partly",
-      "reason": "Explained overlay provisioning strategy as balance sheet resilience, advising to wait for guidance.",
-      "question_quote": "is the thought process that given that all cylinders are firing, credit cycle is good, utilize it for strengthening the balance sheet",
-      "question_page": 8,
-      "answer_quote": "we will continue to work towards strengthening balance sheet resilience. That's the word.",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Abhijit Tibrewal",
-      "answered_by": [
-       "Rajeev Jain"
-      ],
-      "label": "dodged",
-      "reason": "Management could not hear the question and failed to answer it.",
-      "question_quote": "You have your this term till, I think, March '28, if my memory serves me right. So, I mean, while we keep",
+      "reason": "Management stated they lost the audio and did not address the question. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "while we keep",
       "question_page": 9,
       "answer_quote": "I lost you Abhijit.",
       "answer_page": 9
@@ -1431,10 +1408,10 @@
        "Rajeev Jain"
       ],
       "label": "partly",
-      "reason": "Ignored macro industry trends and yield questions, focusing instead on micro risk choices.",
+      "reason": "Management discussed micro approach and risk thresholds but skipped the share of specific items.",
       "question_quote": "Do you see this kind of a structural improvement or this is again a cyclical kind of a mean reversion will happen?",
       "question_page": 9,
-      "answer_quote": "So look, I can't speak about the macro. One, I'm not a macro person. I'm a micro person.",
+      "answer_quote": "One, I'm not a macro person. I'm a micro person.",
       "answer_page": 9
      },
      {
@@ -1443,11 +1420,11 @@
        "Anurag Chottani",
        "Rajeev Jain"
       ],
-      "label": "partly",
-      "reason": "Addressed cost of funds trend and token costs, but omitted specific details on open source/SLM usage",
-      "question_quote": "How much of open source or SLM models are you using in your FinAI bit?",
+      "label": "answered",
+      "reason": "Management addressed cost of funds trajectory and AI token cost management strategies.",
+      "question_quote": "how will you make sure that the opex on the AI bit is under control",
       "question_page": 11,
-      "answer_quote": "So I'll let Anurag make a point. We built a so-called calculator, which ensures that we know what we're spending on",
+      "answer_quote": "We built a so-called calculator, which ensures that we know what we're spending on",
       "answer_page": 12
      },
      {
@@ -1456,10 +1433,10 @@
        "Anurag Chottani"
       ],
       "label": "answered",
-      "reason": "Confirmed the use of internal RAG infrastructure and open source models.",
-      "question_quote": "you have in-house SLMs, right, which you would have your engineers have created or not?",
+      "reason": "Management confirmed the use of internal RAG infrastructure and open source models.",
+      "question_quote": "You have in-house SLMs, right, which you would have your engineers have created or not?",
       "question_page": 13,
-      "answer_quote": "Yes. That's what I mentioned, the internal RAG infrastructure and the building on the open weights, open source models.",
+      "answer_quote": "Yes. That's what I mentioned, the internal RAG infrastructure and the building on the open weights",
       "answer_page": 13
      },
      {
@@ -1467,11 +1444,23 @@
       "answered_by": [
        "Rajeev Jain"
       ],
-      "label": "partly",
-      "reason": "Deferred margin and growth guidance revisions to next quarter while discussing capital raising.",
-      "question_quote": "are we more comfortable with where the margins stay",
+      "label": "answered",
+      "reason": "Management addressed guidance timing, capital raising plans, and profit growth expectations.",
+      "question_quote": "would it be like still towards the longer-term guidance of '23-'25 or you are more comfortable that we can even cross that",
       "question_page": 13,
       "answer_quote": "Kunal, as I said to Abhijit, just give us one more quarter. Second quarter goes well, we'll revise our guidance",
+      "answer_page": 14
+     },
+     {
+      "analyst": "Kunal Shah",
+      "answered_by": [
+       "Rajeev Jain"
+      ],
+      "label": "answered",
+      "reason": "Management provided the expected margin moderation range of 10-15 basis points.",
+      "question_quote": "And margins?",
+      "question_page": 14,
+      "answer_quote": "that moderation 10 - 15 basis points is what we foresee at this juncture",
       "answer_page": 14
      },
      {
@@ -1480,8 +1469,8 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Playfully corrected the analyst's observation about his previous quarter's confidence.",
-      "question_quote": "You sound much more confident this quarter",
+      "reason": "Management acknowledged the comment briefly and playfully.",
+      "question_quote": "You sound much more confident this quarter than at least I've heard in the last 10 - 15 quarters",
       "question_page": 15,
       "answer_quote": "Last quarter also I was confident.",
       "answer_page": 15
@@ -1492,8 +1481,8 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Provided bureau leverage statistics and year-on-year trends for unsecured businesses.",
-      "question_quote": "where does that stand? That's number one.",
+      "reason": "Management shared bureau statistics regarding leverage and discussed gold loan strategy.",
+      "question_quote": "where does that stand? That's number one. Number two, just qualitatively and quantitatively, both, can you just talk about the gold loan business",
       "question_page": 15,
       "answer_quote": "at least we're seeing stabilization. So leverage levels overall not going up at a 2% level.",
       "answer_page": 15
@@ -1504,7 +1493,7 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Clarified the previous metric and continued the explanation on gold loan strategy.",
+      "reason": "Management clarified the consumer debt to GDP figures and bureau data trends.",
       "question_quote": "What is 2%, I didn't understand that?",
       "question_page": 15,
       "answer_quote": "41%, consumer debt to GDP, what we track, the number as a consumer number was growing by 2%",
@@ -1516,10 +1505,22 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Provided the specific percentage breakdown between ETB and NTB customers on the app.",
+      "reason": "Management confirmed that open market customers can come through the digital platform.",
+      "question_quote": "like an open market customer can also come through the digital platform.",
+      "question_page": 16,
+      "answer_quote": "Actually, this is a question that is asked that how many are ETB and how many are NTB on the app.",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Piran Engineer",
+      "answered_by": [
+       "Rajeev Jain"
+      ],
+      "label": "answered",
+      "reason": "Management provided the exact ETB and NTB mix ratio for the app.",
       "question_quote": "Overall would be useful.",
       "question_page": 17,
-      "answer_quote": "my sense is ETB, NTB of app is 70% is ETB and 30% is NTB",
+      "answer_quote": "Out of 86 million customers, my sense is ETB, NTB of app is 70% is ETB and 30% is NTB",
       "answer_page": 17
      },
      {
@@ -1529,20 +1530,34 @@
        "Rajeev Jain"
       ],
       "label": "answered",
-      "reason": "Addressed competitive intensity, digital transformation impacts, and credit cost dynamics.",
+      "reason": "Management confirmed penetration trends and detailed their branch expansion strategy.",
+      "question_quote": "So, primarily, it's just a penetration thing, smartphones, which -- so you're sort of bucking the trend in the overall industry just because you're improving penetration?",
+      "question_page": 18,
+      "answer_quote": "Yes, that's right. The affordability penetration, and we continue to mine deeper and deeper into our customer franchise",
+      "answer_page": 18
+     },
+     {
+      "analyst": "Abhishek Muraka",
+      "answered_by": [
+       "Manish Jain",
+       "Rajeev Jain"
+      ],
+      "label": "answered",
+      "reason": "Management discussed competitive intensity across business lines and franchise value metrics.",
       "question_quote": "can you comment on this PL competitive intensity in personal loans and also in MSME, when do you see disbursements growth picking up?",
       "question_page": 19,
-      "answer_quote": "Competitive intensity is for every line of business and that's now for three, four years. There's nothing new.",
+      "answer_quote": "Competitive intensity is for every line of business and that's now for three, four years.",
       "answer_page": 19
      }
     ],
-    "unverified": 6,
+    "unverified": 3,
+    "downgraded": 1,
     "counts": {
-     "answered": 6,
-     "partly": 5,
-     "dodged": 1
+     "answered": 13,
+     "partly": 2,
+     "dodged": 0
     },
-    "summary": "questions dodged: 1 of 12"
+    "summary": "questions dodged: 0 of 15"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1615,17 +1630,42 @@
    },
    {
     "id": "F10",
-    "text": "Call of 2026-10-31: questions dodged: 2 of 21",
+    "text": "Call of 2026-10-31: questions dodged: 0 of 19",
     "source": "dodged-question check"
    },
    {
     "id": "F11",
-    "text": "Call of 2026-08-31: questions dodged: 1 of 12",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 15",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters, and the latest quarter revenue was Rs 24,546 cr with a 22.8% YoY increase.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 24,546 cr, +22.8% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F7",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The latest quarter profit was Rs 6,367 cr, reflecting a growth of 28.7% YoY.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 6,367 cr, +28.7% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
     {
      "text": "The 3y revenue CAGR is 25.6% and profit CAGR is 18.9%.",
      "cites": [
@@ -1635,56 +1675,36 @@
        "source": "annual P&L"
       }
      ]
-    },
-    {
-     "text": "The latest quarter revenue reached Rs 24,546 cr with +22.8% YoY growth.",
-     "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 24,546 cr, +22.8% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter profit was Rs 6,367 cr, reflecting +28.7% YoY growth.",
-     "cites": [
-      {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 6,367 cr, +28.7% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The pat growth FY28 target 22-24% was quietly dropped.",
+     "text": "The P/E ratio is 31.8 with a market cap of Rs 695,439 cr.",
      "cites": [
       {
-       "id": "F9",
-       "text": "Quietly dropped: pat growth FY28 target 22-24%",
-       "source": "promise ledger"
+       "id": "F1",
+       "text": "P/E 31.8, market cap Rs 695,439 cr",
+       "source": "screener ratios"
       }
      ]
     },
     {
-     "text": "During the call of 2026-10-31, 2 of 21 questions were dodged.",
+     "text": "The 5y revenue CAGR is 25.2% and profit CAGR is 34.3%.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Call of 2026-10-31: questions dodged: 2 of 21",
-       "source": "dodged-question check"
+       "id": "F3",
+       "text": "5y revenue CAGR 25.2%, profit CAGR 34.3%",
+       "source": "annual P&L"
       }
      ]
     },
     {
-     "text": "During the call of 2026-08-31, 1 of 12 questions were dodged.",
+     "text": "The gross NPA is 1.06% and the net NPA is 0.42%.",
      "cites": [
       {
-       "id": "F11",
-       "text": "Call of 2026-08-31: questions dodged: 1 of 12",
-       "source": "dodged-question check"
+       "id": "F6",
+       "text": "Gross NPA 1.06%, net NPA 0.42%",
+       "source": "quarterly results"
       }
      ]
     }
@@ -1699,27 +1719,6 @@
      "page": 15,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf",
      "call": "2026-05-31"
-    },
-    {
-     "claim": "Dodged: Management deferred the first question to focus on the second one.",
-     "quote": "why aren't you all offering short-term gold loans?",
-     "page": 6,
-     "answer_quote": "Go ahead with the second one, Piran?",
-     "answer_page": 6
-    },
-    {
-     "claim": "Dodged: Management asked the analyst to repeat the disbursement number and did not directly address it yet.",
-     "quote": "What are you seeing if you've looked at this number.",
-     "page": 17,
-     "answer_quote": "Sorry, repeat the number, Abhishek.",
-     "answer_page": 17
-    },
-    {
-     "claim": "Dodged: Management could not hear the question and failed to answer it.",
-     "quote": "You have your this term till, I think, March '28, if my memory serves me right. So, I mean, while we keep",
-     "page": 9,
-     "answer_quote": "I lost you Abhijit.",
-     "answer_page": 9
     }
    ],
    "promises_kept": "none measurable yet",
@@ -1734,8 +1733,8 @@
    "topics_dropped": [
     "pat growth FY28 (22-24%)"
    ],
-   "questions_dodged": "3 of 33",
-   "questions_partly_answered": "6 of 33"
+   "questions_dodged": "0 of 34",
+   "questions_partly_answered": "4 of 34"
   }
  },
  "stage": "writing",
@@ -1781,17 +1780,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 9,
-    "cache_hits": 0,
-    "failed": 0,
-    "tokens_in": 19259,
-    "tokens_out": 7404,
+    "api_calls": 4,
+    "cache_hits": 6,
+    "failed": 1,
+    "tokens_in": 13591,
+    "tokens_out": 4379,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 193.0,
+ "built_in_seconds": 26.4,
  "from_cache": true
 }

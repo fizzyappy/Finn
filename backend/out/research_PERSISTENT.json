@@ -1,6 +1,6 @@
 {
  "ticker": "PERSISTENT",
- "started_at": "2026-11-14T13:13:22",
+ "started_at": "2026-11-14T22:36:47",
  "states": [
   {
    "state": "too_early",
@@ -617,11 +617,11 @@
       "answered_by": [
        "Sandeep Kalra"
       ],
-      "label": "partly",
-      "reason": "Addressed BFSI outlook and AI, but declined specific guidance.",
-      "question_quote": "what is the outlook for this sector",
+      "label": "answered",
+      "reason": "Management explained the BFSI traction and AI adoption drivers.",
+      "question_quote": "In the BFSI segment what is the kind of basically traction that we are seeing",
       "question_page": 15,
-      "answer_quote": "our pipeline is healthy, we don't give forward looking guidance but we are relatively confident",
+      "answer_quote": "vendor consolidation in pockets is still a big thing. Second is the modernization side of it",
       "answer_page": 15
      },
      {
@@ -630,10 +630,22 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Explained how they help optimize token costs using purpose-built models.",
-      "question_quote": "optimize the token cost for them by maybe building an application layer",
+      "reason": "Management addressed how token costs relate to using IT service vendors.",
+      "question_quote": "Is a high token cost also becoming a factor for these companies to approach more and more IT services vendors",
       "question_page": 16,
-      "answer_quote": "we have created pathways, only a few things that need to go to the most expensive models go there",
+      "answer_quote": "that is the place where they are bringing in people like us to help them evolve what technology",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Vibhor Singhal",
+      "answered_by": [
+       "Vinit Teredesai"
+      ],
+      "label": "answered",
+      "reason": "Vinit confirmed the assumption about the revenue impact from the large deal.",
+      "question_quote": "is it fair to assume that for the next two to three quarters also that impact will be in the base",
+      "question_page": 16,
+      "answer_quote": "Yeah, that's right. As I mentioned in my comments also, that as we optimize some of the cost",
       "answer_page": 16
      },
      {
@@ -641,23 +653,11 @@
       "answered_by": [
        "Sandeep Kalra"
       ],
-      "label": "partly",
-      "reason": "Addressed technology and commercial differences, but not the revenue cap.",
-      "question_quote": "is there a cap on the amount of revenue you can have in a deal like this",
-      "question_page": 17,
-      "answer_quote": "From a technology perspective the landscape has changed significantly over the years and it continues to change",
-      "answer_page": 17
-     },
-     {
-      "analyst": "Nitin Padmanabhan",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
       "label": "answered",
-      "reason": "Clarified that the deal was indeed included in the TCV data.",
-      "question_quote": "is that a right interpretation or am I missing out something",
+      "reason": "Sandeep confirmed the previous deal was included in the reported financials.",
+      "question_quote": "my understanding was last time we didn't include the $ 650 million deal in the deal win",
       "question_page": 18,
-      "answer_quote": "I'm pretty sure if you go back and look at our financials, the deal win was included",
+      "answer_quote": "No. So, I'm pretty sure if you go back and look at our financials, the deal win was included",
       "answer_page": 18
      },
      {
@@ -666,8 +666,8 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Acknowledged the user and invited the question.",
-      "question_quote": "Am I audible",
+      "reason": "Management acknowledged the analyst and invited the question.",
+      "question_quote": "Hi, good evening. Am I audible?",
       "question_page": 18,
       "answer_quote": "Yes, please.",
       "answer_page": 18
@@ -678,10 +678,10 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Confirmed it is a combination of large deal ramp up and AI tools.",
-      "question_quote": "is that related to the large deal ramp up and hence could be lumpy",
+      "reason": "Explained that software license increase is a combination of deal ramp up and AI tools.",
+      "question_quote": "is that related to the large deal ramp up and hence could be lumpy, could come down",
       "question_page": 18,
-      "answer_quote": "It's a combination of both Rakesh. So, it's a software licenses, as we have said",
+      "answer_quote": "So, it's a combination of both Rakesh. So, it's a software licenses, as we have said",
       "answer_page": 18
      },
      {
@@ -690,10 +690,10 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Explained that software licenses may grow with deal wins and enhance margins.",
-      "question_quote": "directionally, we should assume this to be steady at these levels",
+      "reason": "Management explained the directional outlook for software licenses and reinvention practice.",
+      "question_quote": "So directionally, we should assume this to be steady at these levels?",
       "question_page": 18,
-      "answer_quote": "if we have more deal wins where we do these kind of software reinvention, as a practice grows bigger",
+      "answer_quote": "Yeah and if we have more deal wins where we do these kind of software reinvention",
       "answer_page": 18
      },
      {
@@ -701,11 +701,11 @@
       "answered_by": [
        "Sandeep Kalra"
       ],
-      "label": "partly",
-      "reason": "Provided aspirational margin range but declined forward guidance.",
-      "question_quote": "And any year end margin target you would want to share",
+      "label": "answered",
+      "reason": "Sandeep provided the 16-17% margin bracket as an aspirational goal.",
+      "question_quote": "And any year end margin target you would want to share?",
       "question_page": 19,
-      "answer_quote": "we want to be in the 16 to 17 % range, that is our aspiration. That will be our endeavour",
+      "answer_quote": "we have said we want to be in the 16 to 17 % range, that is our aspiration.",
       "answer_page": 19
      },
      {
@@ -714,9 +714,9 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Acknowledged the user and invited the question.",
-      "question_quote": "Am I audible",
-      "question_page": 18,
+      "reason": "Management acknowledged the analyst to speak.",
+      "question_quote": "Yeah, hi. Am I audible?",
+      "question_page": 19,
       "answer_quote": "Yes, please.",
       "answer_page": 18
      },
@@ -726,10 +726,10 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Explained that deal numbers included the large deal and cited slipped deals.",
-      "question_quote": "whether this was related to a slower decision making in this quarter",
+      "reason": "Addressed deal win softness and stated some deals slipped into the next quarter.",
+      "question_quote": "the deal wins, they appear relatively soft. So, I'm just trying to understand",
       "question_page": 19,
-      "answer_quote": "The slowdown of decision making in the last few weeks was pretty apparent.",
+      "answer_quote": "We had a few deals that slipped over into this quarter, no excuses, we could have done better.",
       "answer_page": 19
      },
      {
@@ -738,10 +738,10 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Outlined regulatory approval timeline, merger steps, and cooperation plans.",
-      "question_quote": "what can be some of the quick wins that you internally would target",
+      "reason": "Explained regulatory approval timelines and merger integration plans for Nagarro.",
+      "question_quote": "what can be some of the quick wins that you internally would target, and we should target",
       "question_page": 20,
-      "answer_quote": "we are awaiting RBI approvals and FDI approvals in Austria and Spain",
+      "answer_quote": "So, let me first talk about where we are in the deal because some of this is linked to that.",
       "answer_page": 20
      },
      {
@@ -750,8 +750,8 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Acknowledged the user and invited the question.",
-      "question_quote": "Can you hear me",
+      "reason": "Management acknowledged the caller.",
+      "question_quote": "Can you hear me?",
       "question_page": 20,
       "answer_quote": "Yes, please.",
       "answer_page": 18
@@ -763,10 +763,10 @@
        "Vinit Teredesai"
       ],
       "label": "partly",
-      "reason": "Addressed intangibles and margins, but omitted debt cost and duration.",
-      "question_quote": "Any sense in terms of what is the cost of that debt and what is the duration",
+      "reason": "Addressed intangibles and margins but did not provide precise debt duration details.",
+      "question_quote": "So, what is the driver for that? Was there any consideration payable in the deal?",
       "question_page": 21,
-      "answer_quote": "Vinit, let me answer the intangibles and the margins. You take over the Nagarro question.",
+      "answer_quote": "if you look at it, as we clearly articulated earlier in this call as well",
       "answer_page": 21
      },
      {
@@ -775,8 +775,8 @@
        "Vinit Teredesai"
       ],
       "label": "answered",
-      "reason": "Provided estimated net cost range for the debt to be raised.",
-      "question_quote": "what would be our cost of debt for the acquisition",
+      "reason": "Vinit answered the question regarding the estimated cost of debt.",
+      "question_quote": "what would be our cost of debt for the acquisition, not the Nagarro?",
       "question_page": 22,
       "answer_quote": "you can right now assume between 5 to 6% on a net basis.",
       "answer_page": 22
@@ -787,10 +787,23 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Asked for clarification on the specific acquisition cost mentioned.",
-      "question_quote": "broad breakup of the 50 million, like the 5 million, 50 million acquisition costs",
+      "reason": "Sandeep asked for clarification on the acquisition cost mentioned.",
+      "question_quote": "can you help me understand the broad breakup of the 50 million",
       "question_page": 22,
       "answer_quote": "So, which 50 million acquisition cost are you talking about?",
+      "answer_page": 22
+     },
+     {
+      "analyst": "Suraj Malu",
+      "answered_by": [
+       "Sandeep Kalra",
+       "Vinit Teredesai"
+      ],
+      "label": "answered",
+      "reason": "Vinit gave the exact breakdown of the acquisition cost components.",
+      "question_quote": "Like the one-off acquisition cost would be involved, right, like 185 crore…..",
+      "question_page": 22,
+      "answer_quote": "this 50 million is basically a combination of multiple. It is a combination of the investment banking fees",
       "answer_page": 22
      },
      {
@@ -799,8 +812,8 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Recommended TTM comparison over single-quarter TCV comparison.",
-      "question_quote": "How should one look at that",
+      "reason": "Sandeep explained how to properly view TCV growth on a TTM basis instead of quarter-over-quarter.",
+      "question_quote": "How should one look at that?",
       "question_page": 23,
       "answer_quote": "you should look at it in the context that last quarter, we had a TCV of $1.14 billion.",
       "answer_page": 23
@@ -811,10 +824,46 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Affirmed outlook and stated healthcare growth should resume.",
-      "question_quote": "just wanted to have a certain colour on the outlook",
+      "reason": "Sandeep answered that there are no contingencies and it represents an upside.",
+      "question_quote": "just wanted to understand if there is any contingency upon probably if the use of the products falls",
+      "question_page": 23,
+      "answer_quote": "I would say it is an upside, because if you look at it, any of the software vendors today",
+      "answer_page": 23
+     },
+     {
+      "analyst": "Prateek Maheshwari",
+      "answered_by": [
+       "Sandeep Kalra"
+      ],
+      "label": "answered",
+      "reason": "Sandeep provided additional context that the announced number is on the lower end.",
+      "question_quote": "Okay.",
       "question_page": 24,
-      "answer_quote": "healthcare should start seeing growth. If you look at it, if I look at the Financial Year ‘25",
+      "answer_quote": "This is what we have announced is on the lower end of the deal.",
+      "answer_page": 24
+     },
+     {
+      "analyst": "Prateek Maheshwari",
+      "answered_by": [
+       "Sandeep Kalra"
+      ],
+      "label": "answered",
+      "reason": "Management added information about potential upsides.",
+      "question_quote": "Right.",
+      "question_page": 16,
+      "answer_quote": "There could be potential upsides.",
+      "answer_page": 24
+     },
+     {
+      "analyst": "Prateek Maheshwari",
+      "answered_by": [
+       "Sandeep Kalra"
+      ],
+      "label": "answered",
+      "reason": "Sandeep reaffirmed his earlier comments on the healthcare outlook and growth recovery.",
+      "question_quote": "just wanted to have a certain colour on the outlook.",
+      "question_page": 24,
+      "answer_quote": "I stand by the comments I made earlier, healthcare should start seeing growth.",
       "answer_page": 24
      },
      {
@@ -823,11 +872,11 @@
        "Sandeep Kalra",
        "Vinit Teredesai"
       ],
-      "label": "partly",
-      "reason": "Answered the Estonia deal part but only partially explained intangible development costs.",
-      "question_quote": "if you can provide the nature of the same",
+      "label": "answered",
+      "reason": "Vinit and Sandeep explained the Estonia deal growth and the nature of internal IP tool costs.",
+      "question_quote": "Vinit, if you can provide an incremental growth from this and second, the intangible assets",
       "question_page": 25,
-      "answer_quote": "This is with reference to all our internal IP tools, with reference to AI that we are developing",
+      "answer_quote": "on the deal that we did with the Estonia based company, now that is basically a part of a vendor consolidation",
       "answer_page": 25
      },
      {
@@ -836,20 +885,32 @@
        "Vinit Teredesai"
       ],
       "label": "answered",
-      "reason": "Explained that future costs depend on feature development and wage increments.",
-      "question_quote": "So, on a Q-o-Q basis, it can go up, you believe, in the forthcoming quarter as well",
+      "reason": "Vinit explained that cost increases depend on feature development and wage increments.",
+      "question_quote": "So, on a Q-o-Q basis, it can go up, you believe, in the forthcoming quarter as well?",
       "question_page": 25,
       "answer_quote": "It all depends upon, see, sometimes we are in the process of developing the new features",
       "answer_page": 25
+     },
+     {
+      "analyst": "Sandeep Shah",
+      "answered_by": [
+       "Sandeep Kalra"
+      ],
+      "label": "answered",
+      "reason": "Management formally closed the conference call.",
+      "question_quote": "Okay, thanks and all the best.",
+      "question_page": 25,
+      "answer_quote": "Perfect. So, with that we would like to close the call.",
+      "answer_page": 25
      }
     ],
-    "unverified": 8,
+    "unverified": 3,
     "counts": {
-     "answered": 14,
-     "partly": 5,
+     "answered": 23,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 19"
+    "summary": "questions dodged: 0 of 24"
    },
    {
     "call": "2026-08-31",
@@ -862,10 +923,10 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Addressed due diligence and valuation premium rationale.",
-      "question_quote": "have we done any incremental due diligence on the books of Nagarro?",
+      "reason": "Management explained the diligence on books and rationale for valuation.",
+      "question_quote": "what has been the rationale behind the valuation multiple",
       "question_page": 14,
-      "answer_quote": "We have done the diligence on both, we are confident that those issues are more answering BaFin",
+      "answer_quote": "we believe we have paid a reasonable premium for a control transaction.",
       "answer_page": 14
      },
      {
@@ -874,215 +935,20 @@
        "Sandeep Kalra"
       ],
       "label": "answered",
-      "reason": "Explained cross-selling and synergistic complementary verticals.",
-      "question_quote": "is there any cross-selling opportunities as well, sizable, that we can look forward to?",
+      "reason": "Management detailed complementary verticals and cross-selling opportunities.",
+      "question_quote": "is there any cross-selling opportunities as well, sizable",
       "question_page": 15,
-      "answer_quote": "there are complementary verticals. So, we don't have a scaled industrial vertical",
+      "answer_quote": "there are many vectors, which are meaningful vectors in terms of synergies, whether verticals, geographic presence",
       "answer_page": 15
-     },
-     {
-      "analyst": "Ravi Menon",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Confirmed management commitment and incentive structures.",
-      "question_quote": "are these guys staying on? And do you have a certain run-out and other factors attached",
-      "question_page": 15,
-      "answer_quote": "management team is absolutely committed to staying on",
-      "answer_page": 15
-     },
-     {
-      "analyst": "Ravi Menon",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "partly",
-      "reason": "Gave high level details due to regulatory restrictions.",
-      "question_quote": "Can you talk about the type of clients, and sort of the work that Nagarro does",
-      "question_page": 16,
-      "answer_quote": "I have to be at a high level at this point in time. But at a high level if you look at it",
-      "answer_page": 16
-     },
-     {
-      "analyst": "Ravi Menon",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "partly",
-      "reason": "Avoided specific vertical analysis but defended growth.",
-      "question_quote": "are there any structural issues in any parts of the portfolio, especially horizontal tech",
-      "question_page": 17,
-      "answer_quote": "I don't want to go into the structural part of every vertical",
-      "answer_page": 17
-     },
-     {
-      "analyst": "Ravi Menon",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Addressed cost synergies and margin expectations.",
-      "question_quote": "do you see any cost synergies, or the combined merged entity you think will operate at slightly lower margins",
-      "question_page": 17,
-      "answer_quote": "our ambition is to put that back, a significant part in growth related initiatives",
-      "answer_page": 17
-     },
-     {
-      "analyst": "Vikas Ahuja",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Addressed turnaround confidence and historical growth.",
-      "question_quote": "What gives us confidence that this is a turnaround asset?",
-      "question_page": 18,
-      "answer_quote": "If you look at our own track record of Persistent, we have grown from the time we went IPO at about 17.5%",
-      "answer_page": 18
-     },
-     {
-      "analyst": "Vikas Ahuja",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Clarified Nagarro's EBIT margins with financial figures.",
-      "question_quote": "Can you just clarify on that point?",
-      "question_page": 19,
-      "answer_quote": "their margins on the EBIT side are 13.9% plus, and so on",
-      "answer_page": 19
-     },
-     {
-      "analyst": "Karan Uppal",
-      "answered_by": [
-       "Sandeep Kalra",
-       "Vinit Teredesai"
-      ],
-      "label": "answered",
-      "reason": "Addressed organic growth and past acquisitions.",
-      "question_quote": "How much of that was organic during that period?",
-      "question_page": 19,
-      "answer_quote": "all of that, all the growth that has been factored in is all organic from our perspective.",
-      "answer_page": 19
-     },
-     {
-      "analyst": "Karan Uppal",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "partly",
-      "reason": "Deferred specific changes pending regulatory approvals.",
-      "question_quote": "what changes would you like to make in the combined entity so that the performance is quite consistent",
-      "question_page": 19,
-      "answer_quote": "I wouldn't want to stretch the envelope by saying we have all the answers to your questions",
-      "answer_page": 19
-     },
-     {
-      "analyst": "Karan Uppal",
-      "answered_by": [
-       "Vinit Teredesai"
-      ],
-      "label": "answered",
-      "reason": "Explained interest cost and cash generation assumption.",
-      "question_quote": "how much interest cost one should bake in once the transaction is over",
-      "question_page": 20,
-      "answer_quote": "our intent is basically to see some of these loans are repaid to the cash generation",
-      "answer_page": 20
-     },
-     {
-      "analyst": "Nitin Padmanabh",
-      "answered_by": [
-       "Sandeep Kalra",
-       "Vinit Teredesai"
-      ],
-      "label": "answered",
-      "reason": "Addressed cash flows and T&M business context.",
-      "question_quote": "How sustainable is your free cash flow? How are you thinking about that",
-      "question_page": 22,
-      "answer_quote": "our intent is over a period of time, we will bring the best of the practices into the combined organization",
-      "answer_page": 22
-     },
-     {
-      "analyst": "Nitin Padmanabhan",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Addressed AI cannibalization impact on revenues.",
-      "question_quote": "On your assessment of cannibalization of revenue with AI for them in their context.",
-      "question_page": 23,
-      "answer_quote": "is the cannibalization going to reduce the T&M revenue for the scope of work that they do currently? Yes.",
-      "answer_page": 23
-     },
-     {
-      "analyst": "Abhishek Bhandari",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Addressed cash versus share swap structure constraints.",
-      "question_quote": "do you think doing some kind of a cash-plus-share swap would have been a better strategy",
-      "question_page": 24,
-      "answer_quote": "this is not a private equity asset that we can do an easy share-swap",
-      "answer_page": 25
-     },
-     {
-      "analyst": "Abhishek Bhandari",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Provided details on large deal scope, ramp-up, and margins.",
-      "question_quote": "Any kind of timeline around the ramp-up of this particular $650 billion? You mentioned 125 ACV",
-      "question_page": 25,
-      "answer_quote": "this is a net new business. There's not much ramp-up required in this",
-      "answer_page": 25
-     },
-     {
-      "analyst": "Kawaljeet Saluja",
-      "answered_by": [
-       "Vinit Teredesai"
-      ],
-      "label": "answered",
-      "reason": "Walked through EPS accretion math and interest rate.",
-      "question_quote": "can you just walk us through the EPS accretion math on a gap basis in the first year itself?",
-      "question_page": 26,
-      "answer_quote": "what we are right now anticipating is a 70-30 split in terms of the goodwill and intangibles.",
-      "answer_page": 26
-     },
-     {
-      "analyst": "Kawaljeet Saluja",
-      "answered_by": [
-       "Sandeep Kalra"
-      ],
-      "label": "answered",
-      "reason": "Addressed maintaining growth during integration complexity.",
-      "question_quote": "How do you ensure that the growth engine keeps on going?",
-      "question_page": 26,
-      "answer_quote": "We have done the diligence on how they go to market, what their structures are, what are the low-hanging fruits",
-      "answer_page": 26
-     },
-     {
-      "analyst": "Vibhor Singhal",
-      "answered_by": [
-       "Sandeep Kalra",
-       "Vinit Teredesai"
-      ],
-      "label": "answered",
-      "reason": "Confirmed rules for squeeze out and majority thresholds.",
-      "question_quote": "is it the majority of minority that have to agree, and then basically the company can be taken private?",
-      "question_page": 28,
-      "answer_quote": "it is pretty much on the same lines. There are a few local things that need to be taken care of",
-      "answer_page": 28
      }
     ],
-    "unverified": 3,
+    "unverified": 18,
     "counts": {
-     "answered": 15,
-     "partly": 3,
+     "answered": 2,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 18"
+    "summary": "questions dodged: 0 of 2"
    }
   ],
   "narrative_vs_numbers": [
@@ -1199,40 +1065,20 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-10-31: questions dodged: 0 of 19",
+    "text": "Call of 2026-10-31: questions dodged: 0 of 24",
     "source": "dodged-question check"
    },
    {
     "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 18",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 2",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters, supported by latest quarter revenue of Rs 4,664 cr.",
+     "text": "The 3y revenue CAGR is 20.9% and profit CAGR is 26.5%.",
      "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 4,664 cr, +30.2% YoY",
-       "source": "quarterly P&L"
-      },
-      {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The 3y revenue CAGR is 20.9% and profit CAGR is 26.5% with a market cap of Rs 99,550 cr.",
-     "cites": [
-      {
-       "id": "F1",
-       "text": "P/E 53.2, market cap Rs 99,550 cr",
-       "source": "screener ratios"
-      },
       {
        "id": "F2",
        "text": "3y revenue CAGR 20.9%, profit CAGR 26.5%",
@@ -1241,24 +1087,29 @@
      ]
     },
     {
-     "text": "The 5y revenue CAGR is 28.6% alongside a profit CAGR of 32.8% and a debt/equity of 0.07.",
+     "text": "Latest quarter revenue reached Rs 4,664 cr, up 30.2% YoY.",
      "cites": [
       {
-       "id": "F3",
-       "text": "5y revenue CAGR 28.6%, profit CAGR 32.8%",
-       "source": "annual P&L"
-      },
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 4,664 cr, +30.2% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "cites": [
       {
-       "id": "F7",
-       "text": "Debt/equity 0.07 (borrowings Rs 575 cr)",
-       "source": "balance sheet"
+       "id": "F10",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 352 cr, which is a -25.3% YoY decrease.",
+     "text": "Latest quarter profit was Rs 352 cr, representing a -25.3% YoY change.",
      "cites": [
       {
        "id": "F5",
@@ -1268,7 +1119,7 @@
      ]
     },
     {
-     "text": "Operating margin was 14.0% in the latest quarter, dropping -5.0 pts YoY.",
+     "text": "Operating margin was 14.0% in the latest quarter, down -5.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1278,12 +1129,12 @@
      ]
     },
     {
-     "text": "The company quietly dropped its revenue FY31 target of 5 USD mn.",
+     "text": "The cash conversion cycle is 83 days.",
      "cites": [
       {
-       "id": "F12",
-       "text": "Quietly dropped: revenue FY31 target 5 USD mn",
-       "source": "promise ledger"
+       "id": "F8",
+       "text": "Cash conversion cycle 83 days (2026)",
+       "source": "ratios"
       }
      ]
     }
@@ -1312,8 +1163,8 @@
    "topics_dropped": [
     "revenue FY31 (5 USD mn)"
    ],
-   "questions_dodged": "0 of 37",
-   "questions_partly_answered": "8 of 37"
+   "questions_dodged": "0 of 26",
+   "questions_partly_answered": "1 of 26"
   }
  },
  "stage": "writing",
@@ -1358,18 +1209,26 @@
  "transcript_notes": [],
  "llm_usage": {
   "models": {
-   "gemini-3.5-flash-lite": {
-    "api_calls": 9,
+   "gemini-3.5-flash": {
+    "api_calls": 2,
     "cache_hits": 0,
     "failed": 0,
-    "tokens_in": 18912,
-    "tokens_out": 5356,
+    "tokens_in": 11349,
+    "tokens_out": 605,
+    "cost_usd": 0.0
+   },
+   "gemini-3.5-flash-lite": {
+    "api_calls": 3,
+    "cache_hits": 6,
+    "failed": 0,
+    "tokens_in": 14307,
+    "tokens_out": 4426,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 153.3,
+ "built_in_seconds": 17.1,
  "from_cache": true
 }

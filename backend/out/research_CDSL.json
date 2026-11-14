@@ -1,6 +1,6 @@
 {
  "ticker": "CDSL",
- "started_at": "2026-11-14T13:18:15",
+ "started_at": "2026-11-14T22:37:23",
  "states": [],
  "sections": {
   "snapshot": {
@@ -390,11 +390,11 @@
        "Nehal Vora",
        "Sunil Alvares"
       ],
-      "label": "partly",
-      "reason": "Answered about the IPO trend but declined to comment on future forecasts.",
-      "question_quote": "if there is any kind of one-off in the IPO, or is it purely driven by the higher number of IPOs?",
+      "label": "dodged",
+      "reason": "Explicitly refused to comment on forward-looking expectations.",
+      "question_quote": "what could be the steady-state IPO revenues",
       "question_page": 6,
-      "answer_quote": "we hope that this trend continues. It's not specific to any particular IPO or a one-off.",
+      "answer_quote": "that's a forward-looking statement. So, we will not be able to comment on that.",
       "answer_page": 6
      },
      {
@@ -403,8 +403,8 @@
        "Sunil Alvares"
       ],
       "label": "answered",
-      "reason": "Provided the exact revised rack rates for creation and fetching.",
-      "question_quote": "What would be the blended pricing after the pricing change?",
+      "reason": "Provided exact figures for creation and fetch pricing changes.",
+      "question_quote": "what would be the blended pricing after the pricing change",
       "question_page": 6,
       "answer_quote": "for creation, it has come down to INR5. And for fetching it has come down to INR28.",
       "answer_page": 6
@@ -415,10 +415,10 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Clarified that technology investments are ongoing and denied the previous quote context.",
-      "question_quote": "So how do you see this in terms of obviously, you said that you have been investing in technology, but the pace of the investment is still the same?",
+      "reason": "Clarified previous statements and explained continued technology investments.",
+      "question_quote": "So but still the Y-o-Y growth is still at 38%, 39%.",
       "question_page": 7,
-      "answer_quote": "we continue to invest in technology because technology is something which continues to evolve.",
+      "answer_quote": "we continue to embark on this journey to ensure that the robustness and the resiliency",
       "answer_page": 7
      },
      {
@@ -428,8 +428,8 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Provided the exact figure for margin pledge income.",
-      "question_quote": "what was the pledge income and the e-voting income if you can give?",
+      "reason": "Provided the specific margin pledge income figure.",
+      "question_quote": "what was the pledge income and the e-voting income",
       "question_page": 7,
       "answer_quote": "Margin pledge income was INR6.19 crores.",
       "answer_page": 7
@@ -440,8 +440,8 @@
        "Girish Amesara"
       ],
       "label": "answered",
-      "reason": "Provided e-CAS and e-voting income figures.",
-      "question_quote": "E-voting and e-CAS?",
+      "reason": "Provided specific e-CAS and e-voting income figures.",
+      "question_quote": "E-voting and e-CAS",
       "question_page": 7,
       "answer_quote": "e-CAS income was INR12.77 crores and e-voting income was INR22 crores.",
       "answer_page": 7
@@ -453,11 +453,11 @@
        "Nehal Vora",
        "Sunil Alvares"
       ],
-      "label": "partly",
-      "reason": "Addressed admin expenses and KRA, but stated they do not track corporate action versus IPO revenue s",
-      "question_quote": "how has the growth been? Of course, I think the IPO portfolio-led income would have grown at a much faster pace.",
+      "label": "answered",
+      "reason": "Explained that corporate action and IPO revenues are commingled and not tracked separately.",
+      "question_quote": "how has the growth been",
       "question_page": 7,
-      "answer_quote": "We internally do not monitor as to what would be corporate action revenue, what would be IPO-related revenue",
+      "answer_quote": "we internally do not monitor as to what would be corporate action revenue",
       "answer_page": 8
      },
      {
@@ -467,8 +467,8 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Provided specific revenue figures for issuer fees and application processing fees.",
-      "question_quote": "if you could also give the split on the unlisted revenue part.",
+      "reason": "Provided exact revenue figures for unlisted issuer fees and application processing fees.",
+      "question_quote": "split on the unlisted revenue part",
       "question_page": 9,
       "answer_quote": "unlisted revenue in terms of issuer fees is INR87 lakhs and application processing fees is INR2.2 crores.",
       "answer_page": 9
@@ -480,10 +480,10 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Provided the KYC charge per application and the rack rates.",
+      "reason": "Provided exact charges for KYC verification and rack rates.",
       "question_quote": "What are the charges for that? So, per KYC, how much do you get?",
       "question_page": 9,
-      "answer_quote": "The charge for that is INR2 per application. With respect to the rack rate for creation, it is INR5 and for fetch, it is INR28.",
+      "answer_quote": "The charge for that is INR2 per application.",
       "answer_page": 9
      },
      {
@@ -493,10 +493,10 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Explained that verification charges cannot be specifically split out from the consolidated number.",
-      "question_quote": "in the INR102 crores of IPO and corporate action, how much is the verification charge?",
+      "reason": "Explained why a pinpointed split cannot be provided for verification charges within consolidated IPO",
+      "question_quote": "how much is the verification charge",
       "question_page": 9,
-      "answer_quote": "We don't give that. It is typically a consolidated number.",
+      "answer_quote": "it would be very difficult to give a pinpointed answer that this IPO has yielded this revenue.",
       "answer_page": 9
      },
      {
@@ -505,9 +505,9 @@
        "Nehal Vora",
        "Sunil Alvares"
       ],
-      "label": "partly",
-      "reason": "Declined to comment on competitor claims directly.",
-      "question_quote": "just wanted to understand like how is the competitive intensity shaping up in this KYC segment?",
+      "label": "dodged",
+      "reason": "Refused to comment on competitor claims regarding onboarding brokers.",
+      "question_quote": "how is the competitive intensity shaping up in this KYC segment",
       "question_page": 10,
       "answer_quote": "these things happen and personally, I really cannot comment on this.",
       "answer_page": 10
@@ -518,10 +518,10 @@
        "Nehal Vora"
       ],
       "label": "partly",
-      "reason": "Addressed regulatory process for ISINs and explained MTF revenue correlation generally.",
-      "question_quote": "whether there has been any progress on that particular point so that our unlisted revenue sees a meaningful growth",
+      "reason": "Addressed MTF growth correlation but did not give a direct timeline for unlisted ISIN rights.",
+      "question_quote": "any progress on that particular point so that our unlisted revenue sees a meaningful growth",
       "question_page": 10,
-      "answer_quote": "it is going through the regulatory supervision, and it's in that process.",
+      "answer_quote": "it is going through the regulatory supervision, and it's in that process. So, I'd not like to comment it",
       "answer_page": 10
      },
      {
@@ -531,8 +531,8 @@
        "Nehal Vora"
       ],
       "label": "partly",
-      "reason": "Answered the debtor provision and stated they do not comment on specific DPs.",
-      "question_quote": "has incrementally started opening accounts with the other or we still enjoy the exclusive tie-up?",
+      "reason": "Provided the debtor provision number but declined to comment on specific DPs.",
+      "question_quote": "any major discount broker who is associated with CDSL, has incrementally started opening accounts",
       "question_page": 10,
       "answer_quote": "we don't comment on any specific individual DPs.",
       "answer_page": 10
@@ -544,10 +544,10 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Gave progress on the insurance business and stated the 6-month revenue.",
-      "question_quote": "how much revenue we have on in this quarter compared to the previous quarter or compared with the previous year?",
+      "reason": "Provided the insurance revenue figure for the last six months.",
+      "question_quote": "how much revenue we have on in this quarter compared to the previous quarter",
       "question_page": 11,
-      "answer_quote": "in insurance, we have earned a revenue of roughly INR2 crores in these 6 months.",
+      "answer_quote": "we have earned a revenue of roughly INR2 crores in these 6 months.",
       "answer_page": 11
      },
      {
@@ -556,8 +556,8 @@
        "Girish Amesara"
       ],
       "label": "answered",
-      "reason": "Compared the insurance revenue with the previous period.",
-      "question_quote": "And maybe compared to what we have earned the previous quarter?",
+      "reason": "Provided comparison with the previous year's first half.",
+      "question_quote": "maybe compared to what we have earned the previous quarter",
       "question_page": 11,
       "answer_quote": "In the 1st half of previous year, it was almost the same.",
       "answer_page": 11
@@ -568,8 +568,8 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Acknowledged and accepted the suggestion regarding reporting format.",
-      "question_quote": "if we just start putting this number into our consolidated revenue side",
+      "reason": "Accepted the suggestion and agreed to look into feasibility.",
+      "question_quote": "just kind of a suggestion if we just start putting this number into our consolidated revenue side",
       "question_page": 11,
       "answer_quote": "Suggestion is taken. We will definitely look at it based on the framework",
       "answer_page": 11
@@ -577,11 +577,11 @@
     ],
     "unverified": 0,
     "counts": {
-     "answered": 10,
-     "partly": 5,
-     "dodged": 0
+     "answered": 11,
+     "partly": 2,
+     "dodged": 2
     },
-    "summary": "questions dodged: 0 of 15"
+    "summary": "questions dodged: 2 of 15"
    },
    {
     "call": "2026-08-31",
@@ -595,10 +595,10 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Management explained the charges are formula-driven and provided the folio numbers.",
-      "question_quote": "any reasons why this growth is lower? And also, if you can give the number of folios this year",
+      "reason": "Provided folio count number for the current year.",
+      "question_quote": "if you can give the number of folios this year versus last year",
       "question_page": 5,
-      "answer_quote": "it's a formula-driven charges or issuer charges. And it's based on the folios which are actually there.",
+      "answer_quote": "Amit, the folio is INR38.73 crores.",
       "answer_page": 5
      },
      {
@@ -608,8 +608,8 @@
        "Sunil Alvares"
       ],
       "label": "answered",
-      "reason": "Management explained higher fetch volumes and Search API charges offset the pricing impact.",
-      "question_quote": "Is it offset by volumes? Or there is some other things to read into",
+      "reason": "Explained what offset the KYC pricing impact.",
+      "question_quote": "is it offset by volumes? Or there is some other things to read into",
       "question_page": 5,
       "answer_quote": "One was the higher fetch volumes. – Further, when the charges were reduced by SEBI, they had allowed us to charge on the Search API",
       "answer_page": 5
@@ -619,8 +619,8 @@
       "answered_by": [
        "Nehal Vora"
       ],
-      "label": "dodged",
-      "reason": "Management refused to give forward-looking statements about technology spend stabilization.",
+      "label": "partly",
+      "reason": "Addressed general tech spend philosophy but declined guidance.",
       "question_quote": "is it fair to assume that most of the heavy lifting in terms of the technology spend is behind",
       "question_page": 5,
       "answer_quote": "So firstly, we don't give future statements, which look into the future, forward-looking statements.",
@@ -632,10 +632,10 @@
        "Nehal Vora"
       ],
       "label": "partly",
-      "reason": "Management did not give a definitive answer, stating the environment keeps changing.",
-      "question_quote": "is it already done? Or I'm not asking for future guidance, but as of now, like most of the advancements have been done",
+      "reason": "Explained environment changes without giving a definitive yes/no.",
+      "question_quote": "is it already done? Or I'm not asking for future guidance, but as of now",
       "question_page": 6,
-      "answer_quote": "So, see, the regulatory requirements keep on changing as per the needs of the market and what needs is there.",
+      "answer_quote": "So, see, the regulatory requirements keep on changing as per the needs of the market",
       "answer_page": 6
      },
      {
@@ -644,24 +644,12 @@
        "Girish Amesara",
        "Nehal Vora"
       ],
-      "label": "partly",
-      "reason": "Management answered the other income breakup but gave a general philosophy answer on market share.",
-      "question_quote": "how are we viewing this in the light of how fintechs interact with depositories? That's my first question. For my second question, if you could just help us understand the movement in other income",
-      "question_page": 6,
-      "answer_quote": "we are an infrastructure company. And our intent at least CDSL is not a quarter-on-quarter growth.",
-      "answer_page": 6
-     },
-     {
-      "analyst": "Hiral Parekh",
-      "answered_by": [
-       "Nehal Vora"
-      ],
       "label": "answered",
-      "reason": "Management declined to give exact numbers but explained it was due to the year-end appraisal process",
-      "question_quote": "if you could just give us a broad split between the underlying increase and the bonus increase?",
-      "question_page": 7,
-      "answer_quote": "So, we don't give these numbers out in public domain. But typically, it's the year-end appraisal process",
-      "answer_page": 7
+      "reason": "Addressed strategic view on market share and provided other income breakdown.",
+      "question_quote": "how are we viewing this in the light of how fintechs interact with depositories",
+      "question_page": 6,
+      "answer_quote": "our intent at least CDSL is not a quarter-on-quarter growth. It is a long-term sustainable growth",
+      "answer_page": 6
      },
      {
       "analyst": "Swarnabh Mukherjee",
@@ -670,10 +658,10 @@
        "Sunil Alvares"
       ],
       "label": "partly",
-      "reason": "Management explained the SEBI directive and Search API but did not provide blended realization numbe",
-      "question_quote": "if you could maybe give us some color on the blended realization on new and fetch",
+      "reason": "Explained SEBI directive and Search API but skipped some granular details.",
+      "question_quote": "if you could explain what exactly this was? And till what time was this allowed",
       "question_page": 7,
-      "answer_quote": "So, we don't give some part of that information.",
+      "answer_quote": "As per the directive, the charges were earlier INR35 on fetch. It was reduced to INR28",
       "answer_page": 7
      },
      {
@@ -681,9 +669,9 @@
       "answered_by": [
        "Sunil Alvares"
       ],
-      "label": "partly",
-      "reason": "Management confirmed it will continue but declined to give proportion or quantum details.",
-      "question_quote": "will this continue henceforth? And can you share maybe a proportion or a quantum of that?",
+      "label": "answered",
+      "reason": "Confirmed Search API revenue continuance while noting details are aggregated.",
+      "question_quote": "the Search API-led revenue, will this continue henceforth? And can you share maybe a proportion",
       "question_page": 8,
       "answer_quote": "Yes, it will continue, but right now, I will not be able to give you the overall details",
       "answer_page": 8
@@ -694,8 +682,8 @@
        "Sunil Alvares"
       ],
       "label": "dodged",
-      "reason": "Management refused to discuss customer volume discounts or realizable rates.",
-      "question_quote": "if you give some volume discount or anything to any customer, then even the realizable rate has also gone down at the same level?",
+      "reason": "Refused to discuss discount rates and realizable values.",
+      "question_quote": "then even the realizable rate has also gone down at the same level?",
       "question_page": 8,
       "answer_quote": "We do not discuss this in our investor calls.",
       "answer_page": 8
@@ -706,7 +694,7 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Management confirmed that the relatively lower growth is largely because of the unlisted piece.",
+      "reason": "Confirmed folio growth and unlisted impact.",
       "question_quote": "the relatively lower growth is largely because of unlisted piece. That's a fair way to understand?",
       "question_page": 8,
       "answer_quote": "If you compare on quarter-on-quarter basis, yes.",
@@ -717,11 +705,11 @@
       "answered_by": [
        "Nehal Vora"
       ],
-      "label": "dodged",
-      "reason": "Management declined to give specifics on unlisted company growth expectations.",
-      "question_quote": "that's the new normal we need to is it fair to understand, sir?",
+      "label": "partly",
+      "reason": "Declined specifics on unlisted company growth due to forward-looking nature.",
+      "question_quote": "the numbers what you mentioned in the current call are likely to remain going ahead",
       "question_page": 8,
-      "answer_quote": "See, again, it's difficult to give a forward-looking statement, but it is all driven by overall regulatory intent",
+      "answer_quote": "See, again, it's difficult to give a forward-looking statement",
       "answer_page": 8
      },
      {
@@ -730,7 +718,7 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Management directly confirmed the INR0.25 Search API charge.",
+      "reason": "Confirmed the Search API charge amount.",
       "question_quote": "you said Search API for PAN card is INR0.25 if I understood right, that's the charge you earn, right?",
       "question_page": 9,
       "answer_quote": "Yes.",
@@ -742,31 +730,31 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Management clarified where online data charges are reported as disclosure.",
+      "reason": "Provided impairment cost and clarified KYC income source.",
+      "question_quote": "One, if you can give your impairment cost number, which you typically give every quarter.",
+      "question_page": 9,
+      "answer_quote": "the impairment cost, i.e. debtors’ provision is INR2.22 crores in this quarter.",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Sanketh Godha",
+      "answered_by": [
+       "Nehal Vora"
+      ],
+      "label": "answered",
+      "reason": "Clarified that digital services form part of online data charges.",
       "question_quote": "I understood initial comments Sunil sir said that there were other digital services.",
       "question_page": 9,
       "answer_quote": "It is part of the online data charges that we normally provide as a disclosure.",
       "answer_page": 9
      },
      {
-      "analyst": "Madhukar",
-      "answered_by": [
-       "Girish Amesara"
-      ],
-      "label": "answered",
-      "reason": "Management confirmed the previous year's folio count.",
-      "question_quote": "And last year, the number was INR33.2 crores for the folio, count right?",
-      "question_page": 10,
-      "answer_quote": "Yes.",
-      "answer_page": 5
-     },
-     {
       "analyst": "Neeraj Toshniwal",
       "answered_by": [
        "Nehal Vora"
       ],
-      "label": "dodged",
-      "reason": "Management refused to provide forward-looking volume or run-rate estimates for Search API.",
+      "label": "partly",
+      "reason": "Declined forward-looking run rate estimates for Search API.",
       "question_quote": "If you can give some more color on how much volume it can generate every quarter what would be the run rate?",
       "question_page": 10,
       "answer_quote": "So, we don't give any future and forward-looking statements.",
@@ -777,20 +765,8 @@
       "answered_by": [
        "Sunil Alvares"
       ],
-      "label": "answered",
-      "reason": "Management explained the current status of CKYC integration and testing.",
-      "question_quote": "unified KYC also if you can touch upon that again we talked about?",
-      "question_page": 10,
-      "answer_quote": "So far as unified KYC is concerned, we are in the process of getting integrated with CKYC.",
-      "answer_page": 10
-     },
-     {
-      "analyst": "Neeraj Toshniwal",
-      "answered_by": [
-       "Sunil Alvares"
-      ],
-      "label": "dodged",
-      "reason": "Management declined to answer a forward-looking question about rack rate sustainability.",
+      "label": "partly",
+      "reason": "Declined to answer forward-looking rack rate sustainability.",
       "question_quote": "does this rack rate will sustain or further go down once the unified KYC is...",
       "question_page": 10,
       "answer_quote": "Asking a forward-looking question, which is very difficult to answer because this is just the first quarter.",
@@ -801,11 +777,23 @@
       "answered_by": [
        "Nehal Vora"
       ],
-      "label": "dodged",
-      "reason": "Management gave a general answer about market infrastructure and value proposition instead of specif",
-      "question_quote": "And any other measures to kind of make up the loss in the rack rate, which we can do a part of the Search API?",
+      "label": "partly",
+      "reason": "Reiterated market dynamics instead of giving specific new measures.",
+      "question_quote": "And any other measures to kind of make up the loss in the rack rate",
       "question_page": 10,
       "answer_quote": "So again, I think you need to observe how the general trend is. It's a market volume driven and rate driven.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Swarnabh Mukherjee",
+      "answered_by": [
+       "Girish Amesara"
+      ],
+      "label": "answered",
+      "reason": "Clarified unlisted admission revenue reporting vs custody fees.",
+      "question_quote": "Just wanted to understand if the universe of this unlisted has changed because of the regulation.",
+      "question_page": 11,
+      "answer_quote": "Normally, we get a question in earning calls about revenue from admission of unlisted companies during the quarter. I've given that figure",
       "answer_page": 11
      },
      {
@@ -813,11 +801,11 @@
       "answered_by": [
        "Nehal Vora"
       ],
-      "label": "dodged",
-      "reason": "Management declined to predict if technology spending has peaked, citing the evolving nature of tech",
+      "label": "partly",
+      "reason": "Discussed tech evolution philosophy rather than giving a direct peak-out answer.",
       "question_quote": "is it fair to think that we are closer to now peeking out at our investments in this piece.",
       "question_page": 11,
-      "answer_quote": "Technology is something which continues to evolve and it's very difficult to predict whether you reach the top end of the technology spend or not.",
+      "answer_quote": "Technology is something which continues to evolve and it's very difficult to predict whether you reach the top end",
       "answer_page": 11
      },
      {
@@ -827,7 +815,7 @@
        "Nehal Vora"
       ],
       "label": "answered",
-      "reason": "Management provided the specific tax rate percentage.",
+      "reason": "Provided current quarter tax rate.",
       "question_quote": "And why is the tax rate so high in this quarter?",
       "question_page": 11,
       "answer_quote": "We are having a tax rate of 25.17%, so we are within that.",
@@ -838,9 +826,9 @@
       "answered_by": [
        "Girish Amesara"
       ],
-      "label": "partly",
-      "reason": "Management stated they follow an internal policy and do not disclose instrument breakups, but confir",
-      "question_quote": "could you give us a breakup of your cash investments as to how much is in equity, how much is in debt instruments in some form?",
+      "label": "dodged",
+      "reason": "Explicitly refused to give a breakdown of various investment instruments.",
+      "question_quote": "could you give us a breakup of your cash investments as to how much is in equity, how much is in debt",
       "question_page": 12,
       "answer_quote": "normally, we don't discuss the breakup of various instruments in which we have made investments.",
       "answer_page": 12
@@ -851,20 +839,20 @@
        "Girish Amesara"
       ],
       "label": "answered",
-      "reason": "Management directly answered that mark-to-market gains drove the jump in other income.",
+      "reason": "Identified MTM gains as the driver for other income jump.",
       "question_quote": "So, what drove this at least you can explain what drove this jump in...",
       "question_page": 12,
       "answer_quote": "Mark-to-market gain during the quarter.",
       "answer_page": 12
      }
     ],
-    "unverified": 6,
+    "unverified": 5,
     "counts": {
-     "answered": 10,
-     "partly": 5,
-     "dodged": 7
+     "answered": 11,
+     "partly": 8,
+     "dodged": 2
     },
-    "summary": "questions dodged: 7 of 22"
+    "summary": "questions dodged: 2 of 21"
    }
   ],
   "narrative_vs_numbers": [],
@@ -966,19 +954,19 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-11-30: questions dodged: 0 of 15",
+    "text": "Call of 2026-11-30: questions dodged: 2 of 15",
     "source": "dodged-question check"
    },
    {
     "id": "F13",
-    "text": "Call of 2026-08-31: questions dodged: 7 of 22",
+    "text": "Call of 2026-08-31: questions dodged: 2 of 21",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The company reported a 3y revenue CAGR of 27.3% and a profit CAGR of 18.1%.",
+     "text": "The 3y revenue CAGR is 27.3% and profit CAGR is 18.1%.",
      "cites": [
       {
        "id": "F2",
@@ -988,7 +976,7 @@
      ]
     },
     {
-     "text": "Latest quarter revenue reached Rs 394 cr, showing a 23.5% YoY increase.",
+     "text": "Latest quarter revenue reached Rs 394 cr with a +23.5% YoY increase.",
      "cites": [
       {
        "id": "F4",
@@ -998,7 +986,7 @@
      ]
     },
     {
-     "text": "Operating margin stood at 58.0% in the latest quarter, up 3.0 pts YoY.",
+     "text": "Operating margin was 58.0% in the latest quarter, improving by +3.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1010,7 +998,7 @@
    ],
    "bear": [
     {
-     "text": "The valuation reflects a P/E of 59.9 with a market cap of Rs 30,242 cr.",
+     "text": "The company trades at a P/E of 59.9 with a market cap of Rs 30,242 cr.",
      "cites": [
       {
        "id": "F1",
@@ -1020,21 +1008,21 @@
      ]
     },
     {
-     "text": "Revenue grew YoY in only 6 of 8 recent quarters.",
+     "text": "During the call of 2026-11-30, 2 of 15 questions were dodged.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 6 of 8 recent quarters",
-       "source": "quarterly P&L"
+       "id": "F12",
+       "text": "Call of 2026-11-30: questions dodged: 2 of 15",
+       "source": "dodged-question check"
       }
      ]
     },
     {
-     "text": "During the call of 2026-08-31, questions dodged were 7 of 22.",
+     "text": "During the call of 2026-08-31, 2 of 21 questions were dodged.",
      "cites": [
       {
        "id": "F13",
-       "text": "Call of 2026-08-31: questions dodged: 7 of 22",
+       "text": "Call of 2026-08-31: questions dodged: 2 of 21",
        "source": "dodged-question check"
       }
      ]
@@ -1045,53 +1033,32 @@
   "report_card": {
    "evidence": [
     {
-     "claim": "Dodged: Management refused to give forward-looking statements about technology spend stabilization.",
-     "quote": "is it fair to assume that most of the heavy lifting in terms of the technology spend is behind",
-     "page": 5,
-     "answer_quote": "So firstly, we don't give future statements, which look into the future, forward-looking statements.",
-     "answer_page": 5
+     "claim": "Dodged: Explicitly refused to comment on forward-looking expectations.",
+     "quote": "what could be the steady-state IPO revenues",
+     "page": 6,
+     "answer_quote": "that's a forward-looking statement. So, we will not be able to comment on that.",
+     "answer_page": 6
     },
     {
-     "claim": "Dodged: Management refused to discuss customer volume discounts or realizable rates.",
-     "quote": "if you give some volume discount or anything to any customer, then even the realizable rate has also gone down at the same level?",
+     "claim": "Dodged: Refused to comment on competitor claims regarding onboarding brokers.",
+     "quote": "how is the competitive intensity shaping up in this KYC segment",
+     "page": 10,
+     "answer_quote": "these things happen and personally, I really cannot comment on this.",
+     "answer_page": 10
+    },
+    {
+     "claim": "Dodged: Refused to discuss discount rates and realizable values.",
+     "quote": "then even the realizable rate has also gone down at the same level?",
      "page": 8,
      "answer_quote": "We do not discuss this in our investor calls.",
      "answer_page": 8
     },
     {
-     "claim": "Dodged: Management declined to give specifics on unlisted company growth expectations.",
-     "quote": "that's the new normal we need to is it fair to understand, sir?",
-     "page": 8,
-     "answer_quote": "See, again, it's difficult to give a forward-looking statement, but it is all driven by overall regulatory intent",
-     "answer_page": 8
-    },
-    {
-     "claim": "Dodged: Management refused to provide forward-looking volume or run-rate estimates for Search API.",
-     "quote": "If you can give some more color on how much volume it can generate every quarter what would be the run rate?",
-     "page": 10,
-     "answer_quote": "So, we don't give any future and forward-looking statements.",
-     "answer_page": 10
-    },
-    {
-     "claim": "Dodged: Management declined to answer a forward-looking question about rack rate sustainability.",
-     "quote": "does this rack rate will sustain or further go down once the unified KYC is...",
-     "page": 10,
-     "answer_quote": "Asking a forward-looking question, which is very difficult to answer because this is just the first quarter.",
-     "answer_page": 10
-    },
-    {
-     "claim": "Dodged: Management gave a general answer about market infrastructure and value proposition instead of specif",
-     "quote": "And any other measures to kind of make up the loss in the rack rate, which we can do a part of the Search API?",
-     "page": 10,
-     "answer_quote": "So again, I think you need to observe how the general trend is. It's a market volume driven and rate driven.",
-     "answer_page": 11
-    },
-    {
-     "claim": "Dodged: Management declined to predict if technology spending has peaked, citing the evolving nature of tech",
-     "quote": "is it fair to think that we are closer to now peeking out at our investments in this piece.",
-     "page": 11,
-     "answer_quote": "Technology is something which continues to evolve and it's very difficult to predict whether you reach the top end of the technology spend or not.",
-     "answer_page": 11
+     "claim": "Dodged: Explicitly refused to give a breakdown of various investment instruments.",
+     "quote": "could you give us a breakup of your cash investments as to how much is in equity, how much is in debt",
+     "page": 12,
+     "answer_quote": "normally, we don't discuss the breakup of various instruments in which we have made investments.",
+     "answer_page": 12
     }
    ],
    "promises_kept": "none measurable yet",
@@ -1104,8 +1071,8 @@
     "Not measurable": 0
    },
    "topics_dropped": [],
-   "questions_dodged": "7 of 37",
-   "questions_partly_answered": "10 of 37"
+   "questions_dodged": "4 of 36",
+   "questions_partly_answered": "10 of 36"
   }
  },
  "stage": "writing",
@@ -1151,17 +1118,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 6,
-    "cache_hits": 0,
+    "api_calls": 3,
+    "cache_hits": 3,
     "failed": 0,
-    "tokens_in": 12120,
-    "tokens_out": 4905,
+    "tokens_in": 10187,
+    "tokens_out": 4107,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 79.3,
+ "built_in_seconds": 16.8,
  "from_cache": true
 }

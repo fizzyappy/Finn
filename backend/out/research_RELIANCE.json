@@ -1,6 +1,6 @@
 {
  "ticker": "RELIANCE",
- "started_at": "2026-11-14T12:52:13",
+ "started_at": "2026-11-14T22:34:12",
  "states": [],
  "sections": {
   "snapshot": {
@@ -882,17 +882,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 7,
-    "cache_hits": 0,
+    "api_calls": 0,
+    "cache_hits": 7,
     "failed": 0,
-    "tokens_in": 5713,
-    "tokens_out": 1271,
+    "tokens_in": 0,
+    "tokens_out": 0,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 101.8,
+ "built_in_seconds": 6.8,
  "from_cache": true
 }

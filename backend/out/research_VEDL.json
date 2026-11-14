@@ -1,6 +1,6 @@
 {
  "ticker": "VEDL",
- "started_at": "2026-11-14T13:06:09",
+ "started_at": "2026-11-14T22:35:34",
  "states": [],
  "sections": {
   "snapshot": {
@@ -949,10 +949,10 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Explained the new principle-based dividend policy and board flexibility.",
-      "question_quote": "how would the dividend policies look like for each of the entities",
+      "reason": "Explains how each entity's board will design independent dividend policies.",
+      "question_quote": "how would the dividend policies look like for each of the entities?",
       "question_page": 7,
-      "answer_quote": "five companies' board, ran independently, will be free to design their own policies",
+      "answer_quote": "five companies' board, ran independently, will be free to design their own policies.",
       "answer_page": 7
      },
      {
@@ -961,8 +961,8 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Confirmed that the upstreaming mandate goes away and the board gains flexibility.",
-      "question_quote": "mandate of upstreaming a dividend of Hindustan Zinc goes away with the new policy",
+      "reason": "Confirms that the mandate goes away with the new policy.",
+      "question_quote": "mandate of upstreaming a dividend of Hindustan Zinc goes away",
       "question_page": 7,
       "answer_quote": "Correct. And in that case the Vedanta Limited board will have the flexibility",
       "answer_page": 7
@@ -973,10 +973,10 @@
        "Ajay Goel"
       ],
       "label": "partly",
-      "reason": "Addressed debt levels and organic sources but did not explicitly answer if stake sales are considere",
-      "question_quote": "Is selling stake in one or more entities an option that we are considering",
+      "reason": "Answers about debt requirement and brand fee, but omits selling stake option.",
+      "question_quote": "Is selling stake in one or more entities an option",
       "question_page": 8,
-      "answer_quote": "So with 4% to 5% dividend and the routine brand fee, VRL can be managed",
+      "answer_quote": "brand fee is more or less same, so it is 400 and the balance 600 receipt",
       "answer_page": 8
      },
      {
@@ -987,23 +987,11 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Provided details on Gamsberg Phase 2 completion, ramp-up timeline, and passed copper to Ajay.",
-      "question_quote": "capacity expansion at Hamsburg and by when do we expect to achieve full ramp-up",
+      "reason": "Details completion percentage, ramp-up timeline, and addresses copper profitability.",
+      "question_quote": "where are we on this capacity expansion at Hamsburg and by when do we expect to achieve full ramp-up?",
       "question_page": 8,
-      "answer_quote": "Gamsberg project is 94% complete and this is now the doubling of our run-of-mine",
+      "answer_quote": "the Gamsberg project is 94% complete and this is now the doubling of our run-of-mine",
       "answer_page": 8
-     },
-     {
-      "analyst": "Sumangal Nevatia",
-      "answered_by": [
-       "Ajay Goel"
-      ],
-      "label": "answered",
-      "reason": "Explained cash outflows including KCM funding and inter-corporate loans.",
-      "question_quote": "could you broadly share what were the cash outflow heads there for FY '26",
-      "question_page": 9,
-      "answer_quote": "It's almost $330 million, and hence that is one reason.",
-      "answer_page": 9
      },
      {
       "analyst": "Sumangal Nevatia",
@@ -1011,11 +999,11 @@
        "Charanjit Singh",
        "Deshnee Naidoo"
       ],
-      "label": "partly",
-      "reason": "Mentioned the S-1 filing but declined to give further guidance due to the quiet period.",
-      "question_quote": "plans for listing of KCM, where are we in terms of that, any guidance",
+      "label": "answered",
+      "reason": "Provides update on S-1 filing with the SEC for KCM listing.",
+      "question_quote": "plans for listing of KCM, where are we in terms of that, any guidance?",
       "question_page": 9,
-      "answer_quote": "we are in a quiet period in that regard, and as soon as we are able",
+      "answer_quote": "We are in the process of having filed our S-1 with the SEC.",
       "answer_page": 9
      },
      {
@@ -1024,10 +1012,10 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Stated the copper brand fee impact and overall brand fee expectations.",
-      "question_quote": "what was the brand fee paid by Copper entity in FY '26",
-      "question_page": 9,
-      "answer_quote": "impact of the brand fee on Copper is about $65 million",
+      "reason": "Explains that revised benchmarking happens every three years.",
+      "question_quote": "Till which year is the rate fixed as per the agreement?",
+      "question_page": 10,
+      "answer_quote": "we look at revised benchmarking every three years. So it is for next three years.",
       "answer_page": 10
      },
      {
@@ -1036,20 +1024,190 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Stated how often the brand fee is revised and the duration.",
-      "question_quote": "Till which year is the rate fixed as per the agreement",
-      "question_page": 10,
-      "answer_quote": "We look at revised benchmarking every three years. So it is for next three years.",
-      "answer_page": 10
+      "reason": "Provides unbundled net debt to EBITDA and debt breakdown for each entity.",
+      "question_quote": "how are we going to service the debt? Will it be largely through the dividends",
+      "question_page": 11,
+      "answer_quote": "we have made sure that each of the entities in terms of their debt and the cash flow, they are in harmony.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Ritesh Shah",
+      "answered_by": [
+       "Deshnee Naidoo"
+      ],
+      "label": "answered",
+      "reason": "Explains self-generating cash unit status and Gamsberg underground economics.",
+      "question_quote": "How should we read into the funding of the capex?",
+      "question_page": 13,
+      "answer_quote": "the good news about Zinc International after this year, it'll be a self-generating cash unit",
+      "answer_page": 13
+     },
+     {
+      "analyst": "Ritesh Shah",
+      "answered_by": [
+       "Charanjit Singh"
+      ],
+      "label": "answered",
+      "reason": "Offers to share the year-on-year capex details and funding sources post call.",
+      "question_quote": "possible to break this $4 billion by years or the way you explained the capital structure",
+      "question_page": 14,
+      "answer_quote": "happy to give the details post the call, year-on-year capex what we are doing",
+      "answer_page": 14
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Ajay Goel"
+      ],
+      "label": "answered",
+      "reason": "Confirms that Hindustan Zinc stake sale proceeds are included in fourth quarter de-leveraging.",
+      "question_quote": "is part of the Hindustan Zinc stake sale proceeds also included in this de-leveraging?",
+      "question_page": 15,
+      "answer_quote": "Yes, yes, that's right, Pallav. So INR7,370 crores is de-leveraging in the fourth quarter.",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Ajay Goel"
+      ],
+      "label": "answered",
+      "reason": "Explains operating cash flows and clarifies that INR14,000 crores do not include Zinc stake sale.",
+      "question_quote": "so is that part that includes this the stake sale as well?",
+      "question_page": 15,
+      "answer_quote": "No, that is additional. So, INR14,000 crores right is operating cash flows.",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Charanjit Singh"
+      ],
+      "label": "answered",
+      "reason": "Confirms debt is already considered in respective entity net debt positions.",
+      "question_quote": "So where exactly, which entity would the debt of that go to?",
+      "question_page": 15,
+      "answer_quote": "it's already taken into consideration when we have given the net debt position",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Ajay Goel"
+      ],
+      "label": "answered",
+      "reason": "Clarifies that Bloom Fountain is part of Iron and Steel and details unbundled net debt.",
+      "question_quote": "Bloom Fountain is a holding company of which particular company of the de-merged entity",
+      "question_page": 15,
+      "answer_quote": "Bloom Fountain is a part of Iron and Steel.",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Charanjit Singh"
+      ],
+      "label": "answered",
+      "reason": "Confirms PLF guidance status is pending situation assessment.",
+      "question_quote": "So is it because of the accident that's happened?",
+      "question_page": 16,
+      "answer_quote": "Yes, Pallav, as Deshnee explained that we are taking a stock of the situation.",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Charanjit Singh"
+      ],
+      "label": "answered",
+      "reason": "States that insurance is in place to cover gaps or losses.",
+      "question_quote": "existing PPAs that we've signed, is there any penalty for not supplying",
+      "question_page": 16,
+      "answer_quote": "We have insurance in place to cover us for any gaps or losses",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Pallav Agarwal",
+      "answered_by": [
+       "Deshnee Naidoo"
+      ],
+      "label": "answered",
+      "reason": "Asks for time to assess situation and provide a comprehensive update.",
+      "question_quote": "Thank you so much.",
+      "question_page": 9,
+      "answer_quote": "give us time to assess the full situation and come back to the market",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Ashish",
+      "answered_by": [
+       "Deshnee Naidoo"
+      ],
+      "label": "answered",
+      "reason": "Explains how future M&A and acquisitions will be handled at holdco and segment levels.",
+      "question_quote": "if we want to go for any acquisition, then that acquisition will be related to that particular segment only",
+      "question_page": 16,
+      "answer_quote": "Anything outside of the portfolio would still happen at the holdco level.",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Ashish",
+      "answered_by": [
+       "Deshnee Naidoo"
+      ],
+      "label": "answered",
+      "reason": "Acknowledges caller and asks for affiliation.",
+      "question_quote": "Second is on aluminium operations only.",
+      "question_page": 17,
+      "answer_quote": "Ashish. Because we initially had the call from Kunal and then you came on. So just tell us where you are from please?",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Ashish",
+      "answered_by": [
+       "Anup Agarwal",
+       "Deshnee Naidoo"
+      ],
+      "label": "answered",
+      "reason": "Provides reduction estimates and cost timelines for alumina.",
+      "question_quote": "when can we start seeing lower alumina cost of production",
+      "question_page": 17,
+      "answer_quote": "probably we will see a $50 reduction as we go into the quarter 1.",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Ashish",
+      "answered_by": [
+       "Anup Agarwal"
+      ],
+      "label": "answered",
+      "reason": "Provides guidance and cost breakdown for aluminum cost of production.",
+      "question_quote": "So Aluminium cost of production, then?",
+      "question_page": 17,
+      "answer_quote": "See aluminium cost of production no, again, if you have seen the guidance, we're guiding 1650 to 1700",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Ashish",
+      "answered_by": [
+       "Anup Agarwal",
+       "Charanjit Singh"
+      ],
+      "label": "answered",
+      "reason": "Addresses reasons for delay including administrative processes and community engagement.",
+      "question_quote": "what is the actual delay which we are facing? means, why government is not giving it",
+      "question_page": 18,
+      "answer_quote": "there is some there was a LOI which got expired in the month of March. It was an administrative process",
+      "answer_page": 18
      }
     ],
-    "unverified": 20,
+    "unverified": 8,
     "counts": {
-     "answered": 6,
-     "partly": 2,
+     "answered": 20,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 8"
+    "summary": "questions dodged: 0 of 21"
    },
    {
     "call": "2026-01-31",
@@ -1062,11 +1220,11 @@
        "Ajay Goel",
        "Deshnee Naidoo"
       ],
-      "label": "partly",
-      "reason": "Discussed accounting guidelines and CPs, but did not confirm if all asset name transfers are complet",
-      "question_quote": "are in place for demerger to go through?",
+      "label": "answered",
+      "reason": "Management explained the demerger approvals and timeline.",
+      "question_quote": "is it fair to say that all the approvals and name transfer on the assets are in place",
       "question_page": 8,
-      "answer_quote": "Obviously, we have to work through a couple of CPs and other statutory approvals.",
+      "answer_quote": "Obviously, we have to work through a couple of CPs and other statutory approvals. But, as we earlier mentioned, we are committed and confident making the 1st April as the date on which demerger becomes effective.",
       "answer_page": 8
      },
      {
@@ -1076,8 +1234,8 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Provided expected mix of captive vs import production for coming quarters.",
-      "question_quote": "what would be the mix of captive production versus imports going ahead?",
+      "reason": "Management answered about captive mix and cost drivers.",
+      "question_quote": "what would be the mix of captive production versus imports going ahead",
       "question_page": 9,
       "answer_quote": "we did about 800 KT in Q3, and we are expecting 900 KT plus in Q4. So, that means 60% in Q3 captive, 70% in Q4, and going forward, Q1, Q2, it should be 80%.",
       "answer_page": 9
@@ -1088,10 +1246,10 @@
        "Anup Agarwal"
       ],
       "label": "answered",
-      "reason": "Explained that contracts are locked at LME upon pricing regardless of index.",
+      "reason": "Management clarified the LME locking policy for contracts.",
       "question_quote": "what is the contract as percentage of your total alumina consumption",
       "question_page": 9,
-      "answer_quote": "be it API, be it LME, whenever we are buying, whenever that material is getting priced, we lock in the LME.",
+      "answer_quote": "whenever we are buying, whenever that material is getting priced, we lock in the LME. So, that has been our policy.",
       "answer_page": 9
      },
      {
@@ -1101,8 +1259,8 @@
        "Rajiv Kumar"
       ],
       "label": "answered",
-      "reason": "Provided production capacity targets and ramp-up details for aluminum projects.",
-      "question_quote": "how much do we see the 600-plus KT, let us say in a year from today?",
+      "reason": "Management provided the ramp-up details and target capacity.",
+      "question_quote": "how much do we see the 600-plus KT, let us say in a year from today",
       "question_page": 9,
       "answer_quote": "we will get to 2.8 million tons of aluminum post our BALCO project ramp up.",
       "answer_page": 10
@@ -1114,10 +1272,10 @@
        "Rajinder Singh Ahuja"
       ],
       "label": "answered",
-      "reason": "Outlined current capacity and multi-year power expansion plans.",
-      "question_quote": "how do we see that ramping up our power capacities?",
+      "reason": "Management outlined power capacity growth plans.",
+      "question_quote": "how do we see that ramping up our power capacities",
       "question_page": 10,
-      "answer_quote": "total capacity as of now up and running is 4.2 gigawatt. This is expected to go to around 4.8 gigawatt by end of H1",
+      "answer_quote": "This is expected to go to around 4.8 gigawatt by end of H1 of the next year. And as we demerge, we really want to be a growth company",
       "answer_page": 10
      },
      {
@@ -1126,11 +1284,11 @@
        "Deshnee Naidoo",
        "Rajinder Singh Ahuja"
       ],
-      "label": "partly",
-      "reason": "Addressed equipment constraints and strategy, but deferred concrete numbers.",
-      "question_quote": "do we have tie-ups to reach from 5 to 10 gigawatt?",
+      "label": "answered",
+      "reason": "Management discussed equipment availability and strategy.",
+      "question_quote": "do we have tie-ups to reach from 5 to 10 gigawatt? Are there even equipment available",
       "question_page": 11,
-      "answer_quote": "Maybe at right time, we will come out with the concrete numbers on that.",
+      "answer_quote": "there is a definitely capacity constraint from Indian manufacturers. But we are exploring India as well as outside India",
       "answer_page": 11
      },
      {
@@ -1139,7 +1297,7 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Provided detailed hedging percentages and prices for multiple commodities.",
+      "reason": "Management provided detailed hedging percentages and pricing.",
       "question_quote": "what proportion is hedged for 4th Quarter and mainly for FY27 across divisions",
       "question_page": 11,
       "answer_quote": "overall, 10% for the current fiscal and 7% for the next year, 17% is the hedged quantity.",
@@ -1151,32 +1309,7 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Provided exact FY27 hedge prices for silver, zinc, and aluminum.",
-      "question_quote": "Ajay, can you just give FY27, what is the hedge price?",
-      "question_page": 12,
-      "answer_quote": "silver at about $55 per ton, about the quantity is 48 tons exactly.",
-      "answer_page": 12
-     },
-     {
-      "analyst": "Sumangal Nevatia",
-      "answered_by": [
-       "Anup Agarwal",
-       "Deshnee Naidoo"
-      ],
-      "label": "answered",
-      "reason": "Provided cost change expectations and BALCO ramp-up schedule.",
-      "question_quote": "what sort of cost changes are we expecting over the next one or two quarters?",
-      "question_page": 12,
-      "answer_quote": "next quarter, broadly we are saying costs will remain flat at the constant LME",
-      "answer_page": 12
-     },
-     {
-      "analyst": "Sumangal Nevatia",
-      "answered_by": [
-       "Ajay Goel"
-      ],
-      "label": "answered",
-      "reason": "Provided deleveraging targets and expected debt-to-EBITDA ratio.",
+      "reason": "Management gave specific deleveraging targets.",
       "question_quote": "any new deleveraging targets for both Vedanta Resources and India",
       "question_page": 12,
       "answer_quote": "roughly about 0.8 to 1 billion will be deleveraging across the group in the current fiscal.",
@@ -1188,7 +1321,7 @@
        "Anup Agarwal"
       ],
       "label": "answered",
-      "reason": "Explained why API contracts are used instead of spot purchases and addressed the pricing lag.",
+      "reason": "Management explained the shift to API-linked contracts.",
       "question_quote": "cannot we go for spot purchase or is it not available itself?",
       "question_page": 13,
       "answer_quote": "as we go into the next financial, most of our contracts are API-linked. That is what you call the alumina price index",
@@ -1200,10 +1333,10 @@
        "Anup Agarwal"
       ],
       "label": "answered",
-      "reason": "Confirmed that purchases are API-linked rather than aluminum price-linked.",
+      "reason": "Management confirmed the API-linked purchasing strategy.",
       "question_quote": "we are saying that entire alumina purchase or maximum alumina purchase is API-linked",
       "question_page": 13,
-      "answer_quote": "Yes. So, that is the official point.",
+      "answer_quote": "Yes. So, that is the official point. On a constant LME, something which I mentioned, keep that in mind",
       "answer_page": 13
      },
      {
@@ -1213,10 +1346,10 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Clarified the mechanics of API pricing and consumption month LME linkage.",
-      "question_quote": "what you are trying to say is that",
+      "reason": "Management clarified the pricing mechanism and pricing month lag.",
+      "question_quote": "what you are trying to say is that -",
       "question_page": 13,
-      "answer_quote": "Price is API-linked. Consumption in the month would be LME-linked.",
+      "answer_quote": "Price is API-linked. Consumption in the month would be LME-linked. That is just the way we account for it.",
       "answer_page": 13
      },
      {
@@ -1226,7 +1359,7 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Confirmed the NCLT order date for power and reiterated the target demerger date of April 1st.",
+      "reason": "Management confirmed the target demerger timeline.",
       "question_quote": "are you confident that we should be able to get all requisite approvals before March or April",
       "question_page": 14,
       "answer_quote": "the target right now being the 1st April. So, they will be all co-terminus on the same day.",
@@ -1238,10 +1371,10 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Explained the methodology for apportioning debt among resulting entities based on asset ratios.",
+      "reason": "Management explained how debt will be apportioned.",
       "question_quote": "how do we apportion the portion of debt among the various businesses",
       "question_page": 15,
-      "answer_quote": "net debt in Vedanta India consol at about 6.7 billion, we get apportioned in the ratio of assets that each entity will carry",
+      "answer_quote": "net debt in Vedanta India consol at about 6.7 billion, we get apportioned in the ratio of assets that each entity will carry post demerger.",
       "answer_page": 15
      },
      {
@@ -1250,7 +1383,7 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Explained the reasons for volume decline and the recovery plan involving ASP and tight oil.",
+      "reason": "Management explained the oil production decline and recovery plan.",
       "question_quote": "is there some probability that this can increase going ahead?",
       "question_page": 15,
       "answer_quote": "main reason why volumes are not coming to the level that we expected is actually delaying of the project ASP commissioning",
@@ -1262,7 +1395,7 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Confirmed that the arbitration guarantee obligation will not sit at the demerged entity level.",
+      "reason": "Management clarified the arbitration guarantee placement.",
       "question_quote": "would that be at the Vedanta Limited, the primary company level, or at the oil company level?",
       "question_page": 16,
       "answer_quote": "when we demerge that will be without the obligation sitting at the entity level.",
@@ -1271,13 +1404,25 @@
      {
       "analyst": "Ritesh Shah",
       "answered_by": [
-       "Deshnee Naidoo"
+       "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Clarified that CopperTech holds KCM interest at VRL and has no link to Vedanta Limited.",
-      "question_quote": "How should we read into confidential filing for CopperTech Metals?",
+      "reason": "Management answered about ICL payout schedule and status.",
+      "question_quote": "Any update on that, because honestly, we are expecting some payout to fund that.",
+      "question_page": 16,
+      "answer_quote": "out of 200 million ICL due in January, 50 million in fact we have prepaid in December. So, 150 million now remains pending",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Ritesh Shah",
+      "answered_by": [
+       "Ajay Goel"
+      ],
+      "label": "answered",
+      "reason": "Management explained how the remaining dues will be funded.",
+      "question_quote": "So, the idea is to still fund it via dividends?",
       "question_page": 17,
-      "answer_quote": "there is no link with Vedanta Limited and anything below VRL. This is a separate entity sitting at Vedanta Resources Limited",
+      "answer_quote": "a payment of a dividend in the 4th Quarter is likely subject to board approvals, in that case, the entire dues almost 275 million in the 4th Quarter will be addressed through dividend.",
       "answer_page": 17
      },
      {
@@ -1286,10 +1431,23 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Confirmed that VRL holds 80% of the entity with local government holding 20%.",
+      "reason": "Management confirmed VRL holds 80% of KCM.",
       "question_quote": "So, it is a VRL which holds 80% into the entity, right?",
       "question_page": 17,
-      "answer_quote": "Yes, it is VRL that currently holds 80% of our KCM interest with 20% being held by the local government entity",
+      "answer_quote": "Yes, it is VRL that currently holds 80% of our KCM interest",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Ritesh Shah",
+      "answered_by": [
+       "Charanjit Singh",
+       "Deshnee Naidoo"
+      ],
+      "label": "partly",
+      "reason": "Management refused to comment due to being in the silent period. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "would it be possible for you to give some color on what is the thought process?",
+      "question_page": 17,
+      "answer_quote": "I will have to intervene here. We are in the silent period with respect to having done the S1 filing. So, we cannot speak anything",
       "answer_page": 17
      },
      {
@@ -1297,11 +1455,11 @@
       "answered_by": [
        "Ajay Goel"
       ],
-      "label": "partly",
-      "reason": "Asked for two months time to finalize recasting and tax numbers, but highlighted de-leveraging plans",
-      "question_quote": "if we had to understand the element of accumulated losses, unabsorbed depreciation, tax efficiency, is there a way in which you can help us",
+      "label": "answered",
+      "reason": "Management addressed recasting balance sheets and de-leveraging opportunities.",
+      "question_quote": "is there a way in which you can help us we can appreciate these variables?",
       "question_page": 18,
-      "answer_quote": "Allow us maybe almost two months’ time, you will have all the numbers.",
+      "answer_quote": "That work, Ritesh, right now is underway, as I mentioned. So, over the next eight weeks, two months or so, recasting multiple balance sheets",
       "answer_page": 18
      },
      {
@@ -1310,10 +1468,10 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Clarified the zinc OFS stake size, pricing, and total value in rupees.",
+      "reason": "Management explained the Rs 3,000 crores OFS stake sale amount.",
       "question_quote": "I did not get the Rs.3,000 crores number, sir.",
       "question_page": 18,
-      "answer_quote": "The OFS for zinc right now, we are looking at almost 1.1% as the bidding both by retail and institution got closed at 230. It is about the 1.1% stake sale and that is Rs.3,000 crores broadly.",
+      "answer_quote": "the OFS for zinc right now, we are looking at almost 1.1% as the bidding both by retail and institution got closed at 230. It is about the 1.1% stake sale and that is Rs.3,000 crores broadly.",
       "answer_page": 18
      },
      {
@@ -1322,8 +1480,8 @@
        "Ajay Goel"
       ],
       "label": "answered",
-      "reason": "Identified the claim as an ongoing MoPNG arbitration in oil and gas assessed as medium-low risk.",
-      "question_quote": "in notes-to-accounts, we have mentioned a claim of $512 million. How should we look into this?",
+      "reason": "Management explained the MoPNG arbitration claim entity placement and risk.",
+      "question_quote": "under which entity will this fall and how should we look at this variable going forward?",
       "question_page": 18,
       "answer_quote": "That is an ongoing matter with the MoPNG. It pertains to oil and gas, and the matter is in arbitration.",
       "answer_page": 18
@@ -1335,7 +1493,7 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Confirmed that any potential arbitration gain will be ring-fenced to the oil and gas business post-d",
+      "reason": "Management stated any gain will go to the oil and gas business post-demerger.",
       "question_quote": "if there is a windfall gain, where will it fall?",
       "question_page": 18,
       "answer_quote": "Any accounting implications, gain or otherwise, will go in oil and gas business, post-demerger.",
@@ -1347,8 +1505,8 @@
        "Deshnee Naidoo"
       ],
       "label": "answered",
-      "reason": "Explained cost factors including waste stripping, exchange rates, TCRCs, and provided long-term cost",
-      "question_quote": "Just on Zinc International, how do we think about the cost in the 4th Quarter and next year?",
+      "reason": "Management explained the cost drivers and expected long-term cost range for Zinc International.",
+      "question_quote": "how do we think about the cost in the 4th Quarter and next year?",
       "question_page": 19,
       "answer_quote": "A good cost structure post ramp up of our Gamsberg project actually should be in the range of about 1.1 to 1.2.",
       "answer_page": 19
@@ -1359,17 +1517,18 @@
        "Ajay Goel"
       ],
       "label": "partly",
-      "reason": "Question was cut off before completion, prompting Ajay Goel to ask for clarification.",
-      "question_quote": "Is that $400 million for FY27 and FY28?",
+      "reason": "Call ended before management fully answered the question.",
+      "question_quote": "You mentioned that the 4th Quarter, the balance interest payment is about $125 million. Is that $400 million for FY27 and FY28?",
       "question_page": 19,
       "answer_quote": "Okay. From a VRL viewpoint, Rashi?",
       "answer_page": 19
      }
     ],
     "unverified": 5,
+    "downgraded": 1,
     "counts": {
-     "answered": 21,
-     "partly": 4,
+     "answered": 23,
+     "partly": 2,
      "dodged": 0
     },
     "summary": "questions dodged: 0 of 25"
@@ -1521,7 +1680,7 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-04-30: questions dodged: 0 of 8",
+    "text": "Call of 2026-04-30: questions dodged: 0 of 21",
     "source": "dodged-question check"
    },
    {
@@ -1533,7 +1692,17 @@
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter profit reached Rs 6,202 cr with a +78.3% YoY increase.",
+     "text": "The latest quarter revenue was Rs 26,356 cr, which is +57.5% YoY.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 26,356 cr, +57.5% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The latest quarter profit reached Rs 6,202 cr, showing a +78.3% YoY increase.",
      "cites": [
       {
        "id": "F5",
@@ -1543,7 +1712,7 @@
      ]
     },
     {
-     "text": "Operating margin reached 38.0% in the latest quarter, showing a +9.0 pts YoY change.",
+     "text": "Operating margin was 38.0% in the latest quarter, up +9.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1551,21 +1720,11 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The 3-year operating cash flow reached 2.16x reported profit.",
-     "cites": [
-      {
-       "id": "F9",
-       "text": "3-year operating cash flow = 2.16x reported profit",
-       "source": "cash flow"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The 3y revenue CAGR is -18.9% while profit CAGR is 20.1%.",
+     "text": "The 3y revenue CAGR stands at -18.9% alongside a profit CAGR of 20.1%.",
      "cites": [
       {
        "id": "F2",
@@ -1575,7 +1734,7 @@
      ]
     },
     {
-     "text": "The 5y revenue CAGR is -2.3% alongside a profit CAGR of 10.8%.",
+     "text": "The 5y revenue CAGR is -2.3% while the profit CAGR is 10.8%.",
      "cites": [
       {
        "id": "F3",
@@ -1585,7 +1744,7 @@
      ]
     },
     {
-     "text": "Debt/equity stands at 2.44 with borrowings of Rs 31,113 cr.",
+     "text": "Debt to equity is 2.44 with borrowings at Rs 31,113 cr.",
      "cites": [
       {
        "id": "F7",
@@ -1619,8 +1778,8 @@
    "topics_dropped": [
     "net debt three years (3 USD mn)"
    ],
-   "questions_dodged": "0 of 33",
-   "questions_partly_answered": "6 of 33"
+   "questions_dodged": "0 of 46",
+   "questions_partly_answered": "3 of 46"
   }
  },
  "stage": "writing",
@@ -1672,17 +1831,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 10,
-    "cache_hits": 0,
+    "api_calls": 4,
+    "cache_hits": 6,
     "failed": 1,
-    "tokens_in": 21928,
-    "tokens_out": 8231,
+    "tokens_in": 16109,
+    "tokens_out": 6145,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 158.0,
+ "built_in_seconds": 32.8,
  "from_cache": true
 }

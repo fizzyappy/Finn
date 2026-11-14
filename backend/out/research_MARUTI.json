@@ -1,6 +1,6 @@
 {
  "ticker": "MARUTI",
- "started_at": "2026-11-14T12:55:27",
+ "started_at": "2026-11-14T22:34:41",
  "states": [
   {
    "state": "too_early",
@@ -479,10 +479,10 @@
        "Rahul Bharti"
       ],
       "label": "partly",
-      "reason": "Gave broad qualitative views on costs but declined to give specific margin guidance.",
-      "question_quote": "give us some guidance on how do we think about margins",
+      "reason": "Management discussed demand and margins generally without providing specific guidance on costs or ma",
+      "question_quote": "how should we think about the cost headwinds going into the next 1 or 2 quarters? And maybe what are the mitigating factors",
       "question_page": 6,
-      "answer_quote": "though you asked only about margin, but I'll speak about both demand scenario and margins",
+      "answer_quote": "So though you asked only about margin, but I'll speak about both demand scenario and margins",
       "answer_page": 6
      },
      {
@@ -491,35 +491,11 @@
        "Rahul Bharti"
       ],
       "label": "partly",
-      "reason": "Explained mitigating factors but stated it is difficult to put a number on headwinds.",
+      "reason": "Management explained mitigating actions and demand, but stated it is difficult to put a number on he",
       "question_quote": "Do we see a similar sort of cost headwind going into quarter 1 as well",
       "question_page": 6,
-      "answer_quote": "It will be difficult to put a number. But yes, in such a situation some cost headwinds do come",
+      "answer_quote": "It will be difficult to put a number. But yes, in such a situation some cost headwinds",
       "answer_page": 7
-     },
-     {
-      "analyst": "Gunjan Prithyani",
-      "answered_by": [
-       "Rahul Bharti"
-      ],
-      "label": "partly",
-      "reason": "Discussed CAFE norms and flex-fuel generally, but did not provide specific portfolio cost impacts.",
-      "question_quote": "what sort of portfolio cost impact, we see because of flex-fuel",
-      "question_page": 7,
-      "answer_quote": "CAFE is an energy efficiency regulation. The final draft is yet to be notified.",
-      "answer_page": 7
-     },
-     {
-      "analyst": "Gunjan Prithyani",
-      "answered_by": [
-       "Rahul Bharti"
-      ],
-      "label": "partly",
-      "reason": "Explained flex-fuel rollout timing and adoption factors, but did not give a precise engine upgrade c",
-      "question_quote": "What can be the cost increase because of flex-fuel for upgrading the engine",
-      "question_page": 7,
-      "answer_quote": "So it is like a futuristic plan. The volumes will be minimal at this stage. It will grow",
-      "answer_page": 8
      },
      {
       "analyst": "Chandramouli Muthiah",
@@ -527,10 +503,10 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Provided management's volume growth expectations for the year.",
-      "question_quote": "how you're thinking about industry growth, both domestic and export for FY27",
+      "reason": "Management provided the growth outlook of over 10% for Maruti.",
+      "question_quote": "how you're thinking about industry growth, both domestic and export for FY27?",
       "question_page": 8,
-      "answer_quote": "broad expectation, which our Chairman also conveyed, is growth of over 10% this year",
+      "answer_quote": "The broad expectation, which our Chairman also conveyed, is growth of over 10% this year",
       "answer_page": 8
      },
      {
@@ -539,8 +515,8 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Clarified the locations for the additional capacity additions.",
-      "question_quote": "additional capacity coming on board in Gujarat later this fiscal",
+      "reason": "Management clarified the capacity locations.",
+      "question_quote": "You mentioned that there will be 250,000 units of additional capacity coming on board in Gujarat",
       "question_page": 8,
       "answer_quote": "One in Haryana, the other in Gujarat.",
       "answer_page": 8
@@ -551,7 +527,7 @@
        "Arnab Roy"
       ],
       "label": "answered",
-      "reason": "Addressed start-up costs for brownfield capacity, stating they will not be significant.",
+      "reason": "Management addressed start-up costs for brownfield capacity expansions.",
       "question_quote": "just want to understand if there will be any start-up costs to be expected in these brownfield capacity additions",
       "question_page": 8,
       "answer_quote": "we do not expect anything significant because as Rahul explained, the demand outlook looks good",
@@ -563,9 +539,9 @@
        "Arnab Roy",
        "Rahul Bharti"
       ],
-      "label": "answered",
-      "reason": "Addressed mark-to-market impact on other income and mentioned recent reversal percentages.",
-      "question_quote": "If bond yields were to remain constant, do you think this completely reverses next quarter",
+      "label": "partly",
+      "reason": "Management addressed MTM and bond yields, but got cut off before answering export revenue.",
+      "question_quote": "If bond yields were to remain constant, do you think this completely reverses next quarter? And also just the other bookkeeping questions are around export revenue",
       "question_page": 8,
       "answer_quote": "As of yesterday, some amount of reversal has already happened. Roughly about 35% of this is already reversed",
       "answer_page": 9
@@ -576,22 +552,22 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Asked for clarification on the reference period and then received the specific retail number in the ",
-      "question_quote": "Maruti's retail volume number for the quarter",
+      "reason": "Management asked for clarification on the base figure and then provided the answer.",
+      "question_quote": "I think last year, fourth quarter, we did 430,000 units, this year what the retail number is for fourth quarter?",
       "question_page": 9,
       "answer_quote": "Last year, which is the figure you have?",
       "answer_page": 9
      },
      {
-      "analyst": "Raghunandhan NL",
+      "analyst": "Chandramouli Muthiah",
       "answered_by": [
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Explained why urban and rural boundaries are no longer tracked separately due to integration.",
-      "question_quote": "if you can indicate growth or the share for rural urban in FY26",
+      "reason": "Management provided the requested retail numbers and year-on-year growth.",
+      "question_quote": "430,000 units for fourth quarter, MSIL domestic retail.",
       "question_page": 9,
-      "answer_quote": "It is a very hard to draw a line between urban and rural because the boundaries are blurring now",
+      "answer_quote": "This year, fourth quarter was 468,700 units approximately. So, there's a 12.9% year-on-year growth",
       "answer_page": 9
      },
      {
@@ -600,10 +576,10 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Provided exact percentages for first-time, replacement, and additional buyers.",
-      "question_quote": "how are you seeing the trend in the first-time buyers and the share increase",
-      "question_page": 10,
-      "answer_quote": "the first-time buyer is about 51% in Q4 FY26. 18% is about replacement buyer and 31% are additional car buyers.",
+      "reason": "Management explained why rural and urban data is no longer tracked separately.",
+      "question_quote": "if you can indicate growth or the share for rural urban in FY26?",
+      "question_page": 9,
+      "answer_quote": "So, we don't monitor that figure anymore. But of course, we keep the distribution network as extensive as possible.",
       "answer_page": 10
      },
      {
@@ -612,8 +588,20 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Provided the historical progression of first-time buyer shares across recent quarters.",
-      "question_quote": "How has the share of first-time buyers increased in comparison to pre-GST cut",
+      "reason": "Management gave precise percentages for first-time, replacement, and additional buyers.",
+      "question_quote": "And how are you seeing the trend in the first-time buyers and the share increase?",
+      "question_page": 10,
+      "answer_quote": "Happy to share that the first-time buyer is about 51% in Q4 FY26. 18% is about replacement buyer and 31% are additional",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Raghunandhan NL",
+      "answered_by": [
+       "Rahul Bharti"
+      ],
+      "label": "answered",
+      "reason": "Management provided the quarterly progression of first-time buyer shares.",
+      "question_quote": "And how has the share increased, sir? How should we look at it?",
       "question_page": 10,
       "answer_quote": "H1FY26 was about 42%. Q3FY26 was at 48% and Q4FY26 at 51%.",
       "answer_page": 10
@@ -624,8 +612,8 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Provided EBIT margin expansion figures related to lower discounts.",
-      "question_quote": "Can you share the blended discounts number for Q4FY26",
+      "reason": "Management provided the EBIT margin expansion percentage driven by lower discounts.",
+      "question_quote": "Can you share the blended discounts number for Q4FY26?",
       "question_page": 10,
       "answer_quote": "What we can share with you is that EBIT margin has expanded by about 50 bps on account of lower discounts",
       "answer_page": 10
@@ -636,10 +624,10 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Discussed overall product line-up and SUV plans without giving exact model counts.",
-      "question_quote": "how many new nameplate addition and model refreshes you are targeting across ICE and separately for EV",
+      "reason": "Management discussed model line-ups and upcoming SUV launches across categories.",
+      "question_quote": "how many new nameplate addition and model refreshes you are targeting across ICE and separately for EV?",
       "question_page": 10,
-      "answer_quote": "Across categories, we will have new models. We have spoken about 7 more SUVs all the way through the end of the decade.",
+      "answer_quote": "We have a healthy product line-up, and we'll keep our customers enthralled. We need to improve our market share.",
       "answer_page": 10
      },
      {
@@ -648,35 +636,11 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Explained lead times and lumpy model launch cadences.",
-      "question_quote": "can we imply that going by that run rate, we should be having one new nameplate at the end of the year",
+      "reason": "Management explained that model development has a 4-year lead time creating lumpiness rather than eq",
+      "question_quote": "can we imply that going by that run rate, we should be having one new nameplate at the end of the year?",
       "question_page": 10,
-      "answer_quote": "model development is about 4 years lead time. So it's not necessary that we space it out equally all the time.",
+      "answer_quote": "See, a model development is about 4 years lead time. So it's not necessary that we space it out equally all the time.",
       "answer_page": 10
-     },
-     {
-      "analyst": "Kumar Rakesh",
-      "answered_by": [
-       "Rahul Bharti"
-      ],
-      "label": "answered",
-      "reason": "Addressed domestic EV product reception, capacity constraints, and customer satisfaction targets.",
-      "question_quote": "how is the product doing in the domestic market? And what's your aspiration for the domestic market in the EV space",
-      "question_page": 10,
-      "answer_quote": "wherever we have sold that car, the customers are very happy. This is both in India and in our export markets.",
-      "answer_page": 11
-     },
-     {
-      "analyst": "Kumar Rakesh",
-      "answered_by": [
-       "Rahul Bharti"
-      ],
-      "label": "partly",
-      "reason": "Expressed confidence in returning to a healthy trajectory but avoided giving explicit guidance on re",
-      "question_quote": "we should get back on a trajectory of margin expansion and potentially in the direction of 10% EBIT margin",
-      "question_page": 11,
-      "answer_quote": "it's always difficult to give out a guidance on margins. But what I can tell you is the quarter 4 FY26 EBIT margin was in line with estimate.",
-      "answer_page": 11
      },
      {
       "analyst": "Arvind Sharma",
@@ -684,8 +648,8 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Confirmed belief in headroom for ASP increases due to upper segment models.",
-      "question_quote": "Q-o-Q basis, ASPs have increased a fair bit. How sustainable it is? And what are the drivers for this ASP increase",
+      "reason": "Management confirmed headroom for ASP increases.",
+      "question_quote": "On a Q-o-Q basis, ASPs have increased a fair bit. How sustainable it is? And what are the drivers",
       "question_page": 11,
       "answer_quote": "We do believe that there is still headroom for ASP because of the upper segment models.",
       "answer_page": 11
@@ -696,10 +660,10 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Confirmed ASP headroom applies from Q4 levels supported by EVs.",
-      "question_quote": "From the fourth quarter level as well",
+      "reason": "Management confirmed ASP growth expectations from current levels.",
+      "question_quote": "From the fourth quarter level as well?",
       "question_page": 11,
-      "answer_quote": "For example, EVs have to increase in the future. So that will help ASPs.",
+      "answer_quote": "Yes. For example, EVs have to increase in the future. So that will help ASPs.",
       "answer_page": 11
      },
      {
@@ -707,11 +671,11 @@
       "answered_by": [
        "Arnab Roy"
       ],
-      "label": "answered",
-      "reason": "Provided total capex plans for FY27 and commented on network inventory levels.",
+      "label": "partly",
+      "reason": "Management answered the capex question but deferred the inventory question.",
       "question_quote": "What is the capex plan for these 2 expansions for FY '27? And also just saw that the inventory was fairly high",
       "question_page": 11,
-      "answer_quote": "we are looking at a INR14,000 crores capex for the full year. On the inventory, no, I don't think we have a significant increase.",
+      "answer_quote": "Overall, on the capex for FY 26-27, we are looking at a INR14,000 crores capex for the full year.",
       "answer_page": 11
      },
      {
@@ -720,32 +684,20 @@
        "Rahul Bharti"
       ],
       "label": "answered",
-      "reason": "Clarified that the 10% growth statement applied to Maruti rather than the domestic PV industry.",
-      "question_quote": "you said the domestic PV industry to grow by 10%. So are we right in understanding this",
+      "reason": "Management clarified the distinction between Maruti and industry growth figures.",
+      "question_quote": "you said the domestic PV industry to grow by 10%. So are we right in understanding this?",
       "question_page": 12,
-      "answer_quote": "No, no. We are speaking about Maruti, not the domestic PV industry.",
-      "answer_page": 12
-     },
-     {
-      "analyst": "Amit Hiranandani",
-      "answered_by": [
-       "Rahul Bharti"
-      ],
-      "label": "partly",
-      "reason": "Described franchise strength and uncertainties due to war without giving specific export projections",
-      "question_quote": "What are our plans to deal with the present export situation",
-      "question_page": 12,
-      "answer_quote": "If you can help me predict the war, I can predict the export number. So we are in a healthy position.",
+      "answer_quote": "No, no. We are speaking about Maruti, not the domestic PV industry. We are talking about Maruti Suzuki expectation.",
       "answer_page": 12
      }
     ],
-    "unverified": 2,
+    "unverified": 6,
     "counts": {
-     "answered": 16,
-     "partly": 6,
+     "answered": 14,
+     "partly": 4,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 22"
+    "summary": "questions dodged: 0 of 18"
    }
   ],
   "narrative_vs_numbers": [
@@ -851,24 +803,14 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-04-30: questions dodged: 0 of 22",
+    "text": "Call of 2026-04-30: questions dodged: 0 of 18",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Market cap stands at Rs 404,133 cr with a P/E of 30 as per screener ratios.",
-     "cites": [
-      {
-       "id": "F1",
-       "text": "P/E 30, market cap Rs 404,133 cr",
-       "source": "screener ratios"
-      }
-     ]
-    },
-    {
-     "text": "The 3y revenue CAGR was 15.7% and profit CAGR was 21.1%.",
+     "text": "The 3y revenue CAGR is 15.7% and profit CAGR is 21.1%.",
      "cites": [
       {
        "id": "F2",
@@ -878,19 +820,29 @@
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "The latest quarter revenue was Rs 53,356 cr, representing +26.0% YoY growth.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 53,356 cr, +26.0% YoY",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The debt to equity ratio is 0.0 with borrowings at Rs 83 cr.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Debt/equity 0.0 (borrowings Rs 83 cr)",
+       "source": "balance sheet"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 2,466 cr, down -26.4% YoY.",
+     "text": "The latest quarter profit was Rs 2,466 cr, which is -26.4% YoY.",
      "cites": [
       {
        "id": "F5",
@@ -900,7 +852,7 @@
      ]
     },
     {
-     "text": "Operating margin was 9.0% in the latest quarter, dropping -3.0 pts YoY.",
+     "text": "The operating margin was 9.0% in the latest quarter, dropping -3.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -910,12 +862,12 @@
      ]
     },
     {
-     "text": "Borrowings are Rs 83 cr with a debt to equity of 0.0.",
+     "text": "The P/E is 30 with a market cap of Rs 404,133 cr.",
      "cites": [
       {
-       "id": "F7",
-       "text": "Debt/equity 0.0 (borrowings Rs 83 cr)",
-       "source": "balance sheet"
+       "id": "F1",
+       "text": "P/E 30, market cap Rs 404,133 cr",
+       "source": "screener ratios"
       }
      ]
     }
@@ -934,8 +886,8 @@
     "Not measurable": 2
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 22",
-   "questions_partly_answered": "6 of 22"
+   "questions_dodged": "0 of 18",
+   "questions_partly_answered": "4 of 18"
   }
  },
  "stage": "writing",
@@ -1157,17 +1109,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 4,
-    "cache_hits": 0,
+    "api_calls": 2,
+    "cache_hits": 2,
     "failed": 0,
-    "tokens_in": 6583,
-    "tokens_out": 3145,
+    "tokens_in": 4847,
+    "tokens_out": 2824,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 130.7,
+ "built_in_seconds": 24.4,
  "from_cache": true
 }

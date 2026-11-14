@@ -1,6 +1,6 @@
 {
  "ticker": "POLYCAB",
- "started_at": "2026-11-14T13:11:07",
+ "started_at": "2026-11-14T22:36:27",
  "states": [
   {
    "state": "too_early",
@@ -1341,51 +1341,15 @@
     "pairs_found": 28,
     "judged": [
      {
-      "analyst": "Kevin Shah",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
-      "label": "answered",
-      "reason": "Management explained the drivers behind FMEG margin expansion.",
-      "question_quote": "what are the key drivers behind it, and which of these segments are profitable",
-      "question_page": 8,
-      "answer_quote": "scale definitely plays an important part, and definitely the operating leverage from here",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Kevin Shah",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
-      "label": "answered",
-      "reason": "Management listed the key margin drivers and sustainability factors.",
-      "question_quote": "what are the other drivers? And how much of it do you see it as sustainable",
-      "question_page": 9,
-      "answer_quote": "confluence of four or five things that we have already highlighted",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Kevin Shah",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
-      "label": "partly",
-      "reason": "Management declined to give a specific downside risk, pointing to long-term guidance.",
-      "question_quote": "what is the downside risk that you see to your Project Spring targets",
-      "question_page": 9,
-      "answer_quote": "we would like to be in that guidance range, I think, till FY30",
-      "answer_page": 9
-     },
-     {
       "analyst": "Sonali",
       "answered_by": [
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management gave specific volume growth figures for cables and wires.",
-      "question_quote": "What could be our volume growth? And what could be our value growth",
+      "reason": "Provided volume growth breakdown versus value growth.",
+      "question_quote": "What could be our volume growth? And what could be our value growth for that?",
       "question_page": 10,
-      "answer_quote": "overall volumes have grown by mid to high-single digits",
+      "answer_quote": "overall volumes have grown by mid to high-single digits. Breaking down into the cables and wires segment",
       "answer_page": 10
      },
      {
@@ -1394,20 +1358,8 @@
        "Niyant Maru"
       ],
       "label": "answered",
-      "reason": "Management clarified the IBC hearing status and next steps.",
-      "question_quote": "So do we have a next hearing date?",
-      "question_page": 10,
-      "answer_quote": "the entire case has been heard today, and now probably we have to wait",
-      "answer_page": 10
-     },
-     {
-      "analyst": "Sonali",
-      "answered_by": [
-       "Niyant Maru"
-      ],
-      "label": "answered",
-      "reason": "Management confirmed completion of the hearing.",
-      "question_quote": "Understood. So no...",
+      "reason": "Confirmed hearing completion status.",
+      "question_quote": "So no...",
       "question_page": 10,
       "answer_quote": "Is completed and the order is reserved.",
       "answer_page": 10
@@ -1417,8 +1369,8 @@
       "answered_by": [
        "Niyant Maru"
       ],
-      "label": "dodged",
-      "reason": "Management declined to provide a timeline for the order.",
+      "label": "partly",
+      "reason": "Refused to provide a timeline for the order. (no refusal or deflection shown in the quoted answer)",
       "question_quote": "Sir any timeline or we will just leave it to the time that they require?",
       "question_page": 10,
       "answer_quote": "I would not like to hazard a guess on the timeline",
@@ -1430,20 +1382,8 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management explained profitability outlook and competition approach.",
-      "question_quote": "how are you looking at profitability? And also, if you can share some comments on the new entrant",
-      "question_page": 10,
-      "answer_quote": "Second half also looks very promising, and it's largely driven through the kind of demand",
-      "answer_page": 11
-     },
-     {
-      "analyst": "Umang Mehta",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
-      "label": "answered",
-      "reason": "Management confirmed no pricing actions were taken yet.",
-      "question_quote": "fair to say there is no action in terms of pricing or anything from your end yet",
+      "reason": "Confirmed no pricing action taken yet.",
+      "question_quote": "So fair to say there is no action in terms of pricing or anything from your end yet",
       "question_page": 12,
       "answer_quote": "Nothing as of now.",
       "answer_page": 12
@@ -1454,22 +1394,10 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management reiterated adherence to their plans.",
+      "reason": "Reaffirmed current business plan continuity.",
       "question_quote": "Sure, sure.",
       "question_page": 12,
       "answer_quote": "We are moving ahead with our plan.",
-      "answer_page": 12
-     },
-     {
-      "analyst": "Umang Mehta",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
-      "label": "answered",
-      "reason": "Management provided an outlook and update on the export business.",
-      "question_quote": "exports, any outlook from a full year growth perspective. And second one was on data centers",
-      "question_page": 12,
-      "answer_quote": "exports is a very untapped market for India per se. And it's a very important growth driver",
       "answer_page": 12
      },
      {
@@ -1478,7 +1406,7 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management explained how to think about volume growth rather than sequential quarters.",
+      "reason": "Addressed full year volume growth expectations.",
       "question_quote": "do you expect more like a mid- to high single-digit volume growth on a full year basis?",
       "question_page": 13,
       "answer_quote": "whatever the market grows, we will do 1.5x of that in cable and wires",
@@ -1489,23 +1417,11 @@
       "answered_by": [
        "Aditya Nathany"
       ],
-      "label": "partly",
-      "reason": "Management discussed order book size instead of confirming execution numbers.",
-      "question_quote": "are we still working with the same number or do you think that execution might improve",
-      "question_page": 13,
-      "answer_quote": "Roughly the order book, I would say it is close to around INR9,000 crores, INR10,000 crores.",
-      "answer_page": 14
-     },
-     {
-      "analyst": "Ashish Kanodia",
-      "answered_by": [
-       "Aditya Nathany"
-      ],
       "label": "answered",
-      "reason": "Management explained the drivers behind wires outpacing cables.",
+      "reason": "Explained why wires grew faster than cables.",
       "question_quote": "What led to wires kind of outpacing cables?",
       "question_page": 14,
-      "answer_quote": "growth is largely coming from the demand that we are getting from the different manufacturing",
+      "answer_quote": "growth is largely coming from the demand that we are getting from the different manufacturing and the other mobility side",
       "answer_page": 14
      },
      {
@@ -1514,10 +1430,10 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management addressed institutional offtake and impact of metal prices.",
-      "question_quote": "are you seeing any delay in offtake given the substantial increase Q-o-Q we have seen in copper, aluminum prices?",
+      "reason": "Addressed institutional segment offtake and metal price impacts.",
+      "question_quote": "are you seeing any delay in offtake given the substantial increase Q-o-Q we have seen in copper",
       "question_page": 14,
-      "answer_quote": "we are not seeing any significant movement with that respect",
+      "answer_quote": "we are not seeing any significant movement with that respect because if you see, copper prices have only gone up 6%",
       "answer_page": 14
      },
      {
@@ -1526,8 +1442,8 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management explained the nature of the cash flow line item as advance inventory payments.",
-      "question_quote": "explain the nature and if there is any one-off and this will get reversed in coming quarter?",
+      "reason": "Explained nature of the cash flow line item.",
+      "question_quote": "We see a INR12.5 billion kind of line item in the cash flow statement. If you could explain the nature",
       "question_page": 15,
       "answer_quote": "These are just a part of the kind of the advance payment that we have made towards procurement",
       "answer_page": 15
@@ -1537,11 +1453,11 @@
       "answered_by": [
        "Aditya Nathany"
       ],
-      "label": "partly",
-      "reason": "Management declined to give revenue growth guidance while discussing copper prices.",
+      "label": "answered",
+      "reason": "Addressed export cable products and revenue sustainability.",
       "question_quote": "can we assume the quarterly revenue which you have achieved in quarter 2, the revenue run rate is sustainable",
       "question_page": 15,
-      "answer_quote": "we would not like to guide in terms of the revenue growth per se",
+      "answer_quote": "demand is very strong, that's the reason it's getting absorbed in the market. So if copper prices remain at a certain level",
       "answer_page": 15
      },
      {
@@ -1550,10 +1466,10 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management explained factors influencing margins and why guidance is maintained.",
-      "question_quote": "long-term, we are still holding 11% to 13% range guidance. So is that largely on competitive intensity or there's something else there",
+      "reason": "Addressed margin guidance versus recent performance.",
+      "question_quote": "long-term, we are still holding 11% to 13% range guidance. So is that largely on competitive intensity",
       "question_page": 16,
-      "answer_quote": "there's a confluence of four or five things in place. There's a kind of a mix that plays into the fact",
+      "answer_quote": "we are not taking any initiatives as of now in terms of competition, per se. We don't need to do that.",
       "answer_page": 16
      },
      {
@@ -1561,8 +1477,8 @@
       "answered_by": [
        "Aditya Nathany"
       ],
-      "label": "dodged",
-      "reason": "Management declined to give guidance on whether wires would continue growing faster than cables.",
+      "label": "partly",
+      "reason": "Refused to give guidance on segment growth rates. (no refusal or deflection shown in the quoted answer)",
       "question_quote": "in second half also, do you think wires could continue to grow faster than cables?",
       "question_page": 17,
       "answer_quote": "I mean we would not like to give any guidance on that. We never share that kind of a guidance.",
@@ -1573,8 +1489,20 @@
       "answered_by": [
        "Aditya Nathany"
       ],
+      "label": "partly",
+      "reason": "Refused to share unorganized market breakdown. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "what is the unorganized competition in unorganized market in the wire segment currently",
+      "question_page": 17,
+      "answer_quote": "So we don't -- Ravindra, we don't really share that kind of a breakdown as per...",
+      "answer_page": 17
+     },
+     {
+      "analyst": "Rabindra Nath Nayak",
+      "answered_by": [
+       "Aditya Nathany"
+      ],
       "label": "answered",
-      "reason": "Management confirmed wire market percentage.",
+      "reason": "Provided percentage share for the wires market.",
       "question_quote": "One pie?",
       "question_page": 17,
       "answer_quote": "It's 30%-35% of the overall.",
@@ -1586,10 +1514,10 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management stated total organized market share for cable and wire.",
+      "reason": "Clarified company market share for cable and wire industry.",
       "question_quote": "Okay, 30%. Okay. So our share would be, house share would be 30%?",
       "question_page": 17,
-      "answer_quote": "market share is around 30% to 31%.",
+      "answer_quote": "our market share is around 30% to 31%.",
       "answer_page": 17
      },
      {
@@ -1597,8 +1525,8 @@
       "answered_by": [
        "Aditya Nathany"
       ],
-      "label": "answered",
-      "reason": "Management declined to give segment-specific market share breakdown.",
+      "label": "dodged",
+      "reason": "Explicitly refused to give segment breakdown.",
       "question_quote": "I'm just talking about only the house wire segment, that's why I'm asking?",
       "question_page": 17,
       "answer_quote": "Ravindra, we don't give segment breakdown.",
@@ -1610,8 +1538,8 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management explained solar rooftop product scope and FMEG growth drivers.",
-      "question_quote": "What is the type of products Polycab is doing on the solar rooftop side? If you just explain the nature of the product",
+      "reason": "Explained solar inverter business model and FMEG growth.",
+      "question_quote": "what is the type of products Polycab is doing on the solar rooftop side?",
       "question_page": 18,
       "answer_quote": "we are only doing inverters in the solar category. So that's largely a trading business for us",
       "answer_page": 18
@@ -1622,7 +1550,7 @@
        "Aditya Nathany"
       ],
       "label": "answered",
-      "reason": "Management confirmed they only trade inverters and do not manufacture panels.",
+      "reason": "Confirmed they only do inverters currently without manufacturing panels.",
       "question_quote": "We are not actually getting into the solar panels or solar rooftop installations. Is that correct?",
       "question_page": 19,
       "answer_quote": "Yes. As of now, we are not doing any manufacturing side of it.",
@@ -1633,21 +1561,34 @@
       "answered_by": [
        "Aditya Nathany"
       ],
-      "label": "partly",
-      "reason": "Management expressed confidence in FMEG growth without providing specific revenue run rate guidance.",
+      "label": "answered",
+      "reason": "Addressed revenue run rate outlook for FMEG.",
       "question_quote": "if you could just give some guidance on how should we look at revenue run rates for this business?",
       "question_page": 19,
-      "answer_quote": "we are very much confident that we would love to do this kind of a level",
+      "answer_quote": "the kind of growth that we are seeing in FMEG, we are very much confident that we would love to do this kind of a level",
+      "answer_page": 19
+     },
+     {
+      "analyst": "Rahul Agarwal",
+      "answered_by": [
+       "Aditya Nathany"
+      ],
+      "label": "answered",
+      "reason": "Addressed copper sourcing plans and reliance on imports.",
+      "question_quote": "how would you think a bit more longer term, if you could share some thoughts around next three to five years",
+      "question_page": 19,
+      "answer_quote": "today we are doing 100% of imported copper, and market dynamics suggest today that it's beneficial for us doing this.",
       "answer_page": 19
      }
     ],
-    "unverified": 3,
+    "unverified": 8,
+    "downgraded": 3,
     "counts": {
-     "answered": 19,
-     "partly": 4,
-     "dodged": 2
+     "answered": 16,
+     "partly": 3,
+     "dodged": 1
     },
-    "summary": "questions dodged: 2 of 25"
+    "summary": "questions dodged: 1 of 20"
    },
    {
     "call": "2026-07-31",
@@ -1660,10 +1601,10 @@
        "Shashank Yagnick"
       ],
       "label": "partly",
-      "reason": "Answered volume and pricing strategy, but skipped detailed accounting breakdown of creditors.",
-      "question_quote": "indicate the price hikes and volume growth",
+      "reason": "Management answered copper and volume questions but did not quantify creditors or acceptances.",
+      "question_quote": "If you can indicate the price hikes and volume growth in this quarter",
       "question_page": 6,
-      "answer_quote": "volume growth trajectory, which is put together, cable & wire domestic business grew from about low to mid-single-digit volume growth",
+      "answer_quote": "cable & wire domestic business grew from about low to mid-single-digit volume growth",
       "answer_page": 7
      },
      {
@@ -1672,10 +1613,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Detailed both data center opportunity and export trends.",
-      "question_quote": "upcoming data centre opportunity or any opportunity in optic fibres",
+      "reason": "Management discussed data centre opportunity and addressed export trends.",
+      "question_quote": "hear your thoughts on the upcoming data centre opportunity",
       "question_page": 7,
-      "answer_quote": "data centre opportunity, I think it's a very big opportunity. We are hopeful that material translation should happen from estimates to reality",
+      "answer_quote": "data centre opportunity, I think it's a very big opportunity",
       "answer_page": 7
      },
      {
@@ -1684,10 +1625,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Addressed Bharat Net profitability under high fibre prices and explained EPC revenue weakness.",
-      "question_quote": "profitability of these projects panning out",
+      "reason": "Management addressed Bharat Net fibre costs and EPC revenue trends.",
+      "question_quote": "how do you see the profitability of these projects panning out",
       "question_page": 8,
-      "answer_quote": "strength of our procurement is such that we have been able to secure the fibre for the execution period",
+      "answer_quote": "supply portion is around 30% of the overall value. Now for that portion, we have already secured the fibre",
       "answer_page": 8
      },
      {
@@ -1696,22 +1637,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Explained that full year volume growth should be looked at over longer periods and reiterated the 1.",
-      "question_quote": "how should we look at full year volume growth",
+      "reason": "Management explained why they cannot yet quantify market share and noted when it is done.",
+      "question_quote": "does this imply market share gain for Polycab in wires segment? And how much will be the market share, if you can quantify?",
       "question_page": 9,
-      "answer_quote": "we have always guided that we will do 1.5x of market growth, which is a mix of both volume and value",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Akshay Gattani",
-      "answered_by": [
-       "Shashank Yagnick"
-      ],
-      "label": "answered",
-      "reason": "Stated they must wait for peer results and prefer structural analysis over 10 to 12 months.",
-      "question_quote": "does this imply market share gain for Polycab",
-      "question_page": 9,
-      "answer_quote": "we'll have to obviously wait for other results to also get public, right? Only then we can comment on that",
+      "answer_quote": "we'll have to obviously wait for other results to also get public, right? Only then we can comment on that.",
       "answer_page": 9
      },
      {
@@ -1720,10 +1649,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Discussed transmission performance, solar side visibility, and infra/industrial demand.",
-      "question_quote": "how was the performance from transmission side this time",
+      "reason": "Management provided color on T&D space and renewable generation demand.",
+      "question_quote": "How was the performance from transmission side this time? And how do you see the visibility, especially from solar side?",
       "question_page": 10,
-      "answer_quote": "overall generation side, I'm sure we are all happy with the developments that are happening on renewable generation",
+      "answer_quote": "overall generation side, I'm sure we are all happy with the developments that are happening on renewable generation.",
       "answer_page": 10
      },
      {
@@ -1732,22 +1661,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Provided separate volume growth numbers for wires and cables.",
-      "question_quote": "call out base quarter number for cables and wires separately",
-      "question_page": 11,
-      "answer_quote": "wires, like I mentioned, outpaced cables. Wires was high single-digit growth",
-      "answer_page": 11
-     },
-     {
-      "analyst": "Achal Lohade",
-      "answered_by": [
-       "Shashank Yagnick"
-      ],
-      "label": "answered",
-      "reason": "Explained channel stocking dynamics in relation to raw material prices.",
-      "question_quote": "how is the channel stocking at this stage",
+      "reason": "Management explained channel stocking trends based on copper and aluminium movement.",
+      "question_quote": "in terms of channel stocking, how is the channel stocking at this stage for wires and also cables.",
       "question_page": 12,
-      "answer_quote": "If price comes down, destocking happens. That's the usual trend in the channel",
+      "answer_quote": "stocking did not happen to the expectation. Of course, there is some stocking that happens because of a quarter end",
       "answer_page": 12
      },
      {
@@ -1756,10 +1673,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Explained the four factors impacting margins instead of a simple one-off reason.",
-      "question_quote": "any one-off or any cost escalation, etc, which has kind of impacted the Q-o-Q improvement",
+      "reason": "Management clarified the term suboptimal regarding channel stocking.",
+      "question_quote": "So fair to say that the channel stocking is suboptimal?",
       "question_page": 12,
-      "answer_quote": "it's a factor of 4 things typically in case of us for defining the margins",
+      "answer_quote": "below expectation is a better way to put it.",
       "answer_page": 12
      },
      {
@@ -1768,10 +1685,22 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Addressed U.S. exports distribution setup and outlook without specific growth rate numbers.",
-      "question_quote": "what was the growth in U.S. exports on a Y-o-Y basis",
+      "reason": "Management listed the 4 factors influencing margin movement.",
+      "question_quote": "is there any one-off or any cost escalation, etc, which has kind of impacted the Q-o-Q improvement in the margin?",
+      "question_page": 12,
+      "answer_quote": "it's a factor of 4 things typically in case of us for defining the margins.",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Achal Lohade",
+      "answered_by": [
+       "Shashank Yagnick"
+      ],
+      "label": "answered",
+      "reason": "Management discussed U.S. exports contribution and setup status.",
+      "question_quote": "what kind of pickup are we seeing? And what was the growth in U.S. exports on a Y-o-Y basis?",
       "question_page": 13,
-      "answer_quote": "North America continues to be a large contributor to our overall exports. And second thing is on the setup",
+      "answer_quote": "North America continues to be a large contributor to our overall exports. And second thing is on the setup. I think setup is more or less complete.",
       "answer_page": 13
      },
      {
@@ -1780,10 +1709,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Confirmed the price correction taken in the first fortnight of July.",
-      "question_quote": "was there a price cut which has happened during the first 15 days of July",
+      "reason": "Management answered whether price cuts happened in July.",
+      "question_quote": "was there a price cut which has happened during the first 15 days of July?",
       "question_page": 13,
-      "answer_quote": "we have taken some price correction or rather price revision in the first fortnight",
+      "answer_quote": "Yes. So, I think we have taken some price correction or rather price revision in the first fortnight",
       "answer_page": 13
      },
      {
@@ -1792,10 +1721,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Quantified the price revision as 3% to 4%.",
-      "question_quote": "can you quantify, please, what was the price revision",
+      "reason": "Management quantified the price revision.",
+      "question_quote": "Can you quantify, please, what was the price revision.",
       "question_page": 13,
-      "answer_quote": "I think about 3% to 4%",
+      "answer_quote": "I think about 3% to 4%.",
       "answer_page": 13
      },
      {
@@ -1804,22 +1733,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Provided detailed drivers of FMEG margin improvement including operating leverage and premium mix.",
-      "question_quote": "Shashank, my question was on FMEG business",
-      "question_page": 13,
-      "answer_quote": "On FMEG, there are 2 or 3 big things which are kicking for us. One is the operating leverage",
-      "answer_page": 13
-     },
-     {
-      "analyst": "Ashish Kanodia",
-      "answered_by": [
-       "Shashank Yagnick"
-      ],
-      "label": "answered",
-      "reason": "Provided expected revenue execution for Bharat Net and RDSS for the year.",
-      "question_quote": "what kind of revenue or execution can we expect from RDSS and Bharat Net",
+      "reason": "Management provided full year revenue expectations for Bharat Net and RDSS.",
+      "question_quote": "on a full year basis, what kind of revenue or execution can we expect from RDSS and Bharat Net?",
       "question_page": 14,
-      "answer_quote": "maybe 1/3rd of that should translate into revenue, maybe INR 800 crores to INR 1,000 crores may come from Bharat Net alone",
+      "answer_quote": "maybe 1/3rd of that should translate into revenue, maybe INR 800 crores to INR 1,000 crores may come from Bharat Net alone.",
       "answer_page": 14
      },
      {
@@ -1828,10 +1745,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Discussed solar growth drivers and sustainability within FMEG.",
-      "question_quote": "Any colour on the scale of this segment and sustainability of this growth",
+      "reason": "Management discussed solar as a driver within FMEG.",
+      "question_quote": "Any colour on the scale of this segment and sustainability of this growth?",
       "question_page": 14,
-      "answer_quote": "solar inverter business for us is also driving the same momentum. We definitely see a strong trajectory of growth",
+      "answer_quote": "this solar inverter business for us is also driving the same momentum. We definitely see a strong trajectory of growth",
       "answer_page": 14
      },
      {
@@ -1840,10 +1757,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Clarified the descending order of FMEG categories.",
-      "question_quote": "Fans and lighting and luminaries you are clubbing together, is it",
-      "question_page": 15,
-      "answer_quote": "I mentioned solar inverter, followed by fans. Then you have pipes and conduits",
+      "reason": "Management clarified solar's contribution ranking within FMEG.",
+      "question_quote": "And any colour on what contribution it would be within FMEG? Will it be like 30% now?",
+      "question_page": 14,
+      "answer_quote": "It is solar followed by fans, followed by pipes and conduits in this quarter.",
       "answer_page": 15
      },
      {
@@ -1852,10 +1769,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Explained why exact category splits are not provided while noting broad-based outperformance.",
-      "question_quote": "help me with the growth in terms of volume and price hikes for this quarter",
+      "reason": "Management restated the descending order of FMEG categories.",
+      "question_quote": "Fans and lighting and luminaries you are clubbing together, is it?",
       "question_page": 15,
-      "answer_quote": "by design, we don't give a split of the FMEG respective portfolios",
+      "answer_quote": "I mentioned solar inverter, followed by fans. Then you have pipes and conduits. Then lights, switchgears and switches.",
       "answer_page": 15
      },
      {
@@ -1864,10 +1781,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Agreed with the data center market size logic while providing industry perspectives.",
-      "question_quote": "how can it have a significant percentage growth impact on a TAM of INR 1 lakh crores",
+      "reason": "Management addressed data centre opportunity percentage impact relative to TAM.",
+      "question_quote": "how can it have a significant percentage growth impact on a TAM of INR 1 lakh crores.",
       "question_page": 16,
-      "answer_quote": "I agree on the first one and disagree on the second one. So first one, which was data centre. So I think I kind of agree with you",
+      "answer_quote": "I agree on the first one and disagree on the second one. So first one, which was data centre. So I think I kind of agree with you.",
       "answer_page": 16
      },
      {
@@ -1876,10 +1793,10 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Defended T&D confidence using CEA numbers and transformer company order books.",
-      "question_quote": "so, in that case, if we achieve 15 on a base of 15,000 annually, so that gives some worriedness",
+      "reason": "Management defended T&D growth projections using CEA numbers and transformer company order books.",
+      "question_quote": "so, in that case, if we achieve 15 on a base of 15,000 annually, so that gives some worriedness in terms of percentage growth. So, is there any other data point",
       "question_page": 17,
-      "answer_quote": "we are only going by the published numbers of Central Electricity Authority. So I think we are very confident",
+      "answer_quote": "Naushad, we are only going by the published numbers of Central Electricity Authority. So I think we are very confident.",
       "answer_page": 17
      },
      {
@@ -1888,20 +1805,32 @@
        "Shashank Yagnick"
       ],
       "label": "answered",
-      "reason": "Addressed concerns about lower recent quarterly volume growth by pointing to long-term CAGRs.",
-      "question_quote": "do you worry about the lower growth for last 3 quarters in terms of volume",
+      "reason": "Management addressed volume growth momentum and consistency over longer periods.",
+      "question_quote": "do you worry about the lower growth for last 3 quarters in terms of volume? Is it just because of this? Or you see there is a deceleration in the momentum?",
       "question_page": 17,
-      "answer_quote": "quarter-on-quarter may or may not be a good indicator. You may have to look at a longer time period",
+      "answer_quote": "in our assessment, we have seen the CAGR of our volume growth has always been double digits in the last 5 to 7 years. So quarter-on-quarter may or may not be a good indicator.",
       "answer_page": 18
+     },
+     {
+      "analyst": "Keyur Pandya",
+      "answered_by": [
+       "Shashank Yagnick"
+      ],
+      "label": "answered",
+      "reason": "Management answered whether FMEG margins are one-off or sustainable versus guidance.",
+      "question_quote": "Now this is as high as your, say, FY30 guidance. So I mean, this is one-off or because of the seasonality or some other reasons?",
+      "question_page": 19,
+      "answer_quote": "currently, what you can read is a very, very good trajectory. If you look at last 5 quarters and today, we have come by leaps and bounds in the right direction",
+      "answer_page": 19
      }
     ],
-    "unverified": 5,
+    "unverified": 6,
     "counts": {
-     "answered": 19,
+     "answered": 18,
      "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 20"
+    "summary": "questions dodged: 0 of 19"
    }
   ],
   "narrative_vs_numbers": [
@@ -2019,19 +1948,19 @@
    },
    {
     "id": "F14",
-    "text": "Call of 2026-10-31: questions dodged: 2 of 25",
+    "text": "Call of 2026-10-31: questions dodged: 1 of 20",
     "source": "dodged-question check"
    },
    {
     "id": "F15",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 20",
+    "text": "Call of 2026-07-31: questions dodged: 0 of 19",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 27.0% and the profit CAGR is 28.3%.",
+     "text": "The 3y revenue CAGR is 27.0% and profit CAGR is 28.3%.",
      "cites": [
       {
        "id": "F2",
@@ -2041,7 +1970,7 @@
      ]
     },
     {
-     "text": "The latest quarter revenue reached Rs 9,899 cr, which is an increase of 52.8% YoY.",
+     "text": "The latest quarter revenue reached Rs 9,899 cr, up 52.8% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -2063,7 +1992,7 @@
    ],
    "bear": [
     {
-     "text": "The operating margin dropped to 14.0% in the latest quarter, which is a decline of -2.0 pts YoY.",
+     "text": "Operating margin was 14.0% in the latest quarter, dropping -2.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -2073,17 +2002,17 @@
      ]
     },
     {
-     "text": "During the call of 2026-10-31, questions dodged were 2 of 25.",
+     "text": "Management quietly dropped the capex FY30 target of 6000-8000 cr.",
      "cites": [
       {
-       "id": "F14",
-       "text": "Call of 2026-10-31: questions dodged: 2 of 25",
-       "source": "dodged-question check"
+       "id": "F13",
+       "text": "Quietly dropped: capex FY30 target 6000-8000 cr",
+       "source": "promise ledger"
       }
      ]
     },
     {
-     "text": "The company quietly dropped capex by FY31 target 60-80 cr.",
+     "text": "Management quietly dropped the capex by FY31 target of 60-80 cr.",
      "cites": [
       {
        "id": "F12",
@@ -2112,17 +2041,10 @@
      "call": "2026-05-31"
     },
     {
-     "claim": "Dodged: Management declined to provide a timeline for the order.",
-     "quote": "Sir any timeline or we will just leave it to the time that they require?",
-     "page": 10,
-     "answer_quote": "I would not like to hazard a guess on the timeline",
-     "answer_page": 10
-    },
-    {
-     "claim": "Dodged: Management declined to give guidance on whether wires would continue growing faster than cables.",
-     "quote": "in second half also, do you think wires could continue to grow faster than cables?",
+     "claim": "Dodged: Explicitly refused to give segment breakdown.",
+     "quote": "I'm just talking about only the house wire segment, that's why I'm asking?",
      "page": 17,
-     "answer_quote": "I mean we would not like to give any guidance on that. We never share that kind of a guidance.",
+     "answer_quote": "Ravindra, we don't give segment breakdown.",
      "answer_page": 17
     }
    ],
@@ -2139,8 +2061,8 @@
     "capex by FY31 (60-80 cr)",
     "capex FY30 (6000-8000 cr)"
    ],
-   "questions_dodged": "2 of 45",
-   "questions_partly_answered": "5 of 45"
+   "questions_dodged": "1 of 39",
+   "questions_partly_answered": "4 of 39"
   }
  },
  "stage": "writing",
@@ -2185,18 +2107,26 @@
  "transcript_notes": [],
  "llm_usage": {
   "models": {
-   "gemini-3.5-flash-lite": {
-    "api_calls": 9,
+   "gemini-3.5-flash": {
+    "api_calls": 1,
     "cache_hits": 0,
     "failed": 0,
-    "tokens_in": 21504,
-    "tokens_out": 8702,
+    "tokens_in": 5680,
+    "tokens_out": 520,
+    "cost_usd": 0.0
+   },
+   "gemini-3.5-flash-lite": {
+    "api_calls": 3,
+    "cache_hits": 6,
+    "failed": 0,
+    "tokens_in": 14773,
+    "tokens_out": 5466,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 135.4,
+ "built_in_seconds": 19.8,
  "from_cache": true
 }

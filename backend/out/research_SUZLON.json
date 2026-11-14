@@ -1,6 +1,6 @@
 {
  "ticker": "SUZLON",
- "started_at": "2026-11-14T13:19:34",
+ "started_at": "2026-11-14T22:37:40",
  "states": [],
  "sections": {
   "snapshot": {
@@ -815,10 +815,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management explained the contribution margin drop and timing for WTG.",
+      "reason": "Management explained margin and fixed expense trends.",
       "question_quote": "elaborate on your comments around the depressed contribution margin",
       "question_page": 5,
-      "answer_quote": "WTG contribution margins are expected to remain in that 22%, 23% range",
+      "answer_quote": "The contribution margin -- the part of the margin impact is attributable to high volatility",
       "answer_page": 6
      },
      {
@@ -827,8 +827,8 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management provided the specific FX and commodity impact percentage.",
-      "question_quote": "How much is the FX impact",
+      "reason": "Management provided the specific 50 bps impact.",
+      "question_quote": "How much is the FX impact?",
       "question_page": 6,
       "answer_quote": "commodity and FX impact put together has about a 50-basis point impact.",
       "answer_page": 6
@@ -839,10 +839,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management broke down the key components of the fixed expenses and margin decline.",
-      "question_quote": "On the fixed expenses",
+      "reason": "Management detailed the fixed expense components.",
+      "question_quote": "On the fixed expenses?",
       "question_page": 6,
-      "answer_quote": "non-recurring Opex, which you were, I think, asking, has an impact around 1%",
+      "answer_quote": "if you look at the key components of the margin decline, one is the customer and scope mix.",
       "answer_page": 6
      },
      {
@@ -850,11 +850,11 @@
       "answered_by": [
        "Ajay Kapur"
       ],
-      "label": "partly",
-      "reason": "Management corrected the customer mix assumption and discussed normalized EBITDA.",
+      "label": "answered",
+      "reason": "Management confirmed customer and scope mix details.",
       "question_quote": "Customer and scope mix is basically the EPC shift",
       "question_page": 6,
-      "answer_quote": "Normalized EBITDA margin should be, if I normalize for the non-recurring",
+      "answer_quote": "No, this is also the kind of customers we have.",
       "answer_page": 6
      },
      {
@@ -863,10 +863,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management explained which commodities are absorbed and noted volume operating leverage.",
-      "question_quote": "There is no pass-through provision in contracts for commodity FX",
+      "reason": "Management explained commodity pass-through absorption.",
+      "question_quote": "There is no pass-through provision in contracts for commodity FX.",
       "question_page": 7,
-      "answer_quote": "That will give us a leverage effect of close to 100 basis points.",
+      "answer_quote": "See, steel is a pass-through by and large. But rest, I think there are many commodities",
       "answer_page": 7
      },
      {
@@ -876,10 +876,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management provided DevCo capital commitment and solar/BESS progress.",
-      "question_quote": "How much capital have you committed to your DevCo business so far",
+      "reason": "Management gave capital numbers and solar/BESS updates.",
+      "question_quote": "How much capital have you committed to your DevCo business so far?",
       "question_page": 7,
-      "answer_quote": "net number is in the INR125 crores, INR130 crores range",
+      "answer_quote": "From a capital allocation perspective, we had said this earlier as well, Sumit, that we are looking at about INR500 crores",
       "answer_page": 7
      },
      {
@@ -888,12 +888,12 @@
        "Ajay Kapur",
        "Rahul Jain"
       ],
-      "label": "partly",
-      "reason": "Management addressed competition and cash position, but skipped Renom profit details.",
-      "question_quote": "So how competitively we are getting impacted",
+      "label": "answered",
+      "reason": "Management addressed competition, cash cycle, and net cash.",
+      "question_quote": "Adani and JSW have also entered into JSW -- wind energy. So how competitively we are getting impacted?",
       "question_page": 7,
-      "answer_quote": "The good news is the sector is expanding.",
-      "answer_page": 8
+      "answer_quote": "Let me address the question around the competition. You are right, we have Adani, JSW",
+      "answer_page": 7
      },
      {
       "analyst": "Shakuntala Agarwala",
@@ -901,9 +901,9 @@
        "Ajay Kapur",
        "Rahul Jain"
       ],
-      "label": "partly",
-      "reason": "Management updated the net cash position and briefly addressed Renom long-term view.",
-      "question_quote": "the follow-up question that I was trying to make",
+      "label": "answered",
+      "reason": "Management clarified net cash and Renom profitability.",
+      "question_quote": "annual profitability is around only INR4 crores a year",
       "question_page": 8,
       "answer_quote": "Your question for Renom, as I mentioned, Renom is a long-term business.",
       "answer_page": 9
@@ -914,10 +914,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management clarified the margin decline reasons and gave full-year guidance.",
-      "question_quote": "If you can elaborate, why did this happen",
+      "reason": "Management explained margin drivers and full-year expectations.",
+      "question_quote": "why did this happen? And secondly, for the remaining part of the year, what kind of margins do you see",
       "question_page": 9,
-      "answer_quote": "The share of our wind turbine business has exceeded the share",
+      "answer_quote": "For the full year, I would say we have done 15.1% margin in the H1.",
       "answer_page": 9
      },
      {
@@ -927,22 +927,22 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed the updated guidance percentage and explained the leverage.",
-      "question_quote": "now we are saying 15% plus or minus. Is that correct",
+      "reason": "Management confirmed guidance range adjustment.",
+      "question_quote": "From the erstwhile 17% plus or minus, now we are saying 15% plus or minus.",
       "question_page": 9,
-      "answer_quote": "my guidance was 15.1% plus 1%, not minus.",
-      "answer_page": 10
+      "answer_quote": "Exactly. Yeah. Because some of the commodity is playing out as of now",
+      "answer_page": 9
      },
      {
       "analyst": "Raj Shah",
       "answered_by": [
        "Rahul Jain"
       ],
-      "label": "partly",
-      "reason": "Management discussed interest costs and working capital growth drivers generally.",
-      "question_quote": "where this number should go? And similarly, what will be the sustainable net working capital",
+      "label": "answered",
+      "reason": "Management discussed finance costs and working capital trend.",
+      "question_quote": "when you see the full-year picture, where this number should go?",
       "question_page": 10,
-      "answer_quote": "our overall interest costs are coming down from a percentage like-to-like basis.",
+      "answer_quote": "What I can tell you is our overall interest costs are coming down from a percentage like-to-like basis.",
       "answer_page": 10
      },
      {
@@ -951,10 +951,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management detailed platform certification, customer engagements, and repowering pipeline.",
+      "reason": "Management elaborated on export and repowering opportunities.",
       "question_quote": "where we are in terms of any export opportunity in repowering",
       "question_page": 10,
-      "answer_quote": "teams are now actively working alongside our technical center based out of Germany",
+      "answer_quote": "So export, as I mentioned, our Blue-Sky platform, which has 5 megawatts and 6.3 megawatts",
       "answer_page": 10
      },
      {
@@ -963,8 +963,8 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management acknowledged the realization dip question and prepared to answer.",
-      "question_quote": "elaborate why there is a realization dip on a Q-o-Q basis",
+      "reason": "Management acknowledged realization dip query.",
+      "question_quote": "Wanted to ask you if you could elaborate why there is a realization dip on a Q-o-Q basis?",
       "question_page": 10,
       "answer_quote": "On a quarter-to-quarter basis?",
       "answer_page": 11
@@ -975,10 +975,22 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed prices were not reduced and explained project activity impact.",
+      "reason": "Management explained ASP range and business mix.",
+      "question_quote": "that has slipped below INR6 crores this quarter.",
+      "question_page": 11,
+      "answer_quote": "When you look at our Q2 FY27 ASP, we are roughly at about INR5.9 crores",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Sweta Jain",
+      "answered_by": [
+       "Rahul Jain"
+      ],
+      "label": "answered",
+      "reason": "Management answered whether INR6 crores run rate is maintained.",
       "question_quote": "So we do maintain a INR6 crores kind of a run rate going forward?",
       "question_page": 11,
-      "answer_quote": "No, it is not a question of pressure. We have not reduced any prices",
+      "answer_quote": "No, it is not a question of pressure. We have not reduced any prices here.",
       "answer_page": 11
      },
      {
@@ -987,10 +999,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management defined what project activity elements entail for pricing.",
-      "question_quote": "Sir, what do you mean by project activity",
+      "reason": "Management explained project activity components.",
+      "question_quote": "Sir, what do you mean by project activity?",
       "question_page": 11,
-      "answer_quote": "there is a turbine supply, there is BoP, there is other activities",
+      "answer_quote": "There are various activities -- so there is a turbine supply, there is BoP, there is other activities",
       "answer_page": 11
      },
      {
@@ -999,10 +1011,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management answered directly that working capital intensity is not driven by DevCo.",
-      "question_quote": "Sir, is it linked to the DevCo model being developed",
+      "reason": "Management clarified DevCo working capital linkage.",
+      "question_quote": "Sir, is it linked to the DevCo model being developed?",
       "question_page": 11,
-      "answer_quote": "Not really. I do not think there is any linkage between the DevCo model",
+      "answer_quote": "Not really. I do not think there is any linkage between the DevCo model and the working capital.",
       "answer_page": 11
      },
      {
@@ -1011,10 +1023,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management pointed to seasonality and building inventory for H2 sales as the reason.",
-      "question_quote": "why we are seeing this stretched working capital impacting the numbers",
+      "reason": "Management explained seasonality and working capital.",
+      "question_quote": "So could you elaborate the reason, like why we are seeing this stretched working capital",
       "question_page": 11,
-      "answer_quote": "we are building for our H2 position.",
+      "answer_quote": "Again, I think when you look at last year, there is a seasonality element that plays out here",
       "answer_page": 11
      },
      {
@@ -1023,10 +1035,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management discussed the ALMM notification, grandfathering, and local content.",
-      "question_quote": "just wanted to check if there are any updates over there",
+      "reason": "Management provided updates on localization and ALMM.",
+      "question_quote": "just wanted to check if there are any updates over there and how is that playing out so far?",
       "question_page": 12,
-      "answer_quote": "As you know, the notification came on 31st July '25",
+      "answer_quote": "As you know, the notification came on 31st July '25, with grandfathering provision",
       "answer_page": 12
      },
      {
@@ -1035,10 +1047,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management agreed with the timeline for advantage and noted local manufacturing.",
-      "question_quote": "the advantage will become more sort of",
+      "reason": "Management confirmed timeline of advantages.",
+      "question_quote": "Basically, you are saying maybe in about 2 years' time, the advantage will become more",
       "question_page": 12,
-      "answer_quote": "Yes, it's already becoming. Because most companies have set up their local manufacturing",
+      "answer_quote": "Yes, it's already becoming. Because most companies have set up their local manufacturing here",
       "answer_page": 12
      },
      {
@@ -1047,10 +1059,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management clarified that the export numbers cited were industry-wide figures.",
-      "question_quote": "directly does it coordinate with what you are exporting",
+      "reason": "Management clarified industry versus company export numbers.",
+      "question_quote": "This INR12,000 crores, directly does it coordinate with what you are exporting?",
       "question_page": 12,
-      "answer_quote": "These are not our numbers. These are the industry numbers",
+      "answer_quote": "No, this is all put together. These are not our numbers. These are the industry numbers",
       "answer_page": 12
      },
      {
@@ -1059,8 +1071,20 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management confirmed the component types being exported.",
-      "question_quote": "So this is basically nacelle, gearbox, and various components",
+      "reason": "Management explained backward integration and company exports.",
+      "question_quote": "is it something like some...",
+      "question_page": 12,
+      "answer_quote": "So one of our companies, our forging and foundry company, which also does backward integration",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Abhishek",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed component export scope.",
+      "question_quote": "So this is basically nacelle, gearbox, and various components. All of those.",
       "question_page": 12,
       "answer_quote": "Yes.",
       "answer_page": 7
@@ -1071,10 +1095,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management discussed competitor wins, captive consumption, and long-term market potential.",
-      "question_quote": "Considering these orders that they have won and 40% market share target",
+      "reason": "Management addressed competition concerns from Adani and JSW.",
+      "question_quote": "Considering these orders that they have won and 40% market share target given in Suzlon 2.0, what's your read on that?",
       "question_page": 13,
-      "answer_quote": "All the names you are saying continue to remain our customers.",
+      "answer_quote": "All the names you are saying continue to remain our customers. We continue to get repeat orders from them.",
       "answer_page": 13
      },
      {
@@ -1083,10 +1107,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management addressed ALMM timelines, market share targets, and supply chain benefits.",
-      "question_quote": "After that, you feel that the market share for Suzlon might increase",
+      "reason": "Management discussed ALMM impact and market share goals.",
+      "question_quote": "After that, you feel that the market share for Suzlon might increase?",
       "question_page": 13,
-      "answer_quote": "I have given my guidance that by FY31, I want to hit 40%.",
+      "answer_quote": "I have given my guidance that by FY31, I want to hit 40%. I am trading more closer to 30% right now",
       "answer_page": 14
      },
      {
@@ -1095,10 +1119,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management explained dynamic pricing and cost-reduction initiatives to offset commodity risk.",
-      "question_quote": "for the new orders, at least we will be factoring in the higher cost",
+      "reason": "Management explained commodity inflation pricing dynamics.",
+      "question_quote": "For the new orders, at least we will be factoring in the higher cost in our prices, right?",
       "question_page": 14,
-      "answer_quote": "pricing is more dynamic. We do try to pass on as much as we can",
+      "answer_quote": "See, end of the day, you are in the market with the price, and you also have to see what a customer gets",
       "answer_page": 14
      },
      {
@@ -1107,8 +1131,8 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management asked for clarification on the pipeline question.",
-      "question_quote": "how do you see the pipeline of projects, where the projects are awarded",
+      "reason": "Management clarified order pipeline question.",
+      "question_quote": "How do you see the pipeline of projects, where the projects are awarded, but the orders are yet to be placed?",
       "question_page": 14,
       "answer_quote": "Just to clarify, you are talking about the order pipeline?",
       "answer_page": 14
@@ -1119,20 +1143,20 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management confirmed that sales/pipeline is separate from the order book.",
-      "question_quote": "sales here what you are mentioning is over and above the order book",
+      "reason": "Management confirmed pipeline versus order book distinction.",
+      "question_quote": "sales here what you are mentioning is over and above the order book, right?",
       "question_page": 15,
       "answer_quote": "Absolutely.",
       "answer_page": 15
      }
     ],
-    "unverified": 4,
+    "unverified": 2,
     "counts": {
-     "answered": 22,
-     "partly": 4,
+     "answered": 28,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 26"
+    "summary": "questions dodged: 0 of 28"
    },
    {
     "call": "2026-08-31",
@@ -1145,10 +1169,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management explained the gap and revenue recognition.",
-      "question_quote": "what is the typical revenue recognition that between delivery or erection and commissioning",
+      "reason": "Management explained revenue recognition and seasonality trends.",
+      "question_quote": "what is the typical revenue recognition that between delivery or erection and commissioning?",
       "question_page": 5,
-      "answer_quote": "position that we have on RR versus commissioning there is a certain gap",
+      "answer_quote": "Historically, what we have seen is, let's say, about 35, 40 in H1 versus 60, 65 in H2.",
       "answer_page": 5
      },
      {
@@ -1157,22 +1181,10 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management addressed payback and contribution timing.",
+      "reason": "Management explained the payback period and timelines for new investments.",
       "question_quote": "what is the expected payback period for these investments and then we can expect meaningful revenue contributions",
       "question_page": 5,
-      "answer_quote": "payback for all these is a very fairly short payback. These are not long investments",
-      "answer_page": 6
-     },
-     {
-      "analyst": "Balasubramanian",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "partly",
-      "reason": "Management spoke generally about pricing but skipped receivable day specifics.",
-      "question_quote": "what is the difference between like receivable days for PSU",
-      "question_page": 6,
-      "answer_quote": "Wherever there are payable days both there, the pricing is adequately done",
+      "answer_quote": "All these investments pan out over the next 12 to 18 months. And we're very hopeful that the payback for all these is a very fairly short payback.",
       "answer_page": 6
      },
      {
@@ -1181,10 +1193,22 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management noted the market trajectory and focus on receivables.",
-      "question_quote": "mix will continue or it will change in the coming year",
+      "reason": "Management addressed how pricing accounts for receivable days.",
+      "question_quote": "what is the difference between like receivable days for PSU?",
       "question_page": 6,
-      "answer_quote": "more or less the same trajectory will continue, but we have a sharp focus on our receivables",
+      "answer_quote": "Wherever there are payable days both there, the pricing is adequately done in a manner that it accounts for the days.",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Balasubramanian",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management answered that the market mix trajectory will continue.",
+      "question_quote": "And the mix will continue or it will change in the coming year, sir?",
+      "question_page": 6,
+      "answer_quote": "I think more or less the same trajectory will continue, but we have a sharp focus on our receivables management",
       "answer_page": 6
      },
      {
@@ -1193,10 +1217,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management detailed upfront investments and operating leverage impacts.",
-      "question_quote": "what explains the weakness in EBIT margin during the quarter on especially about WTG",
+      "reason": "Management explained the reasons behind the margin and EBITDA performance.",
+      "question_quote": "what explains the weakness in EBIT margin during the quarter on especially about WTG.",
       "question_page": 6,
-      "answer_quote": "certain investments that we are making for our 2.0 Suzlon strategy. There is a strengthening of that position",
+      "answer_quote": "There are certain investments that we are making for our 2.0 Suzlon strategy. There is a strengthening of that position starting to happen.",
       "answer_page": 6
      },
      {
@@ -1205,10 +1229,10 @@
        "Ajay Kapur"
       ],
       "label": "partly",
-      "reason": "Management answered market share but deferred components question.",
-      "question_quote": "are you gaining market share post that",
+      "reason": "Management answered about ALMM but asked to connect separately on drives.",
+      "question_quote": "are you gaining market share post that? And have you seen the impact on the ground? And second is, do you see that -- we see the ALMM expanding into components",
       "question_page": 7,
-      "answer_quote": "First, this ALMM brings level playing field for the Indian players. Suzlon is fully compliant",
+      "answer_quote": "On the second part of your question, we can connect separately.",
       "answer_page": 7
      },
      {
@@ -1217,106 +1241,70 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management addressed fixed costs and full year margins.",
-      "question_quote": "How should we think about the full year WTG fixed cost here",
+      "reason": "Management addressed the fixed cost factors and full year margin expectations.",
+      "question_quote": "How should we think about the full year WTG fixed cost here?",
       "question_page": 7,
-      "answer_quote": "overall position from a year perspective, there will be some onetime or, let's say, investments",
+      "answer_quote": "My sense is that this year also, plus minus 1% to 2% from there, we should be able to maintain",
       "answer_page": 7
      },
      {
       "analyst": "Sumit Kishore",
       "answered_by": [
        "Rahul Jain"
-      ],
-      "label": "dodged",
-      "reason": "Management declined to put a specific number to the fixed expenses.",
-      "question_quote": "would you like to put a number to that for the future so that we can track that",
-      "question_page": 7,
-      "answer_quote": "Not really, Sumit, I don't want to put a number to it. Let me just say that we are judicious at it.",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Sumit Kishore",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "answered",
-      "reason": "Management clarified commercial terms and advances for DevCo contracts.",
-      "question_quote": "what sort of advances have you booked to these contracts",
-      "question_page": 8,
-      "answer_quote": "all advances, everything is in the same nature as we have done in the past, and they are value accretive.",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Prakhar Porwal",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "answered",
-      "reason": "Management explained the advances and site progress for DevCo.",
-      "question_quote": "are these the projects where land has been acquired and the customer has given an advance",
-      "question_page": 8,
-      "answer_quote": "current sales which is happening is already the advanced DevCo sites that we had.",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Prakhar Porwal",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "answered",
-      "reason": "Management gave examples of fixed costs like new plants and technology.",
-      "question_quote": "what type of fixed cost, if you can mention maybe some of these",
-      "question_page": 8,
-      "answer_quote": "new plants we are setting up. We're making investment in technology for the new protos",
-      "answer_page": 8
-     },
-     {
-      "analyst": "Prakhar Porwal",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "answered",
-      "reason": "Management discussed repowering potential and Suzlon's timeline.",
-      "question_quote": "highlight some maybe movement in terms of repowering in India that is happening",
-      "question_page": 8,
-      "answer_quote": "repowering has a potential of close to 25 gigawatts in the country.",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Sweta Jain",
-      "answered_by": [
-       "Ajay Kapur"
-      ],
-      "label": "answered",
-      "reason": "Management provided the specific range for upfront costs.",
-      "question_quote": "what margin impact would have been ex of these costs for the quarter",
-      "question_page": 9,
-      "answer_quote": "about INR40 crores to INR50 crores is what would be the number across various subheads",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Sweta Jain",
-      "answered_by": [
-       "Rahul Jain"
-      ],
-      "label": "answered",
-      "reason": "Management clarified it is a year-long journey rather than single quarter.",
-      "question_quote": "entire INR40 crores to INR50 crores would be onetime for this quarter impact only",
-      "question_page": 9,
-      "answer_quote": "It's a year-long journey, Shweta. It is not a 1-quarter story.",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Sweta Jain",
-      "answered_by": [
-       "Ajay Kapur"
       ],
       "label": "partly",
-      "reason": "Management talked about margins and delivery strength instead of direct revenue timing.",
-      "question_quote": "we will start actually witnessing something materially next year onwards",
+      "reason": "Management explicitly refused to put a number to the expenses. (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "would you like to put a number to that for the future so that we can track that?",
+      "question_page": 7,
+      "answer_quote": "Not really, Sumit, I don't want to put a number to it.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Prakhar Porwal",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management clarified the site progress and advance payments for DevCo.",
+      "question_quote": "So are these the projects where land has been acquired and the customer has given an advance for these contracts",
+      "question_page": 8,
+      "answer_quote": "So, the answer is current sales which is happening is already the advanced DevCo sites that we had.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Prakhar Porwal",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management provided examples of fixed costs like new plants and technology investments.",
+      "question_quote": "what type of fixed cost, if you can mention maybe some of these?",
+      "question_page": 8,
+      "answer_quote": "So basically, we have to incur, for example, new plants we are setting up. We're making investment in technology",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Sweta Jain",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management gave the specific cost range for the quarter's impact.",
+      "question_quote": "what margin impact would have been ex of these costs for the quarter?",
       "question_page": 9,
-      "answer_quote": "typically, we've been operating at about 17%, 18% margin. Our endeavor will be to remain in that realm.",
+      "answer_quote": "So it's about INR40 crores to INR50 crores is what would be the number across various subheads",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Sweta Jain",
+      "answered_by": [
+       "Rahul Jain"
+      ],
+      "label": "answered",
+      "reason": "Management clarified that costs are spread across a year-long journey.",
+      "question_quote": "So, these entire INR40 crores to INR50 crores would be onetime for this quarter impact only?",
+      "question_page": 9,
+      "answer_quote": "See, it's a year-long journey, Shweta. It is not a 1-quarter story.",
       "answer_page": 9
      },
      {
@@ -1325,10 +1313,22 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management addressed foundry utilization and segments strategy.",
-      "question_quote": "Any thoughts with respect to how the utilization can ramped up to 50%",
+      "reason": "Management discussed margins, delivery metrics, and long-term goals.",
+      "question_quote": "we will start actually witnessing something materially next year onwards from the Suzlon 2.0 versions?",
+      "question_page": 9,
+      "answer_quote": "Typically, we've been operating at about 17%, 18% margin. Our endeavor will be to remain in that realm.",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Sweta Jain",
+      "answered_by": [
+       "Ajay Kapur"
+      ],
+      "label": "answered",
+      "reason": "Management explained the Foundry and Forging business strategy and customer segments.",
+      "question_quote": "Any thoughts with respect to how the utilization can ramped up to 50% or something material number?",
       "question_page": 10,
-      "answer_quote": "The business is looking at is distinct three segments, foundry, forging and bearing.",
+      "answer_quote": "What the business is looking at is distinct three segments, foundry, forging and bearing.",
       "answer_page": 10
      },
      {
@@ -1338,8 +1338,8 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management directly denied the presence of a foreign holding cap.",
-      "question_quote": "Can you confirm if there is a cap on the amount of holdings in the company",
+      "reason": "Management directly denied the existence of a foreign holding cap.",
+      "question_quote": "Can you confirm if there is a cap on the amount of holdings in the company, which can be held by foreign FPIs and FIs?",
       "question_page": 10,
       "answer_quote": "Not really. I don't think there is any such thing that, in fact, I can't place a cap on it.",
       "answer_page": 10
@@ -1351,10 +1351,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management agreed with the premise of capacity increasing post transition.",
-      "question_quote": "installed capacity will automatically go from 4,500 megawatts to 7,500 megawatts",
+      "reason": "Management confirmed that installed capacity will increase upon transition.",
+      "question_quote": "Am I wrong in somewhat of understanding of that statement?",
       "question_page": 10,
-      "answer_quote": "when you finally transit, it will go up, obviously, you're right.",
+      "answer_quote": "So when you finally transit, it will go up, obviously, you're right.",
       "answer_page": 11
      },
      {
@@ -1363,8 +1363,8 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management explained material consumption increase is due to EPC share.",
-      "question_quote": "what would be the expenditures that would have been incurred in -- like would have been booked into material consumption",
+      "reason": "Management explained that the increase in material consumption is due to higher EPC share.",
+      "question_quote": "I'm still trying to understand what would be the expenditures that would have been incurred in -- like would have been booked into material consumption.",
       "question_page": 11,
       "answer_quote": "Basically, it is the EPC. If you see last year, the same quarter, we were 22% share of EPC.",
       "answer_page": 11
@@ -1376,10 +1376,10 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management linked higher realizations to increased EPC project share.",
-      "question_quote": "how should we think about this number as EPC business is increasing for the entire year",
+      "reason": "Management attributed the realization increase to the higher EPC and project business share.",
+      "question_quote": "If you can throw some light on how should we think about this number as EPC business is increasing for the entire year",
       "question_page": 11,
-      "answer_quote": "the EPC share has gone up from the base year where I said 22% on up to 32%.",
+      "answer_quote": "Basically, you're right. I mean the EPC share has gone up from the base year where I said 22% on up to 32%.",
       "answer_page": 11
      },
      {
@@ -1389,8 +1389,8 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed realization range will continue with project business.",
-      "question_quote": "So this upward movement shall continue going forward as well, sir",
+      "reason": "Management confirmed that ASPs and project business numbers will remain in that range.",
+      "question_quote": "So this upward movement shall continue going forward as well, sir?",
       "question_page": 11,
       "answer_quote": "as our project business will be higher, we will see this number in that range.",
       "answer_page": 11
@@ -1401,36 +1401,36 @@
        "Ajay Kapur"
       ],
       "label": "answered",
-      "reason": "Management corrected margin level and provided sustainable expectations.",
-      "question_quote": "now do you see that this shall be a sustainable margin level of 33%, 34% going forward",
+      "reason": "Management clarified the sustainable EBITDA margin levels for the OMS business.",
+      "question_quote": "now do you see that this shall be a sustainable margin level of 33%, 34% going forward as well?",
       "question_page": 11,
       "answer_quote": "This is actually much higher, 43%. But we believe this should be more like higher 30s, 38%, 39%.",
       "answer_page": 11
      },
      {
-      "analyst": "Raj Shah",
+      "analyst": "Amit Bhinde",
       "answered_by": [
-       "Ajay Kapur"
+       "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management clarified which margin was being addressed.",
-      "question_quote": "Yes sir. I'm asking what the OMS business.",
-      "question_page": 11,
-      "answer_quote": "You're talking of the OMS business EBITDA margin or the share of OMS business in the total business?",
-      "answer_page": 11
+      "reason": "Management quantified DevCo investments and their relation to cash positions.",
+      "question_quote": "Can you quantify how much have we done on that side? And has that also contributed to the increase in the interest cost?",
+      "question_page": 12,
+      "answer_quote": "our overall DevCo investment is expected to be INR500 crores on a revolving in nature. Currently, we will probably in the range of INR200 crores to INR300 crores.",
+      "answer_page": 12
      },
      {
-      "analyst": "Raj Shah",
+      "analyst": "Amit Bhinde",
       "answered_by": [
        "Ajay Kapur",
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management confirmed higher 30s closer to 40% sustainable margin for OMS.",
-      "question_quote": "No, no. EBITDA margin. EBITDA margin.",
-      "question_page": 11,
-      "answer_quote": "in this quarter, it's slightly elevated at 43%. I believe it should be more or less in the higher 30s",
-      "answer_page": 12
+      "reason": "Management reiterated the capex guidance and explained future investments.",
+      "question_quote": "So how should one think about your capex investment or any capacity addition on that front?",
+      "question_page": 13,
+      "answer_quote": "capex, we had guided even earlier calls also closer to INR700 crores plus minus",
+      "answer_page": 13
      },
      {
       "analyst": "Amit Bhinde",
@@ -1438,20 +1438,8 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management quantified DevCo investments and their relation to cash utilization.",
-      "question_quote": "Can you quantify how much have we done on that side? And has that also contributed",
-      "question_page": 12,
-      "answer_quote": "overall DevCo investment is expected to be INR500 crores on a revolving in nature. Currently, we will probably in the range of INR200 crores to INR300 crores.",
-      "answer_page": 12
-     },
-     {
-      "analyst": "Amit Bhinde",
-      "answered_by": [
-       "Rahul Jain"
-      ],
-      "label": "answered",
-      "reason": "Management confirmed investments are currently in India.",
-      "question_quote": "Is any of these investments closer to the end market like in the foreign geographies",
+      "reason": "Management clarified that all current capex investments are in India.",
+      "question_quote": "Is any of these investments closer to the end market like in the foreign geographies that you're making?",
       "question_page": 13,
       "answer_quote": "No, These are all currently in India. As of now, the foreign strategy is to be able to manufacture in India and sell globally.",
       "answer_page": 13
@@ -1463,20 +1451,21 @@
        "Rahul Jain"
       ],
       "label": "answered",
-      "reason": "Management clarified that DevCo is separate from pure capex.",
-      "question_quote": "And sir, the capex plan of INR700-odd crores, does it include the DevCo investment",
+      "reason": "Management confirmed that DevCo investments are separate from pure capex.",
+      "question_quote": "And sir, the capex plan of INR700-odd crores, does it include the DevCo investment?",
       "question_page": 13,
       "answer_quote": "No. No, that's separate. This is capex. Pure capex.",
       "answer_page": 13
      }
     ],
-    "unverified": 3,
+    "unverified": 6,
+    "downgraded": 1,
     "counts": {
-     "answered": 23,
-     "partly": 3,
-     "dodged": 1
+     "answered": 22,
+     "partly": 2,
+     "dodged": 0
     },
-    "summary": "questions dodged: 1 of 27"
+    "summary": "questions dodged: 0 of 24"
    }
   ],
   "narrative_vs_numbers": [
@@ -1589,12 +1578,12 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-11-04: questions dodged: 0 of 26",
+    "text": "Call of 2026-11-04: questions dodged: 0 of 28",
     "source": "dodged-question check"
    },
    {
     "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 1 of 27",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 24",
     "source": "dodged-question check"
    }
   ],
@@ -1616,6 +1605,16 @@
      ]
     },
     {
+     "text": "Latest quarter revenue reached Rs 4,876 cr, representing a +26.0% YoY increase.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 4,876 cr, +26.0% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
      "text": "Revenue grew YoY in 8 of 8 recent quarters.",
      "cites": [
       {
@@ -1624,21 +1623,11 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The latest quarter revenue was Rs 4,876 cr, which is an increase of +26.0% YoY.",
-     "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 4,876 cr, +26.0% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The latest quarter profit was Rs 394 cr, which represents a change of -69.2% YoY.",
+     "text": "Latest quarter profit was Rs 394 cr, which is -69.2% YoY.",
      "cites": [
       {
        "id": "F5",
@@ -1648,7 +1637,7 @@
      ]
     },
     {
-     "text": "The operating margin in the latest quarter was 15.0%, which is -4.0 pts YoY.",
+     "text": "Operating margin was 15.0% in the latest quarter, down -4.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1658,11 +1647,11 @@
      ]
     },
     {
-     "text": "The revenue growth FY26 target was 60%, but the actual was 53.6.",
+     "text": "The company kept 0 of 1 measurable targets.",
      "cites": [
       {
-       "id": "F12",
-       "text": "Missed: revenue growth FY26 target 60%, actual 53.6",
+       "id": "F11",
+       "text": "Promises kept: 0 of 1 measurable targets",
        "source": "promise ledger"
       }
      ]
@@ -1678,13 +1667,6 @@
      "page": 3,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea0f24d-87ca-4c8e-99a7-9b795da08352.pdf",
      "call": "2026-06-30"
-    },
-    {
-     "claim": "Dodged: Management declined to put a specific number to the fixed expenses.",
-     "quote": "would you like to put a number to that for the future so that we can track that",
-     "page": 7,
-     "answer_quote": "Not really, Sumit, I don't want to put a number to it. Let me just say that we are judicious at it.",
-     "answer_page": 8
     }
    ],
    "promises_kept": "0 of 1",
@@ -1697,8 +1679,8 @@
     "Not measurable": 8
    },
    "topics_dropped": [],
-   "questions_dodged": "1 of 53",
-   "questions_partly_answered": "7 of 53"
+   "questions_dodged": "0 of 52",
+   "questions_partly_answered": "2 of 52"
   }
  },
  "stage": "writing",
@@ -1744,17 +1726,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 9,
-    "cache_hits": 0,
+    "api_calls": 3,
+    "cache_hits": 6,
     "failed": 0,
-    "tokens_in": 18082,
-    "tokens_out": 7620,
+    "tokens_in": 13468,
+    "tokens_out": 6026,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 134.0,
+ "built_in_seconds": 21.7,
  "from_cache": true
 }
