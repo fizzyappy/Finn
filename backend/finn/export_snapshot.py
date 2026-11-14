@@ -47,15 +47,23 @@ def main() -> None:
     sizes = {}
 
     # Briefs for every window (cached model answers; no new spend for known filings).
+    def usable(b: dict) -> bool:
+        """At least half the holdings had a working filings source."""
+        st = b["data_status"]["filings_sources"]
+        ok = sum(1 for v in st.values() if isinstance(v, dict) and any(str(x).startswith("ok") for x in v.values()))
+        return ok >= len(p.symbols) / 2
+
     windows = {"since_last_look": "24h", "24h": "24h", "3d": "3d", "7d": "7d"}
+    b14 = digest.build(((now - timedelta(days=14)).isoformat(), now.isoformat()), p=p, save=False, now=now)
+    if not usable(b14):
+        raise SystemExit("filings sources failed for most holdings: keeping the previous snapshot")
+    b14["window"]["label"] = "last 14 days"
+    sizes["brief_14d"] = _write("brief_14d.json", b14)
     for name, w in windows.items():
         b = digest.build(w, p=p, save=False, now=now)
         if name == "since_last_look":
             b["window"]["label"] = "since you last looked"
         sizes[f"brief_{name}"] = _write(f"brief_{name}.json", b)
-    b14 = digest.build(((now - timedelta(days=14)).isoformat(), now.isoformat()), p=p, save=False, now=now)
-    b14["window"]["label"] = "last 14 days"
-    sizes["brief_14d"] = _write("brief_14d.json", b14)
 
     # Research for the portfolio and the research names (from the research cache).
     index = []
@@ -79,8 +87,12 @@ def main() -> None:
     series, price_status = alerts.portfolio_series(p.symbols)
     compact = {s: [[r["date"], r["ret_pct"], r.get("mkt_ret_pct"), r.get("z"), r.get("vol_x"), r["close"],
                     int(bool(r.get("provisional")))] for r in rows[-120:]] for s, rows in series.items()}
-    sizes["alert_series"] = _write("alert_series.json", {"fields": ["date", "ret_pct", "mkt_ret_pct", "z", "vol_x", "close",
-                                                                     "provisional"], "series": compact})
+    # Never replace good data with a broken run (e.g. a cloud host refused by Yahoo).
+    if len(compact) >= len(p.symbols) / 2:
+        sizes["alert_series"] = _write("alert_series.json", {"fields": ["date", "ret_pct", "mkt_ret_pct", "z", "vol_x",
+                                                                         "close", "provisional"], "series": compact})
+    else:
+        print(f"prices for only {len(compact)} of {len(p.symbols)} holdings: keeping the previous alert_series.json")
 
     midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
     usage_today = llm.usage(since=midnight.timestamp())
