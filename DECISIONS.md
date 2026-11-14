@@ -1,8 +1,16 @@
 # Decisions
 
+Every non-obvious choice, why it was made, and what it cost. Rows are in the order they were made
+(setup → data → push engine → pull engine → app → deployment), so later rows sometimes refine earlier ones.
+
+The decisions that shaped FINN most: primary sources only, with no bot-protection workarounds; the model reads
+and Python decides (no LLM arithmetic, no LLM verdicts where a number exists); a wrong number is worse than no
+number ("not verified" cards); quotes must be found word for word or are dropped; the alert default came from a
+backtest, not a guess; the app ships a snapshot so the link always works, with a live backend for new companies.
+
 | Decision | Why | What we gave up |
 |----------|-----|-----------------|
-| Project lives in `C:\Users\aparn\Documents\finn` (local, not OneDrive) | OneDrive sync fights with `node_modules`, `.venv` and SQLite files | Automatic cloud backup; GitHub is the backup instead |
+| Project lives in a local folder, not OneDrive | OneDrive sync fights with `node_modules`, `.venv` and SQLite files | Automatic cloud backup; GitHub is the backup instead |
 | Earlier code kept in `_old\` (git-ignored), rewritten in `backend/finn` | Old code was well designed but never ran against live sources (its own notes say so) and was written for a different LLM provider | Some old features (classifier, push digest, research engine) not ported yet; they come back in Tasks 3–4 |
 | Cache stores JSON in SQLite, never pickle | Readable, safe to load, survives pandas upgrades | Slightly more code to turn data into tables |
 | Cache raw pages, parse on every read | A parser fix applies at once instead of after the cache expires (we hit this bug live) | A few ms of parsing per read |
