@@ -59,7 +59,10 @@ async function audit(page, name) {
 // 1. Brief: default, 14-day window, flipped "why", checks open, swipe-cleared, all-clear
 let p = await fresh("brief");
 await shot(p, "01-brief-since-last-look", false); await audit(p, "brief");
-await p.getByRole("button", { name: "Custom · 14d" }).click();
+await p.getByRole("button", { name: "Custom" }).click();
+await p.getByRole("button", { name: "Last 14 days" }).click();
+await shot(p, "02b-brief-date-range-picker", false);
+await p.getByRole("button", { name: "Show this range" }).click();
 await shot(p, "02-brief-14d-results-cards");
 const verified = p.locator("button.verified").first();
 if (await verified.count()) { await verified.click(); await shot(p, "03-brief-results-checks-open", false); }

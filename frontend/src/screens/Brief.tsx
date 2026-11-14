@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { SwipeCard, ReactionChip } from "../cards/cards";
 import { Cite, Icon, Ring } from "../components/ui";
-import { cleanTitle, fmtDay, fmtWhen, Json, nice, prefs, snapshot, WindowKey, WINDOWS } from "../lib/data";
+import { api, backendAlive, briefForRange, cleanTitle, fmtDay, fmtWhen, Json, nice, prefs, snapshot, WindowKey, WINDOWS } from "../lib/data";
 
 const HERO = 0.6, ONE = 0.3;
 const plural = (n: number, word: string) => (n === 1 ? word : `${word}s`);
@@ -21,6 +21,42 @@ function rerank(brief: Json, tune: Record<string, number>) {
   return { hero, one, demoted };
 }
 
+function RangePicker({ min, max, initial, onApply, onCancel }: {
+  min: string; max: string; initial: { from: string; to: string } | null;
+  onApply: (from: string, to: string) => void; onCancel: () => void;
+}) {
+  const daysAgo = (n: number) => {
+    const d = new Date(max); d.setDate(d.getDate() - n); return d.toISOString().slice(0, 10);
+  };
+  const [from, setFrom] = useState(initial?.from || daysAgo(4));
+  const [to, setTo] = useState(initial?.to || max);
+  const valid = from && to && from <= to;
+  return (
+    <div>
+      <div className="h2" style={{ marginBottom: 10 }}>Pick a date range</div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+        <label className="small muted">From
+          <input className="field" type="date" value={from} max={to || max} onChange={(e) => setFrom(e.target.value)} style={{ marginTop: 4 }} />
+        </label>
+        <label className="small muted">To
+          <input className="field" type="date" value={to} min={from} max={max} onChange={(e) => setTo(e.target.value)} style={{ marginTop: 4 }} />
+        </label>
+      </div>
+      <div className="chips" style={{ marginTop: 10 }}>
+        <button className="chip" onClick={() => { setFrom(max); setTo(max); }}>Today</button>
+        <button className="chip" onClick={() => { setFrom(daysAgo(4)); setTo(max); }}>Last 5 days</button>
+        <button className="chip" onClick={() => { setFrom(daysAgo(13)); setTo(max); }}>Last 14 days</button>
+        <button className="chip" onClick={() => { setFrom(daysAgo(29)); setTo(max); }}>Last 30 days</button>
+      </div>
+      <p className="faint small">Built-in data covers {min} to {max}; older dates use the live research engine when it is connected.</p>
+      <div style={{ display: "flex", gap: 8 }}>
+        <button className="btn small" disabled={!valid} onClick={() => valid && onApply(from, to)}>Show this range</button>
+        <button className="btn secondary small" onClick={onCancel}>Cancel</button>
+      </div>
+    </div>
+  );
+}
+
 export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) => void }) {
   const reduce = useReducedMotion();
   const [win, setWin] = useState<WindowKey>("since_last_look");
@@ -31,9 +67,14 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const [openCat, setOpenCat] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
 
+  const [range, setRange] = useState<{ from: string; to: string } | null>(null);
+  const [picking, setPicking] = useState(false);
+  const [live, setLive] = useState<Json | null>(null);
+  const [liveNote, setLiveNote] = useState<string | null>(null);
+
   useEffect(() => {
     // Load every window at once so switching re-ranks instantly.
-    Promise.all(WINDOWS.map((w) => snapshot(`brief_${w.key}.json`).then((b) => [w.key, b] as const)))
+    Promise.all(WINDOWS.map((w) => snapshot(w.file).then((b) => [w.key, b] as const)))
       .then((pairs) => setBriefs(Object.fromEntries(pairs)))
       .catch((e) => setErr(String(e)));
   }, []);
@@ -41,8 +82,29 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   useEffect(() => { prefs.setTune(tune); }, [tune]);
   useEffect(() => { if (!toast) return; const t = setTimeout(() => setToast(null), 2400); return () => clearTimeout(t); }, [toast]);
 
-  const brief = briefs[win];
+  const base14 = briefs["custom"];
+  const minDay = base14?.window?.from?.slice(0, 10) || "";
+  const maxDay = base14?.generated_at?.slice(0, 10) || "";
+  const brief = win === "custom" && live ? live
+    : win === "custom" && range && base14 ? briefForRange(base14, range.from, range.to) : briefs[win];
   const ranked = useMemo(() => (brief ? rerank(brief, tune) : null), [brief, tune]);
+
+  const applyRange = async (from: string, to: string) => {
+    setPicking(false); setLive(null); setLiveNote(null);
+    setRange({ from, to }); setWin("custom");
+    if (from < minDay) {
+      // Older than the built-in data: ask the live backend, if there is one.
+      if (await backendAlive(4000)) {
+        try {
+          setLiveNote("Fetching that range from the research engine…");
+          setLive(await api(`/brief?start=${from}T00:00:00%2B05:30&end=${to}T23:59:59%2B05:30`, undefined, 120000));
+          setLiveNote(null);
+        } catch { setLiveNote(`Could not fetch the range before ${minDay}; showing what the built-in data covers.`); }
+      } else {
+        setLiveNote(`The built-in data starts ${minDay}; connect the backend in Settings for older dates.`);
+      }
+    }
+  };
   if (err) return <div className="glass card notice">Could not load the brief: {err}</div>;
   if (!brief || !ranked) return <div className="faint" style={{ padding: 40, textAlign: "center" }}>Loading your brief…</div>;
 
@@ -87,9 +149,21 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
 
       <div className="chips" role="toolbar" aria-label="Time window">
         {WINDOWS.map((w) => (
-          <button key={w.key} className="chip" aria-pressed={w.key === win} onClick={() => setWin(w.key)}>{w.label}</button>
+          <button key={w.key} className="chip" aria-pressed={w.key === win}
+            onClick={() => (w.key === "custom" ? setPicking((p) => !p) : (setWin(w.key), setPicking(false)))}
+            aria-expanded={w.key === "custom" ? picking : undefined}>
+            {w.key === "custom" && range && win === "custom" ? brief.window.label : w.label}
+          </button>
         ))}
       </div>
+      <AnimatePresence initial={false}>
+        {picking && base14 && (
+          <motion.div className="glass card" style={{ marginTop: 10 }} initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}>
+            <RangePicker min={minDay} max={maxDay} initial={range} onApply={applyRange} onCancel={() => setPicking(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {liveNote && win === "custom" && <div className="notice" style={{ marginTop: 10 }}>{liveNote}</div>}
 
       {brief.quiet && ranked.hero.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>

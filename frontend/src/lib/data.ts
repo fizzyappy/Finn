@@ -4,14 +4,36 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type Json = any;
 
-export type WindowKey = "since_last_look" | "24h" | "3d" | "7d" | "14d";
-export const WINDOWS: { key: WindowKey; label: string }[] = [
-  { key: "since_last_look", label: "Since last look" },
-  { key: "24h", label: "24h" },
-  { key: "3d", label: "3 days" },
-  { key: "7d", label: "7 days" },
-  { key: "14d", label: "Custom · 14d" },
+export type WindowKey = "since_last_look" | "24h" | "3d" | "7d" | "custom";
+export const WINDOWS: { key: WindowKey; label: string; file: string }[] = [
+  { key: "since_last_look", label: "Since last look", file: "brief_since_last_look.json" },
+  { key: "24h", label: "24h", file: "brief_24h.json" },
+  { key: "3d", label: "3 days", file: "brief_3d.json" },
+  { key: "7d", label: "7 days", file: "brief_7d.json" },
+  { key: "custom", label: "Custom", file: "brief_14d.json" },     // any range inside the last 14 days
 ];
+
+/** A brief narrowed to [from, to] (YYYY-MM-DD, inclusive), computed on the device. */
+export function briefForRange(base: Json, from: string, to: string): Json {
+  const inRange = (ts?: string) => !!ts && ts.slice(0, 10) >= from && ts.slice(0, 10) <= to;
+  const hero = (base.hero || []).filter((e: Json) => inRange(e.ts));
+  const one = (base.one_liners || []).filter((e: Json) => inRange(e.ts));
+  const collapsed: Record<string, Json> = {};
+  for (const [cat, c] of Object.entries<Json>(base.collapsed || {})) {
+    const items = (c.items || []).filter((it: Json) => inRange(it.ts));
+    if (items.length) collapsed[cat] = { count: items.length, items };
+  }
+  const alerts = (base.alerts || []).filter((a: Json) => a.date >= from && a.date <= to);
+  const filings = [...hero, ...one].reduce((n: number, e: Json) => n + 1 + (e.related?.length || 0), 0)
+    + Object.values(collapsed).reduce((n: number, c: Json) => n + c.count, 0);
+  const fmt = (d: string) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+  return {
+    ...base, hero, one_liners: one, collapsed, alerts,
+    quiet: hero.length === 0 && alerts.length === 0,
+    window: { label: from === to ? fmt(from) : `${fmt(from)} – ${fmt(to)}`, from, to },
+    header: { ...base.header, filings, matter: hero.length + one.length, hero: hero.length, alerts: alerts.length },
+  };
+}
 
 const cache = new Map<string, Promise<Json>>();
 
