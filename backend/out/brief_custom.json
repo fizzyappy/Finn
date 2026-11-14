@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-14T04:26:56+05:30",
+ "generated_at": "2026-11-14T12:43:16+05:30",
  "window": {
   "label": "custom",
-  "from": "2026-10-31T04:26:41+05:30",
-  "to": "2026-11-14T04:26:41+05:30"
+  "from": "2026-10-31T12:42:04+05:30",
+  "to": "2026-11-14T12:42:04+05:30"
  },
  "header": {
   "filings": 73,
   "events": 49,
   "matter": 16,
   "hero": 4,
-  "alerts": 13,
-  "text": "73 filings, 16 matter · 13 price/volume alerts"
+  "alerts": 3,
+  "text": "73 filings, 16 matter · 3 price/volume alerts"
  },
  "quiet": false,
  "quiet_message": null,
@@ -250,7 +250,8 @@
       "change_bps_yoy": -573
      }
     },
-    "model": "gemini-3.5-flash-lite"
+    "model": "gemini-3.5-flash-lite",
+    "vs_guidance": []
    }
   },
   {
@@ -417,7 +418,8 @@
       "change_bps_yoy": 22
      }
     },
-    "model": "gemini-3.5-flash-lite"
+    "model": "gemini-3.5-flash-lite",
+    "vs_guidance": []
    }
   },
   {
@@ -1376,108 +1378,11 @@
  },
  "alerts": [
   {
-   "symbol": "CDSL",
-   "date": "2026-11-12",
-   "text": "CDSL +3.4% (Nifty +0.2%) - 2.0 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 3.41,
-    "mkt_ret_pct": 0.18,
-    "z": 1.96,
-    "vol_x": 3.27,
-    "beta": 1.1,
-    "sigma_pct": 1.65,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 4,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "CDSL",
-   "date": "2026-11-11",
-   "text": "CDSL +3.8% (Nifty +0.8%) - 1.8 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 3.76,
-    "mkt_ret_pct": 0.84,
-    "z": 1.79,
-    "vol_x": 3.28,
-    "beta": 1.06,
-    "sigma_pct": 1.61,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 4,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "IEX",
-   "date": "2026-11-06",
-   "text": "IEX -2.4% (Nifty +2.0%) - 3.0 sigma below its normal day after the market move (usual swing 1.4%); volume 1.1x its 20-day average",
-   "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)"
-   ],
-   "measures": {
-    "ret_pct": -2.41,
-    "mkt_ret_pct": 2.01,
-    "z": -2.95,
-    "vol_x": 1.11,
-    "beta": 0.93,
-    "sigma_pct": 1.45,
-    "provisional": false
-   },
-   "filed_before": [
-    {
-     "ts": "2026-11-03T16:53:23+05:30",
-     "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c02e2ed6-6e3b-4aa2-92f5-6b4287009e04.pdf",
-     "category": "press_release",
-     "treatment": "one_liner"
-    }
-   ],
-   "routine_filed_before": 1,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "MAPMYINDIA",
-   "date": "2026-11-06",
-   "text": "MAPMYINDIA -4.3% (Nifty +2.0%) - 2.8 sigma below its normal day after the market move (usual swing 2.3%); volume 1.1x its 20-day average",
-   "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)"
-   ],
-   "measures": {
-    "ret_pct": -4.3,
-    "mkt_ret_pct": 2.01,
-    "z": -2.83,
-    "vol_x": 1.08,
-    "beta": 1.08,
-    "sigma_pct": 2.29,
-    "provisional": false
-   },
-   "filed_before": [
-    {
-     "ts": "2026-11-04T15:17:10+05:30",
-     "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a704692-2488-4862-95a5-c4ed80455748.pdf",
-     "category": "results",
-     "treatment": "hero"
-    }
-   ],
-   "routine_filed_before": 3,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
    "symbol": "BAJFINANCE",
    "date": "2026-11-05",
    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average",
    "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)",
-    "Volume at least 2.5x its 20-day average"
+    "Notable move: 3 sigma after the market, on 2.5x normal volume"
    ],
    "measures": {
     "ret_pct": 7.65,
@@ -1493,116 +1398,11 @@
    "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
   },
   {
-   "symbol": "MARUTI",
-   "date": "2026-11-05",
-   "text": "MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average",
-   "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)",
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 5.48,
-    "mkt_ret_pct": 2.4,
-    "z": 2.79,
-    "vol_x": 2.59,
-    "beta": 0.9,
-    "sigma_pct": 1.19,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 1,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "MAPMYINDIA",
-   "date": "2026-11-04",
-   "text": "MAPMYINDIA +5.4% (Nifty +0.6%) - 2.1 sigma above its normal day after the market move (usual swing 2.2%); volume 11.5x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 5.37,
-    "mkt_ret_pct": 0.63,
-    "z": 2.07,
-    "vol_x": 11.53,
-    "beta": 1.17,
-    "sigma_pct": 2.24,
-    "provisional": false
-   },
-   "filed_before": [
-    {
-     "ts": "2026-11-04T15:17:10+05:30",
-     "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a704692-2488-4862-95a5-c4ed80455748.pdf",
-     "category": "results",
-     "treatment": "hero"
-    }
-   ],
-   "routine_filed_before": 1,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "SUNPHARMA",
-   "date": "2026-11-04",
-   "text": "SUNPHARMA +0.2% (Nifty +0.6%) - 0.0 sigma below its normal day after the market move (usual swing 1.0%); volume 2.8x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 0.2,
-    "mkt_ret_pct": 0.63,
-    "z": -0.02,
-    "vol_x": 2.8,
-    "beta": 0.35,
-    "sigma_pct": 1.02,
-    "provisional": false
-   },
-   "filed_before": [
-    {
-     "ts": "2026-11-02T20:58:13+05:30",
-     "title": "Rumour verification - Regulation 30(11)",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1bbe06aa-8721-4e47-b0b1-985a91279ce9.pdf",
-     "category": "press_release",
-     "treatment": "one_liner"
-    },
-    {
-     "ts": "2026-11-02T14:23:57+05:30",
-     "title": "Clarification Sought From Sun Pharmaceutical Industries Ltd",
-     "url": "/company/id/3245/",
-     "category": "press_release",
-     "treatment": "one_liner"
-    }
-   ],
-   "routine_filed_before": 0,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "CDSL",
-   "date": "2026-11-03",
-   "text": "CDSL +5.4% (Nifty +1.6%) - 2.4 sigma above its normal day after the market move (usual swing 1.5%); volume 3.5x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": 5.43,
-    "mkt_ret_pct": 1.58,
-    "z": 2.43,
-    "vol_x": 3.53,
-    "beta": 1.16,
-    "sigma_pct": 1.48,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 0,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
    "symbol": "RELIANCE",
    "date": "2026-11-02",
    "text": "RELIANCE +11.6% (Nifty +1.7%) - 9.0 sigma above its normal day after the market move (usual swing 1.1%); volume 5.8x its 20-day average",
    "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)",
-    "Volume at least 2.5x its 20-day average"
+    "Notable move: 3 sigma after the market, on 2.5x normal volume"
    ],
    "measures": {
     "ret_pct": 11.6,
@@ -1630,8 +1430,7 @@
    "date": "2026-11-02",
    "text": "DIXON +12.0% (Nifty +1.7%) - 6.0 sigma above its normal day after the market move (usual swing 1.7%); volume 6.0x its 20-day average",
    "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)",
-    "Volume at least 2.5x its 20-day average"
+    "Notable move: 3 sigma after the market, on 2.5x normal volume"
    ],
    "measures": {
     "ret_pct": 11.99,
@@ -1645,61 +1444,13 @@
    "filed_before": [],
    "routine_filed_before": 1,
    "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "IEX",
-   "date": "2026-11-02",
-   "text": "IEX +6.6% (Nifty +1.7%) - 4.1 sigma above its normal day after the market move (usual swing 1.3%); volume 2.1x its 20-day average",
-   "rules": [
-    "Move unusual for this stock (2.5 sigma after the market)"
-   ],
-   "measures": {
-    "ret_pct": 6.56,
-    "mkt_ret_pct": 1.68,
-    "z": 4.06,
-    "vol_x": 2.06,
-    "beta": 0.87,
-    "sigma_pct": 1.26,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 0,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
-  },
-  {
-   "symbol": "CDSL",
-   "date": "2026-11-02",
-   "text": "CDSL -0.9% (Nifty +1.7%) - 2.1 sigma below its normal day after the market move (usual swing 1.4%); volume 3.0x its 20-day average",
-   "rules": [
-    "Volume at least 2.5x its 20-day average"
-   ],
-   "measures": {
-    "ret_pct": -0.87,
-    "mkt_ret_pct": 1.68,
-    "z": -2.06,
-    "vol_x": 3.02,
-    "beta": 1.26,
-    "sigma_pct": 1.44,
-    "provisional": false
-   },
-   "filed_before": [],
-   "routine_filed_before": 0,
-   "link_note": "Filings made before this move. Timing only: FINN does not claim they caused it."
   }
  ],
  "alert_rules": [
   {
-   "name": "unusual_move",
-   "label": "Move unusual for this stock (2.5 sigma after the market)",
-   "min_abs_z": 2.5,
-   "min_vol_x": null,
-   "min_abs_ret_pct": null,
-   "direction": "any"
-  },
-  {
-   "name": "volume_spike",
-   "label": "Volume at least 2.5x its 20-day average",
-   "min_abs_z": null,
+   "name": "notable_move",
+   "label": "Notable move: 3 sigma after the market, on 2.5x normal volume",
+   "min_abs_z": 3.0,
    "min_vol_x": 2.5,
    "min_abs_ret_pct": null,
    "direction": "any"
@@ -1708,90 +1459,90 @@
  "data_status": {
   "prices": {
    "nifty": {
-    "source": "yfinance:^NSEI + provisional last bar from Yahoo quote",
-    "as_of": "2026-11-13T22:19:32+00:00",
+    "source": "yfinance:^NSEI",
+    "as_of": "2026-11-14T07:12:40+00:00",
     "stale": false,
     "error": null,
     "notes": [],
     "last_date": "2026-11-13"
    },
    "RELIANCE": {
-    "source": "yfinance:RELIANCE.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:RELIANCE.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "HDFCBANK": {
-    "source": "yfinance:HDFCBANK.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:HDFCBANK.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "INFY": {
-    "source": "yfinance:INFY.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:INFY.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "LT": {
-    "source": "yfinance:LT.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:LT.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "SUNPHARMA": {
-    "source": "yfinance:SUNPHARMA.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:SUNPHARMA.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "MARUTI": {
-    "source": "yfinance:MARUTI.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:MARUTI.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "ITC": {
-    "source": "yfinance:ITC.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:ITC.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "BAJFINANCE": {
-    "source": "yfinance:BAJFINANCE.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:BAJFINANCE.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "VEDL": {
-    "source": "yfinance:VEDL.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:VEDL.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": [
      "1 one-day move(s) over 35% (split/bonus or bad tick?), e.g. ('2026-04-30', -64.9)"
     ]
    },
    "DIXON": {
-    "source": "yfinance:DIXON.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:DIXON.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "POLYCAB": {
-    "source": "yfinance:POLYCAB.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:POLYCAB.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "PERSISTENT": {
@@ -1802,38 +1553,38 @@
     "checks": []
    },
    "INDHOTEL": {
-    "source": "yfinance:INDHOTEL.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:INDHOTEL.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "CDSL": {
-    "source": "yfinance:CDSL.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:CDSL.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "SUZLON": {
-    "source": "yfinance:SUZLON.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:SUZLON.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "IEX": {
-    "source": "yfinance:IEX.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:IEX.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "MAPMYINDIA": {
-    "source": "yfinance:MAPMYINDIA.NS + provisional last bar from Yahoo quote",
+    "source": "yfinance:MAPMYINDIA.NS",
     "last_date": "2026-11-13",
     "stale": false,
-    "provisional": true,
+    "provisional": false,
     "checks": []
    },
    "HAPPSTMNDS": {
@@ -1956,7 +1707,7 @@
   "filings_note": "Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.",
   "as_of": {
    "prices_last_date": "2026-11-13",
-   "built_in_seconds": 8.8
+   "built_in_seconds": 18.1
   }
  },
  "llm_usage": {
@@ -2048,6 +1799,7 @@
   }
  ],
  "quiet_holdings": [
+  "CDSL",
   "INDHOTEL",
   "INFY",
   "POLYCAB"

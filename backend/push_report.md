@@ -1,8 +1,8 @@
 # FINN push engine: live run
 
-Run 2026-11-14 04:26 IST on this PC, demo portfolio of 18 holdings. Everything below was produced live; the full output is in `backend/out/brief_7d.json` and `brief_custom.json` (14 days).
+Run 2026-11-14 12:42 IST on this PC, demo portfolio of 18 holdings. Everything below was produced live; the full output is in `backend/out/brief_7d.json` and `brief_custom.json` (14 days).
 
-RSS poll: {'BSE': 'ok: 28 items, 0 new', 'NSE': 'ok: 22 items, 0 new'}
+RSS poll: {'BSE': 'ok: 1692 items, 241 new', 'NSE': 'ok: 362 items, 339 new'}
 
 ## 1. Classifier accuracy (hand-labelled real filings)
 
@@ -20,7 +20,7 @@ Remaining disagreements with my labels:
 
 ## 2. Digest: last 7 days
 
-**22 filings, 4 matter · 2 price/volume alerts** · window 2026-11-07T04:26 → 2026-11-14T04:26
+**21 filings, 4 matter** · window 2026-11-07T12:42 → 2026-11-14T12:42
 
 ### Hero cards
 - **BAJFINANCE** · fund raise / equity · score 0.834 · 2026-11-11 17:06
@@ -34,18 +34,16 @@ Remaining disagreements with my labels:
 - **BAJFINANCE** (0.408): Bajaj Finance submitted the half yearly report on 7 November 2026, reporting a consolidated profit after tax of ₹ 12,447 crore for H1 FY27.
 
 ### Collapsed
-investor meetings 10, press release 2, earnings call 2, unclassified 1
+investor meetings 10, press release 2, unclassified 1, earnings call 1
 
 ### Price / volume alerts
-- 2026-11-12: CDSL +3.4% (Nifty +0.2%) - 2.0 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average (Volume at least 2.5x its 20-day average)
-- 2026-11-11: CDSL +3.8% (Nifty +0.8%) - 1.8 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average (Volume at least 2.5x its 20-day average)
 
 Gemini use for this brief: gemini-3.5-flash-lite: 0 calls, 5 cache hits, 0 tokens · cost free tier (USD 0)
-Built in 7.9 s. Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.
+Built in 54.6 s. Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.
 
 ## 3. Digest: last 14 days (to show results season)
 
-**73 filings, 16 matter · 13 price/volume alerts** · window 2026-10-31T04:26 → 2026-11-14T04:26
+**73 filings, 16 matter · 3 price/volume alerts** · window 2026-10-31T12:42 → 2026-11-14T12:42
 
 ### Hero cards
 - **BAJFINANCE** · fund raise / equity · score 0.834 · 2026-11-11 17:06
@@ -87,39 +85,30 @@ Built in 7.9 s. Sources refused on this connection: bse_api, nse_api. Filings co
 investor meetings 19, earnings call 10, unclassified 6, postal ballot 2, credit rating 1, press release 1, results 1, dividend 1
 
 ### Price / volume alerts
-- 2026-11-12: CDSL +3.4% (Nifty +0.2%) - 2.0 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average (Volume at least 2.5x its 20-day average)
-- 2026-11-11: CDSL +3.8% (Nifty +0.8%) - 1.8 sigma above its normal day after the market move (usual swing 1.6%); volume 3.3x its 20-day average (Volume at least 2.5x its 20-day average)
-- 2026-11-06: IEX -2.4% (Nifty +2.0%) - 3.0 sigma below its normal day after the market move (usual swing 1.4%); volume 1.1x its 20-day average (Move unusual for this stock (2.5 sigma after the market))
-  - Filed before this move: 2026-11-03 16:53 Announcement under Regulation 30 (LODR)-Press Release / Media Release
-- 2026-11-06: MAPMYINDIA -4.3% (Nifty +2.0%) - 2.8 sigma below its normal day after the market move (usual swing 2.3%); volume 1.1x its 20-day average (Move unusual for this stock (2.5 sigma after the market))
-  - Filed before this move: 2026-11-04 15:17 Announcement under Regulation 30 (LODR)-Press Release / Media Release
-- 2026-11-05: BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average (Move unusual for this stock (2.5 sigma after the market); Volume at least 2.5x its 20-day average)
-- 2026-11-05: MARUTI +5.5% (Nifty +2.4%) - 2.8 sigma above its normal day after the market move (usual swing 1.2%); volume 2.6x its 20-day average (Move unusual for this stock (2.5 sigma after the market); Volume at least 2.5x its 20-day average)
-- 2026-11-04: MAPMYINDIA +5.4% (Nifty +0.6%) - 2.1 sigma above its normal day after the market move (usual swing 2.2%); volume 11.5x its 20-day average (Volume at least 2.5x its 20-day average)
-  - Filed before this move: 2026-11-04 15:17 Announcement under Regulation 30 (LODR)-Press Release / Media Release
-- 2026-11-04: SUNPHARMA +0.2% (Nifty +0.6%) - 0.0 sigma below its normal day after the market move (usual swing 1.0%); volume 2.8x its 20-day average (Volume at least 2.5x its 20-day average)
-  - Filed before this move: 2026-11-02 20:58 Rumour verification - Regulation 30(11)
-  - Filed before this move: 2026-11-02 14:23 Clarification Sought From Sun Pharmaceutical Industries Ltd
-- … and 5 more
+- 2026-11-05: BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average (Notable move: 3 sigma after the market, on 2.5x normal volume)
+- 2026-11-02: RELIANCE +11.6% (Nifty +1.7%) - 9.0 sigma above its normal day after the market move (usual swing 1.1%); volume 5.8x its 20-day average (Notable move: 3 sigma after the market, on 2.5x normal volume)
+  - Filed before this move: 2026-11-01 23:05 Announcement under Regulation 30 (LODR)-Earnings Call Transcript
+- 2026-11-02: DIXON +12.0% (Nifty +1.7%) - 6.0 sigma above its normal day after the market move (usual swing 1.7%); volume 6.0x its 20-day average (Notable move: 3 sigma after the market, on 2.5x normal volume)
 
 Gemini use for this brief: gemini-3.5-flash-lite: 0 calls, 17 cache hits, 0 tokens · cost free tier (USD 0)
-Built in 8.8 s. Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.
+Built in 18.1 s. Sources refused on this connection: bse_api, nse_api. Filings come from screener's recent list and the BSE/NSE RSS store, so older or very busy days may be incomplete.
 
 ## 4. Alert rules: 90-day backtest across the portfolio
 
 | Rule | Fires | Per week | Most frequent | Never fired |
 |---|---|---|---|---|
+| Notable move: 3 sigma after the market, on 2.5x normal volume | 21 | 1.2 | HAPPSTMNDS 5, BAJFINANCE 2, SUZLON 2 | 5 |
 | Move unusual for this stock (2.5 sigma after the market) | 58 | 3.2 | IEX 7, HAPPSTMNDS 6, HDFCBANK 5 | 0 |
 | Volume at least 2.5x its 20-day average | 57 | 3.2 | HAPPSTMNDS 8, CDSL 7, MAPMYINDIA 6 | 1 |
 | Unusual move (2 sigma) on heavy volume (1.8x) | 56 | 3.1 | HAPPSTMNDS 7, CDSL 5, IEX 5 | 0 |
 | Price moved 5% or more | 34 | 1.9 | MAPMYINDIA 8, HAPPSTMNDS 7, BAJFINANCE 4 | 5 |
 
-A 2.5-sigma rule would fire about 1.2% of days if returns were bell-shaped (about 20 times here); real returns have fatter tails, which is exactly why the backtest is shown before a rule is switched on.
+The preview changed the default. The obvious rule (a 2.5-sigma move) would fire about 1.2% of days if returns were bell-shaped, about 20 times here; real returns have fatter tails and it fired 58 times, ~3 a week: too noisy to be worth a push. The default is now 'notable move' (3 sigma after the market AND 2.5x normal volume), which fired about once a week. The investor can still pick any preset or a custom rule.
 
 ## 5. Cost
 
 This run (answers mostly reused from the cache): gemini-3.5-flash-lite: 0 API calls, 33 cache hits, 0 failed, 0 in / 0 out tokens. Cost: free tier (USD 0).
 
-All Gemini use today, including the first time each filing was read: gemini-3.5-flash: 6 API calls, 1 cache hits, 4 failed, 1,262 in / 4,889 out tokens; gemini-3.5-flash-lite: 60 API calls, 100 cache hits, 0 failed, 94,183 in / 8,763 out tokens. Cost: free tier (USD 0).
+All Gemini use today, including the first time each filing was read: gemini-3.5-flash: 6 API calls, 1 cache hits, 4 failed, 1,262 in / 4,889 out tokens; gemini-3.5-flash-lite: 134 API calls, 388 cache hits, 6 failed, 238,197 in / 66,882 out tokens. Cost: free tier (USD 0).
 
 Every model answer is cached by a hash of its exact input, so re-running a digest, or a second user holding the same stock, costs nothing.

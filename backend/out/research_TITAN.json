@@ -1,0 +1,1451 @@
+{
+ "ticker": "TITAN",
+ "started_at": "2026-11-14T12:41:29",
+ "states": [
+  {
+   "state": "too_early",
+   "message": "Management's targets are for periods not yet reported; verdicts will come with the next results."
+  }
+ ],
+ "sections": {
+  "snapshot": {
+   "latest_quarter": "2026-09-30",
+   "basis": "consolidated",
+   "units": "Rs crore",
+   "lender": false,
+   "market_cap_cr": 430124.0,
+   "price": 4845.0,
+   "pe": 60.5,
+   "book_value": 206.0,
+   "roe_pct": 37.7,
+   "roce_pct": 20.5,
+   "dividend_yield_pct": 0.31,
+   "ttm": {
+    "revenue": 94306.0,
+    "ebitda": 10524.0,
+    "pat": 7033.0,
+    "eps": 79.22
+   },
+   "source": "https://www.screener.in/company/TITAN/consolidated/",
+   "price_to_sales": 4.56,
+   "latest": {
+    "revenue": 20614.0,
+    "ebitda": 2983.0,
+    "ebitda_margin_pct": 14.0,
+    "pat": 2393.0,
+    "eps": 26.95
+   }
+  },
+  "trajectory": {
+   "annual": [
+    {
+     "year_end": "2017-03-31",
+     "revenue": 13261.0,
+     "ebitda": 1164.0,
+     "pat": 697.0,
+     "eps": 8.01,
+     "ebitda_margin_pct": 8.8,
+     "pat_margin_pct": 5.3
+    },
+    {
+     "year_end": "2018-03-31",
+     "revenue": 16120.0,
+     "ebitda": 1644.0,
+     "pat": 1102.0,
+     "eps": 12.73,
+     "ebitda_margin_pct": 10.2,
+     "pat_margin_pct": 6.8
+    },
+    {
+     "year_end": "2019-03-31",
+     "revenue": 19779.0,
+     "ebitda": 1994.0,
+     "pat": 1389.0,
+     "eps": 15.82,
+     "ebitda_margin_pct": 10.1,
+     "pat_margin_pct": 7.0
+    },
+    {
+     "year_end": "2020-03-31",
+     "revenue": 21052.0,
+     "ebitda": 2463.0,
+     "pat": 1493.0,
+     "eps": 16.91,
+     "ebitda_margin_pct": 11.7,
+     "pat_margin_pct": 7.1
+    },
+    {
+     "year_end": "2021-03-31",
+     "revenue": 21644.0,
+     "ebitda": 1725.0,
+     "pat": 974.0,
+     "eps": 10.96,
+     "ebitda_margin_pct": 8.0,
+     "pat_margin_pct": 4.5
+    },
+    {
+     "year_end": "2022-03-31",
+     "revenue": 28799.0,
+     "ebitda": 3344.0,
+     "pat": 2198.0,
+     "eps": 24.48,
+     "ebitda_margin_pct": 11.6,
+     "pat_margin_pct": 7.6
+    },
+    {
+     "year_end": "2023-03-31",
+     "revenue": 40575.0,
+     "ebitda": 4882.0,
+     "pat": 3274.0,
+     "eps": 36.61,
+     "ebitda_margin_pct": 12.0,
+     "pat_margin_pct": 8.1
+    },
+    {
+     "year_end": "2024-03-31",
+     "revenue": 51084.0,
+     "ebitda": 5292.0,
+     "pat": 3496.0,
+     "eps": 39.38,
+     "ebitda_margin_pct": 10.4,
+     "pat_margin_pct": 6.8
+    },
+    {
+     "year_end": "2025-03-31",
+     "revenue": 60456.0,
+     "ebitda": 5694.0,
+     "pat": 3337.0,
+     "eps": 37.59,
+     "ebitda_margin_pct": 9.4,
+     "pat_margin_pct": 5.5
+    },
+    {
+     "year_end": "2026-03-31",
+     "revenue": 87584.0,
+     "ebitda": 8357.0,
+     "pat": 5073.0,
+     "eps": 57.14,
+     "ebitda_margin_pct": 9.5,
+     "pat_margin_pct": 5.8
+    }
+   ],
+   "cagr_pct": {
+    "3y": {
+     "revenue": 29.2,
+     "pat": 15.7,
+     "eps": 16.0
+    },
+    "5y": {
+     "revenue": 32.3,
+     "pat": 39.1,
+     "eps": 39.1
+    },
+    "10y": {
+     "revenue": 22.8,
+     "pat": 22.3,
+     "eps": 22.4
+    }
+   },
+   "quarters": [
+    {
+     "quarter_end": "2024-12-31",
+     "revenue": 17740.0,
+     "ebitda": 1674.0,
+     "pat": 1047.0,
+     "ebitda_margin_pct": 9.0
+    },
+    {
+     "quarter_end": "2025-03-31",
+     "revenue": 14916.0,
+     "ebitda": 1537.0,
+     "pat": 871.0,
+     "ebitda_margin_pct": 10.0
+    },
+    {
+     "quarter_end": "2025-06-30",
+     "revenue": 16523.0,
+     "ebitda": 1830.0,
+     "pat": 1091.0,
+     "ebitda_margin_pct": 11.0
+    },
+    {
+     "quarter_end": "2025-09-30",
+     "revenue": 18725.0,
+     "ebitda": 1875.0,
+     "pat": 1120.0,
+     "ebitda_margin_pct": 10.0
+    },
+    {
+     "quarter_end": "2025-12-31",
+     "revenue": 25416.0,
+     "ebitda": 2713.0,
+     "pat": 1684.0,
+     "ebitda_margin_pct": 11.0
+    },
+    {
+     "quarter_end": "2026-03-31",
+     "revenue": 26920.0,
+     "ebitda": 1938.0,
+     "pat": 1179.0,
+     "ebitda_margin_pct": 7.0
+    },
+    {
+     "quarter_end": "2026-06-30",
+     "revenue": 21356.0,
+     "ebitda": 2890.0,
+     "pat": 1777.0,
+     "ebitda_margin_pct": 14.0
+    },
+    {
+     "quarter_end": "2026-09-30",
+     "revenue": 20614.0,
+     "ebitda": 2983.0,
+     "pat": 2393.0,
+     "ebitda_margin_pct": 14.0
+    }
+   ],
+   "quarters_with_yoy_revenue_growth": "8 of 8"
+  },
+  "balance_sheet": {
+   "as_of": "2026-09-30",
+   "net_worth": 18263.0,
+   "borrowings": 27638.0,
+   "total_assets": 71806.0,
+   "lender": false,
+   "debt_to_equity": 1.51,
+   "debt_trend": [
+    {
+     "year_end": "2023-03-31",
+     "borrowings": 9367.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "borrowings": 15528.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "borrowings": 20777.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "borrowings": 30621.0
+    },
+    {
+     "year_end": "2026-09-30",
+     "borrowings": 27638.0
+    }
+   ],
+   "working_capital": {
+    "year_end": "2026-03-31",
+    "debtor_days": 4.0,
+    "inventory_days": 222.0,
+    "payable_days": 15.0,
+    "ccc_days": 211.0,
+    "wc_days": 28.0
+   },
+   "roce_trend_pct": [
+    {
+     "year_end": "2022-03-31",
+     "roce_pct": 21.0
+    },
+    {
+     "year_end": "2023-03-31",
+     "roce_pct": 25.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "roce_pct": 23.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "roce_pct": 19.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "roce_pct": 21.0
+    }
+   ]
+  },
+  "cash_quality": {
+   "years": [
+    {
+     "year_end": "2021-03-31",
+     "cfo": 4139.0,
+     "pat": 974.0,
+     "fcf": 4000.0,
+     "cfo_to_pat": 4.25,
+     "cfo_to_ebitda_pct": 256.0
+    },
+    {
+     "year_end": "2022-03-31",
+     "cfo": -724.0,
+     "pat": 2198.0,
+     "fcf": -940.0,
+     "cfo_to_pat": -0.33,
+     "cfo_to_ebitda_pct": 2.0
+    },
+    {
+     "year_end": "2023-03-31",
+     "cfo": 1370.0,
+     "pat": 3274.0,
+     "fcf": 950.0,
+     "cfo_to_pat": 0.42,
+     "cfo_to_ebitda_pct": 52.0
+    },
+    {
+     "year_end": "2024-03-31",
+     "cfo": 1695.0,
+     "pat": 3496.0,
+     "fcf": 1024.0,
+     "cfo_to_pat": 0.48,
+     "cfo_to_ebitda_pct": 54.0
+    },
+    {
+     "year_end": "2025-03-31",
+     "cfo": -541.0,
+     "pat": 3337.0,
+     "fcf": -1011.0,
+     "cfo_to_pat": -0.16,
+     "cfo_to_ebitda_pct": 10.0
+    },
+    {
+     "year_end": "2026-03-31",
+     "cfo": 5590.0,
+     "pat": 5073.0,
+     "fcf": 4713.0,
+     "cfo_to_pat": 1.1,
+     "cfo_to_ebitda_pct": 88.0
+    }
+   ],
+   "three_year_cfo_to_pat": 0.57,
+   "lender": false,
+   "reading": "Over the last 3 years, operating cash flow was 0.57x reported profit (profits are not fully turning into cash)"
+  },
+  "promise_ledger": {
+   "promises": [
+    {
+     "metric": "ebit_margin",
+     "scope": "company",
+     "horizon": "FY27",
+     "target": "11%",
+     "firmness": "firm",
+     "verdict": "Too early",
+     "reason": "FY27 has not been reported yet (latest quarter 2026-09-30)",
+     "actual": null,
+     "said": {
+      "metric": "ebit_margin",
+      "unit": "pct_margin",
+      "low": 11.0,
+      "high": 11.0,
+      "basis": "reported",
+      "horizon_text": "FY27",
+      "horizon": "FY27",
+      "horizon_end": "2027-03-31",
+      "firmness": "firm",
+      "quote": "deliver margin which is anchored around 11%",
+      "page": 17,
+      "speaker": "Ashok Sonthalia",
+      "call_date": "2026-11-11",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=daa6c172-771a-4af5-b4b3-9813fdf7536a.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "Given all those environment, we are saying that it looks like that we can confidently deliver margin which is anchored around 11%, and we don't want in a hurry to either change that."
+     },
+     "trail": [
+      {
+       "call": "2026-11-11",
+       "event": "set",
+       "target": "11%",
+       "quote": "deliver margin which is anchored around 11%",
+       "page": 17,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=daa6c172-771a-4af5-b4b3-9813fdf7536a.pdf"
+      }
+     ]
+    },
+    {
+     "metric": "other",
+     "scope": "Tanishq",
+     "horizon": "FY26",
+     "target": "35-40",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "target is for 'Tanishq', not the whole company; the tables are company-wide",
+     "actual": null,
+     "said": {
+      "metric": "other",
+      "unit": "count",
+      "low": 35,
+      "high": 40,
+      "basis": "stores",
+      "horizon_text": "this year",
+      "horizon": "FY26",
+      "horizon_end": "2026-03-31",
+      "firmness": "firm",
+      "quote": "35 to 40 is a reasonable range to expect",
+      "page": 7,
+      "speaker": "Ajoy Chawla",
+      "call_date": "2025-11-30",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c3a5d70a-78ac-4407-aed7-e06b93e17a8f.pdf",
+      "quote_method": "model",
+      "scope": "Tanishq",
+      "sentence": "So we look at it in totality, but purely from new stores on Tanishq, I think 35 to 40 is a reasonable range to expect."
+     },
+     "trail": [
+      {
+       "call": "2025-11-30",
+       "event": "set",
+       "target": "35-40",
+       "quote": "35 to 40 is a reasonable range to expect",
+       "page": 7,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c3a5d70a-78ac-4407-aed7-e06b93e17a8f.pdf"
+      },
+      {
+       "call": "2026-02-28",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 1
+      }
+     ]
+    },
+    {
+     "metric": "revenue_growth",
+     "scope": "company",
+     "horizon": "FY26",
+     "target": "13-14%",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "actual 44.9% is far above the target 13-14%; the target probably refers to a different scope or basis, so it is not scored (FY26, revenue growth YoY (reported INR))",
+     "actual": 44.9,
+     "said": {
+      "metric": "revenue_growth",
+      "unit": "pct_growth",
+      "low": 13,
+      "high": 14,
+      "basis": "YoY",
+      "horizon_text": "this year",
+      "horizon": "FY26",
+      "horizon_end": "2026-03-31",
+      "firmness": "firm",
+      "quote": "anywhere between 13% to 14%",
+      "page": 9,
+      "speaker": "N. S. Raghavan",
+      "call_date": "2025-11-30",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c3a5d70a-78ac-4407-aed7-e06b93e17a8f.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "So as far as our growth outlook is concerned, we believe that we should be closing this year at a slightly higher number than what you are seeing, anywhere between 13% to 14%."
+     },
+     "trail": [
+      {
+       "call": "2025-11-30",
+       "event": "set",
+       "target": "13-14%",
+       "quote": "anywhere between 13% to 14%",
+       "page": 9,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c3a5d70a-78ac-4407-aed7-e06b93e17a8f.pdf"
+      },
+      {
+       "call": "2026-02-28",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 1
+      }
+     ]
+    },
+    {
+     "metric": "ebit_margin",
+     "scope": "CaratLane",
+     "horizon": "gradually",
+     "target": "10%",
+     "firmness": "soft",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "ebit_margin",
+      "unit": "pct_margin",
+      "low": 10.0,
+      "high": null,
+      "basis": "",
+      "horizon_text": "gradually",
+      "horizon": "gradually",
+      "horizon_end": null,
+      "firmness": "soft",
+      "quote": "start inching towards double-digit EBIT margin",
+      "page": 13,
+      "speaker": "Ashok Sonthalia",
+      "call_date": "2026-02-28",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ee5b68b-8f66-4705-9a84-9debaa9aae1d.pdf",
+      "quote_method": "model",
+      "scope": "CaratLane",
+      "sentence": "So I expect that overall margin, we had -- if you remember, a couple of quarters back, we had said that, gradually, CaratLane with the scale will start inching towards double-digit EBIT margin."
+     },
+     "trail": [
+      {
+       "call": "2026-02-28",
+       "event": "set",
+       "target": "10%",
+       "quote": "start inching towards double-digit EBIT margin",
+       "page": 13,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ee5b68b-8f66-4705-9a84-9debaa9aae1d.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 3
+      }
+     ]
+    },
+    {
+     "metric": "ebit_margin",
+     "scope": "CaratLane",
+     "horizon": "now",
+     "target": "10%",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "ebit_margin",
+      "unit": "pct_margin",
+      "low": 10.0,
+      "high": null,
+      "basis": "",
+      "horizon_text": "now",
+      "horizon": "now",
+      "horizon_end": null,
+      "firmness": "firm",
+      "quote": "stay there, low double-digit margin EBIT profile",
+      "page": 13,
+      "speaker": "Ashok Sonthalia",
+      "call_date": "2026-02-28",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ee5b68b-8f66-4705-9a84-9debaa9aae1d.pdf",
+      "quote_method": "model",
+      "scope": "CaratLane",
+      "sentence": "And I think they have reached -- they are maybe slightly earlier than what we expected, but I think they would stay there, low double-digit margin EBIT profile."
+     },
+     "trail": [
+      {
+       "call": "2026-02-28",
+       "event": "set",
+       "target": "10%",
+       "quote": "stay there, low double-digit margin EBIT profile",
+       "page": 13,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ee5b68b-8f66-4705-9a84-9debaa9aae1d.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 3
+      }
+     ]
+    },
+    {
+     "metric": "other",
+     "scope": "company",
+     "horizon": "two to three cities",
+     "target": "10-12",
+     "firmness": "soft",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "other",
+      "unit": "count",
+      "low": 10,
+      "high": 12,
+      "basis": "stores",
+      "horizon_text": "two to three cities",
+      "horizon": "two to three cities",
+      "horizon_end": null,
+      "firmness": "soft",
+      "quote": "expand to around 10 to 12 stores",
+      "page": 9,
+      "speaker": "Arun Narayan",
+      "call_date": "2026-06-30",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "Yes, like we said earlier, we would certainly like to expand to around 10 to 12 stores in two to three cities and then kind of see how that, because we have done a certain study, we have done a lot of interaction with customers and we reached a point where we believe that it is a twin engine approach to growing adoption in a very low penetrated diamond market, which is India."
+     },
+     "trail": [
+      {
+       "call": "2026-06-30",
+       "event": "set",
+       "target": "10-12",
+       "quote": "expand to around 10 to 12 stores",
+       "page": 9,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 2
+      }
+     ]
+    },
+    {
+     "metric": "other",
+     "scope": "company",
+     "horizon": "very soon",
+     "target": "10-12",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "other",
+      "unit": "count",
+      "low": 10,
+      "high": 12,
+      "basis": "stores",
+      "horizon_text": "very soon",
+      "horizon": "very soon",
+      "horizon_end": null,
+      "firmness": "firm",
+      "quote": "scale up to the next step of 10 to 12 stores",
+      "page": 9,
+      "speaker": "Arun Narayan",
+      "call_date": "2026-06-30",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "So, our objective currently is very soon to scale up to the next step of 10 to 12 stores and then kind of see how that works for us before planning a national launch."
+     },
+     "trail": [
+      {
+       "call": "2026-06-30",
+       "event": "set",
+       "target": "10-12",
+       "quote": "scale up to the next step of 10 to 12 stores",
+       "page": 9,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 2
+      }
+     ]
+    },
+    {
+     "metric": "other",
+     "scope": "company",
+     "horizon": "Quarter 1 itself",
+     "target": "1",
+     "firmness": "soft",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "other",
+      "unit": "count",
+      "low": 1,
+      "high": 1,
+      "basis": "stores",
+      "horizon_text": "Quarter 1 itself",
+      "horizon": "Quarter 1 itself",
+      "horizon_end": null,
+      "firmness": "soft",
+      "quote": "get a bunch of stores in place well in Quarter 1 itself",
+      "page": 9,
+      "speaker": "Arun Narayan",
+      "call_date": "2026-06-30",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf",
+      "quote_method": "model",
+      "scope": "company",
+      "sentence": "We are at two stores currently and hopefully we will get a bunch of stores in place well in Quarter 1 itself."
+     },
+     "trail": [
+      {
+       "call": "2026-06-30",
+       "event": "set",
+       "target": "1",
+       "quote": "get a bunch of stores in place well in Quarter 1 itself",
+       "page": 9,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 2
+      }
+     ]
+    },
+    {
+     "metric": "revenue_growth",
+     "scope": "jewellery",
+     "horizon": "ongoing",
+     "target": "10-99%",
+     "firmness": "firm",
+     "verdict": "Not measurable",
+     "reason": "no date was given for this target",
+     "actual": null,
+     "said": {
+      "metric": "revenue_growth",
+      "unit": "pct_growth",
+      "low": 10.0,
+      "high": 99.0,
+      "basis": "value",
+      "horizon_text": "ongoing",
+      "horizon": "ongoing",
+      "horizon_end": null,
+      "firmness": "firm",
+      "quote": "committed to a double-digit healthy growth in value in the jewellery business",
+      "page": 17,
+      "speaker": "Ajoy Chawla",
+      "call_date": "2026-08-31",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f70a0a33-43cf-40b6-a753-67b06123e8de.pdf",
+      "quote_method": "model",
+      "scope": "jewellery",
+      "sentence": "I think overall, we are committed to -- I'm just reiterating, we are committed to a double-digit healthy growth in value in the jewellery business."
+     },
+     "trail": [
+      {
+       "call": "2026-08-31",
+       "event": "set",
+       "target": "10-99%",
+       "quote": "committed to a double-digit healthy growth in value in the jewellery business",
+       "page": 17,
+       "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f70a0a33-43cf-40b6-a753-67b06123e8de.pdf"
+      },
+      {
+       "call": "2026-11-11",
+       "event": "not repeated yet",
+       "target": null,
+       "quote": null,
+       "page": null,
+       "url": null,
+       "silent_calls": 1
+      }
+     ]
+    }
+   ],
+   "counts": {
+    "Missed": 0,
+    "Partly": 0,
+    "Quietly dropped": 0,
+    "Kept": 0,
+    "Too early": 1,
+    "Not measurable": 8
+   },
+   "kept_of_measurable": "none measurable yet",
+   "extraction": [
+    {
+     "call": "2026-11-11",
+     "candidates": 5,
+     "extracted": 4,
+     "verified": 4,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "call": "2026-08-31",
+     "candidates": 4,
+     "extracted": 3,
+     "verified": 3,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "call": "2026-06-30",
+     "candidates": 5,
+     "extracted": 3,
+     "verified": 3,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "call": "2026-02-28",
+     "candidates": 2,
+     "extracted": 2,
+     "verified": 2,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "call": "2025-11-30",
+     "candidates": 7,
+     "extracted": 2,
+     "verified": 2,
+     "quote_replaced": 0,
+     "dropped": 0
+    },
+    {
+     "scopes_harmonised": 0
+    }
+   ],
+   "calls": [
+    "2025-11-30",
+    "2026-02-28",
+    "2026-06-30",
+    "2026-08-31",
+    "2026-11-11"
+   ]
+  },
+  "dodged_questions": [
+   {
+    "call": "2026-11-11",
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=daa6c172-771a-4af5-b4b3-9813fdf7536a.pdf",
+    "pairs_found": 44,
+    "judged": [
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Ashok Sonthalia",
+       "Saumen Bhaumik"
+      ],
+      "label": "answered",
+      "reason": "Management explained reasons for margins and CaratLane.",
+      "question_quote": "domestic jewellery EBIT margin",
+      "question_page": 4,
+      "answer_quote": "making a conscious choice to invest on brand building",
+      "answer_page": 4
+     },
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Arun Narayan",
+       "Saumen Bhaumik"
+      ],
+      "label": "answered",
+      "reason": "Management detailed festive trends across three phases.",
+      "question_quote": "observations on the secondary and consumer level trends",
+      "question_page": 4,
+      "answer_quote": "first phase of Navratri from October 11 to October 22",
+      "answer_page": 5
+     },
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Ashok Sonthalia",
+       "Kuruvilla Markose"
+      ],
+      "label": "answered",
+      "reason": "Management shared quick thoughts on watches festive growth.",
+      "question_quote": "Watches and eyewear, if there are any quick thoughts",
+      "question_page": 5,
+      "answer_quote": "Watches, generally festive doesn't really do that well",
+      "answer_page": 5
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management discussed assortment corrections and lower cartages.",
+      "question_quote": "assortment correction to sort of build volumes",
+      "question_page": 6,
+      "answer_quote": "working on 18-carat gold for core gold jewellery",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained why they won't reverse initiatives.",
+      "question_quote": "Is there any thought process around going back to 22-carat",
+      "question_page": 6,
+      "answer_quote": "objective is to give choices to customers and leave it",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management clarified capital raising is for replenishment.",
+      "question_quote": "is this restructuring or fresh capital",
+      "question_page": 7,
+      "answer_quote": "This is a replenishment of some of the existing borrowing.",
+      "answer_page": 7
+     }
+    ],
+    "unverified": 17,
+    "counts": {
+     "answered": 6,
+     "partly": 0,
+     "dodged": 0
+    },
+    "summary": "questions dodged: 0 of 6"
+   },
+   {
+    "call": "2026-08-31",
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f70a0a33-43cf-40b6-a753-67b06123e8de.pdf",
+    "pairs_found": 36,
+    "judged": [
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained postponed demand returned in June after May softness.",
+      "question_quote": "have you seen that the postponed demand has come back in the quarter till date",
+      "question_page": 4,
+      "answer_quote": "we believe that it was a deferment and we saw things pick up in June.",
+      "answer_page": 4
+     },
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management noted studded growth continued to play out in Quarter 1.",
+      "question_quote": "And any changes in consumer behavior, whether it's the sub-₹1 lakh category coming back or sustenance of studded growth",
+      "question_page": 4,
+      "answer_quote": "we began seeing a resurgence of studded in Quarter 4 of last year, and we are seeing that continue to play out in Quarter 1.",
+      "answer_page": 4
+     },
+     {
+      "analyst": "Videesha Sheth",
+      "answered_by": [
+       "Arun Narayan",
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management stated they are not changing guidance and stick to previous expectations.",
+      "question_quote": "Would you look to revisit the EBIT growth or margin guidance for the jewellery segment",
+      "question_page": 5,
+      "answer_quote": "we will stick with our previous guidance. We are not changing it.",
+      "answer_page": 5
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed the comparison with a simple yes.",
+      "question_quote": "so ideally, the current quarter margin at 10.9% compares with 11.3% last year, right",
+      "question_page": 5,
+      "answer_quote": "Yes.",
+      "answer_page": 4
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management explained the reversal will flow through P&L over the next 2 to 3 quarters.",
+      "question_quote": "earlier 50 bps reversal, which was there last year, that can also sort of happen in the next few quarters",
+      "question_page": 5,
+      "answer_quote": "Over next 2 to 3 quarters, these gains would gradually flow through P&L.",
+      "answer_page": 5
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "partly",
+      "reason": "Management declined to give a full year impact citing policy reasons.",
+      "question_quote": "overall quantum of custom duty benefit, if you can call out for the entire year",
+      "question_page": 5,
+      "answer_quote": "I would rather refrain from giving a full year impact at this point of time.",
+      "answer_page": 5
+     },
+     {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Ajoy Chawla",
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained the rollout of the cash for gold scheme.",
+      "question_quote": "what are your views on this? And how is Titan approaching this",
+      "question_page": 6,
+      "answer_quote": "We have rolled out what we had called as cash for gold in all our stores from the month of June.",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management asked to clarify the question.",
+      "question_quote": "Yes, sir. Absolutely.",
+      "question_page": 6,
+      "answer_quote": "Sorry, just go over your question again.",
+      "answer_page": 6
+     },
+     {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained exchanging gold for cash is a customer solution.",
+      "question_quote": "exchanging gold for cash, what is the thought process from your perspective",
+      "question_page": 6,
+      "answer_quote": "we are looking at it purely as a customer solution as opposed to a revenue stream.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained deductions nullify margin dilution.",
+      "question_quote": "It is not dilutive for your margin profile or versus exchanging gold for gold",
+      "question_page": 7,
+      "answer_quote": "there is a deduction which is there when you bring gold for exchange, and that takes care of - nullifies this",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Ajoy Chawla"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed economics do not dilute margins.",
+      "question_quote": "Okay. So it's margin neutral to that extent.",
+      "question_page": 7,
+      "answer_quote": "How to ensure that the economics don't dilute our margin, those are things we as an organization have figured out",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Nihal Mahesh Jham",
+      "answered_by": [
+       "Ajoy Chawla",
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management noted some softness in plain gold towards the end of July.",
+      "question_quote": "any such trends visible or none of it at our end.",
+      "question_page": 9,
+      "answer_quote": "towards the end of July, perhaps we did see some softness in -- on the plain gold side",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Avi Mehta",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management asked for clarification on what to remove.",
+      "question_quote": "what was the average buyer growth, if I were to remove, say, average of April and June",
+      "question_page": 9,
+      "answer_quote": "You'd like us to remove what?",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Avi Mehta",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management stated normalization already happened in June.",
+      "question_quote": "if I were to kind of look at either the exit in June or average of April and June",
+      "question_page": 9,
+      "answer_quote": "the normalizing happened in June. It's already happened in June.",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Avi Mehta",
+      "answered_by": [
+       "Ajoy Chawla",
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management discussed their target of double-digit aggressive growth.",
+      "question_quote": "how we should look at the differential between buyer growth and value growth",
+      "question_page": 10,
+      "answer_quote": "we are targeting, as always, a double-digit aggressive growth, and that's something which we shared even in the Investor Day.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Avi Mehta",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management explained inventory valuation and hedge valuation differences.",
+      "question_quote": "Just a second bit on the MTM gain and loss. Just if you could just remind us what exactly drives this",
+      "question_page": 10,
+      "answer_quote": "It gives rise to accounting MTM as inventory is being done on a certain basis reference point, hedges are being done on a certain reference point.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Percy Panthaki",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management acknowledged hearing the caller.",
+      "question_quote": "Can you hear me?",
+      "question_page": 11,
+      "answer_quote": "Yes, a little.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Percy Panthaki",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained their strategy to acquire buyers in a stable gold price scenario.",
+      "question_quote": "do you think we can sort of maintain a 18% to 20% kind of top line growth in that kind of a scenario",
+      "question_page": 11,
+      "answer_quote": "in a scenario like that, we would certainly go all out to acquire buyers and use that to drive growth",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Percy Panthaki",
+      "answered_by": [
+       "Ajoy Chawla",
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management discussed levers like lightweight jewellery and accessibility to keep consumers engaged.",
+      "question_quote": "do you think that could be one of the lever in terms of gradually increasing or reverting back",
+      "question_page": 12,
+      "answer_quote": "jewellery has to be both exciting and accessible. And accessibility comes from keeping it lightweight",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Jay Doshi",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management stated they do not see a substantial increase in competitive intensity for plain gold.",
+      "question_quote": "did you answer the question on making charges for the plain gold jewellery? How is the competitive intensity there",
+      "question_page": 14,
+      "answer_quote": "No, I mean we don't see a substantial increase in competitive intensity.",
+      "answer_page": 14
+     },
+     {
+      "analyst": "Jay Doshi",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management stated they are not seeing any easing up of competitive intensity.",
+      "question_quote": "whether you're seeing easing of competitive intensity in plain gold jewellery given that gold prices have stabilized",
+      "question_page": 14,
+      "answer_quote": "We're not seeing any easing up of competitive intensity. We are seeing it more of the same.",
+      "answer_page": 14
+     },
+     {
+      "analyst": "Harit Kapoor",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management explained exchange share trends and upswings during May.",
+      "question_quote": "give a broad breakup of how much exchange share in procurement has gone up this quarter",
+      "question_page": 14,
+      "answer_quote": "We did see an upswing for that period of about 3 weeks, but then it has again got normalized since then.",
+      "answer_page": 14
+     },
+     {
+      "analyst": "Harit Kapoor",
+      "answered_by": [
+       "Arun Narayan"
+      ],
+      "label": "answered",
+      "reason": "Management advised not to read anything specific into sequential gross margin impacts.",
+      "question_quote": "Is that the right way to think about it?",
+      "question_page": 14,
+      "answer_quote": "No, I don't think you should read anything specific into that. I would urge you all not to read anything specific into that.",
+      "answer_page": 15
+     }
+    ],
+    "unverified": 7,
+    "counts": {
+     "answered": 22,
+     "partly": 1,
+     "dodged": 0
+    },
+    "summary": "questions dodged: 0 of 23"
+   }
+  ],
+  "narrative_vs_numbers": [],
+  "business_snapshot": {
+   "status": "verified",
+   "segments": [
+    {
+     "name": "Jewellery",
+     "revenue_cr": 79660.0,
+     "growth_pct": 47.6,
+     "mix_pct": 90.7
+    },
+    {
+     "name": "Watches",
+     "revenue_cr": 5267.0,
+     "growth_pct": 14.5,
+     "mix_pct": 6.0
+    },
+    {
+     "name": "Others",
+     "revenue_cr": 2006.0,
+     "growth_pct": 57.3,
+     "mix_pct": 2.3
+    },
+    {
+     "name": "Eyecare",
+     "revenue_cr": 916.0,
+     "growth_pct": 14.4,
+     "mix_pct": 1.0
+    }
+   ],
+   "source": {
+    "title": "Annual Report 2026",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1e85b157-d3b6-44c8-ab75-4776048dab00.pdf",
+    "year": 2026
+   },
+   "pages": [
+    434,
+    436
+   ],
+   "basis": "consolidated",
+   "year_end": "2026-03-31",
+   "segment_total_cr": 87849.0,
+   "reported_revenue_cr": 87584.0,
+   "gap_pct": 0.3,
+   "dropped_names": [],
+   "check": "segments add up to 87,849 cr vs reported revenue 87,584 cr (+0.3%)",
+   "model": "gemini-3.5-flash-lite"
+  },
+  "facts": [
+   {
+    "id": "F1",
+    "text": "P/E 60.5, market cap Rs 430,124 cr",
+    "source": "screener ratios"
+   },
+   {
+    "id": "F2",
+    "text": "3y revenue CAGR 29.2%, profit CAGR 15.7%",
+    "source": "annual P&L"
+   },
+   {
+    "id": "F3",
+    "text": "5y revenue CAGR 32.3%, profit CAGR 39.1%",
+    "source": "annual P&L"
+   },
+   {
+    "id": "F4",
+    "text": "Latest quarter (2026-09-30) revenue Rs 20,614 cr, +10.1% YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F5",
+    "text": "Latest quarter profit Rs 2,393 cr, +113.7% YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F6",
+    "text": "Operating margin 14.0% in the latest quarter, +4.0 pts YoY",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F7",
+    "text": "Debt/equity 1.51 (borrowings Rs 27,638 cr)",
+    "source": "balance sheet"
+   },
+   {
+    "id": "F8",
+    "text": "Cash conversion cycle 211 days (2026)",
+    "source": "ratios"
+   },
+   {
+    "id": "F9",
+    "text": "3-year operating cash flow = 0.57x reported profit",
+    "source": "cash flow"
+   },
+   {
+    "id": "F10",
+    "text": "Revenue grew YoY in 8 of 8 recent quarters",
+    "source": "quarterly P&L"
+   },
+   {
+    "id": "F11",
+    "text": "Promises kept: none measurable yet measurable targets",
+    "source": "promise ledger"
+   },
+   {
+    "id": "F12",
+    "text": "Call of 2026-11-11: questions dodged: 0 of 6",
+    "source": "dodged-question check"
+   },
+   {
+    "id": "F13",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 23",
+    "source": "dodged-question check"
+   }
+  ],
+  "bull_bear": {
+   "bull": [
+    {
+     "text": "The latest quarter revenue reached Rs 20,614 cr, representing a +10.1% YoY increase.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 20,614 cr, +10.1% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Profit for the latest quarter was Rs 2,393 cr, which is +113.7% higher YoY.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 2,393 cr, +113.7% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY across 8 of 8 recent quarters.",
+     "cites": [
+      {
+       "id": "F10",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
+      }
+     ]
+    }
+   ],
+   "bear": [
+    {
+     "text": "The debt to equity ratio stands at 1.51 with borrowings of Rs 27,638 cr.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Debt/equity 1.51 (borrowings Rs 27,638 cr)",
+       "source": "balance sheet"
+      }
+     ]
+    },
+    {
+     "text": "The cash conversion cycle is reported at 211 days.",
+     "cites": [
+      {
+       "id": "F8",
+       "text": "Cash conversion cycle 211 days (2026)",
+       "source": "ratios"
+      }
+     ]
+    },
+    {
+     "text": "The 3-year operating cash flow is 0.57x reported profit.",
+     "cites": [
+      {
+       "id": "F9",
+       "text": "3-year operating cash flow = 0.57x reported profit",
+       "source": "cash flow"
+      }
+     ]
+    }
+   ],
+   "removed": []
+  },
+  "report_card": {
+   "evidence": [],
+   "promises_kept": "none measurable yet",
+   "promise_counts": {
+    "Missed": 0,
+    "Partly": 0,
+    "Quietly dropped": 0,
+    "Kept": 0,
+    "Too early": 1,
+    "Not measurable": 8
+   },
+   "topics_dropped": [],
+   "questions_dodged": "0 of 29",
+   "questions_partly_answered": "1 of 29"
+  }
+ },
+ "stage": "done",
+ "instrument": {
+  "symbol": "TITAN",
+  "bse_code": "500114",
+  "name": "Titan Company Limited",
+  "isin": "INE280A01028",
+  "series": "EQ",
+  "screener_id": "3437",
+  "yahoo": "TITAN.NS"
+ },
+ "name": "Titan Company Ltd",
+ "data_as_of": "2026-11-13T23:03:01+00:00",
+ "transcripts": [
+  {
+   "call": "2026-11-11",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=daa6c172-771a-4af5-b4b3-9813fdf7536a.pdf",
+   "turns": 126
+  },
+  {
+   "call": "2026-08-31",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f70a0a33-43cf-40b6-a753-67b06123e8de.pdf",
+   "turns": 103
+  },
+  {
+   "call": "2026-06-30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1a3bc0e3-c7ff-4887-a18a-f73fd400e8ca.pdf",
+   "turns": 120
+  },
+  {
+   "call": "2026-02-28",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ee5b68b-8f66-4705-9a84-9debaa9aae1d.pdf",
+   "turns": 116
+  },
+  {
+   "call": "2025-11-30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c3a5d70a-78ac-4407-aed7-e06b93e17a8f.pdf",
+   "turns": 99
+  }
+ ],
+ "transcript_notes": [],
+ "llm_usage": {
+  "models": {
+   "gemini-3.5-flash-lite": {
+    "api_calls": 0,
+    "cache_hits": 9,
+    "failed": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0
+   }
+  },
+  "cost_usd": 0.0,
+  "pricing": "free tier (USD 0)"
+ },
+ "built_in_seconds": 4.7,
+ "from_cache": false
+}

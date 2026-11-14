@@ -1,4 +1,102 @@
 {
+ "notable_move": {
+  "rule": {
+   "name": "notable_move",
+   "label": "Notable move: 3 sigma after the market, on 2.5x normal volume",
+   "min_abs_z": 3.0,
+   "min_vol_x": 2.5,
+   "min_abs_ret_pct": null,
+   "direction": "any"
+  },
+  "trading_days": 90,
+  "from": "2026-07-07",
+  "to": "2026-11-13",
+  "fires_total": 21,
+  "fires_per_week": 1.2,
+  "per_symbol": {
+   "HAPPSTMNDS": [
+    "2026-07-09",
+    "2026-07-13",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-09-01"
+   ],
+   "BAJFINANCE": [
+    "2026-07-31",
+    "2026-11-05"
+   ],
+   "SUZLON": [
+    "2026-07-28",
+    "2026-10-30"
+   ],
+   "INDHOTEL": [
+    "2026-08-31",
+    "2026-10-22"
+   ],
+   "IEX": [
+    "2026-07-16",
+    "2026-07-28"
+   ],
+   "RELIANCE": [
+    "2026-11-02"
+   ],
+   "DIXON": [
+    "2026-11-02"
+   ],
+   "LT": [
+    "2026-10-28"
+   ],
+   "ITC": [
+    "2026-10-05"
+   ],
+   "POLYCAB": [
+    "2026-09-04"
+   ],
+   "MARUTI": [
+    "2026-09-01"
+   ],
+   "CDSL": [
+    "2026-07-10"
+   ],
+   "MAPMYINDIA": [
+    "2026-07-09"
+   ]
+  },
+  "quiet_symbols": [
+   "HDFCBANK",
+   "INFY",
+   "PERSISTENT",
+   "SUNPHARMA",
+   "VEDL"
+  ],
+  "examples": [
+   {
+    "symbol": "BAJFINANCE",
+    "date": "2026-11-05",
+    "text": "BAJFINANCE +7.7% (Nifty +2.4%) - 3.0 sigma above its normal day after the market move (usual swing 1.3%); volume 3.5x its 20-day average"
+   },
+   {
+    "symbol": "RELIANCE",
+    "date": "2026-11-02",
+    "text": "RELIANCE +11.6% (Nifty +1.7%) - 9.0 sigma above its normal day after the market move (usual swing 1.1%); volume 5.8x its 20-day average"
+   },
+   {
+    "symbol": "DIXON",
+    "date": "2026-11-02",
+    "text": "DIXON +12.0% (Nifty +1.7%) - 6.0 sigma above its normal day after the market move (usual swing 1.7%); volume 6.0x its 20-day average"
+   },
+   {
+    "symbol": "SUZLON",
+    "date": "2026-10-30",
+    "text": "SUZLON -7.9% (Nifty +0.5%) - 5.0 sigma below its normal day after the market move (usual swing 1.7%); volume 4.5x its 20-day average"
+   },
+   {
+    "symbol": "LT",
+    "date": "2026-10-28",
+    "text": "LT +3.7% (Nifty -0.2%) - 4.9 sigma above its normal day after the market move (usual swing 0.8%); volume 3.2x its 20-day average"
+   }
+  ]
+ },
  "unusual_move": {
   "rule": {
    "name": "unusual_move",
