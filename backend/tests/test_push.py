@@ -304,6 +304,30 @@ def test_cluster_keeps_most_material_as_lead():
     assert len(ev) == 2
 
 
+def test_results_candidates_try_other_exchange_filings(offline, monkeypatch):
+    from finn.symbols import Instrument
+
+    monkeypatch.setattr(digest.symbols, "resolve", lambda t: Instrument("ABC", "500001", "ABC Ltd"))
+    now = datetime.now(IST).isoformat(timespec="seconds")
+    offline.upsert_filings([{"uid": "BSE:r.pdf", "exchange": "BSE", "bse_code": "500001", "ts": now,
+                             "subject": "Outcome of Board Meeting - Financial Results", "url": "https://www.bseindia.com/rss.pdf",
+                             "source": "bse_rss"},
+                            {"uid": "BSE:n.pdf", "exchange": "BSE", "bse_code": "500001", "ts": now,
+                             "subject": "Newspaper publication of financial results", "url": "https://www.bseindia.com/ad.pdf",
+                             "source": "bse_rss"}])
+    e = {"symbol": "ABC", "url": "https://www.bseindia.com/press.pdf",
+         "related": [{"url": "https://www.bseindia.com/press.pdf"}, {"url": "https://www.bseindia.com/outcome.pdf"}]}
+    items = [{"symbol": "ABC", "category": "results", "subtype": "financials", "url": "https://www.bseindia.com/fin.pdf"}]
+    assert digest.results_candidates(e, items) == ["https://www.bseindia.com/press.pdf", "https://www.bseindia.com/outcome.pdf",
+                                                   "https://www.bseindia.com/fin.pdf"]
+    digest.MAX_RESULT_TRIES = 5
+    try:
+        assert "https://www.bseindia.com/rss.pdf" in digest.results_candidates(e, items)
+        assert "https://www.bseindia.com/ad.pdf" not in digest.results_candidates(e, items)
+    finally:
+        digest.MAX_RESULT_TRIES = 3
+
+
 def test_windows(offline):
     now = datetime(2026, 11, 14, 9, 0, tzinfo=IST)
     assert digest.resolve_window("3d", now)[0] == now - timedelta(days=3)

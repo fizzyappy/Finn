@@ -13,11 +13,12 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from .. import filings, fundamentals, llm
+from .. import filings, fundamentals, llm, symbols
 from ..filings import IST
 from ..store import store
 from . import alerts as alerts_mod
@@ -68,6 +69,56 @@ def reaction_for(f: dict, series: list[dict]) -> dict | None:
         if row["date"] > day or (row["date"] == day and not after_close):
             return {"date": row["date"], "ret_pct": row["ret_pct"], "z": row.get("z") or 0.0, "vol_x": row.get("vol_x") or 0.0}
     return None
+
+
+_RESULTS_RX = re.compile(r"financial results?|integrated filing.{0,20}financial|outcome of (the )?board meeting", re.I)
+_NOT_RESULTS_RX = re.compile(r"newspaper|publication|intimation", re.I)
+MAX_RESULT_TRIES = 3
+
+
+def results_candidates(e: dict, items: list[dict]) -> list[str]:
+    """Exchange-filed documents that may hold this event's results table, best first:
+    the event's own filing, filings folded into it, the same company's other results
+    filings in the window, then results filings seen on the BSE/NSE RSS feeds."""
+    urls = [e.get("url")] + [r.get("url") for r in e.get("related") or []]
+    urls += [it["url"] for it in items if it["symbol"] == e["symbol"] and it["category"] == "results"
+             and it.get("subtype") in ("financials", "press_release")]
+    try:
+        inst = symbols.resolve(e["symbol"])
+        since = (datetime.now(IST) - timedelta(days=45)).isoformat(timespec="seconds")
+        for r in store().filings_for(bse_code=inst.bse_code, symbol=inst.symbol, since_iso=since):
+            if _RESULTS_RX.search(f"{r.get('subject') or ''} {r.get('detail') or ''}") and \
+                    not _NOT_RESULTS_RX.search(r.get("subject") or ""):
+                urls.append(r.get("url"))
+    except Exception:  # noqa: BLE001 - the RSS store is a bonus source
+        pass
+    seen, out = set(), []
+    for u in urls:
+        if u and u not in seen:
+            seen.add(u)
+            out.append(u)
+    return out[:MAX_RESULT_TRIES]
+
+
+def best_results_card(e: dict, items: list[dict], trusted: set) -> dict | None:
+    best = None
+    candidates = results_candidates(e, items)
+    tried = []
+    for u in candidates:
+        tried.append(u)
+        try:
+            card = results_card.build(u, symbol=e["symbol"], trusted=trusted)
+        except Exception as ex:  # noqa: BLE001 - try the next document
+            card = {"type": "results", "status": "failed", "source_url": u, "reason": f"{type(ex).__name__}: {str(ex)[:80]}"}
+        if card["status"] == "verified":
+            best = card
+            break
+        if best is None or (best["status"] == "failed" and card["status"] != "failed"):
+            best = card
+    if best is not None:
+        best["documents_tried"] = len(tried)
+        best["documents_available"] = len(candidates)
+    return best
 
 
 def cluster(items: list[dict]) -> list[dict]:
@@ -133,13 +184,16 @@ def build(window: str | tuple = "24h", *, p: portfolio.Portfolio | None = None, 
         f = {"subject": e["subject"], "url": e["url"], "company": e["company"], "symbol": e["symbol"]}
         if e["treatment"] == "hero" and use_llm:
             e["summary"] = None
-            if e["card_kind"] == "results" and e["url"]:
-                e["card"] = results_card.build(e["url"], symbol=e["symbol"], trusted=tr)
-                e["summary"] = results_card.summary(e["card"], e["symbol"])
-                pe = (e["card"].get("period_ends") or [None])[0]
-                if pe:
-                    from ..pull import engine as pull_engine     # research cache only; no new model calls
-                    e["card"]["vs_guidance"] = pull_engine.vs_guidance(e["symbol"], pe)
+            if e["category"] == "results" and e["card_kind"] in ("results", "summary"):
+                card = best_results_card(e, items, tr)
+                # A results press release keeps its summary unless a verified table was found.
+                if card and (e["card_kind"] == "results" or card["status"] == "verified"):
+                    e["card"] = card
+                    e["summary"] = results_card.summary(card, e["symbol"])
+                    pe = (card.get("period_ends") or [None])[0]
+                    if pe:
+                        from ..pull import engine as pull_engine     # research cache only; no new model calls
+                        card["vs_guidance"] = pull_engine.vs_guidance(e["symbol"], pe)
             elif e["card_kind"] == "people" and e["url"]:
                 e["card"] = people.build(e["url"], trusted=tr)
                 e["card"]["headline"] = people.headline(e["card"])
