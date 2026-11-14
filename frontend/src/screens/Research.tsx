@@ -202,6 +202,7 @@ function Company({ d }: { d: Json }) {
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
+      {!d.partial && <AskBox ticker={d.ticker} name={d.name} />}
       {led && <Ledger led={led} />}
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
@@ -213,6 +214,56 @@ function Company({ d }: { d: Json }) {
       {S.bull_bear && (S.bull_bear.bull?.length || S.bull_bear.bear?.length) ? <BullBear bb={S.bull_bear} /> : null}
       <Sources d={d} />
     </motion.div>
+  );
+}
+
+function AskBox({ ticker, name }: { ticker: string; name: string }) {
+  const [q, setQ] = useState("");
+  const [busy, setBusy] = useState<string | null>(null);
+  const [a, setA] = useState<Json | null>(null);
+  const short = (name || ticker).replace(/ (Ltd|Limited)\.?$/, "");
+  const ask = async (question: string) => {
+    if (question.trim().length < 4) return;
+    setA(null);
+    if (!prefs.apiBase()) { setA({ status: "offline", answer: "Asking needs the research engine. Connect it in Settings." }); return; }
+    setBusy("Thinking…");
+    const up = await wakeBackend(() => setBusy("Waking up the research engine (up to 50 s)…"));
+    if (!up) { setBusy(null); setA({ status: "offline", answer: "The research engine did not answer. Try again in a minute." }); return; }
+    setBusy("Reading this company's sources…");
+    try {
+      setA(await api(`/ask/${encodeURIComponent(ticker)}`, { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }) }, 90000));
+    } catch (e) {
+      setA({ status: "error", answer: /404/.test(String(e)) ? `The research engine has not read ${ticker} yet.` : "Something went wrong. Try again." });
+    } finally { setBusy(null); }
+  };
+  const examples = ["Did they meet last year's guidance?", "What is the guidance for this year?", "How much debt do they have?"];
+  return (
+    <>
+      <Title meta="answers only from its sources">Ask about {short}</Title>
+      <div className="glass card">
+        <form onSubmit={(e) => { e.preventDefault(); ask(q); }} style={{ display: "flex", gap: 8 }}>
+          <input className="field" aria-label={`Ask a question about ${short}`} placeholder="e.g. Did they meet their margin target?"
+            value={q} onChange={(e) => setQ(e.target.value)} maxLength={300} />
+          <button className="btn small" type="submit" disabled={!!busy || q.trim().length < 4}>Ask</button>
+        </form>
+        <div className="chips" style={{ marginTop: 8 }}>
+          {examples.map((x) => <button key={x} className="chip" style={{ height: 30, fontSize: 12.5 }} onClick={() => { setQ(x); ask(x); }}>{x}</button>)}
+        </div>
+        {busy && <div className="small muted" style={{ marginTop: 10 }} aria-live="polite">{busy}</div>}
+        {a && (
+          <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: 12 }} aria-live="polite">
+            <div className={a.status === "answered" ? "quote" : "notice"}>{a.answer}</div>
+            {a.citations?.length > 0 && (
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 8 }}>
+                {a.citations.map((c: Json) => <Cite key={c.id} href={pageLink(c.url, c.page)}>{c.source}{c.page ? ` p.${c.page}` : ""}</Cite>)}
+              </div>
+            )}
+            {a.status === "answered" && <div className="faint small" style={{ marginTop: 6 }}>Every number above was checked against the cited sources.</div>}
+          </motion.div>
+        )}
+      </div>
+    </>
   );
 }
 

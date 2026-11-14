@@ -191,6 +191,16 @@ def result(job_id: str) -> dict | None:
     return j and j.get("result")
 
 
+def cached_research(ticker: str) -> dict | None:
+    """The newest finished research for a ticker, if any."""
+    for (k,) in store().conn.execute("SELECT key FROM cache WHERE ns='research' AND key LIKE ? ORDER BY fetched_at DESC",
+                                     (f"{ticker.upper()}|%",)).fetchall():
+        hit = store().get("research", k)
+        if hit:
+            return hit[0]
+    return None
+
+
 def vs_guidance(ticker: str, quarter_end: str) -> list[dict]:
     """Hook for the push Results card: open targets covering the quarter just reported
     (from the cached research, if the company has been researched)."""

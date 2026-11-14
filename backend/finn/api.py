@@ -204,6 +204,17 @@ def r_research_result(job_id: str):
     return res
 
 
+@app.post("/ask/{ticker}")
+def r_ask(ticker: str, body: dict):
+    """Q&A about one researched company, answered only from its verified evidence."""
+    from .pull import ask, engine
+
+    research = engine.cached_research(ticker)
+    if not research:
+        raise HTTPException(404, f"{ticker.upper()} has not been researched yet: open it in Research first")
+    return ask.ask(research, str(body.get("question", "")))
+
+
 @app.get("/research/{ticker}/vs-guidance")
 def r_vs_guidance(ticker: str, quarter_end: str):
     from .pull import engine

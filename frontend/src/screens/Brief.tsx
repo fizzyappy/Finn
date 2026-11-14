@@ -66,6 +66,8 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const [tune, setTune] = useState<Record<string, number>>(() => prefs.tune());
   const [openCat, setOpenCat] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(false);
+  useEffect(() => () => { if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }, []);
 
   const [range, setRange] = useState<{ from: string; to: string } | null>(null);
   const [picking, setPicking] = useState(false);
@@ -121,16 +123,30 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
     setTune({ ...tune, [e.category]: next });
     setToast(`Less ${catLabel(e.category)} from now on (×${next.toFixed(2)}). Undo in Settings.`);
   };
-  const readAloud = () => {
-    if (!("speechSynthesis" in window)) return;
-    window.speechSynthesis.cancel();
-    const lines = [`${brief.header.filings} filings, ${matter} matter.`,
-      ...heroLeft.map((e: Json) => `${e.symbol}. ${e.summary?.headline || e.subject}.`),
-      ...ranked.one.slice(0, 5).map((e: Json) => `${e.symbol}. ${e.summary?.one_liner || e.summary?.headline || ""}`)];
-    const u = new SpeechSynthesisUtterance(lines.join(" "));
+  /** "Play my brief": the cards that need attention, read in about a minute (≈150 words). */
+  const playBrief = () => {
+    if (!("speechSynthesis" in window)) { setToast("This browser can't read aloud."); return; }
+    const synth = window.speechSynthesis;
+    if (playing) { synth.cancel(); setPlaying(false); return; }
+    const intro = heroLeft.length
+      ? `${heroLeft.length} ${plural(heroLeft.length, "thing")} need your attention.`
+      : `Nothing needs your attention. ${matter} ${plural(matter, "item")} worth knowing.`;
+    const parts = [intro];
+    let words = intro.split(" ").length;
+    for (const e of heroLeft) {
+      const line = `${e.symbol}: ${(e.summary?.headline || e.subject || "").replace(/Rs /g, "rupees ")}.`;
+      if (words + line.split(" ").length > 150) break;
+      parts.push(line);
+      words += line.split(" ").length;
+    }
+    synth.cancel();
+    const u = new SpeechSynthesisUtterance(parts.join(" "));
     u.lang = "en-IN";
-    u.rate = 1.02;
-    window.speechSynthesis.speak(u);
+    u.rate = 1.0;
+    u.onend = () => setPlaying(false);
+    u.onerror = () => setPlaying(false);
+    setPlaying(true);
+    synth.speak(u);
   };
 
   return (
@@ -145,7 +161,12 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
             {brief.alerts?.length ? <> · <b>{brief.alerts.length}</b> moves</> : null}
           </div>
         </div>
-        <button className="why-btn" onClick={readAloud} aria-label="Read the brief aloud" style={{ height: 40, width: 40, padding: 0, display: "grid", placeItems: "center" }}>{Icon.speaker}</button>
+        <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
+          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"}
+          style={{ height: 40, padding: "0 12px", display: "flex", alignItems: "center", gap: 6,
+            ...(playing ? { background: "var(--mint)", color: "var(--mint-ink)", borderColor: "transparent" } : {}) }}>
+          {Icon.speaker}<span className="small" style={{ fontWeight: 600 }}>{playing ? "Stop" : "Play"}</span>
+        </button>
       </div>
 
       <div className="chips" role="toolbar" aria-label="Time window">

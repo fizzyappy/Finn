@@ -266,6 +266,26 @@ def test_dodge_needs_evidence():
                                 "I do not have any specific comments on it right now")[0] == "dodged"
 
 
+def test_ask_answers_only_from_evidence(fake_router):
+    from finn.pull import ask
+
+    research = {"name": "Demo Ltd", "ticker": "DEMO", "sections": {
+        "facts": [{"id": "F1", "text": "Debt/equity 1.24 (borrowings Rs 140,300 cr)", "source": "balance sheet"}],
+        "promise_ledger": {"promises": [{"verdict": "Missed", "metric": "revenue_growth", "horizon": "FY26", "target": "15%",
+                                         "scope": "company", "reason": "target 15%, actual 11.8%",
+                                         "said": {"call_date": "2026-01-31", "quote": "revenue growth guidance of 15%",
+                                                  "source_url": "u", "page": 8}}]}}}
+    ev = ask.evidence(research)
+    assert [e["id"] for e in ev] == ["E1", "E2"] and ev[1]["page"] == 8
+    fake_router({"covered": True, "answer": "No: target 15%, actual 11.8%.", "cites": ["E2"]})
+    a = ask.ask(research, "Did they meet FY26 revenue guidance?")
+    assert a["status"] == "answered" and a["citations"][0]["page"] == 8
+    fake_router({"covered": True, "answer": "Revenue grew 22% in FY26.", "cites": ["E2"]})
+    assert ask.ask(research, "How fast did revenue grow?")["status"] == "refused"      # invented number
+    fake_router({"covered": False, "answer": "No CEO information in the evidence.", "cites": []})
+    assert ask.ask(research, "Who is the CEO?")["status"] == "not_covered"
+
+
 def test_table_maths():
     assert tables.cagr(100, 161.05, 5) == 10.0
     assert tables.cagr(-1, 100, 5) is None

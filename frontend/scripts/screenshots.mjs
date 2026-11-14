@@ -114,6 +114,15 @@ const row = p.locator("button.ledger-row").first();
 await row.click(); await p.waitForTimeout(400);
 await row.scrollIntoViewIfNeeded();
 await shot(p, "11-research-LT-ledger-row-open", false);
+// Ask about this company (live backend on this PC; cached answer)
+const askBox = p.getByLabel(/Ask a question about/);
+if (await askBox.count()) {
+  await askBox.fill("Did they meet their FY26 revenue growth guidance?");
+  await p.getByRole("button", { name: "Ask", exact: true }).click();
+  await p.locator(".quote, .notice").filter({ hasText: /guidance|sources|won't|engine/i }).last().waitFor({ timeout: 90000 }).catch(() => {});
+  await askBox.scrollIntoViewIfNeeded();
+  await shot(p, "11b-research-ask", false);
+}
 await p.goto(`${BASE}/#research/HAL`); await p.waitForTimeout(1200);
 await shot(p, "12-research-HAL-full");
 await p.evaluate(() => localStorage.setItem("finn.api", JSON.stringify("off")));   // show the true offline state
