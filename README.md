@@ -65,6 +65,8 @@ flowchart LR
   **Ask about this company**, answered only from its cited sources), Alerts, Settings; installable PWA; ships a snapshot
   of real outputs so the link always works, and uses the live backend (Render) for companies outside it.
 - **Ops**: a GitHub Action rebuilds the data every weekday at 16:45 IST; another keeps the free backend awake.
+- **Live backend**: https://finn-api-3des.onrender.com (`/health`, `/sources`). Free plan: after a quiet spell the
+  first request can take ~50 s, and the app says so while it waits.
 
 ## Model routing and measured cost
 

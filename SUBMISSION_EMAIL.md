@@ -11,6 +11,8 @@ Please find my submission for the AI Engineer build challenge: **FINN**, an app 
 holdings filed, which of those filings matter, and whether management keeps its word.
 
 - **App (installable on a phone):** [VERCEL LINK]
+- **Research engine (backend API):** https://finn-api-3des.onrender.com/health (free server: the first request after a
+  quiet spell can take about 50 seconds)
 - **Code, decisions log and evaluation:** https://github.com/fizzyappy/Finn
 - **90-second demo path:** DEMO.md in the repository
 
