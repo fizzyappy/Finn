@@ -26,6 +26,27 @@ First-pass verdict precision on the scored L&T + HAL items: **4 of 7 correct**.
 After the fixes: **8 of 8 scored verdicts across the six companies match my reading** of the
 transcripts and the tables (the fixes are general rules, so this is now in-sample).
 
+## Dodged questions: stricter judge, second hand check (14 Nov, evening)
+
+The judge now flags "dodged" only for clear non-answers, and Python keeps the label only if the
+quoted answer itself shows a refusal or deflection, or a number was asked and the whole answer has
+none. Requests to repeat the question are never dodges.
+
+Run on the six demo companies (224 question/answer pairs with verified quotes): 214 answered,
+8 partly, 2 dodged; Python downgraded 1 model "dodged" that had no evidence.
+
+Hand check of 15 labels against the transcripts:
+
+| Label | Checked | Agree | Notes |
+|---|---|---|---|
+| dodged | 2 | 2 | Infosys: "I do not have any specific comments on it right now"; Titan: "I would rather refrain from giving a full year impact" |
+| partly | 8 | 7 | HAL "I will restrict myself to saying that we are moving in a very positive direction" is arguably a dodge |
+| answered | 5 | 3 | an L&T order-book question got an off-topic reply; an Infosys answer was vague |
+
+**Dodged precision: 2 of 2.** Overall agreement 12 of 15. Every disagreement errs on the side of
+not accusing management, which is the intended trade-off (fewer flags, correct flags). The HAL
+"which program?" clarification that was wrongly flagged in the first run is now "partly".
+
 ## Still imperfect
 
 - Scope labels come from the model and can be wrong (L&T's 2% credit-cost target is for its

@@ -1,6 +1,6 @@
 {
  "ticker": "HAL",
- "started_at": "2026-11-14T12:41:34",
+ "started_at": "2026-11-14T19:16:53",
  "states": [],
  "sections": {
   "snapshot": {
@@ -1426,10 +1426,10 @@
        "Ravi Kota"
       ],
       "label": "answered",
-      "reason": "Management addressed the risk of timeline slippage by citing GE commitments.",
-      "question_quote": "is there a risk that the delivery schedule spills well beyond August and possibly only in the very fag end of FY '27?",
+      "reason": "Management directly answered whether deliveries would spill past August.",
+      "question_quote": "is there a risk that the delivery schedule spills well beyond August",
       "question_page": 6,
-      "answer_quote": "No. This time, because GE has committed more engines this year. So with that, we are hopeful now that by August or September",
+      "answer_quote": "No. This time, because GE has committed more engines this year",
       "answer_page": 6
      },
      {
@@ -1438,10 +1438,10 @@
        "Ravi Kota"
       ],
       "label": "partly",
-      "reason": "Management acknowledged testing issues without detailing specific software problems.",
+      "reason": "Management acknowledged testing but refused to give detailed specifics.",
       "question_quote": "could you throw some light on what is holding it up? And how big is the issue?",
       "question_page": 6,
-      "answer_quote": "testing, whatever has been done, is only for refining whatever has already been tested. So this is a continuous process.",
+      "answer_quote": "I will restrict myself to saying that we are moving in a very positive direction",
       "answer_page": 6
      },
      {
@@ -1449,21 +1449,33 @@
       "answered_by": [
        "Ravi Kota"
       ],
-      "label": "partly",
-      "reason": "Management defended delays as normal design iterations without full details.",
-      "question_quote": "what went wrong in terms of execution delays apart from engine supplies from GE? And what exactly is left in terms of testing",
-      "question_page": 6,
-      "answer_quote": "these refinements, whatever, because I cannot get into the details of it, so these refinements, we need to meet certain parameters.",
-      "answer_page": 6
+      "label": "answered",
+      "reason": "Management addressed supply chain risks and slowness for programs.",
+      "question_quote": "any kind of supply chain risk over there where vendors are delaying any major components",
+      "question_page": 7,
+      "answer_quote": "I will not say disruption, but slowness is there. There is a slowness.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Umesh Raut",
+      "answered_by": [
+       "Barenya Senapati"
+      ],
+      "label": "answered",
+      "reason": "Management quantified the double-digit revenue growth range.",
+      "question_quote": "can you quantify this growth relatively in a better way",
+      "question_page": 8,
+      "answer_quote": "it will be in the range of 10% to 12% minimum.",
+      "answer_page": 8
      },
      {
       "analyst": "Saif Sohrab",
       "answered_by": [
        "Ravi Kota"
       ],
-      "label": "dodged",
-      "reason": "Management missed the second part about UAVs and asked for clarification.",
-      "question_quote": "when do you expect the ground testing and prototype rollout of, say, the Mark II program? And also on the other future programs like the UCAVs",
+      "label": "partly",
+      "reason": "Management asked for clarification on the second program before answering.",
+      "question_quote": "when do you expect the ground testing and prototype rollout of, say, the Mark II program?",
       "question_page": 8,
       "answer_quote": "Sorry, what is the second program you talked about?",
       "answer_page": 8
@@ -1474,10 +1486,10 @@
        "Ravi Kota"
       ],
       "label": "answered",
-      "reason": "Management answered how many engines/units were factored into plans.",
-      "question_quote": "In our guidance, how many Mark-1A have we considered?",
+      "reason": "Management gave expected timelines for Mark II rollout and UAV testing.",
+      "question_quote": "when do you expect the prototype rollout?",
       "question_page": 8,
-      "answer_quote": "GE is committing another 20 engines -- 15 to 20, he is telling, but not the exact number. So we are expecting around 20.",
+      "answer_quote": "We are expecting in the last quarter of this year, for the rollout of Mark II.",
       "answer_page": 8
      },
      {
@@ -1486,7 +1498,19 @@
        "Barenya Senapati"
       ],
       "label": "answered",
-      "reason": "Management confirmed exchange rate variation clauses exist.",
+      "reason": "Management explained why ROH and spares revenue came down.",
+      "question_quote": "The growth seems to have come off compared to what we used to guide earlier. So any colour there",
+      "question_page": 9,
+      "answer_quote": "spares sales have actually come down by around INR500 crores to INR600 crores",
+      "answer_page": 9
+     },
+     {
+      "analyst": "Mohit Pandey",
+      "answered_by": [
+       "Barenya Senapati"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed the presence of the ERV clause in contracts.",
       "question_quote": "are there similar to the exchange rate variation clauses, also commodity-linked cost pass-through?",
       "question_page": 9,
       "answer_quote": "ERV clause is there in each and every contract, and even in the repair and overhaul contracts.",
@@ -1498,7 +1522,7 @@
        "Barenya Senapati"
       ],
       "label": "answered",
-      "reason": "Management explained that material escalation is factored into contracts.",
+      "reason": "Management confirmed that material escalation is factored into contracts.",
       "question_quote": "on the commodity and other input costs also, are there pass-throughs available?",
       "question_page": 10,
       "answer_quote": "Material escalation is already factored into the contract itself.",
@@ -1510,8 +1534,8 @@
        "Management"
       ],
       "label": "answered",
-      "reason": "Management confirmed revenue recognition is against delivery.",
-      "question_quote": "revenue recognition is only at the time of delivery, right? It is not on percent of completion method.",
+      "reason": "Management confirmed that revenue is recognized against delivery.",
+      "question_quote": "revenue recognition is only at the time of delivery, right?",
       "question_page": 10,
       "answer_quote": "No, no. It's against delivery.",
       "answer_page": 10
@@ -1522,8 +1546,8 @@
        "Ravi Kota"
       ],
       "label": "answered",
-      "reason": "Management estimated order timing for Mark II.",
-      "question_quote": "the Mk2 prototype you mentioned by next year and the order -- by when it could come, sir, any sense on that?",
+      "reason": "Management provided the expected timeline for the order.",
+      "question_quote": "by when it could come, sir, any sense on that?",
       "question_page": 10,
       "answer_quote": "We are expecting by the end of maybe another 2 years, down the line, we can expect the order.",
       "answer_page": 10
@@ -1534,10 +1558,22 @@
        "Ravi Kota"
       ],
       "label": "answered",
-      "reason": "Management confirmed completion timeframe for Sukhoi units.",
+      "reason": "Management confirmed the completion timeline.",
       "question_quote": "So 11 units in FY '29?",
       "question_page": 11,
       "answer_quote": "Yes. That is -- will complete.",
+      "answer_page": 11
+     },
+     {
+      "analyst": "Kavish Parekh",
+      "answered_by": [
+       "Barenya Senapati"
+      ],
+      "label": "answered",
+      "reason": "Management gave the timeline for the upgrade design program and approvals.",
+      "question_quote": "what is the likely timeline for contract signing and subsequent execution",
+      "question_page": 11,
+      "answer_quote": "The design program will go on up to maybe 5 to 6 years. And so we are expecting the CCS approval for the current financial year.",
       "answer_page": 11
      },
      {
@@ -1546,7 +1582,7 @@
        "Management"
       ],
       "label": "answered",
-      "reason": "Management quantified export and development order books.",
+      "reason": "Management quantified the export and development order books.",
       "question_quote": "If you could quantify what was your export and development orders and sales for FY '26?",
       "question_page": 12,
       "answer_quote": "export order book is around INR400 crores, and the development order book is around INR3,000 crores.",
@@ -1558,11 +1594,11 @@
        "Management",
        "Ravi Kota"
       ],
-      "label": "partly",
-      "reason": "Management declined specific contract values due to ongoing negotiations.",
+      "label": "answered",
+      "reason": "Management explained why detailed numbers were omitted while providing a ballpark view.",
       "question_quote": "Could you quantify what -- how much these programs are worth and what other programs are in the pipeline",
       "question_page": 12,
-      "answer_quote": "Since these contracts are not yet 100% finalized, that's why I did not give detailed numbers for each contract",
+      "answer_quote": "Since these contracts are not yet 100% finalized, that's why I did not give detailed numbers",
       "answer_page": 12
      },
      {
@@ -1571,7 +1607,7 @@
        "Ravi Kota"
       ],
       "label": "answered",
-      "reason": "Management discussed participation hopes for AMCA and noted SU-57 is a government decision.",
+      "reason": "Management addressed potential participation in AMCA and stated SU-57 is a government call.",
       "question_quote": "is there a possibility during the production time that HAL could be involved? And secondly, is there a possibility of you getting orders for the SU-57?",
       "question_page": 13,
       "answer_quote": "we are hopeful that we will participate in that. And as far as SU-57 is concerned, it's the government's call",
@@ -1583,20 +1619,32 @@
        "Management"
       ],
       "label": "answered",
-      "reason": "Management confirmed FY27 start for HTT-40.",
+      "reason": "Management confirmed delivery timeline for HTT-40 and engine supply stabilization.",
       "question_quote": "Did you mention we will start in FY '27 or FY '28 for delivery?",
       "question_page": 13,
       "answer_quote": "FY'27.",
       "answer_page": 6
+     },
+     {
+      "analyst": "Harshit Patel",
+      "answered_by": [
+       "Ravi Kota"
+      ],
+      "label": "answered",
+      "reason": "Management provided planned units and confirmed engine supply stabilization.",
+      "question_quote": "And how much units we are planning for FY '27?",
+      "question_page": 13,
+      "answer_quote": "We are planning around 20 plus this year to deliver.",
+      "answer_page": 13
      }
     ],
-    "unverified": 16,
+    "unverified": 12,
     "counts": {
-     "answered": 10,
-     "partly": 3,
-     "dodged": 1
+     "answered": 16,
+     "partly": 2,
+     "dodged": 0
     },
-    "summary": "questions dodged: 1 of 14"
+    "summary": "questions dodged: 0 of 18"
    },
    {
     "call": "2025-05-31",
@@ -1604,13 +1652,25 @@
     "pairs_found": 39,
     "judged": [
      {
+      "analyst": "Harshit Kapadia",
+      "answered_by": [
+       "D.K. Sunil"
+      ],
+      "label": "answered",
+      "reason": "Management welcomed participants and initiated the call.",
+      "question_quote": "We will begin the call with a brief overview",
+      "question_page": 3,
+      "answer_quote": "Good afternoon, ladies and gentlemen. It gives me great pleasure to welcome all of you",
+      "answer_page": 3
+     },
+     {
       "analyst": "Umesh Raut",
       "answered_by": [
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management explained the GE engine delivery schedule and Mark-2 prototype status.",
-      "question_quote": "what kind of delivery schedule that we are now expecting over the course of, say, next three years in terms of units?",
+      "reason": "Management detailed the LCA Mark 1 delivery schedule and GE engine talks.",
+      "question_quote": "what kind of delivery schedule that we are now expecting",
       "question_page": 6,
       "answer_quote": "GE has promised a supply of 12 engines in this calendar year up to December.",
       "answer_page": 6
@@ -1621,10 +1681,23 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management provided the delivery rate, indigenization percentage, and discussed PTC Industries.",
-      "question_quote": "understand the delivery schedule for that and what are the indigenization levels currently in this particular platform?",
+      "reason": "Management discussed AL-31FP delivery, indigenization levels, and PTC MoU.",
+      "question_quote": "understand the delivery schedule for that and what are the indigenization levels",
       "question_page": 7,
       "answer_quote": "the AL-31FP engine is 240 engines, which we will be delivering at the rate of about 30 engines per annum.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Atul Tiwari",
+      "answered_by": [
+       "Barenya Senapati",
+       "D.K. Sunil"
+      ],
+      "label": "answered",
+      "reason": "CFO provided EBITDA margin and revenue growth guidance numbers.",
+      "question_quote": "What kind of revenue growth should we expect and what will be the EBITDA margin",
+      "question_page": 7,
+      "answer_quote": "The EBITDA margin we will be maintaining, see our EBITDA margin is around 38%-39%",
       "answer_page": 7
      },
      {
@@ -1633,10 +1706,10 @@
        "Barenya Senapati"
       ],
       "label": "answered",
-      "reason": "Management clarified why revenue growth remains guided around 8-10% despite resolving bottlenecks.",
-      "question_quote": "we are unlikely to see double digit kind of revenue growth this year?",
+      "reason": "CFO explained the reasoning behind the single-digit revenue growth guidance.",
+      "question_quote": "we are unlikely to see double digit kind of revenue growth this year",
       "question_page": 8,
-      "answer_quote": "Double-digit growth we are expecting, but the guidance at present level is 8%. Around 8% to 10%",
+      "answer_quote": "Double-digit growth we are expecting, but the guidance at present level is 8%.",
       "answer_page": 8
      },
      {
@@ -1645,35 +1718,47 @@
        "Barenya Senapati"
       ],
       "label": "answered",
-      "reason": "Management answered regarding medium-term double-digit growth expectations.",
-      "question_quote": "over the next 2-3 years, can we expect mid-teens 12%- 13% kind of revenue growth?",
+      "reason": "CFO clarified medium-term revenue growth expectations.",
+      "question_quote": "can we expect mid-teens 12%- 13% kind of revenue growth",
       "question_page": 8,
       "answer_quote": "No, we are expecting double-digit growth from next year onwards.",
       "answer_page": 8
      },
      {
-      "analyst": "Amit Mahawar",
+      "analyst": "Harshit Patel",
       "answered_by": [
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management explained why MRO will remain robust despite old platforms phasing out.",
-      "question_quote": "risk of old platforms phasing off, which might impact the MRO adversely",
-      "question_page": 10,
-      "answer_quote": "So, we don't see that this ROH business is going to go down.",
-      "answer_page": 10
+      "reason": "Management allowed the next question.",
+      "question_quote": "Sir, can I ask a second question?",
+      "question_page": 8,
+      "answer_quote": "Okay. Please go ahead.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Harshit Patel",
+      "answered_by": [
+       "D.K. Sunil"
+      ],
+      "label": "answered",
+      "reason": "Management gave timeline and order value details for Sukhoi-30 upgrade.",
+      "question_quote": "expect to receive the order for the first batch of 84 units? So, could you share how large",
+      "question_page": 9,
+      "answer_quote": "The value is expected to be around Rs. 60,000 crores, and that will start kicking in from the 6th year onward.",
+      "answer_page": 9
      },
      {
       "analyst": "Jonas Bhutta",
       "answered_by": [
-       "Barenya Senapati"
+       "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "CFO explained that the Rs 800 crore figure is a provision for the accident rather than a write-off.",
-      "question_quote": "If you can help us understand what led to lower provisioning and what could it be next year?",
+      "reason": "Management confirmed the approximate delivery numbers.",
+      "question_quote": "So, roughly 14-15 numbers were delivered.",
       "question_page": 11,
-      "answer_quote": "This provisioning of Rs. 800 Crores, it’s not a write-off. We have made a provision of Rs. 804 crores",
-      "answer_page": 11
+      "answer_quote": "Yes.",
+      "answer_page": 7
      },
      {
       "analyst": "Jonas Bhutta",
@@ -1682,7 +1767,7 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management addressed the FY26 MoU target and building capabilities.",
+      "reason": "Management addressed the FY26 MoU target and delivery capacity.",
       "question_quote": "And what is the MoU target for FY ‘26, sir?",
       "question_page": 12,
       "answer_quote": "No, we will be able to cover up. As I said, you see, whatever we had planned last year, we already have built those aircraft",
@@ -1694,8 +1779,8 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management stated the expected timeline for resolution on the grounded fleet.",
-      "question_quote": "And when do we expect any resolution on the grounded fleet for Navy and Coast Guard?",
+      "reason": "Management provided timeline for grounded fleet resolution.",
+      "question_quote": "when do we expect any resolution on the grounded fleet for Navy and Coast Guard?",
       "question_page": 12,
       "answer_quote": "My expectation is in July we will have resolution of this.",
       "answer_page": 12
@@ -1706,8 +1791,8 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management detailed the MoU with Airbus, certification steps, and timeline for revenue generation.",
-      "question_quote": "Where are we on the Airbus and HAL deal for civil aviation? And what is it that we can expect going ahead",
+      "reason": "Management updated on Airbus MoU progress and certification timelines.",
+      "question_quote": "where are we on the Airbus and HAL deal for civil aviation?",
       "question_page": 12,
       "answer_quote": "With Airbus we have an MoU where we will be doing the C checks for the A320.",
       "answer_page": 13
@@ -1718,24 +1803,59 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management clarified the GE engine supply timeline and prospects for catching up on deliveries.",
-      "question_quote": "I wanted to understand has the timeline changed for the overall 83 deliveries?",
+      "reason": "Management addressed GE engine deliveries and overall 83 aircraft timeline.",
+      "question_quote": "has the timeline changed for the overall 83 deliveries? What is the assessment on the number of engines",
       "question_page": 13,
       "answer_quote": "GE has assured us that they will be delivering 12 engines in this calendar year.",
       "answer_page": 13
      },
      {
-      "analyst": "Hardik Rawat",
+      "analyst": "Amit Anwani",
       "answered_by": [
-       "Barenya Senapati",
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management gave the estimated revenue potential for the 12 jets.",
-      "question_quote": "What sort of revenue would this turn into? The 12 jets. What would be the revenue potential?",
+      "reason": "Management clarified current versus future facility capacity for helicopters.",
+      "question_quote": "Just a clarification I wanted on the helicopter capacity currently and what would be the...",
       "question_page": 14,
-      "answer_quote": "it will be in the range of Rs. 3,000 crores.",
+      "answer_quote": "As of now, we have 30 capacity in Bangalore. And going forward with the investments, we will be able to produce 30 LCH at Tumkuru.",
       "answer_page": 14
+     },
+     {
+      "analyst": "Hardik Rawat",
+      "answered_by": [
+       "Barenya Senapati"
+      ],
+      "label": "answered",
+      "reason": "Management confirmed the revenue number.",
+      "question_quote": "Rs. 3,000 crores for the 12 jets.",
+      "question_page": 14,
+      "answer_quote": "Yes.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Hardik Rawat",
+      "answered_by": [
+       "D.K. Sunil"
+      ],
+      "label": "answered",
+      "reason": "Management allowed follow-up question.",
+      "question_quote": "I have another question if you would allow me.",
+      "question_page": 14,
+      "answer_quote": "Yes.",
+      "answer_page": 7
+     },
+     {
+      "analyst": "Hardik Rawat",
+      "answered_by": [
+       "D.K. Sunil"
+      ],
+      "label": "answered",
+      "reason": "Management provided Tejas Mark-2 first flight and production timelines.",
+      "question_quote": "where are we on that? And how exactly, you know, when are we expecting that to potential commercialization",
+      "question_page": 14,
+      "answer_quote": "the first flight of the prototype is expected next year, early next year, '26. And certification is typically three years, so '29.",
+      "answer_page": 15
      },
      {
       "analyst": "Teena Virmani",
@@ -1744,20 +1864,32 @@
        "D.K. Sunil"
       ],
       "label": "answered",
-      "reason": "Management provided the percentage revenue breakdown across manufacturing, design, and ROH/spares.",
-      "question_quote": "if you can provide breakup of revenues across manufacturing, ROH, design and development and exports for FY ‘25",
+      "reason": "CFO provided revenue breakup percentage across manufacturing, design, ROH and spares.",
+      "question_quote": "provide breakup of revenues across manufacturing, ROH, design and development and exports for FY ‘25",
       "question_page": 15,
-      "answer_quote": "Our manufacturing percentage is around 23% and design, export and other developments around 7%. So, 30% and balance 70% will be from repair and overhaul",
+      "answer_quote": "Our manufacturing percentage is around 23% and design, export and other developments around 7%.",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Teena Virmani",
+      "answered_by": [
+       "Barenya Senapati"
+      ],
+      "label": "answered",
+      "reason": "CFO confirmed manufacturing and design percentages.",
+      "question_quote": "So, manufacturing is 23% and then 7% is what? Design?",
+      "question_page": 15,
+      "answer_quote": "7% is our design, export and other developments, other sales.",
       "answer_page": 15
      }
     ],
-    "unverified": 9,
+    "unverified": 11,
     "counts": {
-     "answered": 12,
+     "answered": 19,
      "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 12"
+    "summary": "questions dodged: 0 of 19"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1859,29 +1991,19 @@
    },
    {
     "id": "F18",
-    "text": "Call of 2026-05-31: questions dodged: 1 of 14",
+    "text": "Call of 2026-05-31: questions dodged: 0 of 18",
     "source": "dodged-question check"
    },
    {
     "id": "F19",
-    "text": "Call of 2025-05-31: questions dodged: 0 of 12",
+    "text": "Call of 2025-05-31: questions dodged: 0 of 19",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter revenue reached Rs 7,613 cr, representing a +14.8% YoY increase.",
-     "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 7,613 cr, +14.8% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter profit was Rs 1,936 cr, showing a +16.0% YoY growth.",
+     "text": "The latest quarter profit reached Rs 1,936 cr, showing a 16.0% YoY increase.",
      "cites": [
       {
        "id": "F5",
@@ -1891,24 +2013,29 @@
      ]
     },
     {
-     "text": "The 5y profit CAGR is 23.0% alongside a 3y profit CAGR of 16.1%.",
+     "text": "The 3-year operating cash flow was 1.31x reported profit.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 7.1%, profit CAGR 16.1%",
-       "source": "annual P&L"
-      },
+       "id": "F9",
+       "text": "3-year operating cash flow = 1.31x reported profit",
+       "source": "cash flow"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 7 of 8 recent quarters.",
+     "cites": [
       {
-       "id": "F3",
-       "text": "5y revenue CAGR 7.8%, profit CAGR 23.0%",
-       "source": "annual P&L"
+       "id": "F10",
+       "text": "Revenue grew YoY in 7 of 8 recent quarters",
+       "source": "quarterly P&L"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "The cash conversion cycle stands at 788 days in 2026.",
+     "text": "The cash conversion cycle was 788 days.",
      "cites": [
       {
        "id": "F8",
@@ -1918,17 +2045,17 @@
      ]
     },
     {
-     "text": "Operating margin in the latest quarter was 23.0%, down -1.0 pts YoY.",
+     "text": "The revenue growth FY25 target was 10-11%, but the actual was 2.0.",
      "cites": [
       {
-       "id": "F6",
-       "text": "Operating margin 23.0% in the latest quarter, -1.0 pts YoY",
-       "source": "quarterly P&L"
+       "id": "F12",
+       "text": "Missed: revenue growth FY25 target 10-11%, actual 2.0",
+       "source": "promise ledger"
       }
      ]
     },
     {
-     "text": "Measurable targets kept numbered 3 of 6.",
+     "text": "Promises kept were 3 of 6 measurable targets.",
      "cites": [
       {
        "id": "F11",
@@ -1983,13 +2110,6 @@
      "page": 11,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7425b322-7f3d-4b7c-bc63-a61673475a4f.pdf",
      "call": "2024-05-31"
-    },
-    {
-     "claim": "Dodged: Management missed the second part about UAVs and asked for clarification.",
-     "quote": "when do you expect the ground testing and prototype rollout of, say, the Mark II program? And also on the other future programs like the UCAVs",
-     "page": 8,
-     "answer_quote": "Sorry, what is the second program you talked about?",
-     "answer_page": 8
     }
    ],
    "promises_kept": "3 of 6",
@@ -2002,8 +2122,8 @@
     "Not measurable": 16
    },
    "topics_dropped": [],
-   "questions_dodged": "1 of 26",
-   "questions_partly_answered": "3 of 26"
+   "questions_dodged": "0 of 37",
+   "questions_partly_answered": "2 of 37"
   }
  },
  "stage": "writing",
@@ -2049,17 +2169,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 1,
-    "cache_hits": 7,
+    "api_calls": 0,
+    "cache_hits": 8,
     "failed": 0,
-    "tokens_in": 681,
-    "tokens_out": 285,
+    "tokens_in": 0,
+    "tokens_out": 0,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 5.7,
+ "built_in_seconds": 4.1,
  "from_cache": true
 }

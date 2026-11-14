@@ -1,6 +1,6 @@
 {
  "ticker": "LT",
- "started_at": "2026-11-14T12:41:16",
+ "started_at": "2026-11-14T19:16:31",
  "states": [],
  "sections": {
   "snapshot": {
@@ -1335,11 +1335,11 @@
        "P. Ramakrishnan"
       ],
       "label": "partly",
-      "reason": "Addressed Middle East impact and execution, but did not give specific provision details.",
+      "reason": "Addressed cost impact and execution, but skipped Middle East Q1 revenue impact amount.",
       "question_quote": "What would have been the impact of the revenue",
       "question_page": 11,
-      "answer_quote": "we have not had that kind of a situation in Q1",
-      "answer_page": 12
+      "answer_quote": "I do not think it has impacted that much in the first quarter",
+      "answer_page": 11
      },
      {
       "analyst": "Mohit Kumar",
@@ -1347,7 +1347,7 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Confirmed that prospect list holds good and awards will be announced soon.",
+      "reason": "Confirmed prospect list holds and new awards will be announced soon.",
       "question_quote": "How are the conversations progressing on finalization of the Middle East prospects",
       "question_page": 12,
       "answer_quote": "the prospect list still holds good and many of the projects are progressing as per the plan",
@@ -1359,10 +1359,10 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Directly stated no delay is expected in finalization of awards.",
+      "reason": "Stated that no significant delay in award finalization is expected.",
       "question_quote": "Is there any risk that some of the prospects could shift?",
       "question_page": 12,
-      "answer_quote": "I am not expecting much delay in the finalization of awards",
+      "answer_quote": "No, I am not expecting much delay in the finalization of awards.",
       "answer_page": 12
      },
      {
@@ -1370,11 +1370,23 @@
       "answered_by": [
        "P. Ramakrishnan"
       ],
-      "label": "partly",
-      "reason": "Declined to provide an update, stating nothing more to add.",
-      "question_quote": "progress of AMCA RFP and as well as the remotely piloted aircraft",
+      "label": "answered",
+      "reason": "Explained that no new updates have occurred since the previous call.",
+      "question_quote": "share any color on the progress of AMCA RFP",
       "question_page": 12,
-      "answer_quote": "I do not think we have anything more to say",
+      "answer_quote": "I do not think we have anything more to say what we stated in the previous call.",
+      "answer_page": 12
+     },
+     {
+      "analyst": "Atul Tiwari",
+      "answered_by": [
+       "P. Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Confirmed there are no further updates.",
+      "question_quote": "For both of them, there is no further update?",
+      "question_page": 12,
+      "answer_quote": "Yes.",
       "answer_page": 12
      },
      {
@@ -1383,10 +1395,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained why ECL provisions increased due to aging of receivables in specific businesses.",
+      "reason": "Reconciled ECL provisions with receivables based on aging and water business shortfalls.",
       "question_quote": "are the ECL provisions not linked to receivables in this case",
       "question_page": 13,
-      "answer_quote": "ECL provisions are basis the aging of the receivables",
+      "answer_quote": "ECL provisions are basis the aging of the receivables.",
       "answer_page": 13
      },
      {
@@ -1395,10 +1407,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Confirmed the prospect pipeline is based on current pricing.",
+      "reason": "Confirmed that the prospect pie is based on current pricing.",
       "question_quote": "have we factored in price hike that we might need to take",
       "question_page": 13,
-      "answer_quote": "it is basis the current pricing",
+      "answer_quote": "it is basis the current pricing. Okay, current pricing of those prospects.",
       "answer_page": 13
      },
      {
@@ -1407,7 +1419,7 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained that the pipeline gets reset and revised based on current pricing.",
+      "reason": "Explained how the prospect pipeline gets continuously reset and revised.",
       "question_quote": "So, possibly there could be some upside, possibly if there are pressures.",
       "question_page": 13,
       "answer_quote": "The pipeline always get reset or revised basis the current way we would like to see",
@@ -1419,10 +1431,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Confirmed that the EBITDA margin is shown before other income.",
+      "reason": "Clarified that the 9% EBITDA margin is reported before other income.",
       "question_quote": "is that to do with the other income which has seen a sharp increase?",
       "question_page": 13,
-      "answer_quote": "this EBITDA margin is before other income",
+      "answer_quote": "this EBITDA margin is before other income.",
       "answer_page": 13
      },
      {
@@ -1431,10 +1443,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained the water business execution impact and timing of credit provisioning.",
+      "reason": "Explained water execution impact due to fund outlays and expected credit provision reversals.",
       "question_quote": "what went wrong with respect to the water’s business",
       "question_page": 14,
-      "answer_quote": "the impact on execution on water was because of the fund outlays",
+      "answer_quote": "impact on execution on water was because of the fund outlays around the Jal Jeevan Mission",
       "answer_page": 14
      },
      {
@@ -1443,8 +1455,8 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Detailed the European wind order size, timeline, and margin expectations.",
-      "question_quote": "What is the nature of this order, the timelines and the margins working capital?",
+      "reason": "Provided details on the European wind order timelines, capacity, and margins.",
+      "question_quote": "What is the nature of this order, the timelines and the margins",
       "question_page": 14,
       "answer_quote": "This European order is the extension of what we had already announced last year",
       "answer_page": 14
@@ -1455,10 +1467,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained how Nabha Power results and tax outflows are accounted for.",
+      "reason": "Explained subsidiary accounting and tax outflow for Nabha Power.",
       "question_quote": "how the Nabha Power is accounted in P&L?",
       "question_page": 15,
-      "answer_quote": "The Nabha Power results are accounted as a subsidiary until the date of its sale",
+      "answer_quote": "The Nabha Power results are accounted as a subsidiary until the date of its sale.",
       "answer_page": 15
      },
      {
@@ -1467,10 +1479,10 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Gave the expected timeline for dispatch from the Oman yard.",
+      "reason": "Stated that large offshore megaprojects will be ready for dispatch in Q1 of next calendar year.",
       "question_quote": "when do we hit the milestones of supply starting from Oman?",
       "question_page": 16,
-      "answer_quote": "they will be ready for dispatch from our Oman yard sometime in first quarter",
+      "answer_quote": "the large megaprojects in Offshore, they will be ready for dispatch from our Oman yard sometime in first quarter",
       "answer_page": 16
      },
      {
@@ -1479,10 +1491,22 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Addressed material erosion risk and customer cost reimbursement.",
-      "question_quote": "Do we see that getting materially eroded?",
+      "reason": "Confirmed a cool-off period and discussed logistics management for onshore projects.",
+      "question_quote": "So, at least we have two to three quarters of cool-off period",
       "question_page": 16,
-      "answer_quote": "material erosion is unlikely because if that scenario happens, then we will not bring the material",
+      "answer_quote": "Yes, if the conflict extends to next year, then yes, then it will become a problem for us.",
+      "answer_page": 16
+     },
+     {
+      "analyst": "Renu Baid Pugalia",
+      "answered_by": [
+       "Subramanian Sarma"
+      ],
+      "label": "answered",
+      "reason": "Addressed material margin erosion and explained that unagreed costs are avoided.",
+      "question_quote": "Do we see a material erosion and probability or any provisions arising from that?",
+      "question_page": 16,
+      "answer_quote": "material erosion is unlikely because if that scenario happens, then we will not bring the material.",
       "answer_page": 16
      },
      {
@@ -1491,10 +1515,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained the source of other income and treasury yields.",
-      "question_quote": "is there any item that we should know about, or is this the new recurring other income",
+      "reason": "Explained other income components resulting from group cash surpluses and yields.",
+      "question_quote": "Is there any item that we should know about, or is this the new recurring other income level",
       "question_page": 17,
-      "answer_quote": "The other income is primarily on account of the higher cash generation that we have",
+      "answer_quote": "The other income is primarily on account of the higher cash generation that we have.",
       "answer_page": 17
      },
      {
@@ -1503,10 +1527,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Addressed CapEx plans and treasury income breakdown across entities.",
+      "reason": "Stated that CapEx numbers will be finalized in Q2 and provided treasury income distribution.",
       "question_quote": "what would you quantify your CapEx for the Lakshya plan this year",
       "question_page": 17,
-      "answer_quote": "Hopefully in Q2, I think we will be able to finalize and let you know",
+      "answer_quote": "Hopefully in Q2, I think we will be able to finalize and let you know.",
       "answer_page": 17
      },
      {
@@ -1515,10 +1539,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Explained depreciation reduction due to asset commissioning and metro consolidation.",
+      "reason": "Explained asset commissioning, run-down equipment, and metro exclusion impact on depreciation.",
       "question_quote": "Sequentially, why has the depreciation come down?",
       "question_page": 18,
-      "answer_quote": "It is a question of any particular plant and machinery getting commissioned",
+      "answer_quote": "plant and machinery getting commissioned in the later part of last year will have the full share",
       "answer_page": 18
      },
      {
@@ -1528,10 +1552,22 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Confirmed that results reflect war impacts and cost escalations through expected future costs.",
-      "question_quote": "fair to assume that results are correctly reflecting the impact of the war",
+      "reason": "Confirmed that current results reflect impacts and discussed future procurement cost estimates.",
+      "question_quote": "fair to assume that results are correctly reflecting the impact of the war as well as costs",
       "question_page": 18,
-      "answer_quote": "revenues and margins are basis not actual cost that we incur. It also includes the future cost",
+      "answer_quote": "Yes, so far. Whatever we have incurred so far, yes.",
+      "answer_page": 18
+     },
+     {
+      "analyst": "Aditya Bhartia",
+      "answered_by": [
+       "Subramanian Sarma"
+      ],
+      "label": "answered",
+      "reason": "Explained alternative route management, inventory consumption, and dynamic customer consultations.",
+      "question_quote": "then could it mean that Q2 could be a little more challenging than Q1?",
+      "question_page": 19,
+      "answer_quote": "I think I had said that in the beginning of the crisis, we normally have about three months of inventory.",
       "answer_page": 19
      },
      {
@@ -1540,10 +1576,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Confirmed the awards are currently part of prospects.",
-      "question_quote": "whether this is already booked into this quarter or is it part of the prospects",
+      "reason": "Confirmed that the mentioned awards are part of the prospects.",
+      "question_quote": "just clarifying whether this is already booked into this quarter or is it part of the prospects",
       "question_page": 20,
-      "answer_quote": "It is part of the prospects",
+      "answer_quote": "It is part of the prospects.",
       "answer_page": 20
      },
      {
@@ -1552,10 +1588,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Confirmed nothing has been booked so far.",
+      "reason": "Confirmed nothing has been booked yet.",
       "question_quote": "So, nothing has been booked so far in this couple of things.",
       "question_page": 20,
-      "answer_quote": "It is part of the prospects",
+      "answer_quote": "It is part of the prospects.",
       "answer_page": 20
      },
      {
@@ -1564,20 +1600,32 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Acknowledged question about conventional energy order delays.",
+      "reason": "Asked for clarification on the quarter referred to for conventional orders.",
       "question_quote": "Can you talk about what those orders pertain to?",
       "question_page": 20,
       "answer_quote": "The delay in conventional orders for current quarter? Q1?",
       "answer_page": 20
+     },
+     {
+      "analyst": "Puneet Gulati",
+      "answered_by": [
+       "P. Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Confirmed expectations for subsequent quarters.",
+      "question_quote": "Yes.",
+      "question_page": 12,
+      "answer_quote": "subsequent quarters we should be getting. We are well-placed.",
+      "answer_page": 20
      }
     ],
-    "unverified": 10,
+    "unverified": 6,
     "counts": {
-     "answered": 18,
-     "partly": 2,
+     "answered": 23,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 20"
+    "summary": "questions dodged: 0 of 24"
    },
    {
     "call": "2026-05-31",
@@ -1590,10 +1638,22 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management explained revenue growth targets and factored in geopolitical conditions.",
-      "question_quote": "revenue growth trajectory can improve materially once the geopolitical condition improves",
+      "reason": "Management addressed the revenue growth trajectory question by explaining guidance.",
+      "question_quote": "do you think that the revenue growth trajectory can improve materially",
       "question_page": 13,
-      "answer_quote": "We expect by the end of Q1 the conflict to subside",
+      "answer_quote": "we have given the revenue guidance of 10% to 12% for FY27",
+      "answer_page": 13
+     },
+     {
+      "analyst": "Mohit Kumar",
+      "answered_by": [
+       "P. Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Management explained the revenue miss and attributed it to specific issues.",
+      "question_quote": "how much should you attribute it to geopolitical situation",
+      "question_page": 14,
+      "answer_quote": "we would have lost in terms of revenue almost Rs 50 billion in Q4",
       "answer_page": 14
      },
      {
@@ -1602,8 +1662,20 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management identified supply chain as the biggest risk and discussed mitigation.",
-      "question_quote": "is supply chain a bigger risk here or inflation is a bigger risk here?",
+      "reason": "Management discussed contractual risk provisions and client discussions on costs.",
+      "question_quote": "What kind of contractual provisions we have from the client side",
+      "question_page": 14,
+      "answer_quote": "we have provisions for price adjustments based on increases.",
+      "answer_page": 15
+     },
+     {
+      "analyst": "Parikshit Kandpal",
+      "answered_by": [
+       "Subramanian Sarma"
+      ],
+      "label": "answered",
+      "reason": "Management evaluated supply chain versus inflation as risks and explained impact.",
+      "question_quote": "so is supply chain a bigger risk here or inflation is a bigger risk here",
       "question_page": 15,
       "answer_quote": "The biggest risk is the supply chain, but it is continuously getting better.",
       "answer_page": 15
@@ -1614,10 +1686,10 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management described the capex outlook and customer decisions in the region.",
-      "question_quote": "Is there any change in the capex outlook?",
+      "reason": "Management gave details on capex outlook and client decisions in the Middle East.",
+      "question_quote": "What are the commentary you are hearing with the customers? Is there any change",
       "question_page": 15,
-      "answer_quote": "I think the capex narrative is quite positive. In fact, you would have seen in the press also",
+      "answer_quote": "the capex narrative is quite positive. In fact, you would have seen in the press also",
       "answer_page": 15
      },
      {
@@ -1626,8 +1698,8 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management detailed target geographies for expansion and modular strategies.",
-      "question_quote": "which geographies could we look at? Can Europe be a bigger opportunity",
+      "reason": "Management identified specific target geographies for expansion like Central Asia and Europe.",
+      "question_quote": "Which geographies could we look at? Can Europe be a bigger opportunity",
       "question_page": 16,
       "answer_quote": "apart from India and Middle East, we just set ourselves some amount of projects into the Central Asia Republics.",
       "answer_page": 16
@@ -1638,11 +1710,23 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management discussed historical precedent and customer receptiveness on cost compensation.",
-      "question_quote": "customers in the Middle East being okay to kind of enter into negotiations",
+      "reason": "Management shared historical experience with raw material cost increases and negotiations.",
+      "question_quote": "In the past, have we seen this level of increase in raw material prices",
       "question_page": 16,
-      "answer_quote": "customer response has been quite reasonable. I mean even the current dialogue and discussions we are having, they seem to be quite receptive.",
+      "answer_quote": "in the past also we had, maybe not in the short period of time, we did not have so much of increase",
       "answer_page": 16
+     },
+     {
+      "analyst": "Amit Anwani",
+      "answered_by": [
+       "Subramanian Sarma"
+      ],
+      "label": "answered",
+      "reason": "Management answered about duration changes and impact on hydrocarbon and renewables.",
+      "question_quote": "what is the current duration of that Middle East book which is roughly about Rs 3 lakh crores",
+      "question_page": 17,
+      "answer_quote": "most of the projects what we have in the, say let's put it as I mean let's recap",
+      "answer_page": 17
      },
      {
       "analyst": "Amit Anwani",
@@ -1651,8 +1735,8 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management gave specific container cost figures and discussed customer discussions.",
-      "question_quote": "any basis point impact or increase in these cost you must have seen in these two months",
+      "reason": "Management addressed shipping and logistics cost increases and container rates.",
+      "question_quote": "any basis point impact or increase in these cost you must have seen",
       "question_page": 17,
       "answer_quote": "It used to be $8,000 per container, now it has come down to $5,000",
       "answer_page": 17
@@ -1662,11 +1746,35 @@
       "answered_by": [
        "P Ramakrishnan"
       ],
-      "label": "answered",
-      "reason": "Management clarified that revenue guidance is maintained at the group level.",
-      "question_quote": "What is the revenue non-infra versus infra?",
+      "label": "partly",
+      "reason": "Management addressed ROE and PPM margin guidance but missed the Infra vs non-Infra growth split.",
+      "question_quote": "What is the Infra versus non-Infra growth build up which is happening",
       "question_page": 18,
-      "answer_quote": "this is being done at an overall level, so I think we will stay at the group level at this juncture.",
+      "answer_quote": "Return on Equity is a factor of how much are we ensuring the overall improvement",
+      "answer_page": 18
+     },
+     {
+      "analyst": "Amit Anwani",
+      "answered_by": [
+       "P Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Management explained that revenue breakup is kept at the group level.",
+      "question_quote": "What is the revenue non-infra versus infra",
+      "question_page": 18,
+      "answer_quote": "this is being done at an overall level, so I think we will stay at the group level",
+      "answer_page": 18
+     },
+     {
+      "analyst": "Amit Anwani",
+      "answered_by": [
+       "R. Shankar Raman"
+      ],
+      "label": "answered",
+      "reason": "Management explained the data center business model and capacity targets.",
+      "question_quote": "what exactly would be the kind of target we are looking for during this Lakshya plan",
+      "question_page": 18,
+      "answer_quote": "about 200 megawatt worth of data center capacity we could create over time.",
       "answer_page": 18
      },
      {
@@ -1675,8 +1783,20 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management clarified guidance is for stable margins without committing to a specific number.",
-      "question_quote": "normalized run rate of PPM margins will not be stuck at 7.7%, 7.8%, there might be an improvement?",
+      "reason": "Management addressed the legacy order book size and margin improvement drivers.",
+      "question_quote": "how large is this unexecuted legacy order book, and are the ultra-mega orders",
+      "question_page": 19,
+      "answer_quote": "Energy segment margin movement softness has been discussed in the previous call also",
+      "answer_page": 19
+     },
+     {
+      "analyst": "Sumit Kishore",
+      "answered_by": [
+       "P. Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Management responded regarding potential normalized run rate of PPM margins.",
+      "question_quote": "the normalized run rate of PPM margins will not be stuck at 7.7%, 7.8%, there might be an improvement",
       "question_page": 20,
       "answer_quote": "I am only giving you guidance for stable margins for FY’27.",
       "answer_page": 20
@@ -1688,8 +1808,8 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management stated they do not foresee margin impediments from new project execution stages.",
-      "question_quote": "ultra-mega stage of execution should not or if it becomes an impediment to margin improvement",
+      "reason": "Management answered concerns about execution stage impeding margins.",
+      "question_quote": "if it becomes an impediment to margin improvement in this segment two quarters down the line",
       "question_page": 20,
       "answer_quote": "No, we do not envisage anything of that sort now, at this point in time.",
       "answer_page": 20
@@ -1700,10 +1820,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management provided capex details and target sectors for electronics manufacturing services.",
-      "question_quote": "how big the capex will be and what are the timelines, and any other details",
+      "reason": "Management provided details on capex, timelines, and focus areas for EMS.",
+      "question_quote": "how big the capex will be and what are the timelines",
       "question_page": 20,
-      "answer_quote": "setting Rs 50 billion as the capex for this particular business. It is essentially going to be Industrial and Defense related",
+      "answer_quote": "we are setting Rs 50 billion as the capex for this particular business.",
       "answer_page": 20
      },
      {
@@ -1712,7 +1832,7 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management provided an update on the status of the AMCA development bid.",
+      "reason": "Management gave status update on the AMCA development bid.",
       "question_quote": "what is the update on your bid for AMCA development",
       "question_page": 21,
       "answer_quote": "status update continues to remain the same. Apart from us, there is one more counterpart",
@@ -1724,22 +1844,10 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management stated that the vast majority of growth would come from existing businesses.",
-      "question_quote": "How much of it would be driven by your existing business and how much do you think the new businesses should drive?",
+      "reason": "Management quantified how much growth comes from existing versus new businesses.",
+      "question_quote": "How much of it would be driven by your existing business and how much",
       "question_page": 21,
       "answer_quote": "12% to 15% of the CAGR growth that we have put in L-31, mostly would be from the existing businesses.",
-      "answer_page": 21
-     },
-     {
-      "analyst": "Puneet Gulati",
-      "answered_by": [
-       "P. Ramakrishnan"
-      ],
-      "label": "answered",
-      "reason": "Management explained the factors behind the revised ROE target and investment phases.",
-      "question_quote": "your previous target was 18%. This time you've restricted to 16% to 17%. How should one think about that?",
-      "question_page": 21,
-      "answer_quote": "when I'm giving the guidance of 16% to 17%, if you just add up the numbers of the investment that we are talking about",
       "answer_page": 21
      },
      {
@@ -1749,7 +1857,7 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management detailed the regional order inflow split and contributions from new geographies.",
+      "reason": "Management answered about regional growth breakdown and geographic diversification.",
       "question_quote": "what sort of growth you are baking into your plan from Middle East and let's say from the other regions",
       "question_page": 22,
       "answer_quote": "order inflows are 50% domestic, 50 international.",
@@ -1761,10 +1869,10 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management confirmed that the Middle East will continue to be a core market delivering strong growth",
-      "question_quote": "growth that had happened, we have seen like strong growth in the Middle East, so that should continue",
+      "reason": "Management confirmed expectations for double-digit or continued growth in the Middle East.",
+      "question_quote": "that should continue during the plan period? Would it be a right thing to assess",
       "question_page": 22,
-      "answer_quote": "Middle East will continue to be our core market. I mean, for us to provide that kind of growth, we cannot provide without Middle East.",
+      "answer_quote": "Middle East will continue to be our core market. I mean, for us to provide that kind of growth",
       "answer_page": 22
      },
      {
@@ -1773,8 +1881,8 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management acknowledged the pre-sales figure for FY26.",
-      "question_quote": "we had already achieved, if I heard it right, Rs 94 billion in pre-sales in FY26, right?",
+      "reason": "Management acknowledged the pre-sales figure for real estate.",
+      "question_quote": "We had already achieved, if I heard it right, Rs 94 billion in pre-sales in FY26",
       "question_page": 22,
       "answer_quote": "Correct.",
       "answer_page": 22
@@ -1786,10 +1894,10 @@
        "R. Shankar Raman"
       ],
       "label": "answered",
-      "reason": "Management elaborated on the real estate scale, split between residential and commercial, and market",
-      "question_quote": "what sort of scale for L&T's Realty that you see, both in terms of sales and let's say pre-sales?",
+      "reason": "Management detailed real estate strategy, square footage, and capital needs.",
+      "question_quote": "what sort of scale for L&T's Realty that you see, both in terms of sales and let's say pre-sales",
       "question_page": 22,
-      "answer_quote": "plans we are currently pursuing is about 100 million square feet, between residential and commercial.",
+      "answer_quote": "The plans we are currently pursuing is about 100 million square feet, between residential and commercial.",
       "answer_page": 22
      },
      {
@@ -1798,10 +1906,22 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management confirmed that the 25% target applies to pre-sales CAGR.",
-      "question_quote": "So, this is a sales or a pre-sales CAGR you are saying 25% in Lakshya plan?",
+      "reason": "Management clarified the pre-sales CAGR target.",
+      "question_quote": "this is a sales or a pre-sales CAGR you are saying 25% in Lakshya plan",
       "question_page": 23,
       "answer_quote": "CAGR growth of pre-sales, I said.",
+      "answer_page": 23
+     },
+     {
+      "analyst": "Priyankar Biswas",
+      "answered_by": [
+       "P. Ramakrishnan"
+      ],
+      "label": "answered",
+      "reason": "Management provided ballpark capex breakdown numbers for FY27.",
+      "question_quote": "can you just give, the capex number that you planned for FY27",
+      "question_page": 23,
+      "answer_quote": "You can take Electronics at Rs 10 billion, Rs 1,000 crore, normal projects part of our capex we can take around Rs 25 billion",
       "answer_page": 23
      },
      {
@@ -1810,8 +1930,20 @@
        "Subramanian Sarma"
       ],
       "label": "answered",
-      "reason": "Management indicated that re-tendering is expected to occur during the year.",
-      "question_quote": "do we have any update on the re-tendering?",
+      "reason": "Management gave status update on the Kuwait project status.",
+      "question_quote": "What is the status of those projects in Kuwait",
+      "question_page": 24,
+      "answer_quote": "out of the four, three were cancelled, and we are hoping one will survive.",
+      "answer_page": 24
+     },
+     {
+      "analyst": "Nidhi Shah",
+      "answered_by": [
+       "Subramanian Sarma"
+      ],
+      "label": "answered",
+      "reason": "Management gave timeline for re-tendering in Kuwait.",
+      "question_quote": "do we have any update on the re-tendering",
       "question_page": 24,
       "answer_quote": "Re-tendering will happen during this year.",
       "answer_page": 24
@@ -1822,20 +1954,20 @@
        "P. Ramakrishnan"
       ],
       "label": "answered",
-      "reason": "Management confirmed the targeting of robotics and related solutions.",
-      "question_quote": "Short targeting EV, solar inverter kind of solutions that you have already.",
+      "reason": "Management affirmed target solutions like robotics.",
+      "question_quote": "Short targeting EV, solar inverter kind of solutions that you have already",
       "question_page": 24,
       "answer_quote": "Robotics and all that stuff.",
       "answer_page": 24
      }
     ],
-    "unverified": 10,
+    "unverified": 3,
     "counts": {
-     "answered": 20,
-     "partly": 0,
+     "answered": 26,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 20"
+    "summary": "questions dodged: 0 of 27"
    }
   ],
   "narrative_vs_numbers": [
@@ -1958,24 +2090,34 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 20",
+    "text": "Call of 2026-07-31: questions dodged: 0 of 24",
     "source": "dodged-question check"
    },
    {
     "id": "F14",
-    "text": "Call of 2026-05-31: questions dodged: 0 of 20",
+    "text": "Call of 2026-05-31: questions dodged: 0 of 27",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter revenue was Rs 78,750 cr, representing a 15.8% YoY increase.",
+     "text": "The latest quarter revenue was Rs 78,750 cr, representing a growth of +15.8% YoY.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 78,750 cr, +15.8% YoY",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The company achieved a 3y revenue CAGR of 16.0% and a profit CAGR of 14.8%.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 16.0%, profit CAGR 14.8%",
+       "source": "annual P&L"
       }
      ]
     },
@@ -1988,21 +2130,11 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The latest quarter profit reached Rs 5,949 cr, showing a 27.2% YoY growth.",
-     "cites": [
-      {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 5,949 cr, +27.2% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The operating margin stood at 11.0% in the latest quarter, dropping -2.0 pts YoY.",
+     "text": "The operating margin was 11.0% in the latest quarter, which is down -2.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -2012,22 +2144,22 @@
      ]
     },
     {
-     "text": "The company kept 0 of 1 measurable targets.",
-     "cites": [
-      {
-       "id": "F11",
-       "text": "Promises kept: 0 of 1 measurable targets",
-       "source": "promise ledger"
-      }
-     ]
-    },
-    {
-     "text": "The debt to equity ratio is 1.24 with borrowings of Rs 140,300 cr.",
+     "text": "The debt/equity ratio stands at 1.24 with total borrowings of Rs 140,300 cr.",
      "cites": [
       {
        "id": "F7",
        "text": "Debt/equity 1.24 (borrowings Rs 140,300 cr)",
        "source": "balance sheet"
+      }
+     ]
+    },
+    {
+     "text": "The revenue growth FY26 target was 15%, but the actual was 11.8.",
+     "cites": [
+      {
+       "id": "F12",
+       "text": "Missed: revenue growth FY26 target 15%, actual 11.8",
+       "source": "promise ledger"
       }
      ]
     }
@@ -2054,8 +2186,8 @@
     "Not measurable": 13
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 40",
-   "questions_partly_answered": "2 of 40"
+   "questions_dodged": "0 of 51",
+   "questions_partly_answered": "2 of 51"
   }
  },
  "stage": "writing",
@@ -2118,6 +2250,6 @@
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 6.0,
+ "built_in_seconds": 6.5,
  "from_cache": true
 }

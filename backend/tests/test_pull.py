@@ -253,6 +253,19 @@ def test_fact_pool_and_report_card():
     assert rc["promises_kept"] == "1 of 2" and rc["questions_dodged"] == "1 of 4" and rc["topics_dropped"] == ["ebit margin FY26 (8%)"]
 
 
+def test_dodge_needs_evidence():
+    from finn.pull import dodged
+
+    q = "How much will margins expand next year?"
+    assert dodged.confirm_dodge(q, "We will not give a number on that.", "We will not give a number on that")[0] == "dodged"
+    assert dodged.confirm_dodge(q, "Demand is good and we are investing.", "Demand is good and we are investing")[0] == "dodged"
+    assert dodged.confirm_dodge(q, "Margins should be 21% next year.", "Margins should be 21%")[0] == "partly"
+    assert dodged.confirm_dodge("Where is the second programme?", "Sorry, what is the second program you talked about?",
+                                "Sorry, what is the second program you talked about?")[0] == "partly"
+    assert dodged.confirm_dodge("Any update on the plant?", "I do not have any specific comments on it right now.",
+                                "I do not have any specific comments on it right now")[0] == "dodged"
+
+
 def test_table_maths():
     assert tables.cagr(100, 161.05, 5) == 10.0
     assert tables.cagr(-1, 100, 5) is None

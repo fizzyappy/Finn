@@ -1,6 +1,6 @@
 {
  "ticker": "TITAN",
- "started_at": "2026-11-14T12:41:29",
+ "started_at": "2026-11-14T19:16:46",
  "states": [
   {
    "state": "too_early",
@@ -818,27 +818,14 @@
      {
       "analyst": "Videesha Sheth",
       "answered_by": [
-       "Ashok Sonthalia",
-       "Saumen Bhaumik"
-      ],
-      "label": "answered",
-      "reason": "Management explained reasons for margins and CaratLane.",
-      "question_quote": "domestic jewellery EBIT margin",
-      "question_page": 4,
-      "answer_quote": "making a conscious choice to invest on brand building",
-      "answer_page": 4
-     },
-     {
-      "analyst": "Videesha Sheth",
-      "answered_by": [
        "Arun Narayan",
        "Saumen Bhaumik"
       ],
       "label": "answered",
-      "reason": "Management detailed festive trends across three phases.",
-      "question_quote": "observations on the secondary and consumer level trends",
+      "reason": "Management detailed the festive consumer trends across phases and segments.",
+      "question_quote": "observations on the secondary and consumer level trends during this festive",
       "question_page": 4,
-      "answer_quote": "first phase of Navratri from October 11 to October 22",
+      "answer_quote": "festive pretty much can be seen in three phases",
       "answer_page": 5
      },
      {
@@ -848,10 +835,10 @@
        "Kuruvilla Markose"
       ],
       "label": "answered",
-      "reason": "Management shared quick thoughts on watches festive growth.",
-      "question_quote": "Watches and eyewear, if there are any quick thoughts",
+      "reason": "Management provided thoughts and growth updates on the watches segment.",
+      "question_quote": "Watches and eyewear, if there are any quick thoughts?",
       "question_page": 5,
-      "answer_quote": "Watches, generally festive doesn't really do that well",
+      "answer_quote": "Watches, generally festive doesn't really do that well, but this time around",
       "answer_page": 5
      },
      {
@@ -860,10 +847,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management discussed assortment corrections and lower cartages.",
-      "question_quote": "assortment correction to sort of build volumes",
+      "reason": "Management discussed assortment corrections and light weighting for gold prices.",
+      "question_quote": "share some views on that",
       "question_page": 6,
-      "answer_quote": "working on 18-carat gold for core gold jewellery",
+      "answer_quote": "working on 18-carat gold for core gold jewellery, both in wedding and daily wears",
       "answer_page": 6
      },
      {
@@ -872,10 +859,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained why they won't reverse initiatives.",
-      "question_quote": "Is there any thought process around going back to 22-carat",
+      "reason": "Management addressed whether they would reverse light-weighting initiatives.",
+      "question_quote": "can we think of reversing these initiatives?",
       "question_page": 6,
-      "answer_quote": "objective is to give choices to customers and leave it",
+      "answer_quote": "No, I think as a market leader, the objective is to give choices",
       "answer_page": 6
      },
      {
@@ -884,20 +871,20 @@
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management clarified capital raising is for replenishment.",
-      "question_quote": "is this restructuring or fresh capital",
+      "reason": "Management clarified the capital raising is for debt replenishment.",
+      "question_quote": "restructuring or fresh capital that we are raising",
       "question_page": 7,
       "answer_quote": "This is a replenishment of some of the existing borrowing.",
       "answer_page": 7
      }
     ],
-    "unverified": 17,
+    "unverified": 24,
     "counts": {
-     "answered": 6,
+     "answered": 5,
      "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 6"
+    "summary": "questions dodged: 0 of 5"
    },
    {
     "call": "2026-08-31",
@@ -910,22 +897,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained postponed demand returned in June after May softness.",
-      "question_quote": "have you seen that the postponed demand has come back in the quarter till date",
+      "reason": "Management explained post-May recovery and deferred demand returning.",
+      "question_quote": "have you seen that the postponed demand has come back in the quarter till date?",
       "question_page": 4,
-      "answer_quote": "we believe that it was a deferment and we saw things pick up in June.",
-      "answer_page": 4
-     },
-     {
-      "analyst": "Videesha Sheth",
-      "answered_by": [
-       "Arun Narayan"
-      ],
-      "label": "answered",
-      "reason": "Management noted studded growth continued to play out in Quarter 1.",
-      "question_quote": "And any changes in consumer behavior, whether it's the sub-₹1 lakh category coming back or sustenance of studded growth",
-      "question_page": 4,
-      "answer_quote": "we began seeing a resurgence of studded in Quarter 4 of last year, and we are seeing that continue to play out in Quarter 1.",
+      "answer_quote": "we believe that it was a deferment and we saw things pick up in June",
       "answer_page": 4
      },
      {
@@ -935,10 +910,10 @@
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management stated they are not changing guidance and stick to previous expectations.",
+      "reason": "Management addressed guidance explicitly and stated they will stick with previous guidance.",
       "question_quote": "Would you look to revisit the EBIT growth or margin guidance for the jewellery segment",
       "question_page": 5,
-      "answer_quote": "we will stick with our previous guidance. We are not changing it.",
+      "answer_quote": "given the circumstances, we will stick with our previous guidance. We are not changing it.",
       "answer_page": 5
      },
      {
@@ -947,8 +922,8 @@
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management confirmed the comparison with a simple yes.",
-      "question_quote": "so ideally, the current quarter margin at 10.9% compares with 11.3% last year, right",
+      "reason": "Management answered yes to the question on margin comparison.",
+      "question_quote": "the current quarter margin at 10.9% compares with 11.3% last year, right?",
       "question_page": 5,
       "answer_quote": "Yes.",
       "answer_page": 4
@@ -959,8 +934,8 @@
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management explained the reversal will flow through P&L over the next 2 to 3 quarters.",
-      "question_quote": "earlier 50 bps reversal, which was there last year, that can also sort of happen in the next few quarters",
+      "reason": "Management explained the timing of the reversal over the next few quarters.",
+      "question_quote": "that earlier 50 bps reversal, which was there last year, that can also sort of happen in the next few quarters?",
       "question_page": 5,
       "answer_quote": "Over next 2 to 3 quarters, these gains would gradually flow through P&L.",
       "answer_page": 5
@@ -970,12 +945,24 @@
       "answered_by": [
        "Ashok Sonthalia"
       ],
-      "label": "partly",
-      "reason": "Management declined to give a full year impact citing policy reasons.",
-      "question_quote": "overall quantum of custom duty benefit, if you can call out for the entire year",
+      "label": "dodged",
+      "reason": "Management explicitly refused to provide the full year impact.",
+      "question_quote": "overall quantum of custom duty benefit, if you can call out for the entire year?",
       "question_page": 5,
       "answer_quote": "I would rather refrain from giving a full year impact at this point of time.",
       "answer_page": 5
+     },
+     {
+      "analyst": "Devanshu Bansal",
+      "answered_by": [
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management gave the margin profile expectation for the international segment.",
+      "question_quote": "How should we see the margin profile of this segment for this current year?",
+      "question_page": 6,
+      "answer_quote": "overall portfolio would still turn out to be positive EBIT performance for the full year.",
+      "answer_page": 6
      },
      {
       "analyst": "Latika Chopra",
@@ -984,8 +971,8 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained the rollout of the cash for gold scheme.",
-      "question_quote": "what are your views on this? And how is Titan approaching this",
+      "reason": "Management addressed cash for gold exchange scheme rollout and traction.",
+      "question_quote": "What are your views on this? And how is Titan approaching this?",
       "question_page": 6,
       "answer_quote": "We have rolled out what we had called as cash for gold in all our stores from the month of June.",
       "answer_page": 6
@@ -1008,10 +995,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained exchanging gold for cash is a customer solution.",
-      "question_quote": "exchanging gold for cash, what is the thought process from your perspective",
+      "reason": "Management explained the thought process and customer-centric approach behind cash for gold.",
+      "question_quote": "exchanging gold for cash, what is the thought process from your perspective?",
       "question_page": 6,
-      "answer_quote": "we are looking at it purely as a customer solution as opposed to a revenue stream.",
+      "answer_quote": "it's about solving a customer problem. It's not as much about profiting from it.",
       "answer_page": 7
      },
      {
@@ -1020,8 +1007,8 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained deductions nullify margin dilution.",
-      "question_quote": "It is not dilutive for your margin profile or versus exchanging gold for gold",
+      "reason": "Management explained that the program is margin neutral through deductions.",
+      "question_quote": "It is not dilutive for your margin profile or versus exchanging gold for gold?",
       "question_page": 7,
       "answer_quote": "there is a deduction which is there when you bring gold for exchange, and that takes care of - nullifies this",
       "answer_page": 7
@@ -1032,24 +1019,49 @@
        "Ajoy Chawla"
       ],
       "label": "answered",
-      "reason": "Management confirmed economics do not dilute margins.",
+      "reason": "Management confirmed margin neutrality and explained the larger strategic view.",
       "question_quote": "Okay. So it's margin neutral to that extent.",
       "question_page": 7,
       "answer_quote": "How to ensure that the economics don't dilute our margin, those are things we as an organization have figured out",
       "answer_page": 7
      },
      {
+      "analyst": "Latika Chopra",
+      "answered_by": [
+       "Arun Narayan",
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management addressed buyer growth expectations and clarified the margin base comparison.",
+      "question_quote": "Is this buyer growth tracking in line with your expectations? How do you think this plays out",
+      "question_page": 7,
+      "answer_quote": "we had a good period in April and a good period in June. And there was a bit of sentiment that was dampened",
+      "answer_page": 7
+     },
+     {
       "analyst": "Nihal Mahesh Jham",
       "answered_by": [
-       "Ajoy Chawla",
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management noted some softness in plain gold towards the end of July.",
-      "question_quote": "any such trends visible or none of it at our end.",
-      "question_page": 9,
-      "answer_quote": "towards the end of July, perhaps we did see some softness in -- on the plain gold side",
-      "answer_page": 9
+      "reason": "Management confirmed that lost demand was covered and will not trickle into Q2.",
+      "question_quote": "was there any demand that would have got lost or most of it got covered this quarter?",
+      "question_page": 8,
+      "answer_quote": "we believe it got covered. Like I said, Adhik Maas started middle of May. And by the time we got into June, we started seeing things recover.",
+      "answer_page": 8
+     },
+     {
+      "analyst": "Nihal Mahesh Jham",
+      "answered_by": [
+       "Ajoy Chawla",
+       "Ashok Sonthalia"
+      ],
+      "label": "answered",
+      "reason": "Management outlined the product mix and gross margin drivers to reach the 11% EBIT margin.",
+      "question_quote": "when we say the 11% EBIT margin, what will be the driver sort of for this to improve?",
+      "question_page": 8,
+      "answer_quote": "product mix swinging upwards towards more studded scale is a very important driver",
+      "answer_page": 8
      },
      {
       "analyst": "Avi Mehta",
@@ -1066,38 +1078,14 @@
      {
       "analyst": "Avi Mehta",
       "answered_by": [
-       "Arun Narayan"
-      ],
-      "label": "answered",
-      "reason": "Management stated normalization already happened in June.",
-      "question_quote": "if I were to kind of look at either the exit in June or average of April and June",
-      "question_page": 9,
-      "answer_quote": "the normalizing happened in June. It's already happened in June.",
-      "answer_page": 9
-     },
-     {
-      "analyst": "Avi Mehta",
-      "answered_by": [
        "Ajoy Chawla",
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management discussed their target of double-digit aggressive growth.",
-      "question_quote": "how we should look at the differential between buyer growth and value growth",
+      "reason": "Management addressed the relationship between buyer growth and value growth and their double-digit t",
+      "question_quote": "how we should look at the differential between buyer growth and value growth as gold prices start to become Y-o-Y flattish",
       "question_page": 10,
       "answer_quote": "we are targeting, as always, a double-digit aggressive growth, and that's something which we shared even in the Investor Day.",
-      "answer_page": 10
-     },
-     {
-      "analyst": "Avi Mehta",
-      "answered_by": [
-       "Ashok Sonthalia"
-      ],
-      "label": "answered",
-      "reason": "Management explained inventory valuation and hedge valuation differences.",
-      "question_quote": "Just a second bit on the MTM gain and loss. Just if you could just remind us what exactly drives this",
-      "question_page": 10,
-      "answer_quote": "It gives rise to accounting MTM as inventory is being done on a certain basis reference point, hedges are being done on a certain reference point.",
       "answer_page": 10
      },
      {
@@ -1106,7 +1094,7 @@
        "Ashok Sonthalia"
       ],
       "label": "answered",
-      "reason": "Management acknowledged hearing the caller.",
+      "reason": "Management confirmed they can hear the analyst.",
       "question_quote": "Can you hear me?",
       "question_page": 11,
       "answer_quote": "Yes, a little.",
@@ -1118,24 +1106,11 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained their strategy to acquire buyers in a stable gold price scenario.",
-      "question_quote": "do you think we can sort of maintain a 18% to 20% kind of top line growth in that kind of a scenario",
+      "reason": "Management discussed their playbook and strategies for flat gold price scenarios.",
+      "question_quote": "do you think we can sort of maintain a 18% to 20% kind of top line growth in that kind of a scenario?",
       "question_page": 11,
-      "answer_quote": "in a scenario like that, we would certainly go all out to acquire buyers and use that to drive growth",
+      "answer_quote": "In a scenario like that, we would certainly go all out to acquire buyers and use that to drive growth",
       "answer_page": 11
-     },
-     {
-      "analyst": "Percy Panthaki",
-      "answered_by": [
-       "Ajoy Chawla",
-       "Arun Narayan"
-      ],
-      "label": "answered",
-      "reason": "Management discussed levers like lightweight jewellery and accessibility to keep consumers engaged.",
-      "question_quote": "do you think that could be one of the lever in terms of gradually increasing or reverting back",
-      "question_page": 12,
-      "answer_quote": "jewellery has to be both exciting and accessible. And accessibility comes from keeping it lightweight",
-      "answer_page": 12
      },
      {
       "analyst": "Jay Doshi",
@@ -1143,10 +1118,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management stated they do not see a substantial increase in competitive intensity for plain gold.",
-      "question_quote": "did you answer the question on making charges for the plain gold jewellery? How is the competitive intensity there",
+      "reason": "Management answered regarding plain gold making charges intensity.",
+      "question_quote": "did you answer the question on making charges for the plain gold jewellery? How is the competitive intensity there?",
       "question_page": 14,
-      "answer_quote": "No, I mean we don't see a substantial increase in competitive intensity.",
+      "answer_quote": "we don't see a substantial increase in competitive intensity. As you are aware, it's only been going up over the 2 to 3 years.",
       "answer_page": 14
      },
      {
@@ -1155,7 +1130,7 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management stated they are not seeing any easing up of competitive intensity.",
+      "reason": "Management clarified that competitive intensity for plain gold has not eased.",
       "question_quote": "whether you're seeing easing of competitive intensity in plain gold jewellery given that gold prices have stabilized",
       "question_page": 14,
       "answer_quote": "We're not seeing any easing up of competitive intensity. We are seeing it more of the same.",
@@ -1167,10 +1142,10 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management explained exchange share trends and upswings during May.",
-      "question_quote": "give a broad breakup of how much exchange share in procurement has gone up this quarter",
+      "reason": "Management provided color on exchange share trends and spikes during May.",
+      "question_quote": "give a broad breakup of how much exchange share in procurement has gone up this quarter?",
       "question_page": 14,
-      "answer_quote": "We did see an upswing for that period of about 3 weeks, but then it has again got normalized since then.",
+      "answer_quote": "we did see an upswing for that period of about 3 weeks, but then it has again got normalized since then.",
       "answer_page": 14
      },
      {
@@ -1179,20 +1154,20 @@
        "Arun Narayan"
       ],
       "label": "answered",
-      "reason": "Management advised not to read anything specific into sequential gross margin impacts.",
+      "reason": "Management advised not to read anything specific into margins for the next 3 quarters.",
       "question_quote": "Is that the right way to think about it?",
       "question_page": 14,
-      "answer_quote": "No, I don't think you should read anything specific into that. I would urge you all not to read anything specific into that.",
+      "answer_quote": "No, I don't think you should read anything specific into that.",
       "answer_page": 15
      }
     ],
-    "unverified": 7,
+    "unverified": 8,
     "counts": {
-     "answered": 22,
-     "partly": 1,
-     "dodged": 0
+     "answered": 21,
+     "partly": 0,
+     "dodged": 1
     },
-    "summary": "questions dodged: 0 of 23"
+    "summary": "questions dodged: 1 of 22"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1300,29 +1275,19 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-11-11: questions dodged: 0 of 6",
+    "text": "Call of 2026-11-11: questions dodged: 0 of 5",
     "source": "dodged-question check"
    },
    {
     "id": "F13",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 23",
+    "text": "Call of 2026-08-31: questions dodged: 1 of 22",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter revenue reached Rs 20,614 cr, representing a +10.1% YoY increase.",
-     "cites": [
-      {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 20,614 cr, +10.1% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Profit for the latest quarter was Rs 2,393 cr, which is +113.7% higher YoY.",
+     "text": "The latest quarter profit reached Rs 2,393 cr, representing a growth of +113.7% YoY.",
      "cites": [
       {
        "id": "F5",
@@ -1332,11 +1297,21 @@
      ]
     },
     {
-     "text": "Revenue grew YoY across 8 of 8 recent quarters.",
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
      "cites": [
       {
        "id": "F10",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin was 14.0% in the latest quarter, marking an increase of +4.0 pts YoY.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Operating margin 14.0% in the latest quarter, +4.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
@@ -1354,7 +1329,7 @@
      ]
     },
     {
-     "text": "The cash conversion cycle is reported at 211 days.",
+     "text": "The cash conversion cycle is reported as 211 days for 2026.",
      "cites": [
       {
        "id": "F8",
@@ -1364,7 +1339,7 @@
      ]
     },
     {
-     "text": "The 3-year operating cash flow is 0.57x reported profit.",
+     "text": "The 3-year operating cash flow equals 0.57x reported profit.",
      "cites": [
       {
        "id": "F9",
@@ -1377,7 +1352,15 @@
    "removed": []
   },
   "report_card": {
-   "evidence": [],
+   "evidence": [
+    {
+     "claim": "Dodged: Management explicitly refused to provide the full year impact.",
+     "quote": "overall quantum of custom duty benefit, if you can call out for the entire year?",
+     "page": 5,
+     "answer_quote": "I would rather refrain from giving a full year impact at this point of time.",
+     "answer_page": 5
+    }
+   ],
    "promises_kept": "none measurable yet",
    "promise_counts": {
     "Missed": 0,
@@ -1388,8 +1371,8 @@
     "Not measurable": 8
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 29",
-   "questions_partly_answered": "1 of 29"
+   "questions_dodged": "1 of 27",
+   "questions_partly_answered": "0 of 27"
   }
  },
  "stage": "writing",
@@ -1435,17 +1418,17 @@
  "llm_usage": {
   "models": {
    "gemini-3.5-flash-lite": {
-    "api_calls": 0,
-    "cache_hits": 9,
+    "api_calls": 1,
+    "cache_hits": 8,
     "failed": 0,
-    "tokens_in": 0,
-    "tokens_out": 0,
+    "tokens_in": 498,
+    "tokens_out": 280,
     "cost_usd": 0.0
    }
   },
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 4.7,
+ "built_in_seconds": 7.1,
  "from_cache": true
 }

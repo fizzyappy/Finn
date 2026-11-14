@@ -1,6 +1,6 @@
 {
  "ticker": "HDFCBANK",
- "started_at": "2026-11-14T12:41:22",
+ "started_at": "2026-11-14T19:16:37",
  "states": [],
  "sections": {
   "snapshot": {
@@ -391,10 +391,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Explained why cost of funds remained flat due to FCNR mix and time deposits.",
+      "reason": "Explained the cost of funds movement and the corporate bank mix.",
       "question_quote": "What is actually driving that cost further up?",
       "question_page": 8,
-      "answer_quote": "That outweighs from an overall cost mix point of view, and offsets the kind of a repricing on any of the back book",
+      "answer_quote": "So, that is why the cost of funds is flat. And also, one other aspect that in the cost of funds that you see is also some relief from the AT1 bonds",
       "answer_page": 8
      },
      {
@@ -403,10 +403,10 @@
        "Kaizad Bharucha"
       ],
       "label": "answered",
-      "reason": "Explained that back book repricing in retail drives the margin trend.",
-      "question_quote": "why still our margin decline is similar to what other players are",
+      "reason": "Addressed why the margin decline is similar to other players.",
+      "question_quote": "why we are not outperforming even on a low base compared to where the other players are",
       "question_page": 9,
-      "answer_quote": "you will see a change because there is a large amount of the back book which comes into play in retail",
+      "answer_quote": "you are seeing the back book effect play itself out. And therefore, I think going forward, across the next 2 quarters, you will see that change coming through",
       "answer_page": 9
      },
      {
@@ -415,10 +415,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Explained deployment of FCNR funds and matched sources and uses.",
-      "question_quote": "how are you deploying the FCNR funds?",
+      "reason": "Explained the deployment of FCNR funds and matching of sources and uses.",
+      "question_quote": "how are you deploying the FCNR funds? How much of it will be used to retire wholesale borrowings?",
       "question_page": 9,
-      "answer_quote": "the sources and uses are largely matched within the quarter",
+      "answer_quote": "overall, at an aggregate level, we did have a deposit growth of Rs 1,57,000 crores, and we had a loan growth of Rs 1,58,000 crores in this quarter. So, the sources and uses are largely matched",
       "answer_page": 9
      },
      {
@@ -428,10 +428,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Addressed floating rate book impact and gave trajectory view.",
-      "question_quote": "directionally what happens in the next quarter for you in margin?",
+      "reason": "Discussed margin trajectory and loan book split.",
+      "question_quote": "share the split of your loan book in terms of repo, MCLR, and fixed",
       "question_page": 10,
-      "answer_quote": "The trajectory will be upward from the next quarter onwards",
+      "answer_quote": "the floating rate book is approximately 70% of the total book.",
       "answer_page": 10
      },
      {
@@ -441,10 +441,34 @@
       ],
       "label": "answered",
       "reason": "Confirmed that Q2 is the bottom for margins.",
-      "question_quote": "Q2 margin is the bottom for us also, right?",
+      "question_quote": "Q2 margin is the bottom for us also, right? Like for all banks",
       "question_page": 10,
-      "answer_quote": "Yes, by all account, Parag, that is what we were alluding to",
+      "answer_quote": "Yes, by all account, Parag, that is what we were alluding to, to say that the rate cycle having already kicked in",
       "answer_page": 10
+     },
+     {
+      "analyst": "Parag Thakkar",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "partly",
+      "reason": "Management declined to give a specific number or direct confirmation for Q3.",
+      "question_quote": "So, it should start improving from Q3 itself, right?",
+      "question_page": 10,
+      "answer_quote": "I mean, I don't know if you're asking for one number.",
+      "answer_page": 10
+     },
+     {
+      "analyst": "Parag Thakkar",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "answered",
+      "reason": "Clarified headwinds and the factors influencing margins.",
+      "question_quote": "From Q3 onwards, it will be an uptick from Q2, right? That is what I'm asking for.",
+      "question_page": 11,
+      "answer_quote": "These are the items that are in play, positives, and the headwinds will be some full, full-quarter impact of whatever has come through in Q2.",
+      "answer_page": 11
      },
      {
       "analyst": "Parag Thakkar",
@@ -453,10 +477,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Explained portfolio returns and balanced approach to retail and wholesale segments.",
-      "question_quote": "something like that can be the trajectory going ahead for HDFC Bank also?",
+      "reason": "Discussed the strategy regarding high-yielding segments and ROA.",
+      "question_quote": "can we think like that at now that is the trajectory to increase our margins going ahead?",
       "question_page": 11,
-      "answer_quote": "You have to look at it in a more wholesome manner.",
+      "answer_quote": "you will see us having certainly come back with more vigor on our retail assets and MSME space.",
       "answer_page": 11
      },
      {
@@ -465,10 +489,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Explained MCLR dynamics and noted minuscule proportion of the book priced to it.",
-      "question_quote": "Just wanted to understand the reasons behind that and in a rate hike cycle, could we expect the same?",
+      "reason": "Explained the nuances of MCLR and its proportion in the book.",
+      "question_quote": "wanted to understand the reasons behind that and in a rate hike cycle, could we expect the same?",
       "question_page": 12,
-      "answer_quote": "the proportion of our book that is priced to MCLR is minuscule, single digit",
+      "answer_quote": "the proportion of our book that is priced to MCLR is minuscule, single digit.",
       "answer_page": 12
      },
      {
@@ -477,8 +501,8 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Acknowledged and confirmed the speaker.",
-      "question_quote": "Sorry, am I audible?",
+      "reason": "Acknowledged and confirmed the question regarding credit costs.",
+      "question_quote": "Understood. Okay. So, you are saying you factor in the credit costs also, or the outlook on credit cost also?",
       "question_page": 12,
       "answer_quote": "Yes. Yes, go ahead.",
       "answer_page": 12
@@ -490,7 +514,7 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Clarified that better slippage is seen across most portfolios, not just mix.",
+      "reason": "Explained that slippages improved across cohorts and are not just a mix effect.",
       "question_quote": "is it really a function of our loan mix changing towards corporate, or is it more a function that in each cohort we are seeing better slippage outcomes?",
       "question_page": 12,
       "answer_quote": "We are seeing better across most of these portfolios on the slippages, so it's not mix.",
@@ -499,38 +523,13 @@
      {
       "analyst": "Nitin Aggarwal",
       "answered_by": [
-       "Sashidhar Jagdishan",
-       "Srinivasan Vaidyanathan"
-      ],
-      "label": "answered",
-      "reason": "Addressed future employee trends and technology impact.",
-      "question_quote": "how do you look at trend over the next 2, 3 years?",
-      "question_page": 14,
-      "answer_quote": "the technology investments is on the cusp of being harnessed much more",
-      "answer_page": 14
-     },
-     {
-      "analyst": "Nitin Aggarwal",
-      "answered_by": [
        "Sashidhar Jagdishan"
       ],
       "label": "answered",
-      "reason": "Addressed liability growth and one-off outflows.",
+      "reason": "Addressed liability growth levers and LCR trends.",
       "question_quote": "what all initiatives, what all levers can we pull to accelerate liability growth over the coming years?",
       "question_page": 15,
-      "answer_quote": "unfortunately, you had some large, one-off outflows, which is not within our control",
-      "answer_page": 15
-     },
-     {
-      "analyst": "Ankit Bihani",
-      "answered_by": [
-       "Srinivasan Vaidyanathan"
-      ],
-      "label": "partly",
-      "reason": "Answered LCR and CD questions, but left insurance impact pending draft comments.",
-      "question_quote": "Will this become a constraint on your incremental loan growth going ahead if the deposit mobilization remains relatively weak?",
-      "question_page": 16,
-      "answer_quote": "Yes, we would like to operate between 110 and 120",
+      "answer_quote": "you will see a kind of a thought process in the near future from Anup and team on what they are planning to do in improving core liability momentum",
       "answer_page": 16
      },
      {
@@ -539,10 +538,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Explained small and marginal farmer shortfall and scarcity of available PSL.",
+      "reason": "Explained PSL achievement levels and the shortfall on small/marginal farmers.",
       "question_quote": "And on the PSL, the question on PSL?",
       "question_page": 17,
-      "answer_quote": "The place where we always scramble around to make it is the last 2 miles on the small and marginal",
+      "answer_quote": "See, our PSL achievement is at aggregate level, about 50% or so. So aggregate level, we are quite okay.",
       "answer_page": 17
      }
     ],
@@ -560,28 +559,15 @@
     "pairs_found": 20,
     "judged": [
      {
-      "analyst": "Mahrukh Adajania",
-      "answered_by": [
-       "Sashidhar Jagdishan",
-       "Srinivasan Vaidyanathan"
-      ],
-      "label": "partly",
-      "reason": "Answered on margins and headwinds, but did not address the ED appointment question.",
-      "question_quote": "Do you think margins have bottomed out now?",
-      "question_page": 4,
-      "answer_quote": "cost of funds is the biggest opportunity on the margin",
-      "answer_page": 5
-     },
-     {
       "analyst": "Pranav Gundlapalle",
       "answered_by": [
        "Sashidhar Jagdishan"
       ],
       "label": "answered",
-      "reason": "Explained relative performance and quality control of accounts.",
+      "reason": "Explained relative productivity and factors behind SA market share.",
       "question_quote": "some color on what has changed. Like are you adding the same number of accounts?",
       "question_page": 7,
-      "answer_quote": "a fair amount of fraudsters using accounts as mules",
+      "answer_quote": "you did see a fair amount of fraudsters using accounts as mules",
       "answer_page": 7
      },
      {
@@ -589,12 +575,24 @@
       "answered_by": [
        "Srinivasan Vaidyanathan"
       ],
-      "label": "partly",
-      "reason": "Addressed borrowing mix and long-term margins, but skipped FCNR deposit guidance.",
+      "label": "answered",
+      "reason": "Addressed borrowing mix and long-term margin expectations.",
       "question_quote": "where should we eventually see margins settling down",
       "question_page": 7,
-      "answer_quote": "the borrowing mix which is at 11%, we don't expect that it will just settle at 8% or 9%",
+      "answer_quote": "we do think that the maturity should take care of that",
       "answer_page": 8
+     },
+     {
+      "analyst": "Seshadri Sen",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "answered",
+      "reason": "Acknowledged and responded to the greeting.",
+      "question_quote": "Can you hear me?",
+      "question_page": 9,
+      "answer_quote": "Yes, yes, Seshadri.",
+      "answer_page": 9
      },
      {
       "analyst": "Seshadri Sen",
@@ -603,8 +601,8 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Addressed CASA ratio trends and customer acquisition plans.",
-      "question_quote": "decline in the CASA ratio is temporary or is a passing phase",
+      "reason": "Addressed CASA restoration goals and wholesale deposit trends.",
+      "question_quote": "am I to understand that this, you know, decline in the CASA ratio is temporary",
       "question_page": 9,
       "answer_quote": "the endeavor and our vision is to reach to somewhere near the pre-merger levels",
       "answer_page": 9
@@ -615,11 +613,23 @@
        "Sashidhar Jagdishan"
       ],
       "label": "answered",
-      "reason": "Confirmed opportunity to increase wallet share in existing base.",
+      "reason": "Confirmed opportunity to increase wallet share in existing customers.",
       "question_quote": "do you think there's also an opportunity to increase wallet share in existing and vintage customers?",
       "question_page": 10,
       "answer_quote": "Yes, absolutely. Because see, the moment we start to focus on that",
       "answer_page": 10
+     },
+     {
+      "analyst": "Seshadri Sen",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "answered",
+      "reason": "Added context on time deposits and CASA penetration.",
+      "question_quote": "Thank you so much. Thanks and all the best for the rest of the year.",
+      "question_page": 11,
+      "answer_quote": "One thing I do want to add is that while there is a relentless pursuit for CASA",
+      "answer_page": 11
      },
      {
       "analyst": "Suresh Ganapathy",
@@ -627,11 +637,23 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Addressed earnings growth versus balance sheet growth and CASA correlation.",
+      "reason": "Addressed PAT growth versus balance sheet growth and CASA correlation.",
       "question_quote": "Are you confident over the next two, three years you can get earnings growth above balance sheet growth?",
       "question_page": 11,
-      "answer_quote": "we do think that in the longer term that the profit growth should be at or above the balance sheet growth.",
+      "answer_quote": "adjusted for that, I think in one of our reports that we filed, it shows 9.8% profit growth",
       "answer_page": 11
+     },
+     {
+      "analyst": "Suresh Ganapathy",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "answered",
+      "reason": "Acknowledged thank you.",
+      "question_quote": "Thank you.",
+      "question_page": 1,
+      "answer_quote": "Thank you.",
+      "answer_page": 1
      },
      {
       "analyst": "Abhishek Murarka",
@@ -639,10 +661,10 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "partly",
-      "reason": "Answered on bond maturity and ECL, but missed the interest on balances query.",
-      "question_quote": "quantify how much of the bonds are maturing this year and probably this quarter?",
+      "reason": "Addressed bond maturity profile and ECL, but missed the second question on RBI balances.",
+      "question_quote": "can you quantify how much of the bonds are maturing this year and probably this quarter?",
       "question_page": 12,
-      "answer_quote": "You'll see that INR40,000 crores or INR50,000 crores over the next couple of years",
+      "answer_quote": "The annual report we just published few days ago will show you the profile of maturity of borrowings.",
       "answer_page": 12
      },
      {
@@ -651,7 +673,7 @@
        "Srinivasan Vaidyanathan"
       ],
       "label": "answered",
-      "reason": "Clarified that ECL transition impact will not be material.",
+      "reason": "Clarified expected impact on credit cost after ECL transition.",
       "question_quote": "After transition on an ongoing basis, do you think there will be a material increase in credit cost",
       "question_page": 13,
       "answer_quote": "I don't think there will be anything material, but there will be some",
@@ -663,23 +685,23 @@
        "Kaizad Bharucha",
        "Srinivasan Vaidyanathan"
       ],
-      "label": "partly",
-      "reason": "Discussed segment growth and ECLGS, but declined to give a specific growth number.",
-      "question_quote": "any number if you can share or growth estimate outlook that we are targeting",
+      "label": "answered",
+      "reason": "Discussed growth run rate and provisioning coverage.",
+      "question_quote": "any number if you can share or growth estimate outlook that we are targeting at.",
       "question_page": 13,
-      "answer_quote": "we've seen growth if you see the pack that we've already released and the advances mix",
+      "answer_quote": "In terms of growth we've seen growth if you see the pack that we've already released",
       "answer_page": 13
      },
      {
-      "analyst": "Piran Engineer",
+      "analyst": "Nitin Aggarwal",
       "answered_by": [
-       "Srinivasan Vaidyanathan"
+       "Sashidhar Jagdishan"
       ],
       "label": "answered",
-      "reason": "Provided quarter-on-quarter and year-on-year cost of funds figures.",
-      "question_quote": "highlight how much cost of funds are down quarter-on-quarter as well as year-on-year?",
+      "reason": "Addressed reluctance to commit specific growth numbers while maintaining a positive endeavor.",
+      "question_quote": "Hello am I audible?",
       "question_page": 15,
-      "answer_quote": "Sequential quarter I think it's almost there flat a couple of basis points",
+      "answer_quote": "Whilst demand is there, we just don't want to commit any number.",
       "answer_page": 15
      },
      {
@@ -688,10 +710,10 @@
        "Kaizad Bharucha"
       ],
       "label": "answered",
-      "reason": "Identified segments driving future loan growth.",
-      "question_quote": "barring MSME, which segments are you confident that will result in a pickup in loan growth",
+      "reason": "Highlighted retail and corporate segments driving loan growth.",
+      "question_quote": "barring MSME, which segments are you confident that will result in a pickup in loan growth from current levels?",
       "question_page": 15,
-      "answer_quote": "good traction year-on-year on the disbursement side in terms of our core retail book",
+      "answer_quote": "we do see that certainly picking up over the next several quarters.",
       "answer_page": 16
      },
      {
@@ -700,20 +722,32 @@
        "Sashidhar Jagdishan"
       ],
       "label": "answered",
-      "reason": "Explained why earnings calls are scheduled on Saturdays.",
+      "reason": "Explained the rationale behind weekend earnings reporting.",
       "question_quote": "if we could go back to weekday reporting rather than Saturday reporting",
       "question_page": 16,
       "answer_quote": "There is a reason why because since the markets are closed",
       "answer_page": 17
+     },
+     {
+      "analyst": "Piran Engineer",
+      "answered_by": [
+       "Srinivasan Vaidyanathan"
+      ],
+      "label": "answered",
+      "reason": "Accepted feedback as a request to consider.",
+      "question_quote": "I hope you'll consider it with all due seriousness and thought.",
+      "question_page": 17,
+      "answer_quote": "Thank you, we'll give a thought to that. Thank you.",
+      "answer_page": 17
      }
     ],
-    "unverified": 3,
+    "unverified": 5,
     "counts": {
-     "answered": 8,
-     "partly": 4,
+     "answered": 14,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 12"
+    "summary": "questions dodged: 0 of 15"
    }
   ],
   "narrative_vs_numbers": [],
@@ -829,7 +863,7 @@
    },
    {
     "id": "F10",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 12",
+    "text": "Call of 2026-07-31: questions dodged: 0 of 15",
     "source": "dodged-question check"
    }
   ],
@@ -856,19 +890,19 @@
      ]
     },
     {
-     "text": "In the latest quarter ending 2026-09-30, revenue reached Rs 95,132 cr with a +9.4% YoY increase.",
+     "text": "On the call of 2026-10-31, questions dodged were 0 of 13.",
      "cites": [
       {
-       "id": "F4",
-       "text": "Latest quarter (2026-09-30) revenue Rs 95,132 cr, +9.4% YoY",
-       "source": "quarterly P&L"
+       "id": "F9",
+       "text": "Call of 2026-10-31: questions dodged: 0 of 13",
+       "source": "dodged-question check"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "Deposits grew by only 7.2% in the latest year.",
+     "text": "Deposits grew 7.2% in the latest year.",
      "cites": [
       {
        "id": "F6",
@@ -878,22 +912,22 @@
      ]
     },
     {
-     "text": "The latest quarter profit was Rs 21,537 cr, showing a +5.8% YoY growth.",
+     "text": "Latest quarter revenue is Rs 95,132 cr, which is +9.4% YoY.",
      "cites": [
       {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 21,537 cr, +5.8% YoY",
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 95,132 cr, +9.4% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The 5y revenue CAGR is 22.1% and the profit CAGR is 20.0%.",
+     "text": "Latest quarter profit is Rs 21,537 cr, which is +5.8% YoY.",
      "cites": [
       {
-       "id": "F3",
-       "text": "5y revenue CAGR 22.1%, profit CAGR 20.0%",
-       "source": "annual P&L"
+       "id": "F5",
+       "text": "Latest quarter profit Rs 21,537 cr, +5.8% YoY",
+       "source": "quarterly P&L"
       }
      ]
     }
@@ -912,8 +946,8 @@
     "Not measurable": 1
    },
    "topics_dropped": [],
-   "questions_dodged": "0 of 25",
-   "questions_partly_answered": "5 of 25"
+   "questions_dodged": "0 of 28",
+   "questions_partly_answered": "2 of 28"
   }
  },
  "stage": "writing",
@@ -970,6 +1004,6 @@
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 3.8,
+ "built_in_seconds": 4.3,
  "from_cache": true
 }

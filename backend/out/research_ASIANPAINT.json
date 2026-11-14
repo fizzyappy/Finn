@@ -1,6 +1,6 @@
 {
  "ticker": "ASIANPAINT",
- "started_at": "2026-11-14T12:41:26",
+ "started_at": "2026-11-14T19:16:42",
  "states": [],
  "sections": {
   "snapshot": {
@@ -729,10 +729,22 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "provided the target gross margin band and recent price increases",
-      "question_quote": "what kind of normative gross margin that we can revert back to in the second half.",
+      "reason": "Management explained normalized volume growth and inventory status.",
+      "question_quote": "So how is a normalized volume growth looking in October?",
+      "question_page": 26,
+      "answer_quote": "we see, a 7% growth in volume is quite decent",
+      "answer_page": 26
+     },
+     {
+      "analyst": "Mihir Shah",
+      "answered_by": [
+       "Amit Syngle"
+      ],
+      "label": "answered",
+      "reason": "Management addressed gross margin expectations and upcoming price hikes.",
+      "question_quote": "what kind of normative gross margin that we can revert back to",
       "question_page": 27,
-      "answer_quote": "This band of about 41% to 43% would really be the band we should be looking forward to.",
+      "answer_quote": "This band of about 41% to 43% would really be the band",
       "answer_page": 27
      },
      {
@@ -741,10 +753,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "explained the differentiation of their VAE and NPD compared to market",
+      "reason": "Management clarified the differentiation and availability of VAE.",
       "question_quote": "are these products available with anybody or will these be the differentiated ones",
       "question_page": 27,
-      "answer_quote": "it's a very differentiated VAE and not the general VAE which is even available worldwide.",
+      "answer_quote": "it's a very differentiated VAE and not the general VAE which is even available worldwide",
       "answer_page": 27
      },
      {
@@ -753,10 +765,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "confirmed the expectation to maintain the 18% to 20% EBITDA margin band",
-      "question_quote": "Do you see any risk to that 18% to 20% band that we were looking to stick with at the EBITDA margin level?",
+      "reason": "Management addressed risks to the EBITDA margin band.",
+      "question_quote": "Do you see any risk to that 18% to 20% band",
       "question_page": 28,
-      "answer_quote": "for the year we should be able to maintain the band of what we have spoken of 18% to 20%.",
+      "answer_quote": "we believe as we go forward, for the year we should be able to maintain the band",
       "answer_page": 28
      },
      {
@@ -765,10 +777,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "gave specific 300 bps to 500 bps advantage on relevant products",
-      "question_quote": "any range of what are the potential benefits, how much can it accrue from the phase one?",
+      "reason": "Management provided the benefit range for VAE phase one.",
+      "question_quote": "any range of what are the potential benefits, how much can it accrue",
       "question_page": 28,
-      "answer_quote": "it should really give us some advantage of 300 bps to 500 bps on relevant products.",
+      "answer_quote": "advantage of 300 bps to 500 bps on relevant products",
       "answer_page": 28
      },
      {
@@ -777,10 +789,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "clarified the phasing of the VAE benefits",
-      "question_quote": "So, this does not mean all phases to come in, right? The 300 bps plus.",
+      "reason": "Management clarified whether this includes all phases.",
+      "question_quote": "This does not mean all phases to come in, right?",
       "question_page": 28,
-      "answer_quote": "partial benefit in Phase 1 and full benefit as we get into a good part of phase two.",
+      "answer_quote": "partial benefit in Phase 1 and full benefit as we get into a good part of phase two",
       "answer_page": 28
      },
      {
@@ -789,10 +801,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "provided volume growth outlook for the upcoming period",
-      "question_quote": "how I could see it from a volume growth and a value growth perspective of how we would be looking at the demand environment",
+      "reason": "Management gave volume growth expectations for the demand environment.",
+      "question_quote": "any thoughts on the same. That's all from my side.",
       "question_page": 29,
-      "answer_quote": "we feel that it would be reasonable to expect to see a volume growth of about 8% to 9% going forward.",
+      "answer_quote": "reasonable to expect to see a volume growth of about 8% to 9% going forward",
       "answer_page": 29
      },
      {
@@ -801,22 +813,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "addressed profitability lag in industrial and international businesses",
-      "question_quote": "Just wanted to understand the outlook for the same and whether you feel confident that all the increased costs",
-      "question_page": 29,
-      "answer_quote": "There has been a lag, but at the same time, the top lines you have been able to drive at almost 30% in quarter two.",
-      "answer_page": 30
-     },
-     {
-      "analyst": "Aditya Bhartiya",
-      "answered_by": [
-       "Amit Syngle"
-      ],
-      "label": "answered",
-      "reason": "explained ADD impact percentage and mitigation actions via R&D",
-      "question_quote": "How much does that increase our cost price? And if we look at the divergence between cost increases",
+      "reason": "Management addressed the anti-dumping duty cost impact and levers.",
+      "question_quote": "How much does that increase our cost price? And if we look at the divergence",
       "question_page": 30,
-      "answer_quote": "it could have an impact from anywhere between 2% to 3% of the overall thing.",
+      "answer_quote": "it could have an impact from anywhere between 2% to 3%",
       "answer_page": 30
      },
      {
@@ -825,22 +825,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "addressed competitive intensity and inability to fully cover inflation",
-      "question_quote": "is the industry able to pass on all the increases or is it still some time away?",
-      "question_page": 31,
-      "answer_quote": "some of the increases in what we have made are obviously not matching the inflation. That gap is very obvious.",
-      "answer_page": 31
-     },
-     {
-      "analyst": "Manoj Menon",
-      "answered_by": [
-       "Amit Syngle"
-      ],
-      "label": "answered",
-      "reason": "explained price elasticity, consumer sentiment, and deferment of maintenance",
-      "question_quote": "I'm just trying to understand the reasons for, let's say, the absolute profit loss or in some cases percentage as well, that is why the entire thing couldn't be recovered",
+      "reason": "Management explained reasons for difficulty in fully recovering input inflation.",
+      "question_quote": "trying to understand the reasons for, let's say, the absolute profit loss",
       "question_page": 32,
-      "answer_quote": "one of the levers which customers really get into a bind is that at least the maintenance part of this thing can get deferred very surely",
+      "answer_quote": "therefore I don't think it's reasonable to look at passing the entire",
       "answer_page": 32
      },
      {
@@ -849,10 +837,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "clarified that VAE benefit applies across price range in specific segments",
-      "question_quote": "would it be fair to assume that this would be largely towards the premium part of the portfolio",
+      "reason": "Management clarified whether the VAE benefit is restricted to premium.",
+      "question_quote": "would it be fair to assume that this would be largely towards the premium part",
       "question_page": 33,
-      "answer_quote": "it is in specific segments but across the price range, okay.",
+      "answer_quote": "it is in specific segments but across the price range",
       "answer_page": 33
      },
      {
@@ -861,20 +849,20 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "confirmed the bps benefit range on relevant products",
-      "question_quote": "you are saying that the overall company level there could be a 300-bps benefit",
+      "reason": "Management confirmed the bps benefit on relevant products.",
+      "question_quote": "company level there could be a 300-bps benefit",
       "question_page": 33,
       "answer_quote": "300 bps to 500 bps on relevant products. Absolutely.",
       "answer_page": 33
      }
     ],
-    "unverified": 3,
+    "unverified": 4,
     "counts": {
-     "answered": 12,
+     "answered": 11,
      "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 12"
+    "summary": "questions dodged: 0 of 11"
    },
    {
     "call": "2026-08-31",
@@ -887,8 +875,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Management explained the innovation definition, time frame, categories, and margin impact.",
-      "question_quote": "How do you define innovation?",
+      "reason": "Management explained the definition, timeline, categories, and margin impact.",
+      "question_quote": "How do you define innovation? What time period of launch are you considering here?",
       "question_page": 18,
       "answer_quote": "Something which is in a three-year time frame is what we look at defining our new products.",
       "answer_page": 18
@@ -898,9 +886,9 @@
       "answered_by": [
        "Amit Syngle"
       ],
-      "label": "partly",
-      "reason": "Addressed demand and price hikes, but did not directly answer about Bengal election impact.",
-      "question_quote": "Was there an adverse impact of Bengal election?",
+      "label": "answered",
+      "reason": "Management addressed demand factors, price hike impacts, and full year outlook.",
+      "question_quote": "Overall, what is your view on the demand? Are",
       "question_page": 19,
       "answer_quote": "Overall, as an organization, you would like to achieve more and more.",
       "answer_page": 19
@@ -910,11 +898,11 @@
       "answered_by": [
        "Amit Syngle"
       ],
-      "label": "partly",
-      "reason": "Addressed margin trends and segments but omitted pricing growth numbers for industrial segments.",
-      "question_quote": "If you could elaborate how much was the pricing growth?",
+      "label": "answered",
+      "reason": "Management discussed industrial segment growth, margin drop, and price increase timing.",
+      "question_quote": "when do you see margins normalizing? Currently around 120 bps drop is there",
       "question_page": 19,
-      "answer_quote": "What we feel is that the margin impact is because of the deferred call on the price increases.",
+      "answer_quote": "the price increase actions are a little more deferred and therefore the entire pricing action",
       "answer_page": 19
      },
      {
@@ -923,10 +911,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Management provided the expected volume growth guidance range for FY27.",
-      "question_quote": "how should we look at FY27 volume growth",
+      "reason": "Management gave guidance on FY27 volume growth and festive trends.",
+      "question_quote": "Could you share your thoughts on how should we look at FY27 volume growth",
       "question_page": 20,
-      "answer_quote": "we are looking at the band of 8-10% for the full FY27.",
+      "answer_quote": "At the current stage, we are looking at the band of 8-10% for the full FY27.",
       "answer_page": 20
      },
      {
@@ -935,8 +923,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Provided details on input cost pressures and reiterated the PBDIT margin guidance.",
-      "question_quote": "for the full year, how should we look at it?",
+      "reason": "Management explained margin expectations for Q2 and drivers of PBDIT guidance.",
+      "question_quote": "how from a going forward basis, do you see input cost pressures panning out?",
       "question_page": 20,
       "answer_quote": "We are still garnering around the guidance of 18-20% of our PBDIT margins holds.",
       "answer_page": 20
@@ -947,8 +935,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Explained the drivers of gross margin expansion including premiumization and low-cost inventory.",
-      "question_quote": "leading to this better mix improvement and gross margin expansion?",
+      "reason": "Management addressed gross margin expansion drivers and premiumization focus.",
+      "question_quote": "Would this be a fair reading? Or would there be higher sales from exterior paints and premium paints",
       "question_page": 20,
       "answer_quote": "A lot of focus is on driving a better mix. Therefore, that has been principally one of the reasons",
       "answer_page": 21
@@ -959,10 +947,22 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Confirmed that value will continue to exceed volume until pricing corrections occur.",
-      "question_quote": "That negative 4% mix, would that assumption be required to be revisited",
+      "reason": "Management addressed the value-volume gap for coming quarters.",
+      "question_quote": "That negative 4% mix, would that assumption be required to be revisited, sir?",
       "question_page": 21,
-      "answer_quote": "Till the time we get into pricing corrections, the value would continue to be higher than the volume.",
+      "answer_quote": "going forward, for some quarters, till the time we don't take pricing corrections, value and volume gap",
+      "answer_page": 21
+     },
+     {
+      "analyst": "Mihir Shah",
+      "answered_by": [
+       "Amit Syngle"
+      ],
+      "label": "answered",
+      "reason": "Management addressed pricing expectations and rural product mix.",
+      "question_quote": "Would that be the pricing growth that one should expect from 2Q onwards on the pricing front?",
+      "question_page": 21,
+      "answer_quote": "The weighted average price increase has been about 7%. Overall, it depends on the product mix",
       "answer_page": 21
      },
      {
@@ -971,7 +971,7 @@
        "Parag Rane"
       ],
       "label": "answered",
-      "reason": "Addressed Q2 behavior relative to mix and pricing.",
+      "reason": "Management acknowledged the point regarding mix and Q2 performance.",
       "question_quote": "Yeah, but then you've already taken price increases, Parag?",
       "question_page": 22,
       "answer_quote": "So, we'll have to see how the mix also behaves, and therefore, Q2 will depend on that.",
@@ -983,8 +983,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Confirmed volume growth band and advantages over smaller players.",
-      "question_quote": "you were still talking about 10% volume growth, right?",
+      "reason": "Management confirmed volume guidance and market share advantage for large players.",
+      "question_quote": "if I heard you correctly, you were still talking about 10% volume growth, right?",
       "question_page": 22,
       "answer_quote": "I've spoken of that 8-10% as an overall volume band for the entire year.",
       "answer_page": 22
@@ -995,22 +995,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Broke down volume-value gap into mix contribution.",
-      "question_quote": "breaking this up into a pure price increase and a mixed change?",
-      "question_page": 22,
-      "answer_quote": "There is almost about 3% impact, which is coming higher because of the better mix",
-      "answer_page": 22
-     },
-     {
-      "analyst": "Percy Panthaki",
-      "answered_by": [
-       "Amit Syngle"
-      ],
-      "label": "partly",
-      "reason": "Declined to correlate crude levels directly to margins, stating it is too difficult.",
+      "reason": "Management explained why direct correlation with crude is difficult.",
       "question_quote": "At what crude level does this equation set in?",
       "question_page": 23,
-      "answer_quote": "It is a very difficult thing. What we can take in, is the point that 18-20% guidance is a good guidance to take.",
+      "answer_quote": "direct correlation with crude at this point of time is very difficult to say",
       "answer_page": 23
      },
      {
@@ -1018,11 +1006,11 @@
       "answered_by": [
        "Amit Syngle"
       ],
-      "label": "partly",
-      "reason": "Explained price volatility and various material trends without committing to a specific pricing acti",
+      "label": "answered",
+      "reason": "Management addressed input cost volatility and difficulty of constant assumptions.",
       "question_quote": "would you need any pricing, either increase or decrease to stay within that 18%-20% band?",
       "question_page": 23,
-      "answer_quote": "very difficult to benchmark and say that we can correlate to it.",
+      "answer_quote": "The volatility is so much that you can't take anything at a constant saying",
       "answer_page": 23
      },
      {
@@ -1031,10 +1019,10 @@
        "Amit Syngle"
       ],
       "label": "partly",
-      "reason": "Declined to precisely quantify the low-cost inventory benefit in basis points.",
-      "question_quote": "would you be able to quantify it in basis points of gross margin",
+      "reason": "Management explicitly declined to put a specific number or percentage to the low-cost inventory bene (no refusal or deflection shown in the quoted answer)",
+      "question_quote": "Would you be able to quantify it in basis points of gross margin or something like that?",
       "question_page": 23,
-      "answer_quote": "Again, difficult to put a number to it, because today we have seen that, normally you will not keep too much of inventory",
+      "answer_quote": "Again, difficult to put a number to it, because today we have seen that",
       "answer_page": 23
      },
      {
@@ -1043,10 +1031,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Addressed Q2 profitability, price movement intentions, and target bands.",
-      "question_quote": "are you thinking about taking more price increases?",
+      "reason": "Management discussed Q2 seasonality, price increase stance, and margin band.",
+      "question_quote": "When we think about second quarter, if prices broadly remain where they are, costs remain broadly where they are, are you thinking about taking more price increases?",
       "question_page": 24,
-      "answer_quote": "Right now, it's very difficult to say that today, we will take a price increase. Ideally, we would not like to take any increases",
+      "answer_quote": "Right now, it's very difficult to say that today, we will take a price increase.",
       "answer_page": 24
      },
      {
@@ -1055,10 +1043,10 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Addressed potential gross margin compression by discussing input cost deflation and Q2 mix.",
-      "question_quote": "does that mean that we are bracing for gross margin compression",
+      "reason": "Management addressed the gap between inflation and price increases, noting input deflation.",
+      "question_quote": "does that mean that we are bracing for gross margin compression, of course, keeping the seasonality aspect aside?",
       "question_page": 24,
-      "answer_quote": "As I said, today, we are also seeing a lot of prices coming down in the market.",
+      "answer_quote": "there is also a little bit of a deflation seen in a lot of categories, which are basically the input costs.",
       "answer_page": 24
      },
      {
@@ -1067,8 +1055,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Explained strategy across all segments and focus on upgrades and consumer transition.",
-      "question_quote": "what is our strategy going to be around these products?",
+      "reason": "Management explained the strategy across economy and premium segments.",
+      "question_quote": "Just wanted to understand what is our strategy going to be around these products?",
       "question_page": 24,
       "answer_quote": "The strategy going forward is that we really get growth in every segment which is there",
       "answer_page": 24
@@ -1079,8 +1067,8 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Clarified that VAE emulsion usage is not limited to premium and applies across categories.",
-      "question_quote": "VAE emulsion will be largely utilized only for premium and luxury emulsions?",
+      "reason": "Management clarified the usage range of VAE emulsion.",
+      "question_quote": "First, is the understanding correct that VAE emulsion will be largely utilized only for premium and luxury emulsions?",
       "question_page": 25,
       "answer_quote": "the usage can be across any category of products, not limited to only premium.",
       "answer_page": 25
@@ -1091,10 +1079,22 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Provided timeframe to reach the 150,000 metric ton capacity.",
-      "question_quote": "How should one think about this 150,000 metric ton VAE capacity",
+      "reason": "Management explained the timeline to reach the 150,000 MT capacity.",
+      "question_quote": "How should one think about this 150,000 metric ton VAE capacity versus your potential requirement",
       "question_page": 25,
       "answer_quote": "Our feeling is that possibly over a period of about 2-2.5 years, we should be able to reach",
+      "answer_page": 25
+     },
+     {
+      "analyst": "Jaykumar Doshi",
+      "answered_by": [
+       "Amit Syngle"
+      ],
+      "label": "answered",
+      "reason": "Management addressed the margin benefit band for the VAE project.",
+      "question_quote": "Does that 400-500 basis points, for now, if I assume it's only premium and luxury emulsion, still hold",
+      "question_page": 25,
+      "answer_quote": "Generally, overall, for the category of products it would translate into that 300-500 basis points band.",
       "answer_page": 25
      },
      {
@@ -1103,20 +1103,21 @@
        "Amit Syngle"
       ],
       "label": "answered",
-      "reason": "Answered regarding market share trends and competitive intensity across segments.",
+      "reason": "Management discussed industry growth, relative performance, and competitive intensity in economy seg",
       "question_quote": "First question is on the industry growth. Just to understand your market share trend",
       "question_page": 26,
-      "answer_quote": "we would have grown slightly higher than the industry average. That would be the zone",
+      "answer_quote": "what we see is that possibly we would have grown slightly higher than the industry average.",
       "answer_page": 26
      }
     ],
-    "unverified": 3,
+    "unverified": 2,
+    "downgraded": 1,
     "counts": {
-     "answered": 14,
-     "partly": 5,
+     "answered": 19,
+     "partly": 1,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 19"
+    "summary": "questions dodged: 0 of 20"
    }
   ],
   "narrative_vs_numbers": [
@@ -1214,19 +1215,19 @@
    },
    {
     "id": "F13",
-    "text": "Call of 2026-11-03: questions dodged: 0 of 12",
+    "text": "Call of 2026-11-03: questions dodged: 0 of 11",
     "source": "dodged-question check"
    },
    {
     "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 19",
+    "text": "Call of 2026-08-31: questions dodged: 0 of 20",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Latest quarter revenue reached Rs 9,977 cr, representing a +16.9% YoY increase.",
+     "text": "Latest quarter revenue reached Rs 9,977 cr, representing a growth of +16.9% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -1236,7 +1237,17 @@
      ]
     },
     {
-     "text": "The company kept its revenue growth FY26 target of 4-6% with an actual of 4.9.",
+     "text": "The 5y revenue CAGR was 10.4% alongside a profit CAGR of 6.5%.",
+     "cites": [
+      {
+       "id": "F3",
+       "text": "5y revenue CAGR 10.4%, profit CAGR 6.5%",
+       "source": "annual P&L"
+      }
+     ]
+    },
+    {
+     "text": "The company met its FY26 target with actual revenue growth reaching 4.9%.",
      "cites": [
       {
        "id": "F12",
@@ -1244,21 +1255,11 @@
        "source": "promise ledger"
       }
      ]
-    },
-    {
-     "text": "Management dodged 0 of 12 questions on the call of 2026-11-03.",
-     "cites": [
-      {
-       "id": "F13",
-       "text": "Call of 2026-11-03: questions dodged: 0 of 12",
-       "source": "dodged-question check"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "Operating margin was 16.0% in the latest quarter, dropping -2.0 pts YoY.",
+     "text": "Operating margin stood at 16.0% in the latest quarter, dropping -2.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -1268,7 +1269,7 @@
      ]
     },
     {
-     "text": "The 3y revenue CAGR was 1.0% and profit CAGR was 1.6%.",
+     "text": "The 3y revenue CAGR slowed to 1.0% and profit CAGR was 1.6%.",
      "cites": [
       {
        "id": "F2",
@@ -1278,7 +1279,7 @@
      ]
     },
     {
-     "text": "The cash conversion cycle stood at 84 days in 2026.",
+     "text": "The cash conversion cycle was 84 days in 2026.",
      "cites": [
       {
        "id": "F8",
@@ -1311,7 +1312,7 @@
    },
    "topics_dropped": [],
    "questions_dodged": "0 of 31",
-   "questions_partly_answered": "5 of 31"
+   "questions_partly_answered": "1 of 31"
   }
  },
  "stage": "writing",
@@ -1368,6 +1369,6 @@
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 3.6,
+ "built_in_seconds": 3.9,
  "from_cache": true
 }

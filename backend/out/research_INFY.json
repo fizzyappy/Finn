@@ -1,6 +1,6 @@
 {
  "ticker": "INFY",
- "started_at": "2026-11-14T12:41:04",
+ "started_at": "2026-11-14T19:16:18",
  "states": [
   {
    "state": "too_early",
@@ -991,10 +991,10 @@
        "Salil Parekh"
       ],
       "label": "partly",
-      "reason": "Addressed AI and industries, but skipped guidance details, salary hike, and furloughs.",
-      "question_quote": "Could you help us understand why? Explain the margin performance",
+      "reason": "Addressed guidance, margins, AI, but skipped furloughs.",
+      "question_quote": "how are your December quarter furloughs shaping up",
       "question_page": 5,
-      "answer_quote": "AI is really an incredible performance for us. It is 10.5% of our revenue",
+      "answer_quote": "I will spend a couple of minutes on the industries. I think what we see",
       "answer_page": 5
      },
      {
@@ -1003,11 +1003,11 @@
        "Jayesh Sanghrajka",
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed AI monetization and guidance, but missed hiring plans and margin balance.",
-      "question_quote": "how much is the weak demand and market pressure affecting?",
+      "label": "answered",
+      "reason": "Addressed demand, AI monetization, and hiring balance.",
+      "question_quote": "how much is the weak demand and market pressure affecting",
       "question_page": 6,
-      "answer_quote": "In terms of guidance, we continue to see what Jayesh was sharing in terms of the competitive intensity.",
+      "answer_quote": "we continue to see what Jayesh was sharing in terms of the competitive intensity",
       "answer_page": 7
      },
      {
@@ -1015,11 +1015,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Explained guidance factors well, but completely ignored the cybersecurity question.",
-      "question_quote": "Despite a healthy TCV, why did you sort of narrow the guidance band?",
+      "label": "answered",
+      "reason": "Addressed guidance revision and cyber security opportunities.",
+      "question_quote": "why did you sort of narrow the guidance band",
       "question_page": 9,
-      "answer_quote": "What we are seeing in the business today is very strong growth on AI",
+      "answer_quote": "what we are seeing in the business today is very strong growth on AI",
       "answer_page": 9
      },
      {
@@ -1028,10 +1028,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Clearly answered that cyber vulnerability work is a huge opportunity.",
+      "reason": "Compared cyber opportunity to Y2K as asked.",
       "question_quote": "Would you draw parallels with what is happening with cyber with what happened during Y2K",
       "question_page": 10,
-      "answer_quote": "the cyber one is a huge opportunity for Infosys. But the capabilities have to be very strong.",
+      "answer_quote": "I think the cyber one is a huge opportunity for Infosys.",
       "answer_page": 10
      },
      {
@@ -1039,11 +1039,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed AI growth realism, but missed the US hiring costs and vertical details.",
-      "question_quote": "How realistic do you see it because of how much deflation is in your traditional services business?",
+      "label": "answered",
+      "reason": "Addressed AI realism and Hi-Tech/Retail performance.",
+      "question_quote": "And on Hi-Tech and Retail, what exactly happened",
       "question_page": 10,
-      "answer_quote": "the growth, I think, is quite exceptional in the way the AI is building out.",
+      "answer_quote": "So on the AI, my sense is the growth, I think, is quite exceptional",
       "answer_page": 11
      },
      {
@@ -1051,11 +1051,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed cyber and guidance/deflation, but skipped employee cost details.",
-      "question_quote": "What is the level of preparedness that Infosys or companies like yours have?",
+      "label": "answered",
+      "reason": "Addressed cyber preparedness, mega deal sectors, and hiring costs.",
+      "question_quote": "the two mega deals were in which sectors",
       "question_page": 12,
-      "answer_quote": "We, like all organizations, are well prepared sort of both internally and in terms of supporting our clients.",
+      "answer_quote": "So, on the cyber, I think there it is more a question of building out the capabilities",
       "answer_page": 13
      },
      {
@@ -1065,10 +1065,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed the timeline of AI impact and net new mega deal contribution.",
-      "question_quote": "So, I mean, how long do you see this really lasting?",
+      "reason": "Addressed duration of traditional services pressure and mega deal impact.",
+      "question_quote": "how long do you see this really lasting",
       "question_page": 13,
-      "answer_quote": "we know that with that growth, over time, we will see the overall business in a much better shape.",
+      "answer_quote": "So, we have some internal views on what the mix of these two will be.",
       "answer_page": 14
      },
      {
@@ -1077,22 +1077,34 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed PERM impact on attrition and local hiring mix.",
+      "reason": "Addressed PERM impact on attrition and subcontracting costs.",
       "question_quote": "will it trigger a fresh wave of attrition for you in your primary market",
       "question_page": 14,
-      "answer_quote": "We do not see any real impact on the attrition from any of those activities.",
+      "answer_quote": "overall attrition number that Jayesh shared is lower this quarter",
       "answer_page": 15
+     },
+     {
+      "analyst": "Shilpa Phadnis",
+      "answered_by": [
+       "Salil Parekh"
+      ],
+      "label": "answered",
+      "reason": "Addressed GCC milestones and upfront investment status.",
+      "question_quote": "how far are you from $1 bn milestones",
+      "question_page": 15,
+      "answer_quote": "GCCs is an incredible growth area. I think this current phase, we announced",
+      "answer_page": 16
      },
      {
       "analyst": "Poulomi Chatterjee",
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Answered about enterprise focus and FDE progress, but ignored mid-market entry.",
-      "question_quote": "Do you have any intention of entering the mid-market?",
+      "label": "answered",
+      "reason": "Addressed mid-market entry intention and FDE target progress.",
+      "question_quote": "Do you have any intention of entering the mid-market",
       "question_page": 16,
-      "answer_quote": "We typically work with companies, enterprises, organizations, which have a huge need for some level of technology transformation.",
+      "answer_quote": "We typically work with companies, enterprises, organizations, which have a huge need",
       "answer_page": 16
      },
      {
@@ -1101,22 +1113,22 @@
        "Salil Parekh"
       ],
       "label": "dodged",
-      "reason": "Declined to answer about eMudhra breach specifics.",
-      "question_quote": "what kind of measures are you taking? Can you explain a bit more about it?",
+      "reason": "Explicit refusal to answer specific question about eMudhra breach.",
+      "question_quote": "What kind of measures are you taking? Can you explain a bit more about it?",
       "question_page": 17,
       "answer_quote": "So there, I do not have any specific comments on it right now. I have to look into it",
       "answer_page": 17
      },
      {
-      "analyst": "Uma Kannan",
+      "analyst": "Jas Bardia",
       "answered_by": [
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Confirmed that coding tool numbers and certifications are increasing.",
-      "question_quote": "Last time, you said 80,000 employees are working on coding tools. I mean, what is it happening now?",
-      "question_page": 17,
-      "answer_quote": "So that number is increasing. Also, what we are doing is the certification numbers are going up",
+      "reason": "Addressed actions to arrest slowing growth and AI spending source.",
+      "question_quote": "what is the company doing to sort of arrest this slowing growth",
+      "question_page": 18,
+      "answer_quote": "what we are doing in terms of where the attention is in revenue and growth is focused",
       "answer_page": 18
      },
      {
@@ -1125,11 +1137,11 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed slowing growth countermeasures via AI focus and large deals.",
-      "question_quote": "What is the company doing to sort of arrest this slowing growth?",
-      "question_page": 18,
-      "answer_quote": "what we are doing in terms of where the attention is in revenue and growth is focused essentially on what we are seeing as the large opportunity",
-      "answer_page": 18
+      "reason": "Addressed margin impact from programs and cash flow generation.",
+      "question_quote": "So the impact on margins?",
+      "question_page": 19,
+      "answer_quote": "On the margins, what I think we have done is the program that we started some years ago",
+      "answer_page": 19
      },
      {
       "analyst": "Sanjana B",
@@ -1138,10 +1150,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed North America softness and offshore location details.",
+      "reason": "Addressed North America softness and GCC outsourcing trends.",
       "question_quote": "Can you give us an update on the North America market?",
       "question_page": 20,
-      "answer_quote": "there have been certain segments which were impacted because of the lower discretionary spend and the client-specific ramp downs",
+      "answer_quote": "if you look at North America, as I said earlier, there have been certain segments",
       "answer_page": 20
      },
      {
@@ -1150,10 +1162,10 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Clarified that technical subcontractor costs have remained flat as a percentage of revenue.",
+      "reason": "Addressed technical subcontracting cost increase relative to AI growth.",
       "question_quote": "would a lot of this be fair enough to sort of infer that it is from AI-related technical sub costs",
       "question_page": 20,
-      "answer_quote": "technical subcontractor as a percentage of revenue has remained in the range of 8.9% of the revenue",
+      "answer_quote": "No. On the contrary, technical subcontractor as a percentage of revenue has remained",
       "answer_page": 21
      },
      {
@@ -1162,10 +1174,10 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Explained the operational reasons for using subcontractors.",
+      "reason": "Addressed reasons for subcontracting and acquisition potential for AI skills.",
       "question_quote": "where is this, you know, the need of expertise coming in from? And if Infosys has to fill this gap, would you be -- looking at probably an acquisition",
       "question_page": 21,
-      "answer_quote": "subcontractors for us has been in this range for a long period of time. There are multiple reasons why",
+      "answer_quote": "subcontractors for us has been in this range for a long period of time. There are multiple reasons",
       "answer_page": 21
      },
      {
@@ -1174,10 +1186,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed AI margins and confirmed comfort with overall 20-22% margin guidance.",
-      "question_quote": "some sense of how do you see these margins from especially AI-led deals sort of heading towards?",
+      "reason": "Addressed AI margins and margin guidance defense.",
+      "question_quote": "some sense of how do you see these margins from especially AI-led deals sort of heading towards",
       "question_page": 21,
-      "answer_quote": "we first do not disclose the margin externally separately on the AI versus the other type of projects.",
+      "answer_quote": "we first do not disclose the margin externally separately on the AI versus the other type",
       "answer_page": 21
      },
      {
@@ -1186,10 +1198,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": " Reiterated that AI-specific margins are not disclosed externally.",
-      "question_quote": "do you see AI projects coming up in better margins for you given that one of your peers already said that",
+      "reason": "Addressed whether AI projects come at better margins compared to peers.",
+      "question_quote": "do you see AI projects coming up in better margins for you",
       "question_page": 22,
-      "answer_quote": "the margin of the AI versus the non-AI, we are not externally sharing.",
+      "answer_quote": "I do not know about the other comment. But for us, the margin of the AI versus the non-AI",
       "answer_page": 22
      },
      {
@@ -1197,11 +1209,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Answered whether AI revenue is incremental, but skipped the dividend question.",
+      "label": "answered",
+      "reason": "Addressed incremental business vs replacement for AI revenue.",
       "question_quote": "how much of this represents genuinely incremental business rather than existing services being reclassified",
       "question_page": 22,
-      "answer_quote": "the AI revenue growth continues with a lot of strength. It is not something which is replacing what we have.",
+      "answer_quote": "what we see on that is that the AI revenue growth continues with a lot of strength",
       "answer_page": 22
      },
      {
@@ -1210,11 +1222,25 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Explained the capital allocation policy and the rationale for the increased dividend.",
+      "reason": "Addressed factors determining the interim dividend.",
       "question_quote": "What factors led to this much? And how is the company planning, especially with the lowering revenue growth?",
       "question_page": 23,
-      "answer_quote": "if you look at our capital allocation policy that we rolled out almost two years back, we had very clearly said that 85% of the free cash flow",
+      "answer_quote": "if you look at our capital allocation policy that we rolled out almost two years back",
       "answer_page": 23
+     },
+     {
+      "analyst": "Keith Bachman",
+      "answered_by": [
+       "Jayesh Sanghrajka",
+       "Salil Parekh",
+       "Sandeep Mahindroo"
+      ],
+      "label": "answered",
+      "reason": "Provided opening remarks on quarterly performance and large deals.",
+      "question_quote": "I now hand the conference over to Mr. Sandeep Mahindroo.",
+      "question_page": 25,
+      "answer_quote": "Our revenue growth for Q2 was at 1.5% YoY and 1.2% sequentially",
+      "answer_page": 25
      },
      {
       "analyst": "Kumar Rakesh",
@@ -1222,10 +1248,10 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Explained the business drivers behind subcontractor cost levels.",
+      "reason": "Addressed reasons for high subcontractor levels.",
       "question_quote": "What is the business need to run this at a higher level? And what is stopping us to bring it down",
       "question_page": 31,
-      "answer_quote": "it is a factor of at what utilization you are at, what the volume growth comes in, what kind of skills that you need",
+      "answer_quote": "there is an endeavor to bring our subcontractor cost down over a period of time",
       "answer_page": 31
      },
      {
@@ -1234,10 +1260,22 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Detailed the specific drivers of the guidance revision, including pricing pressure and volume.",
-      "question_quote": "can you unpack what may be most different, by like the largest drivers?",
+      "reason": "Addressed margin impact of lower subcontracting.",
+      "question_quote": "And may not necessarily be margin accretive if we bring that down also.",
+      "question_page": 31,
+      "answer_quote": "If you are able to bring the subcontractor down by 1%, we have stated in the past",
+      "answer_page": 31
+     },
+     {
+      "analyst": "Kumar Rakesh",
+      "answered_by": [
+       "Jayesh Sanghrajka"
+      ],
+      "label": "answered",
+      "reason": "Addressed key drivers of growth guidance revision.",
+      "question_quote": "can you unpack what may be most different, by like the largest drivers",
       "question_page": 32,
-      "answer_quote": "we have been getting a price increase or RPP increase as we call it. If you look at what we are seeing today is a pricing pressure",
+      "answer_quote": "we have been getting a price increase or RPP increase as we call it. If you look at what we are seeing today",
       "answer_page": 32
      },
      {
@@ -1246,20 +1284,20 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Answered that client productivity expectations are about similar and spreading across portfolios.",
-      "question_quote": "would you say that has worsened since the start of the fiscal year, meaning clients are demanding more productivity",
+      "reason": "Addressed AI-driven productivity persistence compared to start of fiscal year.",
+      "question_quote": "would you say that has worsened since the start of the fiscal year",
       "question_page": 32,
-      "answer_quote": "the effect or the expectation on the productivity is about similar.",
+      "answer_quote": "I think what we see is the effect or the expectation on the productivity is about similar.",
       "answer_page": 33
      }
     ],
-    "unverified": 8,
+    "unverified": 5,
     "counts": {
-     "answered": 14,
-     "partly": 7,
+     "answered": 23,
+     "partly": 1,
      "dodged": 1
     },
-    "summary": "questions dodged: 1 of 22"
+    "summary": "questions dodged: 1 of 25"
    },
    {
     "call": "2026-07-31",
@@ -1271,11 +1309,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed transition and AI environment, but skipped the new CEO mandate.",
+      "label": "answered",
+      "reason": "Addressed the reasons for leaving and the environment.",
       "question_quote": "Why decide to leave at a time like now",
       "question_page": 6,
-      "answer_quote": "As I look at it, I am really delighted with the role I have played here.",
+      "answer_quote": "I am really delighted with the role I have played here.",
       "answer_page": 7
      },
      {
@@ -1284,10 +1322,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed why he is leaving and detailed the AI strategy mandate.",
+      "reason": "Clarified the CEO transition and AI strategy mandates.",
       "question_quote": "The question of why you didn’t decide to stay on and what the mandates are",
       "question_page": 7,
-      "answer_quote": "as I shared earlier, my sense is , I have been fortunate to have a tremendous opportunity",
+      "answer_quote": "my sense is , I have been fortunate to have a tremendous opportunity",
       "answer_page": 7
      },
      {
@@ -1295,8 +1333,8 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Dismissed the point briefly by telling them to check with peers.",
+      "label": "answered",
+      "reason": "Answered directly about competitor pricing observations.",
       "question_quote": "Competitive pricing in the market that some of your peers have spoken about?",
       "question_page": 8,
       "answer_quote": "Yes. So maybe they are seeing that, you should check with them.",
@@ -1308,7 +1346,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed TCV conversion, AI revenue lumpiness, and personal focus.",
+      "reason": "Addressed TCV conversion and AI revenue lumpiness.",
       "question_quote": "On the quarterly performance, how has been the TCV conversion",
       "question_page": 8,
       "answer_quote": "On TCV conversion, we see a pretty good way of converting now.",
@@ -1320,8 +1358,8 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed GCC portfolio traction and market compression.",
-      "question_quote": "how your GCC portfolio is doing",
+      "reason": "Addressed GCC portfolio momentum and competitive environment.",
+      "question_quote": "how your GCC portfolio is doing because some of your peers",
       "question_page": 10,
       "answer_quote": "our traction on GCC is looking very strong.",
       "answer_page": 11
@@ -1333,7 +1371,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Explained when AI-led revenues become material and cited current percentages.",
+      "reason": "Answered when AI-led revenues will offset productivity compression.",
       "question_quote": "When do you think AI-led revenues will be material enough to offset productivity-led compression",
       "question_page": 11,
       "answer_quote": "the AI-led revenues are extremely significant at 8% already.",
@@ -1346,10 +1384,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed FDE scaling plan and compensation hike schedule.",
-      "question_quote": "where are you on that? And secondly, also on Forward Deployed Engineers",
+      "reason": "Provided details on compensation hikes and FDE scaling plans.",
+      "question_quote": "On the status of hikes, Infosys has not called that out yet.",
       "question_page": 12,
-      "answer_quote": "On Frontier Engineers, we now have a very good plan",
+      "answer_quote": "we will roll out our compensation increases in October and January in 2 parts",
       "answer_page": 12
      },
      {
@@ -1357,11 +1395,11 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed macro elements and data center review, but skipped the tenure challenge question.",
-      "question_quote": "Which are some of those parts of the macro that led you to first to increase",
+      "label": "answered",
+      "reason": "Addressed macro environment shifts and data center plans.",
+      "question_quote": "which are some of those parts of the macro that led you to first to increase",
       "question_page": 12,
-      "answer_quote": "we have had a sense that the macro was settling down.",
+      "answer_quote": "what we see in the environment, we have had a sense that the macro was settling down.",
       "answer_page": 13
      },
      {
@@ -1371,8 +1409,8 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed vertical performance, pricing compression, and outcome-based pricing interest.",
-      "question_quote": "colour on each of the verticals as well within Financial Services",
+      "reason": "Provided color on verticals and outcome-based pricing trends.",
+      "question_quote": "One is I wanted to get some colour on each of the verticals as well",
       "question_page": 14,
       "answer_quote": "Financial Services, we see the growth in that part of our business will be higher",
       "answer_page": 14
@@ -1382,9 +1420,9 @@
       "answered_by": [
        "Salil Parekh"
       ],
-      "label": "partly",
-      "reason": "Addressed consolidation deals and guidance, but declined specific comment on lost renewals.",
-      "question_quote": "consolidation deals, the six consolidation deals, which spaces are these in?",
+      "label": "answered",
+      "reason": "Addressed consolidation deals within large deals.",
+      "question_quote": "the six consolidation deals, which spaces are these in?",
       "question_page": 15,
       "answer_quote": "the consolidation deals, the ones I was referring to, are all in the large deals.",
       "answer_page": 16
@@ -1396,7 +1434,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed specific deal economics, guidance rationale, and acquisition pipeline.",
+      "reason": "Addressed specific deal dynamics and guidance revision context.",
       "question_quote": "You lost some renewals?",
       "question_page": 16,
       "answer_quote": "we do not comment on any specific deals in the environment",
@@ -1409,10 +1447,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Provided currency impact on margins and employee productivity trends.",
+      "reason": "Provided details on rupee depreciation impact and AI productivity.",
       "question_quote": "how much of a tailwind has that provided to your margins in Q1",
       "question_page": 17,
-      "answer_quote": "every 1% change in the currency or depreciation in dollar typically gives you",
+      "answer_quote": "every 1% change in the currency or depreciation in dollar typically gives you anywhere between 15 to 17 bps",
       "answer_page": 18
      },
      {
@@ -1421,7 +1459,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed cyber safety approach and client environment defense.",
+      "reason": "Explained cybersecurity approach for autonomous AI and data safety.",
       "question_quote": "How are you updating your approach to safety and security?",
       "question_page": 18,
       "answer_quote": "what we have done is, made sure that, for example, when there was a whole discussion",
@@ -1433,7 +1471,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Explained the innovation fund approach for early-stage investments.",
+      "reason": "Explained minority investments through the company innovation fund.",
       "question_quote": "So do you have plans to invest especially in Indian AI firms?",
       "question_page": 19,
       "answer_quote": "we , generally speaking, have a view on what we have, an innovation fund",
@@ -1445,7 +1483,7 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed AI integration in deals and conversion timing.",
+      "reason": "Addressed AI contribution to TCV and deal conversion timelines.",
       "question_quote": "How much of this pipeline was tied to Agentic AI and Infosys Topaz?",
       "question_page": 19,
       "answer_quote": "almost every discussion has some element of AI and of Topaz Fabric",
@@ -1457,8 +1495,8 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Explained strategic continuity around the AI strategy.",
-      "question_quote": "does this transition all about strategic continuity? How should investors kind of read into it?",
+      "reason": "Explained strategic continuity for the CEO transition.",
+      "question_quote": "does this transition all about strategic continuity?",
       "question_page": 20,
       "answer_quote": "We have well -defined AI strategy today.",
       "answer_page": 20
@@ -1469,10 +1507,10 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed small language model traction and comfort with AI deal margins.",
-      "question_quote": "how is the demand for these models? And has there been an uptick",
-      "question_page": 21,
-      "answer_quote": "the small language model for the banking is getting good traction.",
+      "reason": "Discussed demand for small language models and deal comfort.",
+      "question_quote": "How do you see the margins of the new buckets of AI deals essentially evolving?",
+      "question_page": 20,
+      "answer_quote": "we do not comment separately on the margin in terms of the quantitative value",
       "answer_page": 21
      },
      {
@@ -1481,23 +1519,11 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Addressed fine-tuning areas, infra costs, and mid-cap competition.",
+      "reason": "Addressed fine-tuning of mandates and infrastructure trends.",
       "question_quote": "Could you just shed some more light on what these things would be?",
       "question_page": 21,
       "answer_quote": "our AI strategy is well defined. We are focused on the 6 areas",
       "answer_page": 21
-     },
-     {
-      "analyst": "Rukmini R",
-      "answered_by": [
-       "Salil Parekh"
-      ],
-      "label": "answered",
-      "reason": "Addressed big tech entering services and data sovereignty with Topaz Fabric.",
-      "question_quote": "Are they going to be competitors where probably you and your peers may someday become just vendors",
-      "question_page": 22,
-      "answer_quote": "if there are companies that want to enter the services space, so that AI can be made to work",
-      "answer_page": 23
      },
      {
       "analyst": "Rukmini Rao",
@@ -1505,23 +1531,26 @@
        "Salil Parekh"
       ],
       "label": "answered",
-      "reason": "Clarified optimism regarding scale and client understanding over subcontracting.",
-      "question_quote": "Salil, just to clarify, when you say great opportunity, is it like, again, the whole subcontracting",
+      "reason": "Clarified position on service provider opportunities versus subcontracting.",
+      "question_quote": "is it like, again, the whole subcontracting vendor kind of opportunity",
       "question_page": 23,
-      "answer_quote": "I am more looking at it like if someone with a few hundred people or a few thousand people can get excited",
+      "answer_quote": "I am more looking at it like if someone with a few hundred people or a few thousand people can get excited about services",
       "answer_page": 24
      },
      {
-      "analyst": "Kumar Rakesh",
+      "analyst": "James Friedman",
       "answered_by": [
-       "Jayesh Sanghrajka"
+       "Jayesh Sanghrajka",
+       "Nandan Nilekani",
+       "Salil Parekh",
+       "Sandeep Mahindroo"
       ],
       "label": "answered",
-      "reason": "Clarified guidance midpoint math and organic growth components.",
-      "question_quote": "So, is that about 2 percentage point of cut at the midpoint in the guidance or am I reading that wrong?",
-      "question_page": 34,
-      "answer_quote": "So, the last quarter midpoint would be around 2.2%.",
-      "answer_page": 34
+      "reason": "Provided opening remarks and operational context.",
+      "question_quote": "Should you need assistance during this conference call, please signal an operator",
+      "question_page": 27,
+      "answer_quote": "Thank you everyone, and welcome to this earnings call to discuss Infosys Q1 FY27 financial results.",
+      "answer_page": 27
      },
      {
       "analyst": "Kumar Rakesh",
@@ -1529,7 +1558,7 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Confirmed organic growth number excluding acquisition.",
+      "reason": "Provided clarification on organic growth calculation.",
       "question_quote": "like-to-like this time, it would be about 0.8% sort of a number",
       "question_page": 34,
       "answer_quote": "Yes.",
@@ -1541,7 +1570,7 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Explained cascading effect from Q1 volumes, project termination, and pricing headwinds.",
+      "reason": "Explained cascading Q1 volume and pricing impact on Q2 guidance.",
       "question_quote": "how much of that you are expecting that to flow into second quarter as well?",
       "question_page": 34,
       "answer_quote": "typically, whatever happens in Q1, it will have a cascading effect in Q2.",
@@ -1553,7 +1582,7 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Provided context on the one-time client decision.",
+      "reason": "Clarified the one-time client decision in the EURS vertical.",
       "question_quote": "if you could give some context to that, that would be great.",
       "question_page": 35,
       "answer_quote": "this is with respect to a client, which has terminated a project in the EURS vertical.",
@@ -1565,8 +1594,8 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Explained volume softness and timing of terminations.",
-      "question_quote": "can you walk us through how the quarter progressed relative to internal expectations",
+      "reason": "Addressed intra-quarter progression and program termination timing.",
+      "question_quote": "Can you walk us through how the quarter progressed relative to internal expectations",
       "question_page": 35,
       "answer_quote": "The softness that we saw in terms of volumes was through the quarter",
       "answer_page": 35
@@ -1577,20 +1606,20 @@
        "Jayesh Sanghrajka"
       ],
       "label": "answered",
-      "reason": "Addressed why pricing headwinds were not fully contemplated due to realized pricing increases.",
+      "reason": "Addressed pricing headwinds and market competition context.",
       "question_quote": "why were pricing headwinds not more fully contemplated in the April outlook",
       "question_page": 36,
-      "answer_quote": "Jonathan, we are not saying that we are not seeing a price increase.",
+      "answer_quote": "we are not saying that we are not seeing a price increase.",
       "answer_page": 36
      }
     ],
-    "unverified": 4,
+    "unverified": 5,
     "counts": {
-     "answered": 22,
-     "partly": 4,
+     "answered": 25,
+     "partly": 0,
      "dodged": 0
     },
-    "summary": "questions dodged: 0 of 26"
+    "summary": "questions dodged: 0 of 25"
    }
   ],
   "narrative_vs_numbers": [],
@@ -1722,30 +1751,35 @@
    },
    {
     "id": "F12",
-    "text": "Call of 2026-10-31: questions dodged: 1 of 22",
+    "text": "Call of 2026-10-31: questions dodged: 1 of 25",
     "source": "dodged-question check"
    },
    {
     "id": "F13",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 26",
+    "text": "Call of 2026-07-31: questions dodged: 0 of 25",
     "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The company achieved a latest quarter revenue of Rs 49,244 cr, which is +10.7% YoY.",
+     "text": "The company has a P/E of 14.6 and a market cap of Rs 463,254 cr.",
+     "cites": [
+      {
+       "id": "F1",
+       "text": "P/E 14.6, market cap Rs 463,254 cr",
+       "source": "screener ratios"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters, reaching Rs 49,244 cr in the latest quarter.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 49,244 cr, +10.7% YoY",
        "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
-     "cites": [
+      },
       {
        "id": "F10",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
@@ -1754,44 +1788,54 @@
      ]
     },
     {
-     "text": "The latest quarter operating margin reached 24.0%.",
+     "text": "The 3-year operating cash flow is 1.15x reported profit with a debt/equity of 0.09.",
      "cites": [
       {
-       "id": "F6",
-       "text": "Operating margin 24.0% in the latest quarter, +0.0 pts YoY",
-       "source": "quarterly P&L"
+       "id": "F7",
+       "text": "Debt/equity 0.09 (borrowings Rs 8,525 cr)",
+       "source": "balance sheet"
+      },
+      {
+       "id": "F9",
+       "text": "3-year operating cash flow = 1.15x reported profit",
+       "source": "cash flow"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "The cash conversion cycle stands at 72 days for 2026.",
-     "cites": [
-      {
-       "id": "F8",
-       "text": "Cash conversion cycle 72 days (2026)",
-       "source": "ratios"
-      }
-     ]
-    },
-    {
-     "text": "Borrowings are reported at Rs 8,525 cr with a debt/equity of 0.09.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Debt/equity 0.09 (borrowings Rs 8,525 cr)",
-       "source": "balance sheet"
-      }
-     ]
-    },
-    {
-     "text": "The 3y profit CAGR is 6.9%.",
+     "text": "The 3y profit CAGR is 6.9% compared to the 5y profit CAGR of 8.7%.",
      "cites": [
       {
        "id": "F2",
        "text": "3y revenue CAGR 6.8%, profit CAGR 6.9%",
        "source": "annual P&L"
+      },
+      {
+       "id": "F3",
+       "text": "5y revenue CAGR 12.2%, profit CAGR 8.7%",
+       "source": "annual P&L"
+      }
+     ]
+    },
+    {
+     "text": "The latest quarter profit was Rs 7,838 cr, representing a +6.3% YoY growth.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 7,838 cr, +6.3% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The cash conversion cycle is 72 days in 2026.",
+     "cites": [
+      {
+       "id": "F8",
+       "text": "Cash conversion cycle 72 days (2026)",
+       "source": "ratios"
       }
      ]
     }
@@ -1801,8 +1845,8 @@
   "report_card": {
    "evidence": [
     {
-     "claim": "Dodged: Declined to answer about eMudhra breach specifics.",
-     "quote": "what kind of measures are you taking? Can you explain a bit more about it?",
+     "claim": "Dodged: Explicit refusal to answer specific question about eMudhra breach.",
+     "quote": "What kind of measures are you taking? Can you explain a bit more about it?",
      "page": 17,
      "answer_quote": "So there, I do not have any specific comments on it right now. I have to look into it",
      "answer_page": 17
@@ -1818,8 +1862,8 @@
     "Not measurable": 10
    },
    "topics_dropped": [],
-   "questions_dodged": "1 of 48",
-   "questions_partly_answered": "11 of 48"
+   "questions_dodged": "1 of 50",
+   "questions_partly_answered": "1 of 50"
   }
  },
  "stage": "writing",
@@ -1876,6 +1920,6 @@
   "cost_usd": 0.0,
   "pricing": "free tier (USD 0)"
  },
- "built_in_seconds": 11.9,
+ "built_in_seconds": 12.8,
  "from_cache": true
 }

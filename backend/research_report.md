@@ -33,14 +33,14 @@ _6 more statements are tracked but not measurable from the tables (order inflow,
 
 ## HDFC Bank Ltd (HDFCBANK)
 
-Built in 3.8 s (from cache). Transcripts read: 2026-10-31, 2026-07-31, 2026-04-30, 2026-03-31, 2026-01-31.
+Built in 4.3 s (from cache). Transcripts read: 2026-10-31, 2026-07-31, 2026-04-30, 2026-03-31, 2026-01-31.
 
 - **Snapshot:** market cap Rs 1,240,766 cr, P/E 15.5, latest quarter 2026-09-30: revenue Rs 95,132 cr, profit Rs 21,537 cr
 - **5-year CAGR:** revenue 22.1%, profit 20.0%
 - **Balance sheet:** Lender: debt/equity and working-capital cycle do not apply.
 - **Cash quality:** Lender: operating cash flow mostly reflects loan and deposit movements; CFO/PAT is not a quality signal.
 - **Segments (unverified):** Non-Digital Banking 45.0%, Wholesale banking 26.0%, Treasury 12.6%, Other banking Operations 5.5%, Insurance business 5.5% — segments add up to 671,220 cr vs reported revenue 348,615 cr (+92.5%)
-- **Report card:** promises kept none measurable yet; questions dodged 0 of 25 (partly answered 5 of 25); topics dropped: none
+- **Report card:** promises kept none measurable yet; questions dodged 0 of 28 (partly answered 2 of 28); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -50,23 +50,23 @@ _1 more statements are tracked but not measurable from the tables (order inflow,
 **Bull:**
 - The 3y revenue CAGR is 26.9% and the profit CAGR is 19.7%.
 - Revenue grew YoY in 8 of 8 recent quarters.
-- In the latest quarter ending 2026-09-30, revenue reached Rs 95,132 cr with a +9.4% YoY increase.
+- On the call of 2026-10-31, questions dodged were 0 of 13.
 
 **Bear:**
-- Deposits grew by only 7.2% in the latest year.
-- The latest quarter profit was Rs 21,537 cr, showing a +5.8% YoY growth.
-- The 5y revenue CAGR is 22.1% and the profit CAGR is 20.0%.
+- Deposits grew 7.2% in the latest year.
+- Latest quarter revenue is Rs 95,132 cr, which is +9.4% YoY.
+- Latest quarter profit is Rs 21,537 cr, which is +5.8% YoY.
 
 ## Infosys Ltd (INFY)
 
-Built in 11.9 s (from cache). Transcripts read: 2026-10-31, 2026-07-31, 2026-04-30, 2026-02-28, 2026-01-31. States: Management's targets are for periods not yet reported; verdicts will come with the next results.
+Built in 12.8 s (from cache). Transcripts read: 2026-10-31, 2026-07-31, 2026-04-30, 2026-02-28, 2026-01-31. States: Management's targets are for periods not yet reported; verdicts will come with the next results.
 
 - **Snapshot:** market cap Rs 463,254 cr, P/E 14.6, latest quarter 2026-09-30: revenue Rs 49,244 cr, profit Rs 7,838 cr
 - **5-year CAGR:** revenue 12.2%, profit 8.7%
 - **Balance sheet:** debt/equity 0.09, cash conversion cycle 72.0 days
 - **Cash quality:** Over the last 3 years, operating cash flow was 1.15x reported profit (cash backs the profits)
 - **Segments (verified):** Financial Services 27.9%, Manufacturing 16.3%, Energy, Utilities, Resources and Services 13.3%, Retail 12.9%, Communication 12.2% — segments add up to 178,650 cr vs reported revenue 178,650 cr (+0.0%)
-- **Report card:** promises kept none measurable yet; questions dodged 1 of 48 (partly answered 11 of 48); topics dropped: none
+- **Report card:** promises kept none measurable yet; questions dodged 1 of 50 (partly answered 1 of 50); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -77,28 +77,28 @@ Built in 11.9 s (from cache). Transcripts read: 2026-10-31, 2026-07-31, 2026-04-
 _10 more statements are tracked but not measurable from the tables (order inflow, constant currency, segment-level, no date)._
 
 **Bull:**
-- The company achieved a latest quarter revenue of Rs 49,244 cr, which is +10.7% YoY.
-- Revenue grew YoY in 8 of 8 recent quarters.
-- The latest quarter operating margin reached 24.0%.
+- The company has a P/E of 14.6 and a market cap of Rs 463,254 cr.
+- Revenue grew YoY in 8 of 8 recent quarters, reaching Rs 49,244 cr in the latest quarter.
+- The 3-year operating cash flow is 1.15x reported profit with a debt/equity of 0.09.
 
 **Bear:**
-- The cash conversion cycle stands at 72 days for 2026.
-- Borrowings are reported at Rs 8,525 cr with a debt/equity of 0.09.
-- The 3y profit CAGR is 6.9%.
+- The 3y profit CAGR is 6.9% compared to the 5y profit CAGR of 8.7%.
+- The latest quarter profit was Rs 7,838 cr, representing a +6.3% YoY growth.
+- The cash conversion cycle is 72 days in 2026.
 
 **Dodged questions:**
-- Uma Kannan: “what kind of measures are you taking? Can you explain a bit more about it?” → “So there, I do not have any specific comments on it right now. I have to look into it” (p.17). Declined to answer about eMudhra breach specifics.
+- Uma Kannan: “What kind of measures are you taking? Can you explain a bit more about it?” → “So there, I do not have any specific comments on it right now. I have to look into it” (p.17). Explicit refusal to answer specific question about eMudhra breach.
 
 ## Larsen & Toubro Ltd (LT)
 
-Built in 6.0 s (from cache). Transcripts read: 2026-07-31, 2026-05-31, 2026-01-31, 2025-10-31, 2025-07-31.
+Built in 6.5 s (from cache). Transcripts read: 2026-07-31, 2026-05-31, 2026-01-31, 2025-10-31, 2025-07-31.
 
 - **Snapshot:** market cap Rs 570,152 cr, P/E 30.2, latest quarter 2026-09-30: revenue Rs 78,750 cr, profit Rs 5,949 cr
 - **5-year CAGR:** revenue 16.0%, profit 8.0%
 - **Balance sheet:** debt/equity 1.24, cash conversion cycle -151.0 days
 - **Cash quality:** Over the last 3 years, operating cash flow was 0.85x reported profit (profits are not fully turning into cash)
 - **Segments (unverified):** Infrastructure Projects 69.4%, Energy Projects 18.6%, Hi-Tech Manufacturing 9.1%, Others 2.9% — segments add up to 152,974 cr vs reported revenue 285,874 cr (-46.5%); table is standalone, statements are consolidated
-- **Report card:** promises kept 0 of 1; questions dodged 0 of 40 (partly answered 2 of 40); topics dropped: none
+- **Report card:** promises kept 0 of 1; questions dodged 0 of 51 (partly answered 2 of 51); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -116,14 +116,14 @@ _13 more statements are tracked but not measurable from the tables (order inflow
 - “We never get over aggressive just to win a job because margin focus, working capital focus is very, very strong.” (Subramanian Sarma, p.25) vs operating margin -2.0 pts YoY in quarter ended 2026-09-30
 
 **Bull:**
-- The latest quarter revenue was Rs 78,750 cr, representing a 15.8% YoY increase.
+- The latest quarter revenue was Rs 78,750 cr, representing a growth of +15.8% YoY.
+- The company achieved a 3y revenue CAGR of 16.0% and a profit CAGR of 14.8%.
 - Revenue grew YoY in 8 of 8 recent quarters.
-- The latest quarter profit reached Rs 5,949 cr, showing a 27.2% YoY growth.
 
 **Bear:**
-- The operating margin stood at 11.0% in the latest quarter, dropping -2.0 pts YoY.
-- The company kept 0 of 1 measurable targets.
-- The debt to equity ratio is 1.24 with borrowings of Rs 140,300 cr.
+- The operating margin was 11.0% in the latest quarter, which is down -2.0 pts YoY.
+- The debt/equity ratio stands at 1.24 with total borrowings of Rs 140,300 cr.
+- The revenue growth FY26 target was 15%, but the actual was 11.8.
 
 ## Sun Pharmaceutical Industries Ltd (SUNPHARMA)
 
@@ -552,14 +552,14 @@ _7 more statements are tracked but not measurable from the tables (order inflow,
 
 ## Asian Paints Ltd (ASIANPAINT)
 
-Built in 3.6 s (from cache). Transcripts read: 2026-11-03, 2026-08-31, 2026-06-30, 2026-02-28, 2025-11-30.
+Built in 3.9 s (from cache). Transcripts read: 2026-11-03, 2026-08-31, 2026-06-30, 2026-02-28, 2025-11-30.
 
 - **Snapshot:** market cap Rs 244,595 cr, P/E 49.4, latest quarter 2026-09-30: revenue Rs 9,977 cr, profit Rs 1,085 cr
 - **5-year CAGR:** revenue 10.4%, profit 6.5%
 - **Balance sheet:** debt/equity 0.21, cash conversion cycle 84.0 days
 - **Cash quality:** Over the last 3 years, operating cash flow was 1.29x reported profit (cash backs the profits)
 - **Segments (not_found):** None — could not match the year to reported revenue
-- **Report card:** promises kept 1 of 1; questions dodged 0 of 31 (partly answered 5 of 31); topics dropped: none
+- **Report card:** promises kept 1 of 1; questions dodged 0 of 31 (partly answered 1 of 31); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -572,25 +572,25 @@ _5 more statements are tracked but not measurable from the tables (order inflow,
 - “On a H1 side again, which is possibly the right perspective of this quarter, the growths are very strong at the top line as well as at the PBDIT margin which is at about 18.2% in the band what we have” (Amit Syngle, p.23) vs operating margin -2.0 pts YoY in quarter ended 2026-09-30
 
 **Bull:**
-- Latest quarter revenue reached Rs 9,977 cr, representing a +16.9% YoY increase.
-- The company kept its revenue growth FY26 target of 4-6% with an actual of 4.9.
-- Management dodged 0 of 12 questions on the call of 2026-11-03.
+- Latest quarter revenue reached Rs 9,977 cr, representing a growth of +16.9% YoY.
+- The 5y revenue CAGR was 10.4% alongside a profit CAGR of 6.5%.
+- The company met its FY26 target with actual revenue growth reaching 4.9%.
 
 **Bear:**
-- Operating margin was 16.0% in the latest quarter, dropping -2.0 pts YoY.
-- The 3y revenue CAGR was 1.0% and profit CAGR was 1.6%.
-- The cash conversion cycle stood at 84 days in 2026.
+- Operating margin stood at 16.0% in the latest quarter, dropping -2.0 pts YoY.
+- The 3y revenue CAGR slowed to 1.0% and profit CAGR was 1.6%.
+- The cash conversion cycle was 84 days in 2026.
 
 ## Titan Company Ltd (TITAN)
 
-Built in 4.7 s (from cache). Transcripts read: 2026-11-11, 2026-08-31, 2026-06-30, 2026-02-28, 2025-11-30. States: Management's targets are for periods not yet reported; verdicts will come with the next results.
+Built in 7.1 s (from cache). Transcripts read: 2026-11-11, 2026-08-31, 2026-06-30, 2026-02-28, 2025-11-30. States: Management's targets are for periods not yet reported; verdicts will come with the next results.
 
 - **Snapshot:** market cap Rs 430,124 cr, P/E 60.5, latest quarter 2026-09-30: revenue Rs 20,614 cr, profit Rs 2,393 cr
 - **5-year CAGR:** revenue 32.3%, profit 39.1%
 - **Balance sheet:** debt/equity 1.51, cash conversion cycle 211.0 days
 - **Cash quality:** Over the last 3 years, operating cash flow was 0.57x reported profit (profits are not fully turning into cash)
 - **Segments (verified):** Jewellery 90.7%, Watches 6.0%, Others 2.3%, Eyecare 1.0% — segments add up to 87,849 cr vs reported revenue 87,584 cr (+0.3%)
-- **Report card:** promises kept none measurable yet; questions dodged 0 of 29 (partly answered 1 of 29); topics dropped: none
+- **Report card:** promises kept none measurable yet; questions dodged 1 of 27 (partly answered 0 of 27); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -599,25 +599,28 @@ Built in 4.7 s (from cache). Transcripts read: 2026-11-11, 2026-08-31, 2026-06-3
 _8 more statements are tracked but not measurable from the tables (order inflow, constant currency, segment-level, no date)._
 
 **Bull:**
-- The latest quarter revenue reached Rs 20,614 cr, representing a +10.1% YoY increase.
-- Profit for the latest quarter was Rs 2,393 cr, which is +113.7% higher YoY.
-- Revenue grew YoY across 8 of 8 recent quarters.
+- The latest quarter profit reached Rs 2,393 cr, representing a growth of +113.7% YoY.
+- Revenue grew YoY in 8 of 8 recent quarters.
+- Operating margin was 14.0% in the latest quarter, marking an increase of +4.0 pts YoY.
 
 **Bear:**
 - The debt to equity ratio stands at 1.51 with borrowings of Rs 27,638 cr.
-- The cash conversion cycle is reported at 211 days.
-- The 3-year operating cash flow is 0.57x reported profit.
+- The cash conversion cycle is reported as 211 days for 2026.
+- The 3-year operating cash flow equals 0.57x reported profit.
+
+**Dodged questions:**
+- Devanshu Bansal: “overall quantum of custom duty benefit, if you can call out for the entire year?” → “I would rather refrain from giving a full year impact at this point of time.” (p.5). Management explicitly refused to provide the full year impact.
 
 ## Hindustan Aeronautics Ltd (HAL)
 
-Built in 5.7 s (from cache). Transcripts read: 2026-05-31, 2025-05-31, 2024-05-31, 2023-05-31, 2022-11-30.
+Built in 4.1 s (from cache). Transcripts read: 2026-05-31, 2025-05-31, 2024-05-31, 2023-05-31, 2022-11-30.
 
 - **Snapshot:** market cap Rs 321,667 cr, P/E 33.6, latest quarter 2026-09-30: revenue Rs 7,613 cr, profit Rs 1,936 cr
 - **5-year CAGR:** revenue 7.8%, profit 23.0%
 - **Balance sheet:** debt/equity 0.0, cash conversion cycle 788.0 days
 - **Cash quality:** Over the last 3 years, operating cash flow was 1.31x reported profit (cash backs the profits)
 - **Segments (not_found):** the annual report has no readable segment revenue table (single-segment company or scanned pages)
-- **Report card:** promises kept 3 of 6; questions dodged 1 of 26 (partly answered 3 of 26); topics dropped: none
+- **Report card:** promises kept 3 of 6; questions dodged 0 of 37 (partly answered 2 of 37); topics dropped: none
 
 | Verdict | Metric | Period | Target | Said | Reason |
 |---|---|---|---|---|---|
@@ -633,17 +636,14 @@ Built in 5.7 s (from cache). Transcripts read: 2026-05-31, 2025-05-31, 2024-05-3
 _16 more statements are tracked but not measurable from the tables (order inflow, constant currency, segment-level, no date)._
 
 **Bull:**
-- The latest quarter revenue reached Rs 7,613 cr, representing a +14.8% YoY increase.
-- Latest quarter profit was Rs 1,936 cr, showing a +16.0% YoY growth.
-- The 5y profit CAGR is 23.0% alongside a 3y profit CAGR of 16.1%.
+- The latest quarter profit reached Rs 1,936 cr, showing a 16.0% YoY increase.
+- The 3-year operating cash flow was 1.31x reported profit.
+- Revenue grew YoY in 7 of 8 recent quarters.
 
 **Bear:**
-- The cash conversion cycle stands at 788 days in 2026.
-- Operating margin in the latest quarter was 23.0%, down -1.0 pts YoY.
-- Measurable targets kept numbered 3 of 6.
-
-**Dodged questions:**
-- Saif Sohrab: “when do you expect the ground testing and prototype rollout of, say, the Mark II program? And also on the other future programs like the UCAVs” → “Sorry, what is the second program you talked about?” (p.8). Management missed the second part about UAVs and asked for clarification.
+- The cash conversion cycle was 788 days.
+- The revenue growth FY25 target was 10-11%, but the actual was 2.0.
+- Promises kept were 3 of 6 measurable targets.
 
 ## Cost of this run
 
