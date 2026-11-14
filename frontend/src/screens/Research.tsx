@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BandChart, Bars, Cite, Icon } from "../components/ui";
-import { api, backendAlive, fmtCr, fmtDay, fmtNum, fmtPct, Json, nice, pageLink, signClass, snapshot } from "../lib/data";
+import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, nice, pageLink, prefs, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
   "reading annual report", "writing", "done"];
@@ -16,7 +16,7 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
   const [q, setQ] = useState("");
   const [data, setData] = useState<Json | null>(null);
   const [job, setJob] = useState<Json | null>(null);
-  const [state, setState] = useState<"idle" | "loading" | "cold" | "offline" | "error">("idle");
+  const [state, setState] = useState<"idle" | "loading" | "waking" | "asleep" | "cold" | "offline" | "error">("idle");
   const [err, setErr] = useState("");
   const poll = useRef<number | null>(null);
 
@@ -37,7 +37,9 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
       if (inSnap) {
         try { const d = await snapshot(`research/${ticker}.json`); if (alive) { setData(d); setState("idle"); } return; } catch { /* fall through to live */ }
       }
-      if (!(await backendAlive())) { if (alive) setState("offline"); return; }
+      if (!prefs.apiBase()) { if (alive) setState("offline"); return; }
+      const up = await wakeBackend(() => { if (alive) setState("waking"); });
+      if (!up) { if (alive) setState("asleep"); return; }
       try {
         const j = await api(`/research/${encodeURIComponent(ticker)}`, { method: "POST" });
         if (!alive) return;
@@ -103,7 +105,27 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
             (it runs on the PC or a server) and FINN will build this page in a minute or two, showing the tables first.</p>
         </div>
       )}
-      {state === "error" && <div className="notice" style={{ marginTop: 14 }}>Research failed: {err}</div>}
+      {state === "waking" && (
+        <div className="glass card" style={{ marginTop: 14 }} aria-live="polite">
+          <div className="card-top"><div className="h2">Waking up the research engine</div><span className="tag">up to 50 s</span></div>
+          <div className="progress"><motion.div initial={{ width: "4%" }} animate={{ width: "92%" }} transition={{ duration: 50, ease: "linear" }} /></div>
+          <p className="muted small" style={{ marginBottom: 0 }}>
+            The free server that reads new companies sleeps when nobody is using it. It is starting now; {ticker} will begin right after.
+          </p>
+        </div>
+      )}
+      {state === "asleep" && (
+        <div className="notice" style={{ marginTop: 14 }}>
+          The research engine did not answer within a minute. The {index.length} companies above still work from the built-in data; try {ticker} again in a moment.
+        </div>
+      )}
+      {state === "error" && (
+        <div className="notice" style={{ marginTop: 14 }}>
+          {/unknown company|404/i.test(err) ? `FINN could not find "${ticker}" on NSE. Try the search box above.` :
+            /refused|503/i.test(err) ? "A data source refused the research server just now. The built-in companies still work; try again later." :
+            `Research failed: ${err}`}
+        </div>
+      )}
       {state === "cold" && job && <ColdStart job={job} />}
       {data && <Company d={data} />}
     </div>

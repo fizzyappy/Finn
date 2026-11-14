@@ -39,10 +39,13 @@ function write(key: string, value: unknown) {
 }
 export const prefs = {
   // On this PC the local backend is found automatically; elsewhere it is set in Settings.
+  // Backend URL: a value saved in Settings wins; else the one baked in at build time
+  // (VITE_API_BASE, e.g. the Render URL); else the local backend when run on this PC.
   apiBase: () => {
     const v = read<string>("finn.api", "");
     if (v === "off") return "";                 // explicitly offline: snapshot only
-    return v || (location.hostname === "localhost" ? "http://localhost:8000" : "");
+    const built = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/+$/, "") || "";
+    return v || built || (location.hostname === "localhost" ? "http://localhost:8000" : "");
   },
   setApiBase: (v: string) => write("finn.api", v.trim().replace(/\/+$/, "")),
   cleared: () => new Set(read<string[]>("finn.cleared", [])),
@@ -68,13 +71,27 @@ export async function api(path: string, init?: RequestInit, timeoutMs = 8000): P
   }
 }
 
-export async function backendAlive(): Promise<boolean> {
+export async function backendAlive(timeoutMs = 3000): Promise<boolean> {
   try {
-    const r = await api("/health", undefined, 3000);
+    const r = await api("/health", undefined, timeoutMs);
     return !!r?.ok;
   } catch {
     return false;
   }
+}
+
+/** A free cloud server sleeps when idle and needs up to ~50 s to wake. Quick check
+ *  first; if that fails, call onWaking() and keep trying for up to 75 s. */
+export async function wakeBackend(onWaking: () => void): Promise<boolean> {
+  if (!prefs.apiBase()) return false;
+  if (await backendAlive(2500)) return true;
+  onWaking();
+  const until = Date.now() + 75000;
+  while (Date.now() < until) {
+    if (await backendAlive(20000)) return true;
+    await new Promise((r) => setTimeout(r, 2000));
+  }
+  return false;
 }
 
 // ---------------------------------------------------------------- formatting

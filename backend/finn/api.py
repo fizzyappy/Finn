@@ -31,13 +31,52 @@ async def _poll_forever():
 
 @contextlib.asynccontextmanager
 async def lifespan(_app):
+    # A fresh server (e.g. Render after a restart) starts from the committed seed:
+    # model answers and finished research are reused, not paid for again.
+    try:
+        from . import seed
+
+        log.info("seed: %s", await asyncio.to_thread(seed.load))
+    except Exception as e:  # noqa: BLE001
+        log.warning("seed load failed: %s", e)
     task = asyncio.create_task(_poll_forever())
     yield
     task.cancel()
 
 
-app = FastAPI(title="FINN data API", version="0.2.0", lifespan=lifespan)
+app = FastAPI(title="FINN data API", version="0.3.0", lifespan=lifespan)
+# Read-only public data, no cookies: any origin (the Vercel app, localhost) may call it.
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
+
+
+@app.get("/")
+def root():
+    return {"name": "FINN research engine", "docs": "/docs", "health": "/health", "sources": "/sources"}
+
+
+@app.get("/sources")
+def r_sources():
+    """Can this server reach each data source? (Cloud hosts are sometimes refused.)"""
+    checks = {
+        "yahoo_prices": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI?range=5d&interval=1d",
+        "screener": "https://www.screener.in/company/INFY/",
+        "bse_rss": filings.RSS_FEEDS["BSE"],
+        "nse_rss": filings.RSS_FEEDS["NSE"],
+        "nse_company_list": symbols.NSE_MASTER_URL,
+    }
+    out = {}
+    for name, url in checks.items():
+        try:
+            r = http.get(url, timeout=15)
+            out[name] = {"ok": True, "status": r.status_code}
+        except http.SourceBlocked as e:
+            out[name] = {"ok": False, "why": f"refused this server ({e})"}
+        except Exception as e:  # noqa: BLE001
+            out[name] = {"ok": False, "why": f"{type(e).__name__}: {str(e)[:100]}"}
+    from . import llm
+
+    out["gemini_key_configured"] = llm.router().available
+    return out
 
 
 def _guard(fn, *a, **k):

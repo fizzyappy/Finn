@@ -1,0 +1,17 @@
+# For cloud hosts (Render, GitHub Actions) on Python 3.12: lower bounds, so pip picks
+# versions with wheels for that Python. requirements.txt holds the exact versions tested
+# on this PC (Python 3.14).
+yfinance>=0.2.54
+pandas>=2.2
+requests>=2.32
+urllib3>=2.2
+beautifulsoup4>=4.12
+lxml>=5.3
+pypdf>=5.1
+pdfplumber>=0.11
+fastapi>=0.115
+uvicorn>=0.32
+google-genai>=1.30
+python-dotenv>=1.0
+fonttools>=4.55
+pytest>=8.3

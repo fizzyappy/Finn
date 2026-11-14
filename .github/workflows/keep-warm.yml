@@ -1,0 +1,14 @@
+# Pings the Render backend every 10 minutes so reviewers rarely meet a sleeping server.
+# Needs the repository variable FINN_API_URL (Settings -> Secrets and variables -> Actions -> Variables).
+name: keep-warm
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    if: ${{ vars.FINN_API_URL != '' }}
+    steps:
+      - name: Ping /health (allows a cold start of up to 90 s)
+        run: curl -fsS --max-time 90 "${{ vars.FINN_API_URL }}/health" || echo "backend did not answer (will retry in 10 min)"
