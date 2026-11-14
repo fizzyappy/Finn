@@ -2094,7 +2094,7 @@
    "questions_partly_answered": "4 of 23"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "DIXON",
   "bse_code": "540699",
@@ -2149,5 +2149,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 140.3,
- "from_cache": false
+ "from_cache": true
 }

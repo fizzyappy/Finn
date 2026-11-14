@@ -5,6 +5,7 @@ import { Cite, Icon, Ring } from "../components/ui";
 import { cleanTitle, fmtDay, fmtWhen, Json, nice, prefs, snapshot, WindowKey, WINDOWS } from "../lib/data";
 
 const HERO = 0.6, ONE = 0.3;
+const plural = (n: number, word: string) => (n === 1 ? word : `${word}s`);
 const clampTune = (v: number) => Math.min(1.5, Math.max(0.5, v));
 
 /** Re-rank with the investor's swipes: score x tune(category), thresholds re-applied. */
@@ -77,7 +78,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         <div style={{ flex: 1, minWidth: 0 }}>
           <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : `Your ${brief.window.label.replace("last ", "last ")}`}</h1>
           <div className="counts tnum">
-            <b>{brief.header.filings}</b> filings · <b>{matter}</b> matter · <b>{heroLeft.length}</b> left
+            <b>{brief.header.filings}</b> {plural(brief.header.filings, "filing")} · <b>{matter}</b> matter · <b>{heroLeft.length}</b> left
             {brief.alerts?.length ? <> · <b>{brief.alerts.length}</b> moves</> : null}
           </div>
         </div>
@@ -94,7 +95,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         <div className="glass card empty" style={{ marginTop: 14 }}>
           <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
           <div className="big">Quiet {brief.window.label}</div>
-          <div className="muted">Nothing material across your {brief.holdings.length} holdings.{routine ? ` ${routine} routine filings collapsed below.` : ""}</div>
+          <div className="muted">Nothing material across your {brief.holdings.length} holdings.{routine ? ` ${routine} routine ${plural(routine, "filing")} collapsed below.` : ""}</div>
         </div>
       ) : (
         <>
@@ -193,7 +194,9 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         )}
       </div>
       <p className="faint small" style={{ margin: "14px 4px" }}>
-        Data as of {fmtWhen(brief.generated_at)}. {brief.data_status?.filings_note}
+        Data as of {fmtWhen(brief.generated_at)}.{brief.data_status?.filings_note
+          ? " BSE's and NSE's announcement APIs refuse this connection, so filings come from the exchanges' official RSS feeds and Screener's recent list; older or very busy days may be incomplete."
+          : ""}
       </p>
 
       <div style={{ position: "fixed", left: 0, right: 0, bottom: "calc(var(--safe-bottom) + 84px)", display: "flex", justifyContent: "center", zIndex: 30, pointerEvents: "none" }}>

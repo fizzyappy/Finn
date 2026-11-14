@@ -43,3 +43,9 @@
 | Bull/bear: Flash-Lite phrases bullets from a numbered fact pool; Python keeps only bullets citing real facts with matching numbers | Every bullet stands on a number | Bullets are plain |
 | Research cached by (ticker, newest source document date); one job at a time | Re-reading only when a company files something new; protects the free quota | Concurrent requests queue |
 | Research companies: TITAN replaces TRENT | screener lists no concall transcripts for TRENT | – |
+| App ships a frozen snapshot of real outputs (briefs for every window, research for 21 companies, 120 days of alert measures, NSE company list); live backend used when reachable | The submitted link must always work, even if a free backend is asleep or a source refuses | Snapshot ages until re-exported |
+| Alerts backtest runs in the browser on the exported per-day measures | The slider updates instantly with no server | Limited to the last 120 trading days |
+| Hand-written CSS + Framer Motion; no UI kit; hash routing; own service worker | Small bundle (~100 KB gzip), full control of the look, works as static files on any host | More CSS to maintain |
+| Verification with playwright-core on the installed Chrome (no browser download), axe for accessibility, a horizontal-overflow check | Catches regressions on every screen and state; found and fixed an overflowing chip and low-contrast text | Not a full Lighthouse run |
+| HTTP retries ignore a site's Retry-After (short backoff instead) | An export once took 97 minutes, most likely waiting on a "retry after" reply; the stale cache covers refusals | Slightly more retries against a busy site |
+| Long PDFs (> 60 pages) skip the slow fallback text reader; reading an annual report has a 4-minute budget | One annual report took over 10 minutes | Scanned annual reports yield no segment data |

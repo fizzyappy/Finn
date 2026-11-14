@@ -1314,7 +1314,7 @@
    "questions_partly_answered": "5 of 31"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "ASIANPAINT",
   "bse_code": "500820",
@@ -1369,5 +1369,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 3.6,
- "from_cache": false
+ "from_cache": true
 }

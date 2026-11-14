@@ -1164,7 +1164,7 @@
    "questions_partly_answered": "7 of 39"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "SUNPHARMA",
   "bse_code": "524715",
@@ -1219,5 +1219,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 92.5,
- "from_cache": false
+ "from_cache": true
 }

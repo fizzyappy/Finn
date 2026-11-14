@@ -7,8 +7,8 @@
 | 1 | **Setup** — folder, tools check, git, project rules, plan, decisions log | Done (push waits on GitHub access) |
 | 2 | **Data pipes** — fetch and store data from primary sources (exchange filings, prices) | Done: `backend/finn`, live report in `backend/validation_report.md` |
 | 3 | **Push engine** — content FINN sends to the user without being asked | Done: `backend/finn/push`, live report in `backend/push_report.md`, sample briefs in `backend/out/` |
-| 4 | **Pull engine** — answers to questions the user asks | Not started |
-| 5 | **App** — React + Vite PWA front end | Not started |
+| 4 | **Pull engine** — answers to questions the user asks | Done: `backend/finn/pull`, `backend/research_report.md`, `backend/spot_check.md` |
+| 5 | **App** — React + Vite PWA front end | First version done: `frontend/`, screenshots in `frontend/screenshots/`; deployment waits for sign-ins (DEPLOY.md) |
 | 6 | **Submission** — final checks, write-up, demo, submit | Not started |
 
 ## Notes

@@ -35,9 +35,12 @@ _lock = threading.Lock()
 
 def _new_session() -> requests.Session:
     s = requests.Session()
+    # A site's Retry-After can ask for a very long wait (an export once took 97 minutes).
+    # Use short backoff (1-4 s) instead; if the site still refuses, callers serve the
+    # cached copy marked stale.
     retry = Retry(
-        total=3, backoff_factor=1.0, status_forcelist=(429, 500, 502, 503, 504),
-        allowed_methods=("GET",), respect_retry_after_header=True, raise_on_status=False,
+        total=3, backoff_factor=1.0, backoff_max=8, status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET",), respect_retry_after_header=False, raise_on_status=False,
     )
     s.mount("https://", HTTPAdapter(max_retries=retry, pool_maxsize=8))
     s.headers.update({

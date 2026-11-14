@@ -1392,7 +1392,7 @@
    "questions_partly_answered": "1 of 29"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "TITAN",
   "bse_code": "500114",
@@ -1447,5 +1447,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 4.7,
- "from_cache": false
+ "from_cache": true
 }

@@ -1701,7 +1701,7 @@
    "questions_partly_answered": "7 of 53"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "SUZLON",
   "bse_code": "532667",
@@ -1756,5 +1756,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 134.0,
- "from_cache": false
+ "from_cache": true
 }

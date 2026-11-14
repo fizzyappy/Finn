@@ -1853,7 +1853,7 @@
    "questions_partly_answered": "4 of 40"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "INDHOTEL",
   "bse_code": "500850",
@@ -1908,5 +1908,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 139.0,
- "from_cache": false
+ "from_cache": true
 }

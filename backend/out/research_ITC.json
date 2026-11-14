@@ -496,7 +496,7 @@
    "evidence": []
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "ITC",
   "bse_code": "500875",
@@ -525,5 +525,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 317.7,
- "from_cache": false
+ "from_cache": true
 }

@@ -1316,7 +1316,7 @@
    "questions_partly_answered": "8 of 37"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "PERSISTENT",
   "bse_code": "533179",
@@ -1371,5 +1371,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 153.3,
- "from_cache": false
+ "from_cache": true
 }

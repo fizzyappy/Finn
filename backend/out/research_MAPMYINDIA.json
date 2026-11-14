@@ -1246,7 +1246,7 @@
    "questions_partly_answered": "9 of 34"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "MAPMYINDIA",
   "bse_code": "543425",
@@ -1301,5 +1301,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 73.3,
- "from_cache": false
+ "from_cache": true
 }

@@ -1108,7 +1108,7 @@
    "questions_partly_answered": "10 of 37"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "CDSL",
   "bse_code": null,
@@ -1163,5 +1163,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 79.3,
- "from_cache": false
+ "from_cache": true
 }

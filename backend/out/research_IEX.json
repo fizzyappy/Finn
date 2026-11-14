@@ -1009,7 +1009,7 @@
    "questions_partly_answered": "3 of 11"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "IEX",
   "bse_code": "540750",
@@ -1064,5 +1064,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 251.1,
- "from_cache": false
+ "from_cache": true
 }

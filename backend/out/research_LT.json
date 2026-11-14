@@ -2058,7 +2058,7 @@
    "questions_partly_answered": "2 of 40"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "LT",
   "bse_code": "500510",
@@ -2119,5 +2119,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 6.0,
- "from_cache": false
+ "from_cache": true
 }

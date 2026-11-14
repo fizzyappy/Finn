@@ -938,7 +938,7 @@
    "questions_partly_answered": "6 of 22"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "MARUTI",
   "bse_code": "532500",
@@ -1169,5 +1169,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 130.7,
- "from_cache": false
+ "from_cache": true
 }

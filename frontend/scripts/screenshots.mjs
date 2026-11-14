@@ -30,6 +30,7 @@ const shots = [];
 
 async function fresh(hash = "") {
   const page = await ctx.newPage();
+  page.setDefaultTimeout(120000);   // 2x full-page captures of glass-heavy pages are slow
   page.on("console", (m) => { if (m.type() === "error") errors.push(`${hash}: ${m.text()}`); });
   page.on("pageerror", (e) => errors.push(`${hash}: ${e.message}`));
   await page.goto(`${BASE}/#${hash}`);
@@ -112,8 +113,10 @@ await row.scrollIntoViewIfNeeded();
 await shot(p, "11-research-LT-ledger-row-open", false);
 await p.goto(`${BASE}/#research/HAL`); await p.waitForTimeout(1200);
 await shot(p, "12-research-HAL-full");
+await p.evaluate(() => localStorage.setItem("finn.api", JSON.stringify("off")));   // show the true offline state
 await p.goto(`${BASE}/#research/ZOMATOX`); await p.waitForTimeout(1500);
 await shot(p, "13-research-not-in-snapshot", false);
+await p.evaluate(() => localStorage.removeItem("finn.api"));
 await p.close();
 
 // 4. Research cold start against a simulated live backend (stages + tables first)

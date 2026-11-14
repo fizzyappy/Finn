@@ -1822,7 +1822,7 @@
    "questions_partly_answered": "11 of 48"
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "INFY",
   "bse_code": "500209",
@@ -1877,5 +1877,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 11.9,
- "from_cache": false
+ "from_cache": true
 }

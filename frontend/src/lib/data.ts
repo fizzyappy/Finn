@@ -39,7 +39,11 @@ function write(key: string, value: unknown) {
 }
 export const prefs = {
   // On this PC the local backend is found automatically; elsewhere it is set in Settings.
-  apiBase: () => read<string>("finn.api", "") || (location.hostname === "localhost" ? "http://localhost:8000" : ""),
+  apiBase: () => {
+    const v = read<string>("finn.api", "");
+    if (v === "off") return "";                 // explicitly offline: snapshot only
+    return v || (location.hostname === "localhost" ? "http://localhost:8000" : "");
+  },
   setApiBase: (v: string) => write("finn.api", v.trim().replace(/\/+$/, "")),
   cleared: () => new Set(read<string[]>("finn.cleared", [])),
   setCleared: (s: Set<string>) => write("finn.cleared", [...s]),

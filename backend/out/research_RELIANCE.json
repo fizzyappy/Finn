@@ -839,7 +839,7 @@
    "topics_dropped": []
   }
  },
- "stage": "done",
+ "stage": "writing",
  "instrument": {
   "symbol": "RELIANCE",
   "bse_code": "500325",
@@ -894,5 +894,5 @@
   "pricing": "free tier (USD 0)"
  },
  "built_in_seconds": 101.8,
- "from_cache": false
+ "from_cache": true
 }
