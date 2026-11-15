@@ -449,3 +449,7 @@ a.ticker-chip:active { transform: scale(0.96); }
 .strip { height: 64px; }
 .strip > div.fire { background: linear-gradient(0deg, rgba(127, 227, 178, 0.35), #c9f7df); border-radius: 3px 3px 1px 1px; }
 .strip > div.fire::after { width: 4px; height: 4px; margin-left: -2px; top: -5px; background: #fff; box-shadow: 0 0 6px 1px rgba(201, 247, 223, 0.8); }
+
+/* peaks: more green */
+.strip > div.fire { background: linear-gradient(0deg, rgba(102, 209, 158, 0.55), #8ff0bd); box-shadow: 0 0 8px rgba(102, 209, 158, 0.55); }
+.strip > div.fire::after { background: #eafff3; box-shadow: 0 0 7px 2px rgba(102, 209, 158, 0.85); }
