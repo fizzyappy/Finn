@@ -87,6 +87,13 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const base14 = briefs["custom"];
   const minDay = base14?.window?.from?.slice(0, 10) || "";
   const maxDay = base14?.generated_at?.slice(0, 10) || "";
+  // "Since last look" and "3 days" appear only when they hold something that needs attention;
+  // otherwise the chips are just 24h, 7 days and Custom.
+  const shownWindows = useMemo(() => WINDOWS.filter((w) => w.key === "24h" || w.key === "7d" || w.key === "custom"
+    || (briefs[w.key] && rerank(briefs[w.key], tune).hero.length > 0)), [briefs, tune]);
+  useEffect(() => {
+    if (Object.keys(briefs).length && !shownWindows.some((w) => w.key === win)) setWin("24h");
+  }, [briefs, shownWindows, win]);
   const requested = win === "custom" && live ? live
     : win === "custom" && range && base14 ? briefForRange(base14, range.from, range.to) : briefs[win];
   // A quiet window never shows an empty screen: fall forward to the shortest window that has something.
@@ -160,7 +167,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
       </div>
 
       <div className="chips" role="toolbar" aria-label="Time window">
-        {WINDOWS.map((w) => (
+        {shownWindows.map((w) => (
           <button key={w.key} className="chip" aria-pressed={w.key === win}
             onClick={() => (w.key === "custom" ? setPicking((p) => !p) : (setWin(w.key), setPicking(false)))}
             aria-expanded={w.key === "custom" ? picking : undefined}>
