@@ -526,15 +526,15 @@ function Trajectory({ t, lender, note }: { t: Json; lender?: boolean; note?: str
   const c3 = t.cagr_pct?.["3y"] || {}, c5 = t.cagr_pct?.["5y"] || {};
   return (
     <>
-      <Title meta="revenue bars · margin line">Trajectory</Title>
+      <Title meta="7 years">Trajectory</Title>
       <div className="glass card">
         {note && <div className="chart-note">{note}</div>}
-        <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr (bars) · operating margin (line)`}
+        <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr · dashed: operating margin`}
           fmt={(v) => fmtCr(v)} lineName="margin"
           data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
         {rows.some((r) => r.pat != null) && (
           <div style={{ marginTop: 18 }}>
-            <Bars label="Annual net profit with net margin" metric="Net profit, ₹ cr (bars) · net margin (line)"
+            <Bars label="Annual net profit with net margin" metric="Net profit, ₹ cr · dashed: net margin"
               fmt={(v) => fmtCr(v)} lineName="net margin"
               data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.pat, line: r.pat_margin_pct }))} />
           </div>
