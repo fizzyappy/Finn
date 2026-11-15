@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { backendAlive, catLabel, fmtNum, fmtWhen, Json, nice, prefs, snapshot } from "../lib/data";
+import { catLabel, fmtNum, fmtWhen, Json, nice, prefs, snapshot, wakeBackend } from "../lib/data";
 
 const SOURCE_LABEL: Record<string, string> = {
   bse_api: "BSE announcements API", nse_api: "NSE announcements API",
@@ -17,7 +17,8 @@ export default function Settings() {
   const test = async () => {
     prefs.setApiBase(base);
     setStatus("checking…");
-    setStatus((await backendAlive()) ? "connected: live research for any company is on" : "not reachable: using the offline snapshot");
+    const ok = await wakeBackend(() => setStatus("waking up the free server (up to a minute)…"));
+    setStatus(ok ? "connected: live research for any company is on" : "not reachable right now: using the offline snapshot");
   };
 
   const usage = meta?.llm_all_time?.models || {};
