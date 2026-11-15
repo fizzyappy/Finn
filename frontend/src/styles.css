@@ -149,8 +149,8 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .nav button[aria-current="page"] { color: var(--mint-ink); }
 .nav .pill-bg { position: absolute; inset: 0; border-radius: var(--pill); background: var(--mint); z-index: -1; box-shadow: 0 6px 20px var(--mint-glow); }
 .nav svg { width: 20px; height: 20px; }
-.nav .label { display: none; }
-.nav button[aria-current="page"] .label { display: inline; }
+.nav button { flex-direction: column; justify-content: center; gap: 2px; height: 54px; padding: 0 16px; font-size: 10.5px; }
+.nav .label { display: block; font-weight: 600; letter-spacing: .01em; }
 .nav .dot { position: absolute; top: 9px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 8px var(--mint); }
 
 /* ---------- brief ---------- */
@@ -318,3 +318,16 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .seg { display: inline-flex; flex: none; border: 1px solid var(--line); border-radius: var(--pill); overflow: hidden; }
 .seg button { height: 28px; padding: 0 10px; font-size: 11.5px; font-weight: 600; color: var(--text-3); }
 .seg button[aria-pressed="true"] { background: var(--mint); color: var(--mint-ink); }
+
+html { scroll-behavior: smooth; }
+section, .section-title { scroll-margin-top: 64px; }
+.back-link { font-size: 13px; font-weight: 600; color: var(--mint-2); padding: 6px 0; margin-bottom: 4px; }
+.jumpbar { position: sticky; top: 0; z-index: 15; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
+  margin: 14px -16px 0; padding: 10px 16px; background: rgba(6, 18, 13, 0.86);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.jumpbar::-webkit-scrollbar { display: none; }
+.jumpbar .chip { height: 30px; font-size: 12.5px; }
+button, .chip, .why-btn, .btn { transition: transform .12s ease, background .18s, color .18s, border-color .18s; }
+button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.96); }
+.row-list .row, .ledger-row, .collapsed-cat { transition: background .18s; }
+.ledger-row:active, .collapsed-cat:active { background: rgba(255,255,255,0.04); }

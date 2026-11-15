@@ -23,6 +23,12 @@ export default function App() {
   const reduce = useReducedMotion();
   const [{ tab, ticker }, setRoute] = useState(parseHash);
   const [meta, setMeta] = useState<Json | null>(null);
+  const [dir, setDir] = useState(1);
+  const [prevTab, setPrevTab] = useState(tab);
+  if (tab !== prevTab) {           // slide left when moving right along the nav, and back
+    setDir(TABS.findIndex((x) => x.key === tab) >= TABS.findIndex((x) => x.key === prevTab) ? 1 : -1);
+    setPrevTab(tab);
+  }
 
   useEffect(() => {
     const on = () => setRoute(parseHash());
@@ -30,7 +36,7 @@ export default function App() {
     snapshot("meta.json").then(setMeta).catch(() => setMeta(null));
     return () => window.removeEventListener("hashchange", on);
   }, []);
-  useEffect(() => { window.scrollTo({ top: 0 }); }, [tab]);
+  useEffect(() => { window.scrollTo({ top: 0 }); }, [tab, ticker]);
 
   const go = (t: Tab, tk?: string | null) => { window.location.hash = tk ? `${t}/${tk}` : t; };
 
@@ -44,8 +50,9 @@ export default function App() {
         </header>
         <main>
           <AnimatePresence mode="wait" initial={false}>
-            <motion.div key={tab} initial={reduce ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={reduce ? undefined : { opacity: 0, y: -6 }}
-              transition={{ duration: 0.18, ease: [0.2, 0.8, 0.2, 1] }}>
+            <motion.div key={tab} initial={reduce ? false : { opacity: 0, x: 28 * dir }} animate={{ opacity: 1, x: 0 }}
+              exit={reduce ? undefined : { opacity: 0, x: -20 * dir }}
+              transition={{ duration: 0.24, ease: [0.2, 0.8, 0.2, 1] }}>
               {tab === "brief" && <Brief onOpenResearch={(t) => go("research", t)} />}
               {tab === "research" && <Research ticker={ticker} setTicker={(t) => go("research", t)} />}
               {tab === "alerts" && <Alerts onOpenResearch={(t) => go("research", t)} />}
@@ -57,10 +64,11 @@ export default function App() {
       <nav className="nav" aria-label="Main">
         <LayoutGroup>
           {TABS.map((t) => (
-            <button key={t.key} aria-current={tab === t.key ? "page" : undefined} onClick={() => go(t.key, t.key === "research" ? ticker : null)} aria-label={t.label}>
+            <motion.button key={t.key} whileTap={{ scale: 0.92 }} aria-current={tab === t.key ? "page" : undefined}
+              onClick={() => go(t.key, t.key === "research" && tab !== "research" ? ticker : null)} aria-label={t.label}>
               {tab === t.key && <motion.span layoutId="pill" className="pill-bg" transition={{ type: "spring", stiffness: 420, damping: 34 }} />}
               {Icon[t.key]}<span className="label">{t.label}</span>
-            </button>
+            </motion.button>
           ))}
         </LayoutGroup>
       </nav>

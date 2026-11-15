@@ -66,7 +66,8 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
 
   return (
     <div>
-      <h1 className="h1" style={{ margin: "6px 0 14px" }}>Alerts</h1>
+      <h1 className="h1" style={{ margin: "6px 0 2px" }}>Alerts</h1>
+      <p className="small muted" style={{ margin: "0 0 12px" }}>Price moves that are unusual for that stock. Set the rule, and see how often it would have pinged you.</p>
       <div className="glass card">
         <p className="sentence" style={{ margin: 0 }}>
           Tell me when{" "}

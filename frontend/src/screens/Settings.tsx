@@ -39,7 +39,8 @@ export default function Settings() {
 
   return (
     <div>
-      <h1 className="h1" style={{ margin: "6px 0 14px" }}>Settings</h1>
+      <h1 className="h1" style={{ margin: "6px 0 2px" }}>Settings</h1>
+      <p className="small muted" style={{ margin: "0 0 12px" }}>Your portfolio, which announcements reach you, and what FINN costs to run.</p>
 
       <div className="glass scorecard hero-glow">
         <div className="small faint" style={{ textTransform: "uppercase", letterSpacing: ".09em", fontWeight: 600 }}>Cost meter</div>

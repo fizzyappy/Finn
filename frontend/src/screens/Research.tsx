@@ -76,7 +76,8 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
 
   return (
     <div>
-      <h1 className="h1" style={{ margin: "6px 0 14px" }}>Research</h1>
+      <h1 className="h1" style={{ margin: "6px 0 2px" }}>Research</h1>
+      <p className="small muted" style={{ margin: "0 0 12px" }}>Pick a company: what management promised, what it delivered, and the numbers behind it.</p>
       <div className="search">
         {Icon.search}
         <input aria-label="Search any NSE company" placeholder="Search any NSE company or ticker" value={q}
@@ -132,7 +133,7 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
         </div>
       )}
       {state === "cold" && job && <ColdStart job={job} />}
-      {data && <Company d={data} />}
+      {data && <Company d={data} onBack={() => setTicker("")} />}
     </div>
   );
 }
@@ -201,13 +202,31 @@ function ColdStart({ job }: { job: Json }) {
 }
 
 /* ---------------------------------------------------------------- company page */
-function Company({ d }: { d: Json }) {
+const JUMPS: [string, string][] = [["ask", "Ask"], ["promise-ledger", "Promises"], ["did-they-answer", "Answers"],
+  ["snapshot", "Numbers"], ["bull-vs-bear", "Bull/bear"], ["sources", "Sources"]];
+const slug = (x: React.ReactNode) => (typeof x === "string" ? x : "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+function JumpBar() {
+  const [have, setHave] = useState<[string, string][]>([]);
+  useEffect(() => { setHave(JUMPS.filter(([id]) => document.getElementById(id))); }, []);
+  if (have.length < 3) return null;
+  return (
+    <div className="jumpbar" role="navigation" aria-label="Jump to section">
+      {have.map(([id, label]) => (
+        <button key={id} className="chip" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}>{label}</button>
+      ))}
+    </div>
+  );
+}
+
+function Company({ d, onBack }: { d: Json; onBack: () => void }) {
   const S = d.sections || {};
   const rc = S.report_card || {};
   const led = S.promise_ledger;
   const states: Json[] = d.states || [];
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: 16 }}>
+      <button className="back-link" onClick={onBack}>← All companies</button>
       <div style={{ marginBottom: 12 }}>
         <div className="h1">{d.name}</div>
         <div className="faint small">{d.ticker}{S.snapshot?.price ? ` · ₹${fmtNum(S.snapshot.price, S.snapshot.price < 100 ? 1 : 0)}` : ""}{S.snapshot?.market_cap_cr ? ` · m-cap ${fmtCr(S.snapshot.market_cap_cr)}` : ""} · updated {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
@@ -215,6 +234,7 @@ function Company({ d }: { d: Json }) {
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
+      {!d.partial && <JumpBar />}
       {!d.partial && <AskBox ticker={d.ticker} name={d.name} d={d} />}
       {led && <Ledger led={led} />}
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
@@ -268,7 +288,7 @@ function AskBox({ ticker, name, d }: { ticker: string; name: string; d?: Json })
   const examples = suggestFor(d);
   return (
     <>
-      <Title meta="sourced answers">Ask about {short}</Title>
+      <Title meta="sourced answers" id="ask">Ask about {short}</Title>
       <div className="glass card">
         <form onSubmit={(e) => { e.preventDefault(); ask(q); }} style={{ display: "flex", gap: 8 }}>
           <input className="field" aria-label={`Ask a question about ${short}`} placeholder="e.g. Did they meet their margin target?"
@@ -295,8 +315,14 @@ function AskBox({ ticker, name, d }: { ticker: string; name: string; d?: Json })
   );
 }
 
-function Title({ children, meta }: { children: React.ReactNode; meta?: React.ReactNode }) {
-  return <div className="section-title"><h2>{children}</h2>{meta && <span className="meta">{meta}</span>}</div>;
+function Title({ children, meta, id }: { children: React.ReactNode; meta?: React.ReactNode; id?: string }) {
+  return (
+    <motion.div className="section-title" id={id || slug(children) || undefined}
+      initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}>
+      <h2>{children}</h2>{meta && <span className="meta">{meta}</span>}
+    </motion.div>
+  );
 }
 
 function ReportCard({ rc, led }: { rc: Json; led: Json }) {
