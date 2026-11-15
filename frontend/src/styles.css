@@ -361,3 +361,11 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 
 .cost-line { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--text-2); }
 .cost-line b { color: var(--text); font-weight: 600; }
+
+/* company name as a small highlighted chip */
+.ticker-chip { display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 8px;
+  background: rgba(124, 242, 154, 0.10); border: 1px solid rgba(124, 242, 154, 0.30); color: var(--mint-2);
+  font-weight: 700; font-size: 13px; letter-spacing: .04em; vertical-align: middle; }
+.ticker-chip.sm { height: 22px; padding: 0 8px; font-size: 11.5px; border-radius: 7px; }
+.who .name { overflow: visible; margin-bottom: 5px; }
+.sym-line { margin-bottom: 6px; }

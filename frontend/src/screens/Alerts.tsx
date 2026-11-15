@@ -134,7 +134,7 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
         {recent.map((a) => (
           <div className="row" key={a.symbol + a.date}>
             <div className="grow">
-              <div className="title tnum">{a.symbol} <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span> <span className="faint small">· {fmtDay(a.date)}</span></div>
+              <div className="title tnum"><span className="ticker-chip sm">{a.symbol}</span> <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span> <span className="faint small">· {fmtDay(a.date)}</span></div>
               <div className="desc">Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}% · move {Math.abs(a.measures.z).toFixed(1)}× its usual · volume {Number(a.measures.vol_x).toFixed(1)}× average</div>
               {a.filed_before?.map((f: Json) => (
                 <div key={f.ts} style={{ marginTop: 6 }}><Cite href={f.url}>filed before: {cleanTitle(f.title)}</Cite></div>

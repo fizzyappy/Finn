@@ -8,7 +8,7 @@ export function Who({ e }: { e: Json }) {
   return (
     <div className="who">
       <div style={{ minWidth: 0 }}>
-        <div className="name">{e.symbol}</div>
+        <div className="name"><span className="ticker-chip">{e.symbol}</span></div>
         <div className="sub">{catLabel(e.category)} · {fmtWhen(e.ts)}</div>
       </div>
     </div>
