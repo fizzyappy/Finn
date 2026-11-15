@@ -26,18 +26,20 @@ export default function Splash() {
       {show && (
         <motion.div className="splash" onClick={() => setShow(false)} role="presentation"
           exit={{ opacity: 0, scale: 1.03 }} transition={{ duration: 0.4, ease }}>
-          <svg viewBox="0 0 512 512" width="132" height="132" aria-hidden>
-            <defs>
-              <linearGradient id="sp-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#B2FAD0" /><stop offset="1" stopColor="#8BEFB4" /></linearGradient>
-              <linearGradient id="sp-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#86EDB0" /><stop offset="1" stopColor="#5FD992" /></linearGradient>
-            </defs>
-            <motion.path d={TOP} fill="url(#sp-t)"
-              initial={reduce ? { opacity: 0 } : { opacity: 0, x: -230, y: 70 }} animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.85, delay: 0.2, ease }} />
-            <motion.path d={LOW} fill="url(#sp-l)"
-              initial={reduce ? { opacity: 0 } : { opacity: 0, x: -230, y: 70 }} animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.85, delay: 0.55, ease }} />
-          </svg>
+          <div className="splash-mark" aria-hidden>
+            <motion.svg viewBox="0 0 512 512" className="splash-bar"
+              initial={reduce ? { opacity: 0 } : { opacity: 0, x: -60, y: 18 }} animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.2, ease }}>
+              <defs><linearGradient id="sp-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#B2FAD0" /><stop offset="1" stopColor="#8BEFB4" /></linearGradient></defs>
+              <path d={TOP} fill="url(#sp-t)" />
+            </motion.svg>
+            <motion.svg viewBox="0 0 512 512" className="splash-bar"
+              initial={reduce ? { opacity: 0 } : { opacity: 0, x: -60, y: 18 }} animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.55, ease }}>
+              <defs><linearGradient id="sp-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#86EDB0" /><stop offset="1" stopColor="#5FD992" /></linearGradient></defs>
+              <path d={LOW} fill="url(#sp-l)" />
+            </motion.svg>
+          </div>
           <motion.div className="splash-word"
             initial={{ opacity: 0, letterSpacing: reduce ? "0.32em" : "0.6em" }} animate={{ opacity: 1, letterSpacing: "0.32em" }}
             transition={{ duration: 0.8, delay: reduce ? 0.1 : 1.15, ease }}>
