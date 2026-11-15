@@ -1,6 +1,6 @@
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
-import Splash from "./components/Splash";
+import { useCallback, useEffect, useState } from "react";
+import Splash, { splashWanted } from "./components/Splash";
 import { Icon, Logo } from "./components/ui";
 import Alerts from "./screens/Alerts";
 import Brief from "./screens/Brief";
@@ -37,11 +37,15 @@ export default function App() {
   useEffect(() => { window.scrollTo({ top: 0 }); }, [tab, ticker]);
 
   const go = (t: Tab, tk?: string | null) => { window.location.hash = tk ? `${t}/${tk}` : t; };
+  const [splash, setSplash] = useState(splashWanted);
+  const done = useCallback(() => setSplash(false), []);
 
   return (
     <>
       <div className="bg-glow" aria-hidden />
-      <Splash />
+      <AnimatePresence mode="wait">
+      {splash ? <Splash key="splash" onDone={done} /> : (
+      <motion.div key="app" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }}>
       <div className="app">
         <header className="topbar">
           <Logo />
@@ -71,6 +75,9 @@ export default function App() {
           ))}
         </LayoutGroup>
       </nav>
+      </motion.div>
+      )}
+      </AnimatePresence>
     </>
   );
 }
