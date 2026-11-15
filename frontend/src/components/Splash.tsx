@@ -17,7 +17,7 @@ export default function Splash() {
   });
   useEffect(() => {
     if (!show) return;
-    const t = setTimeout(() => setShow(false), reduce ? 900 : 2700);
+    const t = setTimeout(() => setShow(false), reduce ? 1000 : 3000);
     return () => clearTimeout(t);
   }, [show, reduce]);
 
@@ -25,7 +25,7 @@ export default function Splash() {
     <AnimatePresence>
       {show && (
         <motion.div className="splash" onClick={() => setShow(false)} role="presentation"
-          exit={{ opacity: 0, scale: 1.03 }} transition={{ duration: 0.4, ease }}>
+          exit={{ opacity: 0 }} transition={{ duration: 0.6, ease }}>
           <div className="splash-mark" aria-hidden>
             <motion.svg viewBox="0 0 512 512" className="splash-bar"
               initial={reduce ? { opacity: 0 } : { opacity: 0, x: -60, y: 18 }} animate={{ opacity: 1, x: 0, y: 0 }}
