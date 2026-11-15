@@ -204,7 +204,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
           {heroLeft.length === 0 && ranked.hero.length > 0 && (
             <motion.div className="glass card empty hero-glow" initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }}>
               <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden>
-                <circle cx="27" cy="27" r="25" fill="rgba(124,242,154,0.14)" stroke="var(--mint)" strokeWidth="2" />
+                <circle cx="27" cy="27" r="25" fill="rgba(102, 209, 158,0.14)" stroke="var(--mint)" strokeWidth="2" />
                 <motion.path d="M16 28l7 7 15-16" fill="none" stroke="var(--mint)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"
                   initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.5, delay: 0.1 }} />
               </svg>

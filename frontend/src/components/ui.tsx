@@ -71,7 +71,7 @@ export function Ring({ done, total }: { done: number; total: number }) {
           strokeDasharray={c} transform="rotate(-90 37 37)"
           initial={false} animate={{ strokeDashoffset: c * (1 - frac) }}
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
-          style={{ filter: "drop-shadow(0 0 6px rgba(124,242,154,0.55))" }}
+          style={{ filter: "drop-shadow(0 0 6px rgba(102, 209, 158,0.55))" }}
         />
       </svg>
       <div className="ring-label">
@@ -109,7 +109,7 @@ export function Bars({ data, label }: { data: { x: string; y: number | null; lin
         return (
           <g key={d.x}>
             <rect x={pad + i * bw + bw * 0.18} y={H - h} width={bw * 0.64} height={Math.max(h, 1)} rx="4"
-              fill={i === data.length - 1 ? "var(--mint)" : "rgba(124,242,154,0.28)"} />
+              fill={i === data.length - 1 ? "var(--mint)" : "rgba(102, 209, 158,0.28)"} />
             <text x={pad + i * bw + bw / 2} y={H + 14} textAnchor="middle" fontSize="10" fill="rgba(234,245,238,0.42)">{d.x}</text>
           </g>
         );
@@ -131,7 +131,7 @@ export function BandChart({ low, high, actual, unit }: { low: number | null; hig
   return (
     <svg viewBox="0 0 320 52" width="100%" role="img" aria-label={`target ${lo} to ${hi}${unit}, actual ${actual ?? "not yet"}${unit}`}>
       <line x1="12" x2="308" y1="26" y2="26" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
-      <rect x={x(lo)} y="18" width={Math.max(x(hi) - x(lo), 4)} height="16" rx="8" fill="rgba(124,242,154,0.22)" stroke="rgba(124,242,154,0.6)" />
+      <rect x={x(lo)} y="18" width={Math.max(x(hi) - x(lo), 4)} height="16" rx="8" fill="rgba(102, 209, 158,0.22)" stroke="rgba(102, 209, 158,0.6)" />
       <text x={(x(lo) + x(hi)) / 2} y="13" textAnchor="middle" fontSize="10" fill="rgba(234,245,238,0.6)">target {lo === hi ? lo : `${lo}–${hi}`}{unit}</text>
       {actual != null && (
         <g>
