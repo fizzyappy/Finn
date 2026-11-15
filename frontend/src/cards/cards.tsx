@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { Cite, CountUp, Icon } from "../components/ui";
-import { catLabel, fmtNum, fmtPct, fmtWhen, Json, metricLabel, monthYear, nice, pageLink, sameText, signClass, tidy } from "../lib/data";
+import { catLabel, cleanTitle, fmtNum, fmtPct, fmtWhen, Json, metricLabel, monthYear, nice, pageLink, sameText, signClass, tidy } from "../lib/data";
 
 /* ---------------------------------------------------------------- shared bits */
 export function Who({ e }: { e: Json }) {
@@ -43,7 +43,12 @@ export function ResultsBody({ e }: { e: Json }) {
   const cmp = c.compare_label || "QoQ";
   return (
     <div>
-      <div className="headline">{tidy(e.summary?.headline)}</div>
+      {c.status === "verified"
+        ? <div className="headline">{tidy(e.summary?.headline)}</div>
+        : <>
+            <div className="headline">Results filed · numbers not verified</div>
+            <div className="small faint" style={{ marginBottom: 6 }}>{cleanTitle(e.subject) || tidy(e.summary?.headline)}</div>
+          </>}
       <table className="metrics">
         <thead>
           <tr><th>{c.period_type === "half_year" ? "Half-year" : "Quarter"} · ₹ cr</th><th>Value</th><th>{cmp === "QoQ" ? "QoQ" : "vs H-1"}</th><th>YoY</th></tr>
