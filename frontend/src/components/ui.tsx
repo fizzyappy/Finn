@@ -64,17 +64,18 @@ export function Ring({ done, total }: { done: number; total: number }) {
   const frac = total ? done / total : 1;
   return (
     <div className="ring" role="img" aria-label={`${done} of ${total} cleared`}>
-      <svg width="100%" height="100%" viewBox="0 0 74 74">
+      <svg width="74" height="74" viewBox="0 0 74 74">
         <circle cx="37" cy="37" r={r} stroke="rgba(255,255,255,0.08)" strokeWidth="6" fill="none" />
         <motion.circle
           cx="37" cy="37" r={r} stroke="var(--mint)" strokeWidth="6" fill="none" strokeLinecap="round"
           strokeDasharray={c} transform="rotate(-90 37 37)"
           initial={false} animate={{ strokeDashoffset: c * (1 - frac) }}
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
+          style={{ filter: "drop-shadow(0 0 6px rgba(124,242,154,0.55))" }}
         />
       </svg>
       <div className="ring-label">
-        <div>{done}/{total}</div>
+        <div>{total - done}<small>LEFT</small></div>
       </div>
     </div>
   );

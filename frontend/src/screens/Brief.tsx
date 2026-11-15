@@ -126,11 +126,16 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
 
   const id = (e: Json) => `${e.symbol}|${e.uid || e.ts}`;
   const heroLeft = ranked.hero.filter((e) => !cleared.has(id(e)));
-  const heroDone = ranked.hero.length - heroLeft.length;
   const matter = ranked.hero.length + ranked.one.length;
   const collapsed: Record<string, Json> = brief.collapsed || {};
   const routine = Object.values(collapsed).reduce((a: number, c: Json) => a + c.count, 0);
 
+  const shownReq = requested || brief;
+  const reqRanked = quietLabel ? rerank(shownReq, tune) : ranked;
+  const head = {
+    filings: shownReq.header.filings, matter: reqRanked.hero.length + reqRanked.one.length,
+    total: reqRanked.hero.length, done: reqRanked.hero.filter((e: Json) => cleared.has(id(e))).length,
+  };
   const onScreen = new Set([...ranked.hero, ...ranked.one].map(id));
   const all14 = base14 ? [...(base14.hero || []), ...(base14.one_liners || [])] : [];
   const latestResults = all14
@@ -173,17 +178,20 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   return (
     <div>
       <div className="brief-head">
+        <Ring done={head.done} total={head.total} />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <h1 className="h1">{win === "custom" && range ? brief.window.label : "Your brief"}</h1>
+          {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
+          <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : win === "custom" && range ? shownReq.window.label : `Your ${shownReq.window.label}`}</h1>
           <div className="counts tnum">
-            <b>{matter}</b> matter · <b>{heroLeft.length}</b> to clear · {brief.header.filings} {plural(brief.header.filings, "filing")}
+            <b>{head.filings}</b> {plural(head.filings, "filing")} · <b>{head.matter}</b> matter · <b>{head.total - head.done}</b> left
           </div>
         </div>
-        {ranked.hero.length > 0 && <Ring done={heroDone} total={ranked.hero.length} />}
-        {matter > 0 && <button className={`icon-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
-          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"} title={playing ? "Stop" : "Play my brief"}>
-          {playing ? <span className="stop-sq" aria-hidden /> : Icon.speaker}
-        </button>}
+        <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
+          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"}
+          style={{ height: 40, padding: "0 12px", display: "flex", alignItems: "center", gap: 6,
+            ...(playing ? { background: "var(--mint)", color: "var(--mint-ink)", borderColor: "transparent" } : {}) }}>
+          {Icon.speaker}<span className="small" style={{ fontWeight: 600 }}>{playing ? "Stop" : "Play"}</span>
+        </button>
       </div>
 
       <div className="chips" role="toolbar" aria-label="Time window">
@@ -203,20 +211,23 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         )}
       </AnimatePresence>
       {liveNote && win === "custom" && <div className="notice" style={{ marginTop: 10 }}>{liveNote}</div>}
+
       {quietLabel && (
-        <div className="small muted" style={{ margin: "10px 2px 0" }}>
-          Nothing urgent {/^since/.test(quietLabel) ? quietLabel.replace("since you last looked", "since your last look") : `in the ${quietLabel}`}. Showing the {brief.window.label}.
+        <div className="glass card empty" style={{ marginTop: 14 }}>
+          <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
+          <div className="big">Quiet {quietLabel}</div>
+          <div className="muted">Nothing that needs you across your {brief.holdings.length} holdings. Here is what mattered in the {brief.window.label}.</div>
         </div>
       )}
-
       {ranked.hero.length === 0 && ranked.one.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>
+          <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
           <div className="big">Quiet {brief.window.label}</div>
           <div className="muted">Nothing material across your {brief.holdings.length} holdings.{routine ? ` ${routine} routine ${plural(routine, "filing")} collapsed below.` : ""}</div>
         </div>
       ) : ranked.hero.length === 0 ? null : (
         <>
-          <div className="section-title"><h2>Needs your attention</h2><span className="meta">tap Why? · swipe → to clear</span></div>
+          <div className="section-title"><h2>Needs your attention</h2><span className="meta">{quietLabel ? brief.window.label : "swipe → to clear"}</span></div>
           <AnimatePresence initial={false} mode="popLayout">
             {heroLeft.map((e) => (
               <motion.div key={id(e)} layout={!reduce} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
