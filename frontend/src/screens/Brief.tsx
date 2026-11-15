@@ -165,11 +165,24 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
           {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
           <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : win === "custom" && range ? shownReq.window.label : `Your ${shownReq.window.label}`}</h1>
           {quietLabel && <div className="quiet-line">{quietWhen}: nothing new</div>}
-          {!quietLabel && <div className="counts tnum">
-            <b>{head.filings}</b> {plural(head.filings, "filing")} · <b>{head.matter}</b> matter · <b>{head.total - head.done}</b> left
-          </div>}
+          {!quietLabel && <div className="counts tnum">{brief.window.label}</div>}
         </div>
       </div>
+      {head.filings > 0 && (
+        <div className="funnel tnum" aria-label={`${head.filings} filings, ${head.matter} worth knowing, ${head.total - head.done} need you`}>
+          <div className="funnel-bar">
+            <motion.span className="f1" initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 0.5 }} />
+            <motion.span className="f2" initial={{ width: 0 }} animate={{ width: `${Math.max(4, (head.matter / head.filings) * 100)}%` }} transition={{ duration: 0.6, delay: 0.15 }} />
+            <motion.span className="f3" initial={{ width: 0 }} animate={{ width: `${head.total - head.done ? Math.max(2, ((head.total - head.done) / head.filings) * 100) : 0}%` }} transition={{ duration: 0.6, delay: 0.3 }} />
+          </div>
+          <div className="funnel-text">
+            <span><b>{head.filings}</b> {plural(head.filings, "filing")}</span><span className="arr">→</span>
+            <span><b>{head.matter}</b> worth knowing</span><span className="arr">→</span>
+            <span className="need"><b>{head.total - head.done}</b> need you</span>
+            {quietLabel && <span className="faint">· {brief.window.label}</span>}
+          </div>
+        </div>
+      )}
 
       <div className="chips" role="toolbar" aria-label="Time window">
         {shownWindows.map((w) => (

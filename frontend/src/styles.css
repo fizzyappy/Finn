@@ -418,3 +418,14 @@ a.ticker-chip:active { transform: scale(0.96); }
 .sym-link:hover, a.ticker-chip:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .stat.zero { opacity: 0.45; }
+
+.funnel { margin: -4px 0 14px; }
+.funnel-bar { position: relative; height: 6px; border-radius: 6px; background: rgba(255,255,255,0.05); overflow: hidden; }
+.funnel-bar span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; }
+.funnel-bar .f1 { background: rgba(255,255,255,0.10); }
+.funnel-bar .f2 { background: rgba(102, 209, 158, 0.40); }
+.funnel-bar .f3 { background: var(--mint); }
+.funnel-text { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 6px; font-size: 12.5px; color: var(--text-2); }
+.funnel-text b { color: var(--text); font-weight: 600; }
+.funnel-text .arr { color: var(--text-3); }
+.funnel-text .need b { color: var(--mint-2); }
