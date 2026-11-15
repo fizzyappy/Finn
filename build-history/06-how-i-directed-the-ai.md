@@ -2,124 +2,126 @@
 
 [← Part 5](05-deploy-and-polish.md) · [Back to Part 1](01-research-and-plan.md)
 
-These are the instructions I gave Claude Code at each stage of the build, in order. They are my real requests,
-edited for clarity and grammar; the meaning of each one is unchanged. Under each stage is what the AI did with it.
+These are the things I actually told Claude Code while we built FINN, in the order they came up. I've cleaned up
+my spelling and grammar so they're easy to read, but they're still my words and my meaning. Under each stage is
+what the AI did with them.
 
 ---
 
 ## Setting the bar
 
-- Keep analysing your own work as you go. If something is weak, say so and improve it.
-- I don't want a fast app. I want a great app that stands out against the best submissions in the country.
-- Work directly in my project folder like an agent: write the code, run it, test it and fix it yourself.
-- Here is our earlier analysis and prototype. Use it as the starting point.
-- Ask me before installing anything, creating accounts, committing or pushing.
+- Keep analysing as you go. If something looks weak, tell me and make it better.
+- I don't want a fast app. I want a great one, something that actually stands out next to apps made by the best
+  people in the country.
+- Do the work yourself, in the project folder. Write it, run it, test it, fix it.
+- Here's our analysis and the prototype we made. Start from there.
+- Ask me before you install anything, make accounts, or push to GitHub.
 
-**What the AI did:** reviewed the earlier analysis and prototype, kept what held up, set the project rules, checked
-every tool on my PC and wrote the six-task plan.
+**What the AI did:** went through our analysis and prototype, kept what was solid, wrote down the rules for the
+project, checked every tool on my laptop and made a six-step plan.
 
-## Progress and priorities
+## Checking in
 
-- Tell me where we are, how long it will take, and when I can see the first version.
-- We deploy at the end. First I want to see the app working, improve it, and only then put it on Vercel.
-- Can I see it on my phone? What exactly are the deliverables, and how do I submit?
-- Finish every deliverable you think the app needs first. Then I'll review it.
-- Keep working while I'm away, and tell me what changed when I'm back.
+- Where are we? How long until it's done, and when can I see the first version?
+- We'll deploy at the end. First I want to see it working and improve it, then we go to Vercel.
+- Can I open it on my phone? What exactly do we have to submit, and how?
+- Finish everything you think the app needs first. Then I'll sit down and look at it.
+- I had to close my laptop for a bit. Keep going, and tell me what changed.
 
-**What the AI did:** worked through the tasks end to end, reported progress in plain language, ran the app on my
-laptop for phone testing, and listed exactly what only I could do.
+**What the AI did:** kept building task by task, told me where things stood in plain words, ran the app so I could
+try it on my phone, and listed exactly what only I could do.
 
-## Deployment
+## Getting it online
 
-- Send me the steps for Render. I'll do the parts that need my account.
-- Render is asking for a card. Find a way that works without one, or tell me my options.
-- I've chosen Render. Remove the alternative you prepared, and don't build options I haven't asked for.
-- Here is the Render address and a new key. Test everything from the cloud.
-- I deployed to Vercel without the environment variable. What do I do now?
-- Give me the final links to open the app on my laptop and on my phone.
+- Send me the Render steps. I'll do the bits that need my account.
+- Render is asking for a card. What are my options?
+- I'm going with Render. Take out the other thing you set up, and don't build stuff I didn't ask for.
+- Here's the Render link and a fresh key. Test everything from the cloud.
+- I deployed on Vercel but forgot the environment variable. What now?
+- Just give me the final links, one for my laptop and one for my phone.
 
-**What the AI did:** gave click-by-click steps, removed the unrequested alternative, tested the live server end to
-end, fixed the Vercel setting with one redeploy, and checked the app on the public link.
+**What the AI did:** gave me step-by-step clicks, removed what I didn't want, tested the live server properly,
+fixed the Vercel setting with one redeploy, and checked the real public link.
 
 ## The outside review
 
-- Here is a detailed critical review of the app. Analyse which points actually matter for the challenge and for a
-  world-class app, then work on those first.
-- The font size feels too large and doesn't look premium. Take action if you agree.
+- Here's a detailed review of the app. Figure out which points actually matter for the challenge and for making
+  this world class, and do those first.
+- The font feels too big, it doesn't look premium. Fix it if you agree.
 
-**What the AI did:** ranked the review's points by what a reviewer sees first, what the brief asks for, and what was
-safe before submission, then fixed them in that order.
+**What the AI did:** sorted the review into what a reviewer notices first, what the brief asks for, and what was
+safe to change before submitting, and worked through it in that order.
 
 ## The first screen
 
-- The first page looks clumsy. Nobody wants to wake up to that.
-- I want the first page as clean and polished as the original version.
-- If the last three days are also empty, show only 24 hours, 7 days and Custom.
-- Start with a slim "nothing new today" line and a clearly labelled "earlier this week" section, with no empty card
-  and no contradictory zeros.
+- The first page looks clumsy. Who wants to wake up to that?
+- I want it as clean and pretty as the earlier version.
+- If there's nothing in the last three days either, just show 24 hours, 7 days and Custom.
+- Put a small "nothing new today" line, then a proper "earlier this week" section. No big empty card, no zeros
+  that don't make sense.
 
-**What the AI did:** rebuilt the header, restored the look I preferred while keeping the new content, hid empty time
-windows and replaced the empty state.
+**What the AI did:** rebuilt the top of the screen, brought back the look I liked while keeping the new stuff, hid
+the empty time options and fixed the empty state.
 
-## Look and feel
+## How it looks and feels
 
-- The neon green looks tacky. Tone it down. Most good apps use a plain background, so keep the tint only near the
+- The neon green looks tacky, tone it down. Apps usually have a plain background, so keep the green just near the
   logo.
-- Make the app easy to navigate and understand, with smooth, app-like movement.
-- The bottom bar is bulky. Make it slimmer and cleaner. Now it gets lost on the page, so give it a slight 3D look.
-- Highlight the company name on each card, for example in a box.
-- Remove the voice that reads the news. It sounds mechanical and over-engineered.
+- It's hard to find your way around. Make it easy, and make it move smoothly like a good app.
+- The bottom bar is too bulky, make it slimmer. Now it's getting lost on the page, give it a bit of a 3D feel.
+- Make the company name stand out on each card, maybe put it in a box.
+- Take out the voice that reads the news. It sounds mechanical and over the top.
 
-**What the AI did:** a calmer accent and plain background, labelled tabs and smooth transitions, a slimmer raised
-bottom bar, company names in tappable chips, and the voice feature removed.
+**What the AI did:** softer green on a plain background, labels on every tab and smooth transitions, a slimmer
+raised bottom bar, company names in boxes you can tap, and the voice taken out.
 
-## Identity
+## The logo
 
-- This is how I want my logo to look. Make the FINN lettering thinner.
-- Remove the updated time from the header. The logo in the top-left corner hasn't changed on my phone.
-- When the app opens, the logo should form in a short animation of two to three seconds.
-- It's flickering on my phone. Fix it properly.
+- This is how I want my logo. Make the FINN letters a little thinner.
+- Remove the updated time at the top. And the logo top-left still hasn't changed on my phone.
+- When someone opens the app, I want the logo to form in a tiny animation, two or three seconds.
+- It's still flickering on my phone. Sort it out properly.
 
-**What the AI did:** redrew my logo as a vector, lightened the wordmark, forced every device to load the new icon,
-built the opening animation, and found and fixed the real causes of the flicker on iPhone.
+**What the AI did:** redrew my logo cleanly, made the lettering lighter, made sure every phone loads the new icon,
+added the opening animation, and found what was really causing the flicker on iPhone and fixed it.
 
-## Details on each screen
+## Small things on each screen
 
-- The value boxes in the alert sentence are almost touching. Reduce the font size.
-- Make the alert history rows less messy.
+- The boxes in the alert sentence are almost touching, make the text smaller.
+- The alert history looks messy, clean it up.
 - The research list looks cluttered.
-- The Filing button is oddly small. The Ask button is oddly small too.
-- The Mute / Normal / Boost buttons don't look clickable. Mute and Normal look the same, so give them different
-  colours. The slide is too bouncy; keep just a little bounce.
-- Does the cost meter need to be in the app? If it does, put it in the best place.
+- The Filing button is weirdly small. So is the Ask button.
+- The Mute / Normal / Boost buttons don't look like you can tap them. Mute and Normal look the same, give them
+  different colours. The slide is too bouncy, keep just a little bounce.
+- Do we even need the cost meter? If yes, put it somewhere that makes sense.
 
-**What the AI did:** fixed each one, re-checked every screen after each change, and sent me a screenshot.
+**What the AI did:** fixed each one, re-checked every screen after every change, and sent me a screenshot each time.
 
-## Product upgrades
+## Bigger upgrades
 
-- Do these seven, in this order, and put each one live as soon as it's done: FINN's take on company pages,
-  pre-research more large companies, a queue position, a safer daily refresh, labelled charts with tap-to-read
-  values, directional promise checks, and bank numbers for lenders.
-- Directional promises: go with your recommendation and leave them for after the submission.
-- Apply these fifteen interface changes, putting each live as soon as it's done.
+- Do these seven in this order and put each one live as soon as it's ready: FINN's take on company pages,
+  pre-load more big companies, show people their place in the queue, make the daily refresh safer, label the charts
+  and let me tap for values, check direction-only promises, and add bank numbers.
+- For the direction-only promises, go with what you think is right.
+- Now do these fifteen interface changes, each one live as soon as it's done.
 
-**What the AI did:** built and shipped each item separately, and explained why the directional promise check was
-safer to postpone.
+**What the AI did:** built and shipped each one separately, and explained why the direction-only promise check was
+safer to leave until after submitting.
 
 ## Charts
 
-- Make the graphs prettier. Don't copy anyone. Show how good charts can look.
-- Use a mountain chart, with a small white dot on each peak.
-- The alert peaks should look like they are reaching heights, with a bit more green.
-- Only the cash-quality chart should be a mountain. Everything else stays as it was.
+- Make the graphs prettier. Don't copy anyone, just show me how good charts can look.
+- I like mountain charts, with a tiny white dot on each peak.
+- The alert peaks should feel like they're reaching up, with a bit more green.
+- Only the cash-quality chart should be a mountain. Leave everything else as it was.
 
-**What the AI did:** redesigned the charts, tried mountain styles, and kept the mountain only for cash quality, as I
+**What the AI did:** redesigned the charts, tried the mountain style, and kept it only for cash quality like I
 decided.
 
-## Submission
+## Wrapping up
 
-- Write the build history explaining how we worked, why each decision was made and how we used AI.
-- Credit my logo first. No dates, no emojis, no outside references.
-- Draft my covering email.
+- Write up how we built this: how we worked, why we made each decision, and how we used AI.
+- Put my logo first. No dates, no emojis, nothing about anyone else's work.
+- Write my email for me too.
 
-**What the AI did:** wrote this build history from the real work and drafted the covering email.
+**What the AI did:** wrote this build history from the real work and drafted my covering email.
