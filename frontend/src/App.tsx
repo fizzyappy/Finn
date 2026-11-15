@@ -1,5 +1,6 @@
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Splash from "./components/Splash";
 import { Icon, Logo } from "./components/ui";
 import Alerts from "./screens/Alerts";
 import Brief from "./screens/Brief";
@@ -40,6 +41,7 @@ export default function App() {
   return (
     <>
       <div className="bg-glow" aria-hidden />
+      <Splash />
       <div className="app">
         <header className="topbar">
           <Logo />
