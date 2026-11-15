@@ -53,7 +53,8 @@ This log is a readable account of that collaboration. The raw conversation expor
 - React + Vite PWA, checked on every screen with Playwright and axe (accessibility, contrast, overflow).
 - Ships a snapshot of real outputs so the link always works; a live backend reads companies outside it.
 - Added late on 14 Nov: **Ask about this company** (answers only from cited evidence, numbers re-checked) and
-  **Play my brief** (the phone reads the cards that matter).
+  **Play my brief** (the phone read the cards aloud). The author later removed Play my brief: the phone's built-in
+  voice sounded mechanical and the feature felt over-engineered.
 
 ### 5. Deployment (14–15 Nov)
 - Render (backend) asked the author's account for a card. Claude prepared a no-card alternative without being asked;

@@ -63,7 +63,7 @@ flowchart LR
 ```
 
 - **Backend** (`backend/finn`): data layer, push engine (`push/`), pull engine (`pull/`), one LLM router (`llm.py`), FastAPI (`api.py`).
-- **App** (`frontend/`): Brief (with any date range and **Play my brief**, read aloud on the phone), Research (with
+- **App** (`frontend/`): Brief (with any date range), Research (with
   **Ask about this company**, answered only from its cited sources), Alerts, Settings; installable PWA; ships a snapshot
   of real outputs so the link always works, and uses the live backend (Render) for companies outside it.
 - **Ops**: a GitHub Action rebuilds the data every weekday at 16:45 IST; another keeps the free backend awake.

@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { SwipeCard, ReactionChip } from "../cards/cards";
-import { Cite, Icon, Ring } from "../components/ui";
+import { Cite, Ring } from "../components/ui";
 import { api, backendAlive, briefForRange, catLabel, cleanTitle, fmtDay, fmtWhen, Json, prefs, sameText, snapshot, tidy, WindowKey, WINDOWS } from "../lib/data";
 
 const HERO = 0.6, ONE = 0.3;
@@ -68,8 +68,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const [tune, setTune] = useState<Record<string, number>>(() => prefs.tune());
   const [openCat, setOpenCat] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
-  const [playing, setPlaying] = useState(false);
-  useEffect(() => () => { if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }, []);
 
   const [range, setRange] = useState<{ from: string; to: string } | null>(null);
   const [picking, setPicking] = useState(false);
@@ -126,7 +124,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
 
   const id = (e: Json) => `${e.symbol}|${e.uid || e.ts}`;
   const heroLeft = ranked.hero.filter((e) => !cleared.has(id(e)));
-  const matter = ranked.hero.length + ranked.one.length;
   const collapsed: Record<string, Json> = brief.collapsed || {};
   const routine = Object.values(collapsed).reduce((a: number, c: Json) => a + c.count, 0);
 
@@ -149,32 +146,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
     setTune({ ...tune, [e.category]: next });
     setToast(`Less ${catLabel(e.category)} from now on (×${next.toFixed(2)}). Undo in Settings.`);
   };
-  /** "Play my brief": the cards that need attention, read in about a minute (≈150 words). */
-  const playBrief = () => {
-    if (!("speechSynthesis" in window)) { setToast("This browser can't read aloud."); return; }
-    const synth = window.speechSynthesis;
-    if (playing) { synth.cancel(); setPlaying(false); return; }
-    const intro = heroLeft.length
-      ? `${heroLeft.length} ${plural(heroLeft.length, "thing")} need your attention.`
-      : `Nothing needs your attention. ${matter} ${plural(matter, "item")} worth knowing.`;
-    const parts = [intro];
-    let words = intro.split(" ").length;
-    for (const e of heroLeft) {
-      const line = `${e.symbol}: ${tidy(e.summary?.headline || e.subject).replace(/₹([\d,.]+) cr/g, "$1 crore rupees").replace(/₹/g, "rupees ")}.`;
-      if (words + line.split(" ").length > 150) break;
-      parts.push(line);
-      words += line.split(" ").length;
-    }
-    synth.cancel();
-    const u = new SpeechSynthesisUtterance(parts.join(" "));
-    u.lang = "en-IN";
-    u.rate = 1.0;
-    u.onend = () => setPlaying(false);
-    u.onerror = () => setPlaying(false);
-    setPlaying(true);
-    synth.speak(u);
-  };
-
   return (
     <div>
       <div className="brief-head">
@@ -186,12 +157,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
             <b>{head.filings}</b> {plural(head.filings, "filing")} · <b>{head.matter}</b> matter · <b>{head.total - head.done}</b> left
           </div>
         </div>
-        <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
-          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"}
-          style={{ height: 40, padding: "0 12px", display: "flex", alignItems: "center", gap: 6,
-            ...(playing ? { background: "var(--mint)", color: "var(--mint-ink)", borderColor: "transparent" } : {}) }}>
-          {Icon.speaker}<span className="small" style={{ fontWeight: 600 }}>{playing ? "Stop" : "Play"}</span>
-        </button>
       </div>
 
       <div className="chips" role="toolbar" aria-label="Time window">
