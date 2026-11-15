@@ -17,7 +17,7 @@ from .push import alerts, digest, portfolio
 from .store import store
 
 OUT = config.ROOT / "frontend" / "public" / "data"
-RESEARCH_NAMES = ["ASIANPAINT", "TITAN", "HAL"]
+RESEARCH_NAMES = ["ASIANPAINT", "TITAN", "HAL", "TCS", "SBIN", "BHARTIARTL", "ICICIBANK"]
 
 
 
