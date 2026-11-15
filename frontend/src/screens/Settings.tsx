@@ -6,6 +6,9 @@ const SOURCE_LABEL: Record<string, string> = {
   screener_recent: "Screener recent list", rss_store: "BSE + NSE official RSS",
 };
 
+const TYPES = ["results", "M&A", "management_change", "fund_raise", "litigation", "insider_trading", "pledging",
+  "credit_rating", "capex", "dividend", "bonus_split", "press_release"];
+
 export default function Settings() {
   const [meta, setMeta] = useState<Json | null>(null);
   const [base, setBase] = useState(prefs.apiBase());
@@ -60,15 +63,25 @@ export default function Settings() {
         ))}
       </div>
 
-      {Object.keys(tune).length > 0 && (
-        <>
-          <div className="section-title"><h2>Tuned by your swipes</h2></div>
-          <div className="glass card">
-            {Object.entries(tune).map(([cat, v]) => <div key={cat} className="kv"><span className="k">{catLabel(cat)}</span><span className="v">×{v.toFixed(2)}</span></div>)}
-            <button className="btn secondary small" style={{ marginTop: 12 }} onClick={() => { prefs.setTune({}); setTune({}); }}>Reset</button>
-          </div>
-        </>
-      )}
+      <div className="section-title"><h2>Announcement types</h2><span className="meta">what reaches your brief</span></div>
+      <div className="glass card">
+        {TYPES.map((cat) => {
+          const v = tune[cat] ?? 1;
+          const level = v <= 0.35 ? "mute" : v >= 1.4 ? "boost" : v === 1 ? "normal" : "tuned";
+          const set = (x: number) => { const t = { ...tune, [cat]: x }; if (x === 1) delete t[cat]; prefs.setTune(t); setTune(t); };
+          return (
+            <div key={cat} className="type-row">
+              <span className="small">{catLabel(cat)}{level === "tuned" ? <span className="faint"> · ×{v.toFixed(2)} from swipes</span> : null}</span>
+              <span className="seg" role="group" aria-label={`${catLabel(cat)} alerts`}>
+                <button aria-pressed={level === "mute"} onClick={() => set(0.3)}>Mute</button>
+                <button aria-pressed={level === "normal"} onClick={() => set(1)}>Normal</button>
+                <button aria-pressed={level === "boost"} onClick={() => set(1.5)}>Boost</button>
+              </span>
+            </div>
+          );
+        })}
+        <p className="faint small" style={{ marginBottom: 0 }}>Boost moves a type up to "needs your attention"; mute collapses it with the routine filings. Swiping a card left also turns its type down.</p>
+      </div>
 
       <div className="section-title"><h2>Data</h2><span className="meta">as of {fmtWhen(meta?.generated_at)}</span></div>
       <div className="glass card kv">
