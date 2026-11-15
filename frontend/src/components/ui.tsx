@@ -155,6 +155,8 @@ export function Bars({ data, label, metric, fmt, lineName }: {
           <linearGradient id="line-area" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#f5c86b" stopOpacity="0.22" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0" />
           </linearGradient>
+          <filter id="dot-glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="1.6" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
           <linearGradient id="mtn-fill" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--mint)" stopOpacity="0.42" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.02" />
           </linearGradient>
@@ -177,11 +179,14 @@ export function Bars({ data, label, metric, fmt, lineName }: {
               <motion.path d={top_} fill="none" stroke="var(--mint)" strokeWidth="2.2" strokeLinecap="round"
                 initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.0, ease: [0.2, 0.8, 0.2, 1] }} />
               {selP && <line x1={selP.x} x2={selP.x} y1={selP.y} y2={base} stroke="rgba(255,255,255,0.18)" strokeDasharray="2 3" />}
-              {vp.map((p) => {
+              {vp.map((p, k) => {
                 const hot = p.i >= data.length - 2;
-                return <circle key={p.i} cx={p.x} cy={p.y} r={p.i === sel ? 5 : hot ? 3.6 : 2.6}
-                  fill={p.i === sel || p.i === data.length - 1 ? "var(--mint)" : "#0b0c0c"} stroke="var(--mint)" strokeWidth="1.6"
-                  opacity={hot || p.i === sel ? 1 : 0.6} />;
+                const peak = (k === vp.length - 1 || p.y <= vp[k + 1].y) && (k === 0 ? false : p.y <= vp[k - 1].y) || k === vp.length - 1;
+                return peak
+                  ? <g key={p.i}><circle cx={p.x} cy={p.y} r="6" fill="rgba(255,255,255,0.18)" />
+                      <circle cx={p.x} cy={p.y} r={p.i === sel ? 4 : 3.2} fill="#ffffff" filter="url(#dot-glow)" /></g>
+                  : <circle key={p.i} cx={p.x} cy={p.y} r={p.i === sel ? 4.5 : 2.4}
+                      fill={p.i === sel ? "var(--mint)" : "#0b0c0c"} stroke="var(--mint)" strokeWidth="1.4" opacity={hot || p.i === sel ? 1 : 0.6} />;
               })}
             </g>
           );
@@ -271,6 +276,8 @@ export function Mountain({ points, name }: { points: { d: string; s: number; n: 
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" className="chart"
       aria-label={`${name} ${lab(last.s)} vs Nifty ${lab(last.n)} over the period`}>
       <defs>
+        <filter id="dot-glow2" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="1.5" result="b" />
+          <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
         <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="var(--mint)" stopOpacity="0.38" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0" />
         </linearGradient>
@@ -282,7 +289,17 @@ export function Mountain({ points, name }: { points: { d: string; s: number; n: 
         initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
       <motion.path d={sLine} fill="none" stroke="var(--mint)" strokeWidth="2" strokeLinejoin="round"
         initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
-      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="3.5" fill="var(--mint)" />
+      {(() => {
+        // the three highest local peaks of the stock line, plus the end point
+        const pk = sPts.map((p, i) => ({ p, i })).filter(({ i }) => i > 2 && i < sPts.length - 3
+          && sPts[i][1] <= Math.min(...sPts.slice(i - 3, i + 4).map((q) => q[1])))
+          .sort((a, b) => a.p[1] - b.p[1]).slice(0, 3);
+        return pk.map(({ p, i }) => (
+          <g key={i}><circle cx={p[0]} cy={p[1]} r="5" fill="rgba(255,255,255,0.16)" /><circle cx={p[0]} cy={p[1]} r="2.6" fill="#fff" filter="url(#dot-glow2)" /></g>
+        ));
+      })()}
+      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="6" fill="rgba(255,255,255,0.18)" />
+      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="3.4" fill="#fff" filter="url(#dot-glow2)" />
       <text x={W - right + 6} y={sy + 4 + gap} fontSize="11" fontWeight="700" fill={last.s >= 0 ? "var(--up)" : "#f29a9a"}>{lab(last.s)}</text>
       <text x={W - right + 6} y={ny + 4 - gap} fontSize="10" fill="rgba(236,239,237,0.55)">Nifty {lab(last.n)}</text>
       <text x={left} y={H - 8} fontSize="10" fill="rgba(236,239,237,0.45)">{fmt(points[0].d)}</text>
