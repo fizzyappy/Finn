@@ -409,3 +409,5 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 
 .quiet-line { margin-top: 6px; font-size: 13.5px; color: var(--text-2); display: inline-flex; align-items: center; gap: 7px; }
 .quiet-line::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--text-3); }
+
+.done-btn { color: var(--mint-2); border-color: rgba(102, 209, 158, 0.4); background: rgba(102, 209, 158, 0.08); }

@@ -81,7 +81,7 @@ await shot(p, "05-brief-after-swipe-clear", false);
 for (let i = 0; i < 12; i++) {
   // the screen-reader buttons are visually hidden, so trigger them as assistive tech would
   const n = await p.evaluate(() => {
-    const b = [...document.querySelectorAll("button")].find((x) => x.textContent === "Clear this card");
+    const b = [...document.querySelectorAll("button")].find((x) => x.textContent === "Done ✓" && !x.closest("[inert]"));
     if (b) b.click();
     return b ? 1 : 0;
   });

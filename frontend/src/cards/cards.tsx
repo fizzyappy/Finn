@@ -207,10 +207,10 @@ export function SwipeCard({ e, onClear, onLess, weight }: { e: Json; onClear: ()
                 <div style={{ display: "flex", gap: 6 }}>
                   {e.url && <Cite href={e.url}>Filing ↗</Cite>}
                   <button className="why-btn" onClick={(ev) => { ev.stopPropagation(); setFlipped(true); }} aria-label={`Why am I seeing ${e.symbol}?`}>Why?</button>
+                  <button className="why-btn done-btn" onClick={(ev) => { ev.stopPropagation(); onClear(); }} aria-label={`Done with ${e.symbol}: clear this card`}>Done ✓</button>
                 </div>
               </div>
               <div className="sr-only">
-                <button onClick={onClear}>Clear this card</button>
                 <button onClick={onLess}>Show less like this</button>
               </div>
             </article>
