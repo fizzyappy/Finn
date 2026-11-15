@@ -68,8 +68,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const [tune, setTune] = useState<Record<string, number>>(() => prefs.tune());
   const [openCat, setOpenCat] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
-  const [tip, setTip] = useState(() => { try { return !localStorage.getItem("finn.tip"); } catch { return false; } });
-  const closeTip = () => { setTip(false); try { localStorage.setItem("finn.tip", "1"); } catch { /* private mode */ } };
   const [playing, setPlaying] = useState(false);
   useEffect(() => () => { if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }, []);
 
@@ -175,30 +173,19 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   return (
     <div>
       <div className="brief-head">
-        {ranked.hero.length > 0 && <Ring done={heroDone} total={ranked.hero.length} />}
         <div style={{ flex: 1, minWidth: 0 }}>
-          {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
-          <h1 className="h1">{quietLabel ? `Nothing urgent ${/^since/.test(quietLabel) ? "" : "in the "}${quietLabel}` : win === "since_last_look" ? "Since last look" : win === "custom" && range ? brief.window.label : `Your ${brief.window.label}`}</h1>
-          {quietLabel && <div className="small muted" style={{ marginTop: 4 }}>Here is what mattered in the {brief.window.label}.</div>}
+          <h1 className="h1">{win === "custom" && range ? brief.window.label : "Your brief"}</h1>
           <div className="counts tnum">
-            <b>{brief.header.filings}</b> {plural(brief.header.filings, "filing")} · <b>{matter}</b> matter · <b>{heroLeft.length}</b> left
-            {brief.alerts?.length ? <> · <b>{brief.alerts.length}</b> moves</> : null}
+            <b>{matter}</b> matter · <b>{heroLeft.length}</b> to clear · {brief.header.filings} {plural(brief.header.filings, "filing")}
           </div>
         </div>
-        {matter > 0 && <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
-          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"}
-          style={{ height: 40, padding: "0 12px", display: "flex", alignItems: "center", gap: 6,
-            ...(playing ? { background: "var(--mint)", color: "var(--mint-ink)", borderColor: "transparent" } : {}) }}>
-          {Icon.speaker}<span className="small" style={{ fontWeight: 600 }}>{playing ? "Stop" : "Play"}</span>
+        {ranked.hero.length > 0 && <Ring done={heroDone} total={ranked.hero.length} />}
+        {matter > 0 && <button className={`icon-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
+          aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"} title={playing ? "Stop" : "Play my brief"}>
+          {playing ? <span className="stop-sq" aria-hidden /> : Icon.speaker}
         </button>}
       </div>
 
-      {tip && (
-        <div className="glass" style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", marginBottom: 12, fontSize: 12.5 }}>
-          <span className="muted" style={{ flex: 1 }}>Tap <b style={{ color: "var(--text)" }}>Why?</b> on any card · swipe right to clear · <b style={{ color: "var(--text)" }}>Play</b> to listen</span>
-          <button className="why-btn" onClick={closeTip} aria-label="Dismiss tip">Got it</button>
-        </div>
-      )}
       <div className="chips" role="toolbar" aria-label="Time window">
         {WINDOWS.map((w) => (
           <button key={w.key} className="chip" aria-pressed={w.key === win}
@@ -216,6 +203,11 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         )}
       </AnimatePresence>
       {liveNote && win === "custom" && <div className="notice" style={{ marginTop: 10 }}>{liveNote}</div>}
+      {quietLabel && (
+        <div className="small muted" style={{ margin: "10px 2px 0" }}>
+          Nothing urgent {/^since/.test(quietLabel) ? quietLabel.replace("since you last looked", "since your last look") : `in the ${quietLabel}`}. Showing the {brief.window.label}.
+        </div>
+      )}
 
       {ranked.hero.length === 0 && ranked.one.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>
@@ -224,7 +216,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         </div>
       ) : ranked.hero.length === 0 ? null : (
         <>
-          <div className="section-title"><h2>Needs your attention</h2><span className="meta">swipe → to clear</span></div>
+          <div className="section-title"><h2>Needs your attention</h2><span className="meta">tap Why? · swipe → to clear</span></div>
           <AnimatePresence initial={false} mode="popLayout">
             {heroLeft.map((e) => (
               <motion.div key={id(e)} layout={!reduce} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
