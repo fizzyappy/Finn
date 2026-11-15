@@ -533,7 +533,7 @@ function Trajectory({ t, lender, note }: { t: Json; lender?: boolean; note?: str
   const c3 = t.cagr_pct?.["3y"] || {}, c5 = t.cagr_pct?.["5y"] || {};
   return (
     <>
-      <Title meta="7 years">Trajectory</Title>
+      <Title meta="7 years · tap a bar">Trajectory</Title>
       <div className="glass card">
         {note && <div className="chart-note">{note}</div>}
         <Bars label="Annual revenue" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr`}
