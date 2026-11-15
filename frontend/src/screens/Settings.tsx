@@ -66,7 +66,7 @@ export default function Settings() {
               <span className="seg" role="group" aria-label={`${catLabel(cat)} alerts`}>
                 {([["mute", "Mute", 0.3], ["normal", "Normal", 1], ["boost", "Boost", 1.5]] as const).map(([k, label, x]) => (
                   <button key={k} className={`seg-${k}`} aria-pressed={level === k} onClick={() => set(x)}>
-                    {level === k && <motion.span layoutId={`seg-${cat}`} className="seg-thumb" transition={{ type: "spring", stiffness: 500, damping: 36 }} />}
+                    {level === k && <motion.span layoutId={`seg-${cat}`} className="seg-thumb" transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }} />}
                     <span className="seg-label">{label}</span>
                   </button>
                 ))}

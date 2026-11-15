@@ -453,3 +453,7 @@ a.ticker-chip:active { transform: scale(0.96); }
 /* peaks: more green */
 .strip > div.fire { background: linear-gradient(0deg, rgba(102, 209, 158, 0.55), #8ff0bd); box-shadow: 0 0 8px rgba(102, 209, 158, 0.55); }
 .strip > div.fire::after { background: #eafff3; box-shadow: 0 0 7px 2px rgba(102, 209, 158, 0.85); }
+
+/* toggle: colour fades with the slide instead of snapping */
+.seg button { transition: color .25s ease; }
+.seg-thumb { transition: background .28s ease, box-shadow .28s ease; }
