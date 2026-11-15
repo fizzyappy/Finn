@@ -214,14 +214,14 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
 
       {quietLabel && (
         <div className="glass card empty" style={{ marginTop: 14 }}>
-          <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
+          <img src="/icons/finn-f.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
           <div className="big">Quiet {quietLabel}</div>
           <div className="muted">Nothing that needs you across your {brief.holdings.length} holdings. Here is what mattered in the {brief.window.label}.</div>
         </div>
       )}
       {ranked.hero.length === 0 && ranked.one.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>
-          <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
+          <img src="/icons/finn-f.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
           <div className="big">Quiet {brief.window.label}</div>
           <div className="muted">Nothing material across your {brief.holdings.length} holdings.{routine ? ` ${routine} routine ${plural(routine, "filing")} collapsed below.` : ""}</div>
         </div>

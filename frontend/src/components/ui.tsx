@@ -52,7 +52,7 @@ export const Icon = {
 export function Logo() {
   return (
     <div className="brand">
-      <img src="/icons/finn.svg" alt="" width={30} height={30} />
+      <img src="/icons/finn-f.svg" alt="" width={30} height={30} />
       <span>FINN</span>
     </div>
   );

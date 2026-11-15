@@ -1,7 +1,6 @@
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon, Logo } from "./components/ui";
-import { fmtWhen, Json, snapshot } from "./lib/data";
 import Alerts from "./screens/Alerts";
 import Brief from "./screens/Brief";
 import Research from "./screens/Research";
@@ -22,7 +21,6 @@ function parseHash(): { tab: Tab; ticker: string | null } {
 export default function App() {
   const reduce = useReducedMotion();
   const [{ tab, ticker }, setRoute] = useState(parseHash);
-  const [meta, setMeta] = useState<Json | null>(null);
   const [dir, setDir] = useState(1);
   const [prevTab, setPrevTab] = useState(tab);
   if (tab !== prevTab) {           // slide left when moving right along the nav, and back
@@ -33,7 +31,6 @@ export default function App() {
   useEffect(() => {
     const on = () => setRoute(parseHash());
     window.addEventListener("hashchange", on);
-    snapshot("meta.json").then(setMeta).catch(() => setMeta(null));
     return () => window.removeEventListener("hashchange", on);
   }, []);
   useEffect(() => { window.scrollTo({ top: 0 }); }, [tab, ticker]);
@@ -46,7 +43,7 @@ export default function App() {
       <div className="app">
         <header className="topbar">
           <Logo />
-          <div className="asof">Updated {meta ? fmtWhen(meta.generated_at) : "…"}<br />NSE · BSE · primary sources</div>
+          <div className="asof">NSE · BSE<br />primary sources</div>
         </header>
         <main>
           <AnimatePresence mode="wait" initial={false}>

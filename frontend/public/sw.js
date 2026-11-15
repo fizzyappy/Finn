@@ -1,6 +1,6 @@
 /* FINN service worker: app shell + data snapshot work offline; live API is never cached. */
-const VERSION = "finn-v2";
-const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icons/finn.svg", "/icons/icon-192.png"];
+const VERSION = "finn-v3";
+const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icons/finn-f.svg", "/icons/f-icon-192.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
