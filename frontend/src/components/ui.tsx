@@ -254,9 +254,9 @@ export function peaksOf(v: number[], w: number) {
 /** Mountain chart drawn from the real points with straight segments (no smoothing): a strong gradient
  *  fill under the line, a small glowing white dot on every peak and a bigger one on the latest point.
  *  Optional: a dashed comparison line (e.g. the Nifty), a dashed reference level (e.g. ₹1). */
-export function Peaks({ pts, color = "green", compare, refLine, fmt, endLabels, peakWindow = 1, aria, height = 150 }: {
+export function Peaks({ pts, color = "green", compare, refLine, fmt, endLabels, peakWindow = 1, aria, height = 150, mountain = true }: {
   pts: { x: string; v: number }[]; color?: "green" | "gold"; compare?: number[]; refLine?: { v: number; label: string };
-  fmt: (v: number) => string; endLabels?: "values" | "dates"; peakWindow?: number; aria: string; height?: number;
+  fmt: (v: number) => string; endLabels?: "values" | "dates"; peakWindow?: number; aria: string; height?: number; mountain?: boolean;
 }) {
   const reduce = useReducedMotion();
   const [sel, setSel] = useState<number | null>(null);
@@ -292,13 +292,13 @@ export function Peaks({ pts, color = "green", compare, refLine, fmt, endLabels, 
           <line x1={left} x2={W - right} y1={y(refLine.v)} y2={y(refLine.v)} stroke="rgba(255,255,255,0.45)" strokeDasharray="4 4" />
           <text x={x(Math.floor((pts.length - 1) / 2))} y={y(refLine.v) + 13} textAnchor="middle" fontSize="10" fill="rgba(236,239,237,0.7)">{refLine.label}</text>
         </>}
-        <motion.path d={area} fill={`url(#${id}-f)`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} />
+        {mountain && <motion.path d={area} fill={`url(#${id}-f)`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} />}
         {compare && <motion.path d={path(compare)} fill="none" stroke="rgba(236,239,237,0.5)" strokeWidth="1.2" strokeDasharray="3 3"
           initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />}
         <motion.path d={line} fill="none" stroke={c} strokeWidth="1.8" strokeLinejoin="miter"
           initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1, ease: [0.2, 0.8, 0.2, 1] }} />
         {sel != null && <line x1={x(sel)} x2={x(sel)} y1={top} y2={base} stroke="rgba(255,255,255,0.2)" strokeDasharray="2 3" />}
-        {peaks.map((i) => (
+        {mountain && peaks.map((i) => (
           <circle key={i} cx={x(i)} cy={y(pts[i].v)} r="2.2" fill="#fff" filter={`url(#${id}-g)`} opacity="0.95" />
         ))}
         <circle cx={x(last)} cy={y(pts[last].v)} r="7" fill="rgba(255,255,255,0.16)" />
