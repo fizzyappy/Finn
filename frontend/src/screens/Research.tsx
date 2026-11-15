@@ -151,34 +151,33 @@ function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }
   const shortName = (n?: string) => (n || "").replace(/ \(India\)/, "").replace(/ (Ltd|Limited)\.?$/, "");
   return (
     <>
-      <div className="glass card" style={{ marginTop: 14 }}>
-        <div className="h2">Does management keep its word?</div>
-        <p className="muted small" style={{ marginBottom: 0 }}>
-          For each company FINN reads the last five earnings calls and the annual report, lists every target management set,
-          and checks it against the reported numbers. Every quote links to its page.
-        </p>
-      </div>
-      <div className="section-title"><h2>Management scorecards</h2><span className="meta">{rows.length} companies ready</span></div>
-      <div className="glass">
-        {rows.map((r) => {
-          const k = ratio(r.kept), d = ratio(r.dodged);
-          return (
-            <button key={r.ticker} className="ledger-row score-row" onClick={() => onPick(r.ticker)}>
-              <div className="score-left">
-                <div className="what">{r.ticker}</div>
-                <div className="score-name">{shortName(r.name)}</div>
-                <div className="line2">{r.in_portfolio ? "Portfolio" : "Not held"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · last call ${callQuarter(r.last_call)}` : ""}</div>
-              </div>
-              <div className="score-pills tnum">
-                {k && k.b
-                  ? <span className={`verdict ${k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed"}`}>{k.a}/{k.b} kept</span>
-                  : r.tracked ? <span className="verdict v-nm">{r.tracked} tracked</span> : null}
-                {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
-              </div>
-            </button>
-          );
-        })}
-      </div>
+      <p className="small muted" style={{ margin: "14px 2px 0" }}>Each scorecard checks management's targets from the last five calls against the reported numbers.</p>
+      {([["Your holdings", rows.filter((r) => r.in_portfolio)], ["Other companies", rows.filter((r) => !r.in_portfolio)]] as [string, Json[]][])
+        .filter(([, list]) => list.length > 0).map(([title, list]) => (
+        <div key={title}>
+          <div className="section-title"><h2>{title}</h2><span className="meta">{list.length}</span></div>
+          <div className="glass">
+            {list.map((r) => {
+              const k = ratio(r.kept), d = ratio(r.dodged);
+              return (
+                <button key={r.ticker} className="ledger-row score-row" onClick={() => onPick(r.ticker)}>
+                  <div className="score-left">
+                    <div className="what">{r.ticker}</div>
+                    <div className="score-name">{shortName(r.name)}</div>
+                    <div className="line2">{r.next_due ? `next due ${r.next_due.replace(/^by /, "")}` : "no target due"}{r.last_call ? ` · last call ${callQuarter(r.last_call)}` : ""}</div>
+                  </div>
+                  <div className="score-pills tnum">
+                    {k && k.b
+                      ? <span className={`verdict ${k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed"}`}>{k.a}/{k.b} kept</span>
+                      : r.tracked ? <span className="verdict v-nm">{r.tracked} tracked</span> : null}
+                    {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </>
   );
 }
