@@ -487,3 +487,11 @@ a.ticker-chip:active { transform: scale(0.96); }
 .peaks-read b { color: var(--text); }
 .chart-note.up { color: var(--up); }
 .chart-note.down { color: #f29a9a; }
+
+/* laptop: just a small QR in the corner */
+@media (min-width: 1100px) {
+  .side-panel { top: auto; bottom: 24px; left: 24px; transform: none; width: auto; display: flex; align-items: center; gap: 10px;
+    padding: 8px 12px 8px 8px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); font-size: 12px; }
+  .side-panel img { border: 3px solid #fff; border-radius: 8px; background: #fff; }
+  .side-panel span { color: var(--text-2); line-height: 1.35; }
+}
