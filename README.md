@@ -14,7 +14,7 @@ the exact quote and page. Every number is computed in Python; every quote is che
 
 | Brief | Why this card? | Promise ledger | Alerts backtest |
 |---|---|---|---|
-| ![Brief](frontend/screenshots/02-brief-14d-results-cards.png) | ![Why](frontend/screenshots/04-brief-why-flipped.png) | ![Ledger](frontend/screenshots/11-research-LT-ledger-row-open.png) | ![Alerts](frontend/screenshots/15-alerts-default.png) |
+| <img src="frontend/screenshots/readme/brief.png" width="200" alt="Brief"> | <img src="frontend/screenshots/readme/why.png" width="200" alt="Why this card"> | <img src="frontend/screenshots/readme/ledger.png" width="200" alt="Promise ledger"> | <img src="frontend/screenshots/readme/alerts.png" width="200" alt="Alerts backtest"> |
 
 All 20 screens and states: [`frontend/screenshots/`](frontend/screenshots/) (iPhone size, 0 console errors, 0 accessibility issues).
 
