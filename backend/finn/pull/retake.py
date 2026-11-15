@@ -6,7 +6,20 @@ import json
 from pathlib import Path
 
 from ..store import store
-from . import narrative
+from .. import fundamentals, symbols
+from . import narrative, tables
+
+
+def _bank(r: dict) -> None:
+    if not (r["sections"].get("snapshot") or {}).get("lender"):
+        return
+    try:
+        key = symbols.resolve(r["ticker"]).screener_key
+        b = tables.bank(fundamentals.get_fundamentals(key).data)
+        if b:
+            r["sections"]["bank"] = b
+    except Exception as e:  # noqa: BLE001
+        print(r["ticker"], "bank numbers skipped:", type(e).__name__)
 
 SNAP = Path(__file__).resolve().parents[3] / "frontend" / "public" / "data" / "research"
 
@@ -17,11 +30,13 @@ def main() -> None:
         hit = store().get("research", k)
         if hit:
             r = hit[0]
+            _bank(r)
             r["sections"]["take"] = narrative.finns_take(r["sections"])
             store().put("research", k, r, "pull engine")
             n += 1
     for f in SNAP.glob("*.json"):
         r = json.loads(f.read_text(encoding="utf-8"))
+        _bank(r)
         r["sections"]["take"] = narrative.finns_take(r["sections"])
         f.write_text(json.dumps(r, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         n += 1

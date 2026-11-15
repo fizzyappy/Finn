@@ -257,6 +257,7 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
       {S.snapshot && <Snapshot s={S.snapshot} />}
+      {S.bank && <Bank b={S.bank} yearGrowth={S.balance_sheet?.deposit_growth_pct} />}
       {S.trajectory && <Trajectory t={S.trajectory} lender={!!S.snapshot?.lender} />}
       {S.balance_sheet && <BalanceSheet b={S.balance_sheet} />}
       {S.cash_quality && <Cash c={S.cash_quality} />}
@@ -484,11 +485,29 @@ function Snapshot({ s }: { s: Json }) {
       <div className="glass card kv">
         <span className="k">Market cap</span><span className="v">{fmtCr(s.market_cap_cr)}</span>
         <span className="k">P/E</span><span className="v">{s.pe ?? "–"}</span>
-        {l.revenue != null && <><span className="k">Quarter revenue</span><span className="v">{fmtCr(l.revenue)}</span></>}
+        {l.revenue != null && <><span className="k">Quarter {s.lender ? "total income" : "revenue"}</span><span className="v">{fmtCr(l.revenue)}</span></>}
         {l.pat != null && <><span className="k">Quarter profit</span><span className="v">{fmtCr(l.pat)}</span></>}
         {l.gross_npa_pct != null && <><span className="k">Gross / net NPA</span><span className="v">{l.gross_npa_pct}% / {l.net_npa_pct}%</span></>}
         {s.roe_pct != null && <><span className="k">ROE</span><span className="v">{s.roe_pct}%</span></>}
         {s.roce_pct != null && !s.lender && <><span className="k">ROCE</span><span className="v">{s.roce_pct}%</span></>}
+      </div>
+    </>
+  );
+}
+
+function Bank({ b, yearGrowth }: { b: Json; yearGrowth?: number | null }) {
+  return (
+    <>
+      <Title meta={`quarter to ${fmtDay(b.quarter_end)}`}>Bank numbers</Title>
+      <div className="glass card">
+        <div className="kv">
+          {b.nii != null && <><span className="k">Net interest income (NII)</span><span className="v">{fmtCr(b.nii)}{b.nii_yoy_pct != null ? <span className={signClass(b.nii_yoy_pct)}> {fmtPct(b.nii_yoy_pct)} YoY</span> : null}</span></>}
+          {b.nim_approx_pct != null && <><span className="k">Margin on assets (≈ NIM)</span><span className="v">{b.nim_approx_pct}%</span></>}
+          {b.gross_npa_pct != null && <><span className="k">Gross / net NPA</span><span className="v">{b.gross_npa_pct}% / {b.net_npa_pct}%</span></>}
+          {b.deposits != null && <><span className="k">Deposits</span><span className="v">{fmtCr(b.deposits)}{b.deposit_growth_pct != null ? <span className={signClass(b.deposit_growth_pct)}> {fmtPct(b.deposit_growth_pct)} YoY</span>
+            : yearGrowth != null ? <span className={signClass(yearGrowth)}> {fmtPct(yearGrowth)} last year</span> : null}</span></>}
+        </div>
+        <p className="faint small" style={{ marginBottom: 0 }}>{b.note} Not in the statement tables: {(b.missing || []).join(", ")}.</p>
       </div>
     </>
   );

@@ -338,3 +338,16 @@ def test_queue_position_counts_jobs_ahead():
     })
     assert engine.status("c")["ahead"] == 2 and engine.status("b")["ahead"] == 1 and engine.status("a")["ahead"] == 0
     engine._jobs.clear()
+
+
+
+def test_bank_numbers_from_statement_tables():
+    from finn.pull.tables import bank
+    f = {"lender": True,
+         "quarterly": {"2025-09-30": {"revenue": 87000.0, "interest": 47000.0},
+                       "2026-09-30": {"revenue": 95132.0, "interest": 50667.0, "gross_npa_pct": None}},
+         "balance_sheet": {"2025-09-30": {"deposits": 3100000.0}, "2026-09-30": {"deposits": 3324146.0, "total_assets": 5165842.0}}}
+    b = bank(f)
+    assert b["nii"] == 44465.0 and b["nii_yoy_pct"] == 11.2 and b["nim_approx_pct"] == 3.44
+    assert b["deposit_growth_pct"] == 7.2 and "CASA ratio" in b["missing"]
+    assert bank({"lender": False}) is None

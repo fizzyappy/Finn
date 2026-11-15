@@ -140,9 +140,44 @@ def cash_quality(f: dict) -> dict:
     return out
 
 
+def bank(f: dict) -> dict | None:
+    """Lender numbers from the statement tables: net interest income (interest earned - interest paid),
+    an approximate margin on assets, bad-loan ratios when reported, and deposits. CASA and the
+    credit-deposit ratio are not in these tables, so they are listed as missing rather than guessed."""
+    if not f.get("lender"):
+        return None
+    q = f["quarterly"]
+    ends = sorted(k for k in q if k[:4].isdigit())
+    if not ends:
+        return None
+    nii = lambda k: (q[k].get("revenue") - q[k].get("interest")) if q.get(k) and q[k].get("revenue") is not None \
+        and q[k].get("interest") is not None else None
+    cur = ends[-1]
+    ya = cur.replace(cur[:4], str(int(cur[:4]) - 1), 1)
+    n, n0 = nii(cur), nii(ya)
+    bs = f["balance_sheet"]
+    b_end = sorted(k for k in bs if k[:4].isdigit())
+    last = bs[b_end[-1]] if b_end else {}
+    prev = bs.get(f"{int(b_end[-1][:4]) - 1}{b_end[-1][4:]}") if b_end else None
+    dep, dep0 = last.get("deposits"), (prev or {}).get("deposits")
+    out = {
+        "quarter_end": cur,
+        "nii": n, "nii_yoy_pct": fundamentals.growth_pct(n, n0)[0] if n is not None and n0 else None,
+        "nim_approx_pct": round(n * 4 / last["total_assets"] * 100, 2) if n and last.get("total_assets") else None,
+        "gross_npa_pct": q[cur].get("gross_npa_pct"), "net_npa_pct": q[cur].get("net_npa_pct"),
+        "deposits": dep, "deposit_growth_pct": fundamentals.growth_pct(dep, dep0)[0] if dep and dep0 else None,
+        "deposits_as_of": b_end[-1] if b_end else None,
+        "missing": ["CASA ratio", "credit-deposit ratio"] + ([] if q[cur].get("gross_npa_pct") is not None
+                                                             else ["NPA ratios (not in the consolidated tables)"]),
+        "note": "NII = interest earned - interest paid (quarter). Margin on assets = annualised NII / total assets: "
+                "an approximation of NIM, which banks compute on average interest-earning assets.",
+    }
+    return out
+
+
 def build(ticker: str) -> dict:
     fd = fundamentals.get_fundamentals(ticker)
     f = fd.data
     return {"instrument": f["instrument"], "name": f["name"], "data_as_of": fd.as_of, "stale": fd.stale,
             "snapshot": snapshot(f), "trajectory": trajectory(f), "balance_sheet": balance_sheet(f),
-            "cash_quality": cash_quality(f)}
+            "cash_quality": cash_quality(f), "bank": bank(f)}
