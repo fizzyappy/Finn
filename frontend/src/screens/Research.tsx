@@ -352,7 +352,7 @@ function ReportCard({ rc, led }: { rc: Json; led: Json }) {
     return (
       <div className="glass card small muted">
         <b style={{ color: "var(--text)" }}>Management report card:</b> {led?.promises?.length || 0} targets tracked
-        {c["Too early"] ? `, ${c["Too early"]} due later` : ""}; none due yet.{dodged ? ` ${dodged[1]} analyst questions checked, none dodged.` : ""}
+        {c["Too early"] ? `, ${c["Too early"]} due later` : ""}; none due yet.{dodged ? ` Answered ${dodged[1]} of ${dodged[1]} analyst questions.` : ""}
       </div>
     );
   }
@@ -360,9 +360,12 @@ function ReportCard({ rc, led }: { rc: Json; led: Json }) {
     <div className="glass scorecard hero-glow">
       <div className="small faint" style={{ textTransform: "uppercase", letterSpacing: ".09em", fontWeight: 600 }}>Management report card</div>
       <div className="grid">
-        <div className="stat key"><div className="n">{scored ? `${c.Kept}/${scored}` : "–"}</div><div className="l">promises kept{scored ? "" : " (none due yet)"}</div></div>
-        <div className="stat"><div className="n">{dodged ? `${dodged[0]}/${dodged[1]}` : "–"}</div><div className="l">questions dodged</div></div>
-        <div className="stat"><div className="n">{(rc.topics_dropped || []).length}</div><div className="l">targets quietly dropped</div></div>
+        <div className={`stat ${scored ? "key" : "zero"}`}><div className="n">{scored ? `${c.Kept}/${scored}` : "–"}</div><div className="l">{scored ? "promises kept" : "no promises due yet"}</div></div>
+        <div className={`stat ${dodged ? "" : "zero"}`}>
+          <div className="n">{dodged ? `${+dodged[1] - +dodged[0]}/${dodged[1]}` : "–"}</div>
+          <div className="l">{dodged ? `questions answered${+dodged[0] ? ` · ${dodged[0]} dodged` : ""}` : "no calls checked"}</div>
+        </div>
+        <div className={`stat ${dropped ? "" : "zero"}`}><div className="n">{dropped}</div><div className="l">{dropped === 1 ? "target quietly dropped" : "targets quietly dropped"}</div></div>
       </div>
       <div className="small muted" style={{ marginTop: 12 }}>
         {c.Missed ? `${c.Missed} missed, ` : ""}{c.Partly ? `${c.Partly} partly met, ` : ""}{c["Too early"] || 0} too early to judge, {c["Not measurable"] || 0} not measurable from the statements.

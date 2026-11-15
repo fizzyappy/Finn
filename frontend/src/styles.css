@@ -416,3 +416,5 @@ a.ticker-chip { text-decoration: none; }
 a.ticker-chip:active { transform: scale(0.96); }
 .sym-link { color: var(--text); font-weight: 700; text-decoration: none; display: block; }
 .sym-link:hover, a.ticker-chip:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.stat.zero { opacity: 0.45; }
