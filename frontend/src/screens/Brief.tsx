@@ -137,11 +137,12 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const routine = Object.values(collapsed).reduce((a: number, c: Json) => a + c.count, 0);
 
   const shownReq = requested || brief;
-  const reqRanked = quietLabel ? rerank(shownReq, tune) : ranked;
   const head = {
-    filings: shownReq.header.filings, matter: reqRanked.hero.length + reqRanked.one.length,
-    total: reqRanked.hero.length, done: reqRanked.hero.filter((e: Json) => cleared.has(id(e))).length,
+    filings: brief.header.filings, matter: ranked.hero.length + ranked.one.length,
+    total: ranked.hero.length, done: ranked.hero.filter((e: Json) => cleared.has(id(e))).length,
   };
+  const quietWhen = !quietLabel ? "" : /^since/.test(quietLabel) ? "Since your last look" : /24 hours/.test(quietLabel) ? "Today"
+    : quietLabel.replace(/^last /, "Last ");
   const onScreen = new Set([...ranked.hero, ...ranked.one].map(id));
   const all14 = base14 ? [...(base14.hero || []), ...(base14.one_liners || [])] : [];
   const latestResults = all14
@@ -162,9 +163,10 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         <div style={{ flex: 1, minWidth: 0 }}>
           {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
           <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : win === "custom" && range ? shownReq.window.label : `Your ${shownReq.window.label}`}</h1>
-          <div className="counts tnum">
+          {quietLabel && <div className="quiet-line">{quietWhen}: nothing new</div>}
+          {!quietLabel && <div className="counts tnum">
             <b>{head.filings}</b> {plural(head.filings, "filing")} · <b>{head.matter}</b> matter · <b>{head.total - head.done}</b> left
-          </div>
+          </div>}
         </div>
       </div>
 
@@ -186,13 +188,6 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
       </AnimatePresence>
       {liveNote && win === "custom" && <div className="notice" style={{ marginTop: 10 }}>{liveNote}</div>}
 
-      {quietLabel && (
-        <div className="glass card empty" style={{ marginTop: 14 }}>
-          <img src="/icons/finn-f.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
-          <div className="big">Quiet {quietLabel}</div>
-          <div className="muted">Nothing that needs you across your {brief.holdings.length} holdings. Here is what mattered in the {brief.window.label}.</div>
-        </div>
-      )}
       {ranked.hero.length === 0 && ranked.one.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>
           <img src="/icons/finn-f.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
@@ -201,7 +196,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         </div>
       ) : ranked.hero.length === 0 ? null : (
         <>
-          <div className="section-title"><h2>Needs your attention</h2><span className="meta">{quietLabel ? brief.window.label : "swipe → to clear"}</span></div>
+          <div className="section-title"><h2>{quietLabel ? "Earlier this week" : "Needs your attention"}</h2><span className="meta">{quietLabel ? brief.window.label : "swipe → to clear"}</span></div>
           <AnimatePresence initial={false} mode="popLayout">
             {heroLeft.map((e) => (
               <motion.div key={id(e)} layout={!reduce} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
