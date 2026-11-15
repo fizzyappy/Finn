@@ -1,6 +1,6 @@
-# Part 7 · Every change, in order
+# Every change, in order
 
-[← Part 6](06-how-i-directed-the-ai.md) · [Back to Part 1](01-research-and-plan.md)
+[← Part 5](05-deploy-and-polish.md) · [Back to Part 1](01-research-and-plan.md)
 
 This is the complete list of changes made while building FINN, in the order they happened, taken from the
 project's commit history. Each entry is one change that Claude Code made, tested and pushed, most of them because

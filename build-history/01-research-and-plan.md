@@ -8,7 +8,6 @@ what testing showed was missing, and how we closed each gap. FINN's logo, the sl
 - [Part 3 · The research engine](03-research-engine.md)
 - [Part 4 · App design and user experience](04-design-and-ux.md)
 - [Part 5 · Deployment, fallbacks and final polish](05-deploy-and-polish.md)
-- [Part 6 · How I directed the AI](06-how-i-directed-the-ai.md)
 
 ---
 
