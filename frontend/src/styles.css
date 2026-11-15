@@ -281,11 +281,11 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .notice { display: flex; gap: 10px; padding: 12px 14px; font-size: 13px; color: var(--text-2); border-radius: var(--radius-sm); background: rgba(245,200,107,0.07); border: 1px solid rgba(245,200,107,0.22); }
 
 /* ---------- alerts ---------- */
-.sentence { font-family: var(--display); font-size: 21px; line-height: 1.55; font-weight: 500; }
+.sentence { font-family: var(--display); font-size: 17px; line-height: 2.05; font-weight: 500; }
 .sentence .val {
-  display: inline-flex; align-items: center; height: 34px; padding: 0 12px; margin: 0 2px;
+  display: inline-flex; align-items: center; height: 28px; padding: 0 10px; margin: 0 2px;
   border-radius: var(--pill); background: rgba(124,242,154,0.12); border: 1px solid rgba(124,242,154,0.4);
-  color: var(--mint-2); font-weight: 600; font-size: 18px; vertical-align: baseline; font-variant-numeric: tabular-nums;
+  color: var(--mint-2); font-weight: 600; font-size: 14.5px; vertical-align: baseline; font-variant-numeric: tabular-nums;
 }
 .slider { width: 100%; accent-color: var(--mint); height: 28px; }
 .strip { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; height: 46px; align-items: end; margin-top: 10px; }
