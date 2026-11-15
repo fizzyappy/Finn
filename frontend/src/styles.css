@@ -63,7 +63,7 @@ a { color: inherit; }
 }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; letter-spacing: 0.06em; font-size: 17px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font); font-weight: 500; letter-spacing: 0.22em; font-size: 15.5px; }
 .brand img { width: 30px; height: 30px; border-radius: 9px; box-shadow: 0 0 18px rgba(124, 242, 154, 0.18); }
 .asof { font-size: 11.5px; color: var(--text-3); text-align: right; line-height: 1.3; }
 

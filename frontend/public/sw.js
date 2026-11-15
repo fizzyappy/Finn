@@ -1,5 +1,5 @@
 /* FINN service worker: app shell + data snapshot work offline; live API is never cached. */
-const VERSION = "finn-v1";
+const VERSION = "finn-v2";
 const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icons/finn.svg", "/icons/icon-192.png"];
 
 self.addEventListener("install", (e) => {
