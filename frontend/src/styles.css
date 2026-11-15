@@ -445,3 +445,7 @@ a.ticker-chip:active { transform: scale(0.96); }
 .strip > div.fire { background: linear-gradient(180deg, #c2f5da, #7fe3b2); box-shadow: 0 0 6px rgba(127, 227, 178, 0.35); }
 .strip > div.fire::after { content: ""; position: absolute; left: 50%; top: -4px; width: 3px; height: 3px; margin-left: -1.5px;
   border-radius: 50%; background: rgba(255, 255, 255, 0.92); box-shadow: 0 0 3px rgba(255, 255, 255, 0.6); }
+
+.strip { height: 64px; }
+.strip > div.fire { background: linear-gradient(0deg, rgba(127, 227, 178, 0.35), #c9f7df); border-radius: 3px 3px 1px 1px; }
+.strip > div.fire::after { width: 4px; height: 4px; margin-left: -2px; top: -5px; background: #fff; box-shadow: 0 0 6px 1px rgba(201, 247, 223, 0.8); }

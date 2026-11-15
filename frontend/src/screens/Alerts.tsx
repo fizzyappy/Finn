@@ -36,8 +36,11 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
     }
     const byDay = new Map<string, number>();
     fires.forEach((f) => byDay.set(f.date, (byDay.get(f.date) || 0) + 1));
+    // Bar height = the biggest move that day, so the strip reads as peaks.
+    const peak = new Map<string, number>();
+    fires.forEach((f) => peak.set(f.date, Math.max(peak.get(f.date) || 0, Math.abs(f.z))));
     const weeks = Math.max(1, dates.length / 5);
-    return { dates, byDay, fires: fires.sort((a, b) => (a.date < b.date ? 1 : -1)), perWeek: fires.length / weeks };
+    return { dates, byDay, peak, fires: fires.sort((a, b) => (a.date < b.date ? 1 : -1)), perWeek: fires.length / weeks };
   }, [series, who, z, vol, useVol]);
 
   // The slider in plain %: a stock's usual daily swing after the market's move (last 60 days), times the setting.
@@ -118,10 +121,17 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
               <span className="muted">alerts · about <b style={{ color: "var(--text)" }}>{bt.perWeek < 1 ? bt.perWeek.toFixed(1) : Math.round(bt.perWeek)}</b> a week</span>
             </div>
             <div className="strip" role="img" aria-label={`${bt.fires.length} alert days in the last ${bt.dates.length} trading days`}>
-              {bt.dates.map((d) => {
-                const n = bt.byDay.get(d) || 0;
-                return <div key={d} className={n ? "fire" : ""} style={{ height: n ? `${Math.min(100, 40 + n * 25)}%` : undefined }} title={n ? `${d}: ${n}` : d} />;
-              })}
+              {(() => {
+                const zs = [...bt.peak.values()];
+                const lo = Math.min(...zs, z), hi = Math.max(...zs, z + 0.1);
+                return bt.dates.map((d, i) => {
+                  const n = bt.byDay.get(d) || 0, zz = bt.peak.get(d) || 0;
+                  const h = n ? 34 + ((zz - lo) / (hi - lo)) * 66 : undefined;
+                  return <motion.div key={d} className={n ? "fire" : ""} title={n ? `${d}: ${n} alert(s), biggest ${zz.toFixed(1)}× usual move` : d}
+                    initial={n ? { height: "0%" } : false} animate={n ? { height: `${h}%` } : undefined}
+                    transition={{ duration: 0.5, delay: i * 0.004, ease: [0.2, 0.8, 0.2, 1] }} />;
+                });
+              })()}
             </div>
             <div className="strip-legend"><span>{fmtDay(bt.dates[0])}</span><span>{fmtDay(bt.dates[bt.dates.length - 1])}</span></div>
             <p className="faint small" style={{ marginBottom: 0 }}>
