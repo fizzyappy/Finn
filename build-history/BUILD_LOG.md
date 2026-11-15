@@ -1,260 +1,172 @@
-# How I built FINN with AI: the full working log
+# How FINN was built
 
-This is the step-by-step story of how I built FINN with **Claude Code** as my engineering partner: what I asked
-for, how I pushed back, what we tested, what broke, what we found was missing, and why every decision was made.
-It is written the way we actually worked: short, direct instructions from me, and the AI doing the engineering,
-testing and reporting in plain language.
+FINN's logo, the slanted "F", and its visual identity were designed by me. Everything else in this document
+describes how I worked with AI to turn a brief into a product: what I was trying to achieve at each stage, why
+each decision was made, how we tested it, what testing showed was missing, and how we fixed it.
 
-I designed FINN's logo (the slanted "F") and steered every product and visual decision. Claude Code wrote and
-tested the code. Gemini (free tier) is the only model *inside* the app, and it is used only where rules cannot do
-the job.
+I used **Claude Code** as the engineering agent: it planned, wrote and ran the code on my machine, tested against
+live data and reported back. I owned the direction, the product judgement and the design. Inside the app, Gemini
+is used only where rules cannot do the job.
 
-My working rules for the AI, from the very first message:
-- "I don't want a fast app, I want a great app that can actually stand out."
-- "Do the work yourself, don't make me do it." (Claude Code ran the code, the tests and the checks on my PC.)
-- "Explain everything to me in plain words." (Every update came as: what was done, what changed, what I must do.)
-- Ask me before installs, accounts, commits or pushes; never put my API key anywhere it could leak.
+The raw session transcripts are in `sessions/` (see `sessions/INDEX.md`).
 
 ---
 
-## Part 1 · Setting the foundation
+## 1. Framing the problem before writing code
 
-### Step 1: Read the brief like an investor, not like a coder
-**What I asked:** read the challenge, tell me what the deliverables really are, and what would make this stand out
-among the best submissions.
+The first step was to decide what the app should be for, not what it should contain. An investor holding 15–20
+Indian stocks receives dozens of exchange announcements a week, and almost all of them are routine paperwork.
+Showing more information is not the problem to solve; deciding what deserves attention is. That made **filtering
+and ranking** the core of the push side of the app.
 
-**What we worked out together:**
-- An investor with 15–20 stocks does not need *more* information. Indian companies file dozens of announcements a
-  week, and almost all of them are paperwork. **The product is the filter.**
-- The second thing nobody does well: *does management keep its word?* Results are everywhere; checking last year's
-  promises against this year's numbers is not. **That became FINN's signature feature: the promise ledger.**
-- In finance, **trust is the product.** One wrong number and the reviewer stops believing everything else.
+The second insight was on the pull side. Results are available everywhere, but very few tools check whether
+management delivered what it promised on earlier earnings calls. That gap became FINN's signature feature: a
+**promise ledger** that measures each stated target against what the company later reported.
 
-**The rules we wrote down before any code** (they are in `CLAUDE.md` and `DECISIONS.md`):
-1. Primary sources only: exchange filings, earnings-call transcripts, annual reports.
-2. Rules first, AI second. The AI may *read*; Python does every calculation and every verdict.
-3. Every quote must be found word for word on the page it cites, or it is dropped.
-4. Every AI call is cached and its cost logged.
-5. No tricks to get around a website's bot protection, ever.
+Because this is a finance app, trust had to be designed in from the start. I set a small number of rules before any
+code was written, and every later decision was checked against them:
 
-### Step 2: The plan
-Claude broke the challenge into six tasks: setup → data pipes → push engine (the brief) → pull engine (research)
-→ the app → submission. Each task had to end with something running on **live data** and a report I could read.
-I approved the plan and said: keep going on your own, and keep checking whether there is a better way to do each
-part.
+- Use primary sources only: exchange filings, earnings-call transcripts and annual reports.
+- Let rules do the work first; use the AI only where rules cannot.
+- The AI may read and phrase. Python does every calculation and every verdict.
+- A quote is shown only if it is found word for word on the page it cites.
+- Every AI call is cached and its cost recorded.
+- Never work around a website's bot protection.
 
----
+The work was then split into six tasks (setup, data pipes, push engine, pull engine, app, submission), each of
+which had to end with something running on live data and a written report I could check.
 
-## Part 2 · Data pipes: prove every source is real
+## 2. Proving the data before building on it
 
-### Step 3: Build the data layer and test it live
-For any NSE company we needed prices, financial statements, earnings-call transcripts, exchange filings and the
-filing PDFs themselves.
-
-**How we tested:** every source was run live on five companies before anything was built on top of it
-(`backend/validation_report.md`). Prices were cross-checked against a second source; the last close matched within
+A product built on unverified data cannot be trusted, so the data layer came first and was tested live on five
+companies before anything was built on it. Prices were cross-checked against a second source and matched within
 0.13%.
 
-### Step 4: The first real obstacle, and the decision it forced
-The BSE and NSE announcement APIs refused automated access (HTTP 403). One retry with normal browser headers was
-blocked by my own PC's safety check as an attempt to get around bot protection.
+The first real obstacle appeared here: the BSE and NSE announcement APIs refuse automated access. Rather than look
+for a way around that, I chose to respect it, and we designed a fallback that uses only sources meant for programs
+to read: the exchanges' official RSS feeds, polled continuously into a local database, plus a public list of recent
+filings. Each brief records which sources worked for which company, so a gap is visible instead of silent. This
+decision is why FINN can honestly say it uses primary sources only.
 
-**My call:** we respect it and never try again. **The fallback we designed instead:**
-- the exchanges' official RSS feeds (published for programs to read), polled every 5 minutes into a local database;
-- plus Screener's list of recent filings;
-- every brief says which sources worked for each company, so nothing is silently missing.
+Testing at this stage also exposed details that would have produced wrong numbers later: matching a quarter to the
+year-ago quarter by its end date instead of its column position, withholding growth percentages when the base is
+zero or negative, and recognising banks and NBFCs from their own statement rows rather than from a list of names.
 
-This one decision shaped the whole filings pipeline, and it is the reason FINN can say "primary sources only"
-honestly.
+## 3. The brief: filter, rank, verify
 
-### Step 5: Small things that turned out to matter
-- A quarter is matched to the year-ago quarter by its end date, not by counting columns (a missing column broke the
-  first version).
-- Growth % is not shown when the base is zero or negative ("+250% profit" from a loss misleads).
-- Banks and NBFCs are detected from their own table rows (NPA, financing profit), not from a list of names, so it
-  works for any lender.
+**Filtering.** To teach FINN what a filing is, we labelled 90 real filings by hand into the challenge's 17
+categories and wrote ordered rules against them. The AI is consulted only when no rule is confident, and only reads
+the first page. This kept cost and error low: the rules alone classify most filings, and on a blind set from 34
+other companies accuracy rose from 53% with rules alone to 82% with the AI as a fallback.
 
----
+**Ranking.** Each filing gets a materiality score built from its category, the specifics of the event (a CEO
+leaving is not the same as a company secretary leaving), the size of the holding, the investor's preferences, and
+whether the stock moved unusually. Every factor is kept, so the app can always answer why something is on screen.
 
-## Part 3 · The brief: filter → rank → verify
+**Verification.** For results, the AI reads only the results-table pages. Python then checks that the periods line
+up, that profit before tax minus tax equals profit after tax, that totals add up, that units are right, and that the
+figures match a second source. Only then is a card marked verified. Testing surfaced cases that each became a
+general rule: revenue that included excise duty, companies that report half-yearly, scanned PDFs with no text,
+columns printed out of order, a summary that mixed standalone and consolidated profit (headlines are now written by
+Python), and a summary that described a reaffirmed rating as an upgrade (action words must now appear in the
+filing).
 
-### Step 6: Teach FINN what a filing *is*
-We hand-labelled **90 real filings** from the 18 holdings into ENAM's 17 categories. Ordered rules sort most of
-them; Gemini Flash-Lite reads page 1 only when no rule is sure.
+**Alerts.** A 3% move means different things for different stocks, so each day is judged against the stock's own
+usual move after removing the market's move, together with volume against its recent average. The default rule
+was chosen by backtesting 90 days of data: the obvious threshold would have alerted about three times a week, the
+chosen one about once. Filings before a move are shown as preceding it, never as causing it.
 
-**Results:** 100% correct category on the labelled set. On a blind set of 34 *other* companies: 53% with rules
-alone, **82% with rules + AI**, for only 15 AI calls. Most filings never touch the AI at all.
+## 4. Research: does management keep its word?
 
-### Step 7: Rank by how much it should interrupt you
-Every filing gets a score: category × the event's details (a CEO quitting is not a company secretary quitting)
-× how big the holding is × your preferences + a bonus if the stock moved unusually. Cards above 0.6, one-liners
-above 0.3, everything else collapsed (never deleted).
+For any company, FINN reads the last five earnings calls, extracts every target management set, resolves its
+deadline in Indian financial years, measures it against the reported numbers, and records a verdict with the exact
+quote and page.
 
-**Why it matters:** the app can answer "why am I seeing this?" with every factor. That became the **Why?** button
-on every card.
+To know whether this could be trusted, we checked it by hand. Extraction was correct for all 45 statements tested,
+but only four of seven verdicts were right at first. The cause was instructive: a margin target for one business
+segment had been compared with the margin of the whole group. The fix was general rather than specific: every
+promise now carries its scope, and only company-wide targets are judged against company-wide numbers. Targets set in
+constant currency or US dollars are marked as not measurable rather than converted, and a target is called quietly
+dropped only after two later calls with no mention of it. After these changes all checked verdicts were correct.
 
-### Step 8: Results cards: the AI reads, Python checks
-For quarterly results, the AI reads only the results-table pages. Python then checks:
-three periods line up, profit before tax − tax = profit after tax, totals add up, units are right, and the numbers
-match a second source. Only then does a card say **Verified**.
+The same approach was applied to the question of whether management answers analysts. The first version treated a
+request for clarification as a dodge, so the rule was tightened: a question counts as dodged only when the quoted
+answer itself shows the refusal, and the flags on one company were then confirmed by hand.
 
-**What testing caught (each became a general rule, not a one-off fix):**
-- ITC's revenue included excise duty → excise is netted out.
-- Small companies report half-yearly, not quarterly → handled.
-- Scanned PDFs with no text → the AI reads the page images.
-- Columns printed out of order → detected and re-ordered.
-- An AI summary quoted *standalone* profit while the card showed *consolidated* → headlines are now written by
-  Python from the verified numbers.
-- An AI summary said "ICRA upgrades" when the filing said "reaffirmed; outlook positive" → action words must appear
-  in the filing itself.
+Analysis follows the same principle of Python deciding and the AI phrasing. A one-line summary at the top of each
+company, the facts behind the bull and bear case (growth slowing against its trend, margins squeezed, a one-off
+jump confirmed by share dilution), and the sentence above each chart are computed by Python. The AI only words
+bullets from numbered facts, and any bullet whose numbers do not match its facts is discarded. Questions asked in
+the app are answered only from the company's cited evidence. For lenders, the app shows bank measures from the
+statements and states plainly which ones the statements do not contain.
 
-### Step 9: Price alerts that are not noise
-A 3% day is noise for a small company and huge for a utility. So FINN measures each day against **the stock's own
-usual daily move, after taking out the market's move**, plus volume vs its 20-day average.
+## 5. The app: making trust easy to see
 
-**How we chose the default:** a 90-day backtest across 18 stocks. The obvious rule (2.5× the usual move) would have
-pinged ~3 times a week. The chosen default (3× the usual move *and* 2.5× volume) pings ~once a week. Filings just
-before a move are shown as "filed before", never "caused", because timing is a fact and cause is not.
+The app is a phone-first progressive web app that can be installed on a home screen. It ships with a snapshot of
+real outputs so the link always works, and uses a live research engine for companies outside the snapshot.
 
----
+Every change was verified automatically: each screen was captured at phone size and checked for errors,
+accessibility, colour contrast and layout overflow, and the full set was re-run after almost every change.
 
-## Part 4 · Research: does management keep its word?
+The interface was shaped through short review loops on my phone. Each round I identified what felt wrong as a user
+and the AI implemented and re-tested the change. The main design decisions that came out of this:
 
-### Step 10: The promise ledger
-For any company: read the last five earnings calls → pull out every target management set → resolve the deadline
-(Indian financial years, "H2", "next year") → measure it against what was later reported → verdict, with the exact
-quote, speaker and page.
+- The first screen is never empty: on a quiet day it says so in one line and shows what mattered that week, with a
+  funnel showing how many filings were reduced to how many worth knowing.
+- Every card answers the investor's next question: how large the holding is, why it is shown, whether its numbers
+  are verified, and a direct way to clear it or open the company.
+- A calm visual system: a plain dark background, one restrained accent colour, a lighter wordmark, my logo, and a
+  short opening animation in which the F assembles itself.
+- Navigation that explains itself: labelled tabs, a section jump bar on long pages, and smooth transitions.
+- Visuals that carry meaning: recent years highlighted against older ones, values on tap, alert days drawn as peaks
+  whose height reflects the size of the move, and cash earned per rupee of profit drawn against a one-rupee line.
+- Features that did not earn their place were removed, such as reading the brief aloud.
 
-### Step 11: I made it prove itself by hand
-We hand-checked 45 statements from L&T and HAL:
-- extraction: **45/45** genuine and quoted word for word;
-- verdicts: **only 4 of 7 right on the first pass.**
+Near the end, I used an independent critical review of the app. Rather than applying every suggestion, we ranked
+them by what a reviewer would notice first, what the challenge explicitly asks for, and what was safe to change
+before submission. One suggestion, checking vague directional promises, was deliberately postponed because doing it
+properly would have meant adding verdicts that had not been checked by hand.
 
-**What was missing:** L&T's 8.5% margin guidance was for its core engineering business, not the whole group, so
-comparing it with the group's margin wrongly said "Kept". **Fix:** every promise now carries a *scope*, and only
-company-wide targets are judged against company-wide numbers. After this and two other general fixes: **8/8.**
+## 6. Deployment and fallbacks
 
-Other honesty rules that came out of testing:
-- Guidance in constant currency or US dollars (IT companies) is marked "not measurable" instead of converted.
-- "Quietly dropped" needs **two** later calls with no mention at all; one quiet call is not enough to accuse.
+The app is hosted on Vercel and the research engine on Render's free tier. After deployment, the live server was
+tested end to end: health, a company already in the snapshot, a company never seen before (read live in about five
+minutes) and the question box.
 
-### Step 12: Did they answer the question?
-A judge reads each analyst question and answer. The first version flagged a *clarification* as a dodge, so we made
-it strict: Python keeps "dodged" only when the quoted answer itself shows the refusal. Every "dodged" flag on CDSL
-was later read by hand: all four are explicit refusals ("that's a forward-looking statement, so we will not be able
-to comment").
+Free infrastructure fails in predictable ways, so each failure has a fallback:
 
-### Step 13: Analysis written by Python, phrased by AI
-- **FINN's take:** one line at the top of each company, e.g. "Kept 3 of 6 promises · growth slowing 29% → 10% ·
-  margins widening". Built by Python from verified facts.
-- **Bull vs bear:** Python computes comparison facts first (growth slowing vs its 3-year trend, profit growing slower
-  than revenue, a merger-sized jump confirmed by per-share dilution); the AI only phrases bullets from numbered facts,
-  and any bullet whose numbers don't match its facts is thrown away. This is how FINN noticed that HDFC Bank's
-  3-year growth includes its merger, without falsely accusing a fast organic grower like Dixon.
-- **Ask about this company:** answers only from the company's cited evidence; Python re-checks every number; if the
-  sources don't cover it, it says so.
-- **Bank numbers:** for lenders, net interest income, an approximate margin, bad-loan ratios where reported and
-  deposits. What the statements don't contain (CASA, credit-deposit ratio) is listed as missing, not guessed.
+- If the research server is asleep, the app waits and says so instead of failing.
+- If another company is being read, the app shows its place in the queue.
+- If a data source fails for one company during the daily refresh, that company keeps its previous data.
+- A small committed seed of cached answers means a restarted server does not repeat paid work.
+- Only the app itself may call the server, and each visitor is rate-limited, so the shared AI quota cannot be
+  exhausted.
+- A scheduled job rebuilds the data every weekday without my laptop, and it was run once by hand to confirm it
+  works from the cloud.
 
----
+Testing after deployment also found gaps that were then closed: a misleading empty first screen, cost figures that a
+fresh cloud run had reset, and an automated check that had stopped halfway without reporting it.
 
-## Part 5 · The app: making trust feel effortless
+## 7. How the AI was used
 
-### Step 14: Build it as a phone app
-React + Vite, installable on a phone (PWA). It ships with a snapshot of real outputs so the link always works,
-and calls a live research engine for any company outside it.
+- **Claude Code** handled the engineering: planning, code, live runs, tests, screenshots, accessibility checks,
+  commits and deployment checks. I set priorities, judged the product and directed the design.
+- **Gemini** runs inside the app through one router with a fast tier and a stronger tier, automatic fallback, a
+  cache keyed on the exact input, and a log of every call. The whole build used about 400 model calls and one
+  million tokens, with roughly two thirds of requests answered from cache, at no cost on the free tier.
+- **Evidence over claims:** 119 offline tests, hand checks of promises and dodged questions, a 90-day backtest for
+  alerts, and automated checks of every screen.
 
-**How every change was tested:** every screen was screenshotted at phone size and checked automatically for
-console errors, accessibility, colour contrast and layout overflow. By the end: **20 screens, 0 errors, 0
-accessibility problems**, re-checked after almost every change.
-
-### Step 15: I reviewed on my phone and pushed back, a lot
-This is where most of the polish came from. A few examples of how I steered it:
-- "The first page looks clumsy, who wants to wake up to this?" → the header was simplified to one calm line.
-- "I want the first page as clean and pretty as before" → the original look came back, with the new content kept.
-- "The neon green looks tacky; apps usually have a plain background" → a calmer sage-mint and a plain near-black
-  background, with a tint only near the logo.
-- "The font is too big, it doesn't look premium" → one step smaller, numbers in a cleaner font.
-- "Things clash here" → the research list, the alert sentence and the backtest rows were re-laid out.
-- "It's very hard to navigate" → labels on every tab, a sticky jump bar on company pages, a back link, smooth
-  transitions.
-- "The bottom bar is bulky… now it's lost in the page" → slimmer, then given a raised 3D look.
-- "The voice that reads the news sounds mechanical and over-engineered" → removed.
-- "Mute and Normal look the same" → each choice got its own colour; "too bouncy… just a little bounce" → tuned.
-
-### Step 16: My identity for FINN
-I designed the logo, the slanted F, and asked for a lighter, wider-spaced wordmark. When the app opens, the F
-assembles itself in a short animation. When it flickered on iPhone, we found the real cause (an animated layer
-over blurred panels, plus a font swap) and rebuilt it so the animation plays alone and the app fades in after.
-
-### Step 17: Visuals that explain, not decorate
-- A filter funnel in the header: "20 filings → 3 worth knowing → 1 need you".
-- A portfolio pulse: how many holdings beat the Nifty this week, and the biggest move.
-- Results cards show "your 6% holding", a Verified badge you can open, Why? and Done.
-- Bar charts with older years in grey and the latest two highlighted, tap-to-read values, and one Python sentence
-  above each chart.
-- Alert days drawn as glowing peaks, taller for bigger moves.
-- Cash quality as a green mountain of cash earned per ₹1 of profit against a dashed ₹1 line.
-
-### Step 18: An outside review, used properly
-I brought in a detailed critical review of the app. Instead of applying everything, we triaged it against the
-challenge brief: what a reviewer sees in the first minute, what the brief explicitly asks for, and what was too
-risky on submission day. The first screen was never to be empty again, verified results got pinned, copy was
-cleaned up (₹, dates, no developer words), the API was protected, and the bull/bear facts got smarter.
-One item, checking vague "margins should improve" statements, was **deliberately left out**: doing it properly would
-have meant re-reading every call and adding verdicts nobody had hand-checked on the last night. A wrong "Missed" is
-worse than an empty one.
-
----
-
-## Part 6 · Shipping it like a real product
-
-### Step 19: Deploy
-- **App:** Vercel. **Research engine:** Render (free plan).
-- When Render asked for a card, I chose to stay on Render and set it up myself; the AI then tested the live server
-  end to end: health, a known company, a brand-new company read live in about 5 minutes, and the Ask box.
-- When Vercel was first deployed without its setting, we fixed it in one redeploy.
-
-### Step 20: Fallbacks, because free servers sleep and sources fail
-- **The app always works:** a built-in snapshot of real outputs; the live server is used for new companies.
-- **Sleeping server:** the app waits and says "waking up the free server" instead of failing.
-- **Busy server:** one company is read at a time, and the app shows "1 ahead of you · about 4 min".
-- **Fresh data without my laptop:** a daily GitHub Action rebuilds the data. I ran it once by hand to prove it works
-  from GitHub's servers. If one company's fetch fails, that company keeps its previous data.
-- **Protecting the free AI quota:** only the app itself can call the server, and each visitor is rate-limited.
-- **Fresh server, no memory:** a small committed "seed" of cached answers, so a restart doesn't re-pay for work.
-- **Cost numbers can't shrink:** a fresh cloud run no longer resets the build's AI totals.
-
-### Step 21: What was missing, found by testing
-- The first screen showed "0 filings" on a quiet day → it now shows what mattered this week.
-- The cost meter claimed "today" for build totals → corrected, then moved to a quiet section at the bottom.
-- The automated screenshot run had silently stopped halfway after a new button was added → found, fixed, and every
-  check re-run from scratch.
-- The phone couldn't reach the laptop on campus Wi-Fi → solved for good by the public Vercel link.
-
----
-
-## Part 7 · How the AI was used, in numbers
-
-- **Claude Code** did the engineering: planning, code, live runs, tests, screenshots, accessibility checks, git
-  commits and deployment checks, and reported back in plain language after every step.
-- **Gemini** inside the app: one router with fast and stronger tiers and automatic fallback; every answer cached by
-  a hash of its exact input; every call logged and costed.
-- **Whole build:** about 400 model calls and 1 million tokens, two-thirds of requests answered from cache:
-  **USD 0** on the free tier.
-- **Proof, not claims:** 119 offline tests, hand spot-checks of promises and dodged questions, a 90-day alert
-  backtest, and 20 screens checked after almost every change.
-
-## What the AI got wrong, and how we caught it
+## What the AI got wrong, and how it was caught
 
 | Mistake | Caught by | Fix |
 |---|---|---|
-| Judged L&T's segment margin target against group margins | hand spot-check | every promise has a scope |
-| "ICRA upgrades" for a reaffirmed rating | summary checks | action words must appear in the filing |
-| Treated a CEO as a page header, a CFO as an analyst | live runs | roles from introductions and Q&A behaviour |
-| Flagged a clarification as a dodged question | hand check | stricter judge + Python evidence rule |
-| Listed "0 questions dodged" as a bull point | review | Python comparison facts, each tied to a side |
-| Built a hosting alternative I hadn't asked for | me | removed; options are offered, not built |
-| Reported "0 errors" from a stale test run | the AI itself | test fixed, all checks re-run, correction sent |
+| Compared a segment's margin target with the group's margin | hand check | every promise carries its scope |
+| Described a reaffirmed credit rating as an upgrade | summary checks | action words must appear in the filing |
+| Misread a CEO as a page header and a CFO as an analyst | live runs | roles taken from introductions and question-and-answer behaviour |
+| Treated a clarification as a dodged question | hand check | stricter judge plus a Python evidence rule |
+| Listed a neutral count as a bull point | review | Python comparison facts tied to a side |
+| Built an alternative I had not asked for | my review | removed; options are proposed, not built |
+| Reported a clean test run that had stopped halfway | its own follow-up check | test fixed and every check re-run |
 
-Every step above is in the git history (`git log`), one commit per change.
+The full history of changes is in the repository's commit log.
