@@ -68,6 +68,25 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
     <div>
       <h1 className="h1" style={{ margin: "6px 0 2px" }}>Alerts</h1>
       <p className="small muted" style={{ margin: "0 0 12px" }}>Price moves that are unusual for that stock. Set the rule, and see how often it would have pinged you.</p>
+      <div className="section-title" style={{ marginTop: 6 }}><h2>Recent alerts</h2><span className="meta">default rule · 14 days</span></div>
+      <div className="glass row-list">
+        {recent.length === 0 && <div className="row small muted">No notable moves in the last 14 days.</div>}
+        {recent.map((a) => (
+          <div className="row" key={a.symbol + a.date}>
+            <div className="grow">
+              <div className="title tnum"><a className="ticker-chip sm" href={`#research/${a.symbol}`} onClick={(ev) => ev.stopPropagation()} onPointerDown={(ev) => ev.stopPropagation()}>{a.symbol}</a> <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span> <span className="faint small">· {fmtDay(a.date)}</span></div>
+              <div className="desc">Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}% · move {Math.abs(a.measures.z).toFixed(1)}× its usual · volume {Number(a.measures.vol_x).toFixed(1)}× average</div>
+              {a.filed_before?.map((f: Json) => (
+                <div key={f.ts} style={{ marginTop: 6 }}><Cite href={f.url}>filed before: {cleanTitle(f.title)}</Cite></div>
+              ))}
+              {a.routine_filed_before > 0 && <div className="faint small" style={{ marginTop: 4 }}>+{a.routine_filed_before} routine filing(s) before</div>}
+            </div>
+            <button className="why-btn" onClick={() => onOpenResearch(a.symbol)}>Research</button>
+          </div>
+        ))}
+      </div>
+      <p className="faint small" style={{ margin: "12px 4px" }}>Filings before a move are shown for timing only. FINN does not claim they caused it.</p>
+      <div className="section-title"><h2>Your alert rule</h2><span className="meta">tap the values to change</span></div>
       <div className="glass card">
         <p className="sentence" style={{ margin: 0 }}>
           Tell me when{" "}
@@ -128,24 +147,6 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
         ) : <div className="faint">Loading price history…</div>}
       </div>
 
-      <div className="section-title"><h2>Recent alerts</h2><span className="meta">default rule · 14 days</span></div>
-      <div className="glass row-list">
-        {recent.length === 0 && <div className="row small muted">No notable moves in the last 14 days.</div>}
-        {recent.map((a) => (
-          <div className="row" key={a.symbol + a.date}>
-            <div className="grow">
-              <div className="title tnum"><a className="ticker-chip sm" href={`#research/${a.symbol}`} onClick={(ev) => ev.stopPropagation()} onPointerDown={(ev) => ev.stopPropagation()}>{a.symbol}</a> <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span> <span className="faint small">· {fmtDay(a.date)}</span></div>
-              <div className="desc">Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}% · move {Math.abs(a.measures.z).toFixed(1)}× its usual · volume {Number(a.measures.vol_x).toFixed(1)}× average</div>
-              {a.filed_before?.map((f: Json) => (
-                <div key={f.ts} style={{ marginTop: 6 }}><Cite href={f.url}>filed before: {cleanTitle(f.title)}</Cite></div>
-              ))}
-              {a.routine_filed_before > 0 && <div className="faint small" style={{ marginTop: 4 }}>+{a.routine_filed_before} routine filing(s) before</div>}
-            </div>
-            <button className="why-btn" onClick={() => onOpenResearch(a.symbol)}>Research</button>
-          </div>
-        ))}
-      </div>
-      <p className="faint small" style={{ margin: "12px 4px" }}>Filings before a move are shown for timing only. FINN does not claim they caused it.</p>
     </div>
   );
 }
