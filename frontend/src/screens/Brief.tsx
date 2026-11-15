@@ -34,21 +34,23 @@ function RangePicker({ min, max, initial, onApply, onCancel }: {
   return (
     <div>
       <div className="h2" style={{ marginBottom: 10 }}>Pick a date range</div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+      <div className="range-grid">
         <label className="small muted">From
-          <input className="field" type="date" value={from} max={to || max} onChange={(e) => setFrom(e.target.value)} style={{ marginTop: 4 }} />
+          <input className="field date-field" type="date" value={from} max={to || max} onChange={(e) => setFrom(e.target.value)} />
+          <span className="date-nice">{fmtDay(from)}</span>
         </label>
         <label className="small muted">To
-          <input className="field" type="date" value={to} min={from} max={max} onChange={(e) => setTo(e.target.value)} style={{ marginTop: 4 }} />
+          <input className="field date-field" type="date" value={to} min={from} max={max} onChange={(e) => setTo(e.target.value)} />
+          <span className="date-nice">{fmtDay(to)}</span>
         </label>
       </div>
-      <div className="chips" style={{ marginTop: 10 }}>
+      <div className="chips wrap" style={{ marginTop: 10 }}>
         <button className="chip" onClick={() => { setFrom(max); setTo(max); }}>Today</button>
         <button className="chip" onClick={() => { setFrom(daysAgo(4)); setTo(max); }}>Last 5 days</button>
         <button className="chip" onClick={() => { setFrom(daysAgo(13)); setTo(max); }}>Last 14 days</button>
         <button className="chip" onClick={() => { setFrom(daysAgo(29)); setTo(max); }}>Last 30 days</button>
       </div>
-      <p className="faint small">Built-in data covers {min} to {max}; older dates use the live research engine when it is connected.</p>
+      <p className="faint small">Built-in data covers {fmtDay(min)} to {fmtDay(max)}; older dates use the live research engine when it is connected.</p>
       <div style={{ display: "flex", gap: 8 }}>
         <button className="btn small" disabled={!valid} onClick={() => valid && onApply(from, to)}>Show this range</button>
         <button className="btn secondary small" onClick={onCancel}>Cancel</button>
