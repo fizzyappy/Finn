@@ -196,3 +196,19 @@ def test_fetch_pdf_stores_by_hash(monkeypatch, offline):
     t = documents.get_text("https://www.bseindia.com/a.pdf")
     assert t["page_count"] == 2 and t["status"] == "ok"
     assert offline.get_document("https://www.bseindia.com/a.pdf")["pages"] == 2
+
+
+
+def test_refresh_keeps_a_failed_companys_previous_cards():
+    from finn.export_snapshot import carry_over
+    win = {"from": "2026-11-08", "to": "2026-11-15"}
+    old = {"hero": [{"symbol": "ITC", "uid": "1", "ts": "2026-11-10T10:00", "score": 0.8}],
+           "one_liners": [{"symbol": "ITC", "uid": "0", "ts": "2026-11-01T10:00", "score": 0.4}],   # outside new window
+           "collapsed": {"dividend": {"count": 1, "items": [{"symbol": "ITC", "ts": "2026-11-12T09:00"}]}}}
+    new = {"window": win, "hero": [{"symbol": "LT", "uid": "9", "ts": "2026-11-14T10:00", "score": 0.7}], "one_liners": [],
+           "collapsed": {}, "header": {"filings": 1},
+           "data_status": {"filings_sources": {"ITC": {"bse_api": "blocked", "rss_store": "error"}, "LT": {"rss_store": "ok (1)"}}}}
+    out = carry_over(new, old)
+    assert [e["symbol"] for e in out["hero"]] == ["ITC", "LT"] and out["hero"][0]["carried_over"]
+    assert out["one_liners"] == [] and out["collapsed"]["dividend"]["count"] == 1
+    assert out["data_status"]["carried_over"] == ["ITC"] and out["header"]["matter"] == 2

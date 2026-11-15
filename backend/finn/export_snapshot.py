@@ -39,6 +39,52 @@ def _merge_usage(now: dict, before: dict | None) -> dict:
         models[m] = {k: max(a.get(k) or 0, b.get(k) or 0) for k in set(a) | set(b)}
     return {**now, "models": models}
 
+
+def _previous(name: str) -> dict:
+    try:
+        return json.loads((OUT / name).read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def failed_symbols(b: dict) -> set[str]:
+    """Holdings for which no filings source worked in this run."""
+    st = (b.get("data_status") or {}).get("filings_sources") or {}
+    return {sym for sym, v in st.items()
+            if isinstance(v, dict) and not any(str(x).startswith("ok") for x in v.values())}
+
+
+def carry_over(new: dict, old: dict) -> dict:
+    """Keep each failed company's previous cards (inside the new window) instead of dropping them,
+    so one source refusing one company never empties that company from the brief."""
+    failed = failed_symbols(new)
+    if not failed or not old:
+        return new
+    lo, hi = (new.get("window") or {}).get("from") or "", (new.get("window") or {}).get("to") or "~"
+    inside = lambda e: e.get("symbol") in failed and lo <= (e.get("ts") or "") <= hi
+    seen = {(e.get("symbol"), e.get("uid") or e.get("ts")) for e in new.get("hero", []) + new.get("one_liners", [])}
+    kept = 0
+    for part in ("hero", "one_liners"):
+        for e in old.get(part, []):
+            if inside(e) and (e.get("symbol"), e.get("uid") or e.get("ts")) not in seen:
+                new.setdefault(part, []).append({**e, "carried_over": True})
+                kept += 1
+        new[part] = sorted(new.get(part, []), key=lambda e: -(e.get("score") or 0))
+    for cat, c in (old.get("collapsed") or {}).items():
+        items = [it for it in c.get("items", []) if inside(it)]
+        if items:
+            cur = new.setdefault("collapsed", {}).setdefault(cat, {"count": 0, "items": []})
+            cur["items"] += items
+            cur["count"] = len(cur["items"])
+            kept += len(items)
+    if kept:
+        h = new.setdefault("header", {})
+        h["matter"] = len(new.get("hero", [])) + len(new.get("one_liners", []))
+        h["hero"] = len(new.get("hero", []))
+        h["filings"] = (h.get("filings") or 0) + kept
+        new["data_status"]["carried_over"] = sorted(failed)
+    return new
+
 def index_extras(r: dict) -> dict:
     """What the research list shows besides the verdicts: how many targets are tracked,
     the earliest open one, and the date of the latest call."""
@@ -87,11 +133,13 @@ def main() -> None:
     if not usable(b14):
         raise SystemExit("filings sources failed for most holdings: keeping the previous snapshot")
     b14["window"]["label"] = "last 14 days"
+    b14 = carry_over(b14, _previous("brief_14d.json"))
     sizes["brief_14d"] = _write("brief_14d.json", b14)
     for name, w in windows.items():
         b = digest.build(w, p=p, save=False, now=now)
         if name == "since_last_look":
             b["window"]["label"] = "since you last looked"
+        b = carry_over(b, _previous(f"brief_{name}.json"))
         sizes[f"brief_{name}"] = _write(f"brief_{name}.json", b)
 
     # Research for the portfolio and the research names (from the research cache).
@@ -105,6 +153,8 @@ def main() -> None:
         index.append({"ticker": tk, "name": r.get("name"), "kept": rc.get("promises_kept"),
                       "dodged": rc.get("questions_dodged"), "as_of": r.get("started_at"),
                       "in_portfolio": tk in p.weights, **index_extras(r)})
+    done = {r["ticker"] for r in index}
+    index += [r for r in (_previous("research_index.json") or []) if isinstance(r, dict) and r.get("ticker") not in done]
     sizes["research_index"] = _write("research_index.json", index)
 
     # Company list for search (NSE equity series), compact.
@@ -117,6 +167,8 @@ def main() -> None:
     compact = {s: [[r["date"], r["ret_pct"], r.get("mkt_ret_pct"), r.get("z"), r.get("vol_x"), r["close"],
                     int(bool(r.get("provisional")))] for r in rows[-120:]] for s, rows in series.items()}
     # Never replace good data with a broken run (e.g. a cloud host refused by Yahoo).
+    prev_series = (_previous("alert_series.json") or {}).get("series") or {}
+    compact.update({s: rows for s, rows in prev_series.items() if s not in compact and s in p.symbols})
     if len(compact) >= len(p.symbols) / 2:
         sizes["alert_series"] = _write("alert_series.json", {"fields": ["date", "ret_pct", "mkt_ret_pct", "z", "vol_x",
                                                                          "close", "provisional"], "series": compact})
