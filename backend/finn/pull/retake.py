@@ -32,12 +32,14 @@ def main() -> None:
             r = hit[0]
             _bank(r)
             r["sections"]["take"] = narrative.finns_take(r["sections"])
+            r["sections"]["chart_notes"] = narrative.chart_notes(r["sections"])
             store().put("research", k, r, "pull engine")
             n += 1
     for f in SNAP.glob("*.json"):
         r = json.loads(f.read_text(encoding="utf-8"))
         _bank(r)
         r["sections"]["take"] = narrative.finns_take(r["sections"])
+        r["sections"]["chart_notes"] = narrative.chart_notes(r["sections"])
         f.write_text(json.dumps(r, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         n += 1
     print("updated", n)

@@ -157,6 +157,7 @@ def research(ticker: str, *, refresh: bool = False, n_transcripts: int = 5,
     out["sections"]["bull_bear"] = narrative.bull_bear(facts, tb["name"])
     out["sections"]["report_card"] = report_card(led, dodged_calls)
     out["sections"]["take"] = narrative.finns_take(out["sections"])
+    out["sections"]["chart_notes"] = narrative.chart_notes(out["sections"])
     if _ai_busy(t0):
         out["states"].append({"state": "ai_busy", "message": "The free AI tier hit its limit during this run; some "
                                                              "sections may be incomplete. Try again in a few minutes."})

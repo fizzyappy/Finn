@@ -256,9 +256,9 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
       {S.snapshot && <Snapshot s={S.snapshot} />}
       {S.bank && <Bank b={S.bank} yearGrowth={S.balance_sheet?.deposit_growth_pct} />}
-      {S.trajectory && <Trajectory t={S.trajectory} lender={!!S.snapshot?.lender} />}
+      {S.trajectory && <Trajectory t={S.trajectory} lender={!!S.snapshot?.lender} note={S.chart_notes?.trajectory} />}
       {S.balance_sheet && <BalanceSheet b={S.balance_sheet} />}
-      {S.cash_quality && <Cash c={S.cash_quality} />}
+      {S.cash_quality && <Cash c={S.cash_quality} note={S.chart_notes?.cash} />}
       {S.business_snapshot && <Business b={S.business_snapshot} />}
       {S.bull_bear && (S.bull_bear.bull?.length || S.bull_bear.bear?.length) ? <BullBear bb={S.bull_bear} /> : null}
       <Sources d={d} />
@@ -515,13 +515,14 @@ function Bank({ b, yearGrowth }: { b: Json; yearGrowth?: number | null }) {
   );
 }
 
-function Trajectory({ t, lender }: { t: Json; lender?: boolean }) {
+function Trajectory({ t, lender, note }: { t: Json; lender?: boolean; note?: string }) {
   const rows: Json[] = (t.annual || []).slice(-7);
   const c3 = t.cagr_pct?.["3y"] || {}, c5 = t.cagr_pct?.["5y"] || {};
   return (
     <>
       <Title meta="revenue bars · margin line">Trajectory</Title>
       <div className="glass card">
+        {note && <div className="chart-note">{note}</div>}
         <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr (bars) · operating margin (line)`}
           fmt={(v) => fmtCr(v)} lineName="margin"
           data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
@@ -563,13 +564,14 @@ function BalanceSheet({ b }: { b: Json }) {
   );
 }
 
-function Cash({ c }: { c: Json }) {
+function Cash({ c, note }: { c: Json; note?: string }) {
   if (c.available === false) return null;
   const rows: Json[] = (c.years || []).slice(-6);
   return (
     <>
       <Title meta="operating cash vs profit">Cash quality</Title>
       <div className="glass card">
+        {note && !c.lender && <div className="chart-note">{note}</div>}
         {!c.lender && (
           <svg viewBox="0 0 340 122" width="100%" role="img" aria-label="Operating cash flow compared with profit by year" className="chart">
             <defs>

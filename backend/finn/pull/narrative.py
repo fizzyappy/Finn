@@ -277,3 +277,34 @@ def finns_take(sections: dict) -> dict:
             parts.append({"text": "profits backed by cash", "tone": "good"})
     return {"parts": parts[:4], "text": " \u00b7 ".join(x["text"] for x in parts[:4]),
             "note": "Written by Python from the verified facts on this page; no model involved."}
+
+
+def _fy_quarter(iso: str) -> str:
+    """'2026-09-30' -> 'Q2 FY27'."""
+    y, m = int(iso[:4]), int(iso[5:7])
+    q = {6: 1, 9: 2, 12: 3, 3: 4}.get(m)
+    fy = y + 1 if m >= 4 else y
+    return f"Q{q} FY{str(fy)[2:]}" if q else iso
+
+
+def chart_notes(sections: dict) -> dict:
+    """One plain sentence above each chart, computed by Python from the chart's own numbers."""
+    S = sections or {}
+    out: dict = {}
+    q = (S.get("trajectory") or {}).get("quarters") or []
+    lender = (S.get("snapshot") or {}).get("lender")
+    if len(q) >= 5 and q[-1].get("revenue") and q[-5].get("revenue"):
+        g = (q[-1]["revenue"] / q[-5]["revenue"] - 1) * 100
+        s = f"{'Total income' if lender else 'Revenue'} {g:+.0f}% YoY in {_fy_quarter(q[-1]['quarter_end'])}"
+        if q[-1].get("pat") is not None and q[-5].get("pat"):
+            s += f"; profit {(q[-1]['pat'] / q[-5]['pat'] - 1) * 100:+.0f}%" if q[-5]["pat"] > 0 else "; profit up from a loss"
+        m0, m1 = q[-5].get("ebitda_margin_pct"), q[-1].get("ebitda_margin_pct")
+        if m0 is not None and m1 is not None:
+            s += f"; operating margin {m1:.1f}% ({m1 - m0:+.1f} pts)"
+        out["trajectory"] = s + "."
+    ys = (S.get("cash_quality") or {}).get("years") or []
+    ys = [y for y in ys if y.get("cfo") is not None and y.get("pat")]
+    if ys and not (S.get("cash_quality") or {}).get("lender"):
+        beat = sum(1 for y in ys if y["cfo"] >= y["pat"])
+        out["cash"] = f"Cash from operations matched or beat profit in {beat} of the last {len(ys)} years."
+    return out

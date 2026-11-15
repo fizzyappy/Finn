@@ -429,3 +429,5 @@ a.ticker-chip:active { transform: scale(0.96); }
 .funnel-text b { color: var(--text); font-weight: 600; }
 .funnel-text .arr { color: var(--text-3); }
 .funnel-text .need b { color: var(--mint-2); }
+
+.chart-note { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.4; }
