@@ -43,7 +43,7 @@ Hand check of 15 labels against the transcripts:
 | partly | 8 | 7 | HAL "I will restrict myself to saying that we are moving in a very positive direction" is arguably a dodge |
 | answered | 5 | 3 | an L&T order-book question got an off-topic reply; an Infosys answer was vague |
 
-**Dodged precision: 2 of 2.** Overall agreement 12 of 15. Every disagreement errs on the side of
+**Dodged precision: 2 of 2** in the sample; later, all 4 CDSL "dodged" flags were read by hand and every one is an explicit refusal ("that's a forward-looking statement, so we will not be able to comment", "we do not discuss this in our investor calls"). Overall agreement 12 of 15. Every disagreement errs on the side of
 not accusing management, which is the intended trade-off (fewer flags, correct flags). The HAL
 "which program?" clarification that was wrongly flagged in the first run is now "partly".
 

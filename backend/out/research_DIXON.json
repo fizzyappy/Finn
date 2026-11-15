@@ -2081,7 +2081,8 @@
    {
     "id": "F1",
     "text": "P/E 50.5, market cap Rs 78,334 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -2105,59 +2106,46 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth slowed: +46.7% YoY in the latest quarter vs a 3y CAGR of 58.9%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F7",
+    "text": "Profit grew slower than revenue (-44.9% vs +46.7% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 2.7% in the latest quarter, -1.1 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 0.21 (borrowings Rs 1,236 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle -7 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 1.08x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
-   },
-   {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Call of 2026-11-05: questions dodged: 0 of 14",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F13",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 20",
-    "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The company achieved a 3y revenue CAGR of 58.9% and a profit CAGR of 86.1%.",
-     "cites": [
-      {
-       "id": "F2",
-       "text": "3y revenue CAGR 58.9%, profit CAGR 86.1%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 21,794 cr, showing a 46.7% YoY increase.",
+     "text": "Latest quarter revenue reached Rs 21,794 cr, showing a +46.7% YoY increase.",
      "cites": [
       {
        "id": "F4",
@@ -2167,10 +2155,20 @@
      ]
     },
     {
-     "text": "Revenue grew YoY across 8 of 8 recent quarters.",
+     "text": "The 3y revenue CAGR was 58.9% and profit CAGR was 86.1%.",
      "cites": [
       {
-       "id": "F10",
+       "id": "F2",
+       "text": "3y revenue CAGR 58.9%, profit CAGR 86.1%",
+       "source": "annual P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "cites": [
+      {
+       "id": "F12",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
        "source": "quarterly P&L"
       }
@@ -2179,7 +2177,18 @@
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 411 cr, representing a -44.9% decrease YoY.",
+     "text": "Revenue growth slowed to +46.7% YoY in the latest quarter compared to a 3y CAGR of 58.9%.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Revenue growth slowed: +46.7% YoY in the latest quarter vs a 3y CAGR of 58.9%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter profit was Rs 411 cr, representing a -44.9% YoY decrease.",
      "cites": [
       {
        "id": "F5",
@@ -2189,22 +2198,12 @@
      ]
     },
     {
-     "text": "Operating margin stood at 2.7% in the latest quarter, dropping -1.1 pts YoY.",
+     "text": "Operating margin was 2.7% in the latest quarter, dropping -1.1 pts YoY.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F8",
        "text": "Operating margin 2.7% in the latest quarter, -1.1 pts YoY",
        "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The company trades at a P/E of 50.5 with a market cap of Rs 78,334 cr.",
-     "cites": [
-      {
-       "id": "F1",
-       "text": "P/E 50.5, market cap Rs 78,334 cr",
-       "source": "screener ratios"
       }
      ]
     }

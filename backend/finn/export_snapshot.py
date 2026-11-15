@@ -20,6 +20,17 @@ OUT = config.ROOT / "frontend" / "public" / "data"
 RESEARCH_NAMES = ["ASIANPAINT", "TITAN", "HAL"]
 
 
+
+def index_extras(r: dict) -> dict:
+    """What the research list shows besides the verdicts: how many targets are tracked,
+    the earliest open one, and the date of the latest call."""
+    led = (r.get("sections") or {}).get("promise_ledger") or {}
+    ps = led.get("promises") or []
+    open_h = sorted({x["horizon"] for x in ps if x.get("verdict") == "Too early" and x.get("horizon")})
+    trs = r.get("transcripts") or []
+    return {"tracked": len(ps), "open": sum(1 for x in ps if x.get("verdict") == "Too early"),
+            "next_due": open_h[0] if open_h else None, "last_call": trs[0]["call"] if trs else None}
+
 def _write(name: str, obj) -> int:
     p = OUT / name
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -75,7 +86,7 @@ def main() -> None:
         rc = r["sections"].get("report_card") or {}
         index.append({"ticker": tk, "name": r.get("name"), "kept": rc.get("promises_kept"),
                       "dodged": rc.get("questions_dodged"), "as_of": r.get("started_at"),
-                      "in_portfolio": tk in p.weights})
+                      "in_portfolio": tk in p.weights, **index_extras(r)})
     sizes["research_index"] = _write("research_index.json", index)
 
     # Company list for search (NSE equity series), compact.

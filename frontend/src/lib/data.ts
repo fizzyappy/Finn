@@ -172,3 +172,13 @@ export function sameText(a?: string, b?: string) {
 export const cleanTitle = (s?: string) =>
   (s || "").replace(/^(announcement|intimation|disclosure)\s+under\s+regulation\s+\d+\s*(\(\w+\))?\s*(of .{0,40}?regulations?,? \d{4})?\s*[-:]?\s*/i, "").trim();
 export const pageLink = (url?: string, page?: number) => (url ? (page ? `${url}#page=${page}` : url) : undefined);
+/** "Rs 4,229 cr" / "Rs. 12" -> "₹4,229 cr" for display. */
+export const rupee = (t?: string) => (t || "").replace(/\bRs\.?\s?(?=[\d₹])/g, "₹").replace(/\bINR\s?(?=\d)/g, "₹");
+const MON: Record<string, string> = { January: "Jan", February: "Feb", March: "Mar", April: "Apr", May: "May", June: "Jun",
+  July: "Jul", August: "Aug", September: "Sep", October: "Oct", November: "Nov", December: "Dec" };
+/** Display tidy-up for model-written lines: ₹ and Indian date style ("November 12, 2026" -> "12 Nov 2026"). */
+export const tidy = (t?: string) => rupee(t)
+  .replace(/\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4})/g,
+    (_m, mo, d, y) => `${d} ${MON[mo]} ${y}`)
+  .replace(/\b(\d{1,2})(?:st|nd|rd|th)? (January|February|March|April|May|June|July|August|September|October|November|December),? (\d{4})/g,
+    (_m, d, mo, y) => `${d} ${MON[mo]} ${y}`);

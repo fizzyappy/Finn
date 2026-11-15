@@ -20,26 +20,70 @@ from .promises import sentences
 from .transcripts import Transcript
 
 
+def revenue_jump(annual: list[dict], last_n: int = 3) -> tuple[str, float] | None:
+    """A one-year revenue jump far above the company's usual growth within the last `last_n` years:
+    usually a merger or acquisition, so multi-year growth is not like-for-like."""
+    rows = [r for r in annual if r.get("revenue")]
+    g = [(rows[i]["year_end"], (rows[i]["revenue"] / rows[i - 1]["revenue"] - 1) * 100)
+         for i in range(1, len(rows)) if rows[i - 1]["revenue"] > 0]
+    if len(g) < 4:
+        return None
+    for ye, x in g[-last_n:]:
+        others = sorted(v for y, v in g if y != ye)
+        med = others[len(others) // 2]
+        if x >= 40 and x >= 2.5 * max(med, 5):
+            return ye, round(x, 1)
+    return None
+
+
 def fact_pool(tables: dict, ledger: dict | None, dodged: list[dict] | None) -> list[dict]:
+    """Numbered facts for the bull/bear writer. Python also computes comparison facts (growth slowing,
+    margins squeezed, a merger-sized jump, per-share dilution) and marks each with the side it supports."""
     facts: list[dict] = []
 
-    def add(text: str, source: str):
-        facts.append({"id": f"F{len(facts) + 1}", "text": text, "source": source})
+    def add(text: str, source: str, tone: str | None = None):
+        facts.append({"id": f"F{len(facts) + 1}", "text": text, "source": source, **({"tone": tone} if tone else {})})
     snap, traj, bs, cq = tables["snapshot"], tables["trajectory"], tables["balance_sheet"], tables["cash_quality"]
     lat = snap.get("latest") or {}
     if snap.get("pe"):
-        add(f"P/E {snap['pe']:g}, market cap Rs {snap['market_cap_cr']:,.0f} cr", "screener ratios")
-    for n in ("3y", "5y"):
-        c = (traj.get("cagr_pct") or {}).get(n) or {}
-        if c.get("revenue") is not None:
-            add(f"{n} revenue CAGR {c['revenue']}%, profit CAGR {c.get('pat')}%", "annual P&L")
+        add(f"P/E {snap['pe']:g}, market cap Rs {snap['market_cap_cr']:,.0f} cr", "screener ratios", "context")
+    cagr = traj.get("cagr_pct") or {}
+    c3 = cagr.get("3y") or {}
+    diluted = c3.get("revenue") is not None and c3.get("eps") is not None and c3["revenue"] - c3["eps"] >= 10
+    # A merger-sized year is called out only when per-share growth confirms it (shares were issued):
+    # a fast-growing company with a big organic year is not accused of buying its growth.
+    jump = revenue_jump(traj.get("annual") or []) if diluted else None
+    if jump:
+        add(f"3y revenue CAGR {c3['revenue']}% is not like-for-like: revenue jumped {jump[1]}% in the year to "
+            f"{jump[0][:7]} while EPS grew only {c3['eps']}% a year (likely a merger that issued shares)", "annual P&L", "bear")
+    else:
+        for n in ("3y", "5y"):
+            c = cagr.get(n) or {}
+            if c.get("revenue") is not None:
+                add(f"{n} revenue CAGR {c['revenue']}%, profit CAGR {c.get('pat')}%", "annual P&L")
+        if diluted:
+            add(f"3y EPS CAGR {c3['eps']}% vs revenue CAGR {c3['revenue']}%: growth per share was much slower",
+                "annual P&L", "bear")
     q = traj.get("quarters") or []
+    g = g2 = None
     if len(q) >= 5 and q[-1].get("revenue") and q[-5].get("revenue"):
         g = round((q[-1]["revenue"] / q[-5]["revenue"] - 1) * 100, 1)
         add(f"Latest quarter ({q[-1]['quarter_end']}) revenue Rs {q[-1]['revenue']:,.0f} cr, {g:+.1f}% YoY", "quarterly P&L")
         if q[-1].get("pat") and q[-5].get("pat") and q[-5]["pat"] > 0:
             g2 = round((q[-1]["pat"] / q[-5]["pat"] - 1) * 100, 1)
             add(f"Latest quarter profit Rs {q[-1]['pat']:,.0f} cr, {g2:+.1f}% YoY", "quarterly P&L")
+    if g is not None and c3.get("revenue") is not None and not jump:
+        if g <= c3["revenue"] - 5:
+            add(f"Revenue growth slowed: {g:+.1f}% YoY in the latest quarter vs a 3y CAGR of {c3['revenue']}%",
+                "quarterly vs annual P&L", "bear")
+        elif g >= c3["revenue"] + 5:
+            add(f"Revenue growth sped up: {g:+.1f}% YoY in the latest quarter vs a 3y CAGR of {c3['revenue']}%",
+                "quarterly vs annual P&L", "bull")
+    if g is not None and g2 is not None and g > 0:
+        if g2 <= g - 5:
+            add(f"Profit grew slower than revenue ({g2:+.1f}% vs {g:+.1f}% YoY): margins were squeezed", "quarterly P&L", "bear")
+        elif g2 >= g + 5:
+            add(f"Profit grew faster than revenue ({g2:+.1f}% vs {g:+.1f}% YoY): margins widened", "quarterly P&L", "bull")
         if q[-1].get("ebitda_margin_pct") is not None and q[-5].get("ebitda_margin_pct") is not None:
             d = round(q[-1]["ebitda_margin_pct"] - q[-5]["ebitda_margin_pct"], 1)
             add(f"Operating margin {q[-1]['ebitda_margin_pct']}% in the latest quarter, {d:+.1f} pts YoY", "quarterly P&L")
@@ -57,14 +101,15 @@ def fact_pool(tables: dict, ledger: dict | None, dodged: list[dict] | None) -> l
     if traj.get("quarters_with_yoy_revenue_growth"):
         add(f"Revenue grew YoY in {traj['quarters_with_yoy_revenue_growth']} recent quarters", "quarterly P&L")
     if ledger:
-        add(f"Promises kept: {ledger['kept_of_measurable']} measurable targets", "promise ledger")
         for r in ledger["promises"]:
             if r["verdict"] in ("Kept", "Missed", "Partly", "Quietly dropped"):
                 add(f"{r['verdict']}: {r['metric'].replace('_', ' ')} {r['horizon']} target {r['target']}"
-                    + (f", actual {r['actual']:,.1f}" if r.get("actual") is not None else ""), "promise ledger")
+                    + (f", actual {r['actual']:,.1f}" if r.get("actual") is not None else ""), "promise ledger",
+                    "bull" if r["verdict"] == "Kept" else "bear")
     for d in dodged or []:
-        if d.get("counts"):
-            add(f"Call of {d['call']}: {d['summary']}", "dodged-question check")
+        # Only a real finding is a fact; "0 dodged" is not a bull point.
+        if (d.get("counts") or {}).get("dodged"):
+            add(f"Call of {d['call']}: {d['summary']}", "dodged-question check", "bear")
     return facts
 
 
@@ -115,7 +160,9 @@ SYSTEM = (
     "You are writing for an equity investor. Using ONLY the numbered facts given, write exactly 3 bull points and 3 "
     "bear points about the company. Each point: one sentence, at most 160 characters, must include at least one "
     "number copied exactly from the facts it cites, and must list the fact ids it relies on. No adjectives without "
-    "a number, no advice, no price targets, nothing that is not in the facts."
+    "a number, no advice, no price targets, nothing that is not in the facts. A fact marked [bull] may only support "
+    "a bull point and a fact marked [bear] only a bear point. A growth number is not a bear point by itself: use the "
+    "comparison facts (slowing, squeezed, not like-for-like) for the bear case. Fewer points are fine if the facts are thin."
 )
 SCHEMA = {
     "type": "object",
@@ -125,6 +172,7 @@ SCHEMA = {
     "required": ["bull", "bear"],
 }
 _NUM = re.compile(r"\d[\d,]*(?:\.\d+)?")
+_FACT_REF = re.compile(r"\s*[\[(]\s*F\d+(?:\s*,\s*F\d+)*\s*[\])]")
 
 
 def check_bullet(b: dict, facts: dict[str, dict]) -> str | None:
@@ -150,7 +198,8 @@ def check_bullet(b: dict, facts: dict[str, dict]) -> str | None:
 def bull_bear(facts: list[dict], name: str) -> dict:
     if not facts:
         return {"bull": [], "bear": [], "removed": [], "note": "no facts"}
-    prompt = f"Company: {name}\nFacts:\n" + "\n".join(f"{f['id']}: {f['text']} (source: {f['source']})" for f in facts)
+    prompt = f"Company: {name}\nFacts:\n" + "\n".join(
+        f"{f['id']}: {f['text']} (source: {f['source']})" + (f" [{f['tone']}]" if f.get("tone") else "") for f in facts)
     res = llm.router().complete("bull_bear", prompt, system=SYSTEM, tier="lite", schema=SCHEMA, max_tokens=1500)
     if not res or not isinstance(res.data, dict):
         return {"bull": [], "bear": [], "removed": [], "note": "model unavailable" if not llm.router().available else "no usable answer"}
@@ -158,7 +207,11 @@ def bull_bear(facts: list[dict], name: str) -> dict:
     out = {"bull": [], "bear": [], "removed": []}
     for side in ("bull", "bear"):
         for b in (res.data.get(side) or [])[:3]:
-            why = check_bullet(b, by_id)
+            # The model sometimes writes its fact ids into the sentence ("... [F6]"); they are not part of the point.
+            b = {**b, "text": _FACT_REF.sub("", b.get("text") or "").strip()}
+            why = check_bullet(b, by_id) or next(
+                (f"uses a [{by_id[c]['tone']}] fact" for c in b.get("cites") or []
+                 if c in by_id and by_id[c].get("tone") and by_id[c]["tone"] != side), None)
             if why:
                 out["removed"].append({"side": side, "text": b.get("text"), "why": why})
             else:

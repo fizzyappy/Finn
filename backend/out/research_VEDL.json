@@ -1621,7 +1621,8 @@
    {
     "id": "F1",
     "text": "P/E 7.69, market cap Rs 101,545 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1645,77 +1646,97 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth sped up: +57.5% YoY in the latest quarter vs a 3y CAGR of -18.9%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
+    "text": "Profit grew faster than revenue (+78.3% vs +57.5% YoY): margins widened",
+    "source": "quarterly P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 38.0% in the latest quarter, +9.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 2.44 (borrowings Rs 31,113 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle -16 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 2.16x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 4 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Quietly dropped: net debt three years target 3 USD mn",
-    "source": "promise ledger"
-   },
-   {
     "id": "F13",
-    "text": "Call of 2026-04-30: questions dodged: 0 of 21",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-01-31: questions dodged: 0 of 25",
-    "source": "dodged-question check"
+    "text": "Quietly dropped: net debt three years target 3 USD mn",
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter revenue was Rs 26,356 cr, which is +57.5% YoY.",
+     "text": "Revenue growth sped up to +57.5% YoY in the latest quarter compared to a 3y CAGR of -18.9%.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR -18.9%, profit CAGR 20.1%",
+       "source": "annual P&L"
+      },
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 26,356 cr, +57.5% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Revenue growth sped up: +57.5% YoY in the latest quarter vs a 3y CAGR of -18.9%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bull"
+      }
+     ]
+    },
+    {
+     "text": "Profit grew faster than revenue at +78.3% versus +57.5% YoY in the latest quarter, widening margins.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 26,356 cr, +57.5% YoY",
        "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The latest quarter profit reached Rs 6,202 cr, showing a +78.3% YoY increase.",
-     "cites": [
+      },
       {
        "id": "F5",
        "text": "Latest quarter profit Rs 6,202 cr, +78.3% YoY",
        "source": "quarterly P&L"
+      },
+      {
+       "id": "F7",
+       "text": "Profit grew faster than revenue (+78.3% vs +57.5% YoY): margins widened",
+       "source": "quarterly P&L",
+       "tone": "bull"
       }
      ]
     },
     {
-     "text": "Operating margin was 38.0% in the latest quarter, up +9.0 pts YoY.",
+     "text": "Operating margin reached 38.0% in the latest quarter, marking a +9.0 pts increase YoY.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F8",
        "text": "Operating margin 38.0% in the latest quarter, +9.0 pts YoY",
        "source": "quarterly P&L"
       }
@@ -1724,32 +1745,13 @@
    ],
    "bear": [
     {
-     "text": "The 3y revenue CAGR stands at -18.9% alongside a profit CAGR of 20.1%.",
+     "text": "The company quietly dropped the net debt three years target 3 USD mn.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR -18.9%, profit CAGR 20.1%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The 5y revenue CAGR is -2.3% while the profit CAGR is 10.8%.",
-     "cites": [
-      {
-       "id": "F3",
-       "text": "5y revenue CAGR -2.3%, profit CAGR 10.8%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Debt to equity is 2.44 with borrowings at Rs 31,113 cr.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Debt/equity 2.44 (borrowings Rs 31,113 cr)",
-       "source": "balance sheet"
+       "id": "F13",
+       "text": "Quietly dropped: net debt three years target 3 USD mn",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }

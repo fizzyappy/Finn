@@ -1622,7 +1622,8 @@
    {
     "id": "F1",
     "text": "P/E 63, market cap Rs 126,728 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1671,59 +1672,48 @@
    },
    {
     "id": "F11",
-    "text": "Promises kept: 1 of 1 measurable targets",
-    "source": "promise ledger"
+    "text": "Quietly dropped: ebitda margin upon stabilization target 50%",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F12",
-    "text": "Quietly dropped: ebitda margin upon stabilization target 50%",
-    "source": "promise ledger"
+    "text": "Quietly dropped: volume growth FY27 target 9-10%",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F13",
-    "text": "Quietly dropped: volume growth FY27 target 9-10%",
-    "source": "promise ledger"
+    "text": "Quietly dropped: capex FY27 target 1000 cr",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F14",
-    "text": "Quietly dropped: capex FY27 target 1000 cr",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F15",
     "text": "Kept: revenue growth FY26 target 10%, actual 16.2",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F16",
-    "text": "Call of 2026-10-28: questions dodged: 0 of 18",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F17",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 20",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bull"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 18.6% and profit CAGR is 28.7%.",
-     "cites": [
-      {
-       "id": "F2",
-       "text": "3y revenue CAGR 18.6%, profit CAGR 28.7%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 2,484 cr, representing a +21.7% YoY increase.",
+     "text": "The latest quarter revenue reached Rs 2,484 cr with a +21.7% YoY increase.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 2,484 cr, +21.7% YoY",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The company achieved a 3y revenue CAGR of 18.6% and a profit CAGR of 28.7%.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 18.6%, profit CAGR 28.7%",
+       "source": "annual P&L"
       }
      ]
     },
@@ -1740,32 +1730,35 @@
    ],
    "bear": [
     {
-     "text": "The P/E is 63 for a market cap of Rs 126,728 cr.",
+     "text": "Management quietly dropped the ebitda margin upon stabilization target 50%.",
      "cites": [
       {
-       "id": "F1",
-       "text": "P/E 63, market cap Rs 126,728 cr",
-       "source": "screener ratios"
+       "id": "F11",
+       "text": "Quietly dropped: ebitda margin upon stabilization target 50%",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "The company quietly dropped the ebitda margin upon stabilization target 50%.",
+     "text": "Management quietly dropped the volume growth FY27 target 9-10%.",
      "cites": [
       {
        "id": "F12",
-       "text": "Quietly dropped: ebitda margin upon stabilization target 50%",
-       "source": "promise ledger"
+       "text": "Quietly dropped: volume growth FY27 target 9-10%",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "The company quietly dropped the volume growth FY27 target 9-10%.",
+     "text": "Management quietly dropped the capex FY27 target 1000 cr.",
      "cites": [
       {
        "id": "F13",
-       "text": "Quietly dropped: volume growth FY27 target 9-10%",
-       "source": "promise ledger"
+       "text": "Quietly dropped: capex FY27 target 1000 cr",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }

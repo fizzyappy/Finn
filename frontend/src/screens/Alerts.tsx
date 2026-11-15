@@ -40,6 +40,25 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
     return { dates, byDay, fires: fires.sort((a, b) => (a.date < b.date ? 1 : -1)), perWeek: fires.length / weeks };
   }, [series, who, z, vol, useVol]);
 
+  // The slider in plain %: a stock's usual daily swing after the market's move (last 60 days), times the setting.
+  const pctAt = useMemo(() => {
+    const out: Record<string, number> = {};
+    for (const [sym, rows] of Object.entries(series || {})) {
+      const xs = rows.slice(-60).filter((r) => r[2] != null).map((r) => r[1] - (r[2] as number));
+      if (xs.length < 20) continue;
+      const m = xs.reduce((a, b) => a + b, 0) / xs.length;
+      out[sym] = Math.sqrt(xs.reduce((a, b) => a + (b - m) ** 2, 0) / (xs.length - 1));
+    }
+    return out;
+  }, [series]);
+  const pctLine = (() => {
+    const e = Object.entries(pctAt).sort((a, b) => a[1] - b[1]);
+    if (!e.length) return "";
+    if (who !== "any holding" && pctAt[who]) return `≈ ±${(z * pctAt[who]).toFixed(1)}% beyond the market's move for ${who}`;
+    const lo = e[0], hi = e[e.length - 1];
+    return `≈ ±${(z * hi[1]).toFixed(1)}% for ${hi[0]}, ±${(z * lo[1]).toFixed(1)}% for ${lo[0]} (beyond the market's move)`;
+  })();
+
   const cycleWho = () => {
     const opts = ["any holding", ...symbols];
     setWho(opts[(opts.indexOf(who) + 1) % opts.length]);
@@ -52,11 +71,12 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
         <p className="sentence" style={{ margin: 0 }}>
           Tell me when{" "}
           <button className="val" onClick={cycleWho} aria-label={`Which stocks: ${who}. Tap to change`}>{who}</button>{" "}
-          moves more than <span className="val">{z.toFixed(1)}×</span> its normal day
+          moves more than <span className="val">{z.toFixed(1)}×</span> its usual daily move
           {useVol ? <> with volume above <span className="val">{vol.toFixed(1)}×</span> average</> : null}.
         </p>
         <label className="small muted" style={{ display: "block", marginTop: 14 }} htmlFor="z">Move size, in units of the stock's usual daily swing (after the market's move)</label>
         <input id="z" className="slider" type="range" min={1.5} max={5} step={0.1} value={z} onChange={(e) => setZ(+e.target.value)} />
+        {pctLine && <div className="small faint tnum" style={{ marginTop: -2, marginBottom: 6 }}>{pctLine}</div>}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 4 }}>
           <label className="small muted" htmlFor="v">Volume vs 20-day average</label>
           <button className={`chip ${useVol ? "on" : ""}`} style={{ height: 28 }} onClick={() => setUseVol((v) => !v)} aria-pressed={useVol} aria-label={`Volume condition ${useVol ? "on" : "off"}`}>{useVol ? "on" : "off"}</button>
@@ -85,14 +105,15 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
             </div>
             <div className="strip-legend"><span>{fmtDay(bt.dates[0])}</span><span>{fmtDay(bt.dates[bt.dates.length - 1])}</span></div>
             <p className="faint small" style={{ marginBottom: 0 }}>
-              {bt.perWeek > 2 ? "That's a lot of pings: most would be noise. Try a higher move size or add volume." :
-                bt.perWeek < 0.3 ? "Very quiet: you'd hear about only the biggest days." : "A sensible level: roughly the days worth a look."}
+              {bt.perWeek > 2 ? "Getting noisy: most of these pings would be routine days. Try a higher move size or add volume." :
+                bt.perWeek >= 1 ? "About one or two a week: a sensible level for a push." :
+                bt.perWeek >= 0.3 ? "Selective: only the standout days." : "Very quiet: you'd hear about only the biggest days."}
             </p>
             <div style={{ marginTop: 10 }}>
               {bt.fires.slice(0, 5).map((f) => (
                 <div key={f.sym + f.date} className="small" style={{ display: "flex", justifyContent: "space-between", padding: "5px 0", borderTop: "1px solid var(--line)" }}>
                   <span><b>{f.sym}</b> <span className="faint">{fmtDay(f.date)}</span></span>
-                  <span className="tnum"><span className={f.ret > 0 ? "up" : "down"}>{f.ret > 0 ? "+" : ""}{f.ret}%</span> · {Math.abs(f.z).toFixed(1)}×{f.vol != null ? ` · ${f.vol}× vol` : ""}</span>
+                  <span className="tnum"><span className={f.ret > 0 ? "up" : "down"}>{f.ret > 0 ? "+" : ""}{f.ret}%</span> <span className="faint">· move {Math.abs(f.z).toFixed(1)}×{f.vol != null ? ` · volume ${Number(f.vol).toFixed(1)}×` : ""}</span></span>
                 </div>
               ))}
             </div>
@@ -105,10 +126,9 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
         {recent.length === 0 && <div className="row small muted">No notable moves in the last 14 days.</div>}
         {recent.map((a) => (
           <div className="row" key={a.symbol + a.date}>
-            <div className="ticker-badge" aria-hidden>{a.symbol.slice(0, 4)}</div>
             <div className="grow">
               <div className="title tnum">{a.symbol} <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span> <span className="faint small">· {fmtDay(a.date)}</span></div>
-              <div className="desc">Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}% · {Math.abs(a.measures.z).toFixed(1)}× its normal day · volume {a.measures.vol_x}× average</div>
+              <div className="desc">Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}% · move {Math.abs(a.measures.z).toFixed(1)}× its usual · volume {Number(a.measures.vol_x).toFixed(1)}× average</div>
               {a.filed_before?.map((f: Json) => (
                 <div key={f.ts} style={{ marginTop: 6 }}><Cite href={f.url}>filed before: {cleanTitle(f.title)}</Cite></div>
               ))}

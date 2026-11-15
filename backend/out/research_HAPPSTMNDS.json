@@ -1188,7 +1188,8 @@
    {
     "id": "F1",
     "text": "P/E 19.4, market cap Rs 4,773 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1202,83 +1203,80 @@
    },
    {
     "id": "F4",
+    "text": "3y EPS CAGR -3.9% vs revenue CAGR 17.4%: growth per share was much slower",
+    "source": "annual P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F5",
     "text": "Latest quarter (2026-09-30) revenue Rs 645 cr, +12.4% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F5",
+    "id": "F6",
     "text": "Latest quarter profit Rs 62 cr, +14.8% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F6",
+    "id": "F7",
     "text": "Operating margin 19.0% in the latest quarter, +2.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Debt/equity 0.93 (borrowings Rs 1,666 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F9",
     "text": "Cash conversion cycle 62 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F10",
     "text": "3-year operating cash flow = 1.1x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F11",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
     "id": "F12",
-    "text": "Call of 2026-11-09: questions dodged: 0 of 8",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F13",
     "text": "Call of 2026-09-30: questions dodged: 1 of 10",
-    "source": "dodged-question check"
+    "source": "dodged-question check",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "Latest quarter revenue was Rs 645 cr, representing +12.4% YoY growth.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue Rs 645 cr, +12.4% YoY.",
-     "cites": [
-      {
-       "id": "F4",
+       "id": "F5",
        "text": "Latest quarter (2026-09-30) revenue Rs 645 cr, +12.4% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Latest quarter profit Rs 62 cr, +14.8% YoY.",
+     "text": "Latest quarter profit reached Rs 62 cr, showing an increase of +14.8% YoY.",
      "cites": [
       {
-       "id": "F5",
+       "id": "F6",
        "text": "Latest quarter profit Rs 62 cr, +14.8% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin stood at 19.0% in the latest quarter, which is +2.0 pts YoY.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Operating margin 19.0% in the latest quarter, +2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
@@ -1286,32 +1284,24 @@
    ],
    "bear": [
     {
-     "text": "3y revenue CAGR 17.4%, profit CAGR -2.7%.",
+     "text": "The 3y EPS CAGR was -3.9% versus revenue CAGR 17.4%, meaning growth per share was much slower.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 17.4%, profit CAGR -2.7%",
-       "source": "annual P&L"
+       "id": "F4",
+       "text": "3y EPS CAGR -3.9% vs revenue CAGR 17.4%: growth per share was much slower",
+       "source": "annual P&L",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "Debt/equity 0.93 with borrowings Rs 1,666 cr.",
+     "text": "During the call of 2026-09-30, questions dodged were counted as 1 of 10.",
      "cites": [
       {
-       "id": "F7",
-       "text": "Debt/equity 0.93 (borrowings Rs 1,666 cr)",
-       "source": "balance sheet"
-      }
-     ]
-    },
-    {
-     "text": "Call of 2026-09-30 had 1 of 10 questions dodged.",
-     "cites": [
-      {
-       "id": "F13",
+       "id": "F12",
        "text": "Call of 2026-09-30: questions dodged: 1 of 10",
-       "source": "dodged-question check"
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     }

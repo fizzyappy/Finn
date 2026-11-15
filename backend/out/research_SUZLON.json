@@ -1519,27 +1519,30 @@
    {
     "id": "F1",
     "text": "P/E 23.1, market cap Rs 52,159 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
-    "text": "3y revenue CAGR 41.0%, profit CAGR 3.1%",
-    "source": "annual P&L"
+    "text": "3y revenue CAGR 41.0% is not like-for-like: revenue jumped 66.8% in the year to 2025-03 while EPS grew only -3.6% a year (likely a merger that issued shares)",
+    "source": "annual P&L",
+    "tone": "bear"
    },
    {
     "id": "F3",
-    "text": "5y revenue CAGR 38.0%, profit CAGR 98.0%",
-    "source": "annual P&L"
-   },
-   {
-    "id": "F4",
     "text": "Latest quarter (2026-09-30) revenue Rs 4,876 cr, +26.0% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F5",
+    "id": "F4",
     "text": "Latest quarter profit Rs 394 cr, -69.2% YoY",
     "source": "quarterly P&L"
+   },
+   {
+    "id": "F5",
+    "text": "Profit grew slower than revenue (-69.2% vs +26.0% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
    },
    {
     "id": "F6",
@@ -1568,54 +1571,25 @@
    },
    {
     "id": "F11",
-    "text": "Promises kept: 0 of 1 measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
     "text": "Missed: revenue growth FY26 target 60%, actual 53.6",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F13",
-    "text": "Call of 2026-11-04: questions dodged: 0 of 28",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 24",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 41.0% and the 5y revenue CAGR is 38.0%.",
+     "text": "The latest quarter revenue reached Rs 4,876 cr, representing a growth of +26.0% YoY.",
      "cites": [
-      {
-       "id": "F2",
-       "text": "3y revenue CAGR 41.0%, profit CAGR 3.1%",
-       "source": "annual P&L"
-      },
       {
        "id": "F3",
-       "text": "5y revenue CAGR 38.0%, profit CAGR 98.0%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 4,876 cr, representing a +26.0% YoY increase.",
-     "cites": [
-      {
-       "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 4,876 cr, +26.0% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "Revenue grew YoY across 8 of 8 recent quarters.",
      "cites": [
       {
        "id": "F10",
@@ -1623,36 +1597,47 @@
        "source": "quarterly P&L"
       }
      ]
+    },
+    {
+     "text": "The debt to equity ratio stands at 0.07 with borrowings of Rs 673 cr.",
+     "cites": [
+      {
+       "id": "F7",
+       "text": "Debt/equity 0.07 (borrowings Rs 673 cr)",
+       "source": "balance sheet"
+      }
+     ]
     }
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 394 cr, which is -69.2% YoY.",
+     "text": "The 3y revenue CAGR of 41.0% is not like-for-like as EPS grew only -3.6% a year.",
      "cites": [
       {
-       "id": "F5",
+       "id": "F2",
+       "text": "3y revenue CAGR 41.0% is not like-for-like: revenue jumped 66.8% in the year to 2025-03 while EPS grew only -3.6% a year (likely a merger that issued shares)",
+       "source": "annual P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter profit was Rs 394 cr, declining by -69.2% YoY.",
+     "cites": [
+      {
+       "id": "F4",
        "text": "Latest quarter profit Rs 394 cr, -69.2% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Operating margin was 15.0% in the latest quarter, down -4.0 pts YoY.",
+     "text": "Operating margin was 15.0% in the latest quarter, dropping by -4.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
        "text": "Operating margin 15.0% in the latest quarter, -4.0 pts YoY",
        "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The company kept 0 of 1 measurable targets.",
-     "cites": [
-      {
-       "id": "F11",
-       "text": "Promises kept: 0 of 1 measurable targets",
-       "source": "promise ledger"
       }
      ]
     }

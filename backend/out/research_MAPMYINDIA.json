@@ -1086,7 +1086,8 @@
    {
     "id": "F1",
     "text": "P/E 31.6, market cap Rs 4,876 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1100,131 +1101,157 @@
    },
    {
     "id": "F4",
+    "text": "3y EPS CAGR 7.0% vs revenue CAGR 19.0%: growth per share was much slower",
+    "source": "annual P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F5",
     "text": "Latest quarter (2026-09-30) revenue Rs 132 cr, +15.8% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F5",
+    "id": "F6",
     "text": "Latest quarter profit Rs 35 cr, +84.2% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F6",
+    "id": "F7",
+    "text": "Profit grew faster than revenue (+84.2% vs +15.8% YoY): margins widened",
+    "source": "quarterly P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 32.0% in the latest quarter, +9.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 0.0 (borrowings Rs 4 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle -123 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 0.69x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 7 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: 1 of 1 measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Quietly dropped: order book FY28 target 2000 cr",
-    "source": "promise ledger"
-   },
-   {
     "id": "F13",
-    "text": "Quietly dropped: revenue FY28 target 1000 cr",
-    "source": "promise ledger"
+    "text": "Quietly dropped: order book FY28 target 2000 cr",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F14",
-    "text": "Kept: ebitda margin FY26 target 35%, actual 35.7",
-    "source": "promise ledger"
+    "text": "Quietly dropped: revenue FY28 target 1000 cr",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F15",
-    "text": "Call of 2026-11-07: questions dodged: 0 of 13",
-    "source": "dodged-question check"
+    "text": "Kept: ebitda margin FY26 target 35%, actual 35.7",
+    "source": "promise ledger",
+    "tone": "bull"
    },
    {
     "id": "F16",
     "text": "Call of 2026-08-31: questions dodged: 1 of 23",
-    "source": "dodged-question check"
+    "source": "dodged-question check",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter profit reached Rs 35 cr, representing a growth of +84.2% YoY.",
-     "cites": [
-      {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 35 cr, +84.2% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The company maintains a debt/equity ratio of 0.0 with borrowings at Rs 4 cr.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Debt/equity 0.0 (borrowings Rs 4 cr)",
-       "source": "balance sheet"
-      }
-     ]
-    },
-    {
-     "text": "The operating margin was 32.0% in the latest quarter, increasing by +9.0 pts YoY.",
+     "text": "Latest quarter profit Rs 35 cr grew +84.2% YoY, and the operating margin reached 32.0% with a +9.0 pts YoY expansion.",
      "cites": [
       {
        "id": "F6",
+       "text": "Latest quarter profit Rs 35 cr, +84.2% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F8",
        "text": "Operating margin 32.0% in the latest quarter, +9.0 pts YoY",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The company maintained a debt/equity of 0.0 with borrowings of Rs 4 cr and a cash conversion cycle of -123 days.",
+     "cites": [
+      {
+       "id": "F9",
+       "text": "Debt/equity 0.0 (borrowings Rs 4 cr)",
+       "source": "balance sheet"
+      },
+      {
+       "id": "F10",
+       "text": "Cash conversion cycle -123 days (2026)",
+       "source": "ratios"
+      }
+     ]
+    },
+    {
+     "text": "The ebitda margin FY26 target was kept at 35%, while the actual result reached 35.7.",
+     "cites": [
+      {
+       "id": "F15",
+       "text": "Kept: ebitda margin FY26 target 35%, actual 35.7",
+       "source": "promise ledger",
+       "tone": "bull"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "The 3-year operating cash flow was 0.69x reported profit.",
+     "text": "The 3y EPS CAGR was 7.0% compared to a revenue CAGR of 19.0%, showing much slower growth per share.",
      "cites": [
       {
-       "id": "F9",
-       "text": "3-year operating cash flow = 0.69x reported profit",
-       "source": "cash flow"
+       "id": "F4",
+       "text": "3y EPS CAGR 7.0% vs revenue CAGR 19.0%: growth per share was much slower",
+       "source": "annual P&L",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "The 3y profit CAGR stands at 7.5% compared to the 3y revenue CAGR of 19.0%.",
+     "text": "The company quietly dropped its order book FY28 target of 2000 cr and its revenue FY28 target of 1000 cr.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 19.0%, profit CAGR 7.5%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Management quietly dropped the order book FY28 target of 2000 cr.",
-     "cites": [
-      {
-       "id": "F12",
+       "id": "F13",
        "text": "Quietly dropped: order book FY28 target 2000 cr",
-       "source": "promise ledger"
+       "source": "promise ledger",
+       "tone": "bear"
+      },
+      {
+       "id": "F14",
+       "text": "Quietly dropped: revenue FY28 target 1000 cr",
+       "source": "promise ledger",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "During the call of 2026-08-31, 1 of 23 questions were dodged.",
+     "cites": [
+      {
+       "id": "F16",
+       "text": "Call of 2026-08-31: questions dodged: 1 of 23",
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     }

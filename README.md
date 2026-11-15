@@ -2,6 +2,8 @@
 
 **What your holdings filed, what actually matters, and whether management keeps its word.**
 
+**Open the app:** https://finn-henna.vercel.app (best on a phone: Share → Add to Home Screen) · research engine: https://finn-api-3des.onrender.com/health
+
 Indian listed companies file dozens of exchange announcements a week; almost all are paperwork.
 FINN reads every filing for your portfolio, ranks it by how much it should interrupt you, and turns the
 few that matter into verified cards: results with numbers checked by Python against a second source,
@@ -97,7 +99,7 @@ Settings screen shows a live cost meter.
 | Same, 34 other companies, first blind pass | rules alone **53%**, rules + Gemini **82%** (later fixes are in-sample) | `backend/push_report.md` |
 | Results cards | ITC (quarterly, excise-adjusted), Happiest Minds and Team24 (scanned PDFs), Transteel and Oriana (half-yearly SME) **all verified**; 8/8 checks incl. a match with Screener | `backend/push_report.md` |
 | Promise ledger, hand check of 45 L&T + HAL statements | extraction **45/45** genuine and verbatim; verdicts **4/7 first pass → 8/8** after generic fixes | `backend/spot_check.md` |
-| Dodged questions, 224 pairs, hand check of 15 labels | "dodged" precision **2/2**; overall agreement **12/15** (misses err towards not accusing) | `backend/spot_check.md` |
+| Dodged questions, 224 pairs, hand check of 15 labels + every CDSL flag | "dodged" precision **6/6** (2/2 in the sample, 4/4 CDSL flags are explicit refusals); overall agreement **12/15** (misses err towards not accusing) | `backend/spot_check.md` |
 | Data layer, 5 companies live | prices, statements, transcripts, filings from this PC; last close within **0.13%** of a second source | `backend/validation_report.md` |
 | Tests | **113** offline tests (backend) on real captured responses and recorded model answers | `backend/tests/` |
 
@@ -127,6 +129,11 @@ The full log with "what we gave up" is in [`DECISIONS.md`](DECISIONS.md). The on
 - Push notifications for hero cards and alerts (the service worker is in place).
 - Analyst-question topics over time (what the Street keeps asking, and whether answers improve).
 - A larger blind evaluation set for the classifier and the dodged-question judge.
+- A directional ledger ("margins should improve from Q3" checked by the metric's direction) and management's own
+  reported constant-currency actuals, so more targets get a verdict.
+- Sector KPIs from the annual report: NII, NIM, GNPA/NNPA, CASA for banks; order book for capital goods.
+- Launch needs: licensed real-time exchange feeds, holdings import from a broker or CAS statement, sign-in and
+  sync, paid hosting without cold starts and a job queue, and a check of SEBI's research-analyst rules.
 
 ## Run it locally
 

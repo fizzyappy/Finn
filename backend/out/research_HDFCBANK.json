@@ -819,115 +819,89 @@
    {
     "id": "F1",
     "text": "P/E 15.5, market cap Rs 1,240,766 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
-    "text": "3y revenue CAGR 26.9%, profit CAGR 19.7%",
-    "source": "annual P&L"
+    "text": "3y revenue CAGR 26.9% is not like-for-like: revenue jumped 66.1% in the year to 2024-03 while EPS grew only 6.2% a year (likely a merger that issued shares)",
+    "source": "annual P&L",
+    "tone": "bear"
    },
    {
     "id": "F3",
-    "text": "5y revenue CAGR 22.1%, profit CAGR 20.0%",
-    "source": "annual P&L"
-   },
-   {
-    "id": "F4",
     "text": "Latest quarter (2026-09-30) revenue Rs 95,132 cr, +9.4% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F5",
+    "id": "F4",
     "text": "Latest quarter profit Rs 21,537 cr, +5.8% YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F6",
+    "id": "F5",
     "text": "Deposits grew 7.2% in the latest year",
     "source": "balance sheet"
    },
    {
-    "id": "F7",
+    "id": "F6",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
-   },
-   {
-    "id": "F8",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F9",
-    "text": "Call of 2026-10-31: questions dodged: 0 of 13",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F10",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 15",
-    "source": "dodged-question check"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 26.9% and the profit CAGR is 19.7%.",
+     "text": "The company reported latest quarter revenue of Rs 95,132 cr, which is an increase of +9.4% YoY.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 26.9%, profit CAGR 19.7%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "On the call of 2026-10-31, questions dodged were 0 of 13.",
-     "cites": [
-      {
-       "id": "F9",
-       "text": "Call of 2026-10-31: questions dodged: 0 of 13",
-       "source": "dodged-question check"
-      }
-     ]
-    }
-   ],
-   "bear": [
-    {
-     "text": "Deposits grew 7.2% in the latest year.",
-     "cites": [
-      {
-       "id": "F6",
-       "text": "Deposits grew 7.2% in the latest year",
-       "source": "balance sheet"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue is Rs 95,132 cr, which is +9.4% YoY.",
-     "cites": [
-      {
-       "id": "F4",
+       "id": "F3",
        "text": "Latest quarter (2026-09-30) revenue Rs 95,132 cr, +9.4% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Latest quarter profit is Rs 21,537 cr, which is +5.8% YoY.",
+     "text": "Latest quarter profit reached Rs 21,537 cr, representing growth of +5.8% YoY.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter profit Rs 21,537 cr, +5.8% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Deposits grew by 7.2% in the latest year according to the balance sheet.",
      "cites": [
       {
        "id": "F5",
-       "text": "Latest quarter profit Rs 21,537 cr, +5.8% YoY",
-       "source": "quarterly P&L"
+       "text": "Deposits grew 7.2% in the latest year",
+       "source": "balance sheet"
+      }
+     ]
+    }
+   ],
+   "bear": [
+    {
+     "text": "The 3y revenue CAGR of 26.9% is not like-for-like as revenue jumped 66.1% in the year to 2024-03.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 26.9% is not like-for-like: revenue jumped 66.1% in the year to 2024-03 while EPS grew only 6.2% a year (likely a merger that issued shares)",
+       "source": "annual P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "While revenue grew, EPS grew only 6.2% a year.",
+     "cites": [
+      {
+       "id": "F2",
+       "text": "3y revenue CAGR 26.9% is not like-for-like: revenue jumped 66.1% in the year to 2024-03 while EPS grew only 6.2% a year (likely a merger that issued shares)",
+       "source": "annual P&L",
+       "tone": "bear"
       }
      ]
     }

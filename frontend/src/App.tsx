@@ -40,7 +40,7 @@ export default function App() {
       <div className="app">
         <header className="topbar">
           <Logo />
-          <div className="asof">snapshot {meta ? fmtWhen(meta.generated_at) : "…"}<br />NSE · BSE · primary sources</div>
+          <div className="asof">Updated {meta ? fmtWhen(meta.generated_at) : "…"}<br />NSE · BSE · primary sources</div>
         </header>
         <main>
           <AnimatePresence mode="wait" initial={false}>

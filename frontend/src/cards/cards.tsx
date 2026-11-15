@@ -1,13 +1,12 @@
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { Cite, CountUp, Icon } from "../components/ui";
-import { catLabel, fmtNum, fmtPct, fmtWhen, Json, metricLabel, monthYear, nice, pageLink, sameText, signClass } from "../lib/data";
+import { catLabel, fmtNum, fmtPct, fmtWhen, Json, metricLabel, monthYear, nice, pageLink, sameText, signClass, tidy } from "../lib/data";
 
 /* ---------------------------------------------------------------- shared bits */
 export function Who({ e }: { e: Json }) {
   return (
     <div className="who">
-      <div className="ticker-badge" aria-hidden>{(e.symbol || "?").slice(0, 4)}</div>
       <div style={{ minWidth: 0 }}>
         <div className="name">{e.symbol}</div>
         <div className="sub">{catLabel(e.category)} · {fmtWhen(e.ts)}</div>
@@ -19,7 +18,7 @@ export function Who({ e }: { e: Json }) {
 export function ReactionChip({ r, ts }: { r: Json; ts?: string }) {
   if (!r || (Math.abs(r.z || 0) < 1.5 && (r.vol_x || 0) < 1.5)) return null;
   const sameDay = ts && r.date === ts.slice(0, 10);
-  const parts = [Math.abs(r.z) >= 1.5 ? `${Math.abs(r.z).toFixed(1)}× normal move` : null,
+  const parts = [Math.abs(r.z) >= 1.5 ? `${Math.abs(r.z).toFixed(1)}× usual move` : null,
     r.vol_x >= 1.5 ? `${r.vol_x.toFixed(1)}× vol` : null, sameDay ? "same day" : "next day"].filter(Boolean);
   return (
     <span className={`tag ${Math.abs(r.z) >= 2 ? "mint" : ""}`}
@@ -44,7 +43,7 @@ export function ResultsBody({ e }: { e: Json }) {
   const cmp = c.compare_label || "QoQ";
   return (
     <div>
-      <div className="headline">{e.summary?.headline}</div>
+      <div className="headline">{tidy(e.summary?.headline)}</div>
       <table className="metrics">
         <thead>
           <tr><th>{c.period_type === "half_year" ? "Half-year" : "Quarter"} · ₹ cr</th><th>Value</th><th>{cmp === "QoQ" ? "QoQ" : "vs H-1"}</th><th>YoY</th></tr>
@@ -99,7 +98,7 @@ export function PeopleBody({ e }: { e: Json }) {
   const c = e.card || {};
   return (
     <div>
-      <div className="headline">{c.headline || e.summary?.headline}</div>
+      <div className="headline">{tidy(c.headline || e.summary?.headline)}</div>
       {(c.people || []).slice(0, 3).map((p: Json) => (
         <div className="person" key={p.name}>
           <div className="pname">{p.name} <span className="faint small">· {p.role}</span></div>
@@ -120,8 +119,8 @@ export function PeopleBody({ e }: { e: Json }) {
 export function SummaryBody({ e }: { e: Json }) {
   return (
     <div>
-      <div className="headline">{e.summary?.headline || e.subject}</div>
-      {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="oneliner">{e.summary.one_liner}</div>}
+      <div className="headline">{tidy(e.summary?.headline || e.subject)}</div>
+      {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="oneliner">{tidy(e.summary.one_liner)}</div>}
     </div>
   );
 }
@@ -155,6 +154,10 @@ export function WhyBody({ e, onBack }: { e: Json; onBack: () => void }) {
 }
 
 /* ---------------------------------------------------------------- swipe + flip */
+/** The face that is turned away can't be reached by keyboard or screen reader. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const hidden = (h: boolean): any => (h ? { inert: "" } : {});
+
 export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void; onLess: () => void }) {
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
@@ -190,7 +193,7 @@ export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void
         <div className="flip-scene">
           <motion.div className="flip-inner" animate={{ rotateY: flipped ? 180 : 0 }}
             transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 260, damping: 26 }}>
-            <article className={`glass card face ${e.score >= 0.75 ? "hero-glow" : ""}`} aria-hidden={flipped}>
+            <article className={`glass card face ${e.score >= 0.75 ? "hero-glow" : ""}`} aria-hidden={flipped} {...hidden(flipped)}>
               <div className="card-top">
                 <Who e={e} />
                 <span className="tag ghost tnum" title="How much this matters to you, 0 to 1. Tap Why? for the breakdown.">score {e.score.toFixed(2)}</span>
@@ -202,7 +205,7 @@ export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void
                   {e.related?.length > 0 && <span className="tag">+{e.related.length} related</span>}
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
-                  {e.url && <Cite href={e.url}>filing</Cite>}
+                  {e.url && <Cite href={e.url}>Filing ↗</Cite>}
                   <button className="why-btn" onClick={(ev) => { ev.stopPropagation(); setFlipped(true); }} aria-label={`Why am I seeing ${e.symbol}?`}>Why?</button>
                 </div>
               </div>
@@ -211,7 +214,7 @@ export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void
                 <button onClick={onLess}>Show less like this</button>
               </div>
             </article>
-            <article className="glass card face back" aria-hidden={!flipped}>
+            <article className="glass card face back" aria-hidden={!flipped} {...hidden(!flipped)}>
               <WhyBody e={e} onBack={() => setFlipped(false)} />
             </article>
           </motion.div>

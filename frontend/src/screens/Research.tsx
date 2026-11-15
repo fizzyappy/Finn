@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BandChart, Bars, Cite, Icon } from "../components/ui";
-import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, monthYear, pageLink, prefs, signClass, snapshot, wakeBackend } from "../lib/data";
+import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, monthYear, pageLink, prefs, rupee, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
   "reading annual report", "writing", "done"];
@@ -57,7 +57,12 @@ export default function Research({ ticker, setTicker }: { ticker: string | null;
             }
           } catch (e) { /* keep polling */ }
         }, 1500);
-      } catch (e) { if (alive) { setErr(String(e)); setState("error"); } }
+      } catch (e) {
+        if (alive) {
+          setErr(/429/.test(String(e)) ? "Too many new companies from this device in the last hour (the free AI tier is shared). Try again later, or pick one of the companies below." : String(e));
+          setState("error");
+        }
+      }
     })();
     return () => { alive = false; if (poll.current) window.clearInterval(poll.current); };
   }, [ticker, index]);
@@ -137,7 +142,12 @@ function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }
     const m = /^(\d+) of (\d+)$/.exec(s || "");
     return m ? { a: +m[1], b: +m[2] } : null;
   };
-  const rows = [...index].sort((x, y) => Number(y.in_portfolio) - Number(x.in_portfolio) || x.ticker.localeCompare(y.ticker));
+  const weight = (r: Json) => {
+    const k = ratio(r.kept), d = ratio(r.dodged);
+    return (k && k.b ? 2 : 0) + (d && d.a ? 1 : 0);
+  };
+  const rows = [...index].sort((x, y) => weight(y) - weight(x) || Number(y.in_portfolio) - Number(x.in_portfolio) || x.ticker.localeCompare(y.ticker));
+  const shortName = (n?: string) => (n || "").replace(/ \(India\)/, "").replace(/ (Ltd|Limited)\.?$/, "");
   return (
     <>
       <div className="glass card" style={{ marginTop: 14 }}>
@@ -154,15 +164,15 @@ function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }
           return (
             <button key={r.ticker} className="ledger-row" onClick={() => onPick(r.ticker)}>
               <div className="line1">
-                <span className="what">{r.ticker} <span className="faint small" style={{ fontWeight: 400 }}>{(r.name || "").replace(/ Ltd\.?$/, "")}</span></span>
+                <span className="what">{r.ticker} <span className="faint small" style={{ fontWeight: 400 }}>{shortName(r.name)}</span></span>
                 <span className="tnum small" style={{ display: "flex", gap: 6 }}>
                   <span className={`verdict ${k && k.b ? (k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed") : "v-nm"}`}>
-                    {k && k.b ? `${k.a}/${k.b} kept` : "none due yet"}
+                    {k && k.b ? `${k.a}/${k.b} kept` : r.tracked ? `${r.tracked} tracked` : "no targets"}
                   </span>
                   {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
                 </span>
               </div>
-              <div className="line2">{r.in_portfolio ? "in your portfolio" : "research pick"}{d ? ` · ${d.b} questions checked` : ""}</div>
+              <div className="line2">{r.in_portfolio ? "in your portfolio" : "research only (not held)"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · last call ${monthYear(r.last_call)}` : ""}</div>
             </button>
           );
         })}
@@ -182,7 +192,10 @@ function ColdStart({ job }: { job: Json }) {
           <li key={s} className={k < i ? "done" : k === i ? "now" : ""}><span className="dot" />{s}</li>
         ))}
       </ul>
-      <p className="faint small" style={{ marginBottom: 0 }}>Tables appear first; transcripts take a minute. Free AI tier: one company at a time.</p>
+      <p className="faint small" style={{ marginBottom: 0 }}>
+        {job.status === "queued" ? "Another company is being read right now; yours starts next (usually 2–5 minutes). " : ""}
+        Tables appear first; transcripts take a few minutes. Free AI tier: one company at a time.
+      </p>
     </div>
   );
 }
@@ -197,12 +210,12 @@ function Company({ d }: { d: Json }) {
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: 16 }}>
       <div style={{ marginBottom: 12 }}>
         <div className="h1">{d.name}</div>
-        <div className="faint small">{d.ticker}{d.instrument?.bse_code ? ` · BSE ${d.instrument.bse_code}` : ""} · built {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
+        <div className="faint small">{d.ticker}{S.snapshot?.price ? ` · ₹${fmtNum(S.snapshot.price, S.snapshot.price < 100 ? 1 : 0)}` : ""}{S.snapshot?.market_cap_cr ? ` · m-cap ${fmtCr(S.snapshot.market_cap_cr)}` : ""} · updated {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
       </div>
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
-      {!d.partial && <AskBox ticker={d.ticker} name={d.name} />}
+      {!d.partial && <AskBox ticker={d.ticker} name={d.name} d={d} />}
       {led && <Ledger led={led} />}
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
@@ -217,7 +230,20 @@ function Company({ d }: { d: Json }) {
   );
 }
 
-function AskBox({ ticker, name }: { ticker: string; name: string }) {
+function suggestFor(d: Json): string[] {
+  const S = d?.sections || {};
+  const c = S.promise_ledger?.counts || {};
+  const out: string[] = [];
+  if ((c.Kept || 0) + (c.Missed || 0) + (c.Partly || 0) > 0) out.push("Did they meet last year's guidance?");
+  if (c["Too early"]) out.push("What targets have they set for this year?");
+  if (S.snapshot?.lender) out.push("How fast are deposits and loans growing?");
+  else out.push("How much debt do they have?");
+  if ((S.business_snapshot?.segments || []).length) out.push("Which segment is the biggest?");
+  out.push("How did profit change last quarter?");
+  return out.slice(0, 3);
+}
+
+function AskBox({ ticker, name, d }: { ticker: string; name: string; d?: Json }) {
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [a, setA] = useState<Json | null>(null);
@@ -234,10 +260,12 @@ function AskBox({ ticker, name }: { ticker: string; name: string }) {
       setA(await api(`/ask/${encodeURIComponent(ticker)}`, { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }) }, 90000));
     } catch (e) {
-      setA({ status: "error", answer: /404/.test(String(e)) ? `The research engine has not read ${ticker} yet.` : "Something went wrong. Try again." });
+      setA({ status: "error", answer: /404/.test(String(e)) ? `The research engine has not read ${ticker} yet.`
+        : /429/.test(String(e)) ? "That's a lot of questions from this device in an hour (the free AI tier is shared). Try again in a few minutes."
+        : "Something went wrong. Try again." });
     } finally { setBusy(null); }
   };
-  const examples = ["Did they meet last year's guidance?", "What is the guidance for this year?", "How much debt do they have?"];
+  const examples = suggestFor(d);
   return (
     <>
       <Title meta="sourced answers">Ask about {short}</Title>
@@ -275,6 +303,15 @@ function ReportCard({ rc, led }: { rc: Json; led: Json }) {
   const c = led?.counts || {};
   const scored = (c.Kept || 0) + (c.Partly || 0) + (c.Missed || 0);
   const dodged = rc.questions_dodged ? rc.questions_dodged.split(" of ") : null;
+  const dropped = (rc.topics_dropped || []).length;
+  if (!scored && !dropped && !(dodged && +dodged[0] > 0)) {
+    return (
+      <div className="glass card small muted">
+        <b style={{ color: "var(--text)" }}>Management report card:</b> {led?.promises?.length || 0} targets tracked
+        {c["Too early"] ? `, ${c["Too early"]} due later` : ""}; none due yet.{dodged ? ` ${dodged[1]} analyst questions checked, none dodged.` : ""}
+      </div>
+    );
+  }
   return (
     <div className="glass scorecard hero-glow">
       <div className="small faint" style={{ textTransform: "uppercase", letterSpacing: ".09em", fontWeight: 600 }}>Management report card</div>
@@ -518,9 +555,9 @@ function BullBear({ bb }: { bb: Json }) {
       <Title meta="every point cites a number">Bull vs bear</Title>
       <div className="glass card">
         <div className="small" style={{ fontWeight: 700, color: "var(--up)", letterSpacing: ".06em" }}>BULL</div>
-        <ul className="bullets">{bb.bull.map((x: Json, i: number) => <li key={i}><span className="up">▲</span><span>{x.text} <span className="faint small">({x.cites.map((c: Json) => c.source).join(", ")})</span></span></li>)}</ul>
+        <ul className="bullets">{bb.bull.map((x: Json, i: number) => <li key={i}><span className="up">▲</span><span>{rupee(x.text)} <span className="faint small">({x.cites.map((c: Json) => c.source).join(", ")})</span></span></li>)}</ul>
         <div className="small" style={{ fontWeight: 700, color: "var(--down)", letterSpacing: ".06em", marginTop: 12 }}>BEAR</div>
-        <ul className="bullets">{bb.bear.map((x: Json, i: number) => <li key={i}><span className="down">▼</span><span>{x.text} <span className="faint small">({x.cites.map((c: Json) => c.source).join(", ")})</span></span></li>)}</ul>
+        <ul className="bullets">{bb.bear.map((x: Json, i: number) => <li key={i}><span className="down">▼</span><span>{rupee(x.text)} <span className="faint small">({x.cites.map((c: Json) => c.source).join(", ")})</span></span></li>)}</ul>
         {bb.removed?.length > 0 && <div className="faint small" style={{ marginTop: 8 }}>{bb.removed.length} point(s) removed for not standing on a number.</div>}
       </div>
     </>

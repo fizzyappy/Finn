@@ -1156,7 +1156,8 @@
    {
     "id": "F1",
     "text": "P/E 49.4, market cap Rs 244,595 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1180,54 +1181,74 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth sped up: +16.9% YoY in the latest quarter vs a 3y CAGR of 1.0%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
+    "text": "Profit grew slower than revenue (+6.6% vs +16.9% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 16.0% in the latest quarter, -2.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 0.21 (borrowings Rs 4,596 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle 84 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 1.29x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 5 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: 1 of 1 measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Kept: revenue growth FY26 target 4-6%, actual 4.9",
-    "source": "promise ledger"
-   },
-   {
     "id": "F13",
-    "text": "Call of 2026-11-03: questions dodged: 0 of 11",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 20",
-    "source": "dodged-question check"
+    "text": "Kept: revenue growth FY26 target 4-6%, actual 4.9",
+    "source": "promise ledger",
+    "tone": "bull"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Latest quarter revenue reached Rs 9,977 cr, representing a growth of +16.9% YoY.",
+     "text": "Revenue growth sped up to +16.9% YoY in the latest quarter compared to a 3y CAGR of 1.0%.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Revenue growth sped up: +16.9% YoY in the latest quarter vs a 3y CAGR of 1.0%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bull"
+      }
+     ]
+    },
+    {
+     "text": "The company kept its revenue growth FY26 target of 4-6%, delivering an actual 4.9%.",
+     "cites": [
+      {
+       "id": "F13",
+       "text": "Kept: revenue growth FY26 target 4-6%, actual 4.9",
+       "source": "promise ledger",
+       "tone": "bull"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter revenue reached Rs 9,977 cr, representing an increase of +16.9% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -1235,56 +1256,37 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The 5y revenue CAGR was 10.4% alongside a profit CAGR of 6.5%.",
-     "cites": [
-      {
-       "id": "F3",
-       "text": "5y revenue CAGR 10.4%, profit CAGR 6.5%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The company met its FY26 target with actual revenue growth reaching 4.9%.",
-     "cites": [
-      {
-       "id": "F12",
-       "text": "Kept: revenue growth FY26 target 4-6%, actual 4.9",
-       "source": "promise ledger"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "Operating margin stood at 16.0% in the latest quarter, dropping -2.0 pts YoY.",
+     "text": "Profit grew slower than revenue at +6.6% versus +16.9% YoY, indicating that margins were squeezed.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F7",
+       "text": "Profit grew slower than revenue (+6.6% vs +16.9% YoY): margins were squeezed",
+       "source": "quarterly P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin in the latest quarter was 16.0%, which is -2.0 pts lower YoY.",
+     "cites": [
+      {
+       "id": "F8",
        "text": "Operating margin 16.0% in the latest quarter, -2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The 3y revenue CAGR slowed to 1.0% and profit CAGR was 1.6%.",
+     "text": "Latest quarter profit was Rs 1,085 cr, growing at +6.6% YoY.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 1.0%, profit CAGR 1.6%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The cash conversion cycle was 84 days in 2026.",
-     "cites": [
-      {
-       "id": "F8",
-       "text": "Cash conversion cycle 84 days (2026)",
-       "source": "ratios"
+       "id": "F5",
+       "text": "Latest quarter profit Rs 1,085 cr, +6.6% YoY",
+       "source": "quarterly P&L"
       }
      ]
     }

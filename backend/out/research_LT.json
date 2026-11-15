@@ -2031,7 +2031,8 @@
    {
     "id": "F1",
     "text": "P/E 30.2, market cap Rs 570,152 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -2055,54 +2056,62 @@
    },
    {
     "id": "F6",
+    "text": "Profit grew faster than revenue (+27.2% vs +15.8% YoY): margins widened",
+    "source": "quarterly P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
     "text": "Operating margin 11.0% in the latest quarter, -2.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Debt/equity 1.24 (borrowings Rs 140,300 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F9",
     "text": "Cash conversion cycle -151 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F10",
     "text": "3-year operating cash flow = 0.85x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F11",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: 0 of 1 measurable targets",
-    "source": "promise ledger"
-   },
-   {
     "id": "F12",
     "text": "Missed: revenue growth FY26 target 15%, actual 11.8",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F13",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 24",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-05-31: questions dodged: 0 of 27",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter revenue was Rs 78,750 cr, representing a growth of +15.8% YoY.",
+     "text": "Profit grew faster than revenue (+27.2% vs +15.8% YoY): margins widened, supported by quarterly profit of Rs 5,949 cr.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 5,949 cr, +27.2% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Profit grew faster than revenue (+27.2% vs +15.8% YoY): margins widened",
+       "source": "quarterly P&L",
+       "tone": "bull"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter revenue reached Rs 78,750 cr, representing a growth of +15.8% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -2120,46 +2129,37 @@
        "source": "annual P&L"
       }
      ]
-    },
-    {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
-     "cites": [
-      {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
-       "source": "quarterly P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The operating margin was 11.0% in the latest quarter, which is down -2.0 pts YoY.",
+     "text": "The operating margin was 11.0% in the latest quarter, which is -2.0 pts YoY.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F7",
        "text": "Operating margin 11.0% in the latest quarter, -2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The debt/equity ratio stands at 1.24 with total borrowings of Rs 140,300 cr.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Debt/equity 1.24 (borrowings Rs 140,300 cr)",
-       "source": "balance sheet"
-      }
-     ]
-    },
-    {
-     "text": "The revenue growth FY26 target was 15%, but the actual was 11.8.",
+     "text": "The company missed its revenue growth FY26 target of 15% with an actual of 11.8.",
      "cites": [
       {
        "id": "F12",
        "text": "Missed: revenue growth FY26 target 15%, actual 11.8",
-       "source": "promise ledger"
+       "source": "promise ledger",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Debt/equity stands at 1.24 with total borrowings of Rs 140,300 cr.",
+     "cites": [
+      {
+       "id": "F8",
+       "text": "Debt/equity 1.24 (borrowings Rs 140,300 cr)",
+       "source": "balance sheet"
       }
      ]
     }

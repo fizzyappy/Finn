@@ -1884,7 +1884,8 @@
    {
     "id": "F1",
     "text": "P/E 37.7, market cap Rs 119,121 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1908,116 +1909,149 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth sped up: +52.8% YoY in the latest quarter vs a 3y CAGR of 27.0%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
+    "text": "Profit grew slower than revenue (+42.9% vs +52.8% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 14.0% in the latest quarter, -2.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 0.02 (borrowings Rs 272 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle 39 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 1.05x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Quietly dropped: capex by FY31 target 60-80 cr",
-    "source": "promise ledger"
-   },
-   {
     "id": "F13",
-    "text": "Quietly dropped: capex FY30 target 6000-8000 cr",
-    "source": "promise ledger"
+    "text": "Quietly dropped: capex by FY31 target 60-80 cr",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F14",
-    "text": "Call of 2026-10-31: questions dodged: 1 of 20",
-    "source": "dodged-question check"
+    "text": "Quietly dropped: capex FY30 target 6000-8000 cr",
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F15",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 19",
-    "source": "dodged-question check"
+    "text": "Call of 2026-10-31: questions dodged: 1 of 20",
+    "source": "dodged-question check",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 27.0% and profit CAGR is 28.3%.",
+     "text": "Revenue growth sped up to +52.8% YoY in the latest quarter compared to a 3y CAGR of 27.0%.",
      "cites": [
       {
        "id": "F2",
        "text": "3y revenue CAGR 27.0%, profit CAGR 28.3%",
        "source": "annual P&L"
+      },
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 9,899 cr, +52.8% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Revenue growth sped up: +52.8% YoY in the latest quarter vs a 3y CAGR of 27.0%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bull"
       }
      ]
     },
     {
-     "text": "The latest quarter revenue reached Rs 9,899 cr, up 52.8% YoY.",
+     "text": "Latest quarter revenue reached Rs 9,899 cr with revenue growing YoY in 8 of 8 recent quarters.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 9,899 cr, +52.8% YoY",
        "source": "quarterly P&L"
+      },
+      {
+       "id": "F12",
+       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "The company maintains a low debt to equity ratio of 0.02 with borrowings of Rs 272 cr.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
-       "source": "quarterly P&L"
+       "id": "F9",
+       "text": "Debt/equity 0.02 (borrowings Rs 272 cr)",
+       "source": "balance sheet"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "Operating margin was 14.0% in the latest quarter, dropping -2.0 pts YoY.",
+     "text": "Profit grew slower than revenue at +42.9% versus +52.8% YoY, indicating that margins were squeezed.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 9,899 cr, +52.8% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 990 cr, +42.9% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F7",
+       "text": "Profit grew slower than revenue (+42.9% vs +52.8% YoY): margins were squeezed",
+       "source": "quarterly P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin in the latest quarter was 14.0%, representing a decrease of -2.0 pts YoY.",
+     "cites": [
+      {
+       "id": "F8",
        "text": "Operating margin 14.0% in the latest quarter, -2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Management quietly dropped the capex FY30 target of 6000-8000 cr.",
+     "text": "During the call of 2026-10-31, management dodged 1 of 20 questions asked.",
      "cites": [
       {
-       "id": "F13",
-       "text": "Quietly dropped: capex FY30 target 6000-8000 cr",
-       "source": "promise ledger"
-      }
-     ]
-    },
-    {
-     "text": "Management quietly dropped the capex by FY31 target of 60-80 cr.",
-     "cites": [
-      {
-       "id": "F12",
-       "text": "Quietly dropped: capex by FY31 target 60-80 cr",
-       "source": "promise ledger"
+       "id": "F15",
+       "text": "Call of 2026-10-31: questions dodged: 1 of 20",
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     }

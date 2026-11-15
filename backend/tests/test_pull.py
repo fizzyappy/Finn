@@ -295,3 +295,23 @@ def test_segment_page_finder():
     seg = "Segment Information (Consolidated)\nSegment Revenue\n" + " ".join(f"{i},{i:03d}.50" for i in range(30))
     pages = ["Directors report", seg, "Notes to accounts 1.0"]
     assert business.find_segment_pages(pages) == [1]
+
+
+def test_revenue_jump_flags_a_merger_sized_year_only():
+    from finn.pull.narrative import revenue_jump
+    rows = lambda revs: [{"year_end": f"20{20 + i}-03-31", "revenue": v} for i, v in enumerate(revs)]
+    # HDFC Bank shape: ~6-25% a year, then +66% in the merger year.
+    assert revenue_jump(rows([120000, 128552, 135936, 170754, 283649, 336367, 348615])) == ("2024-03-31", 66.1)
+    # Steady 20% growth is not a jump.
+    assert revenue_jump(rows([100, 120, 144, 173, 207, 249])) is None
+
+
+def test_merger_flag_needs_per_share_dilution():
+    from finn.pull.narrative import fact_pool
+    annual = [{"year_end": f"20{20 + i}-03-31", "revenue": v} for i, v in
+              enumerate([120000, 128552, 135936, 170754, 283649, 336367, 348615])]
+    tb = lambda eps: {"snapshot": {}, "balance_sheet": {}, "cash_quality": {},
+                      "trajectory": {"annual": annual, "cagr_pct": {"3y": {"revenue": 26.9, "pat": 19.7, "eps": eps}}}}
+    merged = " ".join(f["text"] for f in fact_pool(tb(6.2), None, None))
+    organic = " ".join(f["text"] for f in fact_pool(tb(25.0), None, None))
+    assert "not like-for-like" in merged and "not like-for-like" not in organic

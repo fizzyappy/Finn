@@ -1006,7 +1006,8 @@
    {
     "id": "F1",
     "text": "P/E 53.2, market cap Rs 99,550 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1030,111 +1031,132 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth sped up: +30.2% YoY in the latest quarter vs a 3y CAGR of 20.9%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
+    "text": "Profit grew slower than revenue (-25.3% vs +30.2% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F8",
     "text": "Operating margin 14.0% in the latest quarter, -5.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F9",
     "text": "Debt/equity 0.07 (borrowings Rs 575 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F10",
     "text": "Cash conversion cycle 83 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F11",
     "text": "3-year operating cash flow = 0.97x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F12",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
-    "text": "Quietly dropped: revenue FY31 target 5 USD mn",
-    "source": "promise ledger"
-   },
-   {
     "id": "F13",
-    "text": "Call of 2026-10-31: questions dodged: 0 of 24",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 2",
-    "source": "dodged-question check"
+    "text": "Quietly dropped: revenue FY31 target 5 USD mn",
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 20.9% and profit CAGR is 26.5%.",
+     "text": "Revenue growth sped up to 30.2% YoY in the latest quarter compared to a 3y CAGR of 20.9%.",
      "cites": [
       {
        "id": "F2",
        "text": "3y revenue CAGR 20.9%, profit CAGR 26.5%",
        "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 4,664 cr, up 30.2% YoY.",
-     "cites": [
+      },
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 4,664 cr, +30.2% YoY",
        "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Revenue growth sped up: +30.2% YoY in the latest quarter vs a 3y CAGR of 20.9%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bull"
       }
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "The company has demonstrated consistent top-line expansion, with revenue growing YoY in 8 of 8 recent quarters.",
      "cites": [
       {
-       "id": "F10",
+       "id": "F12",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
        "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Persistent Systems maintains a low debt-to-equity ratio of 0.07 with total borrowings of Rs 575 cr.",
+     "cites": [
+      {
+       "id": "F9",
+       "text": "Debt/equity 0.07 (borrowings Rs 575 cr)",
+       "source": "balance sheet"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 352 cr, representing a -25.3% YoY change.",
+     "text": "Profit grew slower than revenue at -25.3% YoY in the latest quarter, indicating that profit margins were squeezed.",
      "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 4,664 cr, +30.2% YoY",
+       "source": "quarterly P&L"
+      },
       {
        "id": "F5",
        "text": "Latest quarter profit Rs 352 cr, -25.3% YoY",
        "source": "quarterly P&L"
+      },
+      {
+       "id": "F7",
+       "text": "Profit grew slower than revenue (-25.3% vs +30.2% YoY): margins were squeezed",
+       "source": "quarterly P&L",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "Operating margin was 14.0% in the latest quarter, down -5.0 pts YoY.",
+     "text": "Operating margin dropped to 14.0% in the latest quarter, marking a decline of -5.0 pts YoY.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F8",
        "text": "Operating margin 14.0% in the latest quarter, -5.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The cash conversion cycle is 83 days.",
+     "text": "The revenue FY31 target of 5 USD mn has been quietly dropped.",
      "cites": [
       {
-       "id": "F8",
-       "text": "Cash conversion cycle 83 days (2026)",
-       "source": "ratios"
+       "id": "F13",
+       "text": "Quietly dropped: revenue FY31 target 5 USD mn",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }

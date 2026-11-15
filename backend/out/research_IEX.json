@@ -934,7 +934,8 @@
    {
     "id": "F1",
     "text": "P/E 19.8, market cap Rs 10,378 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -958,48 +959,40 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth slowed: +8.4% YoY in the latest quarter vs a 3y CAGR of 15.4%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F7",
     "text": "Operating margin 85.0% in the latest quarter, -2.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Debt/equity 0.01 (borrowings Rs 9 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F9",
     "text": "Cash conversion cycle 1 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F10",
     "text": "3-year operating cash flow = 0.91x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F11",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
     "id": "F12",
     "text": "Quietly dropped: revenue growth over the years target 15-20%",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F13",
-    "text": "Call of 2026-11-05: questions dodged: 0 of 17",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F14",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 1",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
@@ -1015,7 +1008,7 @@
      ]
     },
     {
-     "text": "Latest quarter revenue reached Rs 167 cr, reflecting an 8.4% YoY increase.",
+     "text": "Latest quarter revenue reached Rs 167 cr, representing an 8.4% YoY increase.",
      "cites": [
       {
        "id": "F4",
@@ -1025,11 +1018,11 @@
      ]
     },
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "text": "The operating margin stood at 85.0% in the latest quarter.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "id": "F7",
+       "text": "Operating margin 85.0% in the latest quarter, -2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
@@ -1037,33 +1030,39 @@
    ],
    "bear": [
     {
-     "text": "Operating margin was 85.0% in the latest quarter, down -2.0 pts YoY.",
+     "text": "Revenue growth slowed to +8.4% YoY in the latest quarter compared to a 3y CAGR of 15.4%.",
      "cites": [
       {
        "id": "F6",
+       "text": "Revenue growth slowed: +8.4% YoY in the latest quarter vs a 3y CAGR of 15.4%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Operating margin fell by -2.0 pts YoY in the latest quarter.",
+     "cites": [
+      {
+       "id": "F7",
        "text": "Operating margin 85.0% in the latest quarter, -2.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "Management quietly dropped the revenue growth over the years target of 15-20%.",
+     "text": "The long-term revenue growth target of 15-20% was dropped.",
      "cites": [
       {
        "id": "F12",
        "text": "Quietly dropped: revenue growth over the years target 15-20%",
-       "source": "promise ledger"
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }
    ],
-   "removed": [
-    {
-     "side": "bear",
-     "text": "Promises kept showed none measurable yet measurable targets out of 0 targets.",
-     "why": "numbers not in cited facts: ['0']"
-    }
-   ]
+   "removed": []
   },
   "report_card": {
    "evidence": [

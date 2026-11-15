@@ -900,7 +900,8 @@
    {
     "id": "F1",
     "text": "P/E 59.9, market cap Rs 30,242 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -949,34 +950,21 @@
    },
    {
     "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
+    "text": "Call of 2026-11-30: questions dodged: 2 of 15",
+    "source": "dodged-question check",
+    "tone": "bear"
    },
    {
     "id": "F12",
-    "text": "Call of 2026-11-30: questions dodged: 2 of 15",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F13",
     "text": "Call of 2026-08-31: questions dodged: 2 of 21",
-    "source": "dodged-question check"
+    "source": "dodged-question check",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The 3y revenue CAGR is 27.3% and profit CAGR is 18.1%.",
-     "cites": [
-      {
-       "id": "F2",
-       "text": "3y revenue CAGR 27.3%, profit CAGR 18.1%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "Latest quarter revenue reached Rs 394 cr with a +23.5% YoY increase.",
+     "text": "The company reported a latest quarter revenue of Rs 394 cr with a growth of +23.5% YoY.",
      "cites": [
       {
        "id": "F4",
@@ -986,7 +974,17 @@
      ]
     },
     {
-     "text": "Operating margin was 58.0% in the latest quarter, improving by +3.0 pts YoY.",
+     "text": "The latest quarter profit reached Rs 173 cr, showing a +23.6% YoY increase.",
+     "cites": [
+      {
+       "id": "F5",
+       "text": "Latest quarter profit Rs 173 cr, +23.6% YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "The operating margin stood at 58.0% in the latest quarter, improving by +3.0 pts YoY.",
      "cites": [
       {
        "id": "F6",
@@ -998,32 +996,24 @@
    ],
    "bear": [
     {
-     "text": "The company trades at a P/E of 59.9 with a market cap of Rs 30,242 cr.",
+     "text": "During the call of 2026-11-30, management dodged 2 of 15 questions.",
      "cites": [
       {
-       "id": "F1",
-       "text": "P/E 59.9, market cap Rs 30,242 cr",
-       "source": "screener ratios"
+       "id": "F11",
+       "text": "Call of 2026-11-30: questions dodged: 2 of 15",
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "During the call of 2026-11-30, 2 of 15 questions were dodged.",
+     "text": "During the call of 2026-08-31, management dodged 2 of 21 questions.",
      "cites": [
       {
        "id": "F12",
-       "text": "Call of 2026-11-30: questions dodged: 2 of 15",
-       "source": "dodged-question check"
-      }
-     ]
-    },
-    {
-     "text": "During the call of 2026-08-31, 2 of 21 questions were dodged.",
-     "cites": [
-      {
-       "id": "F13",
        "text": "Call of 2026-08-31: questions dodged: 2 of 21",
-       "source": "dodged-question check"
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     }

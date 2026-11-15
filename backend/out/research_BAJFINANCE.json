@@ -1586,7 +1586,8 @@
    {
     "id": "F1",
     "text": "P/E 31.8, market cap Rs 695,439 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1610,39 +1611,31 @@
    },
    {
     "id": "F6",
+    "text": "Profit grew faster than revenue (+28.7% vs +22.8% YoY): margins widened",
+    "source": "quarterly P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
     "text": "Gross NPA 1.06%, net NPA 0.42%",
     "source": "quarterly results"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Revenue grew YoY in 8 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F8",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
     "id": "F9",
     "text": "Quietly dropped: pat growth FY28 target 22-24%",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F10",
-    "text": "Call of 2026-10-31: questions dodged: 0 of 19",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F11",
-    "text": "Call of 2026-08-31: questions dodged: 0 of 15",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters, and the latest quarter revenue was Rs 24,546 cr with a 22.8% YoY increase.",
+     "text": "Profit grew faster than revenue (+28.7% vs +22.8% YoY): margins widened.",
      "cites": [
       {
        "id": "F4",
@@ -1650,14 +1643,30 @@
        "source": "quarterly P&L"
       },
       {
-       "id": "F7",
-       "text": "Revenue grew YoY in 8 of 8 recent quarters",
+       "id": "F5",
+       "text": "Latest quarter profit Rs 6,367 cr, +28.7% YoY",
+       "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Profit grew faster than revenue (+28.7% vs +22.8% YoY): margins widened",
+       "source": "quarterly P&L",
+       "tone": "bull"
+      }
+     ]
+    },
+    {
+     "text": "Latest quarter revenue reached Rs 24,546 cr, which is +22.8% YoY.",
+     "cites": [
+      {
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 24,546 cr, +22.8% YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The latest quarter profit was Rs 6,367 cr, reflecting a growth of 28.7% YoY.",
+     "text": "Latest quarter profit reached Rs 6,367 cr, reflecting +28.7% YoY growth.",
      "cites": [
       {
        "id": "F5",
@@ -1665,46 +1674,17 @@
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The 3y revenue CAGR is 25.6% and profit CAGR is 18.9%.",
-     "cites": [
-      {
-       "id": "F2",
-       "text": "3y revenue CAGR 25.6%, profit CAGR 18.9%",
-       "source": "annual P&L"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The P/E ratio is 31.8 with a market cap of Rs 695,439 cr.",
+     "text": "The company quietly dropped the pat growth FY28 target of 22-24%.",
      "cites": [
       {
-       "id": "F1",
-       "text": "P/E 31.8, market cap Rs 695,439 cr",
-       "source": "screener ratios"
-      }
-     ]
-    },
-    {
-     "text": "The 5y revenue CAGR is 25.2% and profit CAGR is 34.3%.",
-     "cites": [
-      {
-       "id": "F3",
-       "text": "5y revenue CAGR 25.2%, profit CAGR 34.3%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The gross NPA is 1.06% and the net NPA is 0.42%.",
-     "cites": [
-      {
-       "id": "F6",
-       "text": "Gross NPA 1.06%, net NPA 0.42%",
-       "source": "quarterly results"
+       "id": "F9",
+       "text": "Quietly dropped: pat growth FY28 target 22-24%",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }

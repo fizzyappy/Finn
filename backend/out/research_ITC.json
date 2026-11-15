@@ -377,7 +377,8 @@
    {
     "id": "F1",
     "text": "P/E 18.9, market cap Rs 357,160 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -401,26 +402,32 @@
    },
    {
     "id": "F6",
+    "text": "Profit grew slower than revenue (-18.5% vs +3.9% YoY): margins were squeezed",
+    "source": "quarterly P&L",
+    "tone": "bear"
+   },
+   {
+    "id": "F7",
     "text": "Operating margin 28.0% in the latest quarter, -6.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Debt/equity 0.01 (borrowings Rs 491 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F9",
     "text": "Cash conversion cycle 164 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F10",
     "text": "3-year operating cash flow = 0.69x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F11",
     "text": "Revenue grew YoY in 5 of 8 recent quarters",
     "source": "quarterly P&L"
    }
@@ -428,30 +435,20 @@
   "bull_bear": {
    "bull": [
     {
-     "text": "The market cap is Rs 357,160 cr with a P/E of 18.9 according to financial ratios.",
+     "text": "Latest quarter revenue reached Rs 20,269 cr, showing a +3.9% YoY increase.",
      "cites": [
       {
-       "id": "F1",
-       "text": "P/E 18.9, market cap Rs 357,160 cr",
-       "source": "screener ratios"
+       "id": "F4",
+       "text": "Latest quarter (2026-09-30) revenue Rs 20,269 cr, +3.9% YoY",
+       "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The 5y revenue CAGR was 9.9% and profit CAGR was 9.4% based on the annual P&L.",
+     "text": "Debt/equity is 0.01 with total borrowings at Rs 491 cr.",
      "cites": [
       {
-       "id": "F3",
-       "text": "5y revenue CAGR 9.9%, profit CAGR 9.4%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The company reported a debt/equity of 0.01 with total borrowings of Rs 491 cr.",
-     "cites": [
-      {
-       "id": "F7",
+       "id": "F8",
        "text": "Debt/equity 0.01 (borrowings Rs 491 cr)",
        "source": "balance sheet"
       }
@@ -460,37 +457,49 @@
    ],
    "bear": [
     {
-     "text": "Latest quarter profit was Rs 4,229 cr representing a decrease of -18.5% YoY.",
+     "text": "Profit fell by -18.5% YoY in the latest quarter while revenue grew by +3.9% YoY, meaning margins were squeezed.",
      "cites": [
       {
        "id": "F5",
        "text": "Latest quarter profit Rs 4,229 cr, -18.5% YoY",
        "source": "quarterly P&L"
+      },
+      {
+       "id": "F6",
+       "text": "Profit grew slower than revenue (-18.5% vs +3.9% YoY): margins were squeezed",
+       "source": "quarterly P&L",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "Operating margin was 28.0% in the latest quarter which dropped by -6.0 pts YoY.",
+     "text": "Operating margin in the latest quarter was 28.0%, which is -6.0 pts lower YoY.",
      "cites": [
       {
-       "id": "F6",
+       "id": "F7",
        "text": "Operating margin 28.0% in the latest quarter, -6.0 pts YoY",
        "source": "quarterly P&L"
       }
      ]
     },
     {
-     "text": "The cash conversion cycle reached 164 days in the year 2026 per ratios.",
+     "text": "The cash conversion cycle is 164 days.",
      "cites": [
       {
-       "id": "F8",
+       "id": "F9",
        "text": "Cash conversion cycle 164 days (2026)",
        "source": "ratios"
       }
      ]
     }
    ],
-   "removed": []
+   "removed": [
+    {
+     "side": "bull",
+     "text": "The market cap is Rs 357,160 cr with a P/E of 18.9.",
+     "why": "uses a [context] fact"
+    }
+   ]
   },
   "report_card": {
    "evidence": []

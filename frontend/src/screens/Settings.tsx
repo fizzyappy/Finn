@@ -24,10 +24,8 @@ export default function Settings() {
   const usage = meta?.llm_all_time?.models || {};
   const calls = Object.values(usage).reduce((a: number, m: Json) => a + m.api_calls, 0) as number;
   const tokens = Object.values(usage).reduce((a: number, m: Json) => a + m.tokens_in + m.tokens_out, 0) as number;
-  const today = meta?.llm_today?.models || {};
-  const todayCalls = Object.values(today).reduce((a: number, m: Json) => a + m.api_calls, 0) as number;
-  const todayHits = Object.values(today).reduce((a: number, m: Json) => a + m.cache_hits, 0) as number;
-  const hitPct = todayCalls + todayHits ? Math.round((todayHits / (todayCalls + todayHits)) * 100) : 0;
+  const hits = Object.values(usage).reduce((a: number, m: Json) => a + (m.cache_hits || 0), 0) as number;
+  const hitPct = calls + hits ? Math.round((hits / (calls + hits)) * 100) : 0;
   const holdings: Json[] = meta?.portfolio?.holdings || [];
   const src = meta?.filings_sources || {};
   const srcCount: Record<string, { ok: number; blocked: number }> = {};
@@ -42,11 +40,11 @@ export default function Settings() {
 
       <div className="glass scorecard hero-glow">
         <div className="small faint" style={{ textTransform: "uppercase", letterSpacing: ".09em", fontWeight: 600 }}>Cost meter</div>
-        <div style={{ marginTop: 8 }}><span className="bignum">$0.00</span> <span className="muted">spent today · {hitPct}% answered from cache</span></div>
+        <div style={{ marginTop: 8 }}><span className="bignum">$0.00</span> <span className="muted">spent on AI for this build</span></div>
         <div className="grid">
-          <div className="stat"><div className="n">{fmtNum(todayCalls)}</div><div className="l">AI calls today</div></div>
-          <div className="stat"><div className="n">{fmtNum(calls)}</div><div className="l">AI calls ever</div></div>
-          <div className="stat"><div className="n">{tokens > 1e6 ? `${(tokens / 1e6).toFixed(1)}M` : `${Math.round(tokens / 1000)}k`}</div><div className="l">tokens ever</div></div>
+          <div className="stat"><div className="n">{fmtNum(calls)}</div><div className="l">AI calls</div></div>
+          <div className="stat"><div className="n">{hitPct}%</div><div className="l">answered from cache</div></div>
+          <div className="stat"><div className="n">{tokens > 1e6 ? `${(tokens / 1e6).toFixed(1)}M` : `${Math.round(tokens / 1000)}k`}</div><div className="l">tokens</div></div>
         </div>
         <p className="faint small" style={{ marginBottom: 0 }}>Gemini free tier. Every answer is cached by its exact input, so a filing is read once for everyone.</p>
       </div>
@@ -75,24 +73,23 @@ export default function Settings() {
       <div className="section-title"><h2>Data</h2><span className="meta">as of {fmtWhen(meta?.generated_at)}</span></div>
       <div className="glass card kv">
         <span className="k">Prices (Yahoo, end of day)</span><span className="v">{meta?.prices?.nifty?.last_date || "–"}</span>
-        {Object.entries(srcCount).map(([k, c]) => (
+        {Object.entries(srcCount).filter(([, c]) => c.ok).map(([k, c]) => (
           <span key={k} style={{ display: "contents" }}>
             <span className="k">Filings: {SOURCE_LABEL[k] || nice(k)}</span>
-            <span className={`v ${c.ok ? "" : "faint"}`}>{c.ok ? `ok (${c.ok})` : "refused"}</span>
+            <span className="v">{c.ok}/{holdings.length} holdings</span>
           </span>
         ))}
       </div>
-      {meta?.filings_note && <p className="faint small" style={{ margin: "8px 4px" }}>{meta.filings_note}</p>}
 
-      <div className="section-title"><h2>Live backend</h2></div>
-      <div className="glass card">
-        <label className="small muted" htmlFor="api">FINN backend URL (for companies not in the snapshot)</label>
+      <details className="glass card dev" style={{ marginTop: 26 }}>
+        <summary className="small muted">Developer: research engine address</summary>
+        <label className="small muted" htmlFor="api" style={{ display: "block", marginTop: 10 }}>Used for companies outside the built-in data</label>
         <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
           <input id="api" className="field" placeholder="https://finn-api.example.com" value={base} onChange={(e) => setBase(e.target.value)} />
           <button className="btn small" onClick={test}>Connect</button>
         </div>
         {status && <div className="small muted" style={{ marginTop: 8 }} role="status">{status}</div>}
-      </div>
+      </details>
 
       <div className="section-title"><h2>How FINN thinks</h2></div>
       <div className="glass card">

@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { SwipeCard, ReactionChip } from "../cards/cards";
 import { Cite, Icon, Ring } from "../components/ui";
-import { api, backendAlive, briefForRange, catLabel, cleanTitle, fmtDay, fmtWhen, Json, prefs, sameText, snapshot, WindowKey, WINDOWS } from "../lib/data";
+import { api, backendAlive, briefForRange, catLabel, cleanTitle, fmtDay, fmtWhen, Json, prefs, sameText, snapshot, tidy, WindowKey, WINDOWS } from "../lib/data";
 
 const HERO = 0.6, ONE = 0.3;
 const plural = (n: number, word: string) => (n === 1 ? word : `${word}s`);
@@ -59,13 +59,17 @@ function RangePicker({ min, max, initial, onApply, onCancel }: {
 
 export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) => void }) {
   const reduce = useReducedMotion();
-  const [win, setWin] = useState<WindowKey>("since_last_look");
+  // First visit: there is no "last look" yet, so open on the last 24 hours.
+  const [win, setWin] = useState<WindowKey>(() => (prefs.lastLook() ? "since_last_look" : "24h"));
+  useEffect(() => { prefs.setLastLook(new Date().toISOString()); }, []);
   const [briefs, setBriefs] = useState<Record<string, Json>>({});
   const [err, setErr] = useState<string | null>(null);
   const [cleared, setCleared] = useState<Set<string>>(() => prefs.cleared());
   const [tune, setTune] = useState<Record<string, number>>(() => prefs.tune());
   const [openCat, setOpenCat] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [tip, setTip] = useState(() => { try { return !localStorage.getItem("finn.tip"); } catch { return false; } });
+  const closeTip = () => { setTip(false); try { localStorage.setItem("finn.tip", "1"); } catch { /* private mode */ } };
   const [playing, setPlaying] = useState(false);
   useEffect(() => () => { if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }, []);
 
@@ -87,8 +91,20 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const base14 = briefs["custom"];
   const minDay = base14?.window?.from?.slice(0, 10) || "";
   const maxDay = base14?.generated_at?.slice(0, 10) || "";
-  const brief = win === "custom" && live ? live
+  const requested = win === "custom" && live ? live
     : win === "custom" && range && base14 ? briefForRange(base14, range.from, range.to) : briefs[win];
+  // A quiet window never shows an empty screen: fall forward to the shortest window that has something.
+  const { brief, quietLabel } = useMemo(() => {
+    if (!requested) return { brief: requested, quietLabel: null as string | null };
+    const heroes = (b: Json) => rerank(b, tune).hero.length > 0;
+    const any = (b: Json) => { const r = rerank(b, tune); return r.hero.length + r.one.length > 0; };
+    if (heroes(requested) || win === "custom") return { brief: requested, quietLabel: null };
+    const order: WindowKey[] = ["since_last_look", "24h", "3d", "7d", "custom"];
+    const later = order.slice(order.indexOf(win) + 1).filter((k) => briefs[k]);
+    // Prefer the shortest window with something that needs attention; else one with anything worth knowing.
+    const k = later.find((k) => heroes(briefs[k])) || (any(requested) ? undefined : later.find((k) => any(briefs[k])));
+    return k ? { brief: briefs[k], quietLabel: requested.window.label as string } : { brief: requested, quietLabel: null };
+  }, [requested, briefs, tune, win]);
   const ranked = useMemo(() => (brief ? rerank(brief, tune) : null), [brief, tune]);
 
   const applyRange = async (from: string, to: string) => {
@@ -117,6 +133,13 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   const collapsed: Record<string, Json> = brief.collapsed || {};
   const routine = Object.values(collapsed).reduce((a: number, c: Json) => a + c.count, 0);
 
+  const onScreen = new Set([...ranked.hero, ...ranked.one].map(id));
+  const all14 = base14 ? [...(base14.hero || []), ...(base14.one_liners || [])] : [];
+  const latestResults = all14
+    .filter((e: Json) => e.card_kind === "results" && !onScreen.has(id(e)) && !cleared.has(id(e)))
+    .sort((a: Json, b: Json) => (b.ts || "").localeCompare(a.ts || ""))
+    .slice(0, 3);
+
   const clear = (e: Json) => setCleared((s) => new Set(s).add(id(e)));
   const less = (e: Json) => {
     const next = clampTune((tune[e.category] ?? 1) * 0.8);
@@ -134,7 +157,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
     const parts = [intro];
     let words = intro.split(" ").length;
     for (const e of heroLeft) {
-      const line = `${e.symbol}: ${(e.summary?.headline || e.subject || "").replace(/Rs /g, "rupees ")}.`;
+      const line = `${e.symbol}: ${tidy(e.summary?.headline || e.subject).replace(/₹([\d,.]+) cr/g, "$1 crore rupees").replace(/₹/g, "rupees ")}.`;
       if (words + line.split(" ").length > 150) break;
       parts.push(line);
       words += line.split(" ").length;
@@ -152,23 +175,30 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
   return (
     <div>
       <div className="brief-head">
-        <Ring done={heroDone} total={ranked.hero.length} />
+        {ranked.hero.length > 0 && <Ring done={heroDone} total={ranked.hero.length} />}
         <div style={{ flex: 1, minWidth: 0 }}>
           {win === "custom" && range && <div className="small faint" style={{ letterSpacing: ".08em", fontWeight: 600 }}>CUSTOM RANGE</div>}
-          <h1 className="h1">{win === "since_last_look" ? "Since you last looked" : win === "custom" && range ? brief.window.label : `Your ${brief.window.label}`}</h1>
+          <h1 className="h1">{quietLabel ? `Nothing urgent ${/^since/.test(quietLabel) ? "" : "in the "}${quietLabel}` : win === "since_last_look" ? "Since last look" : win === "custom" && range ? brief.window.label : `Your ${brief.window.label}`}</h1>
+          {quietLabel && <div className="small muted" style={{ marginTop: 4 }}>Here is what mattered in the {brief.window.label}.</div>}
           <div className="counts tnum">
             <b>{brief.header.filings}</b> {plural(brief.header.filings, "filing")} · <b>{matter}</b> matter · <b>{heroLeft.length}</b> left
             {brief.alerts?.length ? <> · <b>{brief.alerts.length}</b> moves</> : null}
           </div>
         </div>
-        <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
+        {matter > 0 && <button className={`why-btn ${playing ? "on" : ""}`} onClick={playBrief} aria-pressed={playing}
           aria-label={playing ? "Stop reading" : "Play my brief (about a minute)"}
           style={{ height: 40, padding: "0 12px", display: "flex", alignItems: "center", gap: 6,
             ...(playing ? { background: "var(--mint)", color: "var(--mint-ink)", borderColor: "transparent" } : {}) }}>
           {Icon.speaker}<span className="small" style={{ fontWeight: 600 }}>{playing ? "Stop" : "Play"}</span>
-        </button>
+        </button>}
       </div>
 
+      {tip && (
+        <div className="glass" style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", marginBottom: 12, fontSize: 12.5 }}>
+          <span className="muted" style={{ flex: 1 }}>Tap <b style={{ color: "var(--text)" }}>Why?</b> on any card · swipe right to clear · <b style={{ color: "var(--text)" }}>Play</b> to listen</span>
+          <button className="why-btn" onClick={closeTip} aria-label="Dismiss tip">Got it</button>
+        </div>
+      )}
       <div className="chips" role="toolbar" aria-label="Time window">
         {WINDOWS.map((w) => (
           <button key={w.key} className="chip" aria-pressed={w.key === win}
@@ -187,13 +217,12 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
       </AnimatePresence>
       {liveNote && win === "custom" && <div className="notice" style={{ marginTop: 10 }}>{liveNote}</div>}
 
-      {brief.quiet && ranked.hero.length === 0 ? (
+      {ranked.hero.length === 0 && ranked.one.length === 0 ? (
         <div className="glass card empty" style={{ marginTop: 14 }}>
-          <img src="/icons/finn.svg" width={54} height={54} alt="" style={{ borderRadius: 16 }} />
           <div className="big">Quiet {brief.window.label}</div>
           <div className="muted">Nothing material across your {brief.holdings.length} holdings.{routine ? ` ${routine} routine ${plural(routine, "filing")} collapsed below.` : ""}</div>
         </div>
-      ) : (
+      ) : ranked.hero.length === 0 ? null : (
         <>
           <div className="section-title"><h2>Needs your attention</h2><span className="meta">swipe → to clear</span></div>
           <AnimatePresence initial={false} mode="popLayout">
@@ -219,20 +248,31 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         </>
       )}
 
+      {latestResults.length > 0 && (
+        <>
+          <div className="section-title"><h2>Latest results</h2><span className="meta">last 14 days</span></div>
+          {latestResults.map((e: Json) => (
+            <div key={id(e)} style={{ marginBottom: 12 }}>
+              <SwipeCard e={e} onClear={() => clear(e)} onLess={() => { less(e); clear(e); }} />
+            </div>
+          ))}
+        </>
+      )}
+
       {ranked.one.length > 0 && (
         <>
           <div className="section-title"><h2>Worth knowing</h2><span className="meta">{ranked.one.length}</span></div>
           <div className="glass row-list">
             {ranked.one.map((e) => (
               <div className="row" key={id(e)}>
-                <div className="ticker-badge" aria-hidden>{e.symbol.slice(0, 4)}</div>
                 <div className="grow">
-                  <div className="title">{e.summary?.headline || e.subject}</div>
-                  {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="desc">{e.summary.one_liner}</div>}
+                  <div className="sym-line">{e.symbol}</div>
+                  <div className="title">{tidy(e.summary?.headline || e.subject)}</div>
+                  {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="desc">{tidy(e.summary.one_liner)}</div>}
                   <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
                     <span className="tag">{catLabel(e.category)}</span>
                     <ReactionChip r={e.reaction} ts={e.ts} />
-                    {e.url && <Cite href={e.url}>filing</Cite>}
+                    {e.url && <Cite href={e.url}>Filing ↗</Cite>}
                   </div>
                 </div>
               </div>
@@ -247,13 +287,12 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
           <div className="glass row-list">
             {brief.alerts.slice(0, 4).map((a: Json) => (
               <div className="row" key={a.symbol + a.date}>
-                <div className="ticker-badge" aria-hidden>{a.symbol.slice(0, 4)}</div>
                 <div className="grow">
                   <div className="title tnum">
                     {a.symbol} <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span>
                     <span className="faint small"> · {fmtDay(a.date)}</span>
                   </div>
-                  <div className="desc">A move {Math.abs(a.measures.z).toFixed(1)}× bigger than its normal day (Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}%), on {Number(a.measures.vol_x).toFixed(1)}× its usual volume</div>
+                  <div className="desc">A move {Math.abs(a.measures.z).toFixed(1)}× its usual daily move (Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}%), on {Number(a.measures.vol_x).toFixed(1)}× its usual volume</div>
                   {a.filed_before?.length > 0 && <div className="desc" style={{ color: "var(--mint-2)" }}>Filed before this move: {cleanTitle(a.filed_before[0].title)}</div>}
                 </div>
                 <button className="why-btn" onClick={() => onOpenResearch(a.symbol)}>Research</button>
@@ -263,6 +302,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         </>
       )}
 
+      {(routine > 0 || ranked.demoted.length > 0) && <>
       <div className="section-title"><h2>Collapsed</h2><span className="meta">{routine} routine</span></div>
       <div className="glass">
         {Object.entries(collapsed).map(([cat, c]: [string, Json]) => (
@@ -289,10 +329,9 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
           <div className="collapsed-cat faint"><span>moved down by your swipes</span><span className="count-pill">{ranked.demoted.length}</span></div>
         )}
       </div>
+      </>}
       <p className="faint small" style={{ margin: "14px 4px" }}>
-        Data as of {fmtWhen(brief.generated_at)}.{brief.data_status?.filings_note
-          ? " BSE's and NSE's announcement APIs refuse this connection, so filings come from the exchanges' official RSS feeds and Screener's recent list; older or very busy days may be incomplete."
-          : ""}
+        Sources: exchange filings (BSE/NSE feeds) and Screener · updated {fmtWhen(brief.generated_at)}
       </p>
 
       <div style={{ position: "fixed", left: 0, right: 0, bottom: "calc(var(--safe-bottom) + 84px)", display: "flex", justifyContent: "center", zIndex: 30, pointerEvents: "none" }}>

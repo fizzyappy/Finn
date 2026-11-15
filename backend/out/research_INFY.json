@@ -1697,7 +1697,8 @@
    {
     "id": "F1",
     "text": "P/E 14.6, market cap Rs 463,254 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1746,96 +1747,53 @@
    },
    {
     "id": "F11",
-    "text": "Promises kept: none measurable yet measurable targets",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F12",
     "text": "Call of 2026-10-31: questions dodged: 1 of 25",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F13",
-    "text": "Call of 2026-07-31: questions dodged: 0 of 25",
-    "source": "dodged-question check"
+    "source": "dodged-question check",
+    "tone": "bear"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The company has a P/E of 14.6 and a market cap of Rs 463,254 cr.",
-     "cites": [
-      {
-       "id": "F1",
-       "text": "P/E 14.6, market cap Rs 463,254 cr",
-       "source": "screener ratios"
-      }
-     ]
-    },
-    {
-     "text": "Revenue grew YoY in 8 of 8 recent quarters, reaching Rs 49,244 cr in the latest quarter.",
+     "text": "The latest quarter revenue was Rs 49,244 cr, showing a +10.7% YoY increase.",
      "cites": [
       {
        "id": "F4",
        "text": "Latest quarter (2026-09-30) revenue Rs 49,244 cr, +10.7% YoY",
        "source": "quarterly P&L"
-      },
+      }
+     ]
+    },
+    {
+     "text": "Operating margin stood at 24.0% in the latest quarter.",
+     "cites": [
+      {
+       "id": "F6",
+       "text": "Operating margin 24.0% in the latest quarter, +0.0 pts YoY",
+       "source": "quarterly P&L"
+      }
+     ]
+    },
+    {
+     "text": "Revenue grew YoY in 8 of 8 recent quarters.",
+     "cites": [
       {
        "id": "F10",
        "text": "Revenue grew YoY in 8 of 8 recent quarters",
        "source": "quarterly P&L"
       }
      ]
-    },
-    {
-     "text": "The 3-year operating cash flow is 1.15x reported profit with a debt/equity of 0.09.",
-     "cites": [
-      {
-       "id": "F7",
-       "text": "Debt/equity 0.09 (borrowings Rs 8,525 cr)",
-       "source": "balance sheet"
-      },
-      {
-       "id": "F9",
-       "text": "3-year operating cash flow = 1.15x reported profit",
-       "source": "cash flow"
-      }
-     ]
     }
    ],
    "bear": [
     {
-     "text": "The 3y profit CAGR is 6.9% compared to the 5y profit CAGR of 8.7%.",
+     "text": "During the call of 2026-10-31, questions dodged were 1 of 25.",
      "cites": [
       {
-       "id": "F2",
-       "text": "3y revenue CAGR 6.8%, profit CAGR 6.9%",
-       "source": "annual P&L"
-      },
-      {
-       "id": "F3",
-       "text": "5y revenue CAGR 12.2%, profit CAGR 8.7%",
-       "source": "annual P&L"
-      }
-     ]
-    },
-    {
-     "text": "The latest quarter profit was Rs 7,838 cr, representing a +6.3% YoY growth.",
-     "cites": [
-      {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 7,838 cr, +6.3% YoY",
-       "source": "quarterly P&L"
-      }
-     ]
-    },
-    {
-     "text": "The cash conversion cycle is 72 days in 2026.",
-     "cites": [
-      {
-       "id": "F8",
-       "text": "Cash conversion cycle 72 days (2026)",
-       "source": "ratios"
+       "id": "F11",
+       "text": "Call of 2026-10-31: questions dodged: 1 of 25",
+       "source": "dodged-question check",
+       "tone": "bear"
       }
      ]
     }

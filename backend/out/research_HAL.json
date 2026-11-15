@@ -1907,7 +1907,8 @@
    {
     "id": "F1",
     "text": "P/E 33.6, market cap Rs 321,667 cr",
-    "source": "screener ratios"
+    "source": "screener ratios",
+    "tone": "context"
    },
    {
     "id": "F2",
@@ -1931,136 +1932,139 @@
    },
    {
     "id": "F6",
+    "text": "Revenue growth sped up: +14.8% YoY in the latest quarter vs a 3y CAGR of 7.1%",
+    "source": "quarterly vs annual P&L",
+    "tone": "bull"
+   },
+   {
+    "id": "F7",
     "text": "Operating margin 23.0% in the latest quarter, -1.0 pts YoY",
     "source": "quarterly P&L"
    },
    {
-    "id": "F7",
+    "id": "F8",
     "text": "Debt/equity 0.0 (borrowings Rs 10 cr)",
     "source": "balance sheet"
    },
    {
-    "id": "F8",
+    "id": "F9",
     "text": "Cash conversion cycle 788 days (2026)",
     "source": "ratios"
    },
    {
-    "id": "F9",
+    "id": "F10",
     "text": "3-year operating cash flow = 1.31x reported profit",
     "source": "cash flow"
    },
    {
-    "id": "F10",
+    "id": "F11",
     "text": "Revenue grew YoY in 7 of 8 recent quarters",
     "source": "quarterly P&L"
    },
    {
-    "id": "F11",
-    "text": "Promises kept: 3 of 6 measurable targets",
-    "source": "promise ledger"
-   },
-   {
     "id": "F12",
     "text": "Missed: revenue growth FY25 target 10-11%, actual 2.0",
-    "source": "promise ledger"
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F13",
     "text": "Partly: ebitda margin FY23 target 26-27%, actual 24.8",
-    "source": "promise ledger"
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F14",
     "text": "Partly: revenue growth FY26 target 8%, actual 6.8",
-    "source": "promise ledger"
+    "source": "promise ledger",
+    "tone": "bear"
    },
    {
     "id": "F15",
     "text": "Kept: revenue growth FY23 target 4-5%, actual 9.4",
-    "source": "promise ledger"
+    "source": "promise ledger",
+    "tone": "bull"
    },
    {
     "id": "F16",
     "text": "Kept: revenue growth FY24 target 7-8%, actual 12.8",
-    "source": "promise ledger"
+    "source": "promise ledger",
+    "tone": "bull"
    },
    {
     "id": "F17",
     "text": "Kept: ebitda margin FY25 target 30-31%, actual 31.1",
-    "source": "promise ledger"
-   },
-   {
-    "id": "F18",
-    "text": "Call of 2026-05-31: questions dodged: 0 of 18",
-    "source": "dodged-question check"
-   },
-   {
-    "id": "F19",
-    "text": "Call of 2025-05-31: questions dodged: 0 of 19",
-    "source": "dodged-question check"
+    "source": "promise ledger",
+    "tone": "bull"
    }
   ],
   "bull_bear": {
    "bull": [
     {
-     "text": "The latest quarter profit reached Rs 1,936 cr, showing a 16.0% YoY increase.",
+     "text": "Revenue growth sped up: +14.8% YoY in the latest quarter vs a 3y CAGR of 7.1%.",
      "cites": [
       {
-       "id": "F5",
-       "text": "Latest quarter profit Rs 1,936 cr, +16.0% YoY",
-       "source": "quarterly P&L"
+       "id": "F6",
+       "text": "Revenue growth sped up: +14.8% YoY in the latest quarter vs a 3y CAGR of 7.1%",
+       "source": "quarterly vs annual P&L",
+       "tone": "bull"
       }
      ]
     },
     {
-     "text": "The 3-year operating cash flow was 1.31x reported profit.",
+     "text": "Kept: revenue growth FY24 target 7-8%, actual 12.8.",
      "cites": [
       {
-       "id": "F9",
-       "text": "3-year operating cash flow = 1.31x reported profit",
-       "source": "cash flow"
+       "id": "F16",
+       "text": "Kept: revenue growth FY24 target 7-8%, actual 12.8",
+       "source": "promise ledger",
+       "tone": "bull"
       }
      ]
     },
     {
-     "text": "Revenue grew YoY in 7 of 8 recent quarters.",
+     "text": "Kept: ebitda margin FY25 target 30-31%, actual 31.1.",
      "cites": [
       {
-       "id": "F10",
-       "text": "Revenue grew YoY in 7 of 8 recent quarters",
-       "source": "quarterly P&L"
+       "id": "F17",
+       "text": "Kept: ebitda margin FY25 target 30-31%, actual 31.1",
+       "source": "promise ledger",
+       "tone": "bull"
       }
      ]
     }
    ],
    "bear": [
     {
-     "text": "The cash conversion cycle was 788 days.",
-     "cites": [
-      {
-       "id": "F8",
-       "text": "Cash conversion cycle 788 days (2026)",
-       "source": "ratios"
-      }
-     ]
-    },
-    {
-     "text": "The revenue growth FY25 target was 10-11%, but the actual was 2.0.",
+     "text": "Missed: revenue growth FY25 target 10-11%, actual 2.0.",
      "cites": [
       {
        "id": "F12",
        "text": "Missed: revenue growth FY25 target 10-11%, actual 2.0",
-       "source": "promise ledger"
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     },
     {
-     "text": "Promises kept were 3 of 6 measurable targets.",
+     "text": "Partly: ebitda margin FY23 target 26-27%, actual 24.8.",
      "cites": [
       {
-       "id": "F11",
-       "text": "Promises kept: 3 of 6 measurable targets",
-       "source": "promise ledger"
+       "id": "F13",
+       "text": "Partly: ebitda margin FY23 target 26-27%, actual 24.8",
+       "source": "promise ledger",
+       "tone": "bear"
+      }
+     ]
+    },
+    {
+     "text": "Partly: revenue growth FY26 target 8%, actual 6.8.",
+     "cites": [
+      {
+       "id": "F14",
+       "text": "Partly: revenue growth FY26 target 8%, actual 6.8",
+       "source": "promise ledger",
+       "tone": "bear"
       }
      ]
     }

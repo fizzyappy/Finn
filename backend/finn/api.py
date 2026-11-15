@@ -9,7 +9,12 @@ import asyncio
 import contextlib
 import logging
 
-from fastapi import FastAPI, HTTPException
+import os
+import threading
+import time
+from collections import defaultdict, deque
+
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from . import documents, filings, fundamentals, http, prices, symbols
@@ -46,7 +51,32 @@ async def lifespan(_app):
 
 app = FastAPI(title="FINN data API", version="0.3.0", lifespan=lifespan)
 # Read-only public data, no cookies: any origin (the Vercel app, localhost) may call it.
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
+# Browsers may call the API only from the app itself (Vercel), this PC, or a phone on the same Wi-Fi.
+# Extra origins can be added with FINN_ALLOWED_ORIGINS (comma-separated).
+_ORIGINS = r"https://finn[-a-z0-9]*\.vercel\.app|http://(localhost|127\.0\.0\.1|10(\.\d+){3}|192\.168(\.\d+){2})(:\d+)?"
+app.add_middleware(CORSMiddleware, allow_origin_regex=_ORIGINS,
+                   allow_origins=[o.strip() for o in os.environ.get("FINN_ALLOWED_ORIGINS", "").split(",") if o.strip()],
+                   allow_methods=["GET", "POST"], allow_headers=["*"])
+
+# The free AI quota is shared by everyone: cap the calls that can spend it, per visitor.
+_LIMITS = {"research": (6, 3600), "ask": (20, 3600), "poll": (6, 3600)}
+_hits: dict[tuple[str, str], deque] = defaultdict(deque)
+_hits_lock = threading.Lock()
+
+
+def _rate_limit(request: Request, kind: str) -> None:
+    n, window = _LIMITS[kind]
+    fwd = request.headers.get("x-forwarded-for", "")
+    ip = fwd.split(",")[0].strip() or (request.client.host if request.client else "?")
+    now = time.time()
+    with _hits_lock:
+        q = _hits[(kind, ip)]
+        while q and q[0] < now - window:
+            q.popleft()
+        if len(q) >= n:
+            wait = int(q[0] + window - now) // 60 + 1
+            raise HTTPException(429, f"Too many requests from this device; try again in about {wait} min.")
+        q.append(now)
 
 
 @app.get("/")
@@ -141,7 +171,8 @@ def r_filings(ticker: str, days: int = 7):
 
 
 @app.post("/rss/poll")
-def r_poll():
+def r_poll(request: Request):
+    _rate_limit(request, "poll")
     return filings.poll_rss()
 
 
@@ -177,10 +208,13 @@ def r_alerts(window: str = "7d", rule: str | None = None):
 
 
 @app.post("/research/{ticker}")
-def r_research_start(ticker: str, refresh: bool = False):
+def r_research_start(ticker: str, request: Request, refresh: bool = False):
     """Start (or join) a research job. Poll /research/jobs/{id}; table sections appear first."""
     from .pull import engine
 
+    # Opening a company that is already researched costs nothing; only real (re)reads count.
+    if refresh or not engine.cached_research(ticker):
+        _rate_limit(request, "research")
     return engine.status(engine.start(ticker, refresh)["id"])
 
 
@@ -205,10 +239,11 @@ def r_research_result(job_id: str):
 
 
 @app.post("/ask/{ticker}")
-def r_ask(ticker: str, body: dict):
+def r_ask(ticker: str, body: dict, request: Request):
     """Q&A about one researched company, answered only from its verified evidence."""
     from .pull import ask, engine
 
+    _rate_limit(request, "ask")
     research = engine.cached_research(ticker)
     if not research:
         raise HTTPException(404, f"{ticker.upper()} has not been researched yet: open it in Research first")

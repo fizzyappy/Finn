@@ -400,8 +400,9 @@ def test_router_retries_transient_errors(no_pacing):
     assert res.text == "fine" and seen[:3] == [llm.TIERS["lite"][0]] * 3
 
 
-def test_router_offline_returns_none_and_usage_counts(no_pacing):
-    assert llm.Router(client=None).complete("t", "never cached") is None or not llm.Router(client=None).available
+def test_router_offline_returns_none_and_usage_counts(no_pacing, monkeypatch):
+    monkeypatch.setenv("FINN_OFFLINE", "1")          # never reach the live model from a test
+    assert llm.Router(client=None).complete("t", "never cached") is None and not llm.Router(client=None).available
     llm.Router(client=_FakeClient(lambda m: "x")).complete("t", "count me")
     u = llm.usage()
     assert u["cost_usd"] == 0.0 and sum(v["api_calls"] for v in u["models"].values()) >= 1

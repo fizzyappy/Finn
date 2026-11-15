@@ -10,8 +10,6 @@ backtest, not a guess; the app ships a snapshot so the link always works, with a
 
 | Decision | Why | What we gave up |
 |----------|-----|-----------------|
-| Project lives in a local folder, not OneDrive | OneDrive sync fights with `node_modules`, `.venv` and SQLite files | Automatic cloud backup; GitHub is the backup instead |
-| Earlier code kept in `_old\` (git-ignored), rewritten in `backend/finn` | Old code was well designed but never ran against live sources (its own notes say so) and was written for a different LLM provider | Some old features (classifier, push digest, research engine) not ported yet; they come back in Tasks 3–4 |
 | Cache stores JSON in SQLite, never pickle | Readable, safe to load, survives pandas upgrades | Slightly more code to turn data into tables |
 | Cache raw pages, parse on every read | A parser fix applies at once instead of after the cache expires (we hit this bug live) | A few ms of parsing per read |
 | Never work around bot protection. A 401/403 marks the host blocked for 30 min | Respect the sites' wishes; the safety check on this PC also refused browser-fingerprint tricks | BSE and NSE announcement APIs are unusable from this PC (both return 403) |
@@ -66,3 +64,6 @@ backtest, not a guess; the app ships a snapshot so the link always works, with a
 | Ask about a company: the model sees only numbered evidence (facts, ledger quotes, dodged quotes, segments) and must cite it; Python re-checks every number and praise word in the answer; otherwise "not covered by these sources" | A chat box that can say anything would undo the rest of the app's checks | Narrow answers; general questions are declined |
 | Play my brief uses the phone's own speech (Web Speech API), hero cards only, about 150 words | Free, offline, no audio files or extra model calls | Voice quality depends on the phone |
 | The annual-report reader runs in a background (daemon) thread with a 4-minute budget | A slow report once kept a finished job's process alive after a power cut | A timed-out report finishes reading in the background and appears on the next run |
+| Bull/bear facts include Python-computed comparisons (growth slowing vs the 3-year trend, profit vs revenue, a merger-sized year confirmed by per-share dilution), each marked for the side it supports | A plain growth number is not a bear point, and HDFC Bank's 3-year CAGR includes its merger | The merger flag needs EPS to lag revenue, so a merger paid in cash is not flagged |
+| Browsers may call the API only from the app's own address; research and Ask are rate-limited per visitor | Anyone could otherwise spend the shared free AI quota | A heavy tester waits up to an hour for new companies |
+| A quiet window shows the shortest window that has something, labelled ("Quiet last 24 hours · here is what mattered in the last 7 days"); verified results stay pinned under "Latest results" | The first screen of a filtering app should never be empty; results season is what an investor wants mid-November | The default window is not strictly "last 24 hours" when that window is empty |
