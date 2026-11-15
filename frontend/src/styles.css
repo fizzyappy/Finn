@@ -389,3 +389,5 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 .take-bad { color: #f29a9a; }
 .take-neutral { color: var(--text); }
 .take-dot { color: var(--text-3); font-weight: 400; }
+
+.bars-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }

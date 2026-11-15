@@ -182,3 +182,15 @@ export const tidy = (t?: string) => rupee(t)
     (_m, mo, d, y) => `${d} ${MON[mo]} ${y}`)
   .replace(/\b(\d{1,2})(?:st|nd|rd|th)? (January|February|March|April|May|June|July|August|September|October|November|December),? (\d{4})/g,
     (_m, d, mo, y) => `${d} ${MON[mo]} ${y}`);
+
+/** "Q2 FY27": the quarter an earnings call reports on (the last quarter that ended before the call's month). */
+export function callQuarter(iso?: string) {
+  if (!iso) return "";
+  let y = +iso.slice(0, 4);
+  const m = +iso.slice(5, 7);
+  let end = Math.floor((m - 1) / 3) * 3;          // 0, 3, 6, 9 -> quarter-end month before the call month
+  if (end === 0) { end = 12; y -= 1; }
+  const q = end === 6 ? 1 : end === 9 ? 2 : end === 12 ? 3 : 4;
+  const fy = end >= 4 ? y + 1 : y;
+  return `Q${q} FY${String(fy).slice(2)}`;
+}

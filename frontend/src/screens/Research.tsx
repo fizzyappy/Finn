@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BandChart, Bars, Cite, Icon } from "../components/ui";
-import { api, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, monthYear, pageLink, prefs, rupee, signClass, snapshot, wakeBackend } from "../lib/data";
+import { api, callQuarter, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, pageLink, prefs, rupee, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
   "reading annual report", "writing", "done"];
@@ -167,7 +167,7 @@ function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }
               <div className="score-left">
                 <div className="what">{r.ticker}</div>
                 <div className="score-name">{shortName(r.name)}</div>
-                <div className="line2">{r.in_portfolio ? "Portfolio" : "Not held"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · call ${monthYear(r.last_call)}` : ""}</div>
+                <div className="line2">{r.in_portfolio ? "Portfolio" : "Not held"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · last call ${callQuarter(r.last_call)}` : ""}</div>
               </div>
               <div className="score-pills tnum">
                 {k && k.b
@@ -257,7 +257,7 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
       {S.snapshot && <Snapshot s={S.snapshot} />}
-      {S.trajectory && <Trajectory t={S.trajectory} />}
+      {S.trajectory && <Trajectory t={S.trajectory} lender={!!S.snapshot?.lender} />}
       {S.balance_sheet && <BalanceSheet b={S.balance_sheet} />}
       {S.cash_quality && <Cash c={S.cash_quality} />}
       {S.business_snapshot && <Business b={S.business_snapshot} />}
@@ -392,7 +392,7 @@ function Ledger({ led }: { led: Json }) {
                   <span className={`verdict ${VERDICT_CLASS[r.verdict]}`}>{r.verdict}</span>
                 </div>
                 <div className="line2">
-                  {r.scope && !/^(company|group|consolidated)$/i.test(r.scope) ? `${r.scope} · ` : ""}said {monthYear(s.call_date)} by {s.speaker}
+                  {r.scope && !/^(company|group|consolidated)$/i.test(r.scope) ? `${r.scope} · ` : ""}said on the {callQuarter(s.call_date)} call by {s.speaker}
                   {r.actual != null && <> · actual <b className="tnum" style={{ color: "var(--text)" }}>{fmtNum(r.actual, 1)}{unit}</b></>}
                 </div>
               </button>
@@ -402,13 +402,13 @@ function Ledger({ led }: { led: Json }) {
                     {(s.low != null || s.high != null) && unit === "%" && <BandChart low={s.low} high={s.high} actual={r.actual} unit="%" />}
                     <div className="quote">
                       “{s.quote}”
-                      <div className="by">{s.speaker} · call of {fmtDay(s.call_date)} <Cite href={pageLink(s.source_url, s.page)}>transcript p.{s.page}</Cite></div>
+                      <div className="by">{s.speaker} · {callQuarter(s.call_date)} call <Cite href={pageLink(s.source_url, s.page)}>transcript p.{s.page}</Cite></div>
                     </div>
                     <div className="small muted" style={{ marginTop: 8 }}>{r.reason}</div>
                     {r.trail?.length > 0 && (
                       <ul className="trail">
                         {r.trail.map((e: Json, k: number) => (
-                          <li key={k}><span className="ev">{e.event}</span><span>{e.call?.slice(0, 7)}{e.target ? ` · ${e.target}` : ""}{e.silent_calls ? ` · ${e.silent_calls} call(s) since` : ""}</span></li>
+                          <li key={k}><span className="ev">{e.event}</span><span>{callQuarter(e.call)} call{e.target ? ` · ${e.target}` : ""}{e.silent_calls ? ` · ${e.silent_calls} call(s) since` : ""}</span></li>
                         ))}
                       </ul>
                     )}
@@ -494,14 +494,16 @@ function Snapshot({ s }: { s: Json }) {
   );
 }
 
-function Trajectory({ t }: { t: Json }) {
+function Trajectory({ t, lender }: { t: Json; lender?: boolean }) {
   const rows: Json[] = (t.annual || []).slice(-7);
   const c3 = t.cagr_pct?.["3y"] || {}, c5 = t.cagr_pct?.["5y"] || {};
   return (
     <>
       <Title meta="revenue bars · margin line">Trajectory</Title>
       <div className="glass card">
-        <Bars label="Annual revenue with operating margin" data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
+        <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr (bars) · operating margin (line)`}
+          fmt={(v) => fmtCr(v)} lineName="margin"
+          data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
         <div className="kv" style={{ marginTop: 8 }}>
           <span className="k">Revenue CAGR 3y / 5y</span><span className="v">{fmtPct(c3.revenue)} / {fmtPct(c5.revenue)}</span>
           <span className="k">Profit CAGR 3y / 5y</span><span className="v">{fmtPct(c3.pat)} / {fmtPct(c5.pat)}</span>
@@ -614,7 +616,7 @@ function Sources({ d }: { d: Json }) {
     <>
       <Title>Sources</Title>
       <div className="glass card" style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        {ts.map((t) => <Cite key={t.url} href={t.url}>call {t.call.slice(0, 7)}</Cite>)}
+        {ts.map((t) => <Cite key={t.url} href={t.url}>{callQuarter(t.call)} call</Cite>)}
         {ar?.url && <Cite href={ar.url}>{ar.title}</Cite>}
         {d.sections?.snapshot?.source && <Cite href={d.sections.snapshot.source}>statement tables (screener.in)</Cite>}
         <div className="faint small" style={{ width: "100%" }}>Numbers from the statement tables; quotes checked word for word on the page cited. Built {fmtDay(d.started_at)}.</div>

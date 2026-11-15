@@ -95,22 +95,36 @@ export function CountUp({ value, format }: { value: number; format: (v: number) 
 }
 
 /** Small bar chart (annual values) with an optional line overlay (margin %). */
-export function Bars({ data, label }: { data: { x: string; y: number | null; line?: number | null }[]; label: string }) {
+export function Bars({ data, label, metric, fmt, lineName }: {
+  data: { x: string; y: number | null; line?: number | null }[]; label: string;
+  metric?: string; fmt?: (v: number | null | undefined) => string; lineName?: string;
+}) {
+  const [sel, setSel] = useState(data.length - 1);
   const W = 340, H = 120, pad = 18;
+  const cur = data[Math.min(sel, data.length - 1)];
   const vals = data.map((d) => d.y ?? 0);
   const max = Math.max(...vals, 1);
   const lines = data.map((d) => d.line).filter((v): v is number => v != null);
   const lmin = Math.min(...lines, 0), lmax = Math.max(...lines, 1);
   const bw = (W - pad * 2) / data.length;
   return (
+    <div>
+    {metric && (
+      <div className="bars-head tnum">
+        <span className="faint small">{metric}</span>
+        <span className="small"><b>{cur?.x}</b> · {fmt ? fmt(cur?.y) : cur?.y}{lineName && cur?.line != null ? ` · ${lineName} ${cur.line.toFixed(1)}%` : ""}</span>
+      </div>
+    )}
     <svg viewBox={`0 0 ${W} ${H + 18}`} width="100%" role="img" aria-label={label}>
       {data.map((d, i) => {
         const h = ((d.y ?? 0) / max) * H * 0.85;
         return (
-          <g key={d.x}>
+          <g key={d.x} onClick={() => setSel(i)} style={{ cursor: "pointer" }}>
+            <rect x={pad + i * bw} y={0} width={bw} height={H + 18} fill="transparent" />
             <rect x={pad + i * bw + bw * 0.18} y={H - h} width={bw * 0.64} height={Math.max(h, 1)} rx="4"
-              fill={i === data.length - 1 ? "var(--mint)" : "rgba(102, 209, 158,0.28)"} />
-            <text x={pad + i * bw + bw / 2} y={H + 14} textAnchor="middle" fontSize="10" fill="rgba(234,245,238,0.42)">{d.x}</text>
+              fill={i === sel ? "var(--mint)" : "rgba(102, 209, 158,0.28)"} />
+            <text x={pad + i * bw + bw / 2} y={H + 14} textAnchor="middle" fontSize="10"
+              fill={i === sel ? "rgba(236,239,237,0.9)" : "rgba(236,239,237,0.42)"}>{d.x}</text>
           </g>
         );
       })}
@@ -119,6 +133,8 @@ export function Bars({ data, label }: { data: { x: string; y: number | null; lin
           points={data.map((d, i) => d.line == null ? "" : `${pad + i * bw + bw / 2},${H - ((d.line - lmin) / (lmax - lmin || 1)) * H * 0.8 - 8}`).filter(Boolean).join(" ")} />
       )}
     </svg>
+    {metric && <div className="faint small" style={{ textAlign: "center", marginTop: 2 }}>Tap a bar to see its numbers</div>}
+    </div>
   );
 }
 
