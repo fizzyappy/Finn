@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { catLabel, fmtNum, fmtWhen, Json, nice, prefs, snapshot, wakeBackend } from "../lib/data";
 
@@ -53,7 +54,7 @@ export default function Settings() {
         ))}
       </div>
 
-      <div className="section-title"><h2>Announcement types</h2><span className="meta">what reaches your brief</span></div>
+      <div className="section-title"><h2>Announcement types</h2><span className="meta">tap to change</span></div>
       <div className="glass card">
         {TYPES.map((cat) => {
           const v = tune[cat] ?? 1;
@@ -63,9 +64,12 @@ export default function Settings() {
             <div key={cat} className="type-row">
               <span className="small">{catLabel(cat)}{level === "tuned" ? <span className="faint"> · ×{v.toFixed(2)} from swipes</span> : null}</span>
               <span className="seg" role="group" aria-label={`${catLabel(cat)} alerts`}>
-                <button aria-pressed={level === "mute"} onClick={() => set(0.3)}>Mute</button>
-                <button aria-pressed={level === "normal"} onClick={() => set(1)}>Normal</button>
-                <button aria-pressed={level === "boost"} onClick={() => set(1.5)}>Boost</button>
+                {([["mute", "Mute", 0.3], ["normal", "Normal", 1], ["boost", "Boost", 1.5]] as const).map(([k, label, x]) => (
+                  <button key={k} className={`seg-${k}`} aria-pressed={level === k} onClick={() => set(x)}>
+                    {level === k && <motion.span layoutId={`seg-${cat}`} className="seg-thumb" transition={{ type: "spring", stiffness: 500, damping: 36 }} />}
+                    <span className="seg-label">{label}</span>
+                  </button>
+                ))}
               </span>
             </div>
           );
