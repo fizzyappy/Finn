@@ -135,22 +135,22 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .nav {
   position: fixed; z-index: 20; left: 50%; transform: translateX(-50%);
   bottom: calc(var(--safe-bottom) + 14px);
-  display: flex; gap: 4px; padding: 6px;
+  display: flex; gap: 2px; padding: 4px;
   border-radius: var(--pill);
-  background: rgba(10, 26, 19, 0.72);
-  border: 1px solid var(--line-strong);
+  background: rgba(10, 24, 18, 0.82);
+  border: 1px solid var(--line);
   backdrop-filter: blur(24px) saturate(150%); -webkit-backdrop-filter: blur(24px) saturate(150%);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
 }
 .nav button {
   position: relative; display: flex; align-items: center; gap: 7px;
   height: 46px; padding: 0 15px; border-radius: var(--pill); color: var(--text-2); font-size: 13.5px; font-weight: 600;
 }
 .nav button[aria-current="page"] { color: var(--mint-ink); }
-.nav .pill-bg { position: absolute; inset: 0; border-radius: var(--pill); background: var(--mint); z-index: -1; box-shadow: 0 6px 20px var(--mint-glow); }
-.nav svg { width: 20px; height: 20px; }
-.nav button { flex-direction: column; justify-content: center; gap: 2px; height: 54px; padding: 0 16px; font-size: 10.5px; }
-.nav .label { display: block; font-weight: 600; letter-spacing: .01em; }
+.nav .pill-bg { position: absolute; inset: 0; border-radius: var(--pill); background: var(--mint); z-index: -1; box-shadow: 0 3px 12px rgba(124, 242, 154, 0.25); }
+.nav svg { width: 17px; height: 17px; }
+.nav button { flex-direction: column; justify-content: center; gap: 1px; height: 42px; padding: 0 14px; font-size: 9.5px; }
+.nav .label { display: block; font-weight: 600; letter-spacing: .02em; line-height: 1.1; }
 .nav .dot { position: absolute; top: 9px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 8px var(--mint); }
 
 /* ---------- brief ---------- */
