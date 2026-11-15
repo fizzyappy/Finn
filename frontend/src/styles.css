@@ -336,3 +336,10 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 .fire-sym { font-weight: 600; font-size: 13.5px; }
 .fire-ret { font-weight: 600; font-size: 14px; }
 .fire-sub { font-size: 11.5px; color: var(--text-3); margin-top: 1px; }
+
+.score-row { display: flex; align-items: center; gap: 12px; }
+.score-left { flex: 1; min-width: 0; }
+.score-left .what { display: block; }
+.score-name { font-size: 12.5px; color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+.score-left .line2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; }
+.score-pills { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }

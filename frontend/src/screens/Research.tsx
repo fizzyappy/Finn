@@ -163,17 +163,18 @@ function Intro({ index, onPick }: { index: Json[]; onPick: (t: string) => void }
         {rows.map((r) => {
           const k = ratio(r.kept), d = ratio(r.dodged);
           return (
-            <button key={r.ticker} className="ledger-row" onClick={() => onPick(r.ticker)}>
-              <div className="line1">
-                <span className="what">{r.ticker} <span className="faint small" style={{ fontWeight: 400 }}>{shortName(r.name)}</span></span>
-                <span className="tnum small" style={{ display: "flex", gap: 6 }}>
-                  <span className={`verdict ${k && k.b ? (k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed") : "v-nm"}`}>
-                    {k && k.b ? `${k.a}/${k.b} kept` : r.tracked ? `${r.tracked} tracked` : "no targets"}
-                  </span>
-                  {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
-                </span>
+            <button key={r.ticker} className="ledger-row score-row" onClick={() => onPick(r.ticker)}>
+              <div className="score-left">
+                <div className="what">{r.ticker}</div>
+                <div className="score-name">{shortName(r.name)}</div>
+                <div className="line2">{r.in_portfolio ? "Portfolio" : "Not held"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · call ${monthYear(r.last_call)}` : ""}</div>
               </div>
-              <div className="line2">{r.in_portfolio ? "in your portfolio" : "research only (not held)"}{r.next_due ? ` · next due ${r.next_due.replace(/^by /, "")}` : ""}{r.last_call ? ` · last call ${monthYear(r.last_call)}` : ""}</div>
+              <div className="score-pills tnum">
+                {k && k.b
+                  ? <span className={`verdict ${k.a / k.b >= 0.6 ? "v-kept" : k.a / k.b >= 0.34 ? "v-partly" : "v-missed"}`}>{k.a}/{k.b} kept</span>
+                  : r.tracked ? <span className="verdict v-nm">{r.tracked} tracked</span> : null}
+                {d && d.a > 0 && <span className="verdict v-missed">{d.a} dodged</span>}
+              </div>
             </button>
           );
         })}
