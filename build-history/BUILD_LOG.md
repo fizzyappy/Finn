@@ -1,99 +1,138 @@
-# How FINN was built: a working log
+# How FINN was built
 
-FINN was built in about two days (13–15 November 2026) by the author working with **Claude Code** (an AI coding
-agent) on a Windows PC, steered from a Claude project conversation. The author set the direction, made the product
-calls and reviewed the app on a phone; Claude Code wrote the code, ran it against live sources, tested it and wrote
-up what it found. Gemini (free tier) is the model *inside* the app. Every step was committed to git: 37 commits,
-listed at the end.
+FINN was designed and directed by the author and built with **Claude Code** as the engineering agent. The
+author set the product direction, made every product and design call, reviewed each build on a phone, and
+**designed FINN's logo (the slanted "F")** personally. Claude Code wrote the code, ran it against live data,
+tested it and reported back. Gemini (free tier) is the model *inside* the app, used only where rules can't do
+the job.
 
-This log is a readable account of that collaboration. The raw conversation exports sit next to it (see
-`README.md` in this folder).
+The aim was not "an app that calls an LLM". It was an app an investor could trust: every number traceable to
+a filing, every quote checkable, and the AI used only where it earns its place.
 
-## How we worked
+---
 
-- **One plan, six tasks.** Setup → data pipes → push engine → pull engine → app → submission (`PLAN.md`). Each
-  task ended with something running on live data and a report the author could read (`backend/*_report.md`).
-- **Rules written down first.** `CLAUDE.md` fixed the non-negotiables before any code: primary sources only, no
-  bot-protection workarounds, the model reads and Python decides, quotes checked word for word, never commit
-  secrets. When a rule cost something, the cost went into `DECISIONS.md`.
-- **The author asked for quality over speed** ("I want a great app that can actually stand out"), and for
-  plain-language updates. Claude reported in that style and kept a progress checklist.
-- **Prior art.** The author asked Claude to keep looking for people who had built similar things better. That led
-  to the materiality score with a visible "why", the backtest-first alert rule, and the promise-ledger framing.
+## 1. Research first: what should this app be?
 
-## Phases and turning points
+**Method.** Before writing code, we read the challenge as an investor would, and asked: what does someone with
+18 stocks actually need on a Tuesday morning? Three answers drove everything:
 
-### 1. Setup and data (13–14 Nov)
-- Earlier code from a previous attempt (well designed, never run live, written for another model provider) was
-  kept for reference, and the data layer was rewritten and **proven live** on five companies
-  (`backend/validation_report.md`).
-- **BSE's and NSE's announcement APIs refused scripted access (403).** One retry with standard headers was blocked
-  by the PC's own safety check as bot-check circumvention. Decision: respect it, never retry, and use the exchanges'
-  official RSS feeds plus Screener instead. This shaped the whole filings pipeline.
+- **Most filings are noise.** Indian listed companies file dozens of announcements a week, nearly all paperwork.
+  The value is in *filtering*, not summarising everything.
+- **Trust is the product.** A wrong number in a finance app is worse than no number. So the model may *read*,
+  but Python must *decide*.
+- **Management credibility is under-served.** Everyone shows results; almost nobody checks whether management
+  did what it said on the last five calls. That became the signature feature: the **promise ledger**.
 
-### 2. Push engine (14 Nov)
-- 90 real filings were hand-labelled into ENAM's 17 categories. Rules first, Gemini Flash-Lite only when no rule is
-  sure: 100% category on the labelled set; on a blind set of 34 other companies, 53% (rules) → 82% (rules + model).
-- **Live runs caught model mistakes**, and each became a generic check rather than a special case:
-  "ICRA upgrades" when the filing said "reaffirmed; outlook positive" (action words must be the filing's);
-  an LLM summary quoting standalone profit while the card showed consolidated (headlines now written by Python);
-  ITC revenue including excise duty (netted out).
-- **The alert default came from a backtest**, not a guess: the obvious 2.5-sigma rule fired ~3 times a week across
-  18 stocks; "3 sigma and 2.5× volume" fires about once.
+**Prior art and references.** The author asked for constant comparison with how others had solved similar
+problems. We studied an earlier prototype and a peer's build document (used as a format sample, not copied),
+and reviewed how good finance apps present ranking, alerts and charts. What we kept: a visible "why am I
+seeing this?", alert rules tested on history before being switched on, and verdicts tied to a quote and page.
 
-### 3. Pull engine (14 Nov)
-- Transcripts, a promise ledger, a dodged-question judge, segments from the annual report, bull/bear.
-- **Hand spot-check of 45 statements** (`backend/spot_check.md`): extraction 45/45; verdicts were **4/7 on the first
-  pass** — the hand check found L&T's 8.5% margin guidance was for its core business, not the group. Fix: every
-  promise carries a scope, and only company-wide targets are judged against company-wide tables. Verdicts 8/8 after.
-- The dodged judge first flagged a clarification request as a dodge; it was made stricter (Python keeps "dodged"
-  only with evidence in the quoted answer).
+**First-principles rules, written down before code** (`CLAUDE.md`, `DECISIONS.md`):
+1. Primary sources only (exchange filings, transcripts, annual reports), and no bot-protection workarounds.
+2. Rules before models; the model reads, Python does all arithmetic and every verdict.
+3. Quotes must be found word for word in the source, or they are dropped.
+4. Every model call is cached and costed.
 
-### 4. The app (14 Nov)
-- React + Vite PWA, checked on every screen with Playwright and axe (accessibility, contrast, overflow).
-- Ships a snapshot of real outputs so the link always works; a live backend reads companies outside it.
-- Added late on 14 Nov: **Ask about this company** (answers only from cited evidence, numbers re-checked) and
-  **Play my brief** (the phone read the cards aloud). The author later removed Play my brief: the phone's built-in
-  voice sounded mechanical and the feature felt over-engineered.
+---
 
-### 5. Deployment (14–15 Nov)
-- Render (backend) asked the author's account for a card. Claude prepared a no-card alternative without being asked;
-  **the author chose Render and asked for the alternative to be removed** — it was, and Claude now offers options
-  and waits for the choice. The author set up Render, Vercel and the GitHub secrets; Claude tested the live backend
-  end to end (health, a cached company, an unseen company read live in ~5 min, Ask).
-- Campus Wi-Fi kept the phone from reaching the laptop, so the author moved straight to the public Vercel link.
+## 2. Data pipes: proving the sources live
 
-### 6. Review and polish (15 Nov)
-- The author brought in an outside review (scores per area, a ranked list of issues). Claude triaged it against
-  the challenge brief and did the deadline-safe items:
-  - the first screen is never empty (a quiet window shows the shortest window with something, labelled);
-  - verified results are pinned under "Latest results";
-  - Python comparison facts for bull/bear: growth slowing vs trend, margins squeezed, and a **merger-sized year
-    confirmed by per-share dilution** (HDFC Bank's 3-year growth includes its merger; Dixon's fast organic growth is
-    not flagged);
-  - mute / normal / boost per announcement type; % equivalent on the alert slider;
-  - CORS limited to the app and per-visitor rate limits, so the shared free AI quota can't be drained;
-  - the 4 CDSL "dodged" flags and Reliance's +11.6% day were checked by hand (all genuine).
-- **Design went back and forth, and the author decided.** Claude toned down the colour and glow per the review; the
-  author preferred the original look and asked for it back, with the new content kept. The author also supplied the
-  final logo (the slanted F) and asked for a lighter wordmark, clearer navigation and smoother motion.
+**What.** A data layer for any NSE company: prices, statements, transcripts, filings and documents.
+**How.** Each source was tested live on five companies before anything was built on it
+(`backend/validation_report.md`). When the BSE/NSE announcement APIs refused scripted access, we did not
+work around it: we switched to the exchanges' official RSS feeds plus Screener, and documented the trade-off.
+**Why it matters.** Every later feature stands on numbers we had already checked against a second source
+(last close within 0.13%).
+
+---
+
+## 3. Push engine: filter → rank → verify
+
+**Filter.** 90 real filings were hand-labelled into ENAM's 17 categories. Ordered rules handle most; Gemini
+Flash-Lite reads page 1 only when no rule is sure. Result: 100% category on the labelled set; on a blind set of
+34 other companies, 53% with rules alone → 82% with rules + model.
+
+**Rank.** A materiality score (category × event details × holding weight × the user's preferences + market
+reaction), with every factor shown under **Why?**. Thresholds: card ≥ 0.6, one-liner ≥ 0.3.
+
+**Verify.** Results numbers are read from only the results-table pages; Python then checks three periods, PBT −
+tax = PAT, totals, units and a match with Screener before a "verified" badge. Live runs caught real issues
+(ITC revenue including excise, half-year reporters, scanned PDFs), and each became a general rule.
+
+**Alerts.** Price moves are judged against each stock's own usual daily move after the market's move, plus
+volume. The default came from a 90-day backtest: the obvious rule fired ~3×/week; the chosen one ~1×/week.
+
+---
+
+## 4. Pull engine: does management keep its word?
+
+**What.** For any company: last five transcripts → every target management set → measured against what was
+later reported → a verdict with the exact quote and page. Plus a dodged-question check, business segments from
+the annual report, a bull/bear case and an **Ask** box that answers only from cited evidence.
+
+**How we kept it honest.** A hand spot-check of 45 statements: extraction 45/45; verdicts 4/7 on the first
+pass. The miss was instructive: L&T's margin guidance was for its core business, not the group. Fix: every
+promise carries a scope, and only company-wide targets are judged on company-wide tables (→ 8/8).
+
+**Python-written analysis.** "FINN's take" (one line per company), the bull/bear facts (growth slowing vs its
+trend, margins squeezed, a merger-sized year confirmed by per-share dilution) and the sentence above each chart
+are all computed by Python; the model only phrases bullets from numbered facts, and bullets that don't match
+their facts are dropped.
+
+---
+
+## 5. The app: making trust feel effortless
+
+**Stack.** React + Vite PWA, installable on a phone, with a built-in snapshot of real outputs (so the link always
+works) and a live backend for new companies.
+
+**Design method.** Every screen was screenshotted at phone size and checked automatically for console errors,
+accessibility, contrast and overflow after every change (20 screens, 0 issues at the end). The author reviewed
+on a real phone and directed the look in short loops. Key design decisions:
+- **Identity:** the author's own slanted-F logo, a calm dark theme with one sage-mint accent, and a short opening
+  animation in which the F assembles itself.
+- **First screen never empty:** a quiet day says "Today: nothing new" and shows what mattered this week, with a
+  filter funnel ("20 filings → 3 worth knowing → 1 need you") and a portfolio pulse vs the Nifty.
+- **Every card answers "so what?":** your holding size, a verified badge you can open, Why?, Done, and company
+  names that open their research.
+- **Visuals that explain, not decorate:** bar charts with the latest years highlighted, tap-to-read values, a
+  Python sentence above each chart, glowing "peak" bars for alert days, and a mountain chart for cash earned per
+  ₹1 of profit against a dashed ₹1 line.
+- **Settings that feel like a phone:** Mute / Normal / Boost per announcement type on a sliding toggle.
+
+---
+
+## 6. Shipping it like a product
+
+- **Hosting:** Vercel (app) + Render (research engine), with CORS limited to the app and per-visitor rate limits
+  so the shared free AI quota can't be drained.
+- **Fresh data without a laptop:** a daily GitHub Action rebuilds the data; if one company's fetch fails, its
+  previous data is kept.
+- **Cold starts handled:** a committed seed of cached answers, a waking-up message, and a queue position
+  ("1 ahead of you · about 4 min").
+
+---
+
+## 7. Using AI efficiently
+
+- **Claude Code as the engineer:** planned in tasks, wrote code, ran it on live sources, tested and reported in
+  plain language; the author steered priorities and design.
+- **Gemini only where it earns its place:** one router with tiers and fallback, every answer cached by a hash of
+  its input, every call logged. Whole build: ~400 model calls, ~1 million tokens, about two-thirds served from
+  cache, **USD 0**.
+- **Verification over trust:** 119 offline tests, hand spot-checks, a backtest for alerts, and an outside design
+  review that was triaged against the brief before acting on it.
 
 ## What the AI got wrong, and how it was caught
+
 | Mistake | Caught by | Fix |
 |---|---|---|
-| Treated a frequent speaker as a page header (Infosys CEO), a CFO as an analyst (HDFC Bank) | live run | speaker roles from moderator introductions and Q&A behaviour |
-| Judged L&T's segment margin guidance against group margins ("Kept") | hand spot-check | promise scope |
+| Judged L&T's segment margin guidance against group margins | hand spot-check | promise scope |
 | "ICRA upgrades" for a reaffirmed rating | summary checks | action words must appear in the filing |
-| Flagged a clarification request as a dodged question | hand check | stricter judge + Python evidence rule |
-| Bull points like "0 questions dodged" and growth numbers listed as bear points | outside review | comparison facts with a side; model may not move a fact to the other side |
-| A test that reached the live model once a working key was present | test run | tests forced offline |
+| Treated a CEO as a page header, a CFO as an analyst | live runs | roles from introductions and Q&A behaviour |
+| Flagged a clarification as a dodged question | hand check | stricter judge + Python evidence rule |
+| Bull points like "0 questions dodged" | outside review | Python comparison facts, each tied to a side |
 | Built an unrequested hosting alternative | the author | removed; options are offered, not built |
 
-## Numbers at the end
-- 115 backend tests; 20 app screens checked with 0 console errors and 0 accessibility issues.
-- Model use for the whole build: about 330 Gemini calls and 1 million tokens, two thirds of requests answered from
-  cache, **USD 0** (free tier).
-
-## Commit history
-`git log --reverse --oneline` shows all 37 commits in order, from "Task 1: project setup" to the final design
-fixes on 15 November.
+The full commit history (`git log`) shows every step.
