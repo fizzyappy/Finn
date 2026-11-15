@@ -331,3 +331,8 @@ button, .chip, .why-btn, .btn { transition: transform .12s ease, background .18s
 button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.96); }
 .row-list .row, .ledger-row, .collapsed-cat { transition: background .18s; }
 .ledger-row:active, .collapsed-cat:active { background: rgba(255,255,255,0.04); }
+
+.fire-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); }
+.fire-sym { font-weight: 600; font-size: 13.5px; }
+.fire-ret { font-weight: 600; font-size: 14px; }
+.fire-sub { font-size: 11.5px; color: var(--text-3); margin-top: 1px; }

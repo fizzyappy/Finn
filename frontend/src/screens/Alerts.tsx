@@ -112,9 +112,15 @@ export default function Alerts({ onOpenResearch }: { onOpenResearch: (t: string)
             </p>
             <div style={{ marginTop: 10 }}>
               {bt.fires.slice(0, 5).map((f) => (
-                <div key={f.sym + f.date} className="small" style={{ display: "flex", justifyContent: "space-between", padding: "5px 0", borderTop: "1px solid var(--line)" }}>
-                  <span><b>{f.sym}</b> <span className="faint">{fmtDay(f.date)}</span></span>
-                  <span className="tnum"><span className={f.ret > 0 ? "up" : "down"}>{f.ret > 0 ? "+" : ""}{f.ret}%</span> <span className="faint">· move {Math.abs(f.z).toFixed(1)}×{f.vol != null ? ` · volume ${Number(f.vol).toFixed(1)}×` : ""}</span></span>
+                <div key={f.sym + f.date} className="fire-row">
+                  <div>
+                    <div className="fire-sym">{f.sym}</div>
+                    <div className="fire-sub">{fmtDay(f.date)}</div>
+                  </div>
+                  <div style={{ textAlign: "right" }}>
+                    <div className={`fire-ret tnum ${f.ret > 0 ? "up" : "down"}`}>{f.ret > 0 ? "+" : ""}{f.ret.toFixed(1)}%</div>
+                    <div className="fire-sub tnum">{Math.abs(f.z).toFixed(1)}× usual move{f.vol != null ? ` · ${Number(f.vol).toFixed(1)}× volume` : ""}</div>
+                  </div>
                 </div>
               ))}
             </div>
