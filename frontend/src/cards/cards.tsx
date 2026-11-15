@@ -158,7 +158,7 @@ export function WhyBody({ e, onBack }: { e: Json; onBack: () => void }) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const hidden = (h: boolean): any => (h ? { inert: "" } : {});
 
-export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void; onLess: () => void }) {
+export function SwipeCard({ e, onClear, onLess, weight }: { e: Json; onClear: () => void; onLess: () => void; weight?: number }) {
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-220, 0, 220], reduce ? [0, 0, 0] : [-6, 0, 6]);
@@ -196,7 +196,7 @@ export function SwipeCard({ e, onClear, onLess }: { e: Json; onClear: () => void
             <article className={`glass card face ${e.score >= 0.75 ? "hero-glow" : ""}`} aria-hidden={flipped} {...hidden(flipped)}>
               <div className="card-top">
                 <Who e={e} />
-                <span className="tag ghost tnum" title="How much this matters to you, 0 to 1. Tap Why? for the breakdown.">score {e.score.toFixed(2)}</span>
+                {weight != null && <span className="tag ghost tnum" title="Your holding's share of the portfolio. Tap Why? for the full ranking.">your {+(weight * 100).toFixed(1)}% holding</span>}
               </div>
               {kind === "results" ? <ResultsBody e={e} /> : kind === "people" ? <PeopleBody e={e} /> : <SummaryBody e={e} />}
               <div className="card-foot">

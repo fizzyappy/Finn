@@ -150,6 +150,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
     .sort((a: Json, b: Json) => (b.ts || "").localeCompare(a.ts || ""))
     .slice(0, 3);
 
+  const wmap: Record<string, number> = Object.fromEntries((brief.holdings || []).map((h: Json) => [h.symbol, h.weight]));
   const clear = (e: Json) => setCleared((s) => new Set(s).add(id(e)));
   const less = (e: Json) => {
     const next = clampTune((tune[e.category] ?? 1) * 0.8);
@@ -201,7 +202,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
             {heroLeft.map((e) => (
               <motion.div key={id(e)} layout={!reduce} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, x: 0, scale: 0.96, transition: { duration: 0.18 } }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
-                <SwipeCard e={e} onClear={() => clear(e)} onLess={() => { less(e); clear(e); }} />
+                <SwipeCard e={e} weight={wmap[e.symbol]} onClear={() => clear(e)} onLess={() => { less(e); clear(e); }} />
               </motion.div>
             ))}
           </AnimatePresence>
@@ -225,7 +226,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
           <div className="section-title"><h2>Latest results</h2><span className="meta">last 14 days</span></div>
           {latestResults.map((e: Json) => (
             <div key={id(e)} style={{ marginBottom: 12 }}>
-              <SwipeCard e={e} onClear={() => clear(e)} onLess={() => { less(e); clear(e); }} />
+              <SwipeCard e={e} weight={wmap[e.symbol]} onClear={() => clear(e)} onLess={() => { less(e); clear(e); }} />
             </div>
           ))}
         </>
