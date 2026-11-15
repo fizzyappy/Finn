@@ -460,3 +460,5 @@ a.ticker-chip:active { transform: scale(0.96); }
 
 .ask-btn { height: 44px; min-width: 76px; padding: 0 20px; font-size: 15px; flex: none; }
 .ask-btn:disabled { opacity: 0.8; }
+
+.legend .dot-short { background: #f5c86b; }

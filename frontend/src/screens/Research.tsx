@@ -571,40 +571,55 @@ function BalanceSheet({ b }: { b: Json }) {
   );
 }
 
+/** Cash per ₹1 of profit, each year: one bar per year against a 1× line. Green at or above 1×, amber below. */
+function CashRatio({ rows }: { rows: Json[] }) {
+  const pts = rows.filter((r) => r.pat && r.pat > 0 && r.cfo != null).map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, v: r.cfo / r.pat }));
+  if (!pts.length) return null;
+  const W = 340, top = 18, base = 104, left = 30, right = 8;
+  const hi = Math.max(1.5, ...pts.map((p) => p.v)), lo = Math.min(0, ...pts.map((p) => p.v));
+  const y = (v: number) => base - ((v - lo) / (hi - lo)) * (base - top);
+  const bw = (W - left - right) / pts.length;
+  const one = y(1), zero = y(0);
+  return (
+    <svg viewBox={`0 0 ${W} 124`} width="100%" role="img" aria-label="Operating cash flow per rupee of profit, by year" className="chart">
+      <defs>
+        <linearGradient id="cr-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#9fe6c3" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.3" /></linearGradient>
+        <linearGradient id="cr-low" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f5c86b" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0.25" /></linearGradient>
+      </defs>
+      <line x1={left} x2={W - right} y1={zero} y2={zero} stroke="rgba(255,255,255,0.14)" />
+      <line x1={left} x2={W - right} y1={one} y2={one} stroke="rgba(255,255,255,0.35)" strokeDasharray="3 4" />
+      <text x={left - 6} y={one + 3.5} textAnchor="end" fontSize="10" fill="rgba(236,239,237,0.6)">1×</text>
+      {pts.map((p, i) => {
+        const yy = y(Math.max(p.v, 0)), h = Math.max(zero - yy, 2);
+        const last = i === pts.length - 1;
+        return (
+          <g key={p.x}>
+            <motion.rect x={left + i * bw + bw * 0.22} width={bw * 0.56} rx="5" fill={p.v >= 1 ? "url(#cr-ok)" : "url(#cr-low)"}
+              opacity={last ? 1 : 0.8} initial={{ y: zero, height: 0 }} animate={{ y: zero - h, height: h }}
+              transition={{ duration: 0.6, delay: i * 0.06, ease: [0.2, 0.8, 0.2, 1] }} />
+            <text x={left + i * bw + bw / 2} y={Math.max(11, zero - h - 6)} textAnchor="middle" fontSize="10" fontWeight={last ? 700 : 500}
+              fill={last ? "#ecefed" : "rgba(236,239,237,0.55)"}>{p.v.toFixed(1)}×</text>
+            <text x={left + i * bw + bw / 2} y="120" textAnchor="middle" fontSize="10" fill={last ? "rgba(236,239,237,0.9)" : "rgba(236,239,237,0.45)"}>{p.x}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
 function Cash({ c, note }: { c: Json; note?: string }) {
   if (c.available === false) return null;
   const rows: Json[] = (c.years || []).slice(-6);
   return (
     <>
-      <Title meta="operating cash vs profit">Cash quality</Title>
+      <Title meta="cash per ₹1 of profit">Cash quality</Title>
       <div className="glass card">
         {note && !c.lender && <div className="chart-note">{note}</div>}
         {!c.lender && (
-          <svg viewBox="0 0 340 122" width="100%" role="img" aria-label="Operating cash flow compared with profit by year" className="chart">
-            <defs>
-              <linearGradient id="cash-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#9fe6c3" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.35" /></linearGradient>
-              <linearGradient id="pat-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="rgba(255,255,255,0.42)" /><stop offset="1" stopColor="rgba(255,255,255,0.08)" /></linearGradient>
-            </defs>
-            {[0.5, 1].map((f) => <line key={f} x1="14" x2="326" y1={96 - f * 78} y2={96 - f * 78} stroke="rgba(255,255,255,0.06)" strokeDasharray="2 4" />)}
-            <line x1="14" x2="326" y1="96" y2="96" stroke="rgba(255,255,255,0.14)" />
-            {rows.map((r, i) => {
-              const max = Math.max(...rows.flatMap((x) => [x.cfo || 0, x.pat || 0]), 1);
-              const bw = 312 / rows.length, x0 = 14 + i * bw;
-              const h1 = Math.max(((r.pat || 0) / max) * 78, 1), h2 = Math.max(((r.cfo || 0) / max) * 78, 1);
-              return (
-                <g key={r.year_end}>
-                  <motion.rect x={x0 + bw * 0.14} width={bw * 0.32} rx="4" fill="url(#pat-g)"
-                    initial={{ y: 96, height: 0 }} animate={{ y: 96 - h1, height: h1 }} transition={{ duration: 0.6, delay: i * 0.05 }} />
-                  <motion.rect x={x0 + bw * 0.52} width={bw * 0.32} rx="4" fill="url(#cash-g)"
-                    initial={{ y: 96, height: 0 }} animate={{ y: 96 - h2, height: h2 }} transition={{ duration: 0.6, delay: 0.1 + i * 0.05 }} />
-                  <text x={x0 + bw / 2} y="114" textAnchor="middle" fontSize="10" fill="rgba(236,239,237,0.45)">FY{r.year_end.slice(2, 4)}</text>
-                </g>
-              );
-            })}
-          </svg>
+          <CashRatio rows={rows} />
         )}
         <div className="small muted">{c.reading || c.note}</div>
-        {!c.lender && <div className="legend"><span><i className="dot-pat" />profit</span><span><i className="dot-cash" />operating cash flow</span></div>}
+        {!c.lender && <div className="legend"><span><i className="dot-cash" />cash came in ≥ profit</span><span><i className="dot-short" />less cash than profit</span></div>}
       </div>
     </>
   );
