@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { BandChart, Bars, Cite, Icon, Mountain } from "../components/ui";
+import { BandChart, Bars, Cite, Icon, Peaks } from "../components/ui";
 import { api, callQuarter, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, pageLink, prefs, rupee, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
@@ -247,12 +247,19 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
         <div className="faint small">{d.ticker}{S.snapshot?.price ? ` · ₹${fmtNum(S.snapshot.price, S.snapshot.price < 100 ? 1 : 0)}` : ""}{S.snapshot?.market_cap_cr ? ` · m-cap ${fmtCr(S.snapshot.market_cap_cr)}` : ""} · updated {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
       </div>
       {S.take?.parts?.length > 0 && <Take t={S.take} />}
-      {S.price90?.points?.length > 20 && (
-        <div className="glass card" style={{ marginBottom: 12 }}>
-          <div className="take-label" style={{ color: "var(--text-3)" }}>Last 90 days vs Nifty 50</div>
-          <Mountain points={S.price90.points} name={d.ticker} />
-        </div>
-      )}
+      {S.price90?.points?.length > 20 && (() => {
+        const pv = S.price90, ahead = pv.stock_pct >= pv.nifty_pct;
+        const pc = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
+        const day = (d: string) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+        return (
+          <div className="glass card" style={{ marginBottom: 12 }}>
+            <div className="take-label" style={{ color: "var(--text-3)" }}>Last 90 days</div>
+            <div className={`chart-note ${ahead ? "up" : "down"}`} style={{ marginBottom: 4 }}>{d.ticker} {pc(pv.stock_pct)} vs Nifty {pc(pv.nifty_pct)}</div>
+            <Peaks pts={pv.points.map((p: Json) => ({ x: day(p.d), v: p.s }))} compare={pv.points.map((p: Json) => p.n)} fmt={pc}
+              peakWindow={2} aria={`${d.ticker} ${pc(pv.stock_pct)} vs Nifty ${pc(pv.nifty_pct)} over 90 days`} />
+          </div>
+        );
+      })()}
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
@@ -529,16 +536,25 @@ function Trajectory({ t, lender, note }: { t: Json; lender?: boolean; note?: str
       <Title meta="7 years">Trajectory</Title>
       <div className="glass card">
         {note && <div className="chart-note">{note}</div>}
-        <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr · dashed: operating margin`}
-          fmt={(v) => fmtCr(v)} lineName="margin"
-          data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
+        <Bars label="Annual revenue" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr`}
+          fmt={(v) => fmtCr(v)}
+          data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue }))} />
         {rows.some((r) => r.pat != null) && (
           <div style={{ marginTop: 18 }}>
-            <Bars label="Annual net profit with net margin" metric="Net profit, ₹ cr · dashed: net margin"
-              fmt={(v) => fmtCr(v)} lineName="net margin"
-              data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.pat, line: r.pat_margin_pct }))} />
+            <Bars label="Annual net profit" metric="Net profit, ₹ cr" fmt={(v) => fmtCr(v)}
+              data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.pat }))} />
           </div>
         )}
+        {(() => {
+          const key = rows.some((r) => r.ebitda_margin_pct != null) ? "ebitda_margin_pct" : "pat_margin_pct";
+          const m = rows.filter((r) => r[key] != null).map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, v: r[key] as number }));
+          return m.length >= 3 ? (
+            <div style={{ marginTop: 18 }}>
+              <div className="faint small" style={{ marginBottom: 2 }}>{key === "ebitda_margin_pct" ? "Operating margin" : "Net margin"}, %</div>
+              <Peaks pts={m} color="gold" fmt={(v) => `${v.toFixed(1)}%`} endLabels="values" aria="Margin by year" height={130} />
+            </div>
+          ) : null;
+        })()}
         <div className="kv" style={{ marginTop: 8 }}>
           <span className="k">Revenue CAGR 3y / 5y</span><span className="v">{fmtPct(c3.revenue)} / {fmtPct(c5.revenue)}</span>
           <span className="k">Profit CAGR 3y / 5y</span><span className="v">{fmtPct(c3.pat)} / {fmtPct(c5.pat)}</span>
@@ -580,37 +596,9 @@ function BalanceSheet({ b }: { b: Json }) {
 /** Cash per ₹1 of profit, each year: one bar per year against a 1× line. Green at or above 1×, amber below. */
 function CashRatio({ rows }: { rows: Json[] }) {
   const pts = rows.filter((r) => r.pat && r.pat > 0 && r.cfo != null).map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, v: r.cfo / r.pat }));
-  if (!pts.length) return null;
-  const W = 340, top = 18, base = 104, left = 30, right = 8;
-  const hi = Math.max(1.5, ...pts.map((p) => p.v)), lo = Math.min(0, ...pts.map((p) => p.v));
-  const y = (v: number) => base - ((v - lo) / (hi - lo)) * (base - top);
-  const bw = (W - left - right) / pts.length;
-  const one = y(1), zero = y(0);
-  return (
-    <svg viewBox={`0 0 ${W} 124`} width="100%" role="img" aria-label="Operating cash flow per rupee of profit, by year" className="chart">
-      <defs>
-        <linearGradient id="cr-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#9fe6c3" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.3" /></linearGradient>
-        <linearGradient id="cr-low" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f5c86b" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0.25" /></linearGradient>
-      </defs>
-      <line x1={left} x2={W - right} y1={zero} y2={zero} stroke="rgba(255,255,255,0.14)" />
-      <line x1={left} x2={W - right} y1={one} y2={one} stroke="rgba(255,255,255,0.35)" strokeDasharray="3 4" />
-      <text x={left - 6} y={one + 3.5} textAnchor="end" fontSize="10" fill="rgba(236,239,237,0.6)">1×</text>
-      {pts.map((p, i) => {
-        const yy = y(Math.max(p.v, 0)), h = Math.max(zero - yy, 2);
-        const last = i === pts.length - 1;
-        return (
-          <g key={p.x}>
-            <motion.rect x={left + i * bw + bw * 0.22} width={bw * 0.56} rx="5" fill={p.v >= 1 ? "url(#cr-ok)" : "url(#cr-low)"}
-              opacity={last ? 1 : 0.8} initial={{ y: zero, height: 0 }} animate={{ y: zero - h, height: h }}
-              transition={{ duration: 0.6, delay: i * 0.06, ease: [0.2, 0.8, 0.2, 1] }} />
-            <text x={left + i * bw + bw / 2} y={Math.max(11, zero - h - 6)} textAnchor="middle" fontSize="10" fontWeight={last ? 700 : 500}
-              fill={last ? "#ecefed" : "rgba(236,239,237,0.55)"}>{p.v.toFixed(1)}×</text>
-            <text x={left + i * bw + bw / 2} y="120" textAnchor="middle" fontSize="10" fill={last ? "rgba(236,239,237,0.9)" : "rgba(236,239,237,0.45)"}>{p.x}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
+  if (pts.length < 2) return null;
+  return <Peaks pts={pts} refLine={{ v: 1, label: "₹1 line" }} fmt={(v) => `₹${v.toFixed(2)}`} endLabels="values"
+    aria="Cash earned per rupee of profit, by year" height={140} />;
 }
 
 function Cash({ c, note }: { c: Json; note?: string }) {
@@ -618,14 +606,14 @@ function Cash({ c, note }: { c: Json; note?: string }) {
   const rows: Json[] = (c.years || []).slice(-6);
   return (
     <>
-      <Title meta="cash per ₹1 of profit">Cash quality</Title>
+      <Title meta="cash earned per ₹1 of profit">Cash quality</Title>
       <div className="glass card">
         {note && !c.lender && <div className="chart-note">{note}</div>}
         {!c.lender && (
           <CashRatio rows={rows} />
         )}
         <div className="small muted">{c.reading || c.note}</div>
-        {!c.lender && <div className="legend"><span><i className="dot-cash" />cash came in ≥ profit</span><span><i className="dot-short" />less cash than profit</span></div>}
+        {!c.lender && <div className="faint small" style={{ marginTop: 4 }}>Cash earned per ₹1 of profit, each year. Above the dashed line: profit fully backed by cash.</div>}
       </div>
     </>
   );

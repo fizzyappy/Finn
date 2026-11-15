@@ -158,7 +158,7 @@ export function Bars({ data, label, metric, fmt, lineName }: {
           <filter id="dot-glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="1.6" result="b" />
             <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
           <linearGradient id="mtn-fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="var(--mint)" stopOpacity="0.42" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.02" />
+            <stop offset="0" stopColor="var(--mint)" stopOpacity="0.55" /><stop offset="0.6" stopColor="var(--mint)" stopOpacity="0.16" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0" />
           </linearGradient>
         </defs>
         {[0.33, 0.66, 1].map((f) => (
@@ -170,7 +170,7 @@ export function Bars({ data, label, metric, fmt, lineName }: {
           const vp = data.map((d, i) => (d.y == null ? null : { i, x: left + i * bw + bw / 2, y: yOf(d.y) }))
             .filter((p): p is { i: number; x: number; y: number } => p != null);
           if (vp.length < 2) return null;
-          const top_ = smooth(vp.map((p) => [p.x, p.y] as [number, number]));
+          const top_ = vp.map((p, k) => `${k ? "L" : "M"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
           const fill = `${top_} L${vp[vp.length - 1].x},${base} L${vp[0].x},${base} Z`;
           const selP = vp.find((p) => p.i === sel);
           return (
@@ -181,7 +181,7 @@ export function Bars({ data, label, metric, fmt, lineName }: {
               {selP && <line x1={selP.x} x2={selP.x} y1={selP.y} y2={base} stroke="rgba(255,255,255,0.18)" strokeDasharray="2 3" />}
               {vp.map((p, k) => {
                 const hot = p.i >= data.length - 2;
-                const peak = (k === vp.length - 1 || p.y <= vp[k + 1].y) && (k === 0 ? false : p.y <= vp[k - 1].y) || k === vp.length - 1;
+                const peak = k === vp.length - 1 || (k > 0 && p.y <= vp[k - 1].y && p.y <= vp[k + 1].y);
                 return peak
                   ? <g key={p.i}><circle cx={p.x} cy={p.y} r="6" fill="rgba(255,255,255,0.18)" />
                       <circle cx={p.x} cy={p.y} r={p.i === sel ? 4 : 3.2} fill="#ffffff" filter="url(#dot-glow)" /></g>
@@ -253,57 +253,87 @@ export function Cite({ href, children }: { href?: string; children: React.ReactN
 }
 
 
-/** Mountain chart: the stock's % change as a filled area, the Nifty as a thin line, end values labelled. */
-export function Mountain({ points, name }: { points: { d: string; s: number; n: number }[]; name: string }) {
+/** Peak indices: points at least as high as every neighbour within `w` (not the ends). */
+export function peaksOf(v: number[], w: number) {
+  const out: number[] = [];
+  for (let i = 1; i < v.length - 1; i++) {
+    const win = v.slice(Math.max(0, i - w), i + w + 1);
+    if (v[i] >= Math.max(...win) && v[i] > Math.min(v[i - 1], v[i + 1])) out.push(i);
+  }
+  return out;
+}
+
+/** Mountain chart drawn from the real points with straight segments (no smoothing): a strong gradient
+ *  fill under the line, a small glowing white dot on every peak and a bigger one on the latest point.
+ *  Optional: a dashed comparison line (e.g. the Nifty), a dashed reference level (e.g. ₹1). */
+export function Peaks({ pts, color = "green", compare, refLine, fmt, endLabels, peakWindow = 1, aria, height = 150 }: {
+  pts: { x: string; v: number }[]; color?: "green" | "gold"; compare?: number[]; refLine?: { v: number; label: string };
+  fmt: (v: number) => string; endLabels?: "values" | "dates"; peakWindow?: number; aria: string; height?: number;
+}) {
   const reduce = useReducedMotion();
-  const W = 340, H = 150, top = 14, base = 120, left = 4, right = 64;
-  const all = points.flatMap((p) => [p.s, p.n]);
-  const lo = Math.min(...all, 0), hi = Math.max(...all, 0);
-  const pad = (hi - lo) * 0.08 || 1;
-  const y = (v: number) => top + (1 - (v - (lo - pad)) / (hi + pad - (lo - pad))) * (base - top);
-  const x = (i: number) => left + (i / (points.length - 1)) * (W - left - right);
-  const sPts = points.map((p, i) => [x(i), y(p.s)] as [number, number]);
-  const nPts = points.map((p, i) => [x(i), y(p.n)] as [number, number]);
-  const line = (pts: [number, number][]) => pts.map(([a, b], i) => `${i ? "L" : "M"}${a.toFixed(1)},${b.toFixed(1)}`).join(" ");
-  const sLine = line(sPts);
-  const area = `${sLine} L${sPts[sPts.length - 1][0]},${base} L${sPts[0][0]},${base} Z`;
-  const last = points[points.length - 1];
-  const lab = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
-  const fmt = (d: string) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-  const sy = y(last.s), ny = y(last.n);
-  const gap = Math.abs(sy - ny) < 14 ? (sy < ny ? -7 : 7) : 0;
+  const [sel, setSel] = useState<number | null>(null);
+  const id = useState(() => `pk${Math.random().toString(36).slice(2, 8)}`)[0];
+  if (pts.length < 2) return null;
+  const W = 340, H = height, top = 18, base = H - 26, left = 6, right = compare ? 70 : 10;
+  const vals = pts.map((p) => p.v).concat(compare || [], refLine ? [refLine.v] : []);
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = (hi - lo) * 0.1 || 1; lo -= pad; hi += pad;
+  const x = (i: number) => left + (i / (pts.length - 1)) * (W - left - right);
+  const y = (v: number) => top + (1 - (v - lo) / (hi - lo)) * (base - top);
+  const path = (vs: number[]) => vs.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const line = path(pts.map((p) => p.v));
+  const area = `${line} L${x(pts.length - 1)},${base} L${x(0)},${base} Z`;
+  const c = color === "gold" ? "#f5c86b" : "var(--mint)";
+  const peaks = peaksOf(pts.map((p) => p.v), peakWindow);
+  const last = pts.length - 1;
+  const show = sel ?? last;
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" className="chart"
-      aria-label={`${name} ${lab(last.s)} vs Nifty ${lab(last.n)} over the period`}>
-      <defs>
-        <filter id="dot-glow2" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="1.5" result="b" />
-          <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-        <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="var(--mint)" stopOpacity="0.38" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={left} x2={W - right} y1={top + f * (base - top)} y2={top + f * (base - top)} stroke="rgba(255,255,255,0.05)" strokeWidth="0.6" />)}
-      <line x1={left} x2={W - right} y1={y(0)} y2={y(0)} stroke="rgba(255,255,255,0.18)" strokeDasharray="2 4" />
-      <motion.path d={area} fill="url(#mtn)" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, delay: 0.4 }} />
-      <motion.path d={line(nPts)} fill="none" stroke="rgba(236,239,237,0.45)" strokeWidth="1.2"
-        initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
-      <motion.path d={sLine} fill="none" stroke="var(--mint)" strokeWidth="2" strokeLinejoin="round"
-        initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
-      {(() => {
-        // the three highest local peaks of the stock line, plus the end point
-        const pk = sPts.map((p, i) => ({ p, i })).filter(({ i }) => i > 2 && i < sPts.length - 3
-          && sPts[i][1] <= Math.min(...sPts.slice(i - 3, i + 4).map((q) => q[1])))
-          .sort((a, b) => a.p[1] - b.p[1]).slice(0, 3);
-        return pk.map(({ p, i }) => (
-          <g key={i}><circle cx={p[0]} cy={p[1]} r="5" fill="rgba(255,255,255,0.16)" /><circle cx={p[0]} cy={p[1]} r="2.6" fill="#fff" filter="url(#dot-glow2)" /></g>
-        ));
-      })()}
-      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="6" fill="rgba(255,255,255,0.18)" />
-      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="3.4" fill="#fff" filter="url(#dot-glow2)" />
-      <text x={W - right + 6} y={sy + 4 + gap} fontSize="11" fontWeight="700" fill={last.s >= 0 ? "var(--up)" : "#f29a9a"}>{lab(last.s)}</text>
-      <text x={W - right + 6} y={ny + 4 - gap} fontSize="10" fill="rgba(236,239,237,0.55)">Nifty {lab(last.n)}</text>
-      <text x={left} y={H - 8} fontSize="10" fill="rgba(236,239,237,0.45)">{fmt(points[0].d)}</text>
-      <text x={W - right} y={H - 8} fontSize="10" textAnchor="end" fill="rgba(236,239,237,0.45)">{fmt(last.d)}</text>
-    </svg>
+    <div>
+      <div className="peaks-read tnum"><b>{pts[show].x}</b> · {fmt(pts[show].v)}{compare ? <span className="faint"> · Nifty {fmt(compare[show])}</span> : null}</div>
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={aria} className="chart">
+        <defs>
+          <linearGradient id={`${id}-f`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor={c} stopOpacity="0.55" /><stop offset="0.6" stopColor={c} stopOpacity="0.16" /><stop offset="1" stopColor={c} stopOpacity="0" />
+          </linearGradient>
+          <filter id={`${id}-g`} x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="1.4" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        </defs>
+        {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={left} x2={W - right} y1={top + f * (base - top)} y2={top + f * (base - top)} stroke="rgba(255,255,255,0.05)" strokeWidth="0.6" />)}
+        <line x1={left} x2={W - right} y1={base} y2={base} stroke="rgba(255,255,255,0.12)" />
+        {refLine && <>
+          <line x1={left} x2={W - right} y1={y(refLine.v)} y2={y(refLine.v)} stroke="rgba(255,255,255,0.45)" strokeDasharray="4 4" />
+          <text x={x(Math.floor((pts.length - 1) / 2))} y={y(refLine.v) + 13} textAnchor="middle" fontSize="10" fill="rgba(236,239,237,0.7)">{refLine.label}</text>
+        </>}
+        <motion.path d={area} fill={`url(#${id}-f)`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} />
+        {compare && <motion.path d={path(compare)} fill="none" stroke="rgba(236,239,237,0.5)" strokeWidth="1.2" strokeDasharray="3 3"
+          initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />}
+        <motion.path d={line} fill="none" stroke={c} strokeWidth="1.8" strokeLinejoin="miter"
+          initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1, ease: [0.2, 0.8, 0.2, 1] }} />
+        {sel != null && <line x1={x(sel)} x2={x(sel)} y1={top} y2={base} stroke="rgba(255,255,255,0.2)" strokeDasharray="2 3" />}
+        {peaks.map((i) => (
+          <circle key={i} cx={x(i)} cy={y(pts[i].v)} r="2.2" fill="#fff" filter={`url(#${id}-g)`} opacity="0.95" />
+        ))}
+        <circle cx={x(last)} cy={y(pts[last].v)} r="7" fill="rgba(255,255,255,0.16)" />
+        <circle cx={x(last)} cy={y(pts[last].v)} r="3.8" fill="#fff" filter={`url(#${id}-g)`} />
+        {endLabels === "values" && <>
+          <text x={x(0)} y={Math.max(11, y(pts[0].v) - 8)} fontSize="10.5" fontWeight="600" fill="rgba(236,239,237,0.6)">{fmt(pts[0].v)}</text>
+          <text x={x(last)} y={Math.max(11, y(pts[last].v) - 10)} textAnchor="end" fontSize="10.5" fontWeight="700" fill="#ecefed">{fmt(pts[last].v)}</text>
+        </>}
+        {compare && (() => {
+          const sy = y(pts[last].v), ny = y(compare[last]);
+          const gap = Math.abs(sy - ny) < 14 ? (sy < ny ? -7 : 7) : 0;
+          return <>
+            <text x={W - right + 6} y={sy + 4 + gap} fontSize="11" fontWeight="700" fill={pts[last].v >= compare[last] ? "var(--up)" : "#f29a9a"}>{fmt(pts[last].v)}</text>
+            <text x={W - right + 6} y={ny + 4 - gap} fontSize="10" fill="rgba(236,239,237,0.55)">Nifty {fmt(compare[last])}</text>
+          </>;
+        })()}
+        <text x={x(0)} y={H - 8} fontSize="10" fill="rgba(236,239,237,0.45)">{pts[0].x}</text>
+        <text x={x(last)} y={H - 8} fontSize="10" textAnchor="end" fill="rgba(236,239,237,0.45)">{pts[last].x}</text>
+        {pts.map((_, i) => {
+          const w = (W - left - right) / (pts.length - 1);
+          return <rect key={i} x={x(i) - w / 2} y={0} width={w} height={H} fill="transparent" onClick={() => setSel(i === sel ? null : i)} />;
+        })}
+      </svg>
+    </div>
   );
 }
