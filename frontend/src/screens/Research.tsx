@@ -220,6 +220,20 @@ function JumpBar() {
   );
 }
 
+function Take({ t }: { t: Json }) {
+  return (
+    <motion.div className="glass card take" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 12 }}>
+      <div className="take-label">FINN's take</div>
+      <div className="take-line">
+        {t.parts.map((x: Json, i: number) => (
+          <span key={i}>{i > 0 && <span className="take-dot"> · </span>}<span className={`take-${x.tone}`}>{x.text}</span></span>
+        ))}
+      </div>
+      <div className="faint small" style={{ marginTop: 6 }}>Growth: 3-year average → latest quarter vs a year ago. Written by Python from the facts below.</div>
+    </motion.div>
+  );
+}
+
 function Company({ d, onBack }: { d: Json; onBack: () => void }) {
   const S = d.sections || {};
   const rc = S.report_card || {};
@@ -232,6 +246,7 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
         <div className="h1">{d.name}</div>
         <div className="faint small">{d.ticker}{S.snapshot?.price ? ` · ₹${fmtNum(S.snapshot.price, S.snapshot.price < 100 ? 1 : 0)}` : ""}{S.snapshot?.market_cap_cr ? ` · m-cap ${fmtCr(S.snapshot.market_cap_cr)}` : ""} · updated {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
       </div>
+      {S.take?.parts?.length > 0 && <Take t={S.take} />}
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}

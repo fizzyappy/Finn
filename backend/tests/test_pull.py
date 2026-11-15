@@ -315,3 +315,14 @@ def test_merger_flag_needs_per_share_dilution():
     merged = " ".join(f["text"] for f in fact_pool(tb(6.2), None, None))
     organic = " ".join(f["text"] for f in fact_pool(tb(25.0), None, None))
     assert "not like-for-like" in merged and "not like-for-like" not in organic
+
+
+def test_finns_take_is_built_from_facts():
+    from finn.pull.narrative import finns_take
+    q = [{"quarter_end": f"q{i}", "revenue": 100 + i, "pat": 10} for i in range(4)] + [{"quarter_end": "q4", "revenue": 110, "pat": 9}]
+    S = {"trajectory": {"cagr_pct": {"3y": {"revenue": 29.0, "eps": 25.0}}, "quarters": q, "annual": []},
+         "promise_ledger": {"counts": {"Kept": 3, "Missed": 3}, "promises": [{}] * 6},
+         "report_card": {"questions_dodged": "2 of 20"}, "balance_sheet": {}, "cash_quality": {}}
+    t = finns_take(S)["text"]
+    assert t.startswith("Kept 3 of 6 promises") and "growth slowing 29% → 10%" in t
+    assert "margins under pressure" in t and "dodged 2 of 20" in t

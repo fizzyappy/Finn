@@ -28,6 +28,7 @@ def main() -> None:
             print(t, "kept the previous bull/bear (model gave nothing usable)")
             continue
         S["facts"], S["bull_bear"] = facts, bb
+        S["take"] = narrative.finns_take(S)
         store().put("research", k, r, "pull engine")
         print(t, f"bull {len(bb['bull'])} bear {len(bb['bear'])} removed {len(bb['removed'])}")
 

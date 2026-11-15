@@ -55,7 +55,7 @@ def fact_pool(tables: dict, ledger: dict | None, dodged: list[dict] | None) -> l
     jump = revenue_jump(traj.get("annual") or []) if diluted else None
     if jump:
         add(f"3y revenue CAGR {c3['revenue']}% is not like-for-like: revenue jumped {jump[1]}% in the year to "
-            f"{jump[0][:7]} while EPS grew only {c3['eps']}% a year (likely a merger that issued shares)", "annual P&L", "bear")
+            f"{jump[0][:7]} while EPS grew only {c3['eps']}% a year (likely a merger or a large share issue)", "annual P&L", "bear")
     else:
         for n in ("3y", "5y"):
             c = cagr.get(n) or {}
@@ -217,3 +217,63 @@ def bull_bear(facts: list[dict], name: str) -> dict:
             else:
                 out[side].append({"text": b["text"].strip(), "cites": [{"id": c, **by_id[c]} for c in b["cites"] if c in by_id]})
     return out
+
+
+def finns_take(sections: dict) -> dict:
+    """One line at the top of a company page, written by Python from facts already verified on the page:
+    promises kept, growth trend, margins, a merger in the numbers, dodged questions, debt, cash."""
+    S = sections or {}
+    traj, bs, cq = S.get("trajectory") or {}, S.get("balance_sheet") or {}, S.get("cash_quality") or {}
+    led, rc = S.get("promise_ledger") or {}, S.get("report_card") or {}
+    parts: list[dict] = []          # {"text", "tone": good | bad | neutral}
+
+    c = led.get("counts") or {}
+    scored = (c.get("Kept") or 0) + (c.get("Partly") or 0) + (c.get("Missed") or 0)
+    if scored:
+        kept = c.get("Kept") or 0
+        parts.append({"text": f"Kept {kept} of {scored} promise{'s' if scored != 1 else ''}",
+                      "tone": "good" if kept / scored >= 0.6 else "bad" if kept / scored < 0.34 else "neutral"})
+    elif led.get("promises"):
+        n = len(led["promises"])
+        parts.append({"text": f"{n} target{'s' if n != 1 else ''} tracked, none due yet", "tone": "neutral"})
+
+    c3 = (traj.get("cagr_pct") or {}).get("3y") or {}
+    q = traj.get("quarters") or []
+    g = g2 = None
+    if len(q) >= 5 and q[-1].get("revenue") and q[-5].get("revenue"):
+        g = (q[-1]["revenue"] / q[-5]["revenue"] - 1) * 100
+        if q[-1].get("pat") and q[-5].get("pat") and q[-5]["pat"] > 0:
+            g2 = (q[-1]["pat"] / q[-5]["pat"] - 1) * 100
+    jump = revenue_jump(traj.get("annual") or []) if (c3.get("revenue") is not None and c3.get("eps") is not None
+                                                       and c3["revenue"] - c3["eps"] >= 10) else None
+    if jump:
+        parts.append({"text": f"3-year growth includes a one-off {jump[1]:.0f}% jump", "tone": "neutral"})
+    elif g is not None and c3.get("revenue") is not None and c3["revenue"] < 0 < g:
+        parts.append({"text": f"revenue rebounding (+{g:.0f}% YoY)", "tone": "good"})
+    elif g is not None and c3.get("revenue") is not None:
+        if g <= c3["revenue"] - 5:
+            parts.append({"text": f"growth slowing {c3['revenue']:.0f}% \u2192 {g:.0f}%", "tone": "bad"})
+        elif g >= c3["revenue"] + 5:
+            parts.append({"text": f"growth speeding up {c3['revenue']:.0f}% \u2192 {g:.0f}%", "tone": "good"})
+        else:
+            parts.append({"text": f"growth steady at ~{g:.0f}%", "tone": "neutral"})
+    if g is not None and g2 is not None:
+        if g2 <= g - 5:
+            parts.append({"text": "margins under pressure", "tone": "bad"})
+        elif g2 >= g + 5:
+            parts.append({"text": "margins widening", "tone": "good"})
+
+    dodged = rc.get("questions_dodged")
+    if dodged and not str(dodged).startswith("0 "):
+        parts.append({"text": f"dodged {dodged} analyst questions", "tone": "bad"})
+    if not cq.get("lender"):
+        de = bs.get("debt_to_equity")
+        if de is not None and de >= 1.5:
+            parts.append({"text": f"high debt (D/E {de:g})", "tone": "bad"})
+        r = cq.get("three_year_cfo_to_pat")
+        if r is not None and r < 0.7:
+            parts.append({"text": "profits not fully turning into cash", "tone": "bad"})
+        elif r is not None and r >= 1.1 and len(parts) < 4:
+            parts.append({"text": "profits backed by cash", "tone": "good"})
+    return {"parts": parts[:4], "text": " \u00b7 ".join(x["text"] for x in parts[:4]),
+            "note": "Written by Python from the verified facts on this page; no model involved."}
