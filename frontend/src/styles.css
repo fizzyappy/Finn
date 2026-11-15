@@ -439,3 +439,9 @@ a.ticker-chip:active { transform: scale(0.96); }
 /* "Filing" link matches the buttons next to it */
 .card-foot .cite { height: 30px; padding: 0 12px; font-size: 12.5px; gap: 5px; }
 .row-list .cite { height: 26px; padding: 0 10px; font-size: 12px; }
+
+/* alert strip: a touch brighter, with a small light dot on each alert day */
+.strip > div { position: relative; }
+.strip > div.fire { background: linear-gradient(180deg, #c2f5da, #7fe3b2); box-shadow: 0 0 6px rgba(127, 227, 178, 0.35); }
+.strip > div.fire::after { content: ""; position: absolute; left: 50%; top: -4px; width: 3px; height: 3px; margin-left: -1.5px;
+  border-radius: 50%; background: rgba(255, 255, 255, 0.92); box-shadow: 0 0 3px rgba(255, 255, 255, 0.6); }
