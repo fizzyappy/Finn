@@ -42,17 +42,6 @@ export default function Settings() {
       <h1 className="h1" style={{ margin: "6px 0 2px" }}>Settings</h1>
       <p className="small muted" style={{ margin: "0 0 12px" }}>Your portfolio, which announcements reach you, and what FINN costs to run.</p>
 
-      <div className="glass scorecard hero-glow">
-        <div className="small faint" style={{ textTransform: "uppercase", letterSpacing: ".09em", fontWeight: 600 }}>Cost meter</div>
-        <div style={{ marginTop: 8 }}><span className="bignum">$0.00</span> <span className="muted">spent on AI for this build</span></div>
-        <div className="grid">
-          <div className="stat"><div className="n">{fmtNum(calls)}</div><div className="l">AI calls</div></div>
-          <div className="stat"><div className="n">{hitPct}%</div><div className="l">answered from cache</div></div>
-          <div className="stat"><div className="n">{tokens > 1e6 ? `${(tokens / 1e6).toFixed(1)}M` : `${Math.round(tokens / 1000)}k`}</div><div className="l">tokens</div></div>
-        </div>
-        <p className="faint small" style={{ marginBottom: 0 }}>Gemini free tier. Every answer is cached by its exact input, so a filing is read once for everyone.</p>
-      </div>
-
       <div className="section-title"><h2>Your portfolio</h2><span className="meta">{holdings.length} holdings</span></div>
       <div className="glass card weights">
         {holdings.map((h) => (
@@ -95,15 +84,6 @@ export default function Settings() {
         ))}
       </div>
 
-      <details className="glass card dev" style={{ marginTop: 26 }}>
-        <summary className="small muted">Developer: research engine address</summary>
-        <label className="small muted" htmlFor="api" style={{ display: "block", marginTop: 10 }}>Used for companies outside the built-in data</label>
-        <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
-          <input id="api" className="field" placeholder="https://finn-api.example.com" value={base} onChange={(e) => setBase(e.target.value)} />
-          <button className="btn small" onClick={test}>Connect</button>
-        </div>
-        {status && <div className="small muted" style={{ marginTop: 8 }} role="status">{status}</div>}
-      </details>
 
       <div className="section-title"><h2>How FINN thinks</h2></div>
       <div className="glass card">
@@ -115,6 +95,25 @@ export default function Settings() {
         </ol>
         <p className="faint small" style={{ marginBottom: 0 }}>Primary sources only: exchange filings, transcripts and annual reports. FINN does not give investment advice.</p>
       </div>
+
+      <div className="section-title"><h2>What it costs to run</h2><span className="meta">AI usage</span></div>
+      <div className="glass card">
+        <div className="cost-line tnum">
+          <span><b>$0</b> spent</span><span><b>{fmtNum(calls)}</b> AI calls</span>
+          <span><b>{hitPct}%</b> from cache</span><span><b>{tokens > 1e6 ? `${(tokens / 1e6).toFixed(1)}M` : `${Math.round(tokens / 1000)}k`}</b> tokens</span>
+        </div>
+        <p className="faint small" style={{ marginBottom: 0 }}>Rules do most of the work; Gemini (free tier) is used only where rules can't, and every answer is cached by its exact input, so a filing is read once for everyone.</p>
+      </div>
+
+      <details className="glass card dev" style={{ marginTop: 26 }}>
+        <summary className="small muted">Developer: research engine address</summary>
+        <label className="small muted" htmlFor="api" style={{ display: "block", marginTop: 10 }}>Used for companies outside the built-in data</label>
+        <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
+          <input id="api" className="field" placeholder="https://finn-api.example.com" value={base} onChange={(e) => setBase(e.target.value)} />
+          <button className="btn small" onClick={test}>Connect</button>
+        </div>
+        {status && <div className="small muted" style={{ marginTop: 8 }} role="status">{status}</div>}
+      </details>
     </div>
   );
 }

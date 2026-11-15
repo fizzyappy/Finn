@@ -118,7 +118,7 @@ await shot(p, "11-research-LT-ledger-row-open", false);
 const askBox = p.getByLabel(/Ask a question about/);
 if (await askBox.count()) {
   await askBox.fill("Did they meet their FY26 revenue growth guidance?");
-  await p.getByRole("button", { name: "Ask", exact: true }).click();
+  await p.locator("form button[type=submit]").click();
   await p.locator("[data-testid=ask-answer]").waitFor({ timeout: 150000 }).catch(() => {});
   await p.locator("[data-testid=ask-answer]").scrollIntoViewIfNeeded().catch(() => {});
   await shot(p, "11b-research-ask", false);

@@ -351,3 +351,6 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 
 .splash-mark { position: relative; width: 132px; height: 132px; }
 .splash-bar { position: absolute; inset: 0; width: 132px; height: 132px; will-change: transform, opacity; }
+
+.cost-line { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--text-2); }
+.cost-line b { color: var(--text); font-weight: 600; }

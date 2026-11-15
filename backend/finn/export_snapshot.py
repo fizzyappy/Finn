@@ -21,6 +21,24 @@ RESEARCH_NAMES = ["ASIANPAINT", "TITAN", "HAL"]
 
 
 
+
+def _previous_meta() -> dict:
+    try:
+        return json.loads((OUT / "meta.json").read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def _merge_usage(now: dict, before: dict | None) -> dict:
+    """A fresh cloud runner starts with an empty usage log; the build's totals must not shrink to that run's."""
+    if not before:
+        return now
+    models = {}
+    for m in set(now.get("models", {})) | set(before.get("models", {})):
+        a, b = now.get("models", {}).get(m, {}), before.get("models", {}).get(m, {})
+        models[m] = {k: max(a.get(k) or 0, b.get(k) or 0) for k in set(a) | set(b)}
+    return {**now, "models": models}
+
 def index_extras(r: dict) -> dict:
     """What the research list shows besides the verdicts: how many targets are tracked,
     the earliest open one, and the date of the latest call."""
@@ -107,7 +125,7 @@ def main() -> None:
 
     midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
     usage_today = llm.usage(since=midnight.timestamp())
-    usage_all = llm.usage(since=0)
+    usage_all = _merge_usage(llm.usage(since=0), _previous_meta().get("llm_all_time"))
     meta = {
         "generated_at": now.isoformat(timespec="seconds"),
         "portfolio": {"name": p.name, "holdings": [{"symbol": s, "weight": w} for s, w in p.weights.items()],
