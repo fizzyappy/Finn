@@ -391,3 +391,12 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 .take-dot { color: var(--text-3); font-weight: 400; }
 
 .bars-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+
+.chart { overflow: visible; }
+.legend { display: flex; gap: 14px; margin-top: 6px; font-size: 11.5px; color: var(--text-3); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.legend .dot-pat { background: rgba(255,255,255,0.35); }
+.legend .dot-cash { background: var(--mint); }
+.strip > div { border-radius: 3px 3px 1px 1px; }
+.strip > div.fire { background: linear-gradient(180deg, #9fe6c3, var(--mint)); }

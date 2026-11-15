@@ -95,65 +95,132 @@ export function CountUp({ value, format }: { value: number; format: (v: number) 
 }
 
 /** Small bar chart (annual values) with an optional line overlay (margin %). */
+/** Short rupee label for chart tops: 1,83,341 -> "1.83L", 44,465 -> "44.5K". */
+const short = (v?: number | null) => v == null ? "–" : Math.abs(v) >= 1e5 ? `${(v / 1e5).toFixed(2)}L` : Math.abs(v) >= 1e3 ? `${(v / 1e3).toFixed(1)}K` : `${Math.round(v)}`;
+
+/** Smooth line through points (Catmull-Rom as cubic Béziers). */
+function smooth(pts: [number, number][]) {
+  if (pts.length < 2) return "";
+  let d = `M${pts[0][0]},${pts[0][1]}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${p2[0]},${p2[1]}`;
+  }
+  return d;
+}
+
 export function Bars({ data, label, metric, fmt, lineName }: {
   data: { x: string; y: number | null; line?: number | null }[]; label: string;
   metric?: string; fmt?: (v: number | null | undefined) => string; lineName?: string;
 }) {
+  const reduce = useReducedMotion();
   const [sel, setSel] = useState(data.length - 1);
-  const W = 340, H = 120, pad = 18;
   const cur = data[Math.min(sel, data.length - 1)];
-  const vals = data.map((d) => d.y ?? 0);
-  const max = Math.max(...vals, 1);
+  const W = 340, H = 168, top = 26, base = 140, left = 6, right = 6;
+  const plotH = base - top;
+  const max = Math.max(...data.map((d) => d.y ?? 0), 1) * 1.05;
+  const bw = (W - left - right) / data.length;
+  const yOf = (v: number) => base - (v / max) * plotH;
   const lines = data.map((d) => d.line).filter((v): v is number => v != null);
-  const lmin = Math.min(...lines, 0), lmax = Math.max(...lines, 1);
-  const bw = (W - pad * 2) / data.length;
+  const lmin = Math.min(...lines), lmax = Math.max(...lines);
+  const ly = (v: number) => top + 4 + (1 - (v - lmin) / (lmax - lmin || 1)) * plotH * 0.5;
+  const marks = data.map((d, i) => (d.line == null ? null : { i, x: left + i * bw + bw / 2, y: ly(d.line) }))
+    .filter((p): p is { i: number; x: number; y: number } => p != null);
+  const pts = marks.map((m) => [m.x, m.y] as [number, number]);
+  const linePath = smooth(pts);
+  const area = pts.length > 1 ? `${linePath} L${pts[pts.length - 1][0]},${base} L${pts[0][0]},${base} Z` : "";
   return (
     <div>
-    {metric && (
-      <div className="bars-head tnum">
-        <span className="faint small">{metric}</span>
-        <span className="small"><b>{cur?.x}</b> · {fmt ? fmt(cur?.y) : cur?.y}{lineName && cur?.line != null ? ` · ${lineName} ${cur.line.toFixed(1)}%` : ""}</span>
-      </div>
-    )}
-    <svg viewBox={`0 0 ${W} ${H + 18}`} width="100%" role="img" aria-label={label}>
-      {data.map((d, i) => {
-        const h = ((d.y ?? 0) / max) * H * 0.85;
-        return (
-          <g key={d.x} onClick={() => setSel(i)} style={{ cursor: "pointer" }}>
-            <rect x={pad + i * bw} y={0} width={bw} height={H + 18} fill="transparent" />
-            <rect x={pad + i * bw + bw * 0.18} y={H - h} width={bw * 0.64} height={Math.max(h, 1)} rx="4"
-              fill={i === sel ? "var(--mint)" : "rgba(102, 209, 158,0.28)"} />
-            <text x={pad + i * bw + bw / 2} y={H + 14} textAnchor="middle" fontSize="10"
-              fill={i === sel ? "rgba(236,239,237,0.9)" : "rgba(236,239,237,0.42)"}>{d.x}</text>
-          </g>
-        );
-      })}
-      {lines.length > 1 && (
-        <polyline fill="none" stroke="#f5c86b" strokeWidth="2" strokeLinejoin="round"
-          points={data.map((d, i) => d.line == null ? "" : `${pad + i * bw + bw / 2},${H - ((d.line - lmin) / (lmax - lmin || 1)) * H * 0.8 - 8}`).filter(Boolean).join(" ")} />
+      {metric && (
+        <div className="bars-head tnum">
+          <span className="faint small">{metric}</span>
+          <span className="small"><b>{cur?.x}</b> · {fmt ? fmt(cur?.y) : cur?.y}{lineName && cur?.line != null ? ` · ${lineName} ${cur.line.toFixed(1)}%` : ""}</span>
+        </div>
       )}
-    </svg>
-    {metric && <div className="faint small" style={{ textAlign: "center", marginTop: 2 }}>Tap a bar to see its numbers</div>}
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={label} className="chart">
+        <defs>
+          <linearGradient id="bar-on" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#9fe6c3" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.55" />
+          </linearGradient>
+          <linearGradient id="bar-off" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--mint)" stopOpacity="0.42" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.06" />
+          </linearGradient>
+          <linearGradient id="line-area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#f5c86b" stopOpacity="0.12" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0" />
+          </linearGradient>
+          <clipPath id="plot"><rect x="0" y="0" width={W} height={base} /></clipPath>
+        </defs>
+        {[0.33, 0.66, 1].map((f) => (
+          <line key={f} x1={left} x2={W - right} y1={base - f * plotH} y2={base - f * plotH} stroke="rgba(255,255,255,0.06)" strokeDasharray="2 4" />
+        ))}
+        <line x1={left} x2={W - right} y1={base} y2={base} stroke="rgba(255,255,255,0.14)" />
+        <g clipPath="url(#plot)">
+          {data.map((d, i) => {
+            const h = base - yOf(d.y ?? 0);
+            const x = left + i * bw + bw * 0.2, w = bw * 0.6;
+            return (
+              <g key={d.x} onClick={() => setSel(i)} style={{ cursor: "pointer" }}>
+                {i === sel && <rect x={left + i * bw + 2} y={top - 6} width={bw - 4} height={base - top + 6} rx="8" fill="rgba(255,255,255,0.035)" />}
+                <motion.rect x={x} width={w} rx={Math.min(7, w / 2)}
+                  initial={reduce ? false : { y: base, height: 0 }} animate={{ y: base - h, height: h + 8 }}
+                  transition={{ duration: 0.6, delay: reduce ? 0 : i * 0.05, ease: [0.2, 0.8, 0.2, 1] }}
+                  fill={i === sel ? "url(#bar-on)" : "url(#bar-off)"} />
+                <rect x={left + i * bw} y={0} width={bw} height={H} fill="transparent" />
+              </g>
+            );
+          })}
+        </g>
+        {area && <path d={area} fill="url(#line-area)" pointerEvents="none" />}
+        {linePath && (
+          <motion.path d={linePath} fill="none" stroke="#f5c86b" strokeWidth="2.2" strokeLinecap="round" pointerEvents="none"
+            initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.9, delay: 0.2 }} />
+        )}
+        {marks.map((m) => (
+          <circle key={m.i} cx={m.x} cy={m.y} r={m.i === sel ? 4.5 : 2.6} fill={m.i === sel ? "#f5c86b" : "#0b0c0c"}
+            stroke="#f5c86b" strokeWidth="1.6" pointerEvents="none" />
+        ))}
+        {cur?.y != null && (
+          <text x={left + sel * bw + bw / 2} y={Math.max(12, yOf(cur.y) - 8)} textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#e9f7ef">
+            {short(cur.y)}
+          </text>
+        )}
+        {data.map((d, i) => (
+          <text key={d.x} x={left + i * bw + bw / 2} y={base + 18} textAnchor="middle" fontSize="10"
+            fontWeight={i === sel ? 700 : 500} fill={i === sel ? "rgba(236,239,237,0.95)" : "rgba(236,239,237,0.42)"}>{d.x}</text>
+        ))}
+      </svg>
+      {metric && <div className="faint small" style={{ textAlign: "center", marginTop: 2 }}>Tap a bar to see its numbers</div>}
     </div>
   );
 }
 
 /** Target band vs actual: where the actual landed relative to the promised range. */
 export function BandChart({ low, high, actual, unit }: { low: number | null; high: number | null; actual: number | null; unit: string }) {
+  const reduce = useReducedMotion();
   const lo = low ?? high ?? 0, hi = high ?? low ?? 0;
   const vals = [lo, hi, actual ?? lo];
   const min = Math.min(...vals) - Math.max(2, Math.abs(hi - lo)), max = Math.max(...vals) + Math.max(2, Math.abs(hi - lo));
-  const x = (v: number) => 12 + ((v - min) / (max - min)) * 296;
+  const x = (v: number) => 14 + ((v - min) / (max - min)) * 292;
+  const hit = actual != null && actual >= Math.min(lo, hi) - 0.5;
+  const col = actual == null ? "#ecefed" : hit ? "var(--up)" : "#f29a9a";
   return (
-    <svg viewBox="0 0 320 52" width="100%" role="img" aria-label={`target ${lo} to ${hi}${unit}, actual ${actual ?? "not yet"}${unit}`}>
-      <line x1="12" x2="308" y1="26" y2="26" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
-      <rect x={x(lo)} y="18" width={Math.max(x(hi) - x(lo), 4)} height="16" rx="8" fill="rgba(102, 209, 158,0.22)" stroke="rgba(102, 209, 158,0.6)" />
-      <text x={(x(lo) + x(hi)) / 2} y="13" textAnchor="middle" fontSize="10" fill="rgba(234,245,238,0.6)">target {lo === hi ? lo : `${lo}–${hi}`}{unit}</text>
+    <svg viewBox="0 0 320 60" width="100%" role="img" aria-label={`target ${lo} to ${hi}${unit}, actual ${actual ?? "not yet"}${unit}`} className="chart">
+      <defs>
+        <linearGradient id="band-fill" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="var(--mint)" stopOpacity="0.18" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.38" />
+        </linearGradient>
+      </defs>
+      <rect x="14" y="27" width="292" height="6" rx="3" fill="rgba(255,255,255,0.07)" />
+      <rect x={x(lo)} y="20" width={Math.max(x(hi) - x(lo), 6)} height="20" rx="10" fill="url(#band-fill)" stroke="rgba(102, 209, 158,0.55)" />
+      <text x={(x(lo) + x(hi)) / 2} y="13" textAnchor="middle" fontSize="10" fill="rgba(236,239,237,0.62)">target {lo === hi ? lo : `${lo}–${hi}`}{unit}</text>
       {actual != null && (
-        <g>
-          <circle cx={x(actual)} cy="26" r="6" fill="#eaf5ee" />
-          <text x={x(actual)} y="48" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#eaf5ee">actual {actual}{unit}</text>
-        </g>
+        <motion.g initial={reduce ? false : { x: x(min) - x(actual), opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}>
+          <circle cx={x(actual)} cy="30" r="10" fill={col} opacity="0.18" />
+          <circle cx={x(actual)} cy="30" r="5.5" fill={col} stroke="#0b0c0c" strokeWidth="2" />
+          <text x={x(actual)} y="55" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={col}>actual {actual}{unit}</text>
+        </motion.g>
       )}
     </svg>
   );

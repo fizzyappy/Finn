@@ -569,23 +569,31 @@ function Cash({ c }: { c: Json }) {
       <Title meta="operating cash vs profit">Cash quality</Title>
       <div className="glass card">
         {!c.lender && (
-          <svg viewBox="0 0 340 110" width="100%" role="img" aria-label="Operating cash flow compared with profit by year">
+          <svg viewBox="0 0 340 122" width="100%" role="img" aria-label="Operating cash flow compared with profit by year" className="chart">
+            <defs>
+              <linearGradient id="cash-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#9fe6c3" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.35" /></linearGradient>
+              <linearGradient id="pat-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="rgba(255,255,255,0.42)" /><stop offset="1" stopColor="rgba(255,255,255,0.08)" /></linearGradient>
+            </defs>
+            {[0.5, 1].map((f) => <line key={f} x1="14" x2="326" y1={96 - f * 78} y2={96 - f * 78} stroke="rgba(255,255,255,0.06)" strokeDasharray="2 4" />)}
+            <line x1="14" x2="326" y1="96" y2="96" stroke="rgba(255,255,255,0.14)" />
             {rows.map((r, i) => {
               const max = Math.max(...rows.flatMap((x) => [x.cfo || 0, x.pat || 0]), 1);
-              const bw = 300 / rows.length, x0 = 20 + i * bw;
-              const h1 = ((r.pat || 0) / max) * 80, h2 = ((r.cfo || 0) / max) * 80;
+              const bw = 312 / rows.length, x0 = 14 + i * bw;
+              const h1 = Math.max(((r.pat || 0) / max) * 78, 1), h2 = Math.max(((r.cfo || 0) / max) * 78, 1);
               return (
                 <g key={r.year_end}>
-                  <rect x={x0 + bw * 0.15} y={90 - h1} width={bw * 0.32} height={Math.max(h1, 1)} rx="3" fill="rgba(255,255,255,0.25)" />
-                  <rect x={x0 + bw * 0.5} y={90 - h2} width={bw * 0.32} height={Math.max(h2, 1)} rx="3" fill="var(--mint)" />
-                  <text x={x0 + bw / 2} y="104" textAnchor="middle" fontSize="10" fill="rgba(234,245,238,0.42)">FY{r.year_end.slice(2, 4)}</text>
+                  <motion.rect x={x0 + bw * 0.14} width={bw * 0.32} rx="4" fill="url(#pat-g)"
+                    initial={{ y: 96, height: 0 }} animate={{ y: 96 - h1, height: h1 }} transition={{ duration: 0.6, delay: i * 0.05 }} />
+                  <motion.rect x={x0 + bw * 0.52} width={bw * 0.32} rx="4" fill="url(#cash-g)"
+                    initial={{ y: 96, height: 0 }} animate={{ y: 96 - h2, height: h2 }} transition={{ duration: 0.6, delay: 0.1 + i * 0.05 }} />
+                  <text x={x0 + bw / 2} y="114" textAnchor="middle" fontSize="10" fill="rgba(236,239,237,0.45)">FY{r.year_end.slice(2, 4)}</text>
                 </g>
               );
             })}
           </svg>
         )}
         <div className="small muted">{c.reading || c.note}</div>
-        {!c.lender && <div className="faint small" style={{ marginTop: 4 }}>grey = profit · mint = operating cash flow</div>}
+        {!c.lender && <div className="legend"><span><i className="dot-pat" />profit</span><span><i className="dot-cash" />operating cash flow</span></div>}
       </div>
     </>
   );
