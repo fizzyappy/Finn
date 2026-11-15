@@ -1,7 +1,7 @@
 # Part 1 · Research, analysis and the plan
 
 This series explains how FINN was built: the thinking behind each decision, how I worked with AI to execute it,
-what testing showed was missing, and how we closed each gap. FINN's logo, the slanted "F", is my own design.
+what testing showed was missing, and how we closed each gap. FINN's logo, the slanted "F", is my own design: drawn by hand, then refined with AI in Illustrator.
 
 - Part 1 · Research, analysis and the plan (this file)
 - [Part 2 · Data pipes and the push brief](02-data-and-brief.md)
@@ -13,10 +13,11 @@ what testing showed was missing, and how we closed each gap. FINN's logo, the sl
 
 ## 1.1 Where this started: our own analysis and prototype
 
-FINN did not start from a blank page. Before this build, I had already done the problem analysis in earlier
-working sessions with AI and turned it into a hypothetical prototype: a written analysis of the challenge, a
-category taxonomy for exchange filings, a scoring idea for ranking them, and first versions of a classifier, a
-push digest and a research engine.
+FINN did not start from a blank page. Before this build, I ran the problem analysis in earlier sessions: I had
+Claude work through the challenge, and I ran several separate analyses with Gemini to test the ideas from another
+angle. From that work I had Claude turn the analysis into a hypothetical prototype: a written analysis of the
+challenge, a category taxonomy for exchange filings, a scoring idea for ranking them, and first versions of a
+classifier, a push digest and a research engine.
 
 That prototype was the starting asset, and it was also the first thing I asked the AI to judge honestly. The
 review found three things:
@@ -86,6 +87,9 @@ Two more rules governed how I worked with the AI itself:
   logged and never committed, and every commit was scanned for it before it went out.
 
 ## 1.4 Choosing the tools
+
+**My setup.** I installed Claude Code with additional skills and plugins for the build, including ponytail, so
+the agent had the right tools for the job before it started.
 
 **Claude Code as the engineer.** I used Claude Code running on my Windows PC, inside the project folder, as the
 engineering agent. It planned in tasks, wrote and ran code, ran tests and headless browser checks, made git

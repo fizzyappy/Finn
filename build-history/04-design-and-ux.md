@@ -4,7 +4,7 @@
 
 The engine could be perfect and still fail if the app felt like a dashboard of numbers. This part explains how
 the interface was designed, how I directed it through repeated review on my phone, and the reasoning behind each
-change. FINN's logo and identity are my own design.
+change. FINN's logo and identity are my own design, and the app's colours come from the logo.
 
 ---
 
@@ -41,9 +41,23 @@ The rest of this part follows the main decisions that came out of those loops.
 
 ## 4.4 Identity: logo, wordmark and opening
 
-**The logo.** I designed FINN's mark: a slanted "F" built from two bars, suggesting forward motion. The AI redrew
-it as a vector so it stays sharp at every size, generated the app icons from it, and gave the logo files new names
-so phones that had cached the old icon would load the new one.
+**The logo.** I drew the F by hand first, then refined it with AI in Illustrator. Every part of it carries an idea.
+
+- *The upper arm* is long and extended. It stands for everything an investor is exposed to: announcements, annual
+  reports, earnings calls, market moves, management guidance. It is the breadth of what comes into FINN.
+- *The middle arm* is shorter on purpose. FINN does not pass on everything it receives; it narrows it down to what
+  deserves attention. Read the two arms together and they are also the core comparison FINN makes: the upper arm is
+  what management said, the middle arm is what the numbers show.
+- *The gap between them* keeps the F from looking like two decorative ribbons. It is the line between information
+  that exists and information that deserves your time, which is the problem FINN solves.
+- *The slant* is a style choice first. It also gives a horizontal letter forward motion, and FINN watches what
+  changes rather than storing the past. The curves make the letter one continuous form, like raw information being
+  turned into something useful. No angle stands for a calculation.
+- *The colours:* mint green for clarity and the signals that matter, a darker green for depth, a lighter top surface
+  for incoming information, a soft inner shadow for separation, and a deep forest background for seriousness.
+
+The app's colour scheme comes straight from the logo. The AI redrew the mark as a vector so it stays sharp at every
+size, built the app icons from it, and renamed the files so phones holding an old cached icon would load the new one.
 
 **The wordmark.** I asked for the "FINN" letters to be thinner; they were set in a lighter weight with wider
 spacing, which reads as calmer and more premium.
