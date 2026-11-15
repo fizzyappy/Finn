@@ -82,6 +82,23 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
       .then((pairs) => setBriefs(Object.fromEntries(pairs)))
       .catch((e) => setErr(String(e)));
   }, []);
+  // Portfolio pulse: each holding's last 5 trading days against the Nifty's.
+  const [pulse, setPulse] = useState<{ up: number; down: number; top: string; topRet: number } | null>(null);
+  useEffect(() => {
+    snapshot("alert_series.json").then((d) => {
+      const rows = Object.entries<Json[]>(d.series || {});
+      const cum = (xs: number[]) => (xs.reduce((a, r) => a * (1 + r / 100), 1) - 1) * 100;
+      let up = 0, down = 0, top = "", topRet = 0;
+      for (const [sym, r] of rows) {
+        const last = r.slice(-5);
+        if (last.length < 5) continue;
+        const own = cum(last.map((x) => x[1])), mkt = cum(last.map((x) => x[2] ?? 0));
+        if (own >= mkt) up++; else down++;
+        if (Math.abs(own) > Math.abs(topRet)) { top = sym; topRet = own; }
+      }
+      if (up + down) setPulse({ up, down, top, topRet });
+    }).catch(() => setPulse(null));
+  }, []);
   useEffect(() => { prefs.setCleared(cleared); }, [cleared]);
   useEffect(() => { prefs.setTune(tune); }, [tune]);
   useEffect(() => { if (!toast) return; const t = setTimeout(() => setToast(null), 2400); return () => clearTimeout(t); }, [toast]);
@@ -184,6 +201,14 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
         </div>
       )}
 
+      {pulse && (
+        <div className="pulse tnum">
+          <span><b className="up">{pulse.up} ahead</b>, <b className="down">{pulse.down} behind</b> the Nifty this week</span>
+          <span className="faint"> · biggest move </span>
+          <a className="sym-link inline" href={`#research/${pulse.top}`}>{pulse.top}</a>
+          <b className={pulse.topRet >= 0 ? "up" : "down"}> {pulse.topRet >= 0 ? "+" : ""}{pulse.topRet.toFixed(0)}%</b>
+        </div>
+      )}
       <div className="chips" role="toolbar" aria-label="Time window">
         {shownWindows.map((w) => (
           <button key={w.key} className="chip" aria-pressed={w.key === win}
