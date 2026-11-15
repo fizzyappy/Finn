@@ -308,11 +308,11 @@ function AskBox({ ticker, name, d }: { ticker: string; name: string; d?: Json })
       <Title meta="sourced answers" id="ask">Ask about {short}</Title>
       <div className="glass card">
         <form onSubmit={(e) => { e.preventDefault(); ask(q); }} style={{ display: "flex", gap: 8 }}>
-          <input className="field" aria-label={`Ask a question about ${short}`} placeholder="e.g. Did they meet their margin target?"
+          <input className="field" aria-label={`Ask a question about ${short}`} placeholder="Ask about this company…"
             value={q} onChange={(e) => setQ(e.target.value)} maxLength={300} />
-          <button className="btn small" type="submit" disabled={!!busy || q.trim().length < 4}>Ask</button>
+          <button className="btn ask-btn" type="submit" disabled={!!busy || q.trim().length < 4}>Ask</button>
         </form>
-        <div className="chips" style={{ marginTop: 8 }}>
+        <div className="chips wrap" style={{ marginTop: 10 }}>
           {examples.map((x) => <button key={x} className="chip" style={{ height: 30, fontSize: 12.5 }} onClick={() => { setQ(x); ask(x); }}>{x}</button>)}
         </div>
         {busy && <div className="small muted" style={{ marginTop: 10 }} aria-live="polite">{busy}</div>}

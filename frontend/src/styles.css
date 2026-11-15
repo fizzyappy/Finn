@@ -457,3 +457,6 @@ a.ticker-chip:active { transform: scale(0.96); }
 /* toggle: colour fades with the slide instead of snapping */
 .seg button { transition: color .25s ease; }
 .seg-thumb { transition: background .28s ease, box-shadow .28s ease; }
+
+.ask-btn { height: 44px; min-width: 76px; padding: 0 20px; font-size: 15px; flex: none; }
+.ask-btn:disabled { opacity: 0.8; }
