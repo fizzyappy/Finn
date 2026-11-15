@@ -47,7 +47,7 @@ export default function Settings() {
       <div className="glass card weights">
         {holdings.map((h) => (
           <div className="w-row" key={h.symbol}>
-            <b>{h.symbol}</b>
+            <a className="sym-link" href={`#research/${h.symbol}`}>{h.symbol}</a>
             <div className="bar"><div style={{ width: `${(h.weight / 0.1) * 100}%` }} /></div>
             <span className="tnum muted" style={{ textAlign: "right" }}>{(h.weight * 100).toFixed(1)}%</span>
           </div>

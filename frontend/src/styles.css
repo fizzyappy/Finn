@@ -411,3 +411,8 @@ button:active, .chip:active, .why-btn:active, .btn:active { transform: scale(0.9
 .quiet-line::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--text-3); }
 
 .done-btn { color: var(--mint-2); border-color: rgba(102, 209, 158, 0.4); background: rgba(102, 209, 158, 0.08); }
+
+a.ticker-chip { text-decoration: none; }
+a.ticker-chip:active { transform: scale(0.96); }
+.sym-link { color: var(--text); font-weight: 700; text-decoration: none; display: block; }
+.sym-link:hover, a.ticker-chip:hover { text-decoration: underline; text-underline-offset: 3px; }

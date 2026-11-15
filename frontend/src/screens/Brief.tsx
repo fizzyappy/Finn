@@ -239,7 +239,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
             {ranked.one.map((e) => (
               <div className="row" key={id(e)}>
                 <div className="grow">
-                  <div className="sym-line"><span className="ticker-chip sm">{e.symbol}</span></div>
+                  <div className="sym-line"><a className="ticker-chip sm" href={`#research/${e.symbol}`} onClick={(ev) => ev.stopPropagation()} onPointerDown={(ev) => ev.stopPropagation()}>{e.symbol}</a></div>
                   <div className="title">{tidy(e.summary?.headline || e.subject)}</div>
                   {e.summary?.one_liner && !sameText(e.summary.one_liner, e.summary.headline) && <div className="desc">{tidy(e.summary.one_liner)}</div>}
                   <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
@@ -262,7 +262,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
               <div className="row" key={a.symbol + a.date}>
                 <div className="grow">
                   <div className="title tnum">
-                    <span className="ticker-chip sm">{a.symbol}</span> <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span>
+                    <a className="ticker-chip sm" href={`#research/${a.symbol}`} onClick={(ev) => ev.stopPropagation()} onPointerDown={(ev) => ev.stopPropagation()}>{a.symbol}</a> <span className={a.measures.ret_pct > 0 ? "up" : "down"}>{a.measures.ret_pct > 0 ? "+" : ""}{a.measures.ret_pct}%</span>
                     <span className="faint small"> · {fmtDay(a.date)}</span>
                   </div>
                   <div className="desc">A move {Math.abs(a.measures.z).toFixed(1)}× its usual daily move (Nifty {a.measures.mkt_ret_pct > 0 ? "+" : ""}{a.measures.mkt_ret_pct}%), on {Number(a.measures.vol_x).toFixed(1)}× its usual volume</div>
@@ -288,7 +288,7 @@ export default function Brief({ onOpenResearch }: { onOpenResearch: (t: string) 
                 <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} style={{ overflow: "hidden" }}>
                   {c.items.slice(0, 12).map((it: Json, i: number) => (
                     <div key={i} className="small" style={{ padding: "6px 16px", color: "var(--text-2)", display: "flex", gap: 8 }}>
-                      <b style={{ color: "var(--text)", minWidth: 74 }}>{it.symbol}</b>
+                      <a className="sym-link" style={{ minWidth: 74 }} href={`#research/${it.symbol}`}>{it.symbol}</a>
                       <span style={{ flex: 1 }}>{cleanTitle(it.title)}</span>
                       <span className="faint">{fmtWhen(it.ts)}</span>
                     </div>
