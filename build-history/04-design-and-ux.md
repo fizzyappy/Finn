@@ -1,200 +1,622 @@
-# Part 4 · App design and user experience
+# Part 4: Designing the app and the user experience
 
-[← Part 3](03-research-engine.md) · [Part 5 →](05-deploy-and-polish.md)
+This part is about how FINN looks, moves and feels, and every round of
+back-and-forth it took to get there. Almost all of it happened the same way: I
+opened the app on my phone, something felt off, I took a screenshot and said
+what bothered me in plain words. Claude turned that into a specific change, and
+I looked again.
 
-The engine could be perfect and still fail if the app felt like a dashboard of numbers. This part explains how
-the interface was designed, how I directed it through repeated review on my phone, and the reasoning behind each
-change. FINN's logo and identity are my own design, and the app's colours come from the logo.
-
----
-
-## 4.1 Design principles
-
-Before any screen was drawn, the design goals were set from the same analysis as the engine:
-
-- **Phone first.** An investor checks their portfolio on a phone, in a minute, between other things. Every screen
-  is designed for one hand and a small screen, and the app installs to the home screen like a native app.
-- **Calm, not alarming.** Most days nothing important happens. The app should say so confidently instead of
-  filling the screen to look busy.
-- **Every element answers "so what?".** If a number or a card does not help the investor decide whether to pay
-  attention, it does not belong on the screen.
-- **Trust must be visible.** Verified badges that open into their checks, "Why?" on every card, quotes with page
-  links, and plain statements when something is not known.
-- **Premium means restraint.** Clean spacing, few colours, consistent formats, smooth motion, nothing flashy.
-
-## 4.2 The four screens
-
-- **Brief:** what your holdings filed, ranked by how much it matters.
-- **Research:** does management keep its word, with the quote and page.
-- **Alerts:** price moves that are unusual for that stock, tested on 90 days of history.
-- **Settings:** your portfolio, which announcement types reach you, and what FINN costs to run.
-
-## 4.3 How the design process worked
-
-The design was shaped in short loops. I opened every new version on my phone, used it as an investor would, and
-told the AI exactly what felt wrong: crowded, clumsy, tacky, too bulky, hard to navigate, not premium, too bouncy,
-not clickable. The AI translated each reaction into a specific design change, implemented it, re-ran the
-automated checks on every screen, and sent me a screenshot. Nothing shipped until it passed both my review and the
-automated checks (no console errors, no accessibility problems, no contrast failures, no horizontal overflow).
-
-The rest of this part follows the main decisions that came out of those loops.
-
-## 4.4 Identity: logo, wordmark and opening
-
-**The logo.** I drew the F by hand first, then refined it with AI in Illustrator. Every part of it carries an idea.
-
-- *The upper arm* is long and extended. It stands for everything an investor is exposed to: announcements, annual
-  reports, earnings calls, market moves, management guidance. It is the breadth of what comes into FINN.
-- *The middle arm* is shorter on purpose. FINN does not pass on everything it receives; it narrows it down to what
-  deserves attention. Read the two arms together and they are also the core comparison FINN makes: the upper arm is
-  what management said, the middle arm is what the numbers show.
-- *The gap between them* keeps the F from looking like two decorative ribbons. It is the line between information
-  that exists and information that deserves your time, which is the problem FINN solves.
-- *The slant* is a style choice first. It also gives a horizontal letter forward motion, and FINN watches what
-  changes rather than storing the past. The curves make the letter one continuous form, like raw information being
-  turned into something useful. No angle stands for a calculation.
-- *The colours:* mint green for clarity and the signals that matter, a darker green for depth, a lighter top surface
-  for incoming information, a soft inner shadow for separation, and a deep forest background for seriousness.
-
-The app's colour scheme comes straight from the logo. The AI redrew the mark as a vector so it stays sharp at every
-size, built the app icons from it, and renamed the files so phones holding an old cached icon would load the new one.
-
-**The wordmark.** I asked for the "FINN" letters to be thinner; they were set in a lighter weight with wider
-spacing, which reads as calmer and more premium.
-
-**The opening animation.** I wanted the logo to form when the app opens, for two to three seconds. The F's two
-bars slide in one after the other, then the wordmark and a short tagline appear, and everything fades into the
-app. It plays once per visit and can be skipped with a tap.
-
-When it flickered on my iPhone, the AI looked for the real cause rather than adjusting timings. There were three:
-the app was loading underneath the animation, and an animated layer over blurred glass panels flickers in iPhone
-Safari; the font swapped partway through; and Safari moves parts inside an SVG unreliably. The fix was structural:
-the animation now plays on its own, waits for the fonts, moves each bar as its own element, and only then does
-the app fade in.
-
-## 4.5 Colour
-
-The first theme used a bright mint green on a green-tinted dark background. On review, I felt the neon green looked
-tacky, and that good apps use a plain background. The AI agreed with the reasoning: in finance, green carries
-meaning (gains, good news), and when everything is green, real gains stop standing out.
-
-The result:
-
-- a plain near-black background, with only a faint tint near the logo;
-- one calmer sage-mint accent instead of neon, used for the main action, selection and good news;
-- a softer red for falling numbers;
-- gold for margins and secondary lines.
-
-At one point a review recommended removing most of the colour and glow entirely. When I saw it, the app had lost
-the look I liked, so I asked for the original look back with the new content kept. That back-and-forth is part of
-the process: the review informed the decision, but the final look was my call.
-
-## 4.6 The Brief screen
-
-**The empty-screen problem.** On a quiet day the first version opened on "0 filings · 0 matter", which is the
-worst possible first impression for a product whose promise is "we show you what matters". It went through
-several versions:
-
-1. A big "quiet" card, which was calm but empty.
-2. Falling forward to the shortest time window that has something, which worked but put zeros next to cards.
-3. The final design: a slim "Today: nothing new" line under the title, then a clearly labelled "Earlier this
-   week" section with the week's cards.
-
-**The header.** I found the first header clumsy (a two-line title, a sub-line, a tip box and a large button
-stacked together), so it was rebuilt: a progress ring showing how many cards are left to clear, a short title, a
-thin filter funnel ("20 filings → 3 worth knowing → 1 need you") and a one-line portfolio pulse (how many holdings
-beat the Nifty this week, and the biggest move).
-
-**Time windows.** Since last look, 24 hours, 3 days, 7 days and a custom date range. Windows with nothing that
-needs attention are hidden, so the chips are never a list of empty options. The custom picker was rebuilt so the
-date boxes fit the card on a phone and dates read as "1 Nov 2026".
-
-**Cards.** Each card shows the company in a highlighted chip (tap it to open the company's research), how large
-the holding is ("your 6% holding"), the market's reaction, the filing link, Why? and a visible Done button.
-Swiping right still clears a card; swiping left means "less like this". Verified results are pinned in their own
-"Latest results" section so they are never hidden behind a time window. Results that cannot be verified say so
-in the headline.
-
-**Removed: reading the brief aloud.** The app once read the important cards aloud using the phone's built-in
-voice. I found it mechanical and over-engineered, so it was removed. Not every feature earns its place.
-
-## 4.7 The Research screen
-
-- **The landing page** lists "Your holdings" first and "Other companies" second, each with a clear verdict
-  (promises kept, questions dodged, targets tracked) and when the next target is due. The long explainer was cut
-  to one line.
-- **Company pages** open with FINN's take, then the report card (with zero tiles greyed out, and "questions
-  answered" instead of the more accusatory "dodged"), then a sticky jump bar to Promises, Answers, Numbers,
-  Bull/bear, Sources and Ask. A back link returns to the list.
-- **The Ask box** sits at the end of the page, with a full-size button and suggestions that wrap rather than being
-  cut off.
-- **Names never overflow:** long company names are shortened cleanly, and pills sit in their own column.
-
-## 4.8 The Alerts screen
-
-- **Recent alerts first,** then the rule you can change, then what the rule would have done over 90 days.
-- **The rule reads as a sentence:** "Tell me when any holding moves more than 3.0× its usual daily move with
-  volume above 2.5× average." The values are tappable. When the value boxes touched each other on a phone, the
-  sentence was made smaller with more line spacing.
-- **The slider shows real percentages,** for example the equivalent move for the most and least volatile
-  holdings, because "3×" alone means little.
-- **The backtest strip shows alert days as peaks:** each bar rises to the size of that day's biggest move, with a
-  small glowing white tip and a green glow, so the most significant days stand tallest.
-- **The verdict changes with the count:** "getting noisy", "a sensible level", "selective" or "very quiet".
-
-## 4.9 The Settings screen
-
-- **Announcement types:** Mute, Normal or Boost for each type of filing, on a sliding toggle. I found the first
-  version did not look clickable, so it became a recessed track with a raised thumb. Mute, Normal and Boost each got
-  their own colour (soft red, grey, green), and the slide was tuned from bouncy, to smooth, to a gentle settle.
-- **Cost:** a cost meter first sat at the top of Settings. I questioned whether it was even needed. It stayed
-  because the challenge rewards cost awareness, but it moved to a small "What it costs to run" line at the bottom.
-- **Developer settings** (the research server address) are tucked away, because a consumer app should never ask
-  for a server address.
-
-## 4.10 Navigation and motion
-
-I found the app hard to navigate and asked for smooth, app-like movement. The changes:
-
-- every tab in the bottom bar shows its name, not just the selected one;
-- screens slide in the direction you move along the bar;
-- section titles ease in as you scroll; jumps scroll smoothly;
-- buttons, chips and rows respond to a press;
-- the bottom bar was made slimmer when it felt bulky, then given a raised, three-dimensional look when it got lost
-  against the page.
-
-## 4.11 Charts
-
-Charts went through the most iteration, because they are where an app looks either premium or cheap.
-
-- **Revenue and profit:** bar charts with older years in grey and the latest two years highlighted, the first and
-  last values labelled, rounded tops, a gentle grow-in, and values on tap. Margin is drawn as a line on top.
-- **Cash quality:** the one mountain chart, by my choice: a green filled area of cash earned per rupee of profit,
-  drawn from the real yearly points with jagged peaks, small glowing white dots on each peak, and a dashed line at
-  one rupee.
-- **Promise targets:** a band showing the promised range, with the actual result sliding in, green if met and red
-  if missed.
-- **A sentence above every chart** says what the chart shows in plain words, computed by Python.
-
-Along the way other chart styles were tried, including mountain charts for revenue, profit and price. I decided
-only cash quality should be a mountain, and everything else was returned to its clearer form.
-
-## 4.12 Copy and formats
-
-Small inconsistencies make an app look unfinished, so they were standardised:
-
-- the rupee sign everywhere, and Indian number grouping;
-- dates as "12 Nov 2026" and quarters as "Q2 FY27";
-- calls named by quarter instead of by date;
-- no developer words on screen ("snapshot", "API", internal field names);
-- one plain line under each screen title saying what the screen is for.
-
-## 4.13 Laptop visitors
-
-A reviewer may open the link on a laptop. On a wide screen, the app stays centred at phone size, with a small QR
-code in the corner that opens it on a phone. A large explanatory panel was tried first and then cut to the small
-corner code, because it was distracting.
+Lines starting with ">" are my everyday instructions. Where my original wording
+was already clear I've kept it close to how I said it; otherwise it's tidied up.
+Lines starting with "●" are what Claude did, what it suggested, and what I
+decided.
 
 ---
 
-Next: [Part 5 · Deployment, fallbacks and final polish](05-deploy-and-polish.md)
+## 4.1 The logo
+
+I designed the FINN logo myself. I drew it by hand first, then refined it in
+Adobe Illustrator with AI tools until the proportions felt right.
+
+The mark is a slanted F made of two arms, and each part of it means something.
+
+The upper arm is the longer one, and it reaches further out. It stands for
+everything that flows into FINN: corporate announcements, annual reports,
+earnings calls, market moves and management guidance. It's the breadth of
+information an investor deals with every day.
+
+The middle arm is deliberately shorter. FINN doesn't hand back everything it
+receives. It narrows the flood down to what deserves attention, and the shorter
+arm is that narrowing.
+
+There's a second way to read the two arms, and it's the one I like most. The
+upper arm is what management said. The middle arm is what the numbers actually
+show. ENAM's brief cares most about comparing promises with delivery, and that
+gap is exactly what FINN's research page measures.
+
+The dark gap between the arms matters too. Without it the F would look like two
+ribbons stuck together. It stands for the problem FINN solves: the space between
+information that exists and information that deserves an investor's attention.
+
+The slant is mostly a style choice, and I'm not going to pretend every angle
+encodes a formula. It does give a horizontal letter a sense of moving forward,
+which fits an app that watches for what changes instead of storing history. The
+curved transitions make the letter read as one continuous form, the way raw
+information gets turned into something useful.
+
+The colours carry the same idea. Mint green is clarity and the signals that
+matter. A darker green gives depth, the analytical layers underneath. The
+lighter top surface is information coming in. A soft inner shadow separates the
+layers. The deep forest-green background gives it a serious, institutional feel.
+The whole app's colour scheme comes from these colours.
+
+### Getting the logo into the app
+
+The app's first logo was a placeholder Claude had made: a fin cutting through a
+waterline. Once my own design was ready, I sent it over.
+
+> this is how i want my logo to look like. just make the FINN a little more
+> thin, the strokes are a bit thick right now
+
+● Claude redrew my design as a crisp vector, so it stays sharp at every size,
+  with the FINN letters thinner and spaced a little wider. It sent a preview
+  first and waited for my okay before touching the app.
+
+● Once I approved it, the new logo went everywhere: the header, the home-screen
+  icon, the browser tab, the quiet-day card and the loading screen.
+
+> remove the updated time, and the logo at top left is not changed
+
+● Two things were going on. The "Updated" time came off the header. The logo had
+  actually changed on the server, but my phone was showing a saved copy of the
+  app (FINN caches itself so it opens fast). Claude renamed the logo files so
+  every phone would be forced to load the new one, and told me to remove and
+  re-add the home-screen icon, since phones hold on to old icons.
+
+---
+
+## 4.2 The first version
+
+The first version was built from my two UI reference images and the design
+direction from the research phase: a dark, green-tinted glass interface with
+frosted cards, a mint glow, pill-shaped chips and a floating bottom bar. I
+wanted it calm and premium, dense with information without feeling crowded.
+
+● Claude built it as a React and Vite progressive web app, so it installs on a
+  phone like a native app. It used hand-written CSS and Framer Motion for
+  animation, so I had full control over the look and the bundle stayed small
+  (about 100 KB compressed). The UI work used the Impeccable and frontend-design
+  skills I'd installed.
+
+● The first version had four screens (Brief, Research, Alerts, Settings),
+  swipe-to-clear cards, cards that flip to show why they ranked, a live alert
+  slider with a 90-day preview, and research pages that fill in section by
+  section. Claude checked 18 screenshots at iPhone size with no errors and
+  opened it in my laptop's browser, with instructions to switch the browser into
+  phone view.
+
+> first you finish all the deliverables you want to add in the app and then i'll
+> go and check it. i want you to finish it first, then i'll look into it
+
+● So Claude finished everything first: a strict review of every screen, two
+  extras ("Ask about this company" and "Play my brief", which read the brief
+  aloud), and the README, demo script and email draft. Then I reviewed it all in
+  one go.
+
+---
+
+## 4.3 The critique, and what we chose to act on
+
+Once the app was live, I put it through a detailed critique, screen by screen,
+and asked Claude to judge which points actually mattered.
+
+> I want you to do a critical analysis of these changes and see which ones are
+> on par with what the problem statement needs to make it a world-class app. If
+> you think the changes are needed, work on them asap. I also feel the font size
+> is too big, it's not looking premium. If you feel the same, do something about
+> it.
+
+The critique's verdict was clear. The engine was roughly 90% of the way there
+and the product surface about 70%. It scored the architecture 9/10, judgment and
+honesty 9.5/10, cost efficiency 9/10, but the Brief only 6.5/10 and visual
+design 7.5/10. Its biggest points:
+- the first screen a reviewer saw could be empty ("0 filings · 0 matter") with a
+  full green ring that read as "done!";
+- the 3-day view contradicted itself, saying "Quiet" right above "Worth knowing
+  · 1";
+- the results card and the management card were hidden behind a custom 14-day
+  window;
+- bull and bear read like a template, and HDFC Bank's growth included its
+  merger;
+- mint green was used for everything, so nothing stood out;
+- a long list of small wording and format issues.
+
+● Claude went through it and split it into "doing now" and "skipping today",
+  with reasons.
+
+Doing now, in order:
+1. The first screen is never empty. If a window has nothing important, it shows
+   what mattered in the last 7 days instead, and the counts always add up.
+2. A pinned "Latest results" strip at the top of the Brief.
+3. Hand-checking the two numbers a reviewer could catch: Reliance's +11.6% day
+   and CDSL's "4 dodged".
+4. A sharper bull and bear: Python works out the slowdown, the margin squeeze
+   and the merger effect, and the model only phrases them.
+5. A calmer look: smaller, tighter fonts; numbers in a cleaner font that lines
+   up; much less mint and glow.
+6. A wording clean-up: dates like "12 Nov 2026", quarters like "Q2 FY27", ₹
+   everywhere, "Updated" instead of "snapshot", and no code words like bse_api
+   in the UI. The server address box moved into a hidden "Developer" section.
+7. The alert slider shows the plain ±% for each stock.
+8. Only my Vercel site can call the backend, with a limit per visitor.
+9. The email gets "What I left out" and "What's next".
+
+Skipped for that day, because they were too big or risky so close to submission:
+the directional promise ledger, full bank metrics, a job queue and a sticky jump
+bar.
+
+● All of it went live with 115 tests passing and 20 screens re-checked. The hand
+  checks came back clean: every CDSL "dodged" flag was an explicit refusal, and
+  Reliance's +11.6% was a real move, not a data error. The HDFC management card
+  stayed without a bio, because that filing was an RBI letter with no profile in
+  it, and FINN doesn't invent one.
+
+---
+
+## 4.4 The first page, three times
+
+This was the biggest design argument of the build, and I'm glad I pushed.
+
+> you spoiled the first page. who wants to wake up to such a clumsy page?
+
+● Claude agreed the top was cramped. Too many things were competing at once: the
+  ring, a two-line headline, a subline, counts, Play, a tip banner, the chips
+  and a "score 0.83" tag. It proposed a calmer layout and shipped it: just "Your
+  brief" with one line under it ("3 matter · 1 to clear · 20 filings"), a small
+  ring, no tip box, and a single plain line when a window was quiet.
+
+● It also owned up to a slip: it had said it would show me a screenshot first,
+  but the change went live straight away.
+
+It was calmer, but it had lost what I liked about the app. I sent a screenshot
+of the original look.
+
+> i want the first page as clean and as pretty as this
+
+● Claude read that as: bring back the original style (the big glowing ring, the
+  bold two-line headline, the mint selected chip, the soft glow, one large airy
+  card with the FINN mark, the mint pill in the bottom bar) but keep the
+  improved content underneath it. Results always show, the brief is never empty,
+  and the wording stays clean. It also kept out the two things that had looked
+  unfinished in the old version: a paragraph about the exchanges refusing
+  connections, and a cut-off "Custom" chip.
+
+● The quiet card now ends with "Here is what mattered in the last 7 days", and
+  real cards follow, so the page is calm but never empty.
+
+---
+
+## 4.5 Navigation and motion
+
+> make sure the things in the app are easy to navigate. it's very hard to
+> navigate and understand. add more interactive things, movements should be
+> smooth like good apps have
+
+● Easier to navigate:
+- every bottom tab shows its name: Brief, Research, Alerts, Settings;
+- each screen has one plain line under its title saying what it's for;
+- company pages have "← All companies" at the top;
+- on a company page, a bar sticks to the top as you scroll and jumps to Ask,
+  Promises, Answers, Numbers, Bull/bear or Sources.
+
+● Smoother:
+- screens slide left or right depending on which way you're going;
+- sections fade in gently as you scroll;
+- buttons and rows react softly when tapped, the way native apps do.
+
+---
+
+## 4.6 Clashes on small screens
+
+> maybe you can reduce the font size. the box of any holding and the 3x are
+> almost clashing
+
+> see here if anything could be done, make it just a bit less messy
+
+● On Alerts, the alert sentence got smaller so its pills stopped touching. The
+  alert list became two tidy lines per row: the company in bold with the date
+  under it on the left; the % move in green or red on the right with "3.0× usual
+  move · 3.5× volume" in small grey underneath. The % shows one decimal so the
+  numbers line up in a column.
+
+> things look clashing here also
+
+● The Research list became a clean two-column row per company. On the left: the
+  ticker in bold, the company name in grey, then one short line like "Portfolio
+  · next due FY27 · call Nov 2026" (research-only companies say "Not held"). On
+  the right: the pills ("1/1 kept", "4 dodged", "11 tracked") stacked neatly.
+  The empty "no targets" pill was removed.
+
+● To stop clashes coming back, the Playwright screen check fails the build on
+  text overflow. A clash became a failing test rather than something I had to
+  keep spotting.
+
+---
+
+## 4.7 The opening animation
+
+> i want that when someone opens up the app, the first screen has a tiny little
+> animation where the logo is formed, for like 2 to 3 seconds
+
+● The first version took about 2.5 seconds: the top arm of my F slides in, the
+  lower arm follows and the F locks together, "FINN" fades in with its letters
+  drawing together, a small tagline ("what matters in your holdings") appears,
+  and it all fades into the Brief. It plays once per visit and a tap skips it.
+
+> its not coming properly on my phone
+
+● Claude asked what exactly I saw (no animation, jumpy, wrong place?) and
+  suggested a screen recording.
+
+> it comes, flickers and goes in like a couple of seconds
+
+● Round two found two causes. A small still logo flashed for a split second
+  before the animation started on top of it, so now the screen starts plain dark
+  and the logo forms from nothing. And Safari on iPhone is bad at moving parts
+  inside a single drawing, so each arm now moves on its own in a way Safari
+  handles smoothly. Claude also pointed out that if Reduce Motion is on, the app
+  deliberately plays a simpler fade.
+
+● A small follow-up made the ending calmer: about 3 seconds, ending in a slow,
+  soft fade instead of a quick zoom.
+
+> its still flickering on the phone
+
+● Round three went into the code properly and found the real cause. The app was
+  loading every Brief card behind the animation while it played, which is heavy
+  work on a phone, so the animation stuttered and got cut short. The "FINN"
+  letters also switched font halfway through, which looked like a flicker. The
+  fix: build the animation into the page itself so it plays from the first
+  frame, load the app only after the animation finishes, and use a font that's
+  already loaded. It now plays cleanly for about 3.5 seconds.
+
+A desktop browser hid this bug completely. After this, I checked every animation
+on my phone.
+
+---
+
+## 4.8 The cost meter
+
+> what is the need of cost meter, is it even needed?
+
+● Claude's view: a normal user doesn't need it, but this submission does. ENAM
+  is judging how sensibly AI is used, and the meter shows with real numbers that
+  FINN made a few hundred AI calls for $0, because Python does the maths and the
+  model is only called when needed. It suggested keeping it as a small, quiet
+  section at the bottom of Settings, and asked me to choose between that and
+  removing it.
+
+> it feels very abrupt when it comes, don't you think so? if you think we should
+> show it in the app, then think about what the best place is and change it
+> accordingly
+
+● Settings now opens with what matters to the user: their portfolio, then which
+  announcement types reach them, then where the data comes from. The cost became
+  one calm line near the bottom, under "What it costs to run": "$0 spent · 376
+  AI calls · 67% from cache · 1.1M tokens". The big glowing box is gone.
+
+● While doing this, Claude caught two problems and told me. The morning's
+  automatic refresh had shrunk the cost numbers to just its own run; they now
+  always show the whole build. And its last few "20 screens, 0 errors" reports
+  hadn't been complete, because the test script had been stopping halfway since
+  the jump bar was added. It fixed the script and re-ran every screen properly:
+  20 screens, no errors.
+
+---
+
+## 4.9 The bottom bar
+
+> the floating bar at the bottom for brief, research and alerts looks very
+> bulky. can we make it a little more slim and sleek so it looks cleaner and
+> more appealing?
+
+● About 25% shorter, with smaller icons and labels and less padding. The
+  selected pill glows more softly, the border and shadow are lighter, and the
+  labels stay so it's still easy to read.
+
+> its kinda getting lost in the page. can we give it a little 3d view?
+
+● The bar is now slightly lighter at the top and darker at the bottom, with a
+  thin lit edge and a deeper shadow, so it floats above the page. The selected
+  pill has the same raised look.
+
+---
+
+## 4.10 Removing the voice brief
+
+> remove the voice part please, that reads out the news. it sounds too
+> mechanical and over-engineered
+
+● Gone completely. The Brief header now shows just the ring, the title and the
+  counts, and the README and demo script no longer mention it. In a finance app,
+  a robotic voice costs trust.
+
+---
+
+## 4.11 Company names in boxes
+
+> where you write the name of the company in its news, highlight it a bit by
+> putting it in a box or something
+
+● Company names now sit in a small tag with a soft tint, on the big cards, the
+  "Worth knowing" rows, Unusual moves and Recent alerts.
+
+---
+
+## 4.12 Colour
+
+> i feel the app in general is looking very tacky because of the colour. can we
+> slightly mellow down the neon green? is it too bright? will it look better
+> then? what's your opinion? also, in the background some places have a hint of
+> green. i think apps usually have a very plain background, so should i make
+> mine plain black, and keep that tinge only near the logo? will that improve
+> the user experience?
+
+● Claude agreed with both and explained why. The green was close to neon and on
+  too many things at once, so nothing stood out. It suggested a calmer, slightly
+  muted mint, used only where it means something: the selected tab, the main
+  button and price rises. Everything else white or grey, so green stands out
+  because it's rare.
+
+● On plain black it agreed with one tweak: near-black rather than pure black.
+  Pure black makes white text look harsh and smears on many phones when you
+  scroll, which is why most premium dark apps use near-black. The green tinge
+  would stay only as one soft glow behind the logo and ring at the top, and the
+  cards would become a neutral dark grey instead of green-tinted glass.
+
+> yes yes do it
+
+● The calmer colours went live: a softer sage-mint, lighter glows, a gentler red
+  for falling prices, a plain near-black background, and a faint tint only by
+  the logo. Text still passed the readability check. The colours now follow the
+  logo's palette.
+
+---
+
+## 4.13 Time filters that adapt
+
+> if there is nothing in the last three days either, then keep it as last 24
+> hours, 7 days and then custom
+
+● The time chips now only show windows that have news. "24h", "7 days" and
+  "Custom" are always there; "Since last look" and "3 days" appear only when
+  something in them needs attention.
+
+---
+
+## 4.14 The Mute / Normal / Boost switch
+
+> the announcements that are set to Normal in settings, the buttons don't look
+> like they can be changed to Mute or Boost. the clicking interface isn't
+> appealing, it's not asking me to click. can you make it better?
+
+● It became a proper sliding switch, like the toggles in iPhone Settings. A
+  raised button sits on the current choice and slides when you tap another. The
+  header now says "tap to change".
+
+> mute and normal look the same. you can change the colour for mute or something
+
+● Each choice got its own colour: Mute a soft red, Normal grey, Boost green.
+
+> in the announcements, the movement from mute to normal is very bouncy, make it
+> smoother
+
+● The highlight now glides across smoothly instead of bouncing.
+
+> just a lil bounce
+
+● A slight settle added back. Smooth, with a little life to it.
+
+---
+
+## 4.15 The numbered UI pass
+
+Next, Claude went through a longer list of 28 possible UI changes and
+recommended 12 for that night, small ones that each made the app clearer for a
+reviewer, plus a fix for the custom date picker I'd noticed spilling off its
+card. It listed what to skip and why: colours and time chips were already done;
+I'd asked for the "Updated" time to go; compact results cards would hide one of
+the two cards ENAM said they love; and new price and range charts would each
+take hours on deadline night.
+
+I sent the list as one numbered block:
+
+> Apply these UI changes, going live after each:
+> 0. Custom date picker: From/To boxes must fit inside the card without
+> overlapping; the quick-pick chips must not be cut off; dates as "1 Nov 2026",
+> not "2026-11-01".
+> 1. Brief top: a slim "Today: nothing new" line, then a clearly labelled
+> "Earlier this week" section with the 7-day cards (no big empty card, no
+> contradicting zeros).
+> 2. Replace the "score 0.83" chip on cards with "your X% holding"; keep the
+> score inside Why?.
+> 3. Add a small visible "Done" button next to Why? on each card (swipe still
+> works).
+> 4. Tapping a company name anywhere opens its Research page.
+> 5. Alerts tab: "Recent alerts" first, the rule setup below.
+> 6. Report card wording: "answered 51 of 51 questions" instead of "0/51
+> dodged"; grey out zero tiles.
+> 7. Research landing: "Your holdings" first, then "Other companies"; shrink the
+> explainer to one line.
+> 8. Results cards whose numbers are not verified: headline "Results filed ·
+> numbers not verified", with the filing subject in small text.
+> 9. Company page: move the Ask box to the end.
+> 10. Brief header: a thin filter-funnel bar, e.g. "70 filings → 9 worth knowing
+> → 2 need you".
+> 11. One short sentence written by Python above each chart, e.g. "Revenue +9%
+> YoY in Q2 FY27; profit +6%".
+> 12. On wide (laptop) screens, a side panel with a QR code to the app and "FINN
+> is built for your phone".
+> 13. A one-line portfolio pulse under the Brief header, e.g. "11 up, 7 down vs
+> Nifty this week".
+> 14. Prettier charts.
+
+● Items 0 to 11 went live first, then 13 and 14. The Brief now opens with a slim
+  "Today: nothing new" line, then "Earlier this week", the funnel ("20 filings →
+  3 worth knowing → 1 need you") and the pulse ("5 ahead, 13 behind the Nifty
+  this week · biggest CDSL +8%"). Cards show "your 6% holding" and have a green
+  Done ✓ button. Alerts opens with recent alerts. Research is split into "Your
+  holdings" and "Other companies". 119 tests passed and all 20 screens were
+  clean.
+
+> the size of the filling box is weirdly small
+
+> the ask is weirdly small
+
+● The "Filing ↗" button became the same size as "Why?" and "Done ✓" next to it.
+  The Ask button became full size, the same height as its text box, and the
+  suggested questions wrap instead of being cut off.
+
+● For item 12, Claude asked before installing one small Python tool (segno) to
+  make the QR image. My laptop's safety check blocked the install the first
+  time, so the panel shipped with the app link in large text instead, and the QR
+  came in a later pass.
+
+---
+
+## 4.16 Charts
+
+> make the graphs prettier
+
+> don't copy anyone, take inspiration from how pretty graphs can be
+
+● The new charts were in FINN's own style. Revenue bars have a gradient and grow
+  in one by one, with a gold margin line drawing itself and tap-to-see values.
+  Cash vs profit got matching bars and a proper legend. Promises got a target
+  band with a marker that slides in, green when met and red when missed (L&T
+  shows 11.8% against a 15% target). The alerts strip got rounded gradient bars.
+  Older periods are greyed out, the latest highlighted, and every chart has a
+  one-line takeaway above it written by Python.
+
+### The alert peaks
+
+> make the colour of this just a tad bit brighter, and add a very very tiny
+> whitish dot at the top
+
+> it should look like it's reaching heights
+
+> increase the tinge of green in this
+
+● The alert bars became rising peaks: deep green at the base and bright mint at
+  the top, a soft glow, a tiny white dot on each tip, and they rise when the
+  screen opens.
+
+### The cash-quality mountain
+
+> i don't like the cash quality graph
+
+● Claude asked what bothered me and offered two replacements: a single line of
+  "cash earned for every ₹1 of profit" with a one-sentence verdict, or just a
+  sentence and a badge with no chart.
+
+> i like this mountain kind of graph
+
+● Claude suggested using the mountain style in three places: cash quality, the
+  margin line, and a new 90-day price chart against the Nifty at the top of each
+  company page.
+
+> i am not able to visualise them, so do what you find best, and if you want my
+> opinion, show me what you mean
+
+● It drew a picture with made-up numbers to show the look.
+
+> none of them look like mountain graphs
+
+● Fair. The lines were too smooth. A mountain chart needs jagged peaks drawn
+  from real data points with a solid fill underneath, so Claude redrew it with
+  straight, jagged segments and a strong gradient.
+
+> i want mountain graphs, with the peaks having a tinge of a white dot
+
+● It added a tiny glowing white dot on every peak and a bigger one on the latest
+  point, and I sent the full spec for all three mountains to build.
+
+While it was being built, I changed my mind about how far to take it. Claude had
+also made the cash-quality chart simpler in the meantime (bars against a 1×
+line), which wasn't what I wanted.
+
+> i did not want it simpler. i wanted it to be a mountain chart. no other graph
+> needs to be a mountain chart
+
+> only the cash quality one
+
+● The messages crossed: the 90-day price mountain went live just before my "only
+  cash quality" message arrived, and then the build got it backwards, turning
+  revenue and profit into mountains while leaving cash quality as bars. Claude
+  said so plainly and gave me one exact line to send.
+
+> Undo: put revenue and net profit back as bars, and remove the 90-day price
+> chart. Make ONLY the cash-quality chart a mountain (green fill, jagged peaks,
+> tiny white dots on peaks, dashed ₹1 line). Nothing else.
+
+● That fixed it. Revenue and profit are bars again, the price chart is gone, and
+  only cash quality is a mountain: green fill, jagged peaks, white dots, and a
+  dashed line at ₹1. Below that line, profit isn't turning into cash.
+
+When I changed my mind halfway, explaining again at length didn't help. A short
+instruction that said exactly what to leave alone fixed it in one step.
+
+### The backtest card
+
+> put this before recent alerts, on the alerts page
+
+● The "If this had been on" backtest card (21 alerts in 90 days, about one a
+  week) now comes before the list of recent alerts, so you see how often the
+  rule fires before what it caught.
+
+---
+
+## 4.17 The laptop view
+
+Most reviewers will open the link on a laptop first, even though FINN is a phone
+app. The first wide-screen version was a side panel saying "FINN is built for
+your phone", with the link in large text and one line about each tab. Later the
+QR code went in.
+
+> make this very short, just a small logo in one corner to tell them
+
+● It's now just a small QR code in the bottom-left corner: "Best on your phone:
+  scan to open".
+
+---
+
+## 4.18 Ideas I cut on purpose
+
+Four more ideas came up near the end, and Claude checked each one:
+- filter chips on the Research list (All · My holdings · Kept promises · Dodged
+  questions · Banks);
+- smaller, tabular numbers in the results table;
+- green and red tags on news, with one safety tweak: never "buy" or "sell", only
+  "Positive for shareholders" or "Negative for shareholders", set by clear
+  rules, because buy/sell language reads as investment advice under SEBI rules;
+- collapsible long cards, with "Needs your attention" staying open.
+
+All four were good. With about 10% of my credits left, I cut them and listed
+them as future work, along with a full stress test of the Gemini quota. I kept
+one quick live check that Ask still worked.
+
+---
+
+## 4.19 How I worked on design with AI
+
+Every change here started on my phone. I sent screenshots, not descriptions.
+When I knew exactly what I wanted, I sent a numbered list. When I didn't, I
+asked for Claude's opinion or asked it to show me pictures, then decided. And
+when the AI got something wrong, I said so straight away and gave a short,
+scoped fix.
+
+The app looks the way it does because I kept saying "no, not quite" until it
+matched what I had in my head.
+
+Next: Part 5, deployment, fallbacks and the finish.
+
