@@ -13,7 +13,9 @@ every choice and its trade-off logged in `DECISIONS.md` and every step committed
 | 5. App | `frontend/`, `frontend/screenshots/` |
 | Decisions throughout | `DECISIONS.md` |
 
+**Start here:** [`BUILD_LOG.md`](BUILD_LOG.md), a readable account of how the author and Claude Code built FINN:
+phases, turning points, what the AI got wrong and how it was caught.
+
 ## Session transcripts
 
-To be added by the author: exported Claude Code session transcripts (redacted of API keys and
-personal details) for the sessions above.
+The raw Claude conversations (exported by the author, with API keys removed) are in this folder.
