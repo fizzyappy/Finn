@@ -46,6 +46,18 @@ export default function App() {
       <AnimatePresence mode="wait">
       {splash ? <Splash key="splash" onDone={done} /> : (
       <motion.div key="app" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }}>
+      <aside className="side-panel" aria-label="About FINN">
+        <img src="/icons/finn-f.svg" width={56} height={56} alt="" />
+        <h2>FINN is built for your phone</h2>
+        <p>Open it on your phone and add it to your home screen: it works like an app.</p>
+        <div className="side-link">finn-henna.vercel.app</div>
+        <ul>
+          <li><b>Brief</b> · what your holdings filed, ranked by how much it matters</li>
+          <li><b>Research</b> · does management keep its word, with the quote and page</li>
+          <li><b>Alerts</b> · moves that are unusual for that stock, tested on 90 days</li>
+        </ul>
+        <p className="faint">Primary sources only. Every number is computed in Python; every quote is checked word for word.</p>
+      </aside>
       <div className="app">
         <header className="topbar">
           <Logo />
