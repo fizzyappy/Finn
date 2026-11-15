@@ -208,8 +208,12 @@ def status(job_id: str) -> dict | None:
     if not j:
         return None
     done = STAGES.index(j["stage"]) if j["stage"] in STAGES else -1
+    # One company is read at a time: say how many are ahead of this one.
+    ahead = sum(1 for o in _jobs.values() if o is not j and o["status"] in ("queued", "running")
+                and o["created"] < j["created"]) if j["status"] == "queued" else 0
     return {**{k: v for k, v in j.items() if k not in ("result", "trace")},
-            "progress_pct": round((done + 1) / len(STAGES) * 100)}
+            "progress_pct": round((done + 1) / len(STAGES) * 100), "ahead": ahead,
+            "wait_minutes": ahead * 4 if ahead else 0}
 
 
 def result(job_id: str) -> dict | None:

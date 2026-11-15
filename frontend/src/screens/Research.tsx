@@ -187,7 +187,8 @@ function ColdStart({ job }: { job: Json }) {
   const i = Math.max(0, STAGES.indexOf(job.stage || "resolving"));
   return (
     <div className="glass card" style={{ marginTop: 14 }} aria-live="polite">
-      <div className="card-top"><div className="h2">Reading {job.ticker} for the first time</div><span className="tag tnum">{job.progress_pct || 0}%</span></div>
+      <div className="card-top"><div className="h2">Reading {job.ticker} for the first time</div>
+        <span className="tag tnum">{job.status === "queued" && job.ahead ? `${job.ahead} ahead` : `${job.progress_pct || 0}%`}</span></div>
       <div className="progress"><motion.div animate={{ width: `${job.progress_pct || 4}%` }} transition={{ type: "spring", stiffness: 80, damping: 20 }} /></div>
       <ul className="stages">
         {STAGES.slice(0, -1).map((s, k) => (
@@ -195,7 +196,7 @@ function ColdStart({ job }: { job: Json }) {
         ))}
       </ul>
       <p className="faint small" style={{ marginBottom: 0 }}>
-        {job.status === "queued" ? "Another company is being read right now; yours starts next (usually 2–5 minutes). " : ""}
+        {job.status === "queued" ? (job.ahead ? `${job.ahead} ahead of you · about ${job.wait_minutes || job.ahead * 4} min. ` : "Starting… ") : ""}
         Tables appear first; transcripts take a few minutes. Free AI tier: one company at a time.
       </p>
     </div>

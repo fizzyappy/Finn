@@ -326,3 +326,15 @@ def test_finns_take_is_built_from_facts():
     t = finns_take(S)["text"]
     assert t.startswith("Kept 3 of 6 promises") and "growth slowing 29% → 10%" in t
     assert "margins under pressure" in t and "dodged 2 of 20" in t
+
+
+def test_queue_position_counts_jobs_ahead():
+    from finn.pull import engine
+    engine._jobs.clear()
+    engine._jobs.update({
+        "a": {"id": "a", "ticker": "A", "status": "running", "stage": "reading transcripts", "created": 1.0},
+        "b": {"id": "b", "ticker": "B", "status": "queued", "stage": None, "created": 2.0},
+        "c": {"id": "c", "ticker": "C", "status": "queued", "stage": None, "created": 3.0},
+    })
+    assert engine.status("c")["ahead"] == 2 and engine.status("b")["ahead"] == 1 and engine.status("a")["ahead"] == 0
+    engine._jobs.clear()
