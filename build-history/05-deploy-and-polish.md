@@ -1,6 +1,6 @@
 # Part 5 · Deployment, fallbacks and final polish
 
-[← Part 4](04-design-and-ux.md) · [Back to Part 1](01-research-and-plan.md)
+[← Part 4](04-design-and-ux.md) · Next: [Part 6 · How I directed the AI](06-how-i-directed-the-ai.md)
 
 A prototype that only runs on my laptop is not a product. This part covers how FINN was put online on free
 infrastructure, how each predictable failure was given a fallback, how an outside review was triaged, and how the
@@ -138,4 +138,4 @@ The last row matters most. The AI was expected to report its own mistakes as soo
 
 ---
 
-[Back to Part 1](01-research-and-plan.md)
+Next: [Part 6 · How I directed the AI](06-how-i-directed-the-ai.md)
