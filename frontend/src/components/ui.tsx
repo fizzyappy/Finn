@@ -239,3 +239,47 @@ export function Cite({ href, children }: { href?: string; children: React.ReactN
     </a>
   );
 }
+
+
+/** Mountain chart: the stock's % change as a filled area, the Nifty as a thin line, end values labelled. */
+export function Mountain({ points, name }: { points: { d: string; s: number; n: number }[]; name: string }) {
+  const reduce = useReducedMotion();
+  const W = 340, H = 150, top = 14, base = 120, left = 4, right = 64;
+  const all = points.flatMap((p) => [p.s, p.n]);
+  const lo = Math.min(...all, 0), hi = Math.max(...all, 0);
+  const pad = (hi - lo) * 0.08 || 1;
+  const y = (v: number) => top + (1 - (v - (lo - pad)) / (hi + pad - (lo - pad))) * (base - top);
+  const x = (i: number) => left + (i / (points.length - 1)) * (W - left - right);
+  const sPts = points.map((p, i) => [x(i), y(p.s)] as [number, number]);
+  const nPts = points.map((p, i) => [x(i), y(p.n)] as [number, number]);
+  const line = (pts: [number, number][]) => pts.map(([a, b], i) => `${i ? "L" : "M"}${a.toFixed(1)},${b.toFixed(1)}`).join(" ");
+  const sLine = line(sPts);
+  const area = `${sLine} L${sPts[sPts.length - 1][0]},${base} L${sPts[0][0]},${base} Z`;
+  const last = points[points.length - 1];
+  const lab = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
+  const fmt = (d: string) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+  const sy = y(last.s), ny = y(last.n);
+  const gap = Math.abs(sy - ny) < 14 ? (sy < ny ? -7 : 7) : 0;
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" className="chart"
+      aria-label={`${name} ${lab(last.s)} vs Nifty ${lab(last.n)} over the period`}>
+      <defs>
+        <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="var(--mint)" stopOpacity="0.38" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      {[0.25, 0.5, 0.75].map((f) => <line key={f} x1={left} x2={W - right} y1={top + f * (base - top)} y2={top + f * (base - top)} stroke="rgba(255,255,255,0.05)" strokeWidth="0.6" />)}
+      <line x1={left} x2={W - right} y1={y(0)} y2={y(0)} stroke="rgba(255,255,255,0.18)" strokeDasharray="2 4" />
+      <motion.path d={area} fill="url(#mtn)" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, delay: 0.4 }} />
+      <motion.path d={line(nPts)} fill="none" stroke="rgba(236,239,237,0.45)" strokeWidth="1.2"
+        initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
+      <motion.path d={sLine} fill="none" stroke="var(--mint)" strokeWidth="2" strokeLinejoin="round"
+        initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1 }} />
+      <circle cx={sPts[sPts.length - 1][0]} cy={sy} r="3.5" fill="var(--mint)" />
+      <text x={W - right + 6} y={sy + 4 + gap} fontSize="11" fontWeight="700" fill={last.s >= 0 ? "var(--up)" : "#f29a9a"}>{lab(last.s)}</text>
+      <text x={W - right + 6} y={ny + 4 - gap} fontSize="10" fill="rgba(236,239,237,0.55)">Nifty {lab(last.n)}</text>
+      <text x={left} y={H - 8} fontSize="10" fill="rgba(236,239,237,0.45)">{fmt(points[0].d)}</text>
+      <text x={W - right} y={H - 8} fontSize="10" textAnchor="end" fill="rgba(236,239,237,0.45)">{fmt(last.d)}</text>
+    </svg>
+  );
+}

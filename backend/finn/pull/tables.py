@@ -181,3 +181,25 @@ def build(ticker: str) -> dict:
     return {"instrument": f["instrument"], "name": f["name"], "data_as_of": fd.as_of, "stale": fd.stale,
             "snapshot": snapshot(f), "trajectory": trajectory(f), "balance_sheet": balance_sheet(f),
             "cash_quality": cash_quality(f), "bank": bank(f)}
+
+
+def price_vs_nifty(ticker: str, days: int = 90) -> dict | None:
+    """The stock and the Nifty 50 over the last `days` calendar days, both as % change from the first
+    common trading day (adjusted closes when available). For the company page's price chart."""
+    from datetime import date, timedelta
+    from .. import prices
+    try:
+        s = prices.get_prices(ticker, "6mo").data
+        n = prices.get_index(prices.NIFTY, "6mo").data
+    except Exception:  # noqa: BLE001
+        return None
+    start = (date.today() - timedelta(days=days)).isoformat()
+    px = lambda b: b.get("adj_close") or b.get("close")
+    nm = {b["date"]: px(b) for b in n if px(b)}
+    rows = [(b["date"], px(b), nm.get(b["date"])) for b in s if b["date"] >= start and px(b) and nm.get(b["date"])]
+    if len(rows) < 20:
+        return None
+    s0, n0 = rows[0][1], rows[0][2]
+    pts = [{"d": d, "s": round((v / s0 - 1) * 100, 2), "n": round((m / n0 - 1) * 100, 2)} for d, v, m in rows]
+    return {"from": rows[0][0], "to": rows[-1][0], "points": pts,
+            "stock_pct": pts[-1]["s"], "nifty_pct": pts[-1]["n"]}

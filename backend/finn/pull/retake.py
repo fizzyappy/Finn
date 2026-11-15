@@ -10,6 +10,12 @@ from .. import fundamentals, symbols
 from . import narrative, tables
 
 
+def _price(r: dict) -> None:
+    pv = tables.price_vs_nifty(r["ticker"])
+    if pv:
+        r["sections"]["price90"] = pv
+
+
 def _bank(r: dict) -> None:
     if not (r["sections"].get("snapshot") or {}).get("lender"):
         return
@@ -31,6 +37,7 @@ def main() -> None:
         if hit:
             r = hit[0]
             _bank(r)
+            _price(r)
             r["sections"]["take"] = narrative.finns_take(r["sections"])
             r["sections"]["chart_notes"] = narrative.chart_notes(r["sections"])
             store().put("research", k, r, "pull engine")
@@ -38,6 +45,7 @@ def main() -> None:
     for f in SNAP.glob("*.json"):
         r = json.loads(f.read_text(encoding="utf-8"))
         _bank(r)
+        _price(r)
         r["sections"]["take"] = narrative.finns_take(r["sections"])
         r["sections"]["chart_notes"] = narrative.chart_notes(r["sections"])
         f.write_text(json.dumps(r, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

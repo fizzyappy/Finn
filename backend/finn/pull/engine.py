@@ -109,6 +109,9 @@ def research(ticker: str, *, refresh: bool = False, n_transcripts: int = 5,
     out["sections"].update({k: tb[k] for k in ("snapshot", "trajectory", "balance_sheet", "cash_quality")})
     if tb.get("bank"):
         out["sections"]["bank"] = tb["bank"]
+    pv = tables.price_vs_nifty(inst.symbol)
+    if pv:
+        out["sections"]["price90"] = pv
     out["data_as_of"] = tb["data_as_of"]
     # Cache key: the newest source document date.
     cands = fundamentals.transcript_candidates(inst.screener_key)

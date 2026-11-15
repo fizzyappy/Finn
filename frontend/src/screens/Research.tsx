@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { BandChart, Bars, Cite, Icon } from "../components/ui";
+import { BandChart, Bars, Cite, Icon, Mountain } from "../components/ui";
 import { api, callQuarter, fmtCr, fmtDay, fmtNum, fmtPct, Json, metricLabel, pageLink, prefs, rupee, signClass, snapshot, wakeBackend } from "../lib/data";
 
 const STAGES = ["resolving", "fetching tables", "reading transcripts", "checking promises", "judging answers",
@@ -247,6 +247,12 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
         <div className="faint small">{d.ticker}{S.snapshot?.price ? ` · ₹${fmtNum(S.snapshot.price, S.snapshot.price < 100 ? 1 : 0)}` : ""}{S.snapshot?.market_cap_cr ? ` · m-cap ${fmtCr(S.snapshot.market_cap_cr)}` : ""} · updated {fmtDay(d.started_at)}{d.partial ? " · still reading…" : ""}</div>
       </div>
       {S.take?.parts?.length > 0 && <Take t={S.take} />}
+      {S.price90?.points?.length > 20 && (
+        <div className="glass card" style={{ marginBottom: 12 }}>
+          <div className="take-label" style={{ color: "var(--text-3)" }}>Last 90 days vs Nifty 50</div>
+          <Mountain points={S.price90.points} name={d.ticker} />
+        </div>
+      )}
       {states.map((s) => <div key={s.state} className="notice" style={{ marginBottom: 10 }}>{s.message}</div>)}
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
