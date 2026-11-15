@@ -203,8 +203,8 @@ function ColdStart({ job }: { job: Json }) {
 }
 
 /* ---------------------------------------------------------------- company page */
-const JUMPS: [string, string][] = [["ask", "Ask"], ["promise-ledger", "Promises"], ["did-they-answer", "Answers"],
-  ["snapshot", "Numbers"], ["bull-vs-bear", "Bull/bear"], ["sources", "Sources"]];
+const JUMPS: [string, string][] = [["promise-ledger", "Promises"], ["did-they-answer", "Answers"],
+  ["snapshot", "Numbers"], ["bull-vs-bear", "Bull/bear"], ["sources", "Sources"], ["ask", "Ask"]];
 const slug = (x: React.ReactNode) => (typeof x === "string" ? x : "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 function JumpBar() {
@@ -251,7 +251,6 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
 
       {(led || rc.questions_dodged) && <ReportCard rc={rc} led={led} />}
       {!d.partial && <JumpBar />}
-      {!d.partial && <AskBox ticker={d.ticker} name={d.name} d={d} />}
       {led && <Ledger led={led} />}
       {S.dodged_questions && <Dodged calls={S.dodged_questions} />}
       {S.narrative_vs_numbers?.length > 0 && <Story items={S.narrative_vs_numbers} />}
@@ -263,6 +262,7 @@ function Company({ d, onBack }: { d: Json; onBack: () => void }) {
       {S.business_snapshot && <Business b={S.business_snapshot} />}
       {S.bull_bear && (S.bull_bear.bull?.length || S.bull_bear.bear?.length) ? <BullBear bb={S.bull_bear} /> : null}
       <Sources d={d} />
+      {!d.partial && <AskBox ticker={d.ticker} name={d.name} d={d} />}
     </motion.div>
   );
 }
