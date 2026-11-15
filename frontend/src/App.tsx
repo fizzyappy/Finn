@@ -50,6 +50,8 @@ export default function App() {
         <img src="/icons/finn-f.svg" width={56} height={56} alt="" />
         <h2>FINN is built for your phone</h2>
         <p>Open it on your phone and add it to your home screen: it works like an app.</p>
+        <div className="side-qr"><img src="/icons/qr-app.svg" width={132} height={132} alt="QR code that opens finn-henna.vercel.app" />
+          <span>Scan with your phone camera</span></div>
         <div className="side-link">finn-henna.vercel.app</div>
         <ul>
           <li><b>Brief</b> · what your holdings filed, ranked by how much it matters</li>
