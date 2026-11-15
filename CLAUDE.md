@@ -20,6 +20,5 @@ FINN is the build for the ENAM AI Engineer Build Challenge. These rules apply to
 - **Never commit secrets.** API keys live in `.env` (git-ignored). `.env.example` lists the variable names with empty values.
 
 ## Housekeeping
-- `_old/` holds earlier code for reference only. Do not import from it.
 - Record notable choices in `DECISIONS.md` (Decision | Why | What we gave up).
 - Track progress against `PLAN.md`.

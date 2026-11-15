@@ -23,10 +23,9 @@ a filing, every quote checkable, and the AI used only where it earns its place.
 - **Management credibility is under-served.** Everyone shows results; almost nobody checks whether management
   did what it said on the last five calls. That became the signature feature: the **promise ledger**.
 
-**Prior art and references.** The author asked for constant comparison with how others had solved similar
-problems. We studied an earlier prototype and a peer's build document (used as a format sample, not copied),
-and reviewed how good finance apps present ranking, alerts and charts. What we kept: a visible "why am I
-seeing this?", alert rules tested on history before being switched on, and verdicts tied to a quote and page.
+**Design thinking.** We worked from first principles on what makes an investor trust a screen: show why each
+item is there, test every alert rule on history before switching it on, and tie every verdict to a quote and
+page. These became FINN's visible "Why?", its alert backtest and its promise ledger.
 
 **First-principles rules, written down before code** (`CLAUDE.md`, `DECISIONS.md`):
 1. Primary sources only (exchange filings, transcripts, annual reports), and no bot-protection workarounds.
