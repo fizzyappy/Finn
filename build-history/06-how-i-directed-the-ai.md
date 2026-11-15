@@ -125,3 +125,7 @@ decided.
 - Write my email for me too.
 
 **What the AI did:** wrote this build history from the real work and drafted my covering email.
+
+---
+
+Next: [Part 7 · Every change, in order](07-every-change.md)
