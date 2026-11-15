@@ -104,8 +104,8 @@ function smooth(pts: [number, number][]) {
   let d = `M${pts[0][0]},${pts[0][1]}`;
   for (let i = 0; i < pts.length - 1; i++) {
     const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 8, p1[1] + (p2[1] - p0[1]) / 8];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 8, p2[1] - (p3[1] - p1[1]) / 8];
     d += ` C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${p2[0]},${p2[1]}`;
   }
   return d;
@@ -125,7 +125,7 @@ export function Bars({ data, label, metric, fmt, lineName }: {
   const yOf = (v: number) => base - (v / max) * plotH;
   const lines = data.map((d) => d.line).filter((v): v is number => v != null);
   const lmin = Math.min(...lines), lmax = Math.max(...lines);
-  const ly = (v: number) => top + 4 + (1 - (v - lmin) / (lmax - lmin || 1)) * plotH * 0.5;
+  const ly = (v: number) => top + 2 + (1 - (v - lmin) / (lmax - lmin || 1)) * plotH * 0.4;
   const marks = data.map((d, i) => (d.line == null ? null : { i, x: left + i * bw + bw / 2, y: ly(d.line) }))
     .filter((p): p is { i: number; x: number; y: number } => p != null);
   const pts = marks.map((m) => [m.x, m.y] as [number, number]);
@@ -147,45 +147,50 @@ export function Bars({ data, label, metric, fmt, lineName }: {
           <linearGradient id="bar-off" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--mint)" stopOpacity="0.42" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.06" />
           </linearGradient>
+          <linearGradient id="bar-mid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--mint)" stopOpacity="0.75" /><stop offset="1" stopColor="var(--mint)" stopOpacity="0.25" />
+          </linearGradient>
+          <linearGradient id="bar-grey" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#ffffff" stopOpacity="0.16" /><stop offset="1" stopColor="#ffffff" stopOpacity="0.04" />
+          </linearGradient>
           <linearGradient id="line-area" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#f5c86b" stopOpacity="0.12" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0" />
+            <stop offset="0" stopColor="#f5c86b" stopOpacity="0.22" /><stop offset="1" stopColor="#f5c86b" stopOpacity="0" />
           </linearGradient>
           <clipPath id="plot"><rect x="0" y="0" width={W} height={base} /></clipPath>
         </defs>
         {[0.33, 0.66, 1].map((f) => (
-          <line key={f} x1={left} x2={W - right} y1={base - f * plotH} y2={base - f * plotH} stroke="rgba(255,255,255,0.06)" strokeDasharray="2 4" />
+          <line key={f} x1={left} x2={W - right} y1={base - f * plotH} y2={base - f * plotH} stroke="rgba(255,255,255,0.05)" strokeWidth="0.6" />
         ))}
         <line x1={left} x2={W - right} y1={base} y2={base} stroke="rgba(255,255,255,0.14)" />
+        {area && <motion.path d={area} fill="url(#line-area)" pointerEvents="none" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} />}
         <g clipPath="url(#plot)">
           {data.map((d, i) => {
             const h = base - yOf(d.y ?? 0);
             const x = left + i * bw + bw * 0.2, w = bw * 0.6;
             return (
               <g key={d.x} onClick={() => setSel(i)} style={{ cursor: "pointer" }}>
-                {i === sel && <rect x={left + i * bw + 2} y={top - 6} width={bw - 4} height={base - top + 6} rx="8" fill="rgba(255,255,255,0.035)" />}
+                {i === sel && <rect x={left + i * bw + 2} y={top - 6} width={bw - 4} height={base - top + 6} rx="8" fill="rgba(255,255,255,0.04)" />}
                 <motion.rect x={x} width={w} rx={Math.min(7, w / 2)}
                   initial={reduce ? false : { y: base, height: 0 }} animate={{ y: base - h, height: h + 8 }}
                   transition={{ duration: 0.6, delay: reduce ? 0 : i * 0.05, ease: [0.2, 0.8, 0.2, 1] }}
-                  fill={i === sel ? "url(#bar-on)" : "url(#bar-off)"} />
+                  fill={i === data.length - 1 ? "url(#bar-on)" : i === data.length - 2 ? "url(#bar-mid)" : "url(#bar-grey)"} />
                 <rect x={left + i * bw} y={0} width={bw} height={H} fill="transparent" />
               </g>
             );
           })}
         </g>
-        {area && <path d={area} fill="url(#line-area)" pointerEvents="none" />}
         {linePath && (
-          <motion.path d={linePath} fill="none" stroke="#f5c86b" strokeWidth="2.2" strokeLinecap="round" pointerEvents="none"
+          <motion.path d={linePath} fill="none" stroke="#f5c86b" strokeWidth="1.8" strokeLinecap="round" pointerEvents="none"
             initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.9, delay: 0.2 }} />
         )}
         {marks.map((m) => (
           <circle key={m.i} cx={m.x} cy={m.y} r={m.i === sel ? 4.5 : 2.6} fill={m.i === sel ? "#f5c86b" : "#0b0c0c"}
             stroke="#f5c86b" strokeWidth="1.6" pointerEvents="none" />
         ))}
-        {cur?.y != null && (
-          <text x={left + sel * bw + bw / 2} y={Math.max(12, yOf(cur.y) - 8)} textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#e9f7ef">
-            {short(cur.y)}
-          </text>
-        )}
+        {[0, data.length - 1].filter((i, k, a) => a.indexOf(i) === k && data[i]?.y != null).map((i) => (
+          <text key={i} x={left + i * bw + bw / 2} y={Math.max(12, yOf(data[i].y as number) - 8)} textAnchor="middle" fontSize="10.5"
+            fontWeight="700" fill={i === data.length - 1 ? "#e9f7ef" : "rgba(236,239,237,0.55)"}>{short(data[i].y)}</text>
+        ))}
         {data.map((d, i) => (
           <text key={d.x} x={left + i * bw + bw / 2} y={base + 18} textAnchor="middle" fontSize="10"
             fontWeight={i === sel ? 700 : 500} fill={i === sel ? "rgba(236,239,237,0.95)" : "rgba(236,239,237,0.42)"}>{d.x}</text>

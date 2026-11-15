@@ -526,6 +526,13 @@ function Trajectory({ t, lender, note }: { t: Json; lender?: boolean; note?: str
         <Bars label="Annual revenue with operating margin" metric={`${lender ? "Total income" : "Revenue"}, ₹ cr (bars) · operating margin (line)`}
           fmt={(v) => fmtCr(v)} lineName="margin"
           data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.revenue, line: r.ebitda_margin_pct }))} />
+        {rows.some((r) => r.pat != null) && (
+          <div style={{ marginTop: 18 }}>
+            <Bars label="Annual net profit with net margin" metric="Net profit, ₹ cr (bars) · net margin (line)"
+              fmt={(v) => fmtCr(v)} lineName="net margin"
+              data={rows.map((r) => ({ x: `FY${r.year_end.slice(2, 4)}`, y: r.pat, line: r.pat_margin_pct }))} />
+          </div>
+        )}
         <div className="kv" style={{ marginTop: 8 }}>
           <span className="k">Revenue CAGR 3y / 5y</span><span className="v">{fmtPct(c3.revenue)} / {fmtPct(c5.revenue)}</span>
           <span className="k">Profit CAGR 3y / 5y</span><span className="v">{fmtPct(c3.pat)} / {fmtPct(c5.pat)}</span>
