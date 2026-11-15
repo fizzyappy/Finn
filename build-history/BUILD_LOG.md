@@ -8,7 +8,7 @@ I used **Claude Code** as the engineering agent: it planned, wrote and ran the c
 live data and reported back. I owned the direction, the product judgement and the design. Inside the app, Gemini
 is used only where rules cannot do the job.
 
-The raw session transcripts are in `sessions/` (see `sessions/INDEX.md`).
+The full detail is in the five parts listed in this folder's README.
 
 ---
 
